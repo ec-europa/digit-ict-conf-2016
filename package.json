@@ -1,6 +1,6 @@
 {
   "name": "digit-ict-conf-2016",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "scripts": {
     "build": "gulp",
     "release": "standard-version"
