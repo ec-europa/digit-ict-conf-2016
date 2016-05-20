@@ -1,0 +1,44 @@
+{
+  "name": "digit-ict-conf-2016",
+  "version": "0.0.1",
+  "scripts": {
+    "release": "standard-version"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ec-europa/digit-ict-conf-2016.git"
+  },
+  "author": "",
+  "license": "EUPL-1.1",
+  "bugs": {
+    "url": "https://github.com/ec-europa/digit-ict-conf-2016/issues"
+  },
+  "homepage": "https://github.com/ec-europa/digit-ict-conf-2016#readme",
+  "devDependencies": {
+    "eslint": "^2.10.2",
+    "eslint-config-airbnb-base": "^3.0.1",
+    "eslint-plugin-import": "^1.8.0",
+    "ghooks": "^1.2.1",
+    "standard-version": "^2.2.1",
+    "validate-commit-msg": "^2.6.1"
+  },
+  "config": {
+    "ghooks": {
+      "commit-msg": "validate-commit-msg"
+    },
+    "validate-commit-msg": {
+      "types": [
+        "feat",
+        "fix",
+        "docs",
+        "style",
+        "refactor",
+        "perf",
+        "test",
+        "chore",
+        "revert"
+      ],
+      "maxSubjectLength": 100
+    }
+  }
+}
