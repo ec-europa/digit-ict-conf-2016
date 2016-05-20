@@ -2,6 +2,7 @@
   "name": "digit-ict-conf-2016",
   "version": "0.0.1",
   "scripts": {
+    "build": "gulp",
     "release": "standard-version"
   },
   "repository": {
@@ -15,10 +16,15 @@
   },
   "homepage": "https://github.com/ec-europa/digit-ict-conf-2016#readme",
   "devDependencies": {
+    "del": "^2.2.0",
     "eslint": "^2.10.2",
     "eslint-config-airbnb-base": "^3.0.1",
     "eslint-plugin-import": "^1.8.0",
     "ghooks": "^1.2.1",
+    "gulp": "^3.9.1",
+    "gulp-hb": "^5.1.0",
+    "require-dir": "^0.3.0",
+    "run-sequence": "^1.2.0",
     "standard-version": "^2.2.1",
     "validate-commit-msg": "^2.6.1"
   },
