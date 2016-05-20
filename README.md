@@ -9,6 +9,12 @@
 npm install
 ```
 
+## Build
+
+```bash
+npm run build
+```
+
 ## Contributing
 
 When you land commits on your master branch, select the Squash and Merge option.
