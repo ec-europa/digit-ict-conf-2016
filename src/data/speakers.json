@@ -1,0 +1,18 @@
+[
+  {
+    "firstname": "Yannick",
+    "lastname": "Huard",
+    "title": "Developer",
+    "company": "Atos",
+    "bio": "Short biography",
+    "picture": "path/to/picture.jpg"
+  },
+  {
+    "firstname": "Wesley",
+    "lastname": "Deglise",
+    "title": "Developer",
+    "company": "Kilo",
+    "bio": "Short biography",
+    "picture": "path/to/picture.jpg"
+  }
+]

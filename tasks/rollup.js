@@ -5,7 +5,7 @@ const nodeResolve = require('rollup-plugin-node-resolve');
 const babel = require('rollup-plugin-babel');
 
 gulp.task('rollup', () => rollup({
-  entry: 'src/assets/scripts/vendor.js',
+  entry: 'src/assets/scripts/app.js',
   plugins: [
     nodeResolve({
       jsnext: true,
@@ -20,6 +20,7 @@ gulp.task('rollup', () => rollup({
   ],
 }).then((bundle) => bundle.write({
   format: 'iife',
-  dest: 'dist/assets/scripts/vendor.js',
+  dest: 'dist/assets/scripts/app.js',
   sourceMap: true,
-})));
+});
+))

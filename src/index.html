@@ -28,9 +28,19 @@
     <link rel="stylesheet" href="assets/styles/main.css">
   </head>
   <body>
-    {{#each speakers}}
-      {{> speaker speaker=this }}
-    {{/each}}
-    <script src="assets/scripts/vendor.js"></script>
+
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+    <header class="mdl-layout__header"></header>
+    <nav-drawer class="mdl-layout__drawer"></nav-drawer>
+    <main class="mdl-layout__content">
+      <h1>Title</h1>
+      <h2>Description</h2>
+      <card-holder>
+
+      </card-holder>
+    </main>
+  </div>
+
+  <script src="assets/scripts/app.js"></script>
   </body>
 </html>
