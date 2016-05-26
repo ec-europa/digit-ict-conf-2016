@@ -10,23 +10,27 @@ TODO eventually replace this by a service worker:
 https://developers.google.com/web/fundamentals/getting-started/your-first-progressive-web-app/step-04?hl=en
  */
 export function fetchContent(url, callback) {
-
-  // content cached?
+  // Content cached?
   if (localStorage[url]) {
-    return callback(JSON.parse(localStorage[url]))
-  }
-  // online?
-  else if (navigator.onLine) {
-    //checking for latest content asynchronously
-    let xhr = new XMLHttpRequest();
-    xhr.open("GET", url);
-    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-    xhr.addEventListener("readystatechange", function () {
+    return callback(JSON.parse(localStorage[url]));
+  } else if (navigator.onLine) {
+    // online?
+    // checking for latest content asynchronously
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', url);
+    xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+    xhr.addEventListener('readystatechange', () => {
       if (this.readyState === this.DONE) {
-        localStorage[this.responseURL] = this.responseText; // Store the answer for later use
-        return callback(JSON.parse(localStorage[this.responseURL]))// Forward the cached content
-      };;
+        // Store the answer for later use
+        localStorage[this.responseURL] = this.responseText;
+        // Forward the cached content
+        return callback(JSON.parse(localStorage[this.responseURL]));
+      }
+      return null;
     });
-    xhr.send()
+
+    return xhr.send();
   }
+
+  return {};
 }

@@ -1,34 +1,34 @@
 // Import vendors
 import 'material-design-lite';
+
 // Import modules
-import {elementFactory} from './elementFactory';
-import {fetchContent} from './fetchContent';
+import { elementFactory } from './elementFactory';
+import { fetchContent } from './fetchContent';
 
-document.onreadystatechange = function () {
-  if (document.readyState == "complete") {
-
-    // Create the navigation
-    addDrawer([
-      {'icon':'home','label': 'home'},
-      {'icon':'people','label': 'speakers'}
-    ]);
-
-    fetchContent('data/speakers.json', addSpeakersList)
-  }
-};
+function addDrawer(menu) {
+  const cardToAdd = elementFactory.drawer(menu);
+  const cardHolder = document.querySelector('nav-drawer');
+  cardHolder.innerHTML = cardToAdd;
+}
 
 function addSpeakersList(speakers) {
   // hide drawer
-  let drawer = document.querySelector("nav-drawer");
-  drawer.classList.remove("is-visible");
+  const drawer = document.querySelector('nav-drawer');
+  drawer.classList.remove('is-visible');
 
-  const card_to_add = elementFactory.speakersList(speakers);
-  let card_holder = document.querySelector("card-holder");
-  card_holder.innerHTML = card_to_add;
+  const cardToAdd = elementFactory.speakersList(speakers);
+  const cardHolder = document.querySelector('card-holder');
+  cardHolder.innerHTML = cardToAdd;
 }
 
-function addDrawer(menu) {
-  const card_to_add = elementFactory.drawer(menu);
-  let card_holder = document.querySelector("nav-drawer");
-  card_holder.innerHTML = card_to_add;
-}
+document.onreadystatechange = () => {
+  if (document.readyState === 'complete') {
+    // Create the navigation
+    addDrawer([
+      { icon: 'home', label: 'home' },
+      { icon: 'people', label: 'speakers' },
+    ]);
+
+    fetchContent('data/speakers.json', addSpeakersList);
+  }
+};
