@@ -1,7 +1,7 @@
 {
   "name": "digit-ict-conf-2016",
   "description": "DIGIT-ICT Conference 2016 website",
-  "version": "0.3.1",
+  "version": "0.2.0",
   "scripts": {
     "build": "gulp",
     "release": "standard-version"
