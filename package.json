@@ -4,7 +4,8 @@
   "version": "0.2.0",
   "scripts": {
     "build": "gulp",
-    "release": "standard-version"
+    "release": "standard-version",
+    "lint": "eslint \"**/*.js\"; exit 0"
   },
   "repository": {
     "type": "git",
