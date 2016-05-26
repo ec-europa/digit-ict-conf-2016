@@ -19,16 +19,16 @@ document.onreadystatechange = function () {
 
 function addSpeakersList(speakers) {
   // hide drawer
-  var drawer = document.querySelector("nav-drawer");
+  let drawer = document.querySelector("nav-drawer");
   drawer.classList.remove("is-visible");
 
-  var card_to_add = elementFactory.speakersList(speakers);
-  var card_holder = document.querySelector("card-holder");
+  const card_to_add = elementFactory.speakersList(speakers);
+  let card_holder = document.querySelector("card-holder");
   card_holder.innerHTML = card_to_add;
 }
 
 function addDrawer(menu) {
-  var card_to_add = elementFactory.drawer(menu);
-  var card_holder = document.querySelector("nav-drawer");
+  const card_to_add = elementFactory.drawer(menu);
+  let card_holder = document.querySelector("nav-drawer");
   card_holder.innerHTML = card_to_add;
 }

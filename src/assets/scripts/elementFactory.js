@@ -1,7 +1,7 @@
 /*
 
  */
-export var elementFactory = {
+export const elementFactory = {
   /*
    @menu: [{
    'icon':'iconName',

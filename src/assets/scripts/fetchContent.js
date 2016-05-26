@@ -18,7 +18,7 @@ export function fetchContent(url, callback) {
   // online?
   else if (navigator.onLine) {
     //checking for latest content asynchronously
-    var xhr = new XMLHttpRequest();
+    let xhr = new XMLHttpRequest();
     xhr.open("GET", url);
     xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     xhr.addEventListener("readystatechange", function () {
