@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="DIGIT-ICT Conference 2016">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="theme-color" content="#FFC107">
+    <link rel="manifest" href="/manifest.json">
     <title>DIGIT-ICT Conference 2016</title>
 
     <!-- Add to homescreen for Chrome on Android -->
@@ -28,9 +30,22 @@
     <link rel="stylesheet" href="assets/styles/main.css">
   </head>
   <body>
-    {{#each speakers}}
-      {{> speaker speaker=this }}
-    {{/each}}
-    <script src="assets/scripts/vendor.js"></script>
+
+  <!-- modal for speaker and session will go here -->
+  <div class="modal-container" hidden></div>
+
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+    <header class="mdl-layout__header"></header>
+    <nav-drawer class="mdl-layout__drawer"></nav-drawer>
+    <main class="mdl-layout__content">
+      <h1>Title</h1>
+      <h2>Description</h2>
+      <card-holder>
+
+      </card-holder>
+    </main>
+  </div>
+
+  <script src="assets/scripts/app.js"></script>
   </body>
 </html>

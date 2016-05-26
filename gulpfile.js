@@ -6,6 +6,6 @@ require('require-dir')('tasks');
 
 gulp.task('default', (cb) => runSequence(
   'clean',
-  ['handlebars', 'sass', 'copy', 'rollup'],
+  ['sass', 'copy', 'rollup'],
   cb
 ));
