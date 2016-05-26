@@ -5,11 +5,15 @@ gulp.task('copy:data', () => gulp.src(['./src/data/**'])
   .pipe(gulp.dest('./dist/data'))
 );
 
-gulp.task('copy:partials', () => gulp.src(['./src/assets/partials/**'])
-  .pipe(gulp.dest('./dist/assets/partials'))
+gulp.task('copy:manifest', () => gulp.src(['./src/manifest.json'])
+  .pipe(gulp.dest('./dist'))
+);
+
+gulp.task('copy:index', () => gulp.src(['./src/index.html'])
+  .pipe(gulp.dest('./dist'))
 );
 
 gulp.task('copy', (cb) => runSequence(
-  ['copy:data', 'copy:partials'],
+  ['copy:data', 'copy:manifest', 'copy:index'],
   cb
 ));

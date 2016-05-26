@@ -7,9 +7,10 @@ import {fetchContent} from './fetchContent';
 document.onreadystatechange = function () {
   if (document.readyState == "complete") {
 
+    // Create the navigation
     addDrawer([
-      {'label': 'home'},
-      {'label': 'speakers'}
+      {'icon':'home','label': 'home'},
+      {'icon':'people','label': 'speakers'}
     ]);
 
     fetchContent('data/speakers.json', addSpeakersList)
@@ -20,13 +21,14 @@ function addSpeakersList(speakers) {
   // hide drawer
   var drawer = document.querySelector("nav-drawer");
   drawer.classList.remove("is-visible");
+
   var card_to_add = elementFactory.speakersList(speakers);
   var card_holder = document.querySelector("card-holder");
-  card_holder.innerHTML = card_to_add; // this hurts my eyes
+  card_holder.innerHTML = card_to_add;
 }
 
 function addDrawer(menu) {
   var card_to_add = elementFactory.drawer(menu);
   var card_holder = document.querySelector("nav-drawer");
-  card_holder.innerHTML = card_to_add
+  card_holder.innerHTML = card_to_add;
 }

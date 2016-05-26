@@ -22,5 +22,4 @@ gulp.task('rollup', () => rollup({
   format: 'iife',
   dest: 'dist/assets/scripts/app.js',
   sourceMap: true,
-});
-))
+})))
