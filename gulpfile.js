@@ -7,6 +7,7 @@ require('require-dir')('tasks');
 gulp.task('default', (cb) => runSequence(
   'clean',
   ['sass', 'copy', 'rollup'],
+  'manifest',
   'serve',
   cb
 ));
