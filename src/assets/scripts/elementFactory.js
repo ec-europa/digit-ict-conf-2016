@@ -21,8 +21,12 @@ export const elementFactory = {
   `,
   /*
    @speakers: [{
-   'firstname':'firstname',
-   'lastname':'lastname'
+   'firstname': String
+    'lastname': String
+    'bio': Array
+    'twitter': String
+    'picture': String
+    'sessions': Array
    }]
    */
   speakersList: speakers => `
