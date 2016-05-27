@@ -5,6 +5,10 @@ gulp.task('copy:data', () => gulp.src(['./src/data/**'])
   .pipe(gulp.dest('./dist/data'))
 );
 
+gulp.task('copy:images', () => gulp.src(['./src/assets/images/**'])
+  .pipe(gulp.dest('./dist/assets/images'))
+);
+
 gulp.task('copy:manifest', () => gulp.src(['./src/manifest.json'])
   .pipe(gulp.dest('./dist'))
 );
