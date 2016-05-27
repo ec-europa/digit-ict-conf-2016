@@ -1,5 +1,6 @@
 [
   {
+    "id": "paulmiller",
     "firstname": "Paul",
     "lastname": "Miller",
     "bio": [
@@ -11,6 +12,7 @@
     "sessions": []
   },
   {
+    "id": "sabinesipunova",
     "firstname": "Sabine",
     "lastname": "Sipunova",
     "bio": [
@@ -23,6 +25,7 @@
     "sessions": []
   },
   {
+    "id": "davidborrelli",
     "firstname": "David",
     "lastname": "Borrelli",
     "bio": [
@@ -33,6 +36,7 @@
     "sessions": []
   },
   {
+    "id": "dominiqueleroy",
     "firstname": "Dominique",
     "lastname": "Leroy",
     "bio": [
@@ -47,6 +51,7 @@
     "sessions": []
   },
   {
+    "id": "mischadohler",
     "firstname": "Mischa",
     "lastname": "Dohler",
     "bio": [
@@ -59,6 +64,7 @@
     "sessions": []
   },
   {
+    "id": "katekahle",
     "firstname": "Kate",
     "lastname": "Kahle",
     "bio": [
@@ -70,6 +76,7 @@
     "sessions": []
   },
   {
+    "id": "paulboag",
     "firstname": "Paul",
     "lastname": "Boag",
     "bio": [
@@ -80,6 +87,7 @@
     "sessions": []
   },
   {
+    "id": "juliareda",
     "firstname": "Julia",
     "lastname": "Reda",
     "bio": [
