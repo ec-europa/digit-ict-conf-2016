@@ -3,8 +3,9 @@ const rollup = require('rollup').rollup;
 const commonjs = require('rollup-plugin-commonjs');
 const nodeResolve = require('rollup-plugin-node-resolve');
 const babel = require('rollup-plugin-babel');
+const uglify = require('gulp-uglify');
 
-gulp.task('rollup', () => rollup({
+gulp.task('scripts:build', () => rollup({
   entry: 'src/assets/scripts/app.js',
   plugins: [
     nodeResolve({
@@ -20,6 +21,11 @@ gulp.task('rollup', () => rollup({
   ],
 }).then((bundle) => bundle.write({
   format: 'iife',
-  dest: 'dist/assets/scripts/app.js',
+  dest: 'build/assets/scripts/app.js',
   sourceMap: true,
 })));
+
+gulp.task('scripts:dist', () => gulp.src('./build/**/*.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('./dist'))
+);

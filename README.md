@@ -8,11 +8,34 @@
 ```bash
 npm install
 ```
+## Start
+
+```bash
+npm start
+```
+
+This will run both `npm run build` and `npm serve:build`.
 
 ## Build
 
 ```bash
 npm run build
+```
+
+## Dist
+
+```bash
+npm run dist
+```
+
+## Serve
+
+```
+npm run serve:build
+```
+
+```
+npm run serve:dist
 ```
 
 ## Lint
