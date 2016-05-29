@@ -1,5 +1,6 @@
 import view from '../views/speakers.js';
 import { fetchContent } from '../utils/fetchContent';
+import render from '../utils/render.js';
 
 export default (ctx, next) => {
   // Set current page
@@ -7,10 +8,11 @@ export default (ctx, next) => {
 
   // Get DOM element to populate
   const main = window.document.querySelector('main');
+  let content = '';
 
   if (ctx.state.speakers) {
     // If speakers are cached, display them
-    main.innerHTML = view(ctx.state.speakers);
+    content = view(ctx.state.speakers);
   } else {
     fetchContent('data/speakers.json', (speakers) => {
       // Cache speakers for further use
@@ -18,9 +20,11 @@ export default (ctx, next) => {
       ctx.save();
 
       // Display speakers
-      main.innerHTML = view(speakers);
+      content = view(speakers);
     });
   }
+
+  render(main, content);
 
   next();
 };

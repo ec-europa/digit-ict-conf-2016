@@ -1,4 +1,5 @@
 import view from '../views/partials/menu.js';
+import render from '../utils/render.js';
 
 export default (ctx) => {
   // Create the navigation
@@ -19,7 +20,8 @@ export default (ctx) => {
     active: ctx.currentPage === 'speakers',
   }];
 
-  const cardToAdd = view(menu);
-  const cardHolder = window.document.querySelector('nav-drawer');
-  cardHolder.innerHTML = cardToAdd;
+  const element = window.document.querySelector('nav-drawer');
+  const content = view(menu);
+
+  render(element, content);
 };
