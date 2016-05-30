@@ -9,7 +9,7 @@
     ],
     "twitter": "@paulmillersays",
     "picture": "paulmiller.png",
-    "sessions": []
+    "sessions": ["panel1"]
   },
   {
     "id": "sabinesipunova",
@@ -22,7 +22,7 @@
     ],
     "twitter": false,
     "picture": "sabinesipunova.png",
-    "sessions": []
+    "sessions": ["panel1"]
   },
   {
     "id": "davidborrelli",
@@ -33,7 +33,7 @@
     ],
     "twitter": "@borrellidavid",
     "picture": "davidborrelli.png",
-    "sessions": []
+    "sessions": ["panel2"]
   },
   {
     "id": "dominiqueleroy",
@@ -48,7 +48,7 @@
     ],
     "twitter": false,
     "picture": "dominiqueleroy.png",
-    "sessions": []
+    "sessions": ["panel3"]
   },
   {
     "id": "mischadohler",
@@ -61,7 +61,7 @@
     ],
     "twitter": "@MischaDohler",
     "picture": "mischadohler.png",
-    "sessions": []
+    "sessions": ["panel3"]
   },
   {
     "id": "katekahle",
@@ -73,7 +73,7 @@
     ],
     "twitter": "@katekahle",
     "picture": "katekahle.png",
-    "sessions": []
+    "sessions": ["panel2"]
   },
   {
     "id": "paulboag",
@@ -84,7 +84,7 @@
     ],
     "twitter": "@boagworld",
     "picture": "paulboag.png",
-    "sessions": []
+    "sessions": ["panel2", "session1"]
   },
   {
     "id": "juliareda",
@@ -96,6 +96,6 @@
     ],
     "twitter": "@Senficon",
     "picture": "juliareda.png",
-    "sessions": []
+    "sessions": ["session3"]
   }
 ]

@@ -1,3 +1,8 @@
 ---
   extends: airbnb-base
   root: true
+  rules:
+    no-param-reassign:
+      - error
+      -
+        props: false

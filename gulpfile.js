@@ -13,5 +13,6 @@ gulp.task('build', (cb) => runSequence(
 gulp.task('dist', ['build'], (cb) => runSequence(
   'clean:dist',
   ['copy:dist', 'styles:dist', 'scripts:dist', 'images:dist'],
+  'manifest',
   cb
 ));
