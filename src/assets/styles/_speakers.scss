@@ -2,3 +2,15 @@
 .speaker_thumbnail--right { @include rotateY(-20deg); }
 .speaker_thumbnail--bottom { @include rotateX(20deg); }
 .speaker_thumbnail--left { @include rotateY(20deg); }
+
+.speaker_col {
+  text-align: center;
+}
+
+.speaker_thumbnail {
+  width: 80%;
+  margin: auto;
+}
+
+.speaker_name {
+}
