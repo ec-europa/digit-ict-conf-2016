@@ -20,17 +20,16 @@ export function fetchContent(url, callback) {
     xhr.open('GET', url);
     xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
     xhr.addEventListener('readystatechange', () => {
-      if (this.readyState === this.DONE) {
+      if (xhr.readyState === xhr.DONE) {
         // Store the answer for later use
-        localStorage[this.responseURL] = this.responseText;
+        localStorage[url] = xhr.responseText;
         // Forward the cached content
-        return callback(JSON.parse(localStorage[this.responseURL]));
+        callback(JSON.parse(xhr.responseText));
       }
-      return null;
     });
 
     return xhr.send();
   }
 
-  return {};
+  throw new Error('Unable to load content');
 }
