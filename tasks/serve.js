@@ -1,5 +1,6 @@
 const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
+const history = require('connect-history-api-fallback');
 
 gulp.task('js-watch', ['scripts:build'], () => browserSync.reload('*.js'));
 gulp.task('styles-watch', ['styles:build'], () => browserSync.reload('*.css'));
@@ -11,6 +12,7 @@ gulp.task('serve:build', () => {
   browserSync.init({
     server: {
       baseDir: './build/',
+      middleware: [history()],
     },
   });
 
@@ -26,6 +28,7 @@ gulp.task('serve:dist', () => {
   browserSync.init({
     server: {
       baseDir: './dist/',
+      middleware: [history()],
     },
   });
 });
