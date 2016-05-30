@@ -1,0 +1,161 @@
+[{
+  "id": "registration",
+  "starts": "8.30",
+  "ends": "9.30",
+  "title": "Registration and coffee for participants",
+  "description": [
+    "Breakfast for speakers and guests"
+  ],
+  "speakers": []
+}, {
+  "id": "welcome",
+  "starts": "9.30",
+  "end": "9.45",
+  "title": "Welcome by Commissioner G. Oettinger and Vice-President of European Parliament Adina-Ioana Valean",
+  "description": [],
+  "speakers": []
+}, {
+  "id": "panel1",
+  "starts": "9.45",
+  "end": "11.00",
+  "title": "Panel 1: Workplace of the future",
+  "description": [
+    "Moderator: Jennifer Baker, BrusselsGeek.eu",
+    "Paul Miller, CEO of Digital Workplace Group – ‘’The human-centred digital workplace’’",
+    "Sabine Sipunova, founder of ''Sorry as a Service'' – “Interacting with customers: Where physical and digital worlds meet”",
+    "European Investment Bank - ‘’Creating the digital workplace of the future’’"
+  ],
+  "speakers": ["paulmiller", "sabinesipunova"]
+}, {
+  "id": "coffeeMorning",
+  "starts": "11.00",
+  "end": "11.30",
+  "title": "Coffee break and DIGITEC exhibition",
+  "description": [],
+  "speakers": []
+}, {
+  "id": "panel2",
+  "starts": "11.30",
+  "end": "12.45",
+  "title": "Panel 2: Digital Democracy",
+  "description": [
+    "Moderator: Jennifer Baker, BrusselsGeek.eu",
+    "David Borelli, MEP, Co-President of the Europe for Freedom and Direct Democracy Group",
+    "Kate Kahle, Social Media Manager at CERN – ‘’How to engage with citizens on social media?’’",
+    "Paul Boag, UX consultant in digital transformation – ‘’How to become a user-centric organisation?”"
+  ],
+  "speakers": ["davidborrelli", "katekahle", "paulboagg"]
+}, {
+  "id": "lunch",
+  "starts": "12.45",
+  "end": "14.15",
+  "title": "Lunch and DIGITEC exhibition",
+  "description": [
+
+  ],
+  "speakers": []
+}, {
+  "id": "panel3",
+  "starts": "14.15",
+  "end": "15.30",
+  "title": "Panel 3: Technologies of the Future",
+  "description": [
+    "Moderator: Jennifer Baker, BrusselsGeek.eu",
+    "Dominique Leroy, CEO of Proximus",
+    "Mischa Dohler, Professor of Wi-Fi Communication in King's College – ‘’The Internet of Things”",
+    "Splunk - ‘’The Future of Data’’"
+  ],
+  "speakers": ["dominiqueleroy", "mischadohler"]
+}, {
+  "id": "session1",
+  "starts": "14.15",
+  "end": "15.30",
+  "title": "Session 1: User experience",
+  "description": [
+    "Workshop: Paul Boag, UX expert"
+  ],
+  "speakers": ["paulboag"]
+}, {
+  "id": "session2",
+  "starts": "14.15",
+  "end": "15.30",
+  "title": "Session 2: Knowledge worker: Culture, Skills, Tools",
+  "description": [
+    "Facilitator: (tbc)",
+    "Knowledge workers of the future - what do they need?"
+  ],
+  "speakers": []
+}, {
+  "id": "session3",
+  "starts": "14.15",
+  "end": "15.30",
+  "title": "Session 3: OpenSource the Future ",
+  "description": [
+    "Facilitator: (tbc)",
+    "Special guest: Julia Reda, MEP"
+  ],
+  "speakers": ["juliareda"]
+}, {
+  "id": "coffeeAfternoon",
+  "starts": "15.30",
+  "end": "16.00",
+  "title": "Coffee break and DIGITEC exhibition",
+  "description": [],
+  "speakers": []
+}, {
+  "id": "panel4",
+  "starts": "16.00",
+  "end": "17.15",
+  "title": "Panel 4: Technologies of the Future (continued)",
+  "description": [
+    "Moderator: Jennifer Baker, BrusselsGeek.eu",
+    "Alexander Steiner, Numergy – The way ahead for the cloud",
+    "Vice President Public Sector of Amazon",
+    "Representative of Google"
+],
+  "speakers": []
+}, {
+  "id": "session4",
+  "starts": "16.00",
+  "end": "17.15",
+  "title": "Session 4: Data for policy making",
+  "description": [
+    "Facilitator: Prabhat Agarwal, DG CONNECT",
+    "Prof. Mercedes Fuertes",
+    "Prof. Diana Galetta, University of Milan"
+],
+  "speakers": []
+}, {
+  "id": "session5",
+  "starts": "16.00",
+  "end": "17.15",
+  "title": "Session 5: Collaborate to innovate",
+  "description": [
+    "Facilitator: Leo Exter, westartup",
+    "Presenting the results from the inter-institutional hackathon"
+  ],
+  "speakers": []
+}, {
+  "id": "session6",
+  "starts": "16.00",
+  "end": "17.15",
+  "title": "Session 6: IT security",
+  "description": [
+    "Moderator: Ken Ducatel, DIGIT"
+  ],
+  "speakers": []
+}, {
+  "id": "keynote",
+  "starts": "17.15",
+  "end": "17.30",
+  "title": "Keynote closing speech: Vincent Bruneau, CEO of Magency",
+  "description": [],
+  "speakers": []
+}, {
+  "id": "closing",
+  "starts": "17.30",
+  "end": "",
+  "title": "Closing by organisers",
+  "description": [],
+  "speakers": []
+}]
