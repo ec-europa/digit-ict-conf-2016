@@ -7,25 +7,25 @@
 }
 
 .mdl-layout__header .mdl-layout__drawer-button {
-  color: #109FA7;
+  color: $ict-blue;
 }
 
 .mdl-layout__header-row .mdl-navigation__link {
-  color: #109FA7;
+  color: $ict-blue;
 }
 
 .mdl-layout__drawer > .mdl-layout__title, .mdl-layout__drawer > .mdl-layout-title {
   padding: 15px 10px 0px;
   text-align: center;
-  font-size: 0.85em;
+  font-size: 0.9em;
   border-bottom: 1px solid #dcdcdc;
 }
 
 .mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
-  color: #109FA7;
+  color: $ict-blue;
 }
 
-.ict-logo-image{
+.ict-drawer-logo {
   width: 220px;
 }
 

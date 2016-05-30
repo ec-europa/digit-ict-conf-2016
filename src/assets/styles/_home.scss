@@ -1,0 +1,44 @@
+.ict-home-cfa {
+  position: relative;
+  min-height: 480px;
+  width: auto;
+  background-color: #f3f3f3;
+  background: url('../images/cover.jpg') center 65% no-repeat;
+  background-size: cover;
+}
+
+.ict-home-cfa > h1 {
+  color: #fff;
+  padding-top: 100px;
+  margin-top: 0;
+  text-shadow: 2px 2px 4px #777;
+}
+
+.ict-home-cfa > h2 {
+  color: #fff;
+  font-size: 36px;
+  text-shadow: 2px 2px 3px #777;
+}
+
+.ict-home-ripple {
+  position: absolute;
+   right: 50%;
+   bottom: -26px;
+   z-index: 3;
+   background: $ict-blue !important;
+   color: white !important;
+}
+
+.ict-home-register {
+  font-size: 36px;
+  height: 82px;
+  margin-top: 20px;
+  transform: perspective(600px) rotateY(30deg);
+  margin-bottom: 60px;
+  padding: 0 36px;
+}
+
+.ict-home-avatar {
+  border-radius: 50%;
+  width: 100%;
+}

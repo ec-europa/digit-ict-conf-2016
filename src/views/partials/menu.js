@@ -1,7 +1,7 @@
 export default menu => `
     <span class="mdl-layout-title">
-      <img class="ict-logo-image" src="assets/images/DIGITEC-logo-v.png">
-      <span class="ict-dates">26/11/2016 BRUSSELS</span>
+      <img class="ict-drawer-logo" src="assets/images/DIGITEC-logo-v.png">
+      29/11/2016 BRUSSELS
     </span>
     <nav class="mdl-navigation">
       ${menu.map(item => `

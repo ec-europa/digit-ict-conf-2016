@@ -5,4 +5,4 @@ page('/', controllers.home, controllers.layout);
 page('/programme', controllers.programme, controllers.layout);
 page('/speakers', controllers.speakers, controllers.layout);
 page('*', controllers.notfound, controllers.layout);
-page({ hashbang: true });
+page({ hashbang: false });
