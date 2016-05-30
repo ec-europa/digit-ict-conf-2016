@@ -12,7 +12,11 @@ $color-accent: $ict-purple-rgb;
 // Import MDL
 @import 'material-design-lite/src/material-design-lite';
 
+// Import custom mixins
+@import 'mixins';
+
 // Import custom stylesheets
 @import 'layout';
 @import 'header';
 @import 'home';
+@import 'speakers';

@@ -1,0 +1,4 @@
+.speaker_thumbnail--top { @include rotateX(-20deg); }
+.speaker_thumbnail--right { @include rotateY(-20deg); }
+.speaker_thumbnail--bottom { @include rotateX(20deg); }
+.speaker_thumbnail--left { @include rotateY(20deg); }

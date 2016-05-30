@@ -33,9 +33,9 @@
   font-size: 36px;
   height: 82px;
   margin-top: 20px;
-  transform: perspective(600px) rotateY(30deg);
   margin-bottom: 60px;
   padding: 0 36px;
+  @include rotateY(30deg);
 }
 
 .ict-home-avatar {
