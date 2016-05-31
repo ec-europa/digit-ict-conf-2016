@@ -5,11 +5,9 @@ export default () => `
     <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent ict-home-register">
       Register
     </button>
-    <a href="#about">
-      <button class="ict-home-ripple mdl-button mdl-button--colored mdl-js-button mdl-button--fab mdl-js-ripple-effect">
-        <i class="material-icons">expand_more</i>
-      <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></button>
-    </a>
+    <div class="ict-home-expand">
+      <a href="#about"><i class="material-icons">expand_more</i></a>
+    </div>
   </div>
   <div class="mdl-grid ict-max-width-900" id="about">
     <div class="mdl-cell mdl-cell--6-col">
