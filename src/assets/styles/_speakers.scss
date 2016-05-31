@@ -1,7 +1,14 @@
-.speaker_thumbnail--top { @include rotateX(-20deg); }
-.speaker_thumbnail--right { @include rotateY(-20deg); }
-.speaker_thumbnail--bottom { @include rotateX(20deg); }
-.speaker_thumbnail--left { @include rotateY(20deg); }
+.speaker_thumbnail--blue {
+  border: 5px solid $ict-blue;
+}
+
+.speaker_thumbnail--purple {
+  border: 5px solid $ict-purple;
+}
+
+.speaker_thumbnail--yellow {
+  border: 5px solid $ict-yellow;
+}
 
 .speaker_col {
   text-align: center;
