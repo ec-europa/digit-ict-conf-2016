@@ -1,4 +1,5 @@
 // Import vendors
+import 'picturefill';
 import 'material-design-lite';
 
 // Close drawer on click

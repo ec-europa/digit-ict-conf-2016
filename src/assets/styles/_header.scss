@@ -1,5 +1,8 @@
 .header-logo-image {
-  height: 52px;
+  height: 50px;
+  @media screen and (max-width: 1024px) {
+    height: 40px;
+  }
 }
 
 .mdl-layout__header {

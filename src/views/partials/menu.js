@@ -10,6 +10,9 @@ export default menu => `
       </a>
       `).join('')}
       <div class="ict-drawer-separator"></div>
+      <a class="mdl-navigation__link" href="#">
+        Register
+      </a>
       <a class="mdl-navigation__link" href="#digitec16">
         #digitec16
       </a>

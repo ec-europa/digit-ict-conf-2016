@@ -6,7 +6,7 @@ gulp.task('js-watch', ['scripts:build'], () => browserSync.reload('*.js'));
 gulp.task('styles-watch', ['styles:build'], () => browserSync.reload('*.css'));
 gulp.task('html-watch', ['copy:build:index'], () => browserSync.reload());
 gulp.task('data-watch', ['copy:build:data'], () => browserSync.reload());
-gulp.task('images-watch', ['copy:build:images'], () => browserSync.reload());
+gulp.task('images-watch', ['images:build'], () => browserSync.reload());
 
 gulp.task('serve:build', () => {
   browserSync.init({
