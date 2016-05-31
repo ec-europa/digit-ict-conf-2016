@@ -4,19 +4,28 @@ import render from '../utils/render.js';
 export default (ctx) => {
   // Create the navigation
   const menu = [{
-    icon: 'home',
-    label: 'home',
+    label: 'Home',
     link: '/',
     active: ctx.currentPage === 'home',
   }, {
-    icon: 'home',
-    label: 'program',
-    link: '/program',
-    active: ctx.currentPage === 'program',
-  }, {
-    icon: 'people',
-    label: 'speakers',
+    label: 'Speakers',
     link: '/speakers',
+    active: ctx.currentPage === 'speakers',
+  }, {
+    label: 'Programme',
+    link: '/programme',
+    active: ctx.currentPage === 'programme',
+  }, {
+    label: 'Expo',
+    link: '/expo',
+    active: ctx.currentPage === 'speakers',
+  }, {
+    label: 'Practical',
+    link: '/practical',
+    active: ctx.currentPage === 'speakers',
+  }, {
+    label: 'Previous editions',
+    link: '/previous',
     active: ctx.currentPage === 'speakers',
   }];
 

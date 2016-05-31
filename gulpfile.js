@@ -6,7 +6,7 @@ require('require-dir')('tasks');
 
 gulp.task('build', (cb) => runSequence(
   'clean:build',
-  ['styles:build', 'copy:build', 'scripts:build'],
+  ['copy:build', 'styles:build', 'scripts:build', 'images:build'],
   cb
 ));
 

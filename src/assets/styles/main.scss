@@ -1,2 +1,22 @@
+// Colors
+$ict-blue: #109FA7;
+$ict-blue-rgb: "16,159,167";
+$ict-purple: #7E4098;
+$ict-purple-rgb: "126,64,152";
+$ict-yellow: #D6DF32;
+
+// Material Design Lite colors
+$color-primary: $ict-blue-rgb;
+$color-accent: $ict-purple-rgb;
+
+// Import MDL
 @import 'material-design-lite/src/material-design-lite';
-@import 'speakers.scss';
+
+// Import custom mixins
+@import 'mixins';
+
+// Import custom stylesheets
+@import 'layout';
+@import 'header';
+@import 'home';
+@import 'speakers';

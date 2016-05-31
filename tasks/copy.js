@@ -12,10 +12,6 @@ gulp.task('copy:build:index', () => gulp.src(['./src/index.html'])
   .pipe(gulp.dest('./build'))
 );
 
-gulp.task('copy:build:images', () => gulp.src(['./src/assets/images/**'])
-  .pipe(gulp.dest('./build/assets/images'))
-);
-
 gulp.task('copy:dist:data', () => gulp.src(['./src/data/**'])
   .pipe(gulp.dest('./dist/data'))
 );
@@ -32,7 +28,6 @@ gulp.task('copy:build', [
   'copy:build:data',
   'copy:build:manifest',
   'copy:build:index',
-  'copy:build:images',
 ]);
 
 gulp.task('copy:dist', [

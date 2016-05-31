@@ -1,0 +1,39 @@
+.header-logo-image {
+  height: 50px;
+  @media screen and (max-width: 1024px) {
+    height: 40px;
+  }
+}
+
+.mdl-layout__header {
+  background-color: #fff;
+}
+
+.mdl-layout__header .mdl-layout__drawer-button {
+  color: $ict-blue;
+}
+
+.mdl-layout__header-row .mdl-navigation__link {
+  color: $ict-blue;
+}
+
+.mdl-layout__drawer > .mdl-layout__title, .mdl-layout__drawer > .mdl-layout-title {
+  padding: 15px 10px 0px;
+  text-align: center;
+  font-size: 0.9em;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
+  color: $ict-blue;
+}
+
+.ict-drawer-logo {
+  width: 220px;
+}
+
+.ict-drawer-separator {
+  height: 1px;
+  background-color: #dcdcdc;
+  margin: 8px 0;
+}
