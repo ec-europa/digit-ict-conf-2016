@@ -17,6 +17,11 @@ gulp.task('images:build', () =>
           },
         },
       ],
+      'logos/*': [
+        {
+          height: 80,
+        },
+      ],
       '*': {},
     }, {
       errorOnUnusedImage: false,

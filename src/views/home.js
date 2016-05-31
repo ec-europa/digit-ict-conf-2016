@@ -34,15 +34,4 @@ export default () => `
       </div>
     </div>
   </div>
-  <div class="mdl-grid ict-max-width-900 mdl-typography--text-center" id="sponseredBy">
-    <div class="mdl-cell mdl-cell--12-col">
-      <h3>Sponsored by</h3>
-    </div>
-    <div class="mdl-cell mdl-cell--6-col">
-      <img src="assets/images/commission.jpg" class="ict-home-sponsor" />
-    </div>
-    <div class="mdl-cell mdl-cell--6-col">
-      <img src="assets/images/parliament.jpg" class="ict-home-sponsor" />
-    </div>
-  </div>
 `;

@@ -7,7 +7,7 @@ export default (ctx, next) => {
   ctx.currentPage = 'speakers';
 
   // Get DOM element to populate
-  const main = window.document.querySelector('main');
+  const main = window.document.querySelector('#ict-main');
   let content = '';
 
   if (ctx.state.speakers) {
