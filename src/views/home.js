@@ -23,13 +23,19 @@ export default () => `
       <h3>Speakers</h3>
       <div class="mdl-grid">
         <div class="mdl-cell mdl-cell--4-col">
-          <img src="assets/images/speakers/davidborrelli.png" class="ict-home-avatar speaker_thumbnail--purple"/>
+        <div class="ict-picture-frame ict-picture-frame--blue">
+            <img src="assets/images/speakers/davidborrelli.png" class="ict-picture"/>
+        </div>
         </div>
         <div class="mdl-cell mdl-cell--4-col">
-          <img src="assets/images/speakers/dominiqueleroy.png" class="ict-home-avatar speaker_thumbnail--blue"/>
+          <div class="ict-picture-frame ict-picture-frame--blue">
+              <img src="assets/images/speakers/davidborrelli.png" class="ict-picture"/>
+          </div>
         </div>
         <div class="mdl-cell mdl-cell--4-col">
-          <img src="assets/images/speakers/juliareda.png" class="ict-home-avatar speaker_thumbnail--yellow"/>
+          <div class="ict-picture-frame ict-picture-frame--blue">
+              <img src="assets/images/speakers/davidborrelli.png" class="ict-picture"/>
+          </div>
         </div>
       </div>
     </div>

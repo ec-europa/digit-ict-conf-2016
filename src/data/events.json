@@ -3,6 +3,7 @@
   "starts": "8.30",
   "ends": "9.30",
   "title": "Registration and coffee for participants",
+  "venue": "Main hall",
   "description": [
     "Breakfast for speakers and guests"
   ],
@@ -10,15 +11,17 @@
 }, {
   "id": "welcome",
   "starts": "9.30",
-  "end": "9.45",
+  "ends": "9.45",
   "title": "Welcome by Commissioner G. Oettinger and Vice-President of European Parliament Adina-Ioana Valean",
+  "venue": "",
   "description": [],
   "speakers": []
 }, {
   "id": "panel1",
   "starts": "9.45",
-  "end": "11.00",
+  "ends": "11.00",
   "title": "Panel 1: Workplace of the future",
+  "venue": "",
   "description": [
     "Moderator: Jennifer Baker, BrusselsGeek.eu",
     "Paul Miller, CEO of Digital Workplace Group – ‘’The human-centred digital workplace’’",
@@ -29,15 +32,17 @@
 }, {
   "id": "coffeeMorning",
   "starts": "11.00",
-  "end": "11.30",
+  "ends": "11.30",
   "title": "Coffee break and DIGITEC exhibition",
+  "venue": "",
   "description": [],
   "speakers": []
 }, {
   "id": "panel2",
   "starts": "11.30",
-  "end": "12.45",
+  "ends": "12.45",
   "title": "Panel 2: Digital Democracy",
+  "venue": "",
   "description": [
     "Moderator: Jennifer Baker, BrusselsGeek.eu",
     "David Borelli, MEP, Co-President of the Europe for Freedom and Direct Democracy Group",
@@ -48,8 +53,9 @@
 }, {
   "id": "lunch",
   "starts": "12.45",
-  "end": "14.15",
+  "ends": "14.15",
   "title": "Lunch and DIGITEC exhibition",
+  "venue": "",
   "description": [
 
   ],
@@ -57,8 +63,9 @@
 }, {
   "id": "panel3",
   "starts": "14.15",
-  "end": "15.30",
+  "ends": "15.30",
   "title": "Panel 3: Technologies of the Future",
+  "venue": "",
   "description": [
     "Moderator: Jennifer Baker, BrusselsGeek.eu",
     "Dominique Leroy, CEO of Proximus",
@@ -69,8 +76,9 @@
 }, {
   "id": "session1",
   "starts": "14.15",
-  "end": "15.30",
+  "ends": "15.30",
   "title": "Session 1: User experience",
+  "venue": "",
   "description": [
     "Workshop: Paul Boag, UX expert"
   ],
@@ -78,8 +86,9 @@
 }, {
   "id": "session2",
   "starts": "14.15",
-  "end": "15.30",
+  "ends": "15.30",
   "title": "Session 2: Knowledge worker: Culture, Skills, Tools",
+  "venue": "",
   "description": [
     "Facilitator: (tbc)",
     "Knowledge workers of the future - what do they need?"
@@ -88,8 +97,9 @@
 }, {
   "id": "session3",
   "starts": "14.15",
-  "end": "15.30",
+  "ends": "15.30",
   "title": "Session 3: OpenSource the Future ",
+  "venue": "",
   "description": [
     "Facilitator: (tbc)",
     "Special guest: Julia Reda, MEP"
@@ -98,15 +108,17 @@
 }, {
   "id": "coffeeAfternoon",
   "starts": "15.30",
-  "end": "16.00",
+  "ends": "16.00",
   "title": "Coffee break and DIGITEC exhibition",
+  "venue": "",
   "description": [],
   "speakers": []
 }, {
   "id": "panel4",
   "starts": "16.00",
-  "end": "17.15",
+  "ends": "17.15",
   "title": "Panel 4: Technologies of the Future (continued)",
+  "venue": "",
   "description": [
     "Moderator: Jennifer Baker, BrusselsGeek.eu",
     "Alexander Steiner, Numergy – The way ahead for the cloud",
@@ -117,19 +129,21 @@
 }, {
   "id": "session4",
   "starts": "16.00",
-  "end": "17.15",
+  "ends": "17.15",
   "title": "Session 4: Data for policy making",
+  "venue": "",
   "description": [
     "Facilitator: Prabhat Agarwal, DG CONNECT",
     "Prof. Mercedes Fuertes",
     "Prof. Diana Galetta, University of Milan"
-],
+  ],
   "speakers": []
 }, {
   "id": "session5",
   "starts": "16.00",
-  "end": "17.15",
+  "ends": "17.15",
   "title": "Session 5: Collaborate to innovate",
+  "venue": "",
   "description": [
     "Facilitator: Leo Exter, westartup",
     "Presenting the results from the inter-institutional hackathon"
@@ -138,8 +152,9 @@
 }, {
   "id": "session6",
   "starts": "16.00",
-  "end": "17.15",
+  "ends": "17.15",
   "title": "Session 6: IT security",
+  "venue": "",
   "description": [
     "Moderator: Ken Ducatel, DIGIT"
   ],
@@ -147,15 +162,17 @@
 }, {
   "id": "keynote",
   "starts": "17.15",
-  "end": "17.30",
+  "ends": "17.30",
   "title": "Keynote closing speech: Vincent Bruneau, CEO of Magency",
+  "venue": "",
   "description": [],
   "speakers": []
 }, {
   "id": "closing",
   "starts": "17.30",
-  "end": "",
+  "ends": "",
   "title": "Closing by organisers",
+  "venue": "",
   "description": [],
   "speakers": []
 }]

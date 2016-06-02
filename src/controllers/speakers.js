@@ -13,6 +13,7 @@ export default (ctx, next) => {
   if (ctx.state.speakers) {
     // If speakers are cached, display them
     content = view(ctx.state.speakers);
+    render(main, content);
   } else {
     fetchContent('data/speakers.json', (speakers) => {
       // Cache speakers for further use
@@ -21,10 +22,9 @@ export default (ctx, next) => {
 
       // Display speakers
       content = view(speakers);
+      render(main, content);
     });
   }
-
-  render(main, content);
 
   next();
 };

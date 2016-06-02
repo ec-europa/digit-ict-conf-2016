@@ -9,6 +9,9 @@ $ict-yellow: #D6DF32;
 $color-primary: $ict-blue-rgb;
 $color-accent: $ict-purple-rgb;
 
+// Material Design Lite paths
+$image_path: '../images';
+
 // Import MDL
 @import 'material-design-lite/src/material-design-lite';
 
