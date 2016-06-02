@@ -1,3 +1,5 @@
+$logo-height: 100px;
+
 .ict-footer {
   background-color: #fafafa;
   margin-top: 80px;
@@ -9,17 +11,17 @@
 
 .mdl-mini-footer {
   .mdl-logo {
-    line-height: 80px;
+    line-height: $logo-height;
   }
 }
 
 .ict-footer-organizer-logo {
-  height: 80px;
+  height: $logo-height;
 }
 
 .ict-footer .mdl-mini-footer__right-section a {
   text-decoration: none;
-  line-height: 80px;
+  line-height: $logo-height;
 
   .material-icons {
     position: relative;

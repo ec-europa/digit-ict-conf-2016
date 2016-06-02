@@ -19,7 +19,7 @@ gulp.task('images:build', () =>
       ],
       'logos/*': [
         {
-          height: 80,
+          height: 100,
         },
       ],
       '*': {},
