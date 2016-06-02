@@ -1,0 +1,30 @@
+$logo-height: 100px;
+
+.ict-footer {
+  background-color: #fafafa;
+  margin-top: 80px;
+  padding: 40px;
+  .mdl-logo {
+    color: #333;
+  }
+}
+
+.mdl-mini-footer {
+  .mdl-logo {
+    line-height: $logo-height;
+  }
+}
+
+.ict-footer-organizer-logo {
+  height: $logo-height;
+}
+
+.ict-footer .mdl-mini-footer__right-section a {
+  text-decoration: none;
+  line-height: $logo-height;
+
+  .material-icons {
+    position: relative;
+    top: 6px;
+  }
+}

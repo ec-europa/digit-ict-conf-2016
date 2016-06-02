@@ -5,29 +5,19 @@
   background-color: #f3f3f3;
   background: url('../images/cover.jpg') center 65% no-repeat;
   background-size: cover;
-}
 
-.ict-home-cfa > h1 {
-  color: #fff;
-  padding-top: 100px;
-  margin-top: 0;
-  text-shadow: 2px 2px 4px #777;
-}
+  > h1 {
+    color: #fff;
+    padding-top: 100px;
+    margin-top: 0;
+    text-shadow: 2px 2px 4px #777;
+  }
 
-.ict-home-cfa > h2 {
-  color: #fff;
-  font-size: 36px;
-  text-shadow: 2px 2px 3px #777;
-}
-
-.ict-home-ripple {
-  position: absolute;
-   right: 50%;
-   bottom: 8px;
-   z-index: 3;
-   color: white !important;
-   background: none !important;
-   box-shadow: none;
+  > h2 {
+    color: #fff;
+    font-size: 36px;
+    text-shadow: 2px 2px 3px #777;
+  }
 }
 
 .ict-home-register {
@@ -42,4 +32,13 @@
 .ict-home-avatar {
   border-radius: 50%;
   width: 100%;
+}
+
+.ict-home-expand {
+  text-align: center;
+
+  > a {
+    padding: 20px;
+    color: #fff;
+  }
 }
