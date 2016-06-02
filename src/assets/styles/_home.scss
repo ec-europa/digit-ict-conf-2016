@@ -29,11 +29,6 @@
   @include rotateY(30deg);
 }
 
-.ict-home-avatar {
-  border-radius: 50%;
-  width: 100%;
-}
-
 .ict-home-expand {
   text-align: center;
 
@@ -41,4 +36,26 @@
     padding: 20px;
     color: #fff;
   }
+}
+
+.ict-picture-frame {
+  padding: 4px;
+  clip-path: polygon(0% 5%, 100% 0%, 100% 75%, 100% 100%, 0% 95%);
+}
+
+.ict-picture-frame--blue {
+  background-color: $ict-blue;
+}
+
+.ict-picture-frame--purple {
+  background-color: $ict-purple;
+}
+
+.ict-picture-frame--yellow {
+  background-color: $ict-yellow;
+}
+
+.ict-picture {
+  width: 100%;
+  clip-path: polygon(0% 5%, 100% 0%, 100% 75%, 100% 100%, 0% 95%);
 }

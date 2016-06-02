@@ -1,5 +1,9 @@
 const gulp = require('gulp');
 
+gulp.task('copy:build:mdl', () => gulp.src(['./node_modules/material-design-lite/src/images/**'])
+  .pipe(gulp.dest('./build/assets/images'))
+);
+
 gulp.task('copy:build:data', () => gulp.src(['./src/data/**'])
   .pipe(gulp.dest('./build/data'))
 );
@@ -28,6 +32,7 @@ gulp.task('copy:build', [
   'copy:build:data',
   'copy:build:manifest',
   'copy:build:index',
+  'copy:build:mdl',
 ]);
 
 gulp.task('copy:dist', [
