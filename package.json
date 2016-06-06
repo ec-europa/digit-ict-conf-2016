@@ -29,6 +29,7 @@
     "connect-history-api-fallback": "^1.2.0",
     "cssnano": "^3.6.2",
     "del": "^2.2.0",
+    "dialog-polyfill": "^0.4.3",
     "eslint": "^2.11.1",
     "eslint-config-airbnb-base": "^3.0.1",
     "eslint-plugin-import": "^1.8.1",

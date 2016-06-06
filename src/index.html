@@ -40,6 +40,7 @@
 
   <!-- modal for speaker and session will go here -->
   <div class="modal-container" hidden></div>
+  <dialog class="mdl-dialog"></dialog>
 
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 
@@ -88,6 +89,12 @@
     </main>
   </div>
   <script src="/assets/scripts/vendors.js"></script>
+  <script>
+    var dialog = document.querySelector('dialog');
+    if (! dialog.showModal) {
+      dialogPolyfill.registerDialog(dialog);
+    }
+  </script>
   <script src="/app.js"></script>
   </body>
 </html>
