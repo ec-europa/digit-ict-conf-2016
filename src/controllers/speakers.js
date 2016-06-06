@@ -1,30 +1,20 @@
-import view from '../views/speakers.js';
-import { fetchContent } from '../utils/fetchContent';
+import speakersListComponent from '../components/speakers/speakersList.js';
 import render from '../utils/render.js';
+import store from '../store.js';
 
 export default (ctx, next) => {
   // Set current page
   ctx.currentPage = 'speakers';
 
-  // Get DOM element to populate
-  const main = window.document.querySelector('#ict-main');
-  let content = '';
-
-  if (ctx.state.speakers) {
-    // If speakers are cached, display them
-    content = view(ctx.state.speakers);
+  // Display speakers
+  store.getSpeakers((speakers) => {
+    // Get DOM element to populate
+    const component = speakersListComponent(speakers);
+    const main = window.document.querySelector('#ict-main');
+    const content = component.render();
     render(main, content);
-  } else {
-    fetchContent('data/speakers.json', (speakers) => {
-      // Cache speakers for further use
-      ctx.state.speakers = speakers;
-      ctx.save();
-
-      // Display speakers
-      content = view(speakers);
-      render(main, content);
-    });
-  }
+    component.bindEvents();
+  });
 
   next();
 };
