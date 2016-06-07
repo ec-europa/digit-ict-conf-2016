@@ -3,7 +3,7 @@ import h from 'preact/src/h';
 import Component from 'preact/src/component';
 import { fetchContent } from '../../utils/fetchContent';
 
-import Event from './event';
+import Event from '../../components/events/event';
 
 export default class Programme extends Component {
 	constructor() {
@@ -14,16 +14,11 @@ export default class Programme extends Component {
   }
 
 	componentDidMount() {
-    window.componentHandler.upgradeDom();
-    alert('mounted')
+		componentHandler.upgradeElement(this.base.querySelector('.mdl-tabs'));
   }
 
-	componentDidUpdate() {
-		alert('mounted updt');
-	}
-
 	shouldComponentUpdate() {
-    //return false;
+    return false;
   }
 
 	render(props, { events }) {

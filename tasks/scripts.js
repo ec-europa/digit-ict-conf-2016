@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const rollup = require('rollup').rollup;
 const commonjs = require('rollup-plugin-commonjs');
 const nodeResolve = require('rollup-plugin-node-resolve');
+const replace = require('rollup-plugin-replace');
 const babel = require('rollup-plugin-babel');
 const uglify = require('gulp-uglify');
 
@@ -26,7 +27,9 @@ gulp.task('scripts:build:app', () => rollup({
       browser: true,
     }),
     commonjs(),
-
+    replace({
+      'process.env.NODE_ENV': JSON.stringify( 'production' )
+    }),
   ],
 }).then((bundle) => bundle.write({
   format: 'iife',

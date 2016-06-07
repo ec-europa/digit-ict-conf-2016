@@ -8,6 +8,10 @@ export default class Event extends Component {
     return false;
   }
 
+  componentDidMount() {
+		componentHandler.upgradeElement(this.base.querySelector('.mdl-checkbox'));
+  }
+
   render({ event }) {
     return (
       <li class="mdl-list__item mdl-list__item--two-line">

@@ -2,7 +2,7 @@ import h from 'preact/src/h';
 import Component from 'preact/src/component';
 import { fetchContent } from '../../utils/fetchContent';
 
-import Speaker from './speaker';
+import Speaker from '../../components/speakers/speaker';
 
 export default class Speakers extends Component {
   constructor() {
