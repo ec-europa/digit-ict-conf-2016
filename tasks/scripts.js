@@ -8,16 +8,25 @@ const uglify = require('gulp-uglify');
 gulp.task('scripts:build:app', () => rollup({
   entry: 'src/app.js',
   plugins: [
+    babel({
+      exclude: 'node_modules/**',
+      presets: ['es2015-rollup'],
+      babelrc: false,
+      plugins: [
+        'syntax-object-rest-spread',
+        'transform-object-rest-spread',
+        'transform-class-properties',
+        ['transform-es2015-classes', { loose: true }],
+        ['transform-react-jsx', { pragma: 'h' }],
+      ],
+    }),
     nodeResolve({
-      jsnext: true,
+      jsnext: false,
       main: true,
       browser: true,
     }),
     commonjs(),
-    babel({
-      exclude: 'node_modules/**',
-      presets: ['es2015-rollup'],
-    }),
+
   ],
 }).then((bundle) => bundle.write({
   format: 'iife',
