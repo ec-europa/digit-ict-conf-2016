@@ -4,7 +4,14 @@ import Component from 'preact/src/component';
 import { fetchContent } from '../../utils/fetchContent';
 
 import Event from '../../components/events/event';
+import MyEvent from '../../components/events/my-event';
 
+import Redux from 'preact-redux';
+import { bindActions } from '../../redux/util';
+import reduce from '../../redux/reducers';
+import * as actions from '../../redux/actions';
+
+@Redux.connect(reduce, bindActions(actions))
 export default class Programme extends Component {
 	constructor() {
     super();
@@ -17,11 +24,7 @@ export default class Programme extends Component {
 		componentHandler.upgradeElement(this.base.querySelector('.mdl-tabs'));
   }
 
-	shouldComponentUpdate() {
-    return false;
-  }
-
-	render(props, { events }) {
+	render({ myEvents }, { events }) {
 		return (
 			<div>
 				<div class="mdl-grid ict-max-width-900">
@@ -41,9 +44,9 @@ export default class Programme extends Component {
 							</ul>
 			      </div>
 			      <div class="mdl-tabs__panel" id="lannisters-panel">
-			        <ul>
-			          <li>Nothing to show</li>
-			        </ul>
+			        <ul class="demo-list-control mdl-list">
+								{myEvents.map(event => <MyEvent event={event} />)}
+							</ul>
 			      </div>
 			    </div>
 			  </div>

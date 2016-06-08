@@ -17,6 +17,7 @@ gulp.task('scripts:build:app', () => rollup({
         'syntax-object-rest-spread',
         'transform-object-rest-spread',
         'transform-class-properties',
+        'transform-decorators-legacy',
         ['transform-es2015-classes', { loose: true }],
         ['transform-react-jsx', { pragma: 'h' }],
       ],
@@ -28,7 +29,7 @@ gulp.task('scripts:build:app', () => rollup({
     }),
     commonjs(),
     replace({
-      'process.env.NODE_ENV': JSON.stringify( 'production' )
+      'process.env.NODE_ENV': JSON.stringify('production'),
     }),
   ],
 }).then((bundle) => bundle.write({

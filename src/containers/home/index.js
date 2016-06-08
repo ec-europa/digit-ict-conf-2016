@@ -7,7 +7,7 @@ export default class Home extends Component {
 			<div>
 				<div class="ict-home-cfa mdl-typography--text-center">
 			    <h1>DIGITEC 2016: Digital Future</h1>
-			    <h2>26/11/2016 BRUSSELS</h2>
+			    <h2>29/11/2016 BRUSSELS</h2>
 			    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent ict-home-register">
 			      Register
 			    </button>

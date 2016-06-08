@@ -2,11 +2,13 @@ import h from 'preact/src/h';
 import Component from 'preact/src/Component';
 import Menu from './menu';
 import Header from './header';
+import Modal from './modal';
 
 export default class App extends Component {
   render() {
     return (
       <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <Modal/>
         <Header />
         <Menu />
         <main class="mdl-layout__content">
