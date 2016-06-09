@@ -27,7 +27,9 @@ gulp.task('scripts:build:app', () => rollup({
       main: true,
       browser: true,
     }),
-    commonjs(),
+    commonjs({
+      ignoreGlobal: true,
+    }),
     replace({
       'process.env.NODE_ENV': JSON.stringify('production'),
     }),
