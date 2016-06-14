@@ -46,7 +46,26 @@
     "eslint": "*.js",
     "stylelint": "*.css"
   },
-  "pre-commit": "lint:staged",
+  "config": {
+    "ghooks": {
+      "pre-commit": "lint:staged",
+      "commit-msg": "validate-commit-msg"
+    },
+    "validate-commit-msg": {
+      "types": [
+        "feat",
+        "fix",
+        "docs",
+        "style",
+        "refactor",
+        "perf",
+        "test",
+        "chore",
+        "revert"
+      ],
+      "maxSubjectLength": 100
+    }
+  },
   "babel": {
     "presets": [
       "es2015-webpack",
@@ -174,6 +193,7 @@
     "exports-loader": "^0.6.3",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
+    "ghooks": "^1.2.3",
     "html-loader": "^0.4.3",
     "html-webpack-plugin": "^2.16.0",
     "image-webpack-loader": "^1.8.0",
@@ -209,10 +229,12 @@
     "rimraf": "^2.5.2",
     "shelljs": "^0.7.0",
     "sinon": "^2.0.0-pre",
+    "standard-version": "^2.3.0",
     "style-loader": "^0.13.1",
     "stylelint": "^6.3.3",
     "stylelint-config-standard": "^8.0.0",
     "url-loader": "^0.5.7",
+    "validate-commit-msg": "^2.6.1",
     "webpack": "2.1.0-beta.8",
     "webpack-dev-middleware": "^1.6.1",
     "webpack-hot-middleware": "^2.10.0"
