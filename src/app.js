@@ -1,6 +1,7 @@
 import render from 'preact/src/render';
 import h from 'preact/src/h';
 import Redux from 'preact-redux';
+import { createStore, combineReducers } from 'redux';
 
 //import store from './redux/store';
 import Routes from './routes';

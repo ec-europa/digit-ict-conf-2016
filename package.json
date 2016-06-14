@@ -9,7 +9,7 @@
     "serve:build": "gulp serve:build",
     "serve:dist": "gulp serve:dist",
     "release": "standard-version",
-    "lint": "eslint \"**/*.js\""
+    "lint-staged": "lint-staged"
   },
   "repository": {
     "type": "git",
@@ -96,6 +96,6 @@
     }
   },
   "lint-staged": {
-    "lint": "*.js"
+    "eslint": "*.js"
   }
 }
