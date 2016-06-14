@@ -1,16 +1,17 @@
 {
-  "name": "react-boilerplate",
-  "version": "3.0.0",
-  "description": "A highly scalable, offline-first foundation with the best DX and a focus on performance and best practices",
+  "name": "digit-ict-conf-2016",
+  "description": "DIGIT-ICT Conference 2016 website",
+  "version": "0.6.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/mxstbr/react-boilerplate.git"
+    "url": "git+https://github.com/ec-europa/digit-ict-conf-2016.git"
   },
-  "engines": {
-    "npm": ">=3"
+  "author": "",
+  "license": "EUPL-1.1",
+  "bugs": {
+    "url": "https://github.com/ec-europa/digit-ict-conf-2016/issues"
   },
-  "author": "Max Stoiber",
-  "license": "MIT",
+  "homepage": "https://github.com/ec-europa/digit-ict-conf-2016#readme",
   "scripts": {
     "analyze": "node ./internals/scripts/analyze.js",
     "npmcheckversion": "node ./internals/scripts/npmcheckversion.js",

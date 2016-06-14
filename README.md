@@ -22,22 +22,6 @@ This will run both `npm run build` and `npm serve:build`.
 npm run build
 ```
 
-## Dist
-
-```bash
-npm run dist
-```
-
-## Serve
-
-```
-npm run serve:build
-```
-
-```
-npm run serve:dist
-```
-
 ## Lint
 
 ```bash
