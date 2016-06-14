@@ -8,7 +8,7 @@ import { bindActions } from '../../redux/util';
 import reduce from '../../redux/reducers';
 import * as actions from '../../redux/actions';
 
-@Redux.connect(reduce, bindActions(actions))
+// @Redux.connect(reduce, bindActions(actions))
 export default class Speaker extends Component {
   constructor() {
     super();
@@ -18,7 +18,7 @@ export default class Speaker extends Component {
   }
 
   handleClick() {
-    this.props.openSpeakerModal(this.props.speaker);
+    // this.props.openSpeakerModal(this.props.speaker);
   }
 
   render({ speaker }, { color }) {

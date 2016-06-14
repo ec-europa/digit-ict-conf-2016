@@ -6,13 +6,12 @@ import SpeakerModal from '../../../components/speakers/modal';
 
 import Redux from 'preact-redux';
 import { bindActions } from '../../../redux/util';
-import reduce from '../../../redux/reducers';
 import * as actions from '../../../redux/actions';
 
-@Redux.connect(reduce, bindActions(actions))
+@Redux.connect((state) => { modal: state.modal }, bindActions(actions))
 export default class ModalContainer extends Component {
 	componentDidUpdate() {
-		if (this.props.showSpeaker) {
+		if (this.props.modal.open) {
 			const dialog = this.base;
 			dialog.querySelector('.close').addEventListener('click', () => {
 	      dialog.close();
@@ -29,10 +28,10 @@ export default class ModalContainer extends Component {
     }
   }
 
-	render({ showSpeaker }) {
+	render({ modal }) {
 		return (
 			<dialog class="mdl-dialog">
-				{showSpeaker ? <SpeakerModal speaker={showSpeaker} />: ''}
+				{modal.open ? <SpeakerModal speaker={modal.data} />: ''}
 			</dialog>
 		);
 	}

@@ -5,13 +5,42 @@ const nodeResolve = require('rollup-plugin-node-resolve');
 const replace = require('rollup-plugin-replace');
 const babel = require('rollup-plugin-babel');
 const uglify = require('gulp-uglify');
+const path = require('path');
 
-gulp.task('scripts:build:app', () => rollup({
-  entry: 'src/app.js',
+gulp.task('scripts:build:redux', () => rollup({
+  entry: 'node_modules/redux/src/index.js',
   plugins: [
     babel({
+      presets: ['es2015-loose-rollup', 'stage-0'],
+      babelrc: false,
+    }),
+    nodeResolve({
+      jsnext: false,
+      main: true,
+      browser: true,
+    }),
+    commonjs({
+      ignoreGlobal: true,
+    }),
+  ],
+}).then((bundle) => bundle.write({
+  dest: '.tmp/redux.js',
+  format: 'cjs',
+})));
+
+gulp.task('scripts:build:app', ['scripts:build:redux'], () => rollup({
+  entry: 'src/app.js',
+  plugins: [
+    {
+      resolveId: (id) => {
+        if (id === 'redux') {
+          return path.resolve('.tmp/redux.js');
+        }
+      },
+    },
+    babel({
       exclude: 'node_modules/**',
-      presets: ['es2015-rollup'],
+      presets: ['es2015-loose-rollup', 'stage-0'],
       babelrc: false,
       plugins: [
         'syntax-object-rest-spread',

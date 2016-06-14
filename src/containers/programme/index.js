@@ -8,16 +8,26 @@ import MyEvent from '../../components/events/my-event';
 
 import Redux from 'preact-redux';
 import { bindActions } from '../../redux/util';
-import reduce from '../../redux/reducers';
 import * as actions from '../../redux/actions';
 
-@Redux.connect(reduce, bindActions(actions))
+@Redux.connect((state) => { events: state.events }, bindActions(actions))
 export default class Programme extends Component {
 	constructor() {
     super();
+		this.toggleEvent = this.toggleEvent.bind(this);
     fetchContent('data/events.json', (events) => {
       this.state.events = events;
     });
+  }
+
+  toggleEvent(event) {
+    const checked = document.getElementById('list-checkbox-'+event.id).checked;
+
+    if (checked) {
+      this.props.addEvent(event);
+    } else {
+      this.props.removeEvent(event);
+    }
   }
 
 	componentDidMount() {
@@ -40,7 +50,7 @@ export default class Programme extends Component {
 			      </div>
 			      <div class="mdl-tabs__panel is-active" id="starks-panel">
 							<ul class="demo-list-control mdl-list">
-								{events.map(event => <Event event={event} />)}
+								{events.map(event => <Event event={event} checked={false} onToggle={this.toggleEvent} />)}
 							</ul>
 			      </div>
 			      <div class="mdl-tabs__panel" id="lannisters-panel">
