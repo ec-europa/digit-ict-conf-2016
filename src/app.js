@@ -1,8 +1,30 @@
-import page from 'page';
-import controllers from './controllers/index.js';
+import render from 'preact/src/render';
+import h from 'preact/src/h';
+import Redux from 'preact-redux';
+import { createStore, combineReducers } from 'redux';
 
-page('/', controllers.home, controllers.layout);
-page('/programme', controllers.programme, controllers.layout);
-page('/speakers', controllers.speakers, controllers.layout);
-page('*', controllers.notfound, controllers.layout);
-page({ hashbang: false });
+//import store from './redux/store';
+import Routes from './routes';
+
+import events from './redux/reducers/events';
+import modal from './redux/reducers/modal';
+
+const reducer = combineReducers({
+  events,
+  modal,
+});
+console.log('EXIIIIIT');
+
+const INITIAL = {
+  events: [],
+  modal: {},
+};
+
+const store = createStore(reducer);
+
+
+render((
+  <Redux.Provider store={store}>
+    <Routes />
+  </Redux.Provider>
+), window.document.body);
