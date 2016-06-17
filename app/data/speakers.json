@@ -1,0 +1,101 @@
+[
+  {
+    "id": "paulmiller",
+    "firstname": "Paul",
+    "lastname": "Miller",
+    "bio": [
+      "Paul Miller is a technology and social entrepreneur. He is CEO and Founder of the Digital Workplace Group (DWG). He has been at the heart of the work and technology revolution for the last 20 years. He is the author of “The Digital Workplace: How Technology is Liberating Work”, and his new book, “The Digital Renaissance of Work—Delivering digital workplaces fit for the future”, co-authored with Elizabeth Marsh.",
+      "After an early career as a City editor and speechwriter, Paul published WAVE magazine, before founding the Intranet Benchmarking Forum (IBF), which went on to become DWG. Paul is a keen tennis player and devoted yoga practitioner. He has two daughters and lives in London and the Cotswolds."
+    ],
+    "twitter": "@paulmillersays",
+    "picture": "paulmiller.png",
+    "sessions": ["panel1"]
+  },
+  {
+    "id": "sabinesipunova",
+    "firstname": "Sabine",
+    "lastname": "Sipunova",
+    "bio": [
+      "Sabine Sipunova is a founder & head of operations at Sorry as a Service, a software company that helps companies to say sorry and wow their customers through their mailbox.",
+      "After trying herself as a VC analyst and M&A analyst, social media agency founder, Sabine founded Sorry as a Service, to help companies scale the unscalable – personal touch through personalised and physical surprises. Imagine if your order has been delayed for 3 days, you automatically will receive a chocolate bar with piped sorry message. Sorry as a Service strives to merge digital and physical experience for customers in one unified.",
+      "In 2016 Sabine was featured in Forbes' Top 10 Promising Founders to Watch in the Baltics."
+    ],
+    "twitter": false,
+    "picture": "sabinesipunova.png",
+    "sessions": ["panel1"]
+  },
+  {
+    "id": "davidborrelli",
+    "firstname": "David",
+    "lastname": "Borrelli",
+    "bio": [
+      "David Borrelli is an Italian politician for the Five Star Movement who since 2014 has been a MEP where he served as Co-President of the Europe of Freedom and Direct Democracy group"
+    ],
+    "twitter": "@borrellidavid",
+    "picture": "davidborrelli.png",
+    "sessions": ["panel2"]
+  },
+  {
+    "id": "dominiqueleroy",
+    "firstname": "Dominique",
+    "lastname": "Leroy",
+    "bio": [
+      "Dominique Leroy is the CEO of Proximus.",
+      "Joining Belgacom in October 2011 as Vice President Sales for the Consumer Business, Dominique Leroy took over the position of Executive Vice President of the Consumer Business in June 2012, becoming a member of the Executive Committee. In January 2014 she was appointed CEO of the Belgacom Group.",
+      "After graduating at the Solvay Business School in 1987 with a degree in Business Engineering, Dominique started her career at Unilever, where she held positions in marketing, finance, logistics, sales and general management. From September 2007 until October 2011 she was Country Manager and Vice President Customer Development at Unilever Belgium, and member of the Unilever Benelux Board.",
+      "Born in Brussels in 1964, she is married and mother of two sons (19 and 17 years old). Besides her family and job, she has a passion for music, travelling, modern art and sports (running, cycling, skiing, and mountaineering).",
+      "In 2015 she became Manager of the Year in Belgium."
+    ],
+    "twitter": false,
+    "picture": "dominiqueleroy.png",
+    "sessions": ["panel3"]
+  },
+  {
+    "id": "mischadohler",
+    "firstname": "Mischa",
+    "lastname": "Dohler",
+    "bio": [
+      "Mischa Dohler is full Professor in Wireless Communications at King’s College London, driving cross-disciplinary research and innovation in technology, sciences and arts. He is the Director of the Centre for Telecommunications Research, co-founder and member of the Board of Directors of the smart city pioneer Worldsensing, Fellow of the IEEE, Editor-in-Chief of the Transactions on Emerging Telecommunications Technologies and the EAI Transactions on the Internet of Things, and a Distinguished Member of Harvard Square Leaders Excellence.",
+      "He acts as policy, technology and entrepreneurship adviser, examples being Richard Branson’s Carbon War Room, David Willetts’ 8 Great Technology Fund, Regulator Ofcom, UK House of Parliament, UK Ministries, EPSRC ICT Strategy Advisory Team, European Commission, Tech London Advocate, ISO Smart City working group, and various start-ups.",
+      "He is also an entrepreneur, composer & pianist, and fluent in 6 languages. He has talked at TEDx. He had coverage by national and international TV & radio, and his contributions have featured on BBC News and the Wall Street Journal."
+    ],
+    "twitter": "@MischaDohler",
+    "picture": "mischadohler.png",
+    "sessions": ["panel3"]
+  },
+  {
+    "id": "katekahle",
+    "firstname": "Kate",
+    "lastname": "Kahle",
+    "bio": [
+      "Kate Kahle began as a physicist before receiving an MSc in Science Communication at Imperial College London. She joined CERN in 2006 to communicate for CERN-led European projects after 5 years of editorial experience in the Pearson publishing group: Dorling Kindersley, Penguin Press and Longman Schools Science.",
+      "She became CERN social media manager and news editor of the CERN Courier in 2012. Kate currently manages CERN’s presence on the social media platforms Twitter, Facebook, Google+ and YouTube."
+    ],
+    "twitter": "@katekahle",
+    "picture": "katekahle.png",
+    "sessions": ["panel2"]
+  },
+  {
+    "id": "paulboag",
+    "firstname": "Paul",
+    "lastname": "Boag",
+    "bio": [
+      "Paul Boag is a user experience consultant, author and speaker. He helps not-for-profits such as the European Commission, UCAS and Doctors Without Borders adapt to the digital world. He refocuses them on user experience and engaging with a new digitally savvy audience. "
+    ],
+    "twitter": "@boagworld",
+    "picture": "paulboag.png",
+    "sessions": ["panel2", "session1"]
+  },
+  {
+    "id": "juliareda",
+    "firstname": "Julia",
+    "lastname": "Reda",
+    "bio": [
+      "Julia Read is ''the Pirate in the European Parliament representing a young worldwide movement of people who believe in using technology for the empowerment of all.'' She is a member and one of the Vice-Chairs of the Greens/EFA group and a co-founder of the Parliament’s current Digital Agenda intergroup. She sits on the Legal Affairs Committee (JURI) and am a substitute on the Internal Market/Consumer Protection (IMCO) and Petition (PETI) committees, as well as the delegation for relations with the United States and India.",
+      "Julia Reda was born in Bonn in 1986, is member of the local chapter of Frankfurt in the Pirate Party, and has been active in the pirates since 2009. Before that, she was a member of the SPD for six years before she left them amidst the debate on internet blocking. From 2010 to 2012, she was chairwoman of the Young Pirates and has been taking care of the international coordination of the youth organisation ever since. She is founding chairperson of the Young Pirates of Europe."
+    ],
+    "twitter": "@Senficon",
+    "picture": "juliareda.png",
+    "sessions": ["session3"]
+  }
+]

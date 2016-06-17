@@ -1,8 +1,7 @@
 /**
  * app.js
  *
- * This is the entry file for the application, only setup and boilerplate
- * code.
+ * This is the entry file for the application
  */
 import 'babel-polyfill';
 
@@ -21,19 +20,23 @@ import useScroll from 'react-router-scroll';
 import configureStore from './store';
 
 // Import the CSS reset, which HtmlWebpackPlugin transfers to the build folder
-import 'sanitize.css/lib/sanitize.css';
+import 'sanitize.css/sanitize.css';
+import 'assets/styles/app.scss';
+import 'react-mdl/extra/material.js';
 
 // Create redux store with history
 // this uses the singleton browserHistory provided by react-router
 // Optionally, this could be changed to leverage a created history
 // e.g. `const browserHistory = useRouterHistory(createBrowserHistory)();`
 const initialState = {};
+
 const store = configureStore(initialState, browserHistory);
 
 // Sync history and store, as the react-router-redux reducer
 // is under the non-default key ("routing"), selectLocationState
 // must be provided for resolving how to retrieve the "route" in the state
-import { selectLocationState } from 'containers/App/selectors';
+import { selectLocationState } from './containers/App/selectors/index';
+
 const history = syncHistoryWithStore(browserHistory, store, {
   selectLocationState: selectLocationState(),
 });
@@ -51,11 +54,10 @@ ReactDOM.render(
     <Router
       history={history}
       routes={rootRoute}
-      render={
-        // Scroll to top when going to a new page, imitating default browser
-        // behaviour
-        applyRouterMiddleware(useScroll())
-      }
+      render={applyRouterMiddleware(useScroll(() => {
+        document.querySelector('.mdl-layout__content').scrollTop = 0;
+        return true;
+      }))}
     />
   </Provider>,
   document.getElementById('app')

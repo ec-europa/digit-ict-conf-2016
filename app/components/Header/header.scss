@@ -1,0 +1,17 @@
+.mdl-layout__header--waterfall.is-casting-shadow {
+  background-color: #FFF;
+}
+
+.is-casting-shadow .mdl-layout__header-row .mdl-navigation__link,
+.is-casting-shadow.mdl-layout__header .mdl-layout__drawer-button {
+  color: rgb(66, 66, 66);
+}
+
+.mainHeader {
+  position: absolute;
+  transition-property: max-height, box-shadow, background-color, color;
+}
+
+.mdl-layout__tab-bar {
+  height: auto;
+}

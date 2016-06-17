@@ -11,12 +11,19 @@ module.exports = (options) => ({
     path: path.resolve(process.cwd(), 'build'),
     publicPath: '/',
   }, options.output), // Merge with env dependent settings
+  sassResources: [
+    './app/assets/styles/_variables.scss',
+    './app/assets/styles/_mixins.scss',
+  ],
   module: {
     loaders: [{
       test: /\.js$/, // Transform all .js files required somewhere with Babel
       loader: 'babel',
       exclude: /node_modules/,
       query: options.babelQuery,
+    }, {
+      test: /\.scss$/,
+      loader: options.sassLoaders,
     }, {
       // Transform our own .css files with PostCSS and CSS-modules
       test: /\.css$/,

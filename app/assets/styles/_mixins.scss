@@ -1,0 +1,7 @@
+@mixin rotateX($deg) {
+  transform: perspective(600px) rotateX($deg);
+}
+
+@mixin rotateY($deg) {
+  transform: perspective(600px) rotateY($deg);
+}
