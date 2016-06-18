@@ -12,8 +12,8 @@ module.exports = (options) => ({
     publicPath: '/',
   }, options.output), // Merge with env dependent settings
   sassResources: [
-    './app/assets/styles/_variables.scss',
-    './app/assets/styles/_mixins.scss',
+    './app/public/assets/styles/_variables.scss',
+    './app/public/assets/styles/_mixins.scss',
   ],
   module: {
     loaders: [{

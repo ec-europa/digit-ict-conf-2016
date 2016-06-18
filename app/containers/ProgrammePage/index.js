@@ -7,10 +7,9 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
-import { selectAllEvents, selectMyEvents } from '../App/selectors/index';
+import { selectAllEvents, selectMyEvents } from '../../store/selectors/events';
+import { addEvent, removeEvent } from '../../store/actions/events';
 import EventList from '../../components/Events/List';
-
-import { addEvent, removeEvent } from '../App/reducers/actions';
 
 import './styles.scss';
 

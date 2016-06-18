@@ -4,9 +4,7 @@
 
 import { createStore, applyMiddleware, compose } from 'redux';
 import { routerMiddleware } from 'react-router-redux';
-import reducer from './containers/App/reducers/index';
-
-const devtools = window.devToolsExtension || (() => noop => noop);
+import reducer from './reducers/index';
 
 export default function configureStore(initialState = {}, history) {
   // routerMiddleware: Syncs the location/URL path to the state
@@ -16,8 +14,12 @@ export default function configureStore(initialState = {}, history) {
 
   const enhancers = [
     applyMiddleware(...middlewares),
-    devtools(),
   ];
+
+  if (process.env.NODE_ENV !== 'production') {
+    const devtools = window.devToolsExtension || (() => noop => noop);
+    enhancers.push(devtools());
+  }
 
   return createStore(
     reducer,

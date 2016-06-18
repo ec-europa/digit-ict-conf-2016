@@ -7,7 +7,7 @@
 import React from 'react';
 
 import './styles.scss';
-import imageDB from '../../assets/images/speakers/davidborrelli.png';
+import imageDB from '../../public/assets/images/speakers/davidborrelli.png';
 import smoothScroll from 'smooth-scroll';
 
 import coverImage from './images/cover.jpg';

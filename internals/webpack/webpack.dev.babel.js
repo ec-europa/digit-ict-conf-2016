@@ -6,7 +6,7 @@ const path = require('path');
 const fs = require('fs');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const logger = require('../../server/logger');
+const logger = require('../logger');
 const cheerio = require('cheerio');
 const pkg = require(path.resolve(process.cwd(), 'package.json'));
 const dllPlugin = pkg.dllPlugin;
@@ -142,7 +142,7 @@ function dependencyHandlers() {
  */
 function templateContent() {
   const html = fs.readFileSync(
-    path.resolve(process.cwd(), 'app/index.html')
+    path.resolve(process.cwd(), 'app/public/index.html')
   ).toString();
 
   if (!dllPlugin) { return html; }
