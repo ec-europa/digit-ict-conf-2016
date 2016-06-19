@@ -7,10 +7,10 @@
 import React from 'react';
 
 import './styles.scss';
-import imageDB from '../../public/assets/images/speakers/davidborrelli.png';
 import smoothScroll from 'smooth-scroll';
 
 import coverImage from './images/cover.jpg';
+import mainContent from '../../../content/homepage/main.md';
 
 export class HomePage extends React.Component {
 
@@ -38,31 +38,23 @@ export class HomePage extends React.Component {
           </div>
         </div>
         <div className="mdl-grid ict-max-width-900" id="about">
-          <div className="mdl-cell mdl-cell--6-col">
-            <h3>Joint conference European Commission and the European Parliament</h3>
-            <p>
-              <strong>DIGITEC 2016: Digital Future</strong> will take place on <strong>November 29<sup>th</sup></strong>
-              in Brussels. The 9th edition of the event will bring together the IT communities of the European
-              institutions for interactive discussions on how to use digital technologies to do policy better and
-              how the digital future will shape the way of working in the large organisations.
-            </p>
-          </div>
+          <div className="mdl-cell mdl-cell--6-col" dangerouslySetInnerHTML={{ __html: mainContent.body }} />
           <div className="mdl-cell mdl-cell--6-col">
             <h3>Speakers</h3>
             <div className="mdl-grid">
               <div className="mdl-cell mdl-cell--4-col">
                 <div className="ict-picture-frame ict-picture-frame--blue">
-                  <img src={imageDB} alt="" className="ict-picture" />
+                  <img src="./assets/images/speakers/davidborrelli.png" alt="" className="ict-picture" />
                 </div>
               </div>
               <div className="mdl-cell mdl-cell--4-col">
                 <div className="ict-picture-frame ict-picture-frame--blue">
-                  <img src={imageDB} alt="" className="ict-picture" />
+                  <img src="./assets/images/speakers/davidborrelli.png" alt="" className="ict-picture" />
                 </div>
               </div>
               <div className="mdl-cell mdl-cell--4-col">
                 <div className="ict-picture-frame ict-picture-frame--blue">
-                  <img src={imageDB} alt="" className="ict-picture" />
+                  <img src="./assets/images/speakers/davidborrelli.png" alt="" className="ict-picture" />
                 </div>
               </div>
             </div>

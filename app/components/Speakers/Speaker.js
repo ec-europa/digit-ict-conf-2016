@@ -21,12 +21,11 @@ export class Speaker extends React.Component {
 
   render() {
     const speaker = this.props.speaker;
-    const img = require(`../../public/assets/images/speakers/${speaker.picture}`); // eslint-disable-line global-require
 
     return (
       <div className="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--2-col-phone speaker_col" onClick={this.handleClick}>
         <div className={'ict-picture-frame ict-picture-frame--blue'}>
-          <img className="ict-picture" src={img} alt={`${speaker.firstname} ${speaker.lastname}`} />
+          <img className="ict-picture" src={`./assets/images/speakers/${speaker.picture}`} alt={`${speaker.firstname} ${speaker.lastname}`} />
         </div>
         <div className="speaker_name">
           {speaker.firstname} {speaker.lastname}

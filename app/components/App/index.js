@@ -7,9 +7,9 @@
  */
 
 import React from 'react';
-import Header from 'components/Header';
-import Footer from 'components/Footer';
-import Drawer from 'components/Drawer';
+import Header from '../Header';
+import Footer from '../Footer';
+import Drawer from '../Drawer';
 
 import { Layout, Content } from 'react-mdl';
 

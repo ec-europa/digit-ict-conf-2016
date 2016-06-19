@@ -5,16 +5,6 @@
  */
 import 'babel-polyfill';
 
-// TODO constrain eslint import/no-unresolved rule to this block
-// Load the manifest.json file and the .htaccess file
-import 'file?name=[name].[ext]!./public/manifest.json';  // eslint-disable-line import/no-unresolved
-import 'file?name=[name].[ext]!./public/.htaccess';      // eslint-disable-line import/no-unresolved
-
-// Import the CSS reset, which HtmlWebpackPlugin transfers to the build folder
-import 'sanitize.css/sanitize.css';
-import './public/assets/styles/app.scss';
-import 'react-mdl/extra/material.js';
-
 // Import all the third party stuff
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -24,13 +14,16 @@ import { syncHistoryWithStore } from 'react-router-redux';
 import useScroll from 'react-router-scroll';
 import configureStore from './store/configure';
 
+// Import the CSS reset, which HtmlWebpackPlugin transfers to the build folder
+import 'sanitize.css/sanitize.css';
+import './styles/app.scss';
+import 'react-mdl/extra/material.js';
+
 // Create redux store with history
 // this uses the singleton browserHistory provided by react-router
 // Optionally, this could be changed to leverage a created history
 // e.g. `const browserHistory = useRouterHistory(createBrowserHistory)();`
-const initialState = {};
-
-const store = configureStore(initialState, browserHistory);
+const store = configureStore();
 
 // Sync history and store, as the react-router-redux reducer
 // is under the non-default key ("routing"), selectLocationState
@@ -42,7 +35,7 @@ const history = syncHistoryWithStore(browserHistory, store, {
 });
 
 // Set up the router, wrapping all Routes in the App component
-import App from 'containers/App';
+import App from './components/App';
 import createRoutes from './routes';
 const rootRoute = {
   component: App,

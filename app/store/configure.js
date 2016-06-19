@@ -3,10 +3,11 @@
  */
 
 import { createStore, applyMiddleware, compose } from 'redux';
+import { browserHistory } from 'react-router';
 import { routerMiddleware } from 'react-router-redux';
 import reducer from './reducers/index';
 
-export default function configureStore(initialState = {}, history) {
+export default function configureStore(initialState = {}, history = browserHistory) {
   // routerMiddleware: Syncs the location/URL path to the state
   const middlewares = [
     routerMiddleware(history),
