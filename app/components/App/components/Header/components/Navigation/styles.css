@@ -1,0 +1,25 @@
+.container {
+  align-items: stretch;
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  padding-right: 18px;
+}
+
+.item {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+@media (max-width: 52em) {
+  .item.desktopOnly {
+    display: none !important;
+  }
+}
+
+.item a {
+  flex-grow: 1;
+  color: rgb(66, 66, 66);
+}

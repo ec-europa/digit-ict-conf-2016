@@ -7,28 +7,80 @@
  */
 
 import React from 'react';
-import Header from '../Header';
-import Footer from '../Footer';
-import Drawer from '../Drawer';
+import { connect } from 'react-redux';
 
-import { Layout, Content } from 'react-mdl';
+import { toggleDrawer } from '../../store/modules/drawer';
 
-export default class App extends React.Component { // eslint-disable-line react/prefer-stateless-function
+import { Header, HeaderToggle, HeaderLogos, HeaderNavigation, HeaderNavigationItem } from './components/Header';
+import { Drawer, DrawerHeader, DrawerHeaderLogos, DrawerHeaderTitle, DrawerNavigation, DrawerNavigationItem, DrawerNavigationSeparator } from './components/Drawer';
+import Footer from './components/Footer';
+import Content from './components/Content';
 
-  static propTypes = {
-    children: React.PropTypes.node,
-  };
+import europaLogo from './images/europa.png';
+import ictLogo from './images/digitec.png';
 
-  render() {
-    return (
-      <Layout fixedHeader className="mdl-layout--no-desktop-drawer-button">
-        <Header />
-        <Drawer />
-        <Content>
-          {this.props.children}
-          <Footer />
-        </Content>
-      </Layout>
-    );
-  }
+function App({ children, drawerOpen, onToggleDrawer }) {
+  return (
+    <div>
+      <Header>
+        <HeaderToggle onClick={onToggleDrawer} />
+        <HeaderLogos>
+          <img srcSet={europaLogo} alt="DIGITEC 2016" />
+          <img srcSet={ictLogo} alt="DIGITEC 2016" />
+        </HeaderLogos>
+        <HeaderNavigation>
+          <HeaderNavigationItem to={'/speakers'} desktopOnly>Speakers</HeaderNavigationItem>
+          <HeaderNavigationItem to={'/programme'} desktopOnly>Programme</HeaderNavigationItem>
+          <HeaderNavigationItem to={'/'}>Register</HeaderNavigationItem>
+        </HeaderNavigation>
+      </Header>
+      <Drawer onToggle={onToggleDrawer} isOpen={drawerOpen}>
+        <DrawerHeader>
+          <DrawerHeaderLogos>
+            <img srcSet={europaLogo} alt="DIGITEC 2016" />
+            <img srcSet={ictLogo} alt="DIGITEC 2016" />
+          </DrawerHeaderLogos>
+          <DrawerHeaderTitle>29/11/16 BRUSSELS</DrawerHeaderTitle>
+        </DrawerHeader>
+        <DrawerNavigation>
+          <DrawerNavigationItem to={'/'}>Home</DrawerNavigationItem>
+          <DrawerNavigationItem to={'/speakers'}>Speakers</DrawerNavigationItem>
+          <DrawerNavigationItem to={'/programme'}>Programme</DrawerNavigationItem>
+          <DrawerNavigationItem to={'/programme'}>Expo</DrawerNavigationItem>
+          <DrawerNavigationItem to={'/programme'}>Practical</DrawerNavigationItem>
+          <DrawerNavigationItem to={'/programme'}>Previous editions</DrawerNavigationItem>
+          <DrawerNavigationSeparator />
+          <DrawerNavigationItem to={'/'}>Register</DrawerNavigationItem>
+          <DrawerNavigationItem to={'/'}>#digitec16</DrawerNavigationItem>
+        </DrawerNavigation>
+      </Drawer>
+      <Content>
+        {children}
+      </Content>
+      <Footer />
+    </div>
+  );
 }
+
+App.propTypes = {
+  children: React.PropTypes.node,
+  drawerOpen: React.PropTypes.bool,
+  onToggleDrawer: React.PropTypes.func,
+};
+
+function mapStateToProps(state) {
+  return {
+    drawerOpen: state.drawer.open,
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    onToggleDrawer: () => {
+      dispatch(toggleDrawer());
+    },
+    dispatch,
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

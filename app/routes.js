@@ -14,7 +14,7 @@ export default function createRoutes() {
       path: '/',
       name: 'home',
       getComponent(nextState, cb) {
-        System.import('containers/HomePage')
+        System.import('scenes/Home/Home')
           .then(loadModule(cb))
           .catch(errorLoading);
       },
@@ -22,15 +22,15 @@ export default function createRoutes() {
       path: '/speakers',
       name: 'speakers',
       getComponent(nextState, cb) {
-        System.import('containers/SpeakersPage')
+        System.import('scenes/Speakers/Speakers')
           .then(loadModule(cb))
           .catch(errorLoading);
       },
     }, {
       path: '/programme',
-      name: 'programmePage',
+      name: 'programme',
       getComponent(nextState, cb) {
-        System.import('containers/ProgrammePage')
+        System.import('scenes/Programme/Programme')
           .then(loadModule(cb))
           .catch(errorLoading);
       },
@@ -38,7 +38,7 @@ export default function createRoutes() {
       path: '*',
       name: 'notfound',
       getComponent(nextState, cb) {
-        System.import('containers/NotFoundPage')
+        System.import('scenes/NotFound/NotFound')
           .then(loadModule(cb))
           .catch(errorLoading);
       },

@@ -1,0 +1,26 @@
+.container {
+  align-items: stretch;
+  display: flex;
+  flex: 1;
+  justify-content: flex-start;
+  overflow: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 0 18px;
+}
+
+@media (max-width: 52em) {
+  .container {
+    display: none !important;
+  }
+}
+
+.container a {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.container img {
+  height: 50px;
+}

@@ -16,7 +16,7 @@ import configureStore from './store/configure';
 
 // Import the CSS reset, which HtmlWebpackPlugin transfers to the build folder
 import 'sanitize.css/sanitize.css';
-import './styles/app.scss';
+import './theme/app.scss';
 import 'react-mdl/extra/material.js';
 
 // Create redux store with history
@@ -28,7 +28,7 @@ const store = configureStore();
 // Sync history and store, as the react-router-redux reducer
 // is under the non-default key ("routing"), selectLocationState
 // must be provided for resolving how to retrieve the "route" in the state
-import { selectLocationState } from './store/selectors/location';
+import { selectLocationState } from './store/modules/route';
 
 const history = syncHistoryWithStore(browserHistory, store, {
   selectLocationState: selectLocationState(),
@@ -42,13 +42,15 @@ const rootRoute = {
   childRoutes: createRoutes(store),
 };
 
+import { closeDrawer } from './store/modules/drawer';
+
 ReactDOM.render(
   <Provider store={store}>
     <Router
       history={history}
       routes={rootRoute}
       render={applyRouterMiddleware(useScroll(() => {
-        document.querySelector('.mdl-layout__content').scrollTop = 0;
+        store.dispatch(closeDrawer());
         return true;
       }))}
     />

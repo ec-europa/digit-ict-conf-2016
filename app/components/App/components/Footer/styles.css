@@ -1,0 +1,32 @@
+.container {
+  align-items: stretch;
+  background-color: #BBB;
+  display: flex;
+  min-height: 64px;
+  position: relative;
+  text-align: center;
+  z-index: 2;
+}
+
+.section {
+  align-items: stretch;
+  display: flex;
+  flex: 1;
+  padding-right: 18px;
+}
+
+.section.left {
+  justify-content: flex-start;
+}
+
+.section.right {
+  justify-content: flex-end;
+}
+
+.section a {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  color: #FFF;
+}

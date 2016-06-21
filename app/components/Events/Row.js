@@ -6,8 +6,7 @@
 */
 
 import React from 'react';
-// import Event from './Event';
-import { Checkbox } from 'react-mdl';
+import styles from './styles.css';
 
 class Row extends React.Component {
   constructor() {
@@ -23,15 +22,17 @@ class Row extends React.Component {
   render() {
     const event = this.props.event;
     return (
-      <li className="mdl-list__item mdl-list__item--two-line">
-        <span className="mdl-list__item-primary-content">
+      <li className={styles.listItem}>
+        <span className={styles.primary}>
           <span>{event.title}</span>
-          <span className="mdl-list__item-sub-title">
+          <span className={styles.subtitle}>
             {event.starts}{event.ends ? ` - ${event.ends}` : ''}{event.venue && event.venue.length ? `, ${event.venue}` : ''}
           </span>
         </span>
-        <span className="mdl-list__item-secondary-action">
-          <Checkbox checked={event.attend} onChange={this.toggle} ripple />
+        <span className={styles.secondary}>
+          <label>
+            <input type="checkbox" checked={event.attend} onChange={this.toggle} />
+          </label>
         </span>
       </li>
     );
