@@ -7,7 +7,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { addEvent, removeEvent, selectAllEvents, selectMyEvents } from '../../store/modules/events';
-import EventList from '../../components/Events/List';
+import EventsList from '../../components/Events/List';
 
 import styles from './Programme.scss';
 
@@ -45,12 +45,12 @@ export class Programme extends React.Component { // eslint-disable-line react/pr
             </div>
             <div className="mdl-tabs__panel is-active" id="agenda">
               <ul className="demo-list-control mdl-list">
-                <EventList events={events} onToggle={this.toggle} />
+                <EventsList events={events} onToggle={this.toggle} />
               </ul>
             </div>
             <div className="mdl-tabs__panel" id="my-schedule">
               <ul className="demo-list-control mdl-list">
-                <EventList events={myEvents} onToggle={this.toggle} />
+                <EventsList events={myEvents} onToggle={this.toggle} />
               </ul>
             </div>
           </div>

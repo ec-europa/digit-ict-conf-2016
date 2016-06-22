@@ -1,0 +1,42 @@
+@import '../../theme/variables';
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 15px;
+}
+
+.item {
+  width: 200px;
+  padding: 10px;
+  text-align: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.name {
+  margin-top: 15px;
+}
+
+.picture {
+  width: 100%;
+  border: 1px solid #DDD;
+  box-shadow:
+    rgba(0, 0, 0, 0.188235) 0 10px 30px,
+    rgba(0, 0, 0, 0.227451) 0 6px 10px;
+  border-radius: 1px;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.picture:hover {
+  box-shadow:
+    rgba(0, 0, 0, 0.388235) 0 10px 30px,
+    rgba(0, 0, 0, 0.427451) 0 6px 10px;
+  border-radius: 1px;
+  transition: box-shadow 0.2s ease-in-out;
+  cursor: pointer;
+}

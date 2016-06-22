@@ -1,0 +1,109 @@
+.superContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.superContainer.isOpen {
+  visibility: visible;
+}
+
+.spacerContainer {
+  height: 30px;
+}
+
+.container {
+  overflow: auto;
+  background-color: #FFF;
+  box-shadow:
+    rgba(0, 0, 0, 0.188235) 0 10px 30px,
+    rgba(0, 0, 0, 0.227451) 0 6px 10px;
+  transition: transform 200ms linear 100ms;
+  transform: translate3d(0, -64px, 0);
+  border-radius: 2px;
+  max-width: 768px;
+  width: 75%;
+  min-height: 200px;
+  margin: 0 auto;
+  max-height: 100vh;
+}
+
+.isOpen .container {
+  transition: transform 200ms linear;
+  transform: translate3d(0, 0, 0);
+}
+
+.obfuscator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 500ms, opacity 300ms linear 200ms;
+  pointer-events: none;
+}
+
+.isOpen .obfuscator {
+  opacity: 1;
+  visibility: visible;
+  transition: visibility 0s linear 0s, opacity 300ms;
+  pointer-events: auto;
+}
+
+.close {
+  $size: 30px;
+  height: $size;
+  width: $size;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  box-sizing: border-box;
+  line-height: $size;
+  display: inline-block;
+
+  &::after,
+  &::before {
+    $width: 30px;
+    $height: 6px;
+    transform: rotate(0);
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -$height/2;
+    margin-left: -$width/2;
+    display: block;
+    height: $height;
+    width: $width;
+    background-color: rgb(66, 66, 66);
+    transition: all 0.25s ease-out;
+    transition: transform 200ms;
+  }
+}
+
+.isOpen .close {
+  &::after,
+  &::before {
+    transition: transform 200ms linear 100ms;
+  }
+
+  &::before {
+    transform: rotate(-45deg);
+  }
+
+  &::after {
+    transform: rotate(45deg);
+  }
+}

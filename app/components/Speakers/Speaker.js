@@ -5,18 +5,22 @@
 */
 
 import React from 'react';
-import styles from './styles.css';
+import { connect } from 'react-redux';
+import Modal from './Modal';
+import { selectEventsBySpeaker } from '../../store/modules/events';
+import styles from './styles.scss';
 
 export class Speaker extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.handleClick = this.handleClick.bind(this);
-    this.state = { imgLoaded: false };
   }
 
   handleClick() {
-    // this.props.openSpeakerModal(this.props.speaker);
-    // alert('you clicked on me');
+    const { speaker, sessions, openModal } = this.props;
+    const content = (<Modal speaker={speaker} events={sessions} />);
+
+    return openModal(content);
   }
 
   render() {
@@ -24,10 +28,10 @@ export class Speaker extends React.Component {
 
     return (
       <div className={styles.item} onClick={this.handleClick}>
-        <div className={'ict-picture-frame ict-picture-frame--blue'}>
-          <img className="ict-picture" src={`./assets/images/speakers/${speaker.picture}`} alt={`${speaker.firstname} ${speaker.lastname}`} />
+        <div className={styles.pictureFrame}>
+          <img className={styles.picture} src={`./assets/images/speakers/${speaker.picture}`} alt={`${speaker.firstname} ${speaker.lastname}`} />
         </div>
-        <div className="speaker_name">
+        <div className={styles.name}>
           {speaker.firstname} {speaker.lastname}
         </div>
       </div>
@@ -37,10 +41,25 @@ export class Speaker extends React.Component {
 
 Speaker.propTypes = {
   speaker: React.PropTypes.object,
+  openModal: React.PropTypes.func,
+  sessions: React.PropTypes.array,
 };
 
 Speaker.defaultProps = {
   speaker: {},
+  sessions: [],
 };
 
-export default Speaker;
+function mapStateToProps(state, props) {
+  return {
+    sessions: selectEventsBySpeaker(state)(props.speaker),
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    dispatch,
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Speaker);

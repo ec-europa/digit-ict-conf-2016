@@ -6,7 +6,7 @@
 
 import { createSelector } from 'reselect';
 import data from '../../data/events.json';
-
+import memoize from 'lodash.memoize';
 /*
  * Constants
  */
@@ -83,4 +83,11 @@ export const selectAllEvents = createSelector(
 export const selectMyEvents = createSelector(
   selectAllEvents,
   (events) => events.filter(event => event.attend)
+);
+
+export const selectEventsBySpeaker = createSelector(
+  selectAllEvents,
+  events => memoize(
+    speaker => events.filter(event => event.speakers.indexOf(speaker.id) >= 0)
+  )
 );

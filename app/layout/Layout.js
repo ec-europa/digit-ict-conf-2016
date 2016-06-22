@@ -7,13 +7,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import classnames from 'classnames';
 
-import { toggleDrawer, handleScroll } from '../store/modules/layout';
+import { toggleDrawer, handleScroll, closeModal } from '../store/modules/layout';
 
 import { Header, HeaderToggle, HeaderLogos, HeaderNavigation, HeaderNavigationItem } from '../components/Header';
 import { Drawer, DrawerHeader, DrawerHeaderLogos, DrawerHeaderTitle, DrawerNavigation, DrawerNavigationItem, DrawerNavigationSeparator } from '../components/Drawer';
 import Footer from '../components/Footer/Footer';
 import Content from '../components/Content/Content';
+import ModalHandler from '../components/Modal/Modal';
 
 import europaLogo from './images/europa.png';
 import ictLogo from './images/digitec.png';
@@ -22,11 +24,20 @@ import styles from './Layout.scss';
 export class Layout extends React.Component {
   constructor(props) {
     super(props);
+    document.body.style.overflow = 'auto';
     this.scrollListener = this.scrollListener.bind(this);
   }
 
   componentDidMount() {
     window.addEventListener('scroll', this.scrollListener);
+  }
+
+  componentWillUpdate({ drawerOpen, modalOpen }) {
+    if (drawerOpen || modalOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
   }
 
   componentWillUnmount() {
@@ -39,10 +50,25 @@ export class Layout extends React.Component {
   }
 
   render() {
-    const { children, location, drawerOpen, headerPinned, headerUnpinned, onToggleDrawer } = this.props;
+    const {
+      children,
+      location,
+      drawerOpen,
+      headerPinned,
+      headerUnpinned,
+      onToggleDrawer,
+      onCloseModal,
+      modalOpen,
+      modalContent,
+    } = this.props;
+
+    const containerClasses = classnames(
+      styles.container,
+      { [`${styles.containerNoOverflow}`]: modalOpen }
+    );
 
     return (
-      <div className={styles.container}>
+      <div className={containerClasses}>
         <Header pinned={headerPinned} unpinned={headerUnpinned}>
           <HeaderToggle onClick={onToggleDrawer} />
           <HeaderLogos>
@@ -94,6 +120,7 @@ export class Layout extends React.Component {
           </ReactCSSTransitionGroup>
         </Content>
         <Footer />
+        <ModalHandler onCloseModal={onCloseModal} isOpen={modalOpen} content={modalContent} />
       </div>
     );
   }
@@ -107,6 +134,9 @@ Layout.propTypes = {
   headerUnpinned: React.PropTypes.bool,
   onToggleDrawer: React.PropTypes.func,
   onScroll: React.PropTypes.func,
+  modalOpen: React.PropTypes.bool,
+  onCloseModal: React.PropTypes.func,
+  modalContent: React.PropTypes.object,
 };
 
 function mapStateToProps(state) {
@@ -114,6 +144,8 @@ function mapStateToProps(state) {
     drawerOpen: state.layout.drawerIsOpen,
     headerPinned: state.layout.headerPinned,
     headerUnpinned: state.layout.headerUnpinned,
+    modalOpen: state.layout.modalOpen,
+    modalContent: state.layout.modalContent,
   };
 }
 
@@ -124,6 +156,9 @@ function mapDispatchToProps(dispatch) {
     },
     onScroll: () => {
       dispatch(handleScroll());
+    },
+    onCloseModal: () => {
+      dispatch(closeModal());
     },
     dispatch,
   };
