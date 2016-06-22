@@ -1,0 +1,20 @@
+@import '~typi/scss/typi';
+@import './variables';
+
+html {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+
+  @include typi-base();
+}
+
+h1 {
+  @include typi($h1-map);
+}
+
+h2 {
+  @include typi($h2-map);
+}
+
+h3 {
+  @include typi($h3-map);
+}

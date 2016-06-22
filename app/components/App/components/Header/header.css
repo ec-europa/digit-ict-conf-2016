@@ -1,9 +1,0 @@
-.container {
-  align-items: stretch;
-  background: #FFF;
-  display: flex;
-  min-height: 64px;
-  position: relative;
-  text-align: center;
-  z-index: 2;
-}

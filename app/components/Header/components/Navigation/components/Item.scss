@@ -1,0 +1,19 @@
+.item {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  font-size: 0.9em;
+}
+
+@media (max-width: 52em) {
+  .item.desktopOnly {
+    display: none !important;
+  }
+}
+
+.item a {
+  flex-grow: 1;
+  color: rgb(66, 66, 66);
+  text-decoration: none;
+}

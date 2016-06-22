@@ -1,0 +1,22 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.enter {
+  opacity: 0;
+}
+
+.enter.enterActive {
+  opacity: 1;
+  transition: opacity 200ms ease-in;
+}
+
+.leave {
+  display: none;
+}
+
+.leave.leaveActive {
+  display: none;
+}

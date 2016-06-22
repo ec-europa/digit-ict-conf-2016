@@ -5,6 +5,7 @@ const browserSync = require('browser-sync');
 const webpack = require('webpack');
 const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware');
+const history = require('connect-history-api-fallback');
 
 /**
  * Require ./webpack.config.js and make a bundler from it
@@ -20,6 +21,7 @@ browserSync({
     baseDir: 'build',
 
     middleware: [
+      history(),
       webpackDevMiddleware(bundler, {
         // IMPORTANT: dev middleware can't access config, so we should
         // provide publicPath by ourselves
@@ -36,14 +38,6 @@ browserSync({
 
       // bundler should be the same as above
       webpackHotMiddleware(bundler),
-
-      // Serve index.html for all unknown requests
-      (req, res, next) => {
-        if (req.headers.accept.startsWith('text/html')) {
-          req.url = '/index.html'; // eslint-disable-line no-param-reassign
-        }
-        next();
-      },
     ],
   },
 

@@ -8,13 +8,13 @@ import { routerMiddleware } from 'react-router-redux';
 
 import route from './modules/route';
 import events from './modules/events';
-import drawer from './modules/drawer';
+import layout from './modules/layout';
 
 export default function configureStore(initialState = {}, history = browserHistory) {
   const reducer = combineReducers({
     route,
     events,
-    drawer,
+    layout,
   });
 
 

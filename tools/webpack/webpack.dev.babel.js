@@ -37,6 +37,7 @@ module.exports = require('./webpack.base.babel')({
   output: {
     filename: '[name].js',
     chunkFilename: '[name].chunk.js',
+    publicPath: 'http://localhost:3000/',
   },
 
   // Add development plugins
@@ -44,7 +45,7 @@ module.exports = require('./webpack.base.babel')({
 
   // Load the CSS in a style tag in development
   cssLoaders: 'style-loader!css-loader?localIdentName=[local]__[path][name]__[hash:base64:5]&modules&importLoaders=1&sourceMap!postcss-loader',
-  sassLoaders: 'style-loader!css-loader?localIdentName=[local]__[path][name]__[hash:base64:5]&importLoaders=1&sourceMap!postcss-loader!sass?sourceMap!sass-resources',
+  sassLoaders: 'style-loader!css-loader?localIdentName=[local]__[path][name]__[hash:base64:5]&modules&importLoaders=1&sourceMap!postcss-loader!sass?sourceMap',
 
   // Process the CSS with PostCSS
   postcssPlugins: [

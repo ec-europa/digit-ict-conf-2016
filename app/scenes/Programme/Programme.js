@@ -9,7 +9,7 @@ import { connect } from 'react-redux';
 import { addEvent, removeEvent, selectAllEvents, selectMyEvents } from '../../store/modules/events';
 import EventList from '../../components/Events/List';
 
-import './styles.scss';
+import styles from './Programme.scss';
 
 export class Programme extends React.Component { // eslint-disable-line react/prefer-stateless-function
   constructor() {
@@ -34,7 +34,7 @@ export class Programme extends React.Component { // eslint-disable-line react/pr
     const { events, myEvents } = this.props;
     return (
       <div>
-        <div className="programmePageHeader">
+        <div className={styles.header}>
           <h1>Programme</h1>
         </div>
         <div className="mdl-grid ict-max-width-900">

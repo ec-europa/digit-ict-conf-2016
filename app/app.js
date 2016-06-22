@@ -14,15 +14,11 @@ import { syncHistoryWithStore } from 'react-router-redux';
 import useScroll from 'react-router-scroll';
 import configureStore from './store/configure';
 
-// Import the CSS reset, which HtmlWebpackPlugin transfers to the build folder
-import 'sanitize.css/sanitize.css';
-import './theme/app.scss';
-import 'react-mdl/extra/material.js';
+// Import the CSS reset and the base theme
+import 'normalize.css/normalize.css';
+import './theme/base.scss';
 
 // Create redux store with history
-// this uses the singleton browserHistory provided by react-router
-// Optionally, this could be changed to leverage a created history
-// e.g. `const browserHistory = useRouterHistory(createBrowserHistory)();`
 const store = configureStore();
 
 // Sync history and store, as the react-router-redux reducer
@@ -34,15 +30,15 @@ const history = syncHistoryWithStore(browserHistory, store, {
   selectLocationState: selectLocationState(),
 });
 
-// Set up the router, wrapping all Routes in the App component
-import App from './components/App';
+// Set up the router, wrapping all Routes in the Layout component
+import Layout from './layout/Layout';
 import createRoutes from './routes';
 const rootRoute = {
-  component: App,
+  component: Layout,
   childRoutes: createRoutes(store),
 };
 
-import { closeDrawer } from './store/modules/drawer';
+import { closeDrawer } from './store/modules/layout';
 
 ReactDOM.render(
   <Provider store={store}>

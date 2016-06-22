@@ -1,11 +1,37 @@
 // Colors
 $ict-blue: #109FA7;
-$ict-blue-rgb: "16,159,167";
 $ict-purple: #7E4098;
-$ict-purple-rgb: "126,64,152";
 $ict-yellow: #D6DF32;
 
-// Material Design Lite colors
-$color-primary: $ict-blue-rgb;
-$color-accent: $ict-purple-rgb;
-$layout-header-text-color: #FFF;
+// Header
+$header-height: 64px;
+
+/*
+ * Typography
+ */
+
+$breakpoints: (
+  small: 800px,
+  large: 1200px
+);
+
+$typi: (
+  null: 16px,
+  small: 18px,
+  large: 20px
+);
+
+$h1-map: (
+  null: (3.129em, 1.2),
+  large: (2.3353em, 1.3)
+);
+
+$h2-map: (
+  null: 2.3353em,
+  large: 1.769em
+);
+
+$h3-map: (
+  null: 1.769em,
+  large: 1.333em
+);
