@@ -2,36 +2,23 @@
 $ict-blue: #109FA7;
 $ict-purple: #7E4098;
 $ict-yellow: #D6DF32;
+$ict-grey-text: rgb(99, 99, 99);
 
 // Header
-$header-height: 64px;
+$header-height: 4em;
+
+// layout
+$max-width: 960px;
 
 /*
- * Typography
+ * Breakpoints
  */
-
 $breakpoints: (
-  small: 800px,
-  large: 1200px
-);
-
-$typi: (
-  null: 16px,
-  small: 18px,
-  large: 20px
-);
-
-$h1-map: (
-  null: (3.129em, 1.2),
-  large: (2.3353em, 1.3)
-);
-
-$h2-map: (
-  null: 2.3353em,
-  large: 1.769em
-);
-
-$h3-map: (
-  null: 1.769em,
-  large: 1.333em
+  xxsmall: 0,      // 0px
+  xsmall: 320px,   // 20em
+  small: 560px,    // 35em
+  medium: 800px,   // 50em
+  large: 1024px,   // 64em
+  xlarge: 1200px,  // 75em
+  xxlarge: 1440px, // 90em
 );

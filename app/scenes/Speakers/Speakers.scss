@@ -1,11 +1,11 @@
 @import '../../theme/variables';
 
 .container {
-
+  max-width: $max-width;
+  margin: auto;
+  padding-top: $header-height;
 }
 
 .header {
-  background-color: $ict-blue;
-  padding: 94px 44px 26px;
-  color: #FFF;
+  color: $ict-grey-text;
 }

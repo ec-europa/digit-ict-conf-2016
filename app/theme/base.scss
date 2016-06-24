@@ -1,5 +1,7 @@
+@import 'sanitize.css/sanitize.css';
 @import '~typi/scss/typi';
 @import './variables';
+@import './typography';
 
 html {
   font-family: Roboto, Helvetica, Arial, sans-serif;
@@ -17,4 +19,16 @@ h2 {
 
 h3 {
   @include typi($h3-map);
+}
+
+h4 {
+  @include typi($h4-map);
+}
+
+h5 {
+  @include typi($h5-map);
+}
+
+h6 {
+  @include typi($h6-map);
 }

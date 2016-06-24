@@ -32,8 +32,9 @@ export class Speaker extends React.Component {
           <img className={styles.picture} src={`./assets/images/speakers/${speaker.picture}`} alt={`${speaker.firstname} ${speaker.lastname}`} />
         </div>
         <div className={styles.name}>
-          {speaker.firstname} {speaker.lastname}
+          {speaker.firstname} <span className={styles.lastname}>{speaker.lastname}</span>
         </div>
+        <div className={styles.title}>{speaker.title}</div>
       </div>
     );
   }

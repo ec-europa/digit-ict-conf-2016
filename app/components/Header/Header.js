@@ -16,9 +16,9 @@ function Header({ children, pinned, unpinned }) {
   );
 
   return (
-    <div className={headerClasses}>
+    <header className={headerClasses}>
       {children}
-    </div>
+    </header>
   );
 }
 

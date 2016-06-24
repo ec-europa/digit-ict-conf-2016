@@ -14,8 +14,7 @@ import { syncHistoryWithStore } from 'react-router-redux';
 import useScroll from 'react-router-scroll';
 import configureStore from './store/configure';
 
-// Import the CSS reset and the base theme
-import 'normalize.css/normalize.css';
+// Import the CSS resets and base theme
 import './theme/base.scss';
 
 // Create redux store with history

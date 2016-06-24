@@ -1,12 +1,14 @@
+@import '../../../../../theme/breakpoints';
+@import '../../../../../theme/variables';
+
 .item {
   align-items: center;
   display: flex;
   justify-content: center;
   padding: 10px;
-  font-size: 0.9em;
 }
 
-@media (max-width: 52em) {
+@include mappy-bp(max medium) {
   .item.desktopOnly {
     display: none !important;
   }
@@ -14,6 +16,14 @@
 
 .item a {
   flex-grow: 1;
-  color: rgb(66, 66, 66);
+  color: $ict-grey-text;
   text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s linear;
+  padding: 2px 0;
+
+  &:hover,
+  &:focus {
+    border-bottom: 1px solid $ict-grey-text;
+  }
 }

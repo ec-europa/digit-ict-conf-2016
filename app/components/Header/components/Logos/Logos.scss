@@ -1,26 +1,24 @@
-.container {
-  align-items: stretch;
-  display: flex;
-  flex: 1;
-  justify-content: flex-start;
-  overflow: hidden;
-  overflow-x: auto;
-  white-space: nowrap;
-  padding: 0 18px;
-}
+@import '../../../../theme/breakpoints';
 
-@media (max-width: 52em) {
-  .container {
-    display: none !important;
+.container {
+  display: none;
+
+  @include mappy-bp(medium) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 26px;
   }
 }
 
-.container a {
-  align-items: center;
-  display: flex;
-  justify-content: center;
+.link {
+  margin: 0 4px;
 }
 
-.container img {
+.europaLogo {
+  height: 38px;
+}
+
+.ictLogo {
   height: 50px;
 }

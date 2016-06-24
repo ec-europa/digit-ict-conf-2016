@@ -1,13 +1,14 @@
-.container a {
-  color: #666;
-  display: block;
-  width: 100%;
-  height: 48px;
-  line-height: 48px;
-  padding-left: 18px;
-  text-decoration: none;
-}
+@import '../../../../../../theme/variables';
 
-.container a:hover {
-  background-color: #EEE;
+.link {
+  display: block;
+  color: $ict-grey-text;
+  width: 100%;
+  line-height: 3em;
+  padding-left: 2em;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #EEE;
+  }
 }

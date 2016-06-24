@@ -21,19 +21,17 @@ export class Modal extends React.Component {
   render() {
     const { content, isOpen } = this.props;
     const containerClasses = classnames(
-      styles.superContainer,
+      styles.modalContainer,
       { [`${styles.isOpen}`]: isOpen }
     );
 
     return (
       <div className={containerClasses} >
         <div className={styles.obfuscator} onClick={this.close} />
-        <div className={styles.spacerContainer} />
-        <div className={styles.container}>
-          <div className={styles.close} onClick={this.close} />
+        <div className={styles.modal}>
           {content}
         </div>
-        <div className={styles.spacerContainer} />
+        <div className={styles.closeButton} onClick={this.close} />
       </div>
     );
   }

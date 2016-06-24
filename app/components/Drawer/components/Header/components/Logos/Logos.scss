@@ -1,11 +1,17 @@
 .container {
   display: flex;
-  text-align: center;
-  justify-content: space-around;
   align-items: center;
+  justify-content: center;
 }
 
-.container img {
-  max-width: 120px;
-  max-height: 56px;
+.link {
+  margin: 0 4px;
+}
+
+.europaLogo {
+  height: 38px;
+}
+
+.ictLogo {
+  height: 50px;
 }

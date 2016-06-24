@@ -9,9 +9,9 @@ import styles from './Navigation.scss';
 
 function Navigation({ children }) {
   return (
-    <div className={styles.container}>
+    <nav className={styles.container}>
       {children}
-    </div>
+    </nav>
   );
 }
 

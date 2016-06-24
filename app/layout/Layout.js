@@ -17,8 +17,6 @@ import Footer from '../components/Footer/Footer';
 import Content from '../components/Content/Content';
 import ModalHandler from '../components/Modal/Modal';
 
-import europaLogo from './images/europa.png';
-import ictLogo from './images/digitec.png';
 import styles from './Layout.scss';
 
 export class Layout extends React.Component {
@@ -71,10 +69,7 @@ export class Layout extends React.Component {
       <div className={containerClasses}>
         <Header pinned={headerPinned} unpinned={headerUnpinned}>
           <HeaderToggle onClick={onToggleDrawer} />
-          <HeaderLogos>
-            <img srcSet={europaLogo} alt="DIGITEC 2016" />
-            <img srcSet={ictLogo} alt="DIGITEC 2016" />
-          </HeaderLogos>
+          <HeaderLogos />
           <HeaderNavigation>
             <HeaderNavigationItem to={'/speakers'} desktopOnly>Speakers</HeaderNavigationItem>
             <HeaderNavigationItem to={'/programme'} desktopOnly>Programme</HeaderNavigationItem>
@@ -85,10 +80,7 @@ export class Layout extends React.Component {
         </Header>
         <Drawer onToggle={onToggleDrawer} isOpen={drawerOpen}>
           <DrawerHeader>
-            <DrawerHeaderLogos>
-              <img srcSet={europaLogo} alt="DIGITEC 2016" />
-              <img srcSet={ictLogo} alt="DIGITEC 2016" />
-            </DrawerHeaderLogos>
+            <DrawerHeaderLogos />
             <DrawerHeaderTitle>29/11/16 BRUSSELS</DrawerHeaderTitle>
           </DrawerHeader>
           <DrawerNavigation>
