@@ -14,7 +14,7 @@
   }
 }
 
-.item a {
+.link {
   flex-grow: 1;
   color: $ict-grey-text;
   text-decoration: none;
@@ -26,4 +26,9 @@
   &:focus {
     border-bottom: 1px solid $ict-grey-text;
   }
+}
+
+.active {
+  font-weight: 600;
+  border-bottom: 1px solid $ict-grey-text;
 }

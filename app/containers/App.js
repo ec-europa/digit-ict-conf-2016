@@ -1,6 +1,6 @@
 /**
  *
- * Layout
+ * App
  *
  */
 
@@ -9,17 +9,16 @@ import { connect } from 'react-redux';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import classnames from 'classnames';
 
-import { toggleDrawer, handleScroll, closeModal } from '../store/modules/layout';
+import { toggleDrawer, handleScroll } from '../store/modules/layout';
 
 import { Header, HeaderToggle, HeaderLogos, HeaderNavigation, HeaderNavigationItem } from '../components/Header';
 import { Drawer, DrawerHeader, DrawerHeaderLogos, DrawerHeaderTitle, DrawerNavigation, DrawerNavigationItem, DrawerNavigationSeparator } from '../components/Drawer';
 import Footer from '../components/Footer/Footer';
 import Content from '../components/Content/Content';
-import ModalHandler from '../components/Modal/Modal';
 
-import styles from './Layout.scss';
+import styles from './App.scss';
 
-export class Layout extends React.Component {
+export class App extends React.Component {
   constructor(props) {
     super(props);
     document.body.style.overflow = 'auto';
@@ -55,10 +54,17 @@ export class Layout extends React.Component {
       headerPinned,
       headerUnpinned,
       onToggleDrawer,
-      onCloseModal,
       modalOpen,
-      modalContent,
     } = this.props;
+
+    let childrenKey;
+    if (location.pathname.startsWith('/speakers')) {
+      childrenKey = '/speakers';
+    } else if (location.pathname.startsWith('/programme')) {
+      childrenKey = '/programme';
+    } else {
+      childrenKey = location.pathname;
+    }
 
     const containerClasses = classnames(
       styles.container,
@@ -107,18 +113,17 @@ export class Layout extends React.Component {
             transitionLeaveTimeout={100}
           >
             {React.cloneElement(children, {
-              key: location.pathname,
+              key: childrenKey,
             })}
           </ReactCSSTransitionGroup>
         </Content>
         <Footer />
-        <ModalHandler onCloseModal={onCloseModal} isOpen={modalOpen} content={modalContent} />
       </div>
     );
   }
 }
 
-Layout.propTypes = {
+App.propTypes = {
   children: React.PropTypes.node,
   location: React.PropTypes.object,
   drawerOpen: React.PropTypes.bool,
@@ -127,8 +132,6 @@ Layout.propTypes = {
   onToggleDrawer: React.PropTypes.func,
   onScroll: React.PropTypes.func,
   modalOpen: React.PropTypes.bool,
-  onCloseModal: React.PropTypes.func,
-  modalContent: React.PropTypes.object,
 };
 
 function mapStateToProps(state) {
@@ -137,7 +140,6 @@ function mapStateToProps(state) {
     headerPinned: state.layout.headerPinned,
     headerUnpinned: state.layout.headerUnpinned,
     modalOpen: state.layout.modalOpen,
-    modalContent: state.layout.modalContent,
   };
 }
 
@@ -149,11 +151,8 @@ function mapDispatchToProps(dispatch) {
     onScroll: () => {
       dispatch(handleScroll());
     },
-    onCloseModal: () => {
-      dispatch(closeModal());
-    },
     dispatch,
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Layout);
+export default connect(mapStateToProps, mapDispatchToProps)(App);

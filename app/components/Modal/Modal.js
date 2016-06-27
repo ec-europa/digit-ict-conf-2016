@@ -5,7 +5,6 @@
 */
 
 import React from 'react';
-import classnames from 'classnames';
 import styles from './Modal.scss';
 
 export class Modal extends React.Component {
@@ -14,19 +13,18 @@ export class Modal extends React.Component {
     this.close = this.close.bind(this);
   }
 
+  componentDidMount() {
+    this.props.onOpenModal();
+  }
+
   close() {
     return this.props.onCloseModal();
   }
 
   render() {
-    const { content, isOpen } = this.props;
-    const containerClasses = classnames(
-      styles.modalContainer,
-      { [`${styles.isOpen}`]: isOpen }
-    );
-
+    const { content } = this.props;
     return (
-      <div className={containerClasses} >
+      <div className={styles.modalContainer} >
         <div className={styles.obfuscator} onClick={this.close} />
         <div className={styles.modal}>
           {content}
@@ -38,14 +36,9 @@ export class Modal extends React.Component {
 }
 
 Modal.propTypes = {
-  isOpen: React.PropTypes.bool,
   onOpenModal: React.PropTypes.func,
   onCloseModal: React.PropTypes.func,
   content: React.PropTypes.node,
-};
-
-Modal.defaultProps = {
-  isOpen: false,
 };
 
 export default Modal;

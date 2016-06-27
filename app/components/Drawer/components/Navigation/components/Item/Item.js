@@ -10,7 +10,7 @@ import styles from './Item.scss';
 
 function Item({ children, to }) {
   return (
-    <Link to={to} className={styles.link}>{children}</Link>
+    <Link to={to} className={styles.link} activeClassName={styles.active}>{children}</Link>
   );
 }
 

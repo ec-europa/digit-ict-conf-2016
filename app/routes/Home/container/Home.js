@@ -11,7 +11,7 @@ import styles from './Home.scss';
 import smoothScroll from 'smooth-scroll';
 
 // Load content
-import mainContent from '../../../content/homepage/main.md';
+import mainContent from '../../../../content/homepage/main.md';
 
 export class Home extends React.Component {
 

@@ -29,13 +29,19 @@ const history = syncHistoryWithStore(browserHistory, store, {
   selectLocationState: selectLocationState(),
 });
 
-// Set up the router, wrapping all Routes in the Layout component
-import Layout from './layout/Layout';
-import createRoutes from './routes';
+// Set up the router, wrapping all Routes in the App component
+import { errorLoading, loadModule } from './utils/loader';
+import childRoutes from './routes';
+
 const rootRoute = {
-  component: Layout,
-  childRoutes: createRoutes(store),
+  getComponent(nextState, cb) {
+    System.import('./containers/App')
+      .then(loadModule(cb))
+      .catch(errorLoading);
+  },
+  childRoutes,
 };
+
 
 import { closeDrawer } from './store/modules/layout';
 
@@ -44,7 +50,11 @@ ReactDOM.render(
     <Router
       history={history}
       routes={rootRoute}
-      render={applyRouterMiddleware(useScroll(() => {
+      render={applyRouterMiddleware(useScroll((prevRouterProps, { routes }) => {
+        if (routes.some(route => route.ignoreScrollBehavior)
+          || (prevRouterProps && prevRouterProps.routes.some(route => route.ignoreScrollBehavior))) {
+          return false;
+        }
         store.dispatch(closeDrawer());
         return true;
       }))}

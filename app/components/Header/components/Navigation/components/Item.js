@@ -19,7 +19,7 @@ function HeaderNavigationItem({ children, to, desktopOnly }) {
 
   return (
     <div className={classes}>
-      <Link to={to}>{children}</Link>
+      <Link to={to} className={styles.link} activeClassName={styles.active}>{children}</Link>
     </div>
   );
 }

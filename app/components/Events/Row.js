@@ -6,7 +6,7 @@
 */
 
 import React from 'react';
-import styles from './styles.css';
+import styles from './Row.scss';
 
 class Row extends React.Component {
   constructor() {
@@ -30,9 +30,8 @@ class Row extends React.Component {
           </span>
         </span>
         <span className={styles.secondary}>
-          <label>
-            <input type="checkbox" checked={event.attend} onChange={this.toggle} />
-          </label>
+          <input id={event.id} type="checkbox" checked={event.attend} onChange={this.toggle} />
+          <label htmlFor={event.id} />
         </span>
       </li>
     );
