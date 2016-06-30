@@ -1,0 +1,20 @@
+.container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  visibility: hidden;
+  z-index: 800;
+  height: 4em;
+
+  transform: translate3d(0, 4em, 0);
+  transition:
+    transform 4000ms ease-out,
+    visibility 400ms linear;
+
+  &.open {
+    visibility: visible;
+    transform: translate3d(0, 0, 0);
+  }
+}

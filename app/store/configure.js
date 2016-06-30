@@ -3,6 +3,7 @@
  */
 
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
+import { persistStore, autoRehydrate } from 'redux-persist';
 import { browserHistory } from 'react-router';
 import { routerMiddleware } from 'react-router-redux';
 
@@ -25,6 +26,7 @@ export default function configureStore(initialState = {}, history = browserHisto
 
   const enhancers = [
     applyMiddleware(...middlewares),
+    autoRehydrate(),
   ];
 
   if (process.env.NODE_ENV !== 'production') {
@@ -32,9 +34,15 @@ export default function configureStore(initialState = {}, history = browserHisto
     enhancers.push(devtools());
   }
 
-  return createStore(
+  const store = createStore(
     reducer,
     initialState,
     compose(...enhancers)
   );
+
+  persistStore(store, {
+    whitelist: ['events'],
+  });
+
+  return store;
 }

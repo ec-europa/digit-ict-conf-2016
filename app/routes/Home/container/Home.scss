@@ -47,19 +47,16 @@
 
 .coverRegister {
   background-color: $ict-yellow;
-  color: rgb(66, 66, 66);
+  color: rgb(88, 88, 88);
   border: none;
-  border-radius: 2px;
   position: relative;
-  height: 82px;
-  margin: 0;
   display: inline-block;
-  // @include typo-button();
-  overflow: hidden;
+
+  clip-path: polygon(2% 25%, 95% 10%, 100% 90%, 0 77%);
   transition:
-    box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1),
     background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
     color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
   outline: none;
   cursor: pointer;
   text-decoration: none;
@@ -68,9 +65,12 @@
   vertical-align: middle;
 
   font-size: 42px;
-  padding: 0 42px;
+  padding: 22px;
 
-  @include rotateY(-35deg);
+  &:hover {
+    background-color: darken($ict-yellow, 7%);
+    color: rgb(77, 77, 77);
+  }
 }
 
 .coverExpand {

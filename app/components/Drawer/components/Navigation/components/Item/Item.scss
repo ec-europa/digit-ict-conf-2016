@@ -5,6 +5,7 @@
   color: $ict-grey-text;
   width: 100%;
   line-height: 3em;
+  font-weight: 300;
   padding-left: 2em;
   text-decoration: none;
 
@@ -14,5 +15,6 @@
 }
 
 .active {
-  font-weight: 600;
+  font-weight: 500;
+  color: darken($ict-grey-text, 10%);
 }

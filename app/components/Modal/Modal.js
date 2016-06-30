@@ -22,12 +22,12 @@ export class Modal extends React.Component {
   }
 
   render() {
-    const { content } = this.props;
+    const { children } = this.props;
     return (
       <div className={styles.modalContainer} >
         <div className={styles.obfuscator} onClick={this.close} />
         <div className={styles.modal}>
-          {content}
+          {children}
         </div>
         <div className={styles.closeButton} onClick={this.close} />
       </div>
@@ -38,7 +38,7 @@ export class Modal extends React.Component {
 Modal.propTypes = {
   onOpenModal: React.PropTypes.func,
   onCloseModal: React.PropTypes.func,
-  content: React.PropTypes.node,
+  children: React.PropTypes.node,
 };
 
 export default Modal;

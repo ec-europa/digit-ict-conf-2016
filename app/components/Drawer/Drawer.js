@@ -6,6 +6,7 @@
 
 import React from 'react';
 import styles from './Drawer.scss';
+import classnames from 'classnames';
 
 class Drawer extends React.Component {
   constructor(props) {
@@ -18,10 +19,15 @@ class Drawer extends React.Component {
   }
 
   render() {
+    const containerClasses = classnames(
+      styles.container,
+      { [styles.isOpen]: this.props.isOpen },
+    );
+
     return (
-      <div className={this.props.isOpen ? styles.isOpen : ''}>
+      <div className={containerClasses}>
         <div className={styles.obfuscator} onClick={this.toggle} />
-        <div className={styles.container}>
+        <div className={styles.innerContainer}>
           {this.props.children}
         </div>
       </div>

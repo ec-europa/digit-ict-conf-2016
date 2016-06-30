@@ -6,12 +6,13 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
+import Helmet from 'react-helmet';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import classnames from 'classnames';
 
 import { toggleDrawer, handleScroll } from '../store/modules/layout';
 
-import { Header, HeaderToggle, HeaderLogos, HeaderNavigation, HeaderNavigationItem } from '../components/Header';
+import { Header, HeaderToggle, HeaderTitle, HeaderLogos, HeaderNavigation, HeaderNavigationItem } from '../components/Header';
 import { Drawer, DrawerHeader, DrawerHeaderLogos, DrawerHeaderTitle, DrawerNavigation, DrawerNavigationItem, DrawerNavigationSeparator } from '../components/Drawer';
 import Footer from '../components/Footer/Footer';
 import Content from '../components/Content/Content';
@@ -55,6 +56,7 @@ export class App extends React.Component {
       headerUnpinned,
       onToggleDrawer,
       modalOpen,
+      headerTitle,
     } = this.props;
 
     let childrenKey;
@@ -73,32 +75,35 @@ export class App extends React.Component {
 
     return (
       <div className={containerClasses}>
+        <Helmet
+          titleTemplate="DIGIT ICT 2016 - %s"
+        />
         <Header pinned={headerPinned} unpinned={headerUnpinned}>
           <HeaderToggle onClick={onToggleDrawer} />
           <HeaderLogos />
+          <HeaderTitle title={headerTitle} />
           <HeaderNavigation>
             <HeaderNavigationItem to={'/speakers'} desktopOnly>Speakers</HeaderNavigationItem>
             <HeaderNavigationItem to={'/programme'} desktopOnly>Programme</HeaderNavigationItem>
-            <HeaderNavigationItem to={'/'} desktopOnly>Expo</HeaderNavigationItem>
-            <HeaderNavigationItem to={'/'} desktopOnly>Practical</HeaderNavigationItem>
-            <HeaderNavigationItem to={'/'}>Register</HeaderNavigationItem>
+            <HeaderNavigationItem to={'/my-digitec'} desktopOnly>My DIGITEC</HeaderNavigationItem>
+            <HeaderNavigationItem to={'/practical'} desktopOnly>Practical</HeaderNavigationItem>
+            <HeaderNavigationItem to={'https://scic.ec.europa.eu/fmi/ezreg/DIGIT-ICT-2016'} target="_blank" register>Register</HeaderNavigationItem>
           </HeaderNavigation>
         </Header>
         <Drawer onToggle={onToggleDrawer} isOpen={drawerOpen}>
           <DrawerHeader>
             <DrawerHeaderLogos />
-            <DrawerHeaderTitle>29/11/16 BRUSSELS</DrawerHeaderTitle>
+            <DrawerHeaderTitle>29 November, 2016</DrawerHeaderTitle>
+            <DrawerHeaderTitle>Square Brussels</DrawerHeaderTitle>
           </DrawerHeader>
           <DrawerNavigation>
             <DrawerNavigationItem to={'/'}>Home</DrawerNavigationItem>
             <DrawerNavigationItem to={'/speakers'}>Speakers</DrawerNavigationItem>
             <DrawerNavigationItem to={'/programme'}>Programme</DrawerNavigationItem>
-            <DrawerNavigationItem to={'/'}>Expo</DrawerNavigationItem>
-            <DrawerNavigationItem to={'/'}>Practical</DrawerNavigationItem>
-            <DrawerNavigationItem to={'/'}>Previous editions</DrawerNavigationItem>
+            <DrawerNavigationItem to={'/my-digitec'}>My DIGITEC</DrawerNavigationItem>
+            <DrawerNavigationItem to={'/practical'}>Practical</DrawerNavigationItem>
             <DrawerNavigationSeparator />
-            <DrawerNavigationItem to={'/'}>Register</DrawerNavigationItem>
-            <DrawerNavigationItem to={'/'}>#digitec16</DrawerNavigationItem>
+            <DrawerNavigationItem to={'https://twitter.com/hashtag/digitec16'} target="_blank">#digitec16</DrawerNavigationItem>
           </DrawerNavigation>
         </Drawer>
         <Content>
@@ -109,8 +114,8 @@ export class App extends React.Component {
               leave: styles.leave,
               leaveActive: styles.leaveActive,
             }}
-            transitionEnterTimeout={200}
-            transitionLeaveTimeout={100}
+            transitionEnterTimeout={600}
+            transitionLeaveTimeout={300}
           >
             {React.cloneElement(children, {
               key: childrenKey,
@@ -132,6 +137,7 @@ App.propTypes = {
   onToggleDrawer: React.PropTypes.func,
   onScroll: React.PropTypes.func,
   modalOpen: React.PropTypes.bool,
+  headerTitle: React.PropTypes.string,
 };
 
 function mapStateToProps(state) {
@@ -140,6 +146,7 @@ function mapStateToProps(state) {
     headerPinned: state.layout.headerPinned,
     headerUnpinned: state.layout.headerUnpinned,
     modalOpen: state.layout.modalOpen,
+    headerTitle: state.layout.headerTitle,
   };
 }
 

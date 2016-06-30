@@ -9,18 +9,18 @@
 }
 
 .enter {
+  visibility: hidden;
   opacity: 0;
 }
 
 .enter.enterActive {
+  visibility: visible;
   opacity: 1;
-  transition: opacity 200ms ease-in;
+  transition:
+    visibility 0ms linear 300,
+    opacity 300 ease-in 300;
 }
 
 .leave {
-  display: none;
-}
-
-.leave.leaveActive {
   display: none;
 }

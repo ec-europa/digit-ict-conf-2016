@@ -25,7 +25,7 @@ const Modal = ({ speaker, events, onToggleEvent }) => {
         <h3>{speaker.firstname} <span className={styles.lastname}>{speaker.lastname}</span></h3>
         <h4 className={styles.title}>{speaker.title}</h4>
       </div>
-      <div className={styles.name}>
+      <div className={styles.bio}>
         {speaker.bio.map((line, index) => (<p key={index}>{line}</p>))}
       </div>
       {sessions}

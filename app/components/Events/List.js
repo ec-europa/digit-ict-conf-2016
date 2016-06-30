@@ -20,7 +20,7 @@ const List = ({ events, onToggle }) => {
         </div>);
       previousStart = event.starts;
     }
-    eventsList.push(<Row key={event.id} event={event} onToggle={onToggle} />);
+    eventsList.push(<Row key={event.id} event={event} onToggle={onToggle} displayTime={false} />);
   });
 
   return (

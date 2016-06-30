@@ -6,38 +6,64 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import Helmet from 'react-helmet';
 import { toggleEvent, selectAllEvents, selectMyEvents } from '../../../store/modules/events';
+import { updateHeaderTitle, openModal } from '../../../store/modules/layout';
 import EventsList from '../../../components/Events/List';
+import modalStyles from '../../../components/Modal/Modal.scss';
 
 import styles from './Programme.scss';
 
-Tabs.setUseDefaultStyles(false);
 
-const Programme = ({ events, myEvents, onToggleEvent }) => (
-  <div className={styles.container}>
-    <div className={styles.header}>
-      <h1>Programme</h1>
-    </div>
-    <Tabs>
-      <TabList className={styles.tabsList}>
-        <Tab className={styles.tab}>Agenda</Tab>
-        <Tab className={styles.tab}>My schedule</Tab>
-      </TabList>
-      <TabPanel>
+class Programme extends React.Component {
+  componentDidMount() {
+    this.props.onUpdateHeaderTitle('Programme');
+  }
+
+  render() {
+    const { events, onToggleEvent, children, location } = this.props;
+
+    const content = (
+      <ReactCSSTransitionGroup
+        transitionName={{
+          enter: modalStyles.enter,
+          enterActive: modalStyles.enterActive,
+          appear: modalStyles.enter,
+          appearActive: modalStyles.enterActive,
+          leave: modalStyles.leave,
+          leaveActive: modalStyles.leaveActive,
+        }}
+        transitionEnterTimeout={300}
+        transitionLeaveTimeout={300}
+        transitionAppear
+        transitionAppearTimeout={300}
+      >
+        {children ? React.cloneElement(children, { key: location.pathname }) : null}
+      </ReactCSSTransitionGroup>
+    );
+
+    return (
+      <div className={styles.container}>
+        <Helmet title="Programme" />
+        <div className={styles.header}>
+          <h1>Programme</h1>
+        </div>
         <EventsList events={events} onToggle={onToggleEvent} />
-      </TabPanel>
-      <TabPanel>
-        <EventsList events={myEvents} onToggle={onToggleEvent} />
-      </TabPanel>
-    </Tabs>
-  </div>
-);
+        {content}
+      </div>
+    );
+  }
+}
 
 Programme.propTypes = {
   events: React.PropTypes.array,
   myEvents: React.PropTypes.array,
   onToggleEvent: React.PropTypes.func,
+  onOpenModal: React.PropTypes.func,
+  onUpdateHeaderTitle: React.PropTypes.func,
+  children: React.PropTypes.node,
+  location: React.PropTypes.object,
 };
 
 Programme.defaultProps = {
@@ -49,6 +75,7 @@ function mapStateToProps(state) {
   return {
     events: selectAllEvents(state),
     myEvents: selectMyEvents(state),
+    modalOpen: state.layout.modalOpen,
   };
 }
 
@@ -56,6 +83,12 @@ function mapDispatchToProps(dispatch) {
   return {
     onToggleEvent: (event) => {
       dispatch(toggleEvent(event));
+    },
+    onOpenModal: () => {
+      dispatch(openModal());
+    },
+    onUpdateHeaderTitle: (title) => {
+      dispatch(updateHeaderTitle(title));
     },
     dispatch,
   };

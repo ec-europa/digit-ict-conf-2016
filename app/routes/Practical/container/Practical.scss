@@ -1,0 +1,20 @@
+@import '../../../theme/variables';
+@import '../../../theme/breakpoints';
+
+.container {
+  max-width: $max-width;
+  margin: auto;
+  padding: $header-height 1em;
+  color: $ict-grey-text;
+}
+
+.header {
+  @include mappy-bp(max medium) {
+    display: none;
+  }
+
+  h1 {
+    color: $ict-grey-text;
+    font-weight: 300;
+  }
+}

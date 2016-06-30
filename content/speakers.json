@@ -9,7 +9,7 @@
       "After an early career as a City editor and speechwriter, Paul published WAVE magazine, before founding the Intranet Benchmarking Forum (IBF), which went on to become DWG. Paul is a keen tennis player and devoted yoga practitioner. He has two daughters and lives in London and the Cotswolds."
     ],
     "twitter": "@paulmillersays",
-    "picture": "paulmiller.png",
+    "picture": "Paul-Miller.jpg",
     "sessions": ["panel1"]
   },
   {
@@ -51,7 +51,7 @@
       "In 2015 she became Manager of the Year in Belgium."
     ],
     "twitter": false,
-    "picture": "dominiqueleroy.png",
+    "picture": "Dominique-Leroy.jpg",
     "sessions": ["panel3"]
   },
   {
@@ -65,7 +65,7 @@
       "He is also an entrepreneur, composer & pianist, and fluent in 6 languages. He has talked at TEDx. He had coverage by national and international TV & radio, and his contributions have featured on BBC News and the Wall Street Journal."
     ],
     "twitter": "@MischaDohler",
-    "picture": "mischadohler.png",
+    "picture": "Mischa-Dohler.jpg",
     "sessions": ["panel3"]
   },
   {
@@ -90,7 +90,7 @@
       "Paul Boag is a user experience consultant, author and speaker. He helps not-for-profits such as the European Commission, UCAS and Doctors Without Borders adapt to the digital world. He refocuses them on user experience and engaging with a new digitally savvy audience. "
     ],
     "twitter": "@boagworld",
-    "picture": "paulboag.png",
+    "picture": "Paul-Boag.jpg",
     "sessions": ["panel2", "session1"]
   },
   {
@@ -105,5 +105,31 @@
     "twitter": "@Senficon",
     "picture": "juliareda.png",
     "sessions": ["session3"]
+  },
+  {
+    "id": "maxpeterson",
+    "firstname": "Max",
+    "lastname": "Peterson",
+    "title": "Director and General Manager for AWS Worldwide Public Sector",
+    "bio": [
+      "Max serves as director and general manager for Amazon Web Services’ worldwide public sector, with responsibility in forming partnerships with system integrators, service providers, independent software vendors and value added resellers. At AWS, Peterson leads a team that works to identify and capture public sector contracts and perform program management before and after the award.",
+      "The 25-year public sector industry veteran joined AWS in February 2012 after he served as a vice president and general manager at Dell. He was also a VP of federal sales at CDWG and a VP of public sector sales at Commerce One.",
+      "He holds a bachelor’s degree in finance and master’s of business administration in management information systems from the University of Maryland."
+    ],
+    "twitter": "@maxrpetersonii",
+    "picture": "maxpeterson.png",
+    "sessions": []
+  },
+  {
+    "id": "vincentbruneau",
+    "firstname": "Vincent",
+    "lastname": "Bruneau",
+    "title": "Founder & CEO of Magency",
+    "bio": [
+      "An accomplished musician, laureate in Jazz and clarinet from the National conservatory of music, a pioneer in Street Magic with his unforgettable TV show, tricking celebrities and passerby alike, Vincent Bruneau transformed the techniques and “awe” effects of the world of magic into a unique digital platform, becoming one of the most demanded innovators in Europe and the United States for the organization of corporate events that can gather more than 3000 participants."
+    ],
+    "twitter": "@vince_bruneau",
+    "picture": "vincentbruneau.png",
+    "sessions": []
   }
 ]

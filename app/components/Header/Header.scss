@@ -5,10 +5,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: $header-height;
-  align-items: stretch;
-  display: flex;
-  z-index: 100;
+  z-index: 800;
   transition: transform 300ms ease-in-out;
   will-change: transform;
   background: #FFF;
@@ -24,4 +21,13 @@
 
 .container.unpinned {
   transform: translateY(-100%);
+}
+
+.innerContainer {
+  width: 100%;
+  height: $header-height;
+  align-items: stretch;
+  display: flex;
+  max-width: $max-width;
+  margin: auto;
 }

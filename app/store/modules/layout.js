@@ -9,6 +9,9 @@ export const CLOSE_DRAWER = 'CLOSE_DRAWER';
 export const UPDATE_SCROLL = 'UPDATE_SCROLL';
 export const OPEN_MODAL = 'OPEN_MODAL';
 export const CLOSE_MODAL = 'CLOSE_MODAL';
+export const UPDATE_HEADER_TITLE = 'UPDATE_HEADER_TITLE';
+export const OPEN_SNACKBAR = 'OPEN_SNACKBAR';
+export const CLOSE_SNACKBAR = 'CLOSE_SNACKBAR';
 
 /*
  * Initial state
@@ -20,7 +23,12 @@ const initialState = {
   headerPinned: true,
   headerUnpinned: false,
   modalOpen: false,
-  modalContent: null,
+  headerTitle: '',
+  snackbar: {
+    open: false,
+    message: '',
+    onRequestUndo: null,
+  },
 };
 
 const scrollOffest = 80;
@@ -37,11 +45,30 @@ export default function reducer(state = initialState, action) {
     case OPEN_MODAL:
       return Object.assign({}, state, {
         modalOpen: true,
-        modalContent: action.content,
+      });
+    case OPEN_SNACKBAR:
+      return Object.assign({}, state, {
+        snackbar: {
+          open: true,
+          message: action.message,
+          onRequestUndo: action.onRequestUndo,
+        },
+      });
+    case CLOSE_SNACKBAR:
+      return Object.assign({}, state, {
+        snackbar: {
+          open: false,
+          message: '',
+          onRequestUndo: null,
+        },
       });
     case CLOSE_MODAL:
       return Object.assign({}, state, {
         modalOpen: false,
+      });
+    case UPDATE_HEADER_TITLE:
+      return Object.assign({}, state, {
+        headerTitle: action.title,
       });
     case UPDATE_SCROLL: {
       const scrollTop = window.scrollY;
@@ -88,5 +115,26 @@ export function openModal(content) {
 export function closeModal() {
   return {
     type: CLOSE_MODAL,
+  };
+}
+
+export function updateHeaderTitle(title) {
+  return {
+    type: UPDATE_HEADER_TITLE,
+    title,
+  };
+}
+
+export function openSnackbar(message, onRequestUndo = null) {
+  return {
+    type: OPEN_SNACKBAR,
+    message,
+    onRequestUndo,
+  };
+}
+
+export function closeSnackbar() {
+  return {
+    type: CLOSE_SNACKBAR,
   };
 }

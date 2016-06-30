@@ -17,7 +17,9 @@ function Header({ children, pinned, unpinned }) {
 
   return (
     <header className={headerClasses}>
-      {children}
+      <div className={styles.innerContainer}>
+        {children}
+      </div>
     </header>
   );
 }
@@ -27,6 +29,5 @@ Header.propTypes = {
   pinned: React.PropTypes.bool,
   unpinned: React.PropTypes.bool,
 };
-
 
 export default Header;

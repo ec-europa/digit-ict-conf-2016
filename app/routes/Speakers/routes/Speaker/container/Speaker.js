@@ -7,6 +7,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { push } from 'react-router-redux';
+import Helmet from 'react-helmet';
 
 import speakers from '../../../../../../content/speakers.json';
 import Modal from '../../../../../components/Modal/Modal';
@@ -36,9 +37,11 @@ export class Speaker extends React.Component {
     const { speaker } = this.state;
     const { onOpenModal } = this.props;
 
-    const content = <SpeakerModal speaker={speaker} />;
     return (
-      <Modal onOpenModal={onOpenModal} onCloseModal={this.close} isOpen content={content} />
+      <Modal onOpenModal={onOpenModal} onCloseModal={this.close}>
+        <Helmet title={`${speaker.firstname} ${speaker.lastname}`} />
+        <SpeakerModal speaker={speaker} />
+      </Modal>
     );
   }
 }

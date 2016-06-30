@@ -1,4 +1,5 @@
 import { loadModule, errorLoading } from '../../utils/loader';
+import childRoutes from './routes';
 
 export default function createRoute(path = 'programme') {
   return {
@@ -8,5 +9,6 @@ export default function createRoute(path = 'programme') {
         .then(loadModule(cb))
         .catch(errorLoading);
     },
+    childRoutes,
   };
 }

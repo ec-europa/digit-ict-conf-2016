@@ -9,12 +9,38 @@
   flex-wrap: nowrap;
   align-items: center;
   padding: 24px 16px;
-  cursor: default;
-  color: rgba(0, 0, 0, 0.87);
   overflow: hidden;
+}
 
+.greyItem {
+  color: rgba(0, 0, 0, 0.87);
+  border-left: 1em solid #CCC;
   &:hover {
     background-color: #F7F7F7;
+  }
+}
+
+.blueItem {
+  color: rgba(0, 0, 0, 0.87);
+  border-left: 1em solid $ict-blue;
+  &:hover {
+    background-color: lighten($ict-blue, 60%);
+  }
+}
+
+.yellowItem {
+  color: rgba(0, 0, 0, 0.87);
+  border-left: 1em solid $ict-yellow;
+  &:hover {
+    background-color: lighten($ict-yellow, 35%);
+  }
+}
+
+.purpleItem {
+  color: rgba(0, 0, 0, 0.87);
+  border-left: 1em solid $ict-purple;
+  &:hover {
+    background-color: lighten($ict-purple, 50%);
   }
 }
 
@@ -26,6 +52,10 @@
   box-sizing: border-box;
   display: block;
   align-items: center;
+
+  a {
+    color: $ict-grey-text;
+  }
 }
 
 .secondary {
@@ -33,11 +63,15 @@
   padding: 0 1em;
 }
 
+.title {
+  color: darken($ict-grey-text, 5%);
+}
+
 .subtitle {
   font-size: 0.9em;
   font-weight: 400;
   line-height: 18px;
-  color: rgba(0, 0, 0, 0.54);
+  color: lighten($ict-grey-text, 5%);
   display: block;
   padding: 0;
 }
@@ -92,16 +126,35 @@ $radio-border: 2px solid $ict-purple;
   }
 }
 
+$borderWidth: 3px;
+
 [type='checkbox']:checked {
   + label::before {
     top: -4px;
     left: -5px;
     width: 12px;
     height: 22px;
+
     border-top: 2px solid transparent;
     border-left: 2px solid transparent;
-    border-right: $radio-border;
-    border-bottom: $radio-border;
+    border-right: $borderWidth solid $ict-grey-text;
+    border-bottom: $borderWidth solid $ict-grey-text;
+
+    .purpleItem & {
+      border-right: $borderWidth solid $ict-purple;
+      border-bottom: $borderWidth solid $ict-purple;
+    }
+
+    .yellowItem & {
+      border-right: $borderWidth solid $ict-yellow;
+      border-bottom: $borderWidth solid $ict-yellow;
+    }
+
+    .blueItem & {
+      border-right: $borderWidth solid $ict-blue;
+      border-bottom: $borderWidth solid $ict-blue;
+    }
+
     transform: rotate(40deg);
     backface-visibility: hidden;
     transform-origin: 100% 100%;

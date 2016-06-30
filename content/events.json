@@ -2,177 +2,197 @@
   "id": "registration",
   "starts": "8.30",
   "ends": "9.30",
-  "title": "Registration and coffee for participants",
+  "title": "Registration and coffee for participants - Breakfast for speakers and guests",
   "venue": "Main hall",
   "description": [
     "Breakfast for speakers and guests"
   ],
-  "speakers": []
+  "speakers": [],
+  "color": "grey"
 }, {
   "id": "welcome",
   "starts": "9.30",
   "ends": "9.45",
-  "title": "Welcome by Commissioner G. Oettinger and Vice-President of European Parliament Adina-Ioana Valean",
-  "venue": "",
-  "description": [],
-  "speakers": []
+  "title": "Welcome",
+  "venue": "TBC",
+  "description": [
+    "Adina-Ioana Valean, Vice-President of European Parliament",
+    "Gunther Oettinger, Commissioner for Digital Economy and Society"
+  ],
+  "speakers": [],
+  "color": "grey"
 }, {
   "id": "panel1",
   "starts": "9.45",
   "ends": "11.00",
   "title": "Panel 1: Workplace of the future",
-  "venue": "",
+  "venue": "TBC",
   "description": [
     "Moderator: Jennifer Baker, BrusselsGeek.eu",
     "Paul Miller, CEO of Digital Workplace Group – ‘’The human-centred digital workplace’’",
     "Sabine Sipunova, founder of ''Sorry as a Service'' – “Interacting with customers: Where physical and digital worlds meet”",
     "European Investment Bank - ‘’Creating the digital workplace of the future’’"
   ],
-  "speakers": ["paulmiller", "sabinesipunova"]
+  "speakers": ["paulmiller", "sabinesipunova"],
+  "color": "blue"
 }, {
   "id": "coffeeMorning",
   "starts": "11.00",
   "ends": "11.30",
   "title": "Coffee break and DIGITEC exhibition",
-  "venue": "",
+  "venue": "TBC",
   "description": [],
-  "speakers": []
+  "speakers": [],
+  "color": "grey"
 }, {
   "id": "panel2",
   "starts": "11.30",
   "ends": "12.45",
   "title": "Panel 2: Digital Democracy",
-  "venue": "",
+  "venue": "TBC",
   "description": [
     "Moderator: Jennifer Baker, BrusselsGeek.eu",
     "David Borelli, MEP, Co-President of the Europe for Freedom and Direct Democracy Group",
     "Kate Kahle, Social Media Manager at CERN – ‘’How to engage with citizens on social media?’’",
     "Paul Boag, UX consultant in digital transformation – ‘’How to become a user-centric organisation?”"
   ],
-  "speakers": ["davidborrelli", "katekahle", "paulboagg"]
+  "speakers": ["davidborrelli", "katekahle", "paulboagg"],
+  "color": "purple"
 }, {
   "id": "lunch",
   "starts": "12.45",
   "ends": "14.15",
   "title": "Lunch and DIGITEC exhibition",
-  "venue": "",
-  "description": [
-
-  ],
-  "speakers": []
+  "venue": "TBC",
+  "description": [],
+  "speakers": [],
+  "color": "grey"
 }, {
   "id": "panel3",
   "starts": "14.15",
   "ends": "15.30",
   "title": "Panel 3: Technologies of the Future",
-  "venue": "",
+  "venue": "TBC",
   "description": [
     "Moderator: Jennifer Baker, BrusselsGeek.eu",
     "Dominique Leroy, CEO of Proximus",
-    "Mischa Dohler, Professor of Wi-Fi Communication in King's College – ‘’The Internet of Things”",
-    "Splunk - ‘’The Future of Data’’"
+    "Mischa Dohler, Professor of Wi-Fi Communication in King's College – ”The Internet of Things”"
   ],
-  "speakers": ["dominiqueleroy", "mischadohler"]
+  "speakers": ["dominiqueleroy", "mischadohler"],
+  "color": "yellow"
 }, {
   "id": "session1",
   "starts": "14.15",
   "ends": "15.30",
-  "title": "Session 1: User experience",
-  "venue": "",
+  "title": "Session: User experience",
+  "venue": "TBC",
   "description": [
     "Workshop: Paul Boag, UX expert"
   ],
-  "speakers": ["paulboag"]
+  "speakers": ["paulboag"],
+  "color": "purple"
 }, {
   "id": "session2",
   "starts": "14.15",
   "ends": "15.30",
-  "title": "Session 2: Knowledge worker: Culture, Skills, Tools",
-  "venue": "",
+  "title": "Session: Knowledge worker: Culture, Skills, Tools",
+  "venue": "TBC",
   "description": [
-    "Facilitator: (tbc)",
     "Knowledge workers of the future - what do they need?"
   ],
-  "speakers": []
+  "speakers": [],
+  "color": "blue"
 }, {
   "id": "session3",
   "starts": "14.15",
   "ends": "15.30",
-  "title": "Session 3: OpenSource the Future ",
-  "venue": "",
+  "title": "Session: Open Source Software",
+  "venue": "TBC",
   "description": [
-    "Facilitator: (tbc)",
     "Special guest: Julia Reda, MEP"
   ],
-  "speakers": ["juliareda"]
+  "speakers": ["juliareda"],
+  "color": "yellow"
 }, {
   "id": "coffeeAfternoon",
   "starts": "15.30",
   "ends": "16.00",
   "title": "Coffee break and DIGITEC exhibition",
-  "venue": "",
+  "venue": "TBC",
   "description": [],
-  "speakers": []
+  "speakers": [],
+  "color": "grey"
 }, {
   "id": "panel4",
   "starts": "16.00",
   "ends": "17.15",
   "title": "Panel 4: Technologies of the Future (continued)",
-  "venue": "",
+  "venue": "TBC",
   "description": [
     "Moderator: Jennifer Baker, BrusselsGeek.eu",
-    "Alexander Steiner, Numergy – The way ahead for the cloud",
-    "Vice President Public Sector of Amazon",
-    "Representative of Google"
-],
-  "speakers": []
+    "Alexander Steiner, President, Conseils et Systèmes Informatiques",
+    "Max Peterson, General Manager for Public Sector, Amazon Web Services"
+  ],
+  "speakers": ["maxpeterson"],
+  "color": "yellow"
 }, {
   "id": "session4",
   "starts": "16.00",
   "ends": "17.15",
-  "title": "Session 4: Data for policy making",
-  "venue": "",
+  "title": "Session: Data for policy making",
+  "venue": "TBC",
   "description": [
-    "Facilitator: Prabhat Agarwal, DG CONNECT",
-    "Prof. Mercedes Fuertes",
-    "Prof. Diana Galetta, University of Milan"
+    "Guests: Prof. Mercedes Fuertes and Prof. Diana Galetta, University of Milan"
   ],
-  "speakers": []
+  "speakers": [],
+  "color": "purple"
 }, {
   "id": "session5",
   "starts": "16.00",
   "ends": "17.15",
-  "title": "Session 5: Collaborate to innovate",
-  "venue": "",
+  "title": "Session: Collaborate to innovate",
+  "venue": "TBC",
   "description": [
-    "Facilitator: Leo Exter, westartup",
     "Presenting the results from the inter-institutional hackathon"
   ],
-  "speakers": []
+  "speakers": [],
+  "color": "blue"
 }, {
   "id": "session6",
   "starts": "16.00",
   "ends": "17.15",
-  "title": "Session 6: IT security",
-  "venue": "",
+  "title": "Session: IT security",
+  "venue": "TBC",
   "description": [
-    "Moderator: Ken Ducatel, DIGIT"
+    "Moderator: Ken Ducatel, IT Security Directorate, DIGIT "
   ],
-  "speakers": []
+  "speakers": [],
+  "color": "yellow"
 }, {
   "id": "keynote",
   "starts": "17.15",
   "ends": "17.30",
   "title": "Keynote closing speech: Vincent Bruneau, CEO of Magency",
-  "venue": "",
+  "venue": "TBC",
   "description": [],
-  "speakers": []
+  "speakers": [],
+  "color": "grey"
 }, {
   "id": "closing",
   "starts": "17.30",
   "ends": "",
   "title": "Closing by organisers",
-  "venue": "",
+  "venue": "TBC",
   "description": [],
-  "speakers": []
+  "speakers": [],
+  "color": "grey"
+}, {
+  "id": "cocktail",
+  "starts": "17.45",
+  "ends": "19.00",
+  "title": "Cocktail",
+  "venue": "TBC",
+  "description": [],
+  "speakers": [],
+  "color": "grey"
 }]
