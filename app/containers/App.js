@@ -76,6 +76,7 @@ export class App extends React.Component {
     return (
       <div className={containerClasses}>
         <Helmet
+          base={{ href: process.env.BASE_URL }}
           titleTemplate="DIGIT ICT 2016 - %s"
         />
         <Header pinned={headerPinned} unpinned={headerUnpinned}>

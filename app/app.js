@@ -9,7 +9,8 @@ import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { applyRouterMiddleware, Router, browserHistory } from 'react-router';
+import { applyRouterMiddleware, Router, useRouterHistory } from 'react-router';
+import { createHistory } from 'history';
 import { syncHistoryWithStore } from 'react-router-redux';
 import useScroll from 'react-router-scroll';
 import configureStore from './store/configure';
@@ -17,8 +18,13 @@ import configureStore from './store/configure';
 // Import the CSS resets and base theme
 import './theme/base.scss';
 
+// Create custom history
+const browserHistory = useRouterHistory(createHistory)({
+  basename: process.env.BASE_URL,
+});
+
 // Create redux store with history
-const store = configureStore();
+const store = configureStore(browserHistory);
 
 // Sync history and store, as the react-router-redux reducer
 // is under the non-default key ("routing"), selectLocationState

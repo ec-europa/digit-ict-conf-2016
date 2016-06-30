@@ -4,20 +4,18 @@
 
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import { persistStore, autoRehydrate } from 'redux-persist';
-import { browserHistory } from 'react-router';
 import { routerMiddleware } from 'react-router-redux';
 
 import route from './modules/route';
 import events from './modules/events';
 import layout from './modules/layout';
 
-export default function configureStore(initialState = {}, history = browserHistory) {
+export default function configureStore(history) {
   const reducer = combineReducers({
     route,
     events,
     layout,
   });
-
 
   // routerMiddleware: Syncs the location/URL path to the state
   const middlewares = [
@@ -36,7 +34,7 @@ export default function configureStore(initialState = {}, history = browserHisto
 
   const store = createStore(
     reducer,
-    initialState,
+    {},
     compose(...enhancers)
   );
 

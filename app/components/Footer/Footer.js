@@ -17,8 +17,8 @@ function Footer() {
         <div className={`${styles.section} ${styles.left}`}>
           <Link to="http://europa.eu/cookies/index_en.htm" target="_blank">Cookies</Link>
           <Link to="http://europa.eu/geninfo/legal_notices_en.htm" target="_blank">Legal notice</Link>
-          <Link to="#">Contact</Link>
-          <Link to="#">Search</Link>
+          <Link to="mailto:DIGITEC-CONFERENCE@ec.europa.eu">Contact</Link>
+          <Link to="http://europa.eu/geninfo/query/index.do" target="_blank">Search</Link>
         </div>
         <div className={`${styles.section} ${styles.right}`}>
           <Link to={'#'} className={styles.logoContainer}>

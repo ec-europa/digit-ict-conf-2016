@@ -10,7 +10,10 @@ const cssnext = require('postcss-cssnext');
 const postcssFocus = require('postcss-focus');
 const postcssReporter = require('postcss-reporter');
 
+const baseUrl = '/multisite/pubfpfistest/sites/pubfpfistest/files/digitec/';
+
 module.exports = require('./webpack.base.babel')({
+  baseUrl,
   // In production, we skip all hot-reloading stuff
   entry: [
     path.join(process.cwd(), 'app/app.js'),
@@ -20,6 +23,7 @@ module.exports = require('./webpack.base.babel')({
   output: {
     filename: '[name].[chunkhash].js',
     chunkFilename: '[name].[chunkhash].chunk.js',
+    publicPath: baseUrl,
   },
 
   // We use ExtractTextPlugin so we get a seperate CSS file instead
@@ -30,7 +34,7 @@ module.exports = require('./webpack.base.babel')({
   ),
   sassLoaders: ExtractTextPlugin.extract(
     'style-loader',
-    'css-loader?importLoaders=1!postcss-loader!sass!sass-resources'
+    'css-loader?modules&importLoaders=1!postcss-loader!sass'
   ),
 
   // In production, we minify our CSS with cssnano
@@ -44,6 +48,7 @@ module.exports = require('./webpack.base.babel')({
     }),
   ],
   plugins: [
+
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
       children: true,
@@ -51,12 +56,13 @@ module.exports = require('./webpack.base.babel')({
       async: true,
     }),
 
+
     // OccurrenceOrderPlugin is needed for long-term caching to work properly.
     // See http://mxs.is/googmv
     new webpack.optimize.OccurrenceOrderPlugin(true),
 
     // Merge all duplicate modules
-    new webpack.optimize.DedupePlugin(),
+    // new webpack.optimize.DedupePlugin(),
 
     // Minify and optimize the JavaScript
     new webpack.optimize.UglifyJsPlugin({

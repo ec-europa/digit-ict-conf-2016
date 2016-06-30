@@ -8,14 +8,10 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = (options) => ({
   entry: options.entry,
-  output: Object.assign({ // Compile into js/build.js
+  output: Object.assign({
     path: path.resolve(process.cwd(), 'build'),
     publicPath: '/',
   }, options.output), // Merge with env dependent settings
-  sassResources: [
-    './app/theme/_variables.scss',
-    './app/theme/_mixins.scss',
-  ],
   module: {
     loaders: [{
       test: /\.js$/, // Transform all .js files required somewhere with Babel
@@ -80,6 +76,7 @@ module.exports = (options) => ({
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+        BASE_URL: JSON.stringify(options.baseUrl),
       },
     }),
   ]),
