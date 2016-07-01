@@ -63,10 +63,11 @@ export class App extends React.Component {
     } = this.props;
 
     let childrenKey;
-    if (location.pathname.startsWith('/speakers')) {
-      childrenKey = '/speakers';
-    } else if (location.pathname.startsWith('/programme')) {
-      childrenKey = '/programme';
+    // Group children pages (under "speakers" or "programme")
+    if (location.pathname.indexOf('speakers') > -1) {
+      childrenKey = 'speakers';
+    } else if (location.pathname.indexOf('programme') > -1) {
+      childrenKey = 'programme';
     } else {
       childrenKey = location.pathname;
     }
@@ -118,8 +119,8 @@ export class App extends React.Component {
               leave: styles.leave,
               leaveActive: styles.leaveActive,
             }}
-            transitionEnterTimeout={600}
-            transitionLeaveTimeout={300}
+            transitionEnterTimeout={300}
+            transitionLeaveTimeout={10}
           >
             {React.cloneElement(children, {
               key: childrenKey,
