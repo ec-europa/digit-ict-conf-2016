@@ -1,7 +1,7 @@
 {
   "name": "digit-ict-conf-2016",
   "description": "DIGIT-ICT Conference 2016 website",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ec-europa/digit-ict-conf-2016.git"
@@ -23,7 +23,8 @@
     "lint": "npm run lint:js && npm run lint:css",
     "lint:js": "eslint . --ignore-path .gitignore --ignore-pattern tools/scripts",
     "lint:css": "stylelint ./app/**/*.css",
-    "lint-staged": "lint-staged"
+    "lint-staged": "lint-staged",
+    "release": "standard-version"
   },
   "lint-staged": {
     "eslint": "*.js",
