@@ -10,17 +10,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { applyRouterMiddleware, Router, useRouterHistory } from 'react-router';
-import { createHistory } from 'history';
+import createBrowserHistory from 'history/lib/createBrowserHistory';
 import { syncHistoryWithStore } from 'react-router-redux';
 import useScroll from 'react-router-scroll';
 import configureStore from './store/configure';
 
-// Import the CSS resets and base theme
-import './theme/base.scss';
-
 // Create custom history
-const browserHistory = useRouterHistory(createHistory)({
-  basename: process.env.BASE_URL,
+const browserHistory = useRouterHistory(createBrowserHistory)({
+  basename: __BASENAME__,
 });
 
 // Create redux store with history

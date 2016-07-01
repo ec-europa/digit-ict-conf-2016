@@ -10,6 +10,9 @@ import Helmet from 'react-helmet';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import classnames from 'classnames';
 
+// Import the CSS resets and base theme
+import '../theme/base.scss';
+
 import { toggleDrawer, handleScroll } from '../store/modules/layout';
 
 import { Header, HeaderToggle, HeaderTitle, HeaderLogos, HeaderNavigation, HeaderNavigationItem } from '../components/Header';
@@ -76,7 +79,7 @@ export class App extends React.Component {
     return (
       <div className={containerClasses}>
         <Helmet
-          base={{ href: process.env.BASE_URL }}
+          base={{ href: __BASENAME__ }}
           titleTemplate="DIGIT ICT 2016 - %s"
         />
         <Header pinned={headerPinned} unpinned={headerUnpinned}>

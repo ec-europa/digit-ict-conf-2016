@@ -25,8 +25,10 @@ const plugins = [
   }),
 ];
 
+const baseUrl = 'http://localhost:3000/';
+
 module.exports = require('./webpack.base.babel')({
-  baseUrl: '/',
+  baseUrl,
   // Add hot reloading in development
   entry: [
     'eventsource-polyfill', // Necessary for hot reloading with IE
