@@ -44,10 +44,16 @@ class Row extends React.Component {
 
     return (
       <li className={rowClasses}>
-        <Link className={styles.primary} to={`/programme/${event.id}`}>
+        <div className={styles.primary}>
           <span className={styles.title}>{event.title}</span>
-          <span className={styles.subtitle}>{timeAndVenue}</span>
-        </Link>
+          <span className={styles.subtitle}>
+            {timeAndVenue}
+            {event.description.length > 0
+              ? <Link className={styles.learnMore} to={`/programme/${event.id}`}>Learn more</Link>
+              : null
+            }
+          </span>
+        </div>
         <span className={styles.secondary}>
           <input id={event.id} type="checkbox" checked={event.attend} onChange={this.toggle} />
           <label htmlFor={event.id} />
