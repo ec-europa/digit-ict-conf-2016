@@ -18,9 +18,14 @@ const Modal = ({ speaker, events, onToggleEvent }) => {
     </div>
   ) : '';
 
+  const headerStyle = {
+    background: `url(/assets/images/speakers/${speaker.picture}) center 40% no-repeat`,
+    backgroundSize: 'cover',
+  };
+
   return (
     <div className={styles.container}>
-      <img src={`/assets/images/speakers/${speaker.picture}`} alt={`${speaker.firstname} ${speaker.lastname}`} />
+      <div className={styles.header} style={headerStyle} />
       <div>
         <h3>{speaker.firstname} <span className={styles.lastname}>{speaker.lastname}</span></h3>
         <h4 className={styles.title}>{speaker.title}</h4>
