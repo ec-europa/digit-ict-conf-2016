@@ -80,7 +80,7 @@ export class App extends React.Component {
     return (
       <div className={containerClasses}>
         <Helmet
-          base={{ href: __BASENAME__ }}
+          // base={{ href: __BASENAME__ }}
           titleTemplate="DIGIT ICT 2016 - %s"
         />
         <Header pinned={headerPinned} unpinned={headerUnpinned}>

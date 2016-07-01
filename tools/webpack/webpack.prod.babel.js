@@ -5,15 +5,16 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const OfflinePlugin = require('offline-plugin');
 
+// Configuration
+const config = require('../config');
+
 // PostCSS plugins
 const cssnext = require('postcss-cssnext');
 const postcssFocus = require('postcss-focus');
 const postcssReporter = require('postcss-reporter');
 
-const baseUrl = '/multisite/pubfpfistest/sites/pubfpfistest/files/digitec/';
-
 module.exports = require('./webpack.base.babel')({
-  baseUrl,
+  basename: config.prod.basename,
   // In production, we skip all hot-reloading stuff
   entry: [
     path.join(process.cwd(), 'app/app.js'),
@@ -23,7 +24,7 @@ module.exports = require('./webpack.base.babel')({
   output: {
     filename: '[name].[chunkhash].js',
     chunkFilename: '[name].[chunkhash].chunk.js',
-    publicPath: baseUrl,
+    publicPath: config.prod.publicPath,
   },
 
   // We use ExtractTextPlugin so we get a seperate CSS file instead
