@@ -29,9 +29,9 @@
   "venue": "Gold Hall",
   "description": [
     "Moderator: Jennifer Baker, BrusselsGeek.eu",
-    "Paul Miller, CEO of Digital Workplace Group – ‘’The human-centred digital workplace’’",
-    "",
-    "Paul Boag, UX consultant in digital transformation – ‘’How to become a user-centric organisation?”"
+    "Paul Miller, CEO of Digital Workplace Group",
+    "Laurent Ledoux, CEO of EurActiv",
+    "Paul Boag, UX consultant in digital transformation"
   ],
   "speakers": ["paulmiller", "sabinesipunova"],
   "color": "blue"
@@ -76,7 +76,7 @@
   "description": [
     "Moderator: Jennifer Baker, BrusselsGeek.eu",
     "Dominique Leroy, CEO of Proximus",
-    "Mischa Dohler, Professor of Wi-Fi Communication in King's College – ”The Internet of Things”"
+    "Mischa Dohler, Professor of Wireless Communications at King's College London"
   ],
   "speakers": ["dominiqueleroy", "mischadohler"],
   "color": "yellow"
@@ -87,7 +87,7 @@
   "title": "User experience",
   "venue": "TBC",
   "description": [
-    "Workshop: Paul Boag, UX expert"
+    "Workshop: Paul Boag, User experience consultant"
   ],
   "speakers": ["paulboag"],
   "color": "purple"
@@ -109,7 +109,7 @@
   "title": "Open Source Software",
   "venue": "TBC",
   "description": [
-    "Special guest: Julia Reda, MEP"
+    "Guest speaker: Julia Reda, Member of the European Parliament"
   ],
   "speakers": ["juliareda"],
   "color": "yellow"
@@ -142,7 +142,7 @@
   "title": "Data for policy making",
   "venue": "TBC",
   "description": [
-    "Guests: Prof. Mercedes Fuertes and Prof. Diana Galetta, University of Milan"
+    "Guests: Prof. Mercedes Fuertes, Madrid and Prof. Diana Galetta, University of Milan"
   ],
   "speakers": [],
   "color": "purple"
