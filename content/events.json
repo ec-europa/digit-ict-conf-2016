@@ -2,17 +2,19 @@
   "id": "registration",
   "starts": "8.30",
   "ends": "9.30",
-  "title": "Registration and coffee for participants - Breakfast for speakers and guests",
-  "venue": "Main hall",
-  "description": [],
+  "title": "Registration and coffee",
+  "venue": "",
+  "description": [
+    "Breakfast for speakers and guests"
+  ],
   "speakers": [],
   "color": "grey"
 }, {
   "id": "welcome",
   "starts": "9.30",
   "ends": "9.45",
-  "title": "Welcome",
-  "venue": "TBC",
+  "title": "Welcome by European Commission and European Parliament",
+  "venue": "Gold Hall",
   "description": [
     "Adina-Ioana Valean, Vice-President of European Parliament",
     "Gunther Oettinger, Commissioner for Digital Economy and Society"
@@ -24,12 +26,12 @@
   "starts": "9.45",
   "ends": "11.00",
   "title": "Panel 1: Workplace of the future",
-  "venue": "TBC",
+  "venue": "Gold Hall",
   "description": [
     "Moderator: Jennifer Baker, BrusselsGeek.eu",
-    "Paul Miller, CEO of Digital Workplace Group – ‘’The human-centred digital workplace’’",
-    "Sabine Sipunova, founder of ''Sorry as a Service'' – “Interacting with customers: Where physical and digital worlds meet”",
-    "European Investment Bank - ‘’Creating the digital workplace of the future’’"
+    "Paul Miller, CEO of Digital Workplace Group",
+    "Laurent Ledoux, CEO of EurActiv",
+    "Paul Boag, UX consultant in digital transformation"
   ],
   "speakers": ["paulmiller", "sabinesipunova"],
   "color": "blue"
@@ -38,7 +40,7 @@
   "starts": "11.00",
   "ends": "11.30",
   "title": "Coffee break and DIGITEC exhibition",
-  "venue": "TBC",
+  "venue": "",
   "description": [],
   "speakers": [],
   "color": "grey"
@@ -47,12 +49,12 @@
   "starts": "11.30",
   "ends": "12.45",
   "title": "Panel 2: Digital Democracy",
-  "venue": "TBC",
+  "venue": "Gold Hall",
   "description": [
     "Moderator: Jennifer Baker, BrusselsGeek.eu",
     "David Borelli, MEP, Co-President of the Europe for Freedom and Direct Democracy Group",
-    "Kate Kahle, Social Media Manager at CERN – ‘’How to engage with citizens on social media?’’",
-    "Paul Boag, UX consultant in digital transformation – ‘’How to become a user-centric organisation?”"
+    "Kate Kahle, Social Media Manager at CERN",
+    "Sabine Sipunova, founder of ''Sorry as a Service''"
   ],
   "speakers": ["davidborrelli", "katekahle", "paulboagg"],
   "color": "purple"
@@ -70,11 +72,11 @@
   "starts": "14.15",
   "ends": "15.30",
   "title": "Panel 3: Technologies of the Future",
-  "venue": "TBC",
+  "venue": "Gold Hall",
   "description": [
     "Moderator: Jennifer Baker, BrusselsGeek.eu",
     "Dominique Leroy, CEO of Proximus",
-    "Mischa Dohler, Professor of Wi-Fi Communication in King's College – ”The Internet of Things”"
+    "Mischa Dohler, Professor of Wireless Communications at King's College London"
   ],
   "speakers": ["dominiqueleroy", "mischadohler"],
   "color": "yellow"
@@ -82,10 +84,10 @@
   "id": "session1",
   "starts": "14.15",
   "ends": "15.30",
-  "title": "Session: User experience",
+  "title": "User experience",
   "venue": "TBC",
   "description": [
-    "Workshop: Paul Boag, UX expert"
+    "Workshop: Paul Boag, User experience consultant"
   ],
   "speakers": ["paulboag"],
   "color": "purple"
@@ -93,7 +95,7 @@
   "id": "session2",
   "starts": "14.15",
   "ends": "15.30",
-  "title": "Session: Knowledge worker: Culture, Skills, Tools",
+  "title": "Knowledge worker: Culture, Skills, Tools",
   "venue": "TBC",
   "description": [
     "Knowledge workers of the future - what do they need?"
@@ -104,10 +106,10 @@
   "id": "session3",
   "starts": "14.15",
   "ends": "15.30",
-  "title": "Session: Open Source Software",
+  "title": "Open Source Software",
   "venue": "TBC",
   "description": [
-    "Special guest: Julia Reda, MEP"
+    "Guest speaker: Julia Reda, Member of the European Parliament"
   ],
   "speakers": ["juliareda"],
   "color": "yellow"
@@ -125,7 +127,7 @@
   "starts": "16.00",
   "ends": "17.15",
   "title": "Panel 4: Technologies of the Future (continued)",
-  "venue": "TBC",
+  "venue": "Gold Hall",
   "description": [
     "Moderator: Jennifer Baker, BrusselsGeek.eu",
     "Alexander Steiner, President, Conseils et Systèmes Informatiques",
@@ -137,10 +139,10 @@
   "id": "session4",
   "starts": "16.00",
   "ends": "17.15",
-  "title": "Session: Data for policy making",
+  "title": "Data for policy making",
   "venue": "TBC",
   "description": [
-    "Guests: Prof. Mercedes Fuertes and Prof. Diana Galetta, University of Milan"
+    "Guests: Prof. Mercedes Fuertes, Madrid and Prof. Diana Galetta, University of Milan"
   ],
   "speakers": [],
   "color": "purple"
@@ -148,10 +150,10 @@
   "id": "session5",
   "starts": "16.00",
   "ends": "17.15",
-  "title": "Session: Collaborate to innovate",
-  "venue": "TBC",
+  "title": "InterHack Experience",
+  "venue": "",
   "description": [
-    "Presenting the results from the inter-institutional hackathon"
+    "Results from the inter-institutional hackathon"
   ],
   "speakers": [],
   "color": "blue"
@@ -159,8 +161,8 @@
   "id": "session6",
   "starts": "16.00",
   "ends": "17.15",
-  "title": "Session: IT security",
-  "venue": "TBC",
+  "title": "Encryption: Blessing or Curse for IT Security",
+  "venue": "",
   "description": [
     "Moderator: Ken Ducatel, IT Security Directorate, DIGIT "
   ],
@@ -171,7 +173,7 @@
   "starts": "17.15",
   "ends": "17.30",
   "title": "Keynote closing speech: Vincent Bruneau, CEO of Magency",
-  "venue": "TBC",
+  "venue": "",
   "description": [],
   "speakers": [],
   "color": "grey"
@@ -180,7 +182,7 @@
   "starts": "17.30",
   "ends": "",
   "title": "Closing by organisers",
-  "venue": "TBC",
+  "venue": "Gold Hall",
   "description": [],
   "speakers": [],
   "color": "grey"
