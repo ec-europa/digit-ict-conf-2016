@@ -1,10 +1,20 @@
+'use strict'; // eslint-disable-line strict
+
 const resolve = require('path').resolve;
 const pullAll = require('lodash/pullAll');
 const uniq = require('lodash/uniq');
 
-const ReactBoilerplate = {
-  // This refers to the react-boilerplate version this project is based on.
-  version: '3.0.0',
+let defaultConfig = {};
+
+try {
+  defaultConfig = require('./config.local.json'); // eslint-disable-line global-require
+} catch (e) {
+  defaultConfig = require('./config.dist.json'); // eslint-disable-line global-require
+}
+
+const Config = {
+  dev: defaultConfig.dev,
+  prod: defaultConfig.prod,
 
   /**
    * The DLL Plugin provides a dramatic speed increase to webpack build and hot module reloading
@@ -36,8 +46,8 @@ const ReactBoilerplate = {
 
     entry(pkg) {
       const dependencyNames = Object.keys(pkg.dependencies);
-      const exclude = pkg.dllPlugin.exclude || ReactBoilerplate.dllPlugin.defaults.exclude;
-      const include = pkg.dllPlugin.include || ReactBoilerplate.dllPlugin.defaults.include;
+      const exclude = pkg.dllPlugin.exclude || Config.dllPlugin.defaults.exclude;
+      const include = pkg.dllPlugin.include || Config.dllPlugin.defaults.include;
       const includeDependencies = uniq(dependencyNames.concat(include));
 
       return {
@@ -47,4 +57,4 @@ const ReactBoilerplate = {
   },
 };
 
-module.exports = ReactBoilerplate;
+module.exports = Config;

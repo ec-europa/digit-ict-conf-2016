@@ -10,6 +10,7 @@ const logger = require('../logger');
 const cheerio = require('cheerio');
 const pkg = require(path.resolve(process.cwd(), 'package.json'));
 const dllPlugin = pkg.dllPlugin;
+const config = require('../config');
 
 // PostCSS plugins
 const cssnext = require('postcss-cssnext');
@@ -26,7 +27,7 @@ const plugins = [
 ];
 
 module.exports = require('./webpack.base.babel')({
-  baseUrl: '/',
+  basename: config.dev.basename,
   // Add hot reloading in development
   entry: [
     'eventsource-polyfill', // Necessary for hot reloading with IE
@@ -38,7 +39,7 @@ module.exports = require('./webpack.base.babel')({
   output: {
     filename: '[name].js',
     chunkFilename: '[name].chunk.js',
-    publicPath: 'http://localhost:3000/',
+    publicPath: config.dev.publicPath,
   },
 
   // Add development plugins

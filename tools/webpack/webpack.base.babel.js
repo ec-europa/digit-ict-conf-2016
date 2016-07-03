@@ -10,7 +10,6 @@ module.exports = (options) => ({
   entry: options.entry,
   output: Object.assign({
     path: path.resolve(process.cwd(), 'build'),
-    publicPath: '/',
   }, options.output), // Merge with env dependent settings
   module: {
     loaders: [{
@@ -76,8 +75,8 @@ module.exports = (options) => ({
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV),
-        BASE_URL: JSON.stringify(options.baseUrl),
       },
+      __BASENAME__: JSON.stringify(options.basename),
     }),
   ]),
   postcss: () => options.postcssPlugins,

@@ -2,11 +2,9 @@
   "id": "registration",
   "starts": "8.30",
   "ends": "9.30",
-  "title": "Registration and coffee",
-
-  "description": [
-    "Breakfast for speakers and guests"
-  ],
+  "title": "Registration and coffee for participants - Breakfast for speakers and guests",
+  "venue": "Main hall",
+  "description": [],
   "speakers": [],
   "color": "grey"
 }, {

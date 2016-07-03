@@ -16,9 +16,7 @@
 .enter.enterActive {
   visibility: visible;
   opacity: 1;
-  transition:
-    visibility 0ms linear 300,
-    opacity 300 ease-in 300;
+  transition: opacity 300ms ease-in 0ms;
 }
 
 .leave {

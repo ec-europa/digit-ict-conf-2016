@@ -10,6 +10,9 @@ import Helmet from 'react-helmet';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import classnames from 'classnames';
 
+// Import the CSS resets and base theme
+import '../theme/base.scss';
+
 import { toggleDrawer, handleScroll } from '../store/modules/layout';
 
 import { Header, HeaderToggle, HeaderTitle, HeaderLogos, HeaderNavigation, HeaderNavigationItem } from '../components/Header';
@@ -60,10 +63,11 @@ export class App extends React.Component {
     } = this.props;
 
     let childrenKey;
-    if (location.pathname.startsWith('/speakers')) {
-      childrenKey = '/speakers';
-    } else if (location.pathname.startsWith('/programme')) {
-      childrenKey = '/programme';
+    // Group children pages (under "speakers" or "programme")
+    if (location.pathname.indexOf('speakers') > -1) {
+      childrenKey = 'speakers';
+    } else if (location.pathname.indexOf('programme') > -1) {
+      childrenKey = 'programme';
     } else {
       childrenKey = location.pathname;
     }
@@ -76,7 +80,7 @@ export class App extends React.Component {
     return (
       <div className={containerClasses}>
         <Helmet
-          base={{ href: process.env.BASE_URL }}
+          // base={{ href: __BASENAME__ }}
           titleTemplate="DIGIT ICT 2016 - %s"
         />
         <Header pinned={headerPinned} unpinned={headerUnpinned}>
@@ -115,8 +119,8 @@ export class App extends React.Component {
               leave: styles.leave,
               leaveActive: styles.leaveActive,
             }}
-            transitionEnterTimeout={600}
-            transitionLeaveTimeout={300}
+            transitionEnterTimeout={300}
+            transitionLeaveTimeout={10}
           >
             {React.cloneElement(children, {
               key: childrenKey,
