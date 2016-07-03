@@ -52,10 +52,11 @@
   box-sizing: border-box;
   display: block;
   align-items: center;
+}
 
-  a {
-    color: $ict-grey-text;
-  }
+.learnMore {
+  color: $ict-grey-text;
+  margin-left: 0.5em;
 }
 
 .secondary {
