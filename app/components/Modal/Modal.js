@@ -28,8 +28,9 @@ export class Modal extends React.Component {
         <div className={styles.obfuscator} onClick={this.close} />
         <div className={styles.modal}>
           {children}
+          <div className={styles.closeButton} onClick={this.close} />
         </div>
-        <div className={styles.closeButton} onClick={this.close} />
+
       </div>
     );
   }
