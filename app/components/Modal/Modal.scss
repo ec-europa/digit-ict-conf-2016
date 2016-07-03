@@ -133,47 +133,4 @@
     width: $width;
     background-color: #EEE;
   }
-
-  .enter & {
-    opacity: 0;
-    &::after,
-    &::before {
-      transform: rotate(0);
-    }
-  }
-
-  .enterActive & {
-    opacity: 1;
-    transition: opacity 300ms ease-in-out;
-    &::after,
-    &::before {
-      transition: transform 300ms ease-in-out;
-    }
-    &::before {
-      transform: rotate(-45deg);
-    }
-    &::after {
-      transform: rotate(45deg);
-    }
-  }
-
-  .leave & {
-    opacity: 1;
-    &::before {
-      transform: rotate(-45deg);
-    }
-    &::after {
-      transform: rotate(45deg);
-    }
-  }
-
-  .leaveActive & {
-    opacity: 0;
-    transition: opacity 300ms ease-in-out;
-    &::after,
-    &::before {
-      transition: transform 300ms ease-in-out;
-      transform: rotate(0);
-    }
-  }
 }
