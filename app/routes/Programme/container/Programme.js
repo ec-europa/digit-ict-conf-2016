@@ -57,7 +57,7 @@ class Programme extends React.Component {
 }
 
 Programme.propTypes = {
-  schedule: React.PropTypes.array,
+  schedule: React.PropTypes.object,
   onToggleEvent: React.PropTypes.func,
   onOpenModal: React.PropTypes.func,
   onUpdateHeaderTitle: React.PropTypes.func,

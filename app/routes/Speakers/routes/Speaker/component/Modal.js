@@ -43,7 +43,7 @@ const Modal = ({ speaker, schedule, onToggleEvent }) => {
 
 Modal.propTypes = {
   speaker: React.PropTypes.object,
-  schedule: React.PropTypes.array,
+  schedule: React.PropTypes.object,
   onToggleEvent: React.PropTypes.func,
 };
 

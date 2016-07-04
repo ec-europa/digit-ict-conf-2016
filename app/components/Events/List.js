@@ -30,7 +30,7 @@ const List = ({ events, schedule, onToggle }) => {
 
 List.propTypes = {
   events: React.PropTypes.array,
-  schedule: React.PropTypes.array,
+  schedule: React.PropTypes.object,
   onToggle: React.PropTypes.func,
 };
 
