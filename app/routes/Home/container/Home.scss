@@ -46,30 +46,27 @@
 }
 
 .coverRegister {
-  background-color: $ict-yellow;
-  color: rgb(88, 88, 88);
+  background: url('../images/register-bg.svg') no-repeat center center;
+  background-size: contain;
+  color: darken($ict-grey-text, 9%);
   border: none;
   position: relative;
   display: inline-block;
-
-  clip-path: polygon(2% 25%, 95% 10%, 100% 90%, 0 77%);
   transition:
-    background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.2s ease-in-out,
     color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 
   outline: none;
   cursor: pointer;
   text-decoration: none;
   text-align: center;
-  line-height: 82px;
   vertical-align: middle;
-
-  font-size: 42px;
-  padding: 22px;
+  font-size: 32px;
+  padding: 40px;
 
   &:hover {
-    background-color: darken($ict-yellow, 7%);
-    color: rgb(77, 77, 77);
+    transform: rotate(2deg) scale(1.05);
+    color: darken($ict-grey-text, 20%);
   }
 }
 
