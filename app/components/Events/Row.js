@@ -54,10 +54,13 @@ class Row extends React.Component {
             }
           </span>
         </div>
-        <span className={styles.secondary}>
-          <input id={event.id} type="checkbox" checked={checked} onChange={this.toggle} />
-          <label htmlFor={event.id} />
-        </span>
+        {event.register
+          ? <span className={styles.secondary}>
+            <input id={event.id} type="checkbox" checked={checked} onChange={this.toggle} />
+            <label htmlFor={event.id} />
+          </span>
+          : null
+        }
       </li>
     );
   }

@@ -8,7 +8,8 @@
     "Breakfast for speakers and guests"
   ],
   "speakers": [],
-  "color": "grey"
+  "color": "none",
+  "register": false
 }, {
   "id": "welcome",
   "starts": "9.30",
@@ -20,7 +21,8 @@
     "Gunther Oettinger, Commissioner for Digital Economy and Society"
   ],
   "speakers": [],
-  "color": "grey"
+  "color": "grey",
+  "register": true
 }, {
   "id": "panel1",
   "starts": "9.45",
@@ -34,7 +36,8 @@
     "Paul Boag, UX consultant in digital transformation"
   ],
   "speakers": ["paulmiller", "sabinesipunova"],
-  "color": "blue"
+  "color": "blue",
+  "register": true
 }, {
   "id": "coffeeMorning",
   "starts": "11.00",
@@ -43,7 +46,8 @@
   "venue": "",
   "description": [],
   "speakers": [],
-  "color": "grey"
+  "color": "none",
+  "register": false
 }, {
   "id": "panel2",
   "starts": "11.30",
@@ -57,7 +61,8 @@
     "Sabine Sipunova, founder of ''Sorry as a Service''"
   ],
   "speakers": ["davidborrelli", "katekahle", "paulboagg"],
-  "color": "purple"
+  "color": "purple",
+  "register": true
 }, {
   "id": "lunch",
   "starts": "12.45",
@@ -66,7 +71,8 @@
   "venue": "TBC",
   "description": [],
   "speakers": [],
-  "color": "grey"
+  "color": "none",
+  "register": false
 }, {
   "id": "panel3",
   "starts": "14.15",
@@ -79,7 +85,8 @@
     "Mischa Dohler, Professor of Wireless Communications at King's College London"
   ],
   "speakers": ["dominiqueleroy", "mischadohler"],
-  "color": "yellow"
+  "color": "yellow",
+  "register": true
 }, {
   "id": "session1",
   "starts": "14.15",
@@ -90,7 +97,8 @@
     "Workshop: Paul Boag, User experience consultant"
   ],
   "speakers": ["paulboag"],
-  "color": "purple"
+  "color": "purple",
+  "register": true
 }, {
   "id": "session2",
   "starts": "14.15",
@@ -101,7 +109,8 @@
     "Knowledge workers of the future - what do they need?"
   ],
   "speakers": [],
-  "color": "blue"
+  "color": "blue",
+  "register": true
 }, {
   "id": "session3",
   "starts": "14.15",
@@ -112,7 +121,8 @@
     "Guest speaker: Julia Reda, Member of the European Parliament"
   ],
   "speakers": ["juliareda"],
-  "color": "yellow"
+  "color": "yellow",
+  "register": true
 }, {
   "id": "coffeeAfternoon",
   "starts": "15.30",
@@ -121,7 +131,8 @@
   "venue": "TBC",
   "description": [],
   "speakers": [],
-  "color": "grey"
+  "color": "none",
+  "register": false
 }, {
   "id": "panel4",
   "starts": "16.00",
@@ -134,7 +145,8 @@
     "Max Peterson, General Manager for Public Sector, Amazon Web Services"
   ],
   "speakers": ["maxpeterson"],
-  "color": "yellow"
+  "color": "yellow",
+  "register": true
 }, {
   "id": "session4",
   "starts": "16.00",
@@ -145,7 +157,8 @@
     "Guests: Prof. Mercedes Fuertes, Madrid and Prof. Diana Galetta, University of Milan"
   ],
   "speakers": [],
-  "color": "purple"
+  "color": "purple",
+  "register": true
 }, {
   "id": "session5",
   "starts": "16.00",
@@ -156,7 +169,8 @@
     "Results from the inter-institutional hackathon"
   ],
   "speakers": [],
-  "color": "blue"
+  "color": "blue",
+  "register": true
 }, {
   "id": "session6",
   "starts": "16.00",
@@ -167,7 +181,8 @@
     "Moderator: Ken Ducatel, IT Security Directorate, DIGIT "
   ],
   "speakers": [],
-  "color": "yellow"
+  "color": "yellow",
+  "register": true
 }, {
   "id": "keynote",
   "starts": "17.15",
@@ -176,7 +191,8 @@
   "venue": "",
   "description": [],
   "speakers": [],
-  "color": "grey"
+  "color": "grey",
+  "register": true
 }, {
   "id": "closing",
   "starts": "17.30",
@@ -185,7 +201,8 @@
   "venue": "Gold Hall",
   "description": [],
   "speakers": [],
-  "color": "grey"
+  "color": "none",
+  "register": false
 }, {
   "id": "cocktail",
   "starts": "17.45",
@@ -194,5 +211,6 @@
   "venue": "TBC",
   "description": [],
   "speakers": [],
-  "color": "grey"
+  "color": "none",
+  "register": false
 }]
