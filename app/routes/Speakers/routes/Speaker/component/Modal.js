@@ -19,7 +19,7 @@ const Modal = ({ speaker, events, onToggleEvent }) => {
   ) : '';
 
   const headerStyle = {
-    background: `url(/assets/images/speakers/${speaker.picture}) center 40% no-repeat`,
+    background: `url(${__BASENAME__}/assets/images/speakers/${speaker.picture}) center 40% no-repeat`,
     backgroundSize: 'cover',
   };
 
