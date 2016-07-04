@@ -16,8 +16,8 @@ export const TOGGLE_EVENT = 'TOGGLE_EVENT';
 /*
  * Initial state
  */
-const initialState = [];
-data.forEach(event => {
+const initialState = {};
+data.filter(event => event.register).forEach(event => {
   initialState[event.id] = false;
 });
 
@@ -33,12 +33,12 @@ export default function reducer(state = initialState, action) {
       return reducer(state, Object.assign({}, action, { type: ADD_TO_MY_SCHEDULE }));
     }
     case ADD_TO_MY_SCHEDULE: {
-      return Object.assign([], state, {
+      return Object.assign({}, state, {
         [action.event.id]: true,
       });
     }
     case REMOVE_FROM_MY_SCHEDULE: {
-      return Object.assign([], state, {
+      return Object.assign({}, state, {
         [action.event.id]: false,
       });
     }
