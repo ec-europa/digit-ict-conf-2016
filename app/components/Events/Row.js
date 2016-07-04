@@ -22,7 +22,7 @@ class Row extends React.Component {
   }
 
   render() {
-    const { event, displayTime } = this.props;
+    const { event, checked, displayTime } = this.props;
 
     let timeAndVenue = '';
     if (displayTime) {
@@ -55,7 +55,7 @@ class Row extends React.Component {
           </span>
         </div>
         <span className={styles.secondary}>
-          <input id={event.id} type="checkbox" checked={event.attend} onChange={this.toggle} />
+          <input id={event.id} type="checkbox" checked={checked} onChange={this.toggle} />
           <label htmlFor={event.id} />
         </span>
       </li>
@@ -65,12 +65,14 @@ class Row extends React.Component {
 
 Row.propTypes = {
   event: React.PropTypes.object,
+  checked: React.PropTypes.bool,
   onToggle: React.PropTypes.func,
   displayTime: React.PropTypes.bool,
 };
 
 Row.defaultProps = {
   event: {},
+  checked: false,
   displayTime: true,
 };
 

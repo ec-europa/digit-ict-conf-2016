@@ -6,8 +6,6 @@
 
 import React from 'react';
 import { Link } from 'react-router';
-import { connect } from 'react-redux';
-import { toggleEvent } from '../../../../../store/modules/events';
 import styles from './Modal.scss';
 import speakers from '../../../../../../content/speakers.json';
 
@@ -60,13 +58,5 @@ Modal.defaultProps = {
   event: {},
 };
 
-function mapDispatchToProps(dispatch) {
-  return {
-    onToggleEvent: (event) => {
-      dispatch(toggleEvent(event));
-    },
-    dispatch,
-  };
-}
 
-export default connect(null, mapDispatchToProps)(Modal);
+export default Modal;

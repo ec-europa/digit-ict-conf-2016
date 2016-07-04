@@ -8,11 +8,11 @@ import React from 'react';
 import { connect } from 'react-redux';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import Helmet from 'react-helmet';
-import { toggleEvent, selectAllEvents, selectMyEvents } from '../../store/modules/events';
+import { toggleEvent } from '../../store/modules/schedule';
 import { updateHeaderTitle, openModal } from '../../store/modules/layout';
 import EventsList from '../../components/Events/List';
 import modalStyles from '../../components/Modal/Modal.scss';
-
+import events from '../../../content/events.json';
 import styles from './Container.scss';
 
 class Container extends React.Component {
@@ -21,8 +21,8 @@ class Container extends React.Component {
   }
 
   render() {
-    const { myEvents, onToggleEvent, children, location } = this.props;
-
+    const { schedule, onToggleEvent, children, location } = this.props;
+    const myEvents = events.filter(event => schedule[event.id]);
     const content = (
       <ReactCSSTransitionGroup
         transitionName={{
@@ -49,7 +49,7 @@ class Container extends React.Component {
           <h1>My DIGITEC</h1>
         </div>
         {myEvents.length > 0
-          ? <EventsList events={myEvents} onToggle={onToggleEvent} />
+          ? <EventsList events={myEvents} schedule={schedule} onToggle={onToggleEvent} />
           : <div className={styles.intro}>
             <p>
               "My DIGITEC" helps you personalise your experience. Start adding events to your schedule.
@@ -64,8 +64,7 @@ class Container extends React.Component {
 }
 
 Container.propTypes = {
-  events: React.PropTypes.array,
-  myEvents: React.PropTypes.array,
+  schedule: React.PropTypes.array,
   onToggleEvent: React.PropTypes.func,
   onOpenModal: React.PropTypes.func,
   onUpdateHeaderTitle: React.PropTypes.func,
@@ -74,14 +73,12 @@ Container.propTypes = {
 };
 
 Container.defaultProps = {
-  events: [],
-  myEvents: [],
+  schedule: [],
 };
 
 function mapStateToProps(state) {
   return {
-    events: selectAllEvents(state),
-    myEvents: selectMyEvents(state),
+    schedule: state.schedule,
     modalOpen: state.layout.modalOpen,
   };
 }

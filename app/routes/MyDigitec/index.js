@@ -1,5 +1,4 @@
 import { loadModule, errorLoading } from '../../utils/loader';
-import childRoutes from './routes';
 
 export default function createRoute(path = 'my-digitec') {
   return {
@@ -9,6 +8,5 @@ export default function createRoute(path = 'my-digitec') {
         .then(loadModule(cb))
         .catch(errorLoading);
     },
-    childRoutes,
   };
 }
