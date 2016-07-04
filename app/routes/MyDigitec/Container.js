@@ -64,7 +64,7 @@ class Container extends React.Component {
 }
 
 Container.propTypes = {
-  schedule: React.PropTypes.array,
+  schedule: React.PropTypes.object,
   onToggleEvent: React.PropTypes.func,
   onOpenModal: React.PropTypes.func,
   onUpdateHeaderTitle: React.PropTypes.func,
