@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.8.0"></a>
+# [0.8.0](https://github.com/ec-europa/digit-ict-conf-2016/compare/v0.7.0...v0.8.0) (2016-07-04)
+
+
+### Features
+
+* **basepath:** easily configurable base name for dev and prod ([#20](https://github.com/ec-europa/digit-ict-conf-2016/issues/20)) ([1e62a7b](https://github.com/ec-europa/digit-ict-conf-2016/commit/1e62a7b))
+
+
+
 <a name="0.7.0"></a>
 # 0.7.0 (2016-07-01)
 
