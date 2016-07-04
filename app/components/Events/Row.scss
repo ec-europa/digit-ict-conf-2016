@@ -15,32 +15,36 @@
 .greyItem {
   color: rgba(0, 0, 0, 0.87);
   border-left: 1em solid #CCC;
+  background-color: lighten(#CCC, 18%);
   &:hover {
-    background-color: #F7F7F7;
+    background-color: lighten(#CCC, 15%);
   }
 }
 
 .blueItem {
   color: rgba(0, 0, 0, 0.87);
   border-left: 1em solid $ict-blue;
+  background-color: lighten($ict-blue, 62%);
   &:hover {
-    background-color: lighten($ict-blue, 60%);
+    background-color: lighten($ict-blue, 56%);
   }
 }
 
 .yellowItem {
   color: rgba(0, 0, 0, 0.87);
   border-left: 1em solid $ict-yellow;
+  background-color: lighten($ict-yellow, 43%);
   &:hover {
-    background-color: lighten($ict-yellow, 35%);
+    background-color: lighten($ict-yellow, 34%);
   }
 }
 
 .purpleItem {
   color: rgba(0, 0, 0, 0.87);
   border-left: 1em solid $ict-purple;
+  background-color: lighten($ict-purple, 56%);
   &:hover {
-    background-color: lighten($ict-purple, 50%);
+    background-color: lighten($ict-purple, 49%);
   }
 }
 

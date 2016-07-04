@@ -37,23 +37,18 @@
 .picture {
   width: 100%;
   border: 1px solid #DDD;
-  box-shadow:
-    rgba(0, 0, 0, 0.188235) 0 10px 30px,
-    rgba(0, 0, 0, 0.227451) 0 6px 10px;
+  opacity: 1;
   border-radius: 1px;
-  transition: box-shadow 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .picture:hover {
-  box-shadow:
-    rgba(0, 0, 0, 0.388235) 0 10px 30px,
-    rgba(0, 0, 0, 0.427451) 0 6px 10px;
-  border-radius: 1px;
-  transition: box-shadow 0.2s ease-in-out;
-  cursor: pointer;
+  opacity: 0.8;
 }
 
 .pictureFrame {
   position: relative;
   line-height: 0;
+  background-color: black;
+  display: block;
 }

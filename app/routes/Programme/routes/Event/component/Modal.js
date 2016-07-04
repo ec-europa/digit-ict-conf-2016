@@ -27,7 +27,7 @@ const Modal = ({ event }) => {
         <div key={speaker.id} className={styles.speakerContainer}>
           <div className={styles.speakerPicture}>
             <Link to={`/speakers/${speaker.id}`}>
-              <img src={`/assets/images/speakers/${speaker.picture}`} alt="{speaker.firstname} {speaker.lastname}" />
+              <img src={`${__BASENAME__}/assets/images/speakers/${speaker.picture}`} alt="{speaker.firstname} {speaker.lastname}" />
             </Link>
           </div>
           <div className={styles.speakerInfo}>
@@ -39,14 +39,8 @@ const Modal = ({ event }) => {
     </div>
   ) : null;
 
-  const headerStyle = {
-    background: 'url(/assets/images/placeholder.png) center 50% no-repeat',
-    backgroundSize: 'cover',
-  };
-
   return (
     <div className={styles.container}>
-      <div className={styles.header} style={headerStyle} />
       <h1>{event.title}</h1>
       <h2>{timeAndVenue}</h2>
       <div className={styles.name}>
