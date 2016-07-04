@@ -6,15 +6,17 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
-import { toggleEvent, selectEventsBySpeaker } from '../../../../../store/modules/events';
+import { toggleEvent } from '../../../../../store/modules/schedule';
 import styles from './Modal.scss';
 import EventRow from '../../../../../components/Events/Row';
+import events from '../../../../../../content/events.json';
 
-const Modal = ({ speaker, events, onToggleEvent }) => {
-  const sessions = events ? (
+const Modal = ({ speaker, schedule, onToggleEvent }) => {
+  const speakerEvents = events.filter(event => speaker.sessions.indexOf(event.id) > -1);
+  const sessions = speakerEvents ? (
     <div>
-      <h3>Session{events.length > 1 ? 's' : ''}</h3>
-      {events.map(event => <EventRow key={event.id} event={event} onToggle={onToggleEvent} />)}
+      <h3>Session{speakerEvents.length > 1 ? 's' : ''}</h3>
+      {speakerEvents.map(event => <EventRow key={event.id} event={event} checked={schedule[event.id]} onToggle={onToggleEvent} />)}
     </div>
   ) : '';
 
@@ -41,18 +43,18 @@ const Modal = ({ speaker, events, onToggleEvent }) => {
 
 Modal.propTypes = {
   speaker: React.PropTypes.object,
-  events: React.PropTypes.array,
+  schedule: React.PropTypes.array,
   onToggleEvent: React.PropTypes.func,
 };
 
 Modal.defaultProps = {
   speaker: {},
-  events: [],
+  schedule: [],
 };
 
-function mapStateToProps(state, props) {
+function mapStateToProps(state) {
   return {
-    events: selectEventsBySpeaker(state)(props.speaker),
+    schedule: state.schedule,
   };
 }
 

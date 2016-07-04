@@ -8,11 +8,11 @@ import React from 'react';
 import { connect } from 'react-redux';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import Helmet from 'react-helmet';
-import { toggleEvent, selectAllEvents, selectMyEvents } from '../../../store/modules/events';
+import { toggleEvent } from '../../../store/modules/schedule';
 import { updateHeaderTitle, openModal } from '../../../store/modules/layout';
 import EventsList from '../../../components/Events/List';
 import modalStyles from '../../../components/Modal/Modal.scss';
-
+import events from '../../../../content/events.json';
 import styles from './Programme.scss';
 
 
@@ -22,7 +22,7 @@ class Programme extends React.Component {
   }
 
   render() {
-    const { events, onToggleEvent, children, location } = this.props;
+    const { schedule, onToggleEvent, children, location } = this.props;
 
     const content = (
       <ReactCSSTransitionGroup
@@ -49,7 +49,7 @@ class Programme extends React.Component {
         <div className={styles.header}>
           <h1>Programme</h1>
         </div>
-        <EventsList events={events} onToggle={onToggleEvent} />
+        <EventsList events={events} schedule={schedule} onToggle={onToggleEvent} />
         {content}
       </div>
     );
@@ -57,8 +57,7 @@ class Programme extends React.Component {
 }
 
 Programme.propTypes = {
-  events: React.PropTypes.array,
-  myEvents: React.PropTypes.array,
+  schedule: React.PropTypes.array,
   onToggleEvent: React.PropTypes.func,
   onOpenModal: React.PropTypes.func,
   onUpdateHeaderTitle: React.PropTypes.func,
@@ -67,14 +66,12 @@ Programme.propTypes = {
 };
 
 Programme.defaultProps = {
-  events: [],
-  myEvents: [],
+  schedule: [],
 };
 
 function mapStateToProps(state) {
   return {
-    events: selectAllEvents(state),
-    myEvents: selectMyEvents(state),
+    schedule: state.schedule,
     modalOpen: state.layout.modalOpen,
   };
 }
