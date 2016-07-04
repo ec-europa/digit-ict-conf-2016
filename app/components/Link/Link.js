@@ -15,13 +15,13 @@ const parseTo = (to) => {
 
 const isInternalLink = (toLocation) => window.location.host === toLocation.host;
 
-function Link({ to, children, ...rest }) {
+function Link({ to, children, activeClassName, ...rest }) {
   const toLocation = parseTo(to);
   const isInternal = isInternalLink(toLocation);
 
   if (isInternal) {
     return (
-      <ReactLink to={to} {...rest}>{children}</ReactLink>
+      <ReactLink to={to} {...rest} activeClassName={activeClassName}>{children}</ReactLink>
     );
   }
 
@@ -33,6 +33,7 @@ function Link({ to, children, ...rest }) {
 Link.propTypes = {
   children: React.PropTypes.node,
   to: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.object]).isRequired,
+  activeClassName: React.PropTypes.string,
 };
 
 export default Link;
