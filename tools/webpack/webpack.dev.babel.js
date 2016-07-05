@@ -39,7 +39,7 @@ module.exports = require('./webpack.base.babel')({
   output: {
     filename: '[name].js',
     chunkFilename: '[name].chunk.js',
-    publicPath: config.dev.publicPath,
+    publicPath: config.dev.server + config.dev.publicPath,
   },
 
   // Add development plugins

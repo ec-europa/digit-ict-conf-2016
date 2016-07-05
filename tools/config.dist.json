@@ -1,7 +1,8 @@
 {
   "dev": {
-    "basename": "http://localhost:3000",
-    "publicPath": "http://localhost:3000/"
+    "basename": "",
+    "publicPath": "/",
+    "server": "http://localhost:3000"
   },
   "prod": {
     "basename": "/build",
