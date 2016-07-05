@@ -4,7 +4,7 @@
     "publicPath": "http://localhost:3000/"
   },
   "prod": {
-    "basename": "http://localhost:3000",
-    "publicPath": "http://localhost:3000/"
+    "basename": "/build",
+    "publicPath": "/build/"
   }
 }

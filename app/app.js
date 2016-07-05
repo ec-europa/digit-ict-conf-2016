@@ -9,7 +9,10 @@ import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { applyRouterMiddleware, Router, useRouterHistory } from 'react-router';
+import applyRouterMiddleware from 'react-router/es6/applyRouterMiddleware';
+import Router from 'react-router/es6/Router';
+import useRouterHistory from 'react-router/es6/useRouterHistory';
+
 import createBrowserHistory from 'history/lib/createBrowserHistory';
 import { syncHistoryWithStore } from 'react-router-redux';
 import useScroll from 'react-router-scroll';

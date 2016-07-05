@@ -24,7 +24,8 @@
     "lint:js": "eslint . --ignore-path .gitignore --ignore-pattern tools/scripts",
     "lint:css": "stylelint ./app/**/*.css",
     "lint-staged": "lint-staged",
-    "release": "standard-version"
+    "release": "standard-version",
+    "serve": "cross-env NODE_ENV=production node tools/scripts/prodServer.js"
   },
   "lint-staged": {
     "eslint": "*.js",
