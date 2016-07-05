@@ -35,7 +35,7 @@
     "Laurent Ledoux, CEO of EurActiv",
     "Paul Boag, UX consultant in digital transformation"
   ],
-  "speakers": ["paulmiller", "sabinesipunova"],
+  "speakers": ["paulmiller", "laurentledoux", "paulboag"],
   "color": "blue",
   "register": true
 }, {
@@ -60,7 +60,7 @@
     "Kate Kahle, Social Media Manager at CERN",
     "Sabine Sipunova, founder of ''Sorry as a Service''"
   ],
-  "speakers": ["davidborrelli", "katekahle", "paulboagg"],
+  "speakers": ["davidborrelli", "katekahle", "sabinesipunova"],
   "color": "purple",
   "register": true
 }, {
@@ -190,7 +190,7 @@
   "title": "Keynote closing speech: Vincent Bruneau, CEO of Magency",
   "venue": "",
   "description": [],
-  "speakers": [],
+  "speakers": ["vincentbruneau"],
   "color": "grey",
   "register": true
 }, {

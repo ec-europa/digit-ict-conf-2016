@@ -13,8 +13,8 @@ import events from '../../../../../../content/events.json';
 import Link from '../../../../../components/Link/Link';
 
 const Modal = ({ speaker, schedule, onToggleEvent }) => {
-  const speakerEvents = events.filter(event => speaker.sessions.indexOf(event.id) > -1);
-  const sessions = speakerEvents ? (
+  const speakerEvents = events.filter(event => event.speakers.indexOf(speaker.id) > -1);
+  const sessions = speakerEvents.length ? (
     <div>
       <h3>Session{speakerEvents.length > 1 ? 's' : ''}</h3>
       {speakerEvents.map(event => <EventRow key={event.id} event={event} checked={schedule[event.id]} onToggle={onToggleEvent} />)}
