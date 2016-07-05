@@ -21,10 +21,10 @@ function Footer() {
           <Link to="http://europa.eu/geninfo/query/index.do" target="_blank">Search</Link>
         </div>
         <div className={`${styles.section} ${styles.right}`}>
-          <Link to={'#'} className={styles.logoContainer}>
+          <Link to={'http://ec.europa.eu/index_en.htm'} className={styles.logoContainer}>
             <img src={commissionLogo} alt="European Commission" className={styles.logo} />
           </Link>
-          <Link to={'#'} className={styles.logoContainer}>
+          <Link to={'http://www.europarl.europa.eu/portal/en'} className={styles.logoContainer}>
             <img src={parliamentLogo} alt="European Parliament" className={styles.logo} />
           </Link>
         </div>
