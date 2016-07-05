@@ -69,6 +69,20 @@
   }
 }
 
+.coverTwitter {
+  color: #FFF;
+  text-decoration: none;
+
+  border: 3px solid transparent;
+  padding: 0.5em;
+
+  transition: border-color 0.2s ease-in-out;
+
+  &:hover {
+    border: 3px solid #FFF;
+  }
+}
+
 .coverExpand {
   flex-grow: 0;
   align-self: center;
