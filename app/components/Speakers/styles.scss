@@ -19,9 +19,16 @@
 }
 
 .name {
+  display: block;
   margin-top: 15px;
   color: $ict-grey-text;
   font-size: 1.1em;
+  text-decoration: none;
+
+  &:hover {
+    color: darken($ict-grey-text, 15%);
+    font-weight: 500;
+  }
 }
 
 .title {
