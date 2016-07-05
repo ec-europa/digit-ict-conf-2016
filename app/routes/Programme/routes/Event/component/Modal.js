@@ -16,7 +16,7 @@ const Modal = ({ event }) => {
     timeAndVenue += `, ${event.venue}`;
   }
 
-  const eventSpeakers = speakers.filter(speaker => speaker.sessions.indexOf(event.id) > -1);
+  const eventSpeakers = speakers.filter(speaker => event.speakers.indexOf(speaker.id) > -1);
 
   const speakersBlock = eventSpeakers.length ? (
     <div>
