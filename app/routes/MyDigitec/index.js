@@ -1,12 +1,8 @@
-import { loadModule, errorLoading } from '../../utils/loader';
+import container from './Container';
 
 export default function createRoute(path = 'my-digitec') {
   return {
     path,
-    getComponent(nextState, cb) {
-      System.import('./Container')
-        .then(loadModule(cb))
-        .catch(errorLoading);
-    },
+    component: container,
   };
 }
