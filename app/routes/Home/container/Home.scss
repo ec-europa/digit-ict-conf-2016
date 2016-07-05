@@ -6,7 +6,6 @@
   width: auto;
   background: #F3F3F3 url('../images/cover.jpg') center 65% no-repeat;
   background-size: cover;
-  min-height: 576px;
   text-align: center;
 
   display: flex;
@@ -26,6 +25,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  margin: 2em 0 3em;
 
   h1 {
     color: #FFF;
