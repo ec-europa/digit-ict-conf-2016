@@ -6,20 +6,23 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
-import { toggleEvent, selectEventsBySpeaker } from '../../../../../store/modules/events';
+import { toggleEvent } from '../../../../../store/modules/schedule';
 import styles from './Modal.scss';
 import EventRow from '../../../../../components/Events/Row';
+import events from '../../../../../../content/events.json';
+import Link from '../../../../../components/Link/Link';
 
-const Modal = ({ speaker, events, onToggleEvent }) => {
-  const sessions = events ? (
+const Modal = ({ speaker, schedule, onToggleEvent }) => {
+  const speakerEvents = events.filter(event => event.speakers.indexOf(speaker.id) > -1);
+  const sessions = speakerEvents.length ? (
     <div>
-      <h3>Session{events.length > 1 ? 's' : ''}</h3>
-      {events.map(event => <EventRow key={event.id} event={event} onToggle={onToggleEvent} />)}
+      <h3>Session{speakerEvents.length > 1 ? 's' : ''}</h3>
+      {speakerEvents.map(event => <EventRow key={event.id} event={event} checked={schedule[event.id]} onToggle={onToggleEvent} />)}
     </div>
   ) : '';
 
   const headerStyle = {
-    background: `url(/assets/images/speakers/${speaker.picture}) center 40% no-repeat`,
+    background: `url(${__BASENAME__}/assets/images/speakers/${speaker.picture}) center 40% no-repeat`,
     backgroundSize: 'cover',
   };
 
@@ -33,6 +36,10 @@ const Modal = ({ speaker, events, onToggleEvent }) => {
       <div className={styles.bio}>
         {speaker.bio.map((line, index) => (<p key={index}>{line}</p>))}
       </div>
+      {speaker.twitter
+       ? <h6>Follow: <Link className={styles.title} to={`https://twitter.com/${speaker.twitter.substr(1)}`} target="_blank">{speaker.twitter}</Link></h6>
+       : null
+      }
       {sessions}
     </div>
   );
@@ -41,18 +48,18 @@ const Modal = ({ speaker, events, onToggleEvent }) => {
 
 Modal.propTypes = {
   speaker: React.PropTypes.object,
-  events: React.PropTypes.array,
+  schedule: React.PropTypes.object,
   onToggleEvent: React.PropTypes.func,
 };
 
 Modal.defaultProps = {
   speaker: {},
-  events: [],
+  schedule: [],
 };
 
-function mapStateToProps(state, props) {
+function mapStateToProps(state) {
   return {
-    events: selectEventsBySpeaker(state)(props.speaker),
+    schedule: state.schedule,
   };
 }
 

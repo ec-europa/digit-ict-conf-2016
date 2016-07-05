@@ -6,8 +6,6 @@
 
 import React from 'react';
 import { Link } from 'react-router';
-import { connect } from 'react-redux';
-import { toggleEvent } from '../../../../../store/modules/events';
 import styles from './Modal.scss';
 import speakers from '../../../../../../content/speakers.json';
 
@@ -18,7 +16,7 @@ const Modal = ({ event }) => {
     timeAndVenue += `, ${event.venue}`;
   }
 
-  const eventSpeakers = speakers.filter(speaker => speaker.sessions.indexOf(event.id) > -1);
+  const eventSpeakers = speakers.filter(speaker => event.speakers.indexOf(speaker.id) > -1);
 
   const speakersBlock = eventSpeakers.length ? (
     <div>
@@ -27,7 +25,7 @@ const Modal = ({ event }) => {
         <div key={speaker.id} className={styles.speakerContainer}>
           <div className={styles.speakerPicture}>
             <Link to={`/speakers/${speaker.id}`}>
-              <img src={`/assets/images/speakers/${speaker.picture}`} alt="{speaker.firstname} {speaker.lastname}" />
+              <img src={`${__BASENAME__}/assets/images/speakers/${speaker.picture}`} alt="{speaker.firstname} {speaker.lastname}" />
             </Link>
           </div>
           <div className={styles.speakerInfo}>
@@ -39,14 +37,8 @@ const Modal = ({ event }) => {
     </div>
   ) : null;
 
-  const headerStyle = {
-    background: 'url(/assets/images/placeholder.png) center 50% no-repeat',
-    backgroundSize: 'cover',
-  };
-
   return (
     <div className={styles.container}>
-      <div className={styles.header} style={headerStyle} />
       <h1>{event.title}</h1>
       <h2>{timeAndVenue}</h2>
       <div className={styles.name}>
@@ -66,13 +58,5 @@ Modal.defaultProps = {
   event: {},
 };
 
-function mapDispatchToProps(dispatch) {
-  return {
-    onToggleEvent: (event) => {
-      dispatch(toggleEvent(event));
-    },
-    dispatch,
-  };
-}
 
-export default connect(null, mapDispatchToProps)(Modal);
+export default Modal;

@@ -28,7 +28,7 @@ export class Practical extends React.Component {
         "layers": [
           {
             "markers": [
-              "/assets/map.geojson"
+              "${window.location.origin}${__BASENAME__}/assets/map.geojson"
             ]
           }
         ]

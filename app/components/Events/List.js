@@ -8,7 +8,7 @@ import React from 'react';
 import Row from './Row';
 import styles from './List.scss';
 
-const List = ({ events, onToggle }) => {
+const List = ({ events, schedule, onToggle }) => {
   let previousStart = null;
   const eventsList = [];
 
@@ -20,7 +20,7 @@ const List = ({ events, onToggle }) => {
         </div>);
       previousStart = event.starts;
     }
-    eventsList.push(<Row key={event.id} event={event} onToggle={onToggle} displayTime={false} />);
+    eventsList.push(<Row key={event.id} event={event} checked={schedule[event.id]} onToggle={onToggle} displayTime={false} />);
   });
 
   return (
@@ -30,11 +30,13 @@ const List = ({ events, onToggle }) => {
 
 List.propTypes = {
   events: React.PropTypes.array,
+  schedule: React.PropTypes.object,
   onToggle: React.PropTypes.func,
 };
 
 List.defaultProps = {
   events: [],
+  schedule: [],
 };
 
 export default List;

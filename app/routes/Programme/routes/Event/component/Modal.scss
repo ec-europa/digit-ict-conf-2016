@@ -18,11 +18,6 @@
   }
 }
 
-.header {
-  width: 100%;
-  height: 260px;
-}
-
 .speakerContainer {
   display: flex;
   justify-content: center;
@@ -31,13 +26,20 @@
 
 .speakerPicture {
   width: 150px;
-  padding: 10px;
+  margin: 10px;
   text-align: center;
   flex-grow: 0;
   flex-shrink: 0;
+  background-color: #000;
 
   img {
     width: 100%;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
 }
 

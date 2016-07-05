@@ -7,13 +7,13 @@ import { persistStore, autoRehydrate } from 'redux-persist';
 import { routerMiddleware } from 'react-router-redux';
 
 import route from './modules/route';
-import events from './modules/events';
+import schedule from './modules/schedule';
 import layout from './modules/layout';
 
 export default function configureStore(history) {
   const reducer = combineReducers({
     route,
-    events,
+    schedule,
     layout,
   });
 
@@ -39,7 +39,7 @@ export default function configureStore(history) {
   );
 
   persistStore(store, {
-    whitelist: ['events'],
+    whitelist: ['schedule'],
   });
 
   return store;

@@ -1,12 +1,8 @@
-import { loadModule, errorLoading } from '../../utils/loader';
+import Home from './container/Home';
 
 export default function createRoute(path = '/') {
   return {
     path,
-    getComponent(nextState, cb) {
-      System.import('./container/Home')
-        .then(loadModule(cb))
-        .catch(errorLoading);
-    },
+    component: Home,
   };
 }
