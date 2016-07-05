@@ -7,7 +7,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
-
+import Link from '../../../components/Link/Link';
 import styles from './Home.scss';
 import smoothScroll from 'smooth-scroll';
 
@@ -37,7 +37,7 @@ export class Home extends React.Component {
             </div>
             <div className={styles.coverTitleContainerRow}>
               <a className={styles.coverRegister} href={'https://scic.ec.europa.eu/fmi/ezreg/DIGIT-ICT-2016'} target="_blank">Register</a>
-              <h2>#digitec16</h2>
+              <h2><Link to={'https://twitter.com/hashtag/digitec16'} className={styles.coverTwitter} target="_blank">#digitec16</Link></h2>
             </div>
           </div>
           <div className={styles.coverExpand}>
