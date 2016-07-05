@@ -10,6 +10,7 @@ import { toggleEvent } from '../../../../../store/modules/schedule';
 import styles from './Modal.scss';
 import EventRow from '../../../../../components/Events/Row';
 import events from '../../../../../../content/events.json';
+import Link from '../../../../../components/Link/Link';
 
 const Modal = ({ speaker, schedule, onToggleEvent }) => {
   const speakerEvents = events.filter(event => speaker.sessions.indexOf(event.id) > -1);
@@ -35,6 +36,10 @@ const Modal = ({ speaker, schedule, onToggleEvent }) => {
       <div className={styles.bio}>
         {speaker.bio.map((line, index) => (<p key={index}>{line}</p>))}
       </div>
+      {speaker.twitter
+       ? <h6>Follow: <Link className={styles.title} to={`https://twitter.com/${speaker.twitter.substr(1)}`} target="_blank">{speaker.twitter}</Link></h6>
+       : null
+      }
       {sessions}
     </div>
   );
