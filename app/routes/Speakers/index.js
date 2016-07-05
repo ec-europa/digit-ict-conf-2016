@@ -1,14 +1,10 @@
-import { loadModule, errorLoading } from '../../utils/loader';
+import Speakers from './container/Speakers';
 import childRoutes from './routes';
 
 export default function createRoute(path = 'speakers') {
   return {
     path,
-    getComponent(nextState, cb) {
-      System.import('./container/Speakers')
-        .then(loadModule(cb))
-        .catch(errorLoading);
-    },
+    component: Speakers,
     childRoutes,
   };
 }

@@ -1,12 +1,8 @@
-import { loadModule, errorLoading } from '../../utils/loader';
+import NotFound from './container/NotFound';
 
 export default function createRoute(path = '*') {
   return {
     path,
-    getComponent(nextState, cb) {
-      System.import('./container/NotFound')
-        .then(loadModule(cb))
-        .catch(errorLoading);
-    },
+    component: NotFound,
   };
 }

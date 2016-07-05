@@ -1,14 +1,10 @@
-import { loadModule, errorLoading } from '../../utils/loader';
+import Programme from './container/Programme';
 import childRoutes from './routes';
 
 export default function createRoute(path = 'programme') {
   return {
     path,
-    getComponent(nextState, cb) {
-      System.import('./container/Programme')
-        .then(loadModule(cb))
-        .catch(errorLoading);
-    },
+    component: Programme,
     childRoutes,
   };
 }

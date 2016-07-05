@@ -36,15 +36,11 @@ const history = syncHistoryWithStore(browserHistory, store, {
 });
 
 // Set up the router, wrapping all Routes in the App component
-import { errorLoading, loadModule } from './utils/loader';
 import childRoutes from './routes';
+import App from './containers/App';
 
 const rootRoute = {
-  getComponent(nextState, cb) {
-    System.import('./containers/App')
-      .then(loadModule(cb))
-      .catch(errorLoading);
-  },
+  component: App,
   childRoutes,
 };
 
