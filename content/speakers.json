@@ -115,7 +115,7 @@
     "lastname": "Bruneau",
     "title": "Founder & CEO of Magency",
     "bio": [
-      "An accomplished musician, laureate in Jazz and clarinet from the National conservatory of music, a pioneer in Street Magic with his unforgettable TV show, tricking celebrities and passerby alike, Vincent Bruneau transformed the techniques and “awe” effects of the world of magic into a unique digital platform, becoming one of the most demanded innovators in Europe and the United States for the organization of corporate events that can gather more than 3000 participants."
+      "Vincent Bruneau is founder of Magency Digital SAS and serves as its Chief Executive Officer. He served as a corporate tech illusionist, connected brand messages to their customers through magic on tablets."
     ],
     "twitter": "@vince_bruneau",
     "picture": "Vincent-Bruneau.jpg"
@@ -131,5 +131,59 @@
     ],
     "twitter": false,
     "picture": "Laurent-Ledoux.jpg"
+  },
+  {
+    "id": "mercedesfuertes",
+    "firstname": "Prof. Mercedes",
+    "lastname": "Fuertes",
+    "title": "Professor of Administrative Law in the University of León (Spain) and Permanent member of the General Codification Commission in the Ministry of Justice.",
+    "bio": [
+      "Mercedes Fuertes is the author of several monographs, chapters of collective books, articles in specialist legal journals.",
+      "Among her books are: Sports associations and companies, Madrid 1992; The Spanish National Stock Market Commission, Valladolid, 1994; Urban design and a publicity or registration system, Madrid 1995 y 2001; The contractor, the sub-contractor and the Public Administrations, Madrid 1997; Municipal wireless networks. A new public service, Madrid, 2005; Groups of public companies, Madrid 2007; Net neutrality ¿reality or utopian dream? Madrid 2014; Fight against corruption and law making in the European Union, Madrid 2015.",
+      "She is also co-author with Prof. Dr. Sosa Wagner of other books: Discussions about Justice, the Law and the University, Madrid, 2009; The State without territory.  Four stories of regional Spain, Madrid 2010; State bankruptcy and Europe like context, Madrid, 2011; Letter for an eurosceptic, Madrid, 2013.",
+      "She has received the first special mention of “IV Fermin Abella y Blave Prize”in 2004 and she with Prof. Sosa Wagner have recognised for the best research work “La Ley Prize” in 2007 with their article: “Can the contracts stay at home? The European controversial about the public contracts in house”.",
+      "She contributes for different media newspapers (El Mundo, Expansión, La Nueva España…) and blogs (“Espublico” o “Hay Derecho”)."
+    ],
+    "twitter": false,
+    "picture": "Mercedes-Fuertes.jpg"
+  },
+  {
+    "id": "kenducatel",
+    "firstname": "Ken",
+    "lastname": "Ducatel",
+    "title": "Director, IT Security Directorate, DG Informatics",
+    "bio": [
+      "After joining DIGIT as Chief Security Information Officer, Ken Ducatel was appointed Director of the newly formed IT Security Directorate. He has been leading the Commission's policy and research actions on Software and Services and Cloud Computing in DG CNECT since July 2012. Previous to that, his unit was responsible for delivering the European Commission's Cloud Strategy adopted in September 2012.",
+      "Ken's earlier Commission roles include heading up the Digital Agenda for Europe Unit from 2009 to 2012, four years in the cabinet of Commissioner Reding from 2004 to 2008, Head of Sector for eEurope in 2003 and leader of the Joint Research Centre's Futures Project in Seville from 2001 to 2003.",
+      "He was a member of the Faculty of Manchester University for Science Policy for more than 10 years where he taught Information and Science Policy. Ken has a PhD from Bristol University, an MSc from Cranfield University and a BA from Lancaster University.",
+      "Ken is a keen climber, walker and mountain biker, although being Brussels based means that in practice a lot of his exercise takes place in early morning indoor spinning classes. He also enjoys music and film with subscriptions to the Bozar and the UGC."
+    ],
+    "twitter": false,
+    "picture": "Ken-Ducatel.jpg"
+  },
+  {
+    "id": "guntheroettinger",
+    "firstname": "Günther",
+    "lastname": "Oettinger",
+    "title": "European Commissioner for Digital Economy and Society",
+    "bio": [
+      "Günther Oettinger studied law and economics in Tübingen where he also worked as scientific assistant. Prior to his election as President-Minister of Baden-Wüttemberg (2005-2010), he worked as a lawyer in the private sector. In 2010-2014 he was European Commissioner for Energy."
+    ],
+    "twitter": "@GOettingerEU",
+    "picture": "Oettinger.jpg"
+  },
+  {
+    "id": "adinaioanavalean",
+    "firstname": "Adina-Ioana",
+    "lastname": "VĂLEAN",
+    "title": "Vice-President of European Parliament",
+    "bio": [
+      "Adina Valean became a Member of the European Parliament on 1 January 2007, with the accession of Romania to the European Union.",
+      "As an MEP, she was Rapporteur on the Connecting Europe Facility, a financing instrument which will fund €33.2 billion worth of investment to improve Europe's transport, energy and digital networks. Furthermore, as Rapporteur on the 2009 Roaming Regulation and Shadow on the subsequent dossiers, she kick-started the gradual plunge in roaming charges inside the EU, charges that will finally be eliminated in 2015.",
+      "She is a member of the Romanian National Liberal Party and was a Member of the Romanian Parliament from 2004 to 2006. Her activities focused on market and labour issues. She was also Secretary-General of the National Liberal Party's youth wing and Secretary of the National Liberal Party Committee on business, privatisation and competition policy.",
+      "Adina Valean has a Master's Degree in European Integration and Security Studies, postgraduate studies in National Security and Defence Management and a degree in mathematics. She started her professional career as a maths teacher in Bucharest. Before becoming a politician, she was a social activist, member of several foundations and associations promoting tolerance, dialogue and a liberal economic market."
+    ],
+    "twitter": "@AdinaValean",
+    "picture": "Adina-Ioana-Valean.jpg"
   }
 ]
