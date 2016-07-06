@@ -1,9 +1,33 @@
+@import '../../theme/breakpoints';
 @import '../../theme/variables';
 
+.block {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+
+  @include mappy-bp(medium) {
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 3em 0;
+  }
+}
+
 .timeslot {
-  margin-top: 1em;
   padding: 1em 1em 0.5em;
   color: $ict-grey-text;
   font-size: 1.5em;
   font-weight: 300;
+  flex-shrink: 0;
+  min-width: 8em;
+
+  @include mappy-bp(medium) {
+    text-align: center;
+  }
+}
+
+.events {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }

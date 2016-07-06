@@ -13,9 +13,9 @@ const Speaker = ({ speaker }) => (
     <Link className={styles.pictureFrame} to={`/speakers/${speaker.id}`}>
       <img className={styles.picture} src={`${__BASENAME__}/assets/images/speakers/${speaker.picture}`} alt={`${speaker.firstname} ${speaker.lastname}`} />
     </Link>
-    <div className={styles.name}>
+    <Link className={styles.name} to={`/speakers/${speaker.id}`}>
       {speaker.firstname} <span className={styles.lastname}>{speaker.lastname}</span>
-    </div>
+    </Link>
     <div className={styles.title}>{speaker.title}</div>
   </div>
 );

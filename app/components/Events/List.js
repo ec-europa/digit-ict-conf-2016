@@ -9,22 +9,37 @@ import Row from './Row';
 import styles from './List.scss';
 
 const List = ({ events, schedule, onToggle }) => {
-  let previousStart = null;
-  const eventsList = [];
+  const eventsDisplay = [];
 
+  const eventsByTimeslot = [];
   events.forEach(event => {
-    if (event.starts !== previousStart) {
-      eventsList.push(
-        <div key={event.starts} className={styles.timeslot}>
-          {event.starts}{event.ends ? ` - ${event.ends}` : ''}
-        </div>);
-      previousStart = event.starts;
+    if (!eventsByTimeslot[event.starts]) {
+      eventsByTimeslot[event.starts] = [];
     }
-    eventsList.push(<Row key={event.id} event={event} checked={schedule[event.id]} onToggle={onToggle} displayTime={false} />);
+    eventsByTimeslot[event.starts].push(event);
+  });
+
+  Object.keys(eventsByTimeslot).forEach(start => {
+    const eventsList = eventsByTimeslot[start];
+
+    const eventsRows = eventsList.map(event => (
+      <Row key={event.id} event={event} checked={schedule[event.id]} onToggle={onToggle} displayTime={false} />
+    ));
+
+    eventsDisplay.push(
+      <div className={styles.block} key={eventsList[0].starts} >
+        <div className={styles.timeslot}>
+          {eventsList[0].starts}{eventsList[0].ends ? ` - ${eventsList[0].ends}` : ''}
+        </div>
+        <div className={styles.events}>
+          {eventsRows}
+        </div>
+      </div>
+    );
   });
 
   return (
-    <div>{eventsList}</div>
+    <div>{eventsDisplay}</div>
   );
 };
 

@@ -9,7 +9,6 @@ import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
 import Link from '../../../components/Link/Link';
 import styles from './Home.scss';
-import smoothScroll from 'smooth-scroll';
 
 import { updateHeaderTitle } from '../../../store/modules/layout';
 
@@ -20,7 +19,6 @@ export class Home extends React.Component {
 
   componentDidMount() {
     this.props.onUpdateHeaderTitle('DIGITEC 2016');
-    smoothScroll.init();
   }
 
   render() {
@@ -39,9 +37,6 @@ export class Home extends React.Component {
               <a className={styles.coverRegister} href={'https://scic.ec.europa.eu/fmi/ezreg/DIGIT-ICT-2016'} target="_blank">Register</a>
               <h2><Link to={'https://twitter.com/hashtag/digitec16'} className={styles.coverTwitter} target="_blank">#digitec16</Link></h2>
             </div>
-          </div>
-          <div className={styles.coverExpand}>
-            <a data-scroll href="#about"><i className="material-icons">expand_more</i></a>
           </div>
         </div>
         <div className={styles.contentContainer} id="about">
