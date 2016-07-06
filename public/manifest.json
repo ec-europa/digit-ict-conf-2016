@@ -1,33 +1,15 @@
 {
-  "name": "DIGIT ICT 2016",
+  "name": "DIGITEC 2016",
   "icons": [
     {
-      "src": "favicon.png",
-      "sizes": "48x48",
-      "type": "image/png",
-      "density": 1.0
-    },
-    {
-      "src": "favicon.png",
-      "sizes": "96x96",
-      "type": "image/png",
-      "density": 2.0
-    },
-    {
-      "src": "favicon.png",
-      "sizes": "144x144",
-      "type": "image/png",
-      "density": 3.0
-    },
-    {
-      "src": "favicon.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "density": 4.0
-    }
+			"src": "android-chrome-192x192.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		}
   ],
   "start_url": "/multisite/pubfpfistest/sites/pubfpfistest/files/digitec/index.html",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#FFFFFF"
+  "background_color": "#FFFFFF",
+  "theme_color": "#ffffff"
 }
