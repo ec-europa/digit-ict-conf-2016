@@ -36,7 +36,9 @@
   h2 {
     color: #FFF;
     font-size: 36px;
+    font-weight: 400;
     text-shadow: 1px 1px 2px #777;
+    margin: 0.4em 0;
   }
 }
 
@@ -72,14 +74,12 @@
 .coverTwitter {
   color: #FFF;
   text-decoration: none;
-
-  border: 3px solid transparent;
+  border: 1px solid transparent;
   padding: 0.5em;
-
   transition: border-color 0.2s ease-in-out;
 
   &:hover {
-    border: 3px solid #FFF;
+    border: 1px solid #FFF;
   }
 }
 
@@ -87,4 +87,5 @@
   max-width: 900px;
   margin: auto;
   padding: 8px;
+  font-size: 1.1em;
 }
