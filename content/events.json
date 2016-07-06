@@ -17,8 +17,7 @@
   "title": "Welcome by European Commission and European Parliament",
   "venue": "Gold Hall",
   "description": [
-    "Adina-Ioana Valean, Vice-President of European Parliament",
-    "Gunther Oettinger, Commissioner for Digital Economy and Society"
+  
   ],
   "speakers": ["adinaioanavalean", "guntheroettinger"],
   "color": "grey",
@@ -89,7 +88,7 @@
   "title": "User experience",
  
   "description": [
-    "Workshop: Paul Boag, User experience consultant"
+    "Workshop: Paul Boag, User Experience consultant"
   ],
   "speakers": ["paulboag"],
   "color": "purple",
@@ -110,7 +109,7 @@
   "id": "session3",
   "starts": "14.15",
   "ends": "15.30",
-  "title": "Open Source Software",
+  "title": "Open Source: the Future for the European Institutions",
   
   "description": [
     "Guest speaker: Julia Reda, Member of the European Parliament"
