@@ -11,6 +11,7 @@ import styles from './Modal.scss';
 import EventRow from '../../../../../components/Events/Row';
 import events from '../../../../../../content/events.json';
 import Link from '../../../../../components/Link/Link';
+import twitterLogo from '../images/twitter.png';
 
 const Modal = ({ speaker, schedule, onToggleEvent }) => {
   const speakerEvents = events.filter(event => event.speakers.indexOf(speaker.id) > -1);
@@ -37,7 +38,7 @@ const Modal = ({ speaker, schedule, onToggleEvent }) => {
         {speaker.bio.map((line, index) => (<p key={index}>{line}</p>))}
       </div>
       {speaker.twitter
-       ? <h6>Follow: <Link className={styles.title} to={`https://twitter.com/${speaker.twitter.substr(1)}`} target="_blank">{speaker.twitter}</Link></h6>
+       ? <Link className={styles.twitter} to={`https://twitter.com/${speaker.twitter.substr(1)}`} target="_blank"><img src={twitterLogo} alt="Twitter Feed" /> {speaker.twitter}</Link>
        : null
       }
       {sessions}
