@@ -30,8 +30,8 @@ export class Home extends React.Component {
           <div className={styles.coverTitleContainer}>
             <div className={styles.coverTitleContainerRow}>
               <h1>DIGITEC 2016: Digital Future</h1>
-              <h2>29 November, 2016</h2>
-              <h2>Square Brussels</h2>
+              <h2>29 November 2016</h2>
+              <h2>Square, Brussels</h2>
             </div>
             <div className={styles.coverTitleContainerRow}>
               <a className={styles.coverRegister} href={'https://scic.ec.europa.eu/fmi/ezreg/DIGIT-ICT-2016'} target="_blank">Register</a>
