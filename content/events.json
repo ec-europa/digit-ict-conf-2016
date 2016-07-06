@@ -20,7 +20,7 @@
     "Adina-Ioana Valean, Vice-President of European Parliament",
     "Gunther Oettinger, Commissioner for Digital Economy and Society"
   ],
-  "speakers": [],
+  "speakers": ["adinaioanavalean", "guntheroettinger"],
   "color": "grey",
   "register": true
 }, {
@@ -156,7 +156,7 @@
   "description": [
     "Guests: Prof. Mercedes Fuertes, Madrid and Prof. Diana Galetta, University of Milan"
   ],
-  "speakers": [],
+  "speakers": ["mercedesfuertes"],
   "color": "purple",
   "register": true
 }, {
@@ -180,7 +180,7 @@
   "description": [
     "Moderator: Ken Ducatel, IT Security Directorate, DIGIT "
   ],
-  "speakers": [],
+  "speakers": ["kenducatel"],
   "color": "yellow",
   "register": true
 }, {

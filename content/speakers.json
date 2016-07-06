@@ -8,8 +8,7 @@
       "Paul Miller is CEO and Founder of the Digital Workplace Group, co-author of 'The Digital Renaissance of Work - Delivering Digital Workplaces Fit for the Future' (Gower 2014) and author of field-defining book 'The Digital Workplace: How Technology is Liberating Work (TECL 2012). He was ranked as one of the world's top 50 Social Employee Advocacy Leaders in 2015 and has given many inspirational keynote talks on the digital future of work to organizations including Microsoft, Google, Adobe, Wells Fargo and Oxford University.  He is a Judge and Mentor for the Duke of York iDEA (Inspiring Digital Enterprise Awards) 2015. For five years Paul hosted pioneering internet radio show Digital Workplace Live and IBF Live and is Executive Producer and host of 24 hour global experience Digital Workplace 24."
     ],
     "twitter": "@paulmillersays",
-    "picture": "Paul-Miller.jpg",
-    "sessions": ["panel1"]
+    "picture": "Paul-Miller.jpg"
   },
   {
     "id": "sabinesipunova",
@@ -21,8 +20,7 @@
       "In 2016 Sabine was featured in Forbes' Top 10 Promising Founders to Watch in the Baltics."
     ],
     "twitter": false,
-    "picture": "Sabine-Sipunova.jpg",
-    "sessions": ["panel1"]
+    "picture": "Sabine-Sipunova.jpg"
   },
   {
     "id": "davidborrelli",
@@ -33,8 +31,7 @@
       "David Borrelli is an Italian politician for the Five Star Movement who since 2014 has been a MEP where he served as Co-President of the Europe of Freedom and Direct Democracy group"
     ],
     "twitter": "@borrellidavid",
-    "picture": "David-Borelli.jpg",
-    "sessions": ["panel2"]
+    "picture": "David-Borelli.jpg"
   },
   {
     "id": "dominiqueleroy",
@@ -49,8 +46,7 @@
       "In 2015 she became Manager of the Year in Belgium."
     ],
     "twitter": false,
-    "picture": "Dominique-Leroy.jpg",
-    "sessions": ["panel3"]
+    "picture": "Dominique-Leroy.jpg"
   },
   {
     "id": "mischadohler",
@@ -63,8 +59,7 @@
       "He is also an entrepreneur, composer & pianist, and fluent in 6 languages. He has talked at TEDx. He had coverage by national and international TV & radio, and his contributions have featured on BBC News and the Wall Street Journal."
     ],
     "twitter": "@MischaDohler",
-    "picture": "Mischa-Dohler.jpg",
-    "sessions": ["panel3"]
+    "picture": "Mischa-Dohler.jpg"
   },
   {
     "id": "katekahle",
@@ -75,8 +70,7 @@
       "Kate Kahle began as a physicist before receiving a distinction for a masters in science communication. She joined CERN, the European Organization for Nuclear Research, in 2006 to communicate CERN-led European projects after 5 years of editorial experience in the Pearson Publishing group in the UK. In 2012, she became CERN’s social media manager and was promoted to head of editorial content development in 2016."
     ],
     "twitter": "@katekahle",
-    "picture": "Kate-Kahle.jpg",
-    "sessions": ["panel2"]
+    "picture": "Kate-Kahle.jpg"
   },
   {
     "id": "paulboag",
@@ -87,8 +81,7 @@
       "Paul Boag is a user experience consultant, author and speaker. He helps organisations such as the European Commission, UCAS and Doctors Without Borders adapt to the digital world. He refocuses them on user experience and engaging with a new digitally savvy audience. "
     ],
     "twitter": "@boagworld",
-    "picture": "Paul-Boag.jpg",
-    "sessions": ["panel2", "session1"]
+    "picture": "Paul-Boag.jpg"
   },
   {
     "id": "juliareda",
@@ -101,8 +94,7 @@
       "The global Pirate Party movement was born in 2006. Pirates, who believe in using technology for the empowerment of all, have so far enjoyed significant electoral success in Sweden, Germany, Iceland and the Czech Republic and have raised the visibility of their techno-progressive agenda across Europe."
     ],
     "twitter": "@Senficon",
-    "picture": "Julia-Reda.jpg",
-    "sessions": ["session3"]
+    "picture": "Julia-Reda.jpg"
   },
   {
     "id": "maxpeterson",
@@ -115,8 +107,7 @@
       "He holds a bachelor’s degree in finance and master’s of business administration in management information systems from the University of Maryland."
     ],
     "twitter": "@maxrpetersonii",
-    "picture": "Max-Peterson.jpg",
-    "sessions": []
+    "picture": "Max-Peterson.jpg"
   },
   {
     "id": "vincentbruneau",
@@ -127,8 +118,7 @@
       "Vincent Bruneau is founder of Magency Digital SAS and serves as its Chief Executive Officer. He served as a corporate tech illusionist, connected brand messages to their customers through magic on tablets."
     ],
     "twitter": "@vince_bruneau",
-    "picture": "Vincent-Bruneau.jpg",
-    "sessions": []
+    "picture": "Vincent-Bruneau.jpg"
   },
   {
     "id": "laurentledoux",
@@ -140,8 +130,7 @@
       "Laurent is passionate about philosophy and has co-authored the English translation of « Philosophizing ad infinitum » by Marcel Conche, one of France’s preeminent historians of philosophy."
     ],
     "twitter": false,
-    "picture": "Laurent-Ledoux.jpg",
-    "sessions": ["panel1"]
+    "picture": "Laurent-Ledoux.jpg"
   },
   {
     "id": "mercedesfuertes",
@@ -156,8 +145,7 @@
       "She contributes for different media newspapers (El Mundo, Expansión, La Nueva España…) and blogs (“Espublico” o “Hay Derecho”)."
     ],
     "twitter": false,
-    "picture": "Mercedes-Fuertes.jpg",
-    "sessions": []
+    "picture": "Mercedes-Fuertes.jpg"
   },
   {
     "id": "kenducatel",
@@ -171,11 +159,10 @@
       "Ken is a keen climber, walker and mountain biker, although being Brussels based means that in practice a lot of his exercise takes place in early morning indoor spinning classes. He also enjoys music and film with subscriptions to the Bozar and the UGC."
     ],
     "twitter": false,
-    "picture": "Ken-Ducatel.jpg",
-    "sessions": []
+    "picture": "Ken-Ducatel.jpg"
   },
   {
-    "id": "güntheroettinger",
+    "id": "guntheroettinger",
     "firstname": "Günther",
     "lastname": "Oettinger",
     "title": "European Commissioner for Digital Economy and Society",
@@ -183,8 +170,7 @@
       "Günther Oettinger studied law and economics in Tübingen where he also worked as scientific assistant. Prior to his election as President-Minister of Baden-Wüttemberg (2005-2010), he worked as a lawyer in the private sector. In 2010-2014 he was European Commissioner for Energy."
     ],
     "twitter": "@GOettingerEU",
-    "picture": "Oettinger.jpg",
-    "sessions": []
+    "picture": "Oettinger.jpg"
   },
   {
     "id": "adinaioanavalean",
@@ -198,7 +184,6 @@
       "Adina Valean has a Master's Degree in European Integration and Security Studies, postgraduate studies in National Security and Defence Management and a degree in mathematics. She started her professional career as a maths teacher in Bucharest. Before becoming a politician, she was a social activist, member of several foundations and associations promoting tolerance, dialogue and a liberal economic market."
     ],
     "twitter": "@AdinaValean",
-    "picture": "Adina-Ioana-Valean.jpg",
-    "sessions": []
+    "picture": "Adina-Ioana-Valean.jpg"
   }
 ]
