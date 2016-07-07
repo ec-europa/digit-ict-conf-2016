@@ -42,13 +42,20 @@ class Row extends React.Component {
       { [styles.greyItem]: event.color === 'grey' }
     );
 
+    const learnMore = (event.description && event.description.length > 0)
+      || (event.speakers && event.speakers.length > 0)
+      || (event.moderator && event.moderator.length > 0);
+
     return (
       <li className={rowClasses}>
         <div className={styles.primary}>
           <span className={styles.title}>{event.title}</span>
           <span className={styles.subtitle}>
-            {timeAndVenue}
-            {event.description.length > 0
+            {timeAndVenue.length > 0
+              ? <span className={styles.timeAndVenue}>{timeAndVenue}</span>
+              : null
+            }
+            {learnMore
               ? <Link className={styles.learnMore} to={`/programme/${event.id}`}>Learn more</Link>
               : null
             }

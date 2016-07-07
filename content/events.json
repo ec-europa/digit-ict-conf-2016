@@ -26,9 +26,8 @@
   "ends": "11.00",
   "title": "Panel 1: Workplace of the future",
   "venue": "Gold Hall",
-  "description": [
-    "Moderator: Jennifer Baker, BrusselsGeek.eu"
-  ],
+  "description": [],
+  "moderator": "jenniferbaker",
   "speakers": ["paulmiller", "laurentledoux", "paulboag"],
   "color": "blue",
   "register": true
@@ -48,9 +47,8 @@
   "ends": "12.45",
   "title": "Panel 2: Digital Democracy",
   "venue": "Gold Hall",
-  "description": [
-    "Moderator: Jennifer Baker, BrusselsGeek.eu"
-  ],
+  "description": [],
+  "moderator": "jenniferbaker",
   "speakers": ["davidborrelli", "katekahle", "sabinesipunova"],
   "color": "purple",
   "register": true
@@ -69,9 +67,8 @@
   "ends": "15.30",
   "title": "Panel 3: Technologies of the Future",
   "venue": "Gold Hall",
-  "description": [
-    "Moderator: Jennifer Baker, BrusselsGeek.eu"
-  ],
+  "description": [],
+  "moderator": "jenniferbaker",
   "speakers": ["dominiqueleroy", "mischadohler"],
   "color": "yellow",
   "register": true
@@ -123,9 +120,8 @@
   "ends": "17.15",
   "title": "Panel 4: Technologies of the Future (continued)",
   "venue": "Gold Hall",
-  "description": [
-    "Moderator: Jennifer Baker, BrusselsGeek.eu"
-  ],
+  "description": [],
+  "moderator": "jenniferbaker",
   "speakers": ["maxpeterson"],
   "color": "yellow",
   "register": true
