@@ -31,19 +31,18 @@ module.exports = require('./webpack.base.babel')({
   // of the CSS being in the JS and injected as a style tag
   cssLoaders: ExtractTextPlugin.extract(
     'style-loader',
-    'css-loader?modules&importLoaders=1!postcss-loader'
+    'css-loader?-autoprefixer&modules&importLoaders=1!postcss-loader'
   ),
+  // "-autoprefixer": we don't want to remove the prefixes added by Autoprefixer when minifying
   sassLoaders: ExtractTextPlugin.extract(
     'style-loader',
-    'css-loader?modules&importLoaders=1!postcss-loader!sass'
+    'css-loader?-autoprefixer&modules&importLoaders=1!postcss-loader!sass'
   ),
 
   // In production, we minify our CSS with cssnano
   postcssPlugins: [
     postcssFocus(),
-    cssnext({
-      browsers: ['last 2 versions', 'IE > 10'],
-    }),
+    cssnext(),
     postcssReporter({
       clearMessages: true,
     }),

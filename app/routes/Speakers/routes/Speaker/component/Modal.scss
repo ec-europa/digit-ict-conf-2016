@@ -15,12 +15,15 @@
   height: 260px;
 }
 
-.lastname {
-  text-transform: uppercase;
-}
-
 .title {
   color: $ict-blue;
+}
+
+.twitter {
+  margin-left: 1em;
+  display: block;
+  color: $ict-blue;
+  text-decoration: none;
 }
 
 .twitter {
