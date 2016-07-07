@@ -16,7 +16,27 @@ const Modal = ({ event }) => {
     timeAndVenue += `, ${event.venue}`;
   }
 
+  const eventModerator = speakers.filter(speaker => event.moderator === speaker.id);
   const eventSpeakers = speakers.filter(speaker => event.speakers.indexOf(speaker.id) > -1);
+
+  const moderatorBlock = eventModerator.length ? (
+    <div>
+      <h2>Moderator</h2>
+      {eventModerator.map(speaker => (
+        <div key={speaker.id} className={styles.speakerContainer}>
+          <div className={styles.speakerPicture}>
+            <Link to={`/speakers/${speaker.id}`}>
+              <img src={`${__BASENAME__}/assets/images/speakers/${speaker.picture}`} alt="{speaker.firstname} {speaker.lastname}" />
+            </Link>
+          </div>
+          <div className={styles.speakerInfo}>
+            <h3>{speaker.firstname} <span className={styles.lastname}>{speaker.lastname}</span></h3>
+            <h4 className={styles.title}>{speaker.title}</h4>
+          </div>
+        </div>
+      ))}
+    </div>
+  ) : null;
 
   const speakersBlock = eventSpeakers.length ? (
     <div>
@@ -44,6 +64,7 @@ const Modal = ({ event }) => {
       <div className={styles.name}>
         {event.description.map((line, index) => (<p key={index}>{line}</p>))}
       </div>
+      {moderatorBlock}
       {speakersBlock}
     </div>
   );

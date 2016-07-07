@@ -26,9 +26,12 @@
     "id": "davidborrelli",
     "firstname": "David",
     "lastname": "Borrelli",
-    "title": "Member of the European Parliament",
+    "title": "Member of the European Parliament,Europe of Freedom and Direct Democracy Group (EFDD)",
     "bio": [
-      "David Borrelli is an Italian politician for the Five Star Movement who since 2014 has been a MEP where he served as Co-President of the Europe of Freedom and Direct Democracy group"
+      "Entrepreneur in the catering sector, Piola Restaurant Miami Beach and Piola Restaurant Buenos Aires (1989-2003), Computer Technician at Punto Informatico Srl (Buffetti Group) (2003-2008), Computer Technician at Omega Srl (2008-2009), Entrepreneur in the IT sector Trevigroup Srl (2009-2014).",
+      "Political activity",
+      "Councillor in Treviso (2008-2013), candidate for President of the Veneto region (2010), Member of the European Parliament (2014- ).",
+      "He is member of the Conference of Presidents, Committee on Industry, Research and Energy (ITRE), Committee on International Trade (INTA), Delegation for relations with Mercosur, Delegation for relations with South Africa and Delegation of the Parliamentary Assembly of the Union for the Mediterranean."
     ],
     "twitter": "@borrellidavid",
     "picture": "David-Borelli.jpg"
@@ -199,5 +202,27 @@
     ],
     "twitter": "@BrusselsGeek",
     "picture": "Jennyfer-Baker.jpg"
+  },
+  {
+    "id": "keithmartin",
+    "firstname": "Keith",
+    "lastname": "Martin",
+    "title": "Professor of Information Security, University of London",
+    "bio": [
+      "Keith Martin is Professor of Information Security at Royal Holloway, University of London. He previously held research posts at the University of Adelaide and Katholieke Universiteit Leuven, and was Director of the Information Security Group at Royal Holloway between 2010 and 2015. Keith's research interests focus on cryptography and key management, including applications and related political issues. He is the author of “Everyday Cryptography” by Oxford University Press. Keith is a designer and module leader on Royal Holloway’s distance learning MSc Information Security programme, and regularly presents to both industrial and school audiences, as well as to the wider public."
+    ],
+    "twitter": false,
+    "picture": "Keith-Martin.jpg"
+  },
+  {
+    "id": "alexandresteiner",
+    "firstname": "Alexandre",
+    "lastname": "Steiner",
+    "title": "President, Conseils et Sistemes Informatiques",
+    "bio": [
+      "Alexandre Steiner is Founder and Managing Parnter of OiO Ventures and coach and mentor at Incubators and accelerators. Prior to this he was Development Director at Numergy focusing on Public Cloud services and VP at Getronics, KPN. From 1990 to 2014 he worked at Capgemini."
+    ],
+    "twitter": false,
+    "picture": "Alex-Steiner.jpg"
   }
 ]

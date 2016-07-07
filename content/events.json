@@ -16,10 +16,7 @@
   "ends": "9.45",
   "title": "Welcome by European Commission and European Parliament",
   "venue": "Gold Hall",
-  "description": [
-    "Adina-Ioana Valean, Vice-President of European Parliament",
-    "Gunther Oettinger, Commissioner for Digital Economy and Society"
-  ],
+  "description": [],
   "speakers": ["adinaioanavalean", "guntheroettinger"],
   "color": "grey",
   "register": true
@@ -29,12 +26,8 @@
   "ends": "11.00",
   "title": "Panel 1: Workplace of the future",
   "venue": "Gold Hall",
-  "description": [
-    "Moderator: Jennifer Baker, BrusselsGeek.eu",
-    "Paul Miller, CEO of Digital Workplace Group",
-    "Laurent Ledoux, CEO of EurActiv",
-    "Paul Boag, UX consultant in digital transformation"
-  ],
+  "description": [],
+  "moderator": "jenniferbaker",
   "speakers": ["paulmiller", "laurentledoux", "paulboag"],
   "color": "blue",
   "register": true
@@ -54,12 +47,8 @@
   "ends": "12.45",
   "title": "Panel 2: Digital Democracy",
   "venue": "Gold Hall",
-  "description": [
-    "Moderator: Jennifer Baker, BrusselsGeek.eu",
-    "David Borelli, MEP, Co-President of the Europe for Freedom and Direct Democracy Group",
-    "Kate Kahle, Social Media Manager at CERN",
-    "Sabine Sipunova, founder of ''Sorry as a Service''"
-  ],
+  "description": [],
+  "moderator": "jenniferbaker",
   "speakers": ["davidborrelli", "katekahle", "sabinesipunova"],
   "color": "purple",
   "register": true
@@ -68,7 +57,6 @@
   "starts": "12.45",
   "ends": "14.15",
   "title": "Lunch and DIGITEC exhibition",
-  "venue": "TBC",
   "description": [],
   "speakers": [],
   "color": "none",
@@ -79,11 +67,8 @@
   "ends": "15.30",
   "title": "Panel 3: Technologies of the Future",
   "venue": "Gold Hall",
-  "description": [
-    "Moderator: Jennifer Baker, BrusselsGeek.eu",
-    "Dominique Leroy, CEO of Proximus",
-    "Mischa Dohler, Professor of Wireless Communications at King's College London"
-  ],
+  "description": [],
+  "moderator": "jenniferbaker",
   "speakers": ["dominiqueleroy", "mischadohler"],
   "color": "yellow",
   "register": true
@@ -92,9 +77,8 @@
   "starts": "14.15",
   "ends": "15.30",
   "title": "User experience",
-  "venue": "TBC",
   "description": [
-    "Workshop: Paul Boag, User experience consultant"
+    "Workshop: Paul Boag, User Experience consultant"
   ],
   "speakers": ["paulboag"],
   "color": "purple",
@@ -104,7 +88,6 @@
   "starts": "14.15",
   "ends": "15.30",
   "title": "Knowledge worker: Culture, Skills, Tools",
-  "venue": "TBC",
   "description": [
     "Knowledge workers of the future - what do they need?"
   ],
@@ -115,8 +98,7 @@
   "id": "session3",
   "starts": "14.15",
   "ends": "15.30",
-  "title": "Open Source Software",
-  "venue": "TBC",
+  "title": "Open Source: the Future for the European Institutions",
   "description": [
     "Guest speaker: Julia Reda, Member of the European Parliament"
   ],
@@ -128,7 +110,6 @@
   "starts": "15.30",
   "ends": "16.00",
   "title": "Coffee break and DIGITEC exhibition",
-  "venue": "TBC",
   "description": [],
   "speakers": [],
   "color": "none",
@@ -139,11 +120,8 @@
   "ends": "17.15",
   "title": "Panel 4: Technologies of the Future (continued)",
   "venue": "Gold Hall",
-  "description": [
-    "Moderator: Jennifer Baker, BrusselsGeek.eu",
-    "Alexander Steiner, President, Conseils et Systèmes Informatiques",
-    "Max Peterson, General Manager for Public Sector, Amazon Web Services"
-  ],
+  "description": [],
+  "moderator": "jenniferbaker",
   "speakers": ["maxpeterson"],
   "color": "yellow",
   "register": true
@@ -152,7 +130,6 @@
   "starts": "16.00",
   "ends": "17.15",
   "title": "Data for policy making",
-  "venue": "TBC",
   "description": [
     "Guests: Prof. Mercedes Fuertes, Madrid and Prof. Diana Galetta, University of Milan"
   ],
@@ -164,7 +141,6 @@
   "starts": "16.00",
   "ends": "17.15",
   "title": "InterHack Experience",
-  "venue": "",
   "description": [
     "Results from the inter-institutional hackathon"
   ],
@@ -176,7 +152,6 @@
   "starts": "16.00",
   "ends": "17.15",
   "title": "Encryption: Blessing or Curse for IT Security",
-  "venue": "",
   "description": [
     "Moderator: Ken Ducatel, IT Security Directorate, DIGIT "
   ],
@@ -188,7 +163,7 @@
   "starts": "17.15",
   "ends": "17.30",
   "title": "Keynote closing speech: Vincent Bruneau, CEO of Magency",
-  "venue": "",
+  "venue": "Gold Hall",
   "description": [],
   "speakers": ["vincentbruneau"],
   "color": "grey",
