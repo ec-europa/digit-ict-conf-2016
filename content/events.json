@@ -16,9 +16,7 @@
   "ends": "9.45",
   "title": "Welcome by European Commission and European Parliament",
   "venue": "Gold Hall",
-  "description": [
-  
-  ],
+  "description": [],
   "speakers": ["adinaioanavalean", "guntheroettinger"],
   "color": "grey",
   "register": true
@@ -29,8 +27,7 @@
   "title": "Panel 1: Workplace of the future",
   "venue": "Gold Hall",
   "description": [
-    "Moderator: Jennifer Baker, BrusselsGeek.eu",
-
+    "Moderator: Jennifer Baker, BrusselsGeek.eu"
   ],
   "speakers": ["paulmiller", "laurentledoux", "paulboag"],
   "color": "blue",
@@ -52,8 +49,7 @@
   "title": "Panel 2: Digital Democracy",
   "venue": "Gold Hall",
   "description": [
-    "Moderator: Jennifer Baker, BrusselsGeek.eu",
-    
+    "Moderator: Jennifer Baker, BrusselsGeek.eu"
   ],
   "speakers": ["davidborrelli", "katekahle", "sabinesipunova"],
   "color": "purple",
@@ -63,7 +59,6 @@
   "starts": "12.45",
   "ends": "14.15",
   "title": "Lunch and DIGITEC exhibition",
-  
   "description": [],
   "speakers": [],
   "color": "none",
@@ -75,8 +70,7 @@
   "title": "Panel 3: Technologies of the Future",
   "venue": "Gold Hall",
   "description": [
-    "Moderator: Jennifer Baker, BrusselsGeek.eu",
-  
+    "Moderator: Jennifer Baker, BrusselsGeek.eu"
   ],
   "speakers": ["dominiqueleroy", "mischadohler"],
   "color": "yellow",
@@ -86,7 +80,6 @@
   "starts": "14.15",
   "ends": "15.30",
   "title": "User experience",
- 
   "description": [
     "Workshop: Paul Boag, User Experience consultant"
   ],
@@ -98,7 +91,6 @@
   "starts": "14.15",
   "ends": "15.30",
   "title": "Knowledge worker: Culture, Skills, Tools",
- 
   "description": [
     "Knowledge workers of the future - what do they need?"
   ],
@@ -110,7 +102,6 @@
   "starts": "14.15",
   "ends": "15.30",
   "title": "Open Source: the Future for the European Institutions",
-  
   "description": [
     "Guest speaker: Julia Reda, Member of the European Parliament"
   ],
@@ -122,7 +113,6 @@
   "starts": "15.30",
   "ends": "16.00",
   "title": "Coffee break and DIGITEC exhibition",
-  
   "description": [],
   "speakers": [],
   "color": "none",
@@ -134,8 +124,7 @@
   "title": "Panel 4: Technologies of the Future (continued)",
   "venue": "Gold Hall",
   "description": [
-    "Moderator: Jennifer Baker, BrusselsGeek.eu",
-  
+    "Moderator: Jennifer Baker, BrusselsGeek.eu"
   ],
   "speakers": ["maxpeterson"],
   "color": "yellow",
@@ -145,7 +134,6 @@
   "starts": "16.00",
   "ends": "17.15",
   "title": "Data for policy making",
- 
   "description": [
     "Guests: Prof. Mercedes Fuertes, Madrid and Prof. Diana Galetta, University of Milan"
   ],
@@ -157,7 +145,6 @@
   "starts": "16.00",
   "ends": "17.15",
   "title": "InterHack Experience",
- 
   "description": [
     "Results from the inter-institutional hackathon"
   ],
@@ -169,7 +156,6 @@
   "starts": "16.00",
   "ends": "17.15",
   "title": "Encryption: Blessing or Curse for IT Security",
-  
   "description": [
     "Moderator: Ken Ducatel, IT Security Directorate, DIGIT "
   ],
