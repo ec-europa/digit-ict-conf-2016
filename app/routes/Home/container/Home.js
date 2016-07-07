@@ -29,7 +29,7 @@ export class Home extends React.Component {
           <div className={styles.coverSpacer} />
           <div className={styles.coverTitleContainer}>
             <div className={styles.coverTitleContainerRow}>
-              <h1>DIGITEC 2016: Digital Future</h1>
+              <h1>DIGITEC: Digital Future</h1>
               <h2>29 November 2016</h2>
               <h2>Square, Brussels</h2>
             </div>

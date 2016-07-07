@@ -7,9 +7,9 @@
 			"type": "image/png"
 		}
   ],
-  "start_url": "/multisite/pubfpfistest/sites/pubfpfistest/files/digitec/index.html",
+  "start_url": "/multisite/pubfpfistest/sites/pubfpfistest/files/digitec/",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#FFFFFF",
-  "theme_color": "#ffffff"
+  "theme_color": "#FFFFFF"
 }
