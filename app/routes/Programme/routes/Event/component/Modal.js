@@ -10,10 +10,16 @@ import styles from './Modal.scss';
 import speakers from '../../../../../../content/speakers.json';
 
 const Modal = ({ event }) => {
-  let timeAndVenue = '';
-  timeAndVenue += `${event.starts}${event.ends ? ` - ${event.ends}` : ''}`;
+  const startsAt = (
+    <time>{event.starts}</time>
+  );
+  const endsAt = event.ends ? (
+    <time>{event.ends}</time>
+  ) : null;
+
+  let venue = null;
   if (event.venue && event.venue.length > 0) {
-    timeAndVenue += `, ${event.venue}`;
+    venue = `, ${event.venue}`;
   }
 
   const eventModerator = speakers.filter(speaker => event.moderator === speaker.id);
@@ -60,7 +66,7 @@ const Modal = ({ event }) => {
   return (
     <div className={styles.container}>
       <h1>{event.title}</h1>
-      <h2>{timeAndVenue}</h2>
+      <h2>{startsAt}{event.ends ? ' - ' : ''}{endsAt}{venue}</h2>
       <div className={styles.name}>
         {event.description.map((line, index) => (<p key={index}>{line}</p>))}
       </div>

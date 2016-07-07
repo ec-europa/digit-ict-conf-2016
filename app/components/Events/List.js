@@ -26,10 +26,14 @@ const List = ({ events, schedule, onToggle }) => {
       <Row key={event.id} event={event} checked={schedule[event.id]} onToggle={onToggle} displayTime={false} />
     ));
 
+    const eventsEnds = eventsList[0].ends ? (
+      <time>{eventsList[0].ends}</time>
+    ) : null;
+
     eventsDisplay.push(
       <div className={styles.block} key={eventsList[0].starts} >
         <div className={styles.timeslot}>
-          {eventsList[0].starts}{eventsList[0].ends ? ` - ${eventsList[0].ends}` : ''}
+          <time>{eventsList[0].starts}</time>{eventsEnds ? ' - ' : ''}{eventsEnds}
         </div>
         <div className={styles.events}>
           {eventsRows}
