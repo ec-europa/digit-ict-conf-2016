@@ -1,7 +1,7 @@
 [{
   "id": "registration",
-  "starts": "8.30",
-  "ends": "9.30",
+  "starts": "08:30",
+  "ends": "09:30",
   "title": "Registration and coffee",
   "venue": "",
   "description": [
@@ -12,8 +12,8 @@
   "register": false
 }, {
   "id": "welcome",
-  "starts": "9.30",
-  "ends": "9.45",
+  "starts": "09:30",
+  "ends": "09:45",
   "title": "Welcome by European Commission and European Parliament",
   "venue": "Gold Hall",
   "description": [],
@@ -22,8 +22,8 @@
   "register": true
 }, {
   "id": "panel1",
-  "starts": "9.45",
-  "ends": "11.00",
+  "starts": "09:45",
+  "ends": "11:00",
   "title": "Panel 1: Workplace of the future",
   "venue": "Gold Hall",
   "description": [],
@@ -33,8 +33,8 @@
   "register": true
 }, {
   "id": "coffeeMorning",
-  "starts": "11.00",
-  "ends": "11.30",
+  "starts": "11:00",
+  "ends": "11:30",
   "title": "Coffee break and DIGITEC exhibition",
   "venue": "",
   "description": [],
@@ -43,8 +43,8 @@
   "register": false
 }, {
   "id": "panel2",
-  "starts": "11.30",
-  "ends": "12.45",
+  "starts": "11:30",
+  "ends": "12:45",
   "title": "Panel 2: Digital Democracy",
   "venue": "Gold Hall",
   "description": [],
@@ -54,8 +54,8 @@
   "register": true
 }, {
   "id": "lunch",
-  "starts": "12.45",
-  "ends": "14.15",
+  "starts": "12:45",
+  "ends": "14:15",
   "title": "Lunch and DIGITEC exhibition",
   "description": [],
   "speakers": [],
@@ -63,8 +63,8 @@
   "register": false
 }, {
   "id": "panel3",
-  "starts": "14.15",
-  "ends": "15.30",
+  "starts": "14:15",
+  "ends": "15:30",
   "title": "Panel 3: Technologies of the Future",
   "venue": "Gold Hall",
   "description": [],
@@ -74,8 +74,8 @@
   "register": true
 }, {
   "id": "session1",
-  "starts": "14.15",
-  "ends": "15.30",
+  "starts": "14:15",
+  "ends": "15:30",
   "title": "User experience",
   "description": [
     "Workshop: Paul Boag, User Experience consultant"
@@ -85,8 +85,8 @@
   "register": true
 }, {
   "id": "session2",
-  "starts": "14.15",
-  "ends": "15.30",
+  "starts": "14:15",
+  "ends": "15:30",
   "title": "Knowledge worker: Culture, Skills, Tools",
   "description": [
     "Knowledge workers of the future - what do they need?"
@@ -96,8 +96,8 @@
   "register": true
 }, {
   "id": "session3",
-  "starts": "14.15",
-  "ends": "15.30",
+  "starts": "14:15",
+  "ends": "15:30",
   "title": "Open Source: the Future for the European Institutions",
   "description": [
     "Guest speaker: Julia Reda, Member of the European Parliament"
@@ -107,8 +107,8 @@
   "register": true
 }, {
   "id": "coffeeAfternoon",
-  "starts": "15.30",
-  "ends": "16.00",
+  "starts": "15:30",
+  "ends": "16:00",
   "title": "Coffee break and DIGITEC exhibition",
   "description": [],
   "speakers": [],
@@ -116,8 +116,8 @@
   "register": false
 }, {
   "id": "panel4",
-  "starts": "16.00",
-  "ends": "17.15",
+  "starts": "16:00",
+  "ends": "17:15",
   "title": "Panel 4: Technologies of the Future (continued)",
   "venue": "Gold Hall",
   "description": [],
@@ -127,8 +127,8 @@
   "register": true
 }, {
   "id": "session4",
-  "starts": "16.00",
-  "ends": "17.15",
+  "starts": "16:00",
+  "ends": "17:15",
   "title": "Data for policy making",
   "description": [
     "Guests: Prof. Mercedes Fuertes, Madrid and Prof. Diana Galetta, University of Milan"
@@ -138,8 +138,8 @@
   "register": true
 }, {
   "id": "session5",
-  "starts": "16.00",
-  "ends": "17.15",
+  "starts": "16:00",
+  "ends": "17:15",
   "title": "InterHack Experience",
   "description": [
     "Results from the inter-institutional hackathon"
@@ -149,8 +149,8 @@
   "register": true
 }, {
   "id": "session6",
-  "starts": "16.00",
-  "ends": "17.15",
+  "starts": "16:00",
+  "ends": "17:15",
   "title": "Encryption: Blessing or Curse for IT Security",
   "description": [
     "Moderator: Ken Ducatel, IT Security Directorate, DIGIT "
@@ -160,8 +160,8 @@
   "register": true
 }, {
   "id": "keynote",
-  "starts": "17.15",
-  "ends": "17.30",
+  "starts": "17:15",
+  "ends": "17:30",
   "title": "Keynote closing speech: Vincent Bruneau, CEO of Magency",
   "venue": "Gold Hall",
   "description": [],
@@ -170,7 +170,7 @@
   "register": true
 }, {
   "id": "closing",
-  "starts": "17.30",
+  "starts": "17:30",
   "ends": "",
   "title": "Closing by organisers",
   "venue": "Gold Hall",
@@ -180,8 +180,8 @@
   "register": false
 }, {
   "id": "cocktail",
-  "starts": "17.45",
-  "ends": "19.00",
+  "starts": "17:45",
+  "ends": "19:00",
   "title": "Cocktail",
   "venue": "TBC",
   "description": [],

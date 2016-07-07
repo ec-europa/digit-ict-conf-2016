@@ -26,7 +26,7 @@ class Row extends React.Component {
 
     let timeAndVenue = '';
     if (displayTime) {
-      timeAndVenue += `${event.starts}${event.ends ? ` - ${event.ends}` : ''}`;
+      timeAndVenue += `<time>${event.starts}</time>${event.ends ? ` - <time>${event.ends}</time>` : ''}`;
     }
     if (event.venue && event.venue.length > 0) {
       timeAndVenue += displayTime
