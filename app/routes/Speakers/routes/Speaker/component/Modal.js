@@ -29,7 +29,7 @@ const Modal = ({ speaker, schedule, onToggleEvent }) => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.header} style={headerStyle} />
+      <div className={styles.header} style={headerStyle} role="img" aria-label={`${speaker.firstname} ${speaker.lastname}`} />
       <div>
         <h3>{speaker.firstname} <span className={styles.lastname}>{speaker.lastname}</span></h3>
         <h4 className={styles.title}>{speaker.title}</h4>

@@ -32,7 +32,7 @@ const Modal = ({ event }) => {
         <div key={speaker.id} className={styles.speakerContainer}>
           <div className={styles.speakerPicture}>
             <Link to={`/speakers/${speaker.id}`}>
-              <img src={`${__BASENAME__}/assets/images/speakers/${speaker.picture}`} alt="{speaker.firstname} {speaker.lastname}" />
+              <img src={`${__BASENAME__}/assets/images/speakers/${speaker.picture}`} alt={`${speaker.firstname} ${speaker.lastname}`} />
             </Link>
           </div>
           <div className={styles.speakerInfo}>
@@ -51,7 +51,7 @@ const Modal = ({ event }) => {
         <div key={speaker.id} className={styles.speakerContainer}>
           <div className={styles.speakerPicture}>
             <Link to={`/speakers/${speaker.id}`}>
-              <img src={`${__BASENAME__}/assets/images/speakers/${speaker.picture}`} alt="{speaker.firstname} {speaker.lastname}" />
+              <img src={`${__BASENAME__}/assets/images/speakers/${speaker.picture}`} alt={`${speaker.firstname} ${speaker.lastname}`} />
             </Link>
           </div>
           <div className={styles.speakerInfo}>

@@ -59,7 +59,10 @@ class Row extends React.Component {
     return (
       <li className={rowClasses}>
         <div className={styles.primary}>
-          <span className={styles.title}>{event.title}</span>
+          {learnMore
+            ? <Link className={styles.title} to={`/programme/${event.id}`}>{event.title}</Link>
+            : <span className={styles.title}>{event.title}</span>
+          }
           <span className={styles.subtitle}>
             {displayTime || (event.venue && event.venue.length > 0)
               ?
@@ -69,15 +72,11 @@ class Row extends React.Component {
               </span>
               : null
             }
-            {learnMore
-              ? <Link className={styles.learnMore} to={`/programme/${event.id}`}>Learn more</Link>
-              : null
-            }
           </span>
         </div>
         {event.register
           ? <span className={styles.secondary}>
-            <input id={event.id} type="checkbox" checked={checked} onChange={this.toggle} />
+            <input id={event.id} type="checkbox" checked={checked} onChange={this.toggle} aria-hidden="true" />
             <label htmlFor={event.id} />
           </span>
           : null
