@@ -224,5 +224,20 @@
     ],
     "twitter": false,
     "picture": "Alex-Steiner.jpg"
+  },
+  {
+    "id": "dianauraniagaletta",
+    "firstname": "Diana Urania",
+    "lastname": "Galetta",
+    "title": "Professor of Administrative Law, Milan University",
+    "bio": [
+      "Diana Urania Galetta is Full professor of Administrative Law at the Law Faculty of Milan University (Università degli Studi di Milano).",
+      "She holds an university Degree cum laude both in Law and in Political Science (Università degli Studi di Milano), as well as an LL.M. degree cum laude (Osnabrück University- Germany).",
+      "Professor Galetta is Deputy Director of the Department of Italian and Supranational Public Law and Director of the PhD Program in Public, International and EU Law at the University of Milan. She is member of Societas Juris Publici Europei (SIPE) and the Italian association of Administrative Law professors.",
+      "In 1999 she won an Annual research scholarship granted by the prestigious German Foundation ''Von Humboldt-Stiftung''.",
+      "The full list of her publications can be found at http://www.unimi.it/chiedove/ENG/schedaPersonaXML.jsp?matricola=13951"
+    ],
+    "twitter": false,
+    "picture": "Diana-Galetta.jpg"
   }
 ]
