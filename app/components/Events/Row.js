@@ -77,7 +77,7 @@ class Row extends React.Component {
         </div>
         {event.register
           ? <span className={styles.secondary}>
-            <input id={event.id} type="checkbox" checked={checked} onChange={this.toggle} />
+            <input id={event.id} type="checkbox" checked={checked} onChange={this.toggle} aria-hidden="true" />
             <label htmlFor={event.id} />
           </span>
           : null
