@@ -62,10 +62,6 @@
   margin-right: 0.5em;
 }
 
-.learnMore {
-  color: $ict-grey-text;
-}
-
 .secondary {
   align-items: center;
   padding: 0 1em;
@@ -73,6 +69,14 @@
 
 .title {
   color: darken($ict-grey-text, 5%);
+  text-decoration: none;
+}
+
+a.title {
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
 }
 
 .subtitle {

@@ -59,7 +59,10 @@ class Row extends React.Component {
     return (
       <li className={rowClasses}>
         <div className={styles.primary}>
-          <span className={styles.title}>{event.title}</span>
+          {learnMore
+            ? <Link className={styles.title} to={`/programme/${event.id}`}>{event.title}</Link>
+            : <span className={styles.title}>{event.title}</span>
+          }
           <span className={styles.subtitle}>
             {displayTime || (event.venue && event.venue.length > 0)
               ?
@@ -67,10 +70,6 @@ class Row extends React.Component {
                 {startsAt}{displayTime && event.ends ? ' - ' : ''}{endsAt}
                 {venue}
               </span>
-              : null
-            }
-            {learnMore
-              ? <Link className={styles.learnMore} to={`/programme/${event.id}`}>Learn more</Link>
               : null
             }
           </span>
