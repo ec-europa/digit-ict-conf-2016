@@ -133,7 +133,7 @@
   "description": [
     "Guests: Prof. Mercedes Fuertes, Madrid and Prof. Diana Galetta, University of Milan"
   ],
-  "speakers": ["mercedesfuertes"],
+  "speakers": ["mercedesfuertes", "dianauraniagaletta"],
   "color": "purple",
   "register": true
 }, {
