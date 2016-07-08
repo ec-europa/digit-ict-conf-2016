@@ -24,12 +24,22 @@ class Row extends React.Component {
   render() {
     const { event, checked, displayTime } = this.props;
 
-    let timeAndVenue = '';
+    let startsAt = null;
+    let endsAt = null;
+    let venue = null;
+
     if (displayTime) {
-      timeAndVenue += `${event.starts}${event.ends ? ` - ${event.ends}` : ''}`;
+      startsAt = (
+        <time>{event.starts}</time>
+      );
+
+      endsAt = event.ends ? (
+        <time>{event.ends}</time>
+      ) : null;
     }
+
     if (event.venue && event.venue.length > 0) {
-      timeAndVenue += displayTime
+      venue = displayTime
         ? `, ${event.venue}`
         : event.venue;
     }
@@ -51,8 +61,12 @@ class Row extends React.Component {
         <div className={styles.primary}>
           <span className={styles.title}>{event.title}</span>
           <span className={styles.subtitle}>
-            {timeAndVenue.length > 0
-              ? <span className={styles.timeAndVenue}>{timeAndVenue}</span>
+            {displayTime || (event.venue && event.venue.length > 0)
+              ?
+              <span className={styles.timeAndVenue}>
+                {startsAt}{displayTime && event.ends ? ' - ' : ''}{endsAt}
+                {venue}
+              </span>
               : null
             }
             {learnMore
