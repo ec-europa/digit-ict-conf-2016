@@ -9,7 +9,7 @@ import Link from '../../../../../Link/Link';
 import classNames from 'classnames';
 import styles from './Item.scss';
 
-function HeaderNavigationItem({ children, to, desktopOnly, register, ...rest }) {
+function HeaderNavigationItem({ children, to, desktopOnly, myDigitec, ...rest }) {
   const containerClasses = classNames(
     styles.item,
     {
@@ -20,7 +20,7 @@ function HeaderNavigationItem({ children, to, desktopOnly, register, ...rest }) 
   const linkClasses = classNames(
     styles.link,
     {
-      [`${styles.register}`]: register,
+      [`${styles.myDigitec}`]: myDigitec,
     },
   );
 
@@ -42,13 +42,13 @@ HeaderNavigationItem.propTypes = {
   children: React.PropTypes.node,
   to: React.PropTypes.string,
   desktopOnly: React.PropTypes.bool,
-  register: React.PropTypes.bool,
+  myDigitec: React.PropTypes.bool,
 };
 
 HeaderNavigationItem.defaultProps = {
   to: '/',
   desktopOnly: false,
-  register: false,
+  myDigitec: false,
 };
 
 export default HeaderNavigationItem;

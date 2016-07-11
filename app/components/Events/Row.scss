@@ -10,41 +10,42 @@
   align-items: center;
   padding: 24px 16px;
   overflow: hidden;
+  transition: background-color 200ms ease-in-out;
 }
 
 .greyItem {
   color: rgba(0, 0, 0, 0.87);
   border-left: 1em solid #CCC;
-  background-color: lighten(#CCC, 18%);
+  background-color: lighten(#CCC, 16%);
   &:hover {
-    background-color: lighten(#CCC, 15%);
+    background-color: lighten(#CCC, 11%);
   }
 }
 
 .blueItem {
   color: rgba(0, 0, 0, 0.87);
   border-left: 1em solid $ict-blue;
-  background-color: lighten($ict-blue, 62%);
+  background-color: lighten($ict-blue, 58%);
   &:hover {
-    background-color: lighten($ict-blue, 56%);
+    background-color: lighten($ict-blue, 50%);
   }
 }
 
 .yellowItem {
   color: rgba(0, 0, 0, 0.87);
   border-left: 1em solid $ict-yellow;
-  background-color: lighten($ict-yellow, 43%);
+  background-color: lighten($ict-yellow, 40%);
   &:hover {
-    background-color: lighten($ict-yellow, 34%);
+    background-color: lighten($ict-yellow, 31%);
   }
 }
 
 .purpleItem {
   color: rgba(0, 0, 0, 0.87);
   border-left: 1em solid $ict-purple;
-  background-color: lighten($ict-purple, 56%);
+  background-color: lighten($ict-purple, 53%);
   &:hover {
-    background-color: lighten($ict-purple, 49%);
+    background-color: lighten($ict-purple, 45%);
   }
 }
 

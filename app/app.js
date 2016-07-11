@@ -87,9 +87,9 @@ export class App extends React.Component {
           <HeaderNavigation>
             <HeaderNavigationItem to={'/speakers'} desktopOnly>Speakers</HeaderNavigationItem>
             <HeaderNavigationItem to={'/programme'} desktopOnly>Programme</HeaderNavigationItem>
-            <HeaderNavigationItem to={'/my-digitec'} desktopOnly>My DIGITEC</HeaderNavigationItem>
             <HeaderNavigationItem to={'/practical'} desktopOnly>Practical</HeaderNavigationItem>
-            <HeaderNavigationItem to={'https://scic.ec.europa.eu/fmi/ezreg/DIGIT-ICT-2016'} target="_blank" register>Register</HeaderNavigationItem>
+            <HeaderNavigationItem to={'https://scic.ec.europa.eu/fmi/ezreg/DIGIT-ICT-2016'} desktopOnly target="_blank">Register</HeaderNavigationItem>
+            <HeaderNavigationItem to={'/my-digitec'} myDigitec>My DIGITEC</HeaderNavigationItem>
           </HeaderNavigation>
         </Header>
         <Drawer onToggle={onToggleDrawer} isOpen={drawerOpen}>
@@ -105,6 +105,7 @@ export class App extends React.Component {
             <DrawerNavigationItem to={'/my-digitec'}>My DIGITEC</DrawerNavigationItem>
             <DrawerNavigationItem to={'/practical'}>Practical</DrawerNavigationItem>
             <DrawerNavigationSeparator />
+            <DrawerNavigationItem to={'https://scic.ec.europa.eu/fmi/ezreg/DIGIT-ICT-2016'} target="_blank">Register</DrawerNavigationItem>
             <DrawerNavigationItem to={'https://twitter.com/hashtag/digitec16'} target="_blank">#digitec16</DrawerNavigationItem>
           </DrawerNavigation>
         </Drawer>
