@@ -1,4 +1,4 @@
-import Event from './container/Event';
+import Event from './Event';
 
 export default function createRoute(path = ':eventId') {
   return {

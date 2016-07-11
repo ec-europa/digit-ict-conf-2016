@@ -6,7 +6,7 @@
 
 import React from 'react';
 import { Link } from 'react-router';
-import styles from './styles.scss';
+import styles from './Speaker.scss';
 
 const Speaker = ({ speaker }) => (
   <div className={styles.item}>

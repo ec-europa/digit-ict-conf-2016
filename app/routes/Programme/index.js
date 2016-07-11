@@ -1,4 +1,4 @@
-import Programme from './container/Programme';
+import Programme from './Programme';
 import childRoutes from './routes';
 
 export default function createRoute(path = 'programme') {

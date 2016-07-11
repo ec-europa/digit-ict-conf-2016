@@ -1,8 +1,8 @@
-import container from './Container';
+import MyDigitec from './MyDigitec';
 
 export default function createRoute(path = 'my-digitec') {
   return {
     path,
-    component: container,
+    component: MyDigitec,
   };
 }

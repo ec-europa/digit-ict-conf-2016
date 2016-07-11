@@ -1,4 +1,4 @@
-import Speakers from './container/Speakers';
+import Speakers from './Speakers';
 import childRoutes from './routes';
 
 export default function createRoute(path = 'speakers') {

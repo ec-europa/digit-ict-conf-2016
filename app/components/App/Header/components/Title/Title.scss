@@ -1,0 +1,19 @@
+@import '../../../../../theme/variables';
+@import '../../../../../theme/breakpoints';
+
+.container {
+  align-items: stretch;
+  display: flex;
+  justify-content: flex-start;
+
+  @include mappy-bp(medium) {
+    display: none;
+  }
+}
+
+.title {
+  font-weight: 300;
+  color: darken($ict-grey-text, 10%);
+  font-size: 1.3rem;
+  line-height: 1.75;
+}

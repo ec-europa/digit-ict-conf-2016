@@ -1,4 +1,3 @@
-/* global componentHandler */
 /**
 *
 * Events/Row

@@ -1,72 +1,166 @@
 /**
- * app.js
  *
- * This is the entry file for the application
+ * App
+ *
  */
-import 'babel-polyfill';
 
-// Import all the third party stuff
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import applyRouterMiddleware from 'react-router/es6/applyRouterMiddleware';
-import Router from 'react-router/es6/Router';
-import useRouterHistory from 'react-router/es6/useRouterHistory';
+import { connect } from 'react-redux';
+import Helmet from 'react-helmet';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import classnames from 'classnames';
 
-import createBrowserHistory from 'history/lib/createBrowserHistory';
-import { syncHistoryWithStore } from 'react-router-redux';
-import useScroll from 'react-router-scroll';
-import configureStore from './store/configure';
+// Redux actions
+import { toggleDrawer, handleScroll } from './store/modules/layout';
 
-// Create custom history
-const browserHistory = useRouterHistory(createBrowserHistory)({
-  basename: __BASENAME__,
-});
+// Components
+import { Header, HeaderToggle, HeaderTitle, HeaderLogos, HeaderNavigation, HeaderNavigationItem } from './components/App/Header';
+import { Drawer, DrawerHeader, DrawerHeaderLogos, DrawerHeaderTitle, DrawerNavigation, DrawerNavigationItem, DrawerNavigationSeparator } from './components/App/Drawer';
+import Footer from './components/App/Footer/Footer';
+import Content from './components/App/Content/Content';
 
-// Create redux store with history
-const store = configureStore(browserHistory);
+// Styles
+import styles from './App.scss';
 
-// Sync history and store, as the react-router-redux reducer
-// is under the non-default key ("routing"), selectLocationState
-// must be provided for resolving how to retrieve the "route" in the state
-import { selectLocationState } from './store/modules/route';
+export class App extends React.Component {
+  constructor(props) {
+    super(props);
+    document.body.style.overflow = 'auto';
+    this.scrollListener = this.scrollListener.bind(this);
+  }
 
-const history = syncHistoryWithStore(browserHistory, store, {
-  selectLocationState: selectLocationState(),
-});
+  componentDidMount() {
+    window.addEventListener('scroll', this.scrollListener);
+  }
 
-// Set up the router, wrapping all Routes in the App component
-import childRoutes from './routes';
-import App from './containers/App';
+  componentWillUpdate({ drawerOpen, modalOpen }) {
+    if (drawerOpen || modalOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }
 
-const rootRoute = {
-  component: App,
-  childRoutes,
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.scrollListener);
+  }
+
+  scrollListener(event) {
+    const { onScroll } = this.props;
+    return onScroll(event);
+  }
+
+  render() {
+    const {
+      children,
+      location,
+      drawerOpen,
+      headerPinned,
+      headerUnpinned,
+      onToggleDrawer,
+      modalOpen,
+      headerTitle,
+    } = this.props;
+
+    let childrenKey;
+    // Group children pages (under "speakers" or "programme")
+    if (location.pathname.indexOf('speakers') > -1) {
+      childrenKey = 'speakers';
+    } else if (location.pathname.indexOf('programme') > -1) {
+      childrenKey = 'programme';
+    } else {
+      childrenKey = location.pathname;
+    }
+
+    const containerClasses = classnames(
+      styles.container,
+      { [`${styles.containerNoOverflow}`]: modalOpen }
+    );
+
+    return (
+      <div className={containerClasses}>
+        <Helmet titleTemplate="DIGITEC 2016 - %s" />
+        <Header pinned={headerPinned} unpinned={headerUnpinned}>
+          <HeaderToggle onClick={onToggleDrawer} />
+          <HeaderLogos />
+          <HeaderTitle title={headerTitle} />
+          <HeaderNavigation>
+            <HeaderNavigationItem to={'/speakers'} desktopOnly>Speakers</HeaderNavigationItem>
+            <HeaderNavigationItem to={'/programme'} desktopOnly>Programme</HeaderNavigationItem>
+            <HeaderNavigationItem to={'/my-digitec'} desktopOnly>My DIGITEC</HeaderNavigationItem>
+            <HeaderNavigationItem to={'/practical'} desktopOnly>Practical</HeaderNavigationItem>
+            <HeaderNavigationItem to={'https://scic.ec.europa.eu/fmi/ezreg/DIGIT-ICT-2016'} target="_blank" register>Register</HeaderNavigationItem>
+          </HeaderNavigation>
+        </Header>
+        <Drawer onToggle={onToggleDrawer} isOpen={drawerOpen}>
+          <DrawerHeader>
+            <DrawerHeaderLogos />
+            <DrawerHeaderTitle>29 November, 2016</DrawerHeaderTitle>
+            <DrawerHeaderTitle>Square Brussels</DrawerHeaderTitle>
+          </DrawerHeader>
+          <DrawerNavigation>
+            <DrawerNavigationItem to={'/'}>Home</DrawerNavigationItem>
+            <DrawerNavigationItem to={'/speakers'}>Speakers</DrawerNavigationItem>
+            <DrawerNavigationItem to={'/programme'}>Programme</DrawerNavigationItem>
+            <DrawerNavigationItem to={'/my-digitec'}>My DIGITEC</DrawerNavigationItem>
+            <DrawerNavigationItem to={'/practical'}>Practical</DrawerNavigationItem>
+            <DrawerNavigationSeparator />
+            <DrawerNavigationItem to={'https://twitter.com/hashtag/digitec16'} target="_blank">#digitec16</DrawerNavigationItem>
+          </DrawerNavigation>
+        </Drawer>
+        <Content>
+          <ReactCSSTransitionGroup
+            transitionName={{
+              enter: styles.enter,
+              enterActive: styles.enterActive,
+              leave: styles.leave,
+              leaveActive: styles.leaveActive,
+            }}
+            transitionEnterTimeout={300}
+            transitionLeaveTimeout={10}
+          >
+            {React.cloneElement(children, {
+              key: childrenKey,
+            })}
+          </ReactCSSTransitionGroup>
+        </Content>
+        <Footer />
+      </div>
+    );
+  }
+}
+
+App.propTypes = {
+  children: React.PropTypes.node,
+  location: React.PropTypes.object,
+  drawerOpen: React.PropTypes.bool,
+  headerPinned: React.PropTypes.bool,
+  headerUnpinned: React.PropTypes.bool,
+  onToggleDrawer: React.PropTypes.func,
+  onScroll: React.PropTypes.func,
+  modalOpen: React.PropTypes.bool,
+  headerTitle: React.PropTypes.string,
 };
 
+function mapStateToProps(state) {
+  return {
+    drawerOpen: state.layout.drawerIsOpen,
+    headerPinned: state.layout.headerPinned,
+    headerUnpinned: state.layout.headerUnpinned,
+    modalOpen: state.layout.modalOpen,
+    headerTitle: state.layout.headerTitle,
+  };
+}
 
-import { closeDrawer } from './store/modules/layout';
+function mapDispatchToProps(dispatch) {
+  return {
+    onToggleDrawer: () => {
+      dispatch(toggleDrawer());
+    },
+    onScroll: () => {
+      dispatch(handleScroll());
+    },
+  };
+}
 
-ReactDOM.render(
-  <Provider store={store}>
-    <Router
-      history={history}
-      routes={rootRoute}
-      render={applyRouterMiddleware(useScroll((prevRouterProps, { routes }) => {
-        if (routes.some(route => route.ignoreScrollBehavior)
-          || (prevRouterProps && prevRouterProps.routes.some(route => route.ignoreScrollBehavior))) {
-          return false;
-        }
-        store.dispatch(closeDrawer());
-        return true;
-      }))}
-    />
-  </Provider>,
-  document.getElementById('app')
-);
-
-// Install ServiceWorker and AppCache in the end since
-// it's not most important operation and if main code fails,
-// we do not want it installed
-import { install } from 'offline-plugin/runtime';
-install();
+export default connect(mapStateToProps, mapDispatchToProps)(App);
