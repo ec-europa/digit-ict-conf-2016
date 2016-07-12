@@ -8,9 +8,7 @@
   padding: 10px;
 
   @include mappy-bp(max medium) {
-    &.desktopOnly {
-      display: none !important;
-    }
+    display: none !important;
   }
 }
 
@@ -34,7 +32,7 @@
   border-bottom: 1px solid $ict-grey-text;
 }
 
-.myDigitec {
+.primary {
   font-weight: 400;
   color: $ict-blue;
 

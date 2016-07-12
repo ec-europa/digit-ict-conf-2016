@@ -15,6 +15,7 @@ import { updateHeaderTitle, openModal } from '../../store/modules/layout';
 
 // Load components
 import EventsList from '../../components/Events/List';
+import Link from '../../components/Link/Link';
 
 // Load content
 import events from '../../../content/events.json';
@@ -31,7 +32,6 @@ class MyDigitec extends React.Component {
   render() {
     const { schedule, onToggleEvent, children, location } = this.props;
     const myEvents = events.filter(event => schedule[event.id] || event.register === false);
-    const hasCustomEvents = Object.keys(schedule).some(event => schedule[event] === true);
 
     const content = (
       <ReactCSSTransitionGroup
@@ -58,14 +58,11 @@ class MyDigitec extends React.Component {
         <div className={styles.header}>
           <h1>My DIGITEC</h1>
         </div>
-        {hasCustomEvents
-         ? null
-         : <div className={styles.intro}>
-           <p>
-             "My DIGITEC" helps you personalise your experience. Start adding events to your schedule.
-           </p>
-         </div>
-        }
+        <div className={styles.intro}>
+          <p>
+            "My DIGITEC" helps you personalise your experience. Select your favourite sessions from <Link to={'/programme'}>DIGITEC programme</Link>.
+          </p>
+        </div>
         {myEvents.length > 0
           ? <EventsList events={myEvents} schedule={schedule} onToggle={onToggleEvent} />
           : null

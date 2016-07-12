@@ -18,49 +18,18 @@
   }
 }
 
-.tabsList {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-content: space-between;
-  align-items: flex-start;
-  height: 48px;
-  padding: 0;
-  margin: 0;
-  border-bottom: 1px solid #E0E0E0;
-}
-
-.tab {
-  margin: 0;
-  border: none;
-  padding: 0 24px;
-  float: left;
-  position: relative;
-  display: block;
-  text-decoration: none;
-  height: 3em;
-  line-height: 3em;
-  text-align: center;
-  font-weight: 500;
+.intro {
   color: $ict-grey-text;
-  overflow: hidden;
 
-  &:hover {
-    cursor: pointer;
-  }
+  a {
+    color: $ict-blue;
+    text-decoration: none;
 
-  &[aria-selected=true] {
-    color: rgba(0, 0, 0, 0.87);
-
-    &::after {
-      height: 2px;
-      width: 100%;
-      display: block;
-      content: ' ';
-      bottom: 0;
-      left: 0;
-      position: absolute;
-      background: $ict-purple;
+    &:hover,
+    &active,
+    &:focus {
+      color: $ict-blue;
+      text-decoration: underline;
     }
   }
 }

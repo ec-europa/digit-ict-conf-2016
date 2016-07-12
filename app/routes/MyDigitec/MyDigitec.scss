@@ -20,6 +20,18 @@
 
 .intro {
   color: $ict-grey-text;
+
+  a {
+    color: $ict-blue;
+    text-decoration: none;
+
+    &:hover,
+    &active,
+    &:focus {
+      color: $ict-blue;
+      text-decoration: underline;
+    }
+  }
 }
 
 .tabsList {

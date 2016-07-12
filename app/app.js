@@ -85,11 +85,11 @@ export class App extends React.Component {
           <HeaderLogos />
           <HeaderTitle title={headerTitle} />
           <HeaderNavigation>
-            <HeaderNavigationItem to={'/speakers'} desktopOnly>Speakers</HeaderNavigationItem>
-            <HeaderNavigationItem to={'/programme'} desktopOnly>Programme</HeaderNavigationItem>
-            <HeaderNavigationItem to={'/practical'} desktopOnly>Practical</HeaderNavigationItem>
-            <HeaderNavigationItem to={'https://scic.ec.europa.eu/fmi/ezreg/DIGIT-ICT-2016'} desktopOnly target="_blank">Register</HeaderNavigationItem>
-            <HeaderNavigationItem to={'/my-digitec'} myDigitec>My DIGITEC</HeaderNavigationItem>
+            <HeaderNavigationItem to={'/speakers'}>Speakers</HeaderNavigationItem>
+            <HeaderNavigationItem to={'/programme'}>Programme</HeaderNavigationItem>
+            <HeaderNavigationItem to={'/my-digitec'}>My DIGITEC</HeaderNavigationItem>
+            <HeaderNavigationItem to={'/practical'}>Practical</HeaderNavigationItem>
+            <HeaderNavigationItem to={'https://scic.ec.europa.eu/fmi/ezreg/DIGIT-ICT-2016'} target="_blank" primary>Register</HeaderNavigationItem>
           </HeaderNavigation>
         </Header>
         <Drawer onToggle={onToggleDrawer} isOpen={drawerOpen}>

@@ -15,6 +15,7 @@ import { updateHeaderTitle, openModal } from '../../store/modules/layout';
 
 // Components
 import EventsList from '../../components/Events/List';
+import Link from '../../components/Link/Link';
 
 // Content
 import events from '../../../content/events.json';
@@ -56,6 +57,11 @@ class Programme extends React.Component {
         <Helmet title="Programme" />
         <div className={styles.header}>
           <h1>Programme</h1>
+        </div>
+        <div className={styles.intro}>
+          <p>
+            Choose and save your favourite sessions to <Link to={'/my-digitec'}>My DIGITEC</Link>.
+          </p>
         </div>
         <EventsList events={events} schedule={schedule} onToggle={onToggleEvent} />
         {content}
