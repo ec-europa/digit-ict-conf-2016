@@ -26,11 +26,11 @@
     "id": "davidborrelli",
     "firstname": "David",
     "lastname": "Borrelli",
-    "title": "Member of the European Parliament,Europe of Freedom and Direct Democracy Group (EFDD)",
+    "title": "Member of the European Parliament",
     "bio": [
-      "David Borrelli has been Member of the European Parliament since 2014. He was Councillor in Treviso (2008-2013) and candidate for President of the Veneto region (2010).",
-      "Previously he was entrepreneur in the catering sector, Piola Restaurant Miami Beach and Piola Restaurant Buenos Aires (1989-2003). He was Computer Technician at Punto Informatico Srl (Buffetti Group) (2003-2008), Computer Technician at Omega Srl (2008-2009) and Entrepreneur in the IT sector Trevigroup Srl (2009-2014).",
-      "He is member of the Conference of Presidents, Committee on Industry, Research and Energy (ITRE), Committee on International Trade (INTA), Delegation for relations with Mercosur, Delegation for relations with South Africa and Delegation of the Parliamentary Assembly of the Union for the Mediterranean."
+      "David Borrelli has been Member of the European Parliament since 2014. He is Co-chair of Europe of Freedom and Direct Democracy Group (EFDD). He is also member of the Conference of Presidents, Committee on Industry, Research and Energy (ITRE), Committee on International Trade (INTA), Delegation for relations with Mercosur, Delegation for relations with South Africa and Delegation of the Parliamentary Assembly of the Union for the Mediterranean.",
+      "He was Councillor in Treviso (2008-2013) and candidate for President of the Veneto region (2010).",
+      "Previously he was entrepreneur in the catering sector, Piola Restaurant Miami Beach and Piola Restaurant Buenos Aires (1989-2003). He was Computer Technician at Punto Informatico Srl (Buffetti Group) (2003-2008), Computer Technician at Omega Srl (2008-2009) and Entrepreneur in the IT sector Trevigroup Srl (2009-2014)."
     ],
     "twitter": "@borrellidavid",
     "picture": "David-Borelli.jpg"
@@ -88,7 +88,7 @@
     "id": "juliareda",
     "firstname": "Julia",
     "lastname": "Reda",
-    "title": "Member of the European Parliament representing Germany since 2014",
+    "title": "Member of the European Parliament",
     "bio": [
       "Julia Read was elected to the European Parliament for the Pirate Party in 2014. She is a Vice-Chair of her parliamentary group, the Greens/European Free Alliance. In the European Parliament, she serves as a coordinator for the Greens/EFA in the Committee on Internal Market & Consumer Protection (IMCO), as a member of the Legal Affairs (JURI) and Petition (PETI) Committees and was elected to the Enquiry Committee on the Emissions Scandal (\"Dieselgate\"). She co-founded the Digital Agenda intergroup. Her legislative focus is on copyright and internet policy issues. In 2015, she was responsible for the Parliament's evaluation of the Copyright Directive.",
       "Born in Bonn in 1986, Julia Reda was a member of the German Social Democrats for six years before joining the Piratenpartei in 2009 amidst a debate on internet blocking. She served as chairwoman of the party's youth wing from 2010 to 2012 and is a founder of the Young Pirates of Europe. She holds an M.A. in political science and communications science from Johannes-Gutenberg-University Mainz, Germany.",
@@ -190,7 +190,7 @@
     "id": "jenniferbaker",
     "firstname": "Jennifer",
     "lastname": "Baker",
-    "title": "BrusselsGeek.eu",
+    "title": "Tech journalist and moderator",
     "bio": [
       "Jennifer has been a journalist in print, radio and television for nearly 20 years, the last 7 specialising in EU policy and legislation in the technology sector - from data protection and privacy to trade agreements; antitrust cases to copyright law; national security to public transparency.",
       "She has worked across a wide range of sectors, from editing a national daily paper in Malta, to reporting on European affairs for Middle Eastern television and has a wealth of experience in navigating the political quagmire of the EU. As well as an address book packed with insider sources and contacts in Brussels, Jennifer is skilled at translating EU policy-speak into understandable English.",
@@ -232,6 +232,36 @@
       "She holds an university Degree cum laude both in Law and in Political Science (Università degli Studi di Milano), as well as an LL.M. degree cum laude (Osnabrück University- Germany).",
       "Professor Galetta is Deputy Director of the Department of Italian and Supranational Public Law and Director of the PhD Program in Public, International and EU Law at the University of Milan. She is member of Societas Juris Publici Europei (SIPE) and the Italian association of Administrative Law professors.",
       "In 1999 she won an Annual research scholarship granted by the prestigious German Foundation ''Von Humboldt-Stiftung''."
+    ],
+    "twitter": false,
+    "picture": "Diana-Galetta.jpg"
+  },
+  {
+    "id": "nathalyrey",
+    "firstname": "Nathaly",
+    "lastname": "Rey",
+    "title": "EMEA Trust Manager, Google for Work",
+    "bio": [
+      "Nathaly is a privacy and security lawyer with extensive experience in designing innovative strategies for regulatory compliance, awareness-raising, best practices; and advising on regulatory approaches for ICT.",
+      "She holds an LL.M. on IT & Telecom Law, and a Ph.D. in Law.",
+      "Before joining Google, Nathaly led the Spanish Association of Information Security (ISMS Forum) and worked as a Senior Associate at Ecija, advising multinational corporations on a wide range of privacy and security matters, from global compliance programs to audits, IT outsourcing, and cross-border data flows.",
+      "Certified Data Privacy Professional (CDPP) and Certified Cloud Security Knowledge (CCSK).",
+      "Co- Founder and member of the Board of the Cloud Security Alliance-Spanish Chapter; she is a regular lecturer at IE Law School - Compliance program, and ICT arbiter at the European Association of Arbitration."
+    ],
+    "twitter": false,
+    "picture": "Diana-Galetta.jpg"
+  },
+  {
+    "id": "bartpreneel",
+    "firstname": "Bart",
+    "lastname": "Preneel",
+    "title": "Professor at Katholieke Universiteit Leuven",
+    "bio": [
+      "Bart Preneel is full professor in the research group COSIC of the Electrical Engineering Department of the Katholieke Universiteit Leuven in Belgium.",
+      "His main research area is information security. His research focuses on cryptographic algorithms and protocols as well as their applications to computer and network security and mobile communications.",
+      "His favourite research topics are hash functions, MAC algorithms, stream ciphers and block ciphers.",
+      "He is teaching cryptology, network security, coding theory, and discrete applied algebra at the K.U.Leuven. He has been visiting professor at the Technical University Denmark, the Ruhr Universitaet Bochum (Germany), the Graz University of Technology (Austria), the University of Bergen (Norway), and the Universiteit Gent (Belgium).",
+      "In 1993 and 1994 he was a research fellow at the University of California at Berkeley."
     ],
     "twitter": false,
     "picture": "Diana-Galetta.jpg"
