@@ -82,11 +82,11 @@
     "How can they respond to these changes and stay relevant?"
   ],
   "moderator": "jenniferbaker",
-  "speakers": ["dominiqueleroy", "mischadohler"],
+  "speakers": ["dominiqueleroy", "mischadohler", "nathalyrey"],
   "color": "yellow",
   "register": true
 }, {
-  "id": "session1",
+  "id": "user-experience",
   "starts": "14:15",
   "ends": "15:30",
   "title": "User experience",
@@ -97,7 +97,7 @@
   "color": "purple",
   "register": true
 }, {
-  "id": "session2",
+  "id": "knowledge-worker",
   "starts": "14:15",
   "ends": "15:30",
   "title": "Knowledge worker: culture, skills, tools",
@@ -108,7 +108,7 @@
   "color": "blue",
   "register": true
 }, {
-  "id": "session3",
+  "id": "open-source",
   "starts": "14:15",
   "ends": "15:30",
   "title": "Open Source: the future for the European institutions",
@@ -140,11 +140,11 @@
     "How are we using these new technological tools, how we will be using them in the future and what impacts will that have?"
   ],
   "moderator": "jenniferbaker",
-  "speakers": ["maxpeterson"],
+  "speakers": ["maxpeterson", "alexandresteiner"],
   "color": "yellow",
   "register": true
 }, {
-  "id": "session4",
+  "id": "policy-making",
   "starts": "16:00",
   "ends": "17:15",
   "title": "Data for policy making",
@@ -155,7 +155,7 @@
   "color": "purple",
   "register": true
 }, {
-  "id": "session5",
+  "id": "interhack",
   "starts": "16:00",
   "ends": "17:15",
   "title": "InterHack experience",
@@ -166,7 +166,7 @@
   "color": "blue",
   "register": true
 }, {
-  "id": "session6",
+  "id": "encryption",
   "starts": "16:00",
   "ends": "17:15",
   "title": "Encryption: blessing or curse for IT security",
@@ -178,7 +178,7 @@
     "• Technical options for defence against misuse of encryption",
     "• The organisational policy and legal issues associated"
   ],
-  "speakers": ["kenducatel"],
+  "speakers": ["kenducatel", "bartpreneel", "keithmartin"],
   "color": "yellow",
   "register": true
 }, {
