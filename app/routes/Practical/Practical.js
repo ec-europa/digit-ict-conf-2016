@@ -16,8 +16,11 @@ import { updateHeaderTitle } from '../../store/modules/layout';
 import styles from './Practical.scss';
 
 // Images
-import androidBrowserImg from './images/menu.jpg';
-import androidHomescreenImg from './images/homescreen.jpg';
+import androidBrowserImg from './images/android-browser.jpg';
+import androidHomescreenImg from './images/android-homescreen.jpg';
+import iosBrowserImg from './images/ios-browser.jpg';
+import iosAddtohomescreenImg from './images/ios-addtohomescreen.jpg';
+import iosHomescreenImg from './images/ios-homescreen.jpg';
 
 export class Practical extends React.Component {
   componentDidMount() {
@@ -65,6 +68,8 @@ export class Practical extends React.Component {
         <div className={styles.header}>
           <h1>Practical</h1>
         </div>
+        <h2>Registration</h2>
+        <p>The event is open to EU institutions' staff only. The registration is available <a href="https://scic.ec.europa.eu/fmi/ezreg/DIGIT-ICT-2016" target="_blank">here</a>.</p>
         <h2>How to get to SQUARE Brussels?</h2>
         <div>
           SQUARE- Brussels Meeting Centre<br />
@@ -77,16 +82,28 @@ export class Practical extends React.Component {
           </a>
         </div>
         <div id="map" ref="map" />
-        <h2>Did you know?</h2>
-        <p>On iOS or with Chrome for Android, you can add DIGITEC to your home screen!</p>
-        <h3>How To</h3>
+        <h2>DIGITEC live</h2>
+        <p>Follow DIGITEC on Twitter (<a href="https://twitter.com/hashtag/digitec16" target="_blank">#digitec16</a>) or via the webstream on 29<sup>th</sup> of November.</p>
+        <h2>DIGITEC on your mobile</h2>
+        <p>On iOS or with Chrome for Android, you can add DIGITEC to your home screen.</p>
+        <h3>Android</h3>
         <p>
           With Chrome for Android, go to the website, open Chrome's menu and click on the "Add to home screen" link.
-          You will be asked to give a name to the app and then, a new icon will be created on your home screen!
+          You will be asked to give a name to the app and then, a new icon will be created on your home screen.
         </p>
         <div className={styles.illustrations}>
           <img src={androidBrowserImg} alt="Chrome Menu" />
           <img src={androidHomescreenImg} alt="Android Home screen" />
+        </div>
+        <h3>iOS</h3>
+        <p>
+          With Safari for iOS, go to the website and tap on the "Share" icon at the bottom (the square with an arrow pointing upwards).
+          Select the "Add to Home Screen" icon. Give your link button a name and click "Add" - your new icon will appear on your home screen.
+        </p>
+        <div className={styles.illustrations}>
+          <img src={iosBrowserImg} alt="iOS Browser" />
+          <img src={iosAddtohomescreenImg} alt="iOS Add to Home screen" />
+          <img src={iosHomescreenImg} alt="iOS Home screen" />
         </div>
       </div>
     );

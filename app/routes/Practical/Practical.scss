@@ -6,6 +6,17 @@
   margin: auto;
   padding: $header-height 1em;
   color: $ict-grey-text;
+
+  a {
+    text-decoration: none;
+    color: $ict-blue;
+
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
 }
 
 .header {
@@ -26,10 +37,10 @@
   flex-wrap: wrap;
 
   img {
-    max-width: 300px;
-    flex-basis: 300px;
+    max-width: 280px;
+    flex-basis: 280px;
     width: 100%;
     height: auto;
-    margin: 1em;
+    margin: 0.5em;
   }
 }
