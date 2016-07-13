@@ -63,7 +63,7 @@ class Programme extends React.Component {
             Choose and save your favourite sessions to <Link to={'/my-digitec'}>My DIGITEC</Link>.
           </p>
         </div>
-        <EventsList events={events} schedule={schedule} onToggle={onToggleEvent} />
+        <EventsList events={events} schedule={schedule} onToggle={onToggleEvent} location={location} />
         {content}
       </div>
     );
@@ -86,7 +86,6 @@ Programme.defaultProps = {
 function mapStateToProps(state) {
   return {
     schedule: state.schedule,
-    modalOpen: state.layout.modalOpen,
   };
 }
 

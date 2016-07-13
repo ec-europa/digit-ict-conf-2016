@@ -38,13 +38,11 @@ function HeaderNavigationItem({ children, to, primary, ...rest }) {
 HeaderNavigationItem.propTypes = {
   children: React.PropTypes.node,
   to: React.PropTypes.string,
-  desktopOnly: React.PropTypes.bool,
   primary: React.PropTypes.bool,
 };
 
 HeaderNavigationItem.defaultProps = {
   to: '/',
-  desktopOnly: false,
   primary: false,
 };
 

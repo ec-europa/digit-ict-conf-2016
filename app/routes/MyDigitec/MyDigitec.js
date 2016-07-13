@@ -64,7 +64,7 @@ class MyDigitec extends React.Component {
           </p>
         </div>
         {myEvents.length > 0
-          ? <EventsList events={myEvents} schedule={schedule} onToggle={onToggleEvent} />
+          ? <EventsList events={myEvents} schedule={schedule} onToggle={onToggleEvent} location={location} />
           : null
         }
         {content}
@@ -89,7 +89,6 @@ MyDigitec.defaultProps = {
 function mapStateToProps(state) {
   return {
     schedule: state.schedule,
-    modalOpen: state.layout.modalOpen,
   };
 }
 

@@ -1,6 +1,6 @@
 /**
 *
-* Speakers/Modal
+* Speakers/Page
 *
 */
 
@@ -8,27 +8,27 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 // Redux actions
-import { toggleEvent } from '../../../../../store/modules/schedule';
+import { toggleEvent } from '../../store/modules/schedule';
 
 // Styles
 import styles from './Modal.scss';
 
 // Content
-import events from '../../../../../../content/events.json';
+import events from '../../../content/events.json';
 
 // Components
-import EventRow from '../../../../../components/Events/Row';
-import Link from '../../../../../components/Link/Link';
+import EventRow from '../Events/Row';
+import Link from '../Link/Link';
 
 // Images
-import twitterLogo from '../images/twitter.png';
+import twitterLogo from './images/twitter.png';
 
-const Modal = ({ speaker, schedule, onToggleEvent }) => {
-  const speakerEvents = events.filter(event => event.speakers.indexOf(speaker.id) > -1);
+const Page = ({ speaker, schedule, onToggleEvent, location }) => {
+  const speakerEvents = events.filter(event => event.speakers.indexOf(speaker.id) > -1 || event.moderator === speaker.id);
   const sessions = speakerEvents.length ? (
     <div>
       <h3>Session{speakerEvents.length > 1 ? 's' : ''}</h3>
-      {speakerEvents.map(event => <EventRow key={event.id} event={event} checked={schedule[event.id]} onToggle={onToggleEvent} />)}
+      {speakerEvents.map(event => <EventRow key={event.id} event={event} checked={schedule[event.id]} onToggle={onToggleEvent} location={location} />)}
     </div>
   ) : '';
 
@@ -38,7 +38,7 @@ const Modal = ({ speaker, schedule, onToggleEvent }) => {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={styles.pageContainer}>
       <div className={styles.header} style={headerStyle} role="img" aria-label={`${speaker.firstname} ${speaker.lastname}`} />
       <div>
         <h3>{speaker.firstname} <span className={styles.lastname}>{speaker.lastname}</span></h3>
@@ -56,14 +56,14 @@ const Modal = ({ speaker, schedule, onToggleEvent }) => {
   );
 };
 
-
-Modal.propTypes = {
+Page.propTypes = {
   speaker: React.PropTypes.object,
   schedule: React.PropTypes.object,
   onToggleEvent: React.PropTypes.func,
+  location: React.PropTypes.object,
 };
 
-Modal.defaultProps = {
+Page.defaultProps = {
   speaker: {},
   schedule: [],
 };
@@ -83,4 +83,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Modal);
+export default connect(mapStateToProps, mapDispatchToProps)(Page);

@@ -19,9 +19,10 @@ const bundler = webpack(webpackConfig);
 browserSync({
   server: {
     baseDir: 'build',
-
     middleware: [
-      history(),
+      history({
+        verbose: true,
+      }),
       webpackDevMiddleware(bundler, {
         // IMPORTANT: dev middleware can't access config, so we should
         // provide publicPath by ourselves
@@ -40,6 +41,7 @@ browserSync({
       webpackHotMiddleware(bundler),
     ],
   },
+  open: 'local',
 
   // no need to watch '*.js' here, webpack will take care of it for us,
   // including full page reloads if HMR won't work

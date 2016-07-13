@@ -21,7 +21,7 @@ const isExternal = (url) => (
 );
 
 function Link({ to, children, activeClassName, ...rest }) {
-  if (isExternal(to)) {
+  if (typeof to === 'string' && isExternal(to)) {
     return (
       <a href={to} {...rest}>{children}</a>
     );

@@ -18,9 +18,11 @@ import { Header, HeaderToggle, HeaderTitle, HeaderLogos, HeaderNavigation, Heade
 import { Drawer, DrawerHeader, DrawerHeaderLogos, DrawerHeaderTitle, DrawerNavigation, DrawerNavigationItem, DrawerNavigationSeparator } from './components/App/Drawer';
 import Footer from './components/App/Footer/Footer';
 import Content from './components/App/Content/Content';
+import Modal from './components/Modal/Modal';
 
 // Styles
 import styles from './App.scss';
+import modalStyles from './components/Modal/Modal.scss';
 
 export class App extends React.Component {
   constructor(props) {
@@ -33,11 +35,34 @@ export class App extends React.Component {
     window.addEventListener('scroll', this.scrollListener);
   }
 
-  componentWillUpdate({ drawerOpen, modalOpen }) {
-    if (drawerOpen || modalOpen) {
+  componentWillReceiveProps(nextProps) {
+    // if we changed routes...
+    if (nextProps.location.key !== this.props.location.key) {
+      if (nextProps.location.state && nextProps.location.state.modal) {
+        // save the old children (just like animation)
+        if (!this.wasModal) {
+          this.previousChildren = this.props.children;
+        }
+        this.wasModal = true;
+      } else {
+        this.wasModal = false;
+      }
+    }
+  }
+
+  componentWillUpdate({ drawerOpen, location }) {
+    const isModal = (
+      location.state &&
+      location.state.modal &&
+      this.previousChildren
+    );
+
+    if (drawerOpen || isModal) {
       document.body.style.overflow = 'hidden';
+      document.body.setAttribute('aria-hidden', 'true');
     } else {
       document.body.style.overflow = 'auto';
+      document.body.setAttribute('aria-hidden', 'false');
     }
   }
 
@@ -58,23 +83,24 @@ export class App extends React.Component {
       headerPinned,
       headerUnpinned,
       onToggleDrawer,
-      modalOpen,
       headerTitle,
     } = this.props;
 
-    let childrenKey;
-    // Group children pages (under "speakers" or "programme")
-    if (location.pathname.indexOf('speakers') > -1) {
-      childrenKey = 'speakers';
-    } else if (location.pathname.indexOf('programme') > -1) {
-      childrenKey = 'programme';
-    } else {
-      childrenKey = location.pathname;
-    }
+    const isModal = (
+      location.state &&
+      location.state.modal &&
+      this.previousChildren
+    );
+
+    const mainChildren = isModal ?
+      this.previousChildren :
+      children;
+    const modalChildren = isModal ? children : null;
+    const childrenKey = isModal ? location.state.returnTo : location.pathname;
 
     const containerClasses = classnames(
       styles.container,
-      { [`${styles.containerNoOverflow}`]: modalOpen }
+      { [`${styles.containerNoOverflow}`]: isModal }
     );
 
     return (
@@ -120,12 +146,28 @@ export class App extends React.Component {
             transitionEnterTimeout={300}
             transitionLeaveTimeout={10}
           >
-            {React.cloneElement(children, {
+            {React.cloneElement(mainChildren, {
               key: childrenKey,
             })}
           </ReactCSSTransitionGroup>
         </Content>
         <Footer />
+        <ReactCSSTransitionGroup
+          transitionName={{
+            enter: modalStyles.enter,
+            enterActive: modalStyles.enterActive,
+            leave: modalStyles.leave,
+            leaveActive: modalStyles.leaveActive,
+          }}
+          transitionEnterTimeout={300}
+          transitionLeaveTimeout={300}
+        >
+          {isModal ? (
+            <Modal returnTo={location.state.returnTo} key={location.pathname}>
+              {modalChildren}
+            </Modal>
+        ) : null}
+        </ReactCSSTransitionGroup>
       </div>
     );
   }
@@ -139,7 +181,6 @@ App.propTypes = {
   headerUnpinned: React.PropTypes.bool,
   onToggleDrawer: React.PropTypes.func,
   onScroll: React.PropTypes.func,
-  modalOpen: React.PropTypes.bool,
   headerTitle: React.PropTypes.string,
 };
 
@@ -148,7 +189,6 @@ function mapStateToProps(state) {
     drawerOpen: state.layout.drawerIsOpen,
     headerPinned: state.layout.headerPinned,
     headerUnpinned: state.layout.headerUnpinned,
-    modalOpen: state.layout.modalOpen,
     headerTitle: state.layout.headerTitle,
   };
 }

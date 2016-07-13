@@ -8,7 +8,7 @@ import React from 'react';
 import Row from './Row';
 import styles from './List.scss';
 
-const List = ({ events, schedule, onToggle }) => {
+const List = ({ events, schedule, onToggle, location }) => {
   const eventsDisplay = [];
 
   const eventsByTimeslot = [];
@@ -23,7 +23,7 @@ const List = ({ events, schedule, onToggle }) => {
     const eventsList = eventsByTimeslot[start];
 
     const eventsRows = eventsList.map(event => (
-      <Row key={event.id} event={event} checked={schedule[event.id]} onToggle={onToggle} displayTime={false} />
+      <Row key={event.id} event={event} checked={schedule[event.id]} onToggle={onToggle} displayTime={false} location={location} />
     ));
 
     const eventsEnds = eventsList[0].ends ? (
@@ -51,6 +51,7 @@ List.propTypes = {
   events: React.PropTypes.array,
   schedule: React.PropTypes.object,
   onToggle: React.PropTypes.func,
+  location: React.PropTypes.object,
 };
 
 List.defaultProps = {

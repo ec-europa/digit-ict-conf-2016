@@ -1,6 +1,6 @@
 import Speaker from './Speaker';
 
-export default function createRoute(path = ':speakerId') {
+export default function createRoute(path = 'speaker/:speakerId') {
   return {
     path,
     component: Speaker,

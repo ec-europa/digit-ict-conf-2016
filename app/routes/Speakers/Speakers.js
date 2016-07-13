@@ -35,7 +35,7 @@ class Speakers extends React.Component {
         <div className={styles.header}>
           <h1>Speakers</h1>
         </div>
-        <SpeakersList speakers={speakers} onOpenModal={onOpenModal} />
+        <SpeakersList speakers={speakers} onOpenModal={onOpenModal} location={location} />
         <ReactCSSTransitionGroup
           transitionName={{
             enter: modalStyles.enter,
@@ -64,12 +64,6 @@ Speakers.propTypes = {
   location: React.PropTypes.object,
 };
 
-function mapStateToProps(state) {
-  return {
-    modalOpen: state.layout.modalOpen,
-  };
-}
-
 function mapDispatchToProps(dispatch) {
   return {
     onOpenModal: () => {
@@ -81,4 +75,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Speakers);
+export default connect(null, mapDispatchToProps)(Speakers);

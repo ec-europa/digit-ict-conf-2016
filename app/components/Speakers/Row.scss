@@ -1,22 +1,4 @@
-@import '../../../../../theme/variables';
-
-.container {
-  padding: 1em;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow: auto;
-
-  h1 {
-    font-size: 2em;
-  }
-
-  h2 {
-    font-size: 1.5em;
-  }
-}
+@import '../../theme/variables';
 
 .speakerContainer {
   display: flex;
@@ -49,15 +31,23 @@
   h3 {
     font-size: 1.3em;
     margin: 0;
-  }
 
-  h4 {
-    font-size: 1em;
-    font-weight: 400;
-    margin: 0;
+    a {
+      color: $ict-grey-text;
+      text-decoration: none;
+
+      &:hover,
+      &:focus,
+      &:active {
+        text-decoration: underline;
+      }
+    }
   }
 }
 
 .title {
+  font-size: 1em;
+  font-weight: 400;
+  margin: 0;
   color: $ict-blue;
 }
