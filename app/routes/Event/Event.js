@@ -27,7 +27,13 @@ export class Event extends React.Component {
 
     // Force "returnTo" when accessing the page direclty
     if (props.location.action === 'POP') {
-      props.location.state.returnTo = props.location.pathname; // eslint-disable-line
+      if (props.location.state) {
+        props.location.state.returnTo = props.location.pathname; // eslint-disable-line
+      } else {
+        props.location.state = { // eslint-disable-line
+          returnTo: props.location.pathname,
+        };
+      }
     }
   }
 
