@@ -24,7 +24,12 @@
   "ends": "11:00",
   "title": "Panel 1: Workplace of the future",
   "venue": "Gold Hall",
-  "description": [],
+  "description": [
+    "Conceiving the workplace of the future is instrumental to the way of working in the European institutions and their future development. Join the debate on:",
+    "What does a human-centred digital workplace look like?",
+    "What type of organisation knowledge workers want and how can IT solutions enable it?",
+    "What culture for the workplace of the future?"
+  ],
   "moderator": "jenniferbaker",
   "speakers": ["paulmiller", "laurentledoux", "paulboag"],
   "color": "blue",
@@ -45,7 +50,12 @@
   "ends": "12:45",
   "title": "Panel 2: Digital democracy",
   "venue": "Gold Hall",
-  "description": [],
+  "description": [
+    "Digital platforms are bringing about a new level of interaction between government and citizens and between IT services and customers. Take part in the debate on:",
+    "How to reach a new generation of connected audiences?",
+    "How to know your audience and respond better to its needs?",
+    "How to design a better digital delivery of services?"
+  ],
   "moderator": "jenniferbaker",
   "speakers": ["davidborrelli", "katekahle", "sabinesipunova"],
   "color": "purple",
@@ -65,7 +75,12 @@
   "ends": "15:30",
   "title": "Panel 3: Technologies of the future",
   "venue": "Gold Hall",
-  "description": [],
+  "description": [
+    "Today's world is marked by increasingly sophisticated technologies and fast-evolving trends, such as the rise of big data, the cloud, mobile devices and collaborative working. The right balance between consumers' expectations and the impact of change management combined with security and corporate constraints will have to be defined. Join the debate on:",
+    "How the Internet is evolving and what does it mean for our identity, privacy and jobs skills?",
+    "What are the challenges for large organisations?",
+    "How can they respond to these changes and stay relevant?"
+  ],
   "moderator": "jenniferbaker",
   "speakers": ["dominiqueleroy", "mischadohler"],
   "color": "yellow",
@@ -76,7 +91,7 @@
   "ends": "15:30",
   "title": "User experience",
   "description": [
-    "Workshop: Paul Boag, User Experience consultant"
+    "What are the benefits of becoming user centric and digital first? With this workshop Paul Boag will help participants adopt digital best practice."
   ],
   "speakers": ["paulboag"],
   "color": "purple",
@@ -87,7 +102,7 @@
   "ends": "15:30",
   "title": "Knowledge worker: culture, skills, tools",
   "description": [
-    "Knowledge workers of the future - what do they need?"
+    "This session will try to look into how knowledge workers thrive and bring value, energising and motivating the teams around them. What skills do they have? What else do they need to perform better? How we can change the culture and environment to have even more synergies and collaboration in a knowledge-driven organisation?"
   ],
   "speakers": [],
   "color": "blue",
@@ -118,7 +133,12 @@
   "ends": "17:15",
   "title": "Panel 4: Technologies of the future (continued)",
   "venue": "Gold Hall",
-  "description": [],
+  "description": [
+    "Today's world is marked by increasingly sophisticated technologies and fast-evolving trends, such as the rise of big data, the cloud, mobile devices and collaborative working. The right balance between consumers' expectations and the impact of change management combined with security and corporate constraints will have to be defined. Take part in the debate on:",
+    "What are the lessons learned from private and public cloud adoption?",
+    "What exactly is big data and how big is it?",
+    "How are we using these new technological tools, how we will be using them in the future and what impacts will that have?"
+  ],
   "moderator": "jenniferbaker",
   "speakers": ["maxpeterson"],
   "color": "yellow",
@@ -140,7 +160,7 @@
   "ends": "17:15",
   "title": "InterHack experience",
   "description": [
-    "Results from the inter-institutional hackathon"
+    "The first inter-institutional hackathon will bring together IT professionals from the European Parliament, the European Commission and the Council of the EU in October. The results and lessons learned from the collaboration will be presented in this session."
   ],
   "speakers": [],
   "color": "blue",
@@ -151,7 +171,12 @@
   "ends": "17:15",
   "title": "Encryption: blessing or curse for IT security",
   "description": [
-    "Moderator: Ken Ducatel, IT Security Directorate, DIGIT "
+    "Encryption plays a crucial role in securing information systems and the business data they contain. External communications are routinely encrypted and network traffic inside an organisation is increasingly encrypted to reduce the risk that attackers that can get access to an organisation's vital information. Increasingly it is standard practice that information is encrypted for storage.",
+    "But encryption can also be exploited by attackers. Malware can be hidden inside incoming encrypted communications so as to avoid antivirus scanning and to cover the exfiltration of sensitive information from data loss prevention systems. IT security defenders are looking for ways to look inside such traffic to protect the organisation.",
+    "What are the legally sound, organisationally proportionate and technically effective measures that can be used to protect business systems against the misuse of encryption? This session will examine:",
+    "• The risks associated with the use of encryption in an organisation",
+    "• Technical options for defence against misuse of encryption",
+    "• The organisational policy and legal issues associated"
   ],
   "speakers": ["kenducatel"],
   "color": "yellow",
