@@ -1,10 +1,8 @@
-import Programme from './container/Programme';
-import childRoutes from './routes';
+import Programme from './Programme';
 
 export default function createRoute(path = 'programme') {
   return {
     path,
     component: Programme,
-    childRoutes,
   };
 }

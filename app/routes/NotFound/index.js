@@ -1,4 +1,4 @@
-import NotFound from './container/NotFound';
+import NotFound from './NotFound';
 
 export default function createRoute(path = '*') {
   return {

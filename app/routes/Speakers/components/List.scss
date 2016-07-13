@@ -1,0 +1,11 @@
+@import '../../../theme/variables';
+
+.container {
+  max-width: $max-width;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 15px;
+}

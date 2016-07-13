@@ -2,28 +2,19 @@
  * Create the store
  */
 
-import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
+import { createStore, compose, combineReducers } from 'redux';
 import { persistStore, autoRehydrate } from 'redux-persist';
-import { routerMiddleware } from 'react-router-redux';
 
-import route from './modules/route';
 import schedule from './modules/schedule';
 import layout from './modules/layout';
 
-export default function configureStore(history) {
+export default function configureStore() {
   const reducer = combineReducers({
-    route,
     schedule,
     layout,
   });
 
-  // routerMiddleware: Syncs the location/URL path to the state
-  const middlewares = [
-    routerMiddleware(history),
-  ];
-
   const enhancers = [
-    applyMiddleware(...middlewares),
     autoRehydrate(),
   ];
 
