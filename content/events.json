@@ -112,9 +112,7 @@
   "starts": "14:15",
   "ends": "15:30",
   "title": "Open Source: the future for the European institutions",
-  "description": [
-    "Guest speaker: Julia Reda, Member of the European Parliament"
-  ],
+  "description": [],
   "speakers": ["juliareda"],
   "color": "yellow",
   "register": true
@@ -148,9 +146,7 @@
   "starts": "16:00",
   "ends": "17:15",
   "title": "Data for policy making",
-  "description": [
-    "Guests: Prof. Mercedes Fuertes, Madrid and Prof. Diana Galetta, University of Milan"
-  ],
+  "description": [],
   "speakers": ["mercedesfuertes", "dianauraniagaletta"],
   "color": "purple",
   "register": true
