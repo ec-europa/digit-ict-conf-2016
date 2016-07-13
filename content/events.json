@@ -43,7 +43,7 @@
   "id": "panel2",
   "starts": "11:30",
   "ends": "12:45",
-  "title": "Panel 2: Digital Democracy",
+  "title": "Panel 2: Digital democracy",
   "venue": "Gold Hall",
   "description": [],
   "moderator": "jenniferbaker",
@@ -63,7 +63,7 @@
   "id": "panel3",
   "starts": "14:15",
   "ends": "15:30",
-  "title": "Panel 3: Technologies of the Future",
+  "title": "Panel 3: Technologies of the future",
   "venue": "Gold Hall",
   "description": [],
   "moderator": "jenniferbaker",
@@ -85,7 +85,7 @@
   "id": "session2",
   "starts": "14:15",
   "ends": "15:30",
-  "title": "Knowledge worker: Culture, Skills, Tools",
+  "title": "Knowledge worker: culture, skills, tools",
   "description": [
     "Knowledge workers of the future - what do they need?"
   ],
@@ -96,7 +96,7 @@
   "id": "session3",
   "starts": "14:15",
   "ends": "15:30",
-  "title": "Open Source: the Future for the European Institutions",
+  "title": "Open Source: the future for the European institutions",
   "description": [
     "Guest speaker: Julia Reda, Member of the European Parliament"
   ],
@@ -116,7 +116,7 @@
   "id": "panel4",
   "starts": "16:00",
   "ends": "17:15",
-  "title": "Panel 4: Technologies of the Future (continued)",
+  "title": "Panel 4: Technologies of the future (continued)",
   "venue": "Gold Hall",
   "description": [],
   "moderator": "jenniferbaker",
@@ -138,7 +138,7 @@
   "id": "session5",
   "starts": "16:00",
   "ends": "17:15",
-  "title": "InterHack Experience",
+  "title": "InterHack experience",
   "description": [
     "Results from the inter-institutional hackathon"
   ],
@@ -149,7 +149,7 @@
   "id": "session6",
   "starts": "16:00",
   "ends": "17:15",
-  "title": "Encryption: Blessing or Curse for IT Security",
+  "title": "Encryption: blessing or curse for IT security",
   "description": [
     "Moderator: Ken Ducatel, IT Security Directorate, DIGIT "
   ],
