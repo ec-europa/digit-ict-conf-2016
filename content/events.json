@@ -102,7 +102,7 @@
   "ends": "15:30",
   "title": "Knowledge worker: culture, skills, tools",
   "description": [
-    "This session will try to look into how knowledge workers thrive and bring value, energising and motivating the teams around them. What skills do they have? What else do they need to perform better? How we can change the culture and environment to have even more synergies and collaboration in a knowledge-driven organisation?"
+    "This session will look into how knowledge workers thrive and bring value, energising and motivating the teams around them. What skills do they have? What else do they need to perform better? How we can change the culture and environment to have even more synergies and collaboration in a knowledge-driven organisation?"
   ],
   "speakers": [],
   "color": "blue",
@@ -155,6 +155,7 @@
   "starts": "16:00",
   "ends": "17:15",
   "title": "InterHack experience",
+  "visual": "int_hack.png",
   "description": [
     "The first inter-institutional hackathon will bring together IT professionals from the European Parliament, the European Commission and the Council of the EU in October. The results and lessons learned from the collaboration will be presented in this session."
   ],

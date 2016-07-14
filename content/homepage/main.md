@@ -4,4 +4,4 @@ The forum will bring together the IT communities of the European institutions to
 
 Join us to discuss how the digital future will shape the way of working in large organisations.
 
-Follow the talks around the <span style="color:#109FA7">**workplace of the future**</span>, <span style="color:#7E4098">**digital democracy**</span> and <span style="color:#D6DF32">**technologies of the future**</span>.
+Follow the talks around the **workplace of the future**, **digital democracy** and **technologies of the future**.

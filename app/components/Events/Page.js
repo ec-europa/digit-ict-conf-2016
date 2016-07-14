@@ -53,6 +53,9 @@ const Page = ({ event, location }) => {
       <h1>{event.title}</h1>
       <h2>{startsAt}{event.ends ? ' - ' : ''}{endsAt}{venue}</h2>
       <div className={styles.name}>
+        {event.visual && (
+          <img className={styles.visual} src={`${__BASENAME__}/assets/images/events/${event.visual}`} alt={event.title} />
+        )}
         {event.description.map((line, index) => (<p key={index}>{line}</p>))}
       </div>
       {moderatorBlock}
