@@ -35,7 +35,7 @@
   "color": "blue",
   "register": true
 }, {
-  "id": "coffeeMorning",
+  "id": "coffee-morning",
   "starts": "11:00",
   "ends": "11:30",
   "title": "Coffee break and DIGITEC exhibition",
@@ -117,7 +117,7 @@
   "color": "yellow",
   "register": true
 }, {
-  "id": "coffeeAfternoon",
+  "id": "coffee-afternoon",
   "starts": "15:30",
   "ends": "16:00",
   "title": "Coffee break and DIGITEC exhibition",
@@ -142,10 +142,10 @@
   "color": "yellow",
   "register": true
 }, {
-  "id": "policy-making",
+  "id": "e-democracy",
   "starts": "16:00",
   "ends": "17:15",
-  "title": "Data for policy making",
+  "title": "eDemocracy",
   "description": [],
   "speakers": ["mercedesfuertes", "dianauraniagaletta"],
   "color": "purple",
