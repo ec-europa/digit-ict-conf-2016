@@ -1,0 +1,53 @@
+@import '../../theme/variables';
+
+.speakerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.speakerPicture {
+  width: 150px;
+  margin: 10px;
+  text-align: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+  background-color: #000;
+
+  img {
+    width: 100%;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.speakerInfo {
+  flex-grow: 1;
+
+  h3 {
+    font-size: 1.3em;
+    margin: 0;
+
+    a {
+      color: $ict-grey-text;
+      text-decoration: none;
+
+      &:hover,
+      &:focus,
+      &:active {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.title {
+  font-size: 1em;
+  font-weight: 400;
+  margin: 0;
+  color: $ict-blue;
+}

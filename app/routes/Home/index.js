@@ -1,4 +1,4 @@
-import Home from './container/Home';
+import Home from './Home';
 
 export default function createRoute(path = '/') {
   return {

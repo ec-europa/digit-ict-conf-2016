@@ -35,7 +35,7 @@
   "color": "blue",
   "register": true
 }, {
-  "id": "coffeeMorning",
+  "id": "coffee-morning",
   "starts": "11:00",
   "ends": "11:30",
   "title": "Coffee break and DIGITEC exhibition",
@@ -82,11 +82,11 @@
     "How can they respond to these changes and stay relevant?"
   ],
   "moderator": "jenniferbaker",
-  "speakers": ["dominiqueleroy", "mischadohler"],
+  "speakers": ["dominiqueleroy", "mischadohler", "nathalyrey"],
   "color": "yellow",
   "register": true
 }, {
-  "id": "session1",
+  "id": "user-experience",
   "starts": "14:15",
   "ends": "15:30",
   "title": "User experience",
@@ -97,29 +97,27 @@
   "color": "purple",
   "register": true
 }, {
-  "id": "session2",
+  "id": "knowledge-worker",
   "starts": "14:15",
   "ends": "15:30",
   "title": "Knowledge worker: culture, skills, tools",
   "description": [
-    "This session will try to look into how knowledge workers thrive and bring value, energising and motivating the teams around them. What skills do they have? What else do they need to perform better? How we can change the culture and environment to have even more synergies and collaboration in a knowledge-driven organisation?"
+    "This session will look into how knowledge workers thrive and bring value, energising and motivating the teams around them. What skills do they have? What else do they need to perform better? How we can change the culture and environment to have even more synergies and collaboration in a knowledge-driven organisation?"
   ],
   "speakers": [],
   "color": "blue",
   "register": true
 }, {
-  "id": "session3",
+  "id": "open-source",
   "starts": "14:15",
   "ends": "15:30",
   "title": "Open Source: the future for the European institutions",
-  "description": [
-    "Guest speaker: Julia Reda, Member of the European Parliament"
-  ],
+  "description": [],
   "speakers": ["juliareda"],
   "color": "yellow",
   "register": true
 }, {
-  "id": "coffeeAfternoon",
+  "id": "coffee-afternoon",
   "starts": "15:30",
   "ends": "16:00",
   "title": "Coffee break and DIGITEC exhibition",
@@ -140,25 +138,24 @@
     "How are we using these new technological tools, how we will be using them in the future and what impacts will that have?"
   ],
   "moderator": "jenniferbaker",
-  "speakers": ["maxpeterson"],
+  "speakers": ["maxpeterson", "alexandresteiner"],
   "color": "yellow",
   "register": true
 }, {
-  "id": "session4",
+  "id": "e-democracy",
   "starts": "16:00",
   "ends": "17:15",
   "title": "eDemocracy",
-  "description": [
-    "Guests: Prof. Mercedes Fuertes, Madrid and Prof. Diana Galetta, University of Milan"
-  ],
+  "description": [],
   "speakers": ["mercedesfuertes", "dianauraniagaletta"],
   "color": "purple",
   "register": true
 }, {
-  "id": "session5",
+  "id": "interhack",
   "starts": "16:00",
   "ends": "17:15",
   "title": "InterHack experience",
+  "visual": "int_hack.png",
   "description": [
     "The first inter-institutional hackathon will bring together IT professionals from the European Parliament, the European Commission and the Council of the EU in October. The results and lessons learned from the collaboration will be presented in this session."
   ],
@@ -166,7 +163,7 @@
   "color": "blue",
   "register": true
 }, {
-  "id": "session6",
+  "id": "encryption",
   "starts": "16:00",
   "ends": "17:15",
   "title": "Encryption: blessing or curse for IT security",
@@ -178,7 +175,7 @@
     "• Technical options for defence against misuse of encryption",
     "• The organisational policy and legal issues associated"
   ],
-  "speakers": ["kenducatel"],
+  "speakers": ["kenducatel", "bartpreneel", "keithmartin"],
   "color": "yellow",
   "register": true
 }, {

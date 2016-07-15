@@ -1,10 +1,8 @@
-import Speakers from './container/Speakers';
-import childRoutes from './routes';
+import Speakers from './Speakers';
 
 export default function createRoute(path = 'speakers') {
   return {
     path,
     component: Speakers,
-    childRoutes,
   };
 }

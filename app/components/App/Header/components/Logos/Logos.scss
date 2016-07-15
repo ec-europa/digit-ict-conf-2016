@@ -1,0 +1,24 @@
+@import '../../../../../theme/breakpoints';
+
+.container {
+  display: none;
+
+  @include mappy-bp(medium) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 26px;
+  }
+}
+
+.link {
+  margin: 0 4px;
+}
+
+.europaLogo {
+  height: 38px;
+}
+
+.ictLogo {
+  height: 50px;
+}

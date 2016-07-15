@@ -1,0 +1,39 @@
+@import '../../theme/variables';
+
+.modalContainer {
+  padding: 1em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+}
+
+.pageContainer {
+  max-width: $max-width;
+  margin: auto;
+  padding: ($header-height+1em) 1em $header-height;
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+}
+
+.visual {
+  margin: auto;
+  display: block;
+  max-width: 100%;
+}

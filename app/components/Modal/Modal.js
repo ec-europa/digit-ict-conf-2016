@@ -5,6 +5,9 @@
 */
 
 import React from 'react';
+import { withRouter } from 'react-router';
+
+// Styles
 import styles from './Modal.scss';
 
 export class Modal extends React.Component {
@@ -15,13 +18,10 @@ export class Modal extends React.Component {
   }
 
   componentDidMount() {
-    this.props.onOpenModal();
     document.addEventListener('keydown', this.handleKeyDown);
-    document.body.setAttribute('aria-hidden', 'true');
   }
 
   componentWillUnmount() {
-    document.body.setAttribute('aria-hidden', 'false');
     document.removeEventListener('keydown', this.handleKeyDown);
   }
 
@@ -34,7 +34,8 @@ export class Modal extends React.Component {
   }
 
   close() {
-    return this.props.onCloseModal();
+    const { router, returnTo } = this.props;
+    return router.push(returnTo);
   }
 
   render() {
@@ -52,9 +53,9 @@ export class Modal extends React.Component {
 }
 
 Modal.propTypes = {
-  onOpenModal: React.PropTypes.func,
-  onCloseModal: React.PropTypes.func,
   children: React.PropTypes.node,
+  router: React.PropTypes.object,
+  returnTo: React.PropTypes.string,
 };
 
-export default Modal;
+export default withRouter(Modal);

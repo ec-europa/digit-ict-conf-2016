@@ -22,8 +22,11 @@ const initialState = {
   lastScrollTop: 0,
   headerPinned: true,
   headerUnpinned: false,
-  modalOpen: false,
   headerTitle: '',
+  modal: {
+    open: false,
+    reference: null,
+  },
   snackbar: {
     open: false,
     message: '',
@@ -44,7 +47,9 @@ export default function reducer(state = initialState, action) {
       return Object.assign({}, state, { drawerIsOpen: false });
     case OPEN_MODAL:
       return Object.assign({}, state, {
-        modalOpen: true,
+        modal: {
+          open: true,
+        },
       });
     case OPEN_SNACKBAR:
       return Object.assign({}, state, {
@@ -64,7 +69,9 @@ export default function reducer(state = initialState, action) {
       });
     case CLOSE_MODAL:
       return Object.assign({}, state, {
-        modalOpen: false,
+        modal: {
+          open: false,
+        },
       });
     case UPDATE_HEADER_TITLE:
       return Object.assign({}, state, {
