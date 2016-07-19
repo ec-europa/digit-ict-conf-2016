@@ -5,6 +5,7 @@
 */
 
 import React from 'react';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import Row from './Row';
 import styles from './List.scss';
 
@@ -36,14 +37,34 @@ const List = ({ events, schedule, onToggle, location }) => {
           <time>{eventsList[0].starts}</time>{eventsEnds ? ' - ' : ''}{eventsEnds}
         </div>
         <div className={styles.events}>
-          {eventsRows}
+          <ReactCSSTransitionGroup
+            transitionName={{
+              leave: styles.rowLeave,
+              leaveActive: styles.rowLeaveActive,
+            }}
+            transitionEnterTimeout={300}
+            transitionLeaveTimeout={300}
+          >
+            {eventsRows}
+          </ReactCSSTransitionGroup>
         </div>
       </div>
     );
   });
 
   return (
-    <div>{eventsDisplay}</div>
+    <div>
+      <ReactCSSTransitionGroup
+        transitionName={{
+          leave: styles.leave,
+          leaveActive: styles.leaveActive,
+        }}
+        transitionEnterTimeout={300}
+        transitionLeaveTimeout={300}
+      >
+        {eventsDisplay}
+      </ReactCSSTransitionGroup>
+    </div>
   );
 };
 
