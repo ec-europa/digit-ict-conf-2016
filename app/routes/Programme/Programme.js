@@ -6,7 +6,6 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import Helmet from 'react-helmet';
 
 // Redux actions
@@ -21,7 +20,6 @@ import Link from '../../components/Link/Link';
 import events from '../../../content/events.json';
 
 // Styles
-import modalStyles from '../../components/Modal/Modal.scss';
 import styles from './Programme.scss';
 
 
@@ -31,26 +29,7 @@ class Programme extends React.Component {
   }
 
   render() {
-    const { schedule, onToggleEvent, children, location } = this.props;
-
-    const content = (
-      <ReactCSSTransitionGroup
-        transitionName={{
-          enter: modalStyles.enter,
-          enterActive: modalStyles.enterActive,
-          appear: modalStyles.enter,
-          appearActive: modalStyles.enterActive,
-          leave: modalStyles.leave,
-          leaveActive: modalStyles.leaveActive,
-        }}
-        transitionEnterTimeout={300}
-        transitionLeaveTimeout={300}
-        transitionAppear
-        transitionAppearTimeout={300}
-      >
-        {children ? React.cloneElement(children, { key: location.pathname }) : null}
-      </ReactCSSTransitionGroup>
-    );
+    const { schedule, onToggleEvent, location } = this.props;
 
     return (
       <div className={styles.container}>
@@ -64,7 +43,6 @@ class Programme extends React.Component {
           </p>
         </div>
         <EventsList events={events} schedule={schedule} onToggle={onToggleEvent} location={location} />
-        {content}
       </div>
     );
   }
@@ -75,7 +53,6 @@ Programme.propTypes = {
   onToggleEvent: React.PropTypes.func,
   onOpenModal: React.PropTypes.func,
   onUpdateHeaderTitle: React.PropTypes.func,
-  children: React.PropTypes.node,
   location: React.PropTypes.object,
 };
 

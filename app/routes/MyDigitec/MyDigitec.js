@@ -6,7 +6,6 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import Helmet from 'react-helmet';
 
 // Load Redux actions
@@ -21,7 +20,6 @@ import Link from '../../components/Link/Link';
 import events from '../../../content/events.json';
 
 // Load styles
-import modalStyles from '../../components/Modal/Modal.scss';
 import styles from './MyDigitec.scss';
 
 class MyDigitec extends React.Component {
@@ -30,27 +28,8 @@ class MyDigitec extends React.Component {
   }
 
   render() {
-    const { schedule, onToggleEvent, children, location } = this.props;
+    const { schedule, onToggleEvent, location } = this.props;
     const myEvents = events.filter(event => schedule[event.id] || event.register === false);
-
-    const content = (
-      <ReactCSSTransitionGroup
-        transitionName={{
-          enter: modalStyles.enter,
-          enterActive: modalStyles.enterActive,
-          appear: modalStyles.enter,
-          appearActive: modalStyles.enterActive,
-          leave: modalStyles.leave,
-          leaveActive: modalStyles.leaveActive,
-        }}
-        transitionEnterTimeout={300}
-        transitionLeaveTimeout={300}
-        transitionAppear
-        transitionAppearTimeout={300}
-      >
-        {children ? React.cloneElement(children, { key: location.pathname }) : null}
-      </ReactCSSTransitionGroup>
-    );
 
     return (
       <div className={styles.container}>
@@ -63,11 +42,9 @@ class MyDigitec extends React.Component {
             "My DIGITEC" helps you personalise your experience. Select your favourite sessions from <Link to={'/programme'}>DIGITEC programme</Link>.
           </p>
         </div>
-        {myEvents.length > 0
-          ? <EventsList events={myEvents} schedule={schedule} onToggle={onToggleEvent} location={location} />
-          : null
-        }
-        {content}
+        {myEvents.length > 0 && (
+          <EventsList events={myEvents} schedule={schedule} onToggle={onToggleEvent} location={location} />
+        )}
       </div>
     );
   }
@@ -78,7 +55,6 @@ MyDigitec.propTypes = {
   onToggleEvent: React.PropTypes.func,
   onOpenModal: React.PropTypes.func,
   onUpdateHeaderTitle: React.PropTypes.func,
-  children: React.PropTypes.node,
   location: React.PropTypes.object,
 };
 
