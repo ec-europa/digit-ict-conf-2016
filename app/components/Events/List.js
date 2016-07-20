@@ -6,6 +6,7 @@
 
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import FlipMove from 'react-flip-move';
 import Row from './Row';
 import styles from './List.scss';
 
@@ -37,16 +38,14 @@ const List = ({ events, schedule, onToggle, location }) => {
           <time>{eventsList[0].starts}</time>{eventsEnds ? ' - ' : ''}{eventsEnds}
         </div>
         <div className={styles.events}>
-          <ReactCSSTransitionGroup
-            transitionName={{
-              leave: styles.rowLeave,
-              leaveActive: styles.rowLeaveActive,
-            }}
-            transitionEnterTimeout={300}
-            transitionLeaveTimeout={300}
+          <FlipMove
+            easing="ease"
+            duration="700"
+            staggerDurationBy="15"
+            staggerDelayBy="20"
           >
             {eventsRows}
-          </ReactCSSTransitionGroup>
+          </FlipMove>
         </div>
       </div>
     );
@@ -54,16 +53,14 @@ const List = ({ events, schedule, onToggle, location }) => {
 
   return (
     <div>
-      <ReactCSSTransitionGroup
-        transitionName={{
-          leave: styles.leave,
-          leaveActive: styles.leaveActive,
-        }}
-        transitionEnterTimeout={300}
-        transitionLeaveTimeout={300}
+      <FlipMove
+        easing="ease"
+        duration="700"
+        staggerDurationBy="15"
+        staggerDelayBy="20"
       >
         {eventsDisplay}
-      </ReactCSSTransitionGroup>
+      </FlipMove>
     </div>
   );
 };

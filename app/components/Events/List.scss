@@ -32,29 +32,3 @@
   flex-direction: column;
   flex-grow: 1;
 }
-
-.leave {
-  opacity: 1;
-  transform: translateX(0);
-  transition:
-    transform 300ms ease-in,
-    opacity 300ms ease-in;
-}
-
-.leave.leaveActive {
-  opacity: 0;
-  transform: translateX(15em);
-}
-
-.rowLeave {
-  opacity: 1;
-  transform: translateX(0);
-  transition:
-    transform 300ms ease-in,
-    opacity 300ms ease-in;
-}
-
-.rowLeave.rowLeaveActive {
-  opacity: 0;
-  transform: translateX(15em);
-}
