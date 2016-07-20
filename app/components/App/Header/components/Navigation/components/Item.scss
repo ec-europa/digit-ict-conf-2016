@@ -16,20 +16,36 @@
   flex-grow: 1;
   color: $ict-grey-text;
   text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.2s linear;
   padding: 2px 0;
+  display: inline-block;
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 1px;
+    width: 0;
+    background: transparent;
+    transition: width 0.3s ease, background-color 0.3s ease;
+  }
 
   &:hover,
   &:focus,
   &:active {
-    border-bottom: 1px solid $ict-grey-text;
+    &::after {
+      width: 100%;
+      background: $ict-grey-text;
+    }
   }
 }
 
 .active {
   font-weight: 400;
-  border-bottom: 1px solid $ict-grey-text;
+  &::after {
+    width: 100%;
+    background: $ict-grey-text;
+  }
 }
 
 .primary {
@@ -38,8 +54,9 @@
 
   &:hover,
   &:focus,
-  &:active,
-  &.active {
-    border-bottom: 1px solid $ict-blue;
+  &:active {
+    &::after {
+      background: $ict-blue;
+    }
   }
 }
