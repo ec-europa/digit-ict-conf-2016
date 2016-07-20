@@ -5,7 +5,6 @@
 */
 
 import React from 'react';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import FlipMove from 'react-flip-move';
 import Row from './Row';
 import styles from './List.scss';
