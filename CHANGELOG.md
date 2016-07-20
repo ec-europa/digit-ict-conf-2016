@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.10.0"></a>
+# [0.10.0](https://github.com/ec-europa/digit-ict-conf-2016/compare/v0.9.0...v0.10.0) (2016-07-20)
+
+
+### Bug Fixes
+
+* **alt:** bad formatted alt tag ([a26a912](https://github.com/ec-europa/digit-ict-conf-2016/commit/a26a912))
+* **location:** check that location's exists or create it ([068cac1](https://github.com/ec-europa/digit-ict-conf-2016/commit/068cac1))
+* **ui:** small ui fixes ([08b8303](https://github.com/ec-europa/digit-ict-conf-2016/commit/08b8303))
+
+
+### Features
+
+* **accessibility:** better accessibility for modals and checkboxes ([#49](https://github.com/ec-europa/digit-ict-conf-2016/issues/49)) ([14b7db7](https://github.com/ec-europa/digit-ict-conf-2016/commit/14b7db7))
+* **content:** rename session ([2c0a9ea](https://github.com/ec-europa/digit-ict-conf-2016/commit/2c0a9ea))
+* **content:** small fixes ([#53](https://github.com/ec-europa/digit-ict-conf-2016/issues/53)) ([ab1d201](https://github.com/ec-europa/digit-ict-conf-2016/commit/ab1d201)), closes [#53](https://github.com/ec-europa/digit-ict-conf-2016/issues/53)
+* **content:** update speaker's picture ([3eb6071](https://github.com/ec-europa/digit-ict-conf-2016/commit/3eb6071))
+* **content:** updates for homepage and events ([167c0b9](https://github.com/ec-europa/digit-ict-conf-2016/commit/167c0b9))
+* **polish:** latest updates before launch ([d30df06](https://github.com/ec-europa/digit-ict-conf-2016/commit/d30df06))
+* **practical:** update Practial page's content ([0350825](https://github.com/ec-europa/digit-ict-conf-2016/commit/0350825))
+* **register:** update form's URL ([45af3b3](https://github.com/ec-europa/digit-ict-conf-2016/commit/45af3b3))
+* **speakers:** Add Andreas Schwab ([#61](https://github.com/ec-europa/digit-ict-conf-2016/issues/61)) ([8b5515a](https://github.com/ec-europa/digit-ict-conf-2016/commit/8b5515a))
+* **speakers:** update Dominique Leroy and Kate Kahle ([#59](https://github.com/ec-europa/digit-ict-conf-2016/issues/59)) ([df3325f](https://github.com/ec-europa/digit-ict-conf-2016/commit/df3325f))
+* **time:** use <time> tag ([#45](https://github.com/ec-europa/digit-ict-conf-2016/issues/45)) ([d5c398f](https://github.com/ec-europa/digit-ict-conf-2016/commit/d5c398f))
+
+
+
 <a name="0.9.0"></a>
 # [0.9.0](https://github.com/ec-europa/digit-ict-conf-2016/compare/v0.8.0...v0.9.0) (2016-07-06)
 
