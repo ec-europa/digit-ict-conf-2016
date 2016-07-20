@@ -29,7 +29,10 @@ const Page = ({ event, location }) => {
   }
 
   const eventModerator = speakers.filter(speaker => event.moderator === speaker.id);
-  const eventSpeakers = speakers.filter(speaker => event.speakers.indexOf(speaker.id) > -1);
+  const eventSpeakers = speakers
+    .filter(speaker => event.speakers.indexOf(speaker.id) > -1)
+    .sort((a, b) => event.speakers.indexOf(a.id) - event.speakers.indexOf(b.id));
+
   const moderatorBlock = eventModerator.length ? (
     <div>
       <h2>Moderator</h2>
