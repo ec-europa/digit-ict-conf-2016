@@ -5,6 +5,7 @@
 */
 
 import React from 'react';
+import FlipMove from 'react-flip-move';
 import Row from './Row';
 import styles from './List.scss';
 
@@ -36,14 +37,30 @@ const List = ({ events, schedule, onToggle, location }) => {
           <time>{eventsList[0].starts}</time>{eventsEnds ? ' - ' : ''}{eventsEnds}
         </div>
         <div className={styles.events}>
-          {eventsRows}
+          <FlipMove
+            easing="ease"
+            duration="700"
+            staggerDurationBy="15"
+            staggerDelayBy="20"
+          >
+            {eventsRows}
+          </FlipMove>
         </div>
       </div>
     );
   });
 
   return (
-    <div>{eventsDisplay}</div>
+    <div>
+      <FlipMove
+        easing="ease"
+        duration="700"
+        staggerDurationBy="15"
+        staggerDelayBy="20"
+      >
+        {eventsDisplay}
+      </FlipMove>
+    </div>
   );
 };
 
