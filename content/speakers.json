@@ -266,5 +266,19 @@
     ],
     "twitter": false,
     "picture": "Bart-Preneel.jpg"
+  },
+  {
+    "id": "andreasschwab",
+    "firstname": "Andreas",
+    "lastname": "Schwab",
+    "title": "Member of the European Parliament",
+    "bio": [
+      "Dr. Andreas Schwab has been a Member of the European Parliament since 2004." ,
+      "Born in 1973, he studied law at the University of Freiburg and the Institut d'Etudes Politiques in Paris, and obtained an L.L.M. from the University of Wales in 2000.",
+      "He worked as a consultant for the European Convention in the Department of European Affairs of the Baden-Württemberg State Ministry while obtaining a doctorate in law in 2002 and absolving his second state law exam in 2003." ,
+      "He is the EPP Group Coordinator in the Committee on the Internal Market and Consumer Protection, a substitute Member of the Committee on Economic and Monetary Affairs, a member of the Bureau of the EPP Group, and a substitute Bureau Member of the CDU/CSU Group in the European Parliament."
+    ],
+    "twitter": false,
+    "picture": "Andreas-Schwab.jpg"
   }
 ]
