@@ -11,7 +11,7 @@ import { connect } from 'react-redux';
 import { toggleEvent } from '../../store/modules/schedule';
 
 // Styles
-import styles from './Modal.scss';
+import styles from './Page.scss';
 
 // Content
 import events from '../../../content/events.json';
@@ -32,17 +32,18 @@ const Page = ({ speaker, schedule, onToggleEvent, location }) => {
     </div>
   ) : '';
 
-  const headerStyle = {
-    background: `url(${__BASENAME__}/assets/images/speakers/${speaker.picture}) center 40% no-repeat`,
-    backgroundSize: 'cover',
-  };
-
   return (
-    <div className={styles.pageContainer}>
-      <div className={styles.header} style={headerStyle} role="img" aria-label={`${speaker.firstname} ${speaker.lastname}`} />
-      <div>
-        <h3>{speaker.firstname} <span className={styles.lastname}>{speaker.lastname}</span></h3>
-        <h4 className={styles.title}>{speaker.title}</h4>
+    <div className={styles.container}>
+      <div className={styles.header}>
+        <img
+          src={`${__BASENAME__}/assets/images/speakers/${speaker.picture}`}
+          alt={`${speaker.firstname} ${speaker.lastname}`}
+          className={styles.headerPicture}
+        />
+        <div className={styles.headerTitles}>
+          <h3>{speaker.firstname} <span className={styles.lastname}>{speaker.lastname}</span></h3>
+          <h4 className={styles.title}>{speaker.title}</h4>
+        </div>
       </div>
       <div className={styles.bio}>
         {speaker.bio.map((line, index) => (<p key={index}>{line}</p>))}

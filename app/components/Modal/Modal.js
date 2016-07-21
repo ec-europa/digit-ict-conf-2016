@@ -1,6 +1,6 @@
 /**
 *
-* Speakers/Modal
+* Modal/Modal
 *
 */
 
@@ -43,10 +43,10 @@ export class Modal extends React.Component {
     return (
       <div className={styles.modalContainer} aria-hidden="false">
         <div className={styles.obfuscator} onClick={this.close} />
-        <div className={styles.modal}>
+        <div className={styles.modal} role="dialog">
           {children}
-          <div className={styles.closeButton} aria-label="Close the dialog" onClick={this.close} />
         </div>
+        <div className={styles.closeButton} aria-label="Close the dialog" onClick={this.close} />
       </div>
     );
   }

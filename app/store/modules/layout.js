@@ -6,7 +6,6 @@
 
 export const TOGGLE_DRAWER = 'TOGGLE_DRAWER';
 export const CLOSE_DRAWER = 'CLOSE_DRAWER';
-export const UPDATE_SCROLL = 'UPDATE_SCROLL';
 export const OPEN_MODAL = 'OPEN_MODAL';
 export const CLOSE_MODAL = 'CLOSE_MODAL';
 export const UPDATE_HEADER_TITLE = 'UPDATE_HEADER_TITLE';
@@ -20,8 +19,6 @@ const initialState = {
   drawerIsOpen: false,
   isScrollingUp: false,
   lastScrollTop: 0,
-  headerPinned: true,
-  headerUnpinned: false,
   headerTitle: '',
   modal: {
     open: false,
@@ -33,8 +30,6 @@ const initialState = {
     onRequestUndo: null,
   },
 };
-
-const scrollOffest = 80;
 
 /*
  * Reducer
@@ -77,15 +72,6 @@ export default function reducer(state = initialState, action) {
       return Object.assign({}, state, {
         headerTitle: action.title,
       });
-    case UPDATE_SCROLL: {
-      const scrollTop = window.scrollY;
-      return Object.assign({}, state, {
-        lastScrollTop: scrollTop,
-        isScrollingUp: state.lastScrollTop > scrollTop,
-        headerPinned: scrollTop < scrollOffest || state.lastScrollTop > scrollTop,
-        headerUnpinned: scrollTop >= scrollOffest && state.lastScrollTop <= scrollTop,
-      });
-    }
     default:
       return state;
   }
@@ -103,12 +89,6 @@ export function toggleDrawer() {
 export function closeDrawer() {
   return {
     type: CLOSE_DRAWER,
-  };
-}
-
-export function handleScroll() {
-  return {
-    type: UPDATE_SCROLL,
   };
 }
 

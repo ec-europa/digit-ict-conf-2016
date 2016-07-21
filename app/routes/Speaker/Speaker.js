@@ -7,6 +7,10 @@
 import React from 'react';
 import { withRouter } from 'react-router';
 import Helmet from 'react-helmet';
+import { connect } from 'react-redux';
+
+// Redux actions
+import { updateHeaderTitle } from '../../store/modules/layout';
 
 // Content
 import speakers from '../../../content/speakers.json';
@@ -26,7 +30,7 @@ export class Speaker extends React.Component {
     };
 
     // Force "returnTo" when accessing the page direclty
-    if (props.location.action === 'POP') {
+    if (!props.location.state || !props.location.state.modal) {
       if (props.location.state) {
         props.location.state.returnTo = props.location.pathname; // eslint-disable-line
       } else {
@@ -37,6 +41,10 @@ export class Speaker extends React.Component {
     }
   }
 
+  componentDidMount() {
+    this.props.onUpdateHeaderTitle('Speaker details');
+  }
+
   render() {
     const { speaker } = this.state;
     const { location } = this.props;
@@ -44,7 +52,7 @@ export class Speaker extends React.Component {
     return (
       <div>
         <Helmet title={`${speaker.firstname} ${speaker.lastname}`} />
-        {location.state && location.state.modal && location.action === 'PUSH'
+        {location.state && location.state.modal
           ? <SpeakerModal speaker={speaker} location={location} />
           : <SpeakerPage speaker={speaker} location={location} />
         }
@@ -56,6 +64,15 @@ export class Speaker extends React.Component {
 Speaker.propTypes = {
   params: React.PropTypes.object,
   location: React.PropTypes.object,
+  onUpdateHeaderTitle: React.PropTypes.func,
 };
 
-export default withRouter(Speaker);
+function mapDispatchToProps(dispatch) {
+  return {
+    onUpdateHeaderTitle: (title) => {
+      dispatch(updateHeaderTitle(title));
+    },
+  };
+}
+
+export default connect(null, mapDispatchToProps)(withRouter(Speaker));

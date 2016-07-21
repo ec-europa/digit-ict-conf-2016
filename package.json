@@ -74,6 +74,7 @@
   "dependencies": {
     "babel-polyfill": "^6.9.1",
     "classnames": "^2.2.5",
+    "headroom.js": "^0.9.3",
     "history": "^2.1.2",
     "mappy-breakpoints": "^0.2.3",
     "react": "^15.2.1",

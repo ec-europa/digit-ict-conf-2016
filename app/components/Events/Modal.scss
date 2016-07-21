@@ -1,14 +1,6 @@
 @import '../../theme/variables';
 
 .modalContainer {
-  padding: 1em;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow: auto;
-
   h1 {
     font-size: 2em;
   }
@@ -16,6 +8,36 @@
   h2 {
     font-size: 1.5em;
   }
+}
+
+.modalHeader {
+  display: inline-block;
+  width: 100%;
+  padding: 2em;
+
+  &.blue {
+    background-color: $ict-blue;
+    color: #FFF;
+  }
+
+  &.yellow {
+    background-color: $ict-yellow;
+    color: #FFF;
+  }
+
+  &.purple {
+    background-color: $ict-purple;
+    color: #FFF;
+  }
+
+  &.grey {
+    background-color: $ict-grey-text;
+    color: #FFF;
+  }
+}
+
+.modalContent {
+  padding: 1em 2em;
 }
 
 .pageContainer {

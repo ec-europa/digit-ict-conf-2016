@@ -1,0 +1,37 @@
+@import '../../theme/variables';
+
+.container {
+  max-width: $max-width;
+  margin: auto;
+  padding: ($header-height+1em) 1em $header-height;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+
+.headerPicture {
+  width: 260px;
+  height: 260px;
+}
+
+.headerTitles {
+  flex-grow: 1;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.title {
+  color: $ict-blue;
+}
+
+.twitter {
+  margin-left: 1em;
+  display: inline-block;
+  color: $ict-blue;
+  text-decoration: none;
+}

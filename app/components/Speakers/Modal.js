@@ -39,19 +39,19 @@ const Modal = ({ speaker, schedule, onToggleEvent, location }) => {
 
   return (
     <div className={styles.modalContainer}>
-      <div className={styles.header} style={headerStyle} role="img" aria-label={`${speaker.firstname} ${speaker.lastname}`} />
-      <div>
+      <div className={styles.modalHeader} style={headerStyle} role="img" aria-label={`${speaker.firstname} ${speaker.lastname}`} />
+      <div className={styles.modalContent}>
         <h3>{speaker.firstname} <span className={styles.lastname}>{speaker.lastname}</span></h3>
         <h4 className={styles.title}>{speaker.title}</h4>
+        <div className={styles.bio}>
+          {speaker.bio.map((line, index) => (<p key={index}>{line}</p>))}
+        </div>
+        {speaker.twitter
+         ? <Link className={styles.twitter} to={`https://twitter.com/${speaker.twitter.substr(1)}`} target="_blank"><img src={twitterLogo} alt="Twitter Feed" /> {speaker.twitter}</Link>
+         : null
+        }
+        {sessions}
       </div>
-      <div className={styles.bio}>
-        {speaker.bio.map((line, index) => (<p key={index}>{line}</p>))}
-      </div>
-      {speaker.twitter
-       ? <Link className={styles.twitter} to={`https://twitter.com/${speaker.twitter.substr(1)}`} target="_blank"><img src={twitterLogo} alt="Twitter Feed" /> {speaker.twitter}</Link>
-       : null
-      }
-      {sessions}
     </div>
   );
 };
