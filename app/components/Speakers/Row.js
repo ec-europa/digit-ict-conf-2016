@@ -5,41 +5,28 @@
 */
 
 import React from 'react';
-import { Link } from 'react-router';
+import Link from '../Link/Link';
 import styles from './Row.scss';
 
 const Row = ({ speaker, location }) => (
-  <div className={styles.speakerContainer}>
+  <Link
+    className={styles.speakerContainer}
+    to={{
+      pathname: `/speaker/${speaker.id}`,
+      state: {
+        modal: true,
+        returnTo: location.state && location.state.returnTo ? location.state.returnTo : location.pathname,
+      },
+    }}
+  >
     <div className={styles.speakerPicture}>
-      <Link
-        to={{
-          pathname: `/speaker/${speaker.id}`,
-          state: {
-            modal: true,
-            returnTo: location.state && location.state.returnTo ? location.state.returnTo : location.pathname,
-          },
-        }}
-      >
-        <img src={`${__BASENAME__}/assets/images/speakers/${speaker.picture}`} alt={`${speaker.firstname} ${speaker.lastname}`} />
-      </Link>
+      <img src={`${__BASENAME__}/assets/images/speakers/${speaker.picture}`} alt={`${speaker.firstname} ${speaker.lastname}`} />
     </div>
     <div className={styles.speakerInfo}>
-      <h3>
-        <Link
-          to={{
-            pathname: `/speaker/${speaker.id}`,
-            state: {
-              modal: true,
-              returnTo: location.state && location.state.returnTo ? location.state.returnTo : location.pathname,
-            },
-          }}
-        >
-          {speaker.firstname} <span className={styles.lastname}>{speaker.lastname}</span>
-        </Link>
-      </h3>
+      <h3>{speaker.firstname} <span className={styles.lastname}>{speaker.lastname}</span></h3>
       <h4 className={styles.title}>{speaker.title}</h4>
     </div>
-  </div>
+  </Link>
 );
 
 Row.propTypes = {

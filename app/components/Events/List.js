@@ -36,31 +36,28 @@ const List = ({ events, schedule, onToggle, location }) => {
         <div className={styles.timeslot}>
           <time>{eventsList[0].starts}</time>{eventsEnds ? ' - ' : ''}{eventsEnds}
         </div>
-        <div className={styles.events}>
-          <FlipMove
-            easing="ease"
-            duration="700"
-            staggerDurationBy="15"
-            staggerDelayBy="20"
-          >
-            {eventsRows}
-          </FlipMove>
-        </div>
+        <FlipMove
+          easing="ease"
+          duration="700"
+          staggerDurationBy="15"
+          staggerDelayBy="20"
+          className={styles.events}
+        >
+          {eventsRows}
+        </FlipMove>
       </div>
     );
   });
 
   return (
-    <div>
-      <FlipMove
-        easing="ease"
-        duration="700"
-        staggerDurationBy="15"
-        staggerDelayBy="20"
-      >
-        {eventsDisplay}
-      </FlipMove>
-    </div>
+    <FlipMove
+      easing="ease"
+      duration="700"
+      staggerDurationBy="15"
+      staggerDelayBy="20"
+    >
+      {eventsDisplay}
+    </FlipMove>
   );
 };
 

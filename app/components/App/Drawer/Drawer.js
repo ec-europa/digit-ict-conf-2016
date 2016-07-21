@@ -5,13 +5,17 @@
 */
 
 import React from 'react';
-import styles from './Drawer.scss';
 import classnames from 'classnames';
+import styles from './Drawer.scss';
 
 class Drawer extends React.Component {
   constructor(props) {
     super(props);
     this.toggle = this.toggle.bind(this);
+  }
+
+  shouldComponentUpdate(nextProps) {
+    return nextProps !== this.props;
   }
 
   toggle() {

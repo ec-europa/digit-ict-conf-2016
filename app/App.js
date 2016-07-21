@@ -11,7 +11,7 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import classnames from 'classnames';
 
 // Redux actions
-import { toggleDrawer, handleScroll } from './store/modules/layout';
+import { toggleDrawer } from './store/modules/layout';
 
 // Components
 import { Header, HeaderToggle, HeaderTitle, HeaderLogos, HeaderNavigation, HeaderNavigationItem } from './components/App/Header';
@@ -28,11 +28,12 @@ export class App extends React.Component {
   constructor(props) {
     super(props);
     document.body.style.overflow = 'auto';
-    this.scrollListener = this.scrollListener.bind(this);
-  }
 
-  componentDidMount() {
-    window.addEventListener('scroll', this.scrollListener);
+    // Initiate location state
+    props.location.state = { // eslint-disable-line
+      returnTo: '/',
+      modal: false,
+    };
   }
 
   componentWillReceiveProps(nextProps) {
@@ -66,22 +67,11 @@ export class App extends React.Component {
     }
   }
 
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.scrollListener);
-  }
-
-  scrollListener(event) {
-    const { onScroll } = this.props;
-    return onScroll(event);
-  }
-
   render() {
     const {
       children,
       location,
       drawerOpen,
-      headerPinned,
-      headerUnpinned,
       onToggleDrawer,
       headerTitle,
     } = this.props;
@@ -106,7 +96,7 @@ export class App extends React.Component {
     return (
       <div className={containerClasses}>
         <Helmet titleTemplate="DIGITEC 2016 - %s" />
-        <Header pinned={headerPinned} unpinned={headerUnpinned}>
+        <Header>
           <HeaderToggle onClick={onToggleDrawer} />
           <HeaderLogos />
           <HeaderTitle title={headerTitle} />
@@ -177,18 +167,13 @@ App.propTypes = {
   children: React.PropTypes.node,
   location: React.PropTypes.object,
   drawerOpen: React.PropTypes.bool,
-  headerPinned: React.PropTypes.bool,
-  headerUnpinned: React.PropTypes.bool,
   onToggleDrawer: React.PropTypes.func,
-  onScroll: React.PropTypes.func,
   headerTitle: React.PropTypes.string,
 };
 
 function mapStateToProps(state) {
   return {
     drawerOpen: state.layout.drawerIsOpen,
-    headerPinned: state.layout.headerPinned,
-    headerUnpinned: state.layout.headerUnpinned,
     headerTitle: state.layout.headerTitle,
   };
 }
@@ -197,9 +182,6 @@ function mapDispatchToProps(dispatch) {
   return {
     onToggleDrawer: () => {
       dispatch(toggleDrawer());
-    },
-    onScroll: () => {
-      dispatch(handleScroll());
     },
   };
 }

@@ -5,6 +5,7 @@
 */
 
 import React from 'react';
+import classnames from 'classnames';
 
 // Components
 import SpeakerRow from '../Speakers/Row';
@@ -51,18 +52,30 @@ const Modal = ({ event, location }) => {
     </div>
   ) : null;
 
+  const headerClass = classnames(
+    styles.modalHeader,
+    { [styles.blue]: event.color === 'blue' },
+    { [styles.yellow]: event.color === 'yellow' },
+    { [styles.purple]: event.color === 'purple' },
+    { [styles.grey]: event.color === 'grey' }
+  );
+
   return (
     <div className={styles.modalContainer}>
-      <h1>{event.title}</h1>
-      <h2>{startsAt}{event.ends ? ' - ' : ''}{endsAt}{venue}</h2>
-      <div className={styles.name}>
-        {event.visual && (
-          <img className={styles.visual} src={`${__BASENAME__}/assets/images/events/${event.visual}`} alt={event.title} />
-        )}
-        {event.description.map((line, index) => (<p key={index}>{line}</p>))}
+      <div className={headerClass}>
+        <h1>{event.title}</h1>
+        <h2>{startsAt}{event.ends ? ' - ' : ''}{endsAt}{venue}</h2>
       </div>
-      {moderatorBlock}
-      {speakersBlock}
+      <div className={styles.modalContent}>
+        <div className={styles.name}>
+          {event.visual && (
+            <img className={styles.visual} src={`${__BASENAME__}/assets/images/events/${event.visual}`} alt={event.title} />
+          )}
+          {event.description.map((line, index) => (<p key={index}>{line}</p>))}
+        </div>
+        {moderatorBlock}
+        {speakersBlock}
+      </div>
     </div>
   );
 };
