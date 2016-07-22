@@ -65,8 +65,8 @@ class Modal extends React.Component {
       </div>
     ) : null;
 
-    const headerClass = classnames(
-      styles.modalHeader,
+    const containerClass = classnames(
+      styles.modalContainer,
       { [styles.blue]: event.color === 'blue' },
       { [styles.yellow]: event.color === 'yellow' },
       { [styles.purple]: event.color === 'purple' },
@@ -74,8 +74,8 @@ class Modal extends React.Component {
     );
 
     return (
-      <div className={styles.modalContainer}>
-        <div className={headerClass}>
+      <div className={containerClass}>
+        <div className={styles.modalHeader}>
           <h1>{event.title}</h1>
           <h2>{startsAt}{event.ends ? ' - ' : ''}{endsAt}{venue}</h2>
         </div>

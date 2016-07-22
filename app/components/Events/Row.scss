@@ -1,5 +1,7 @@
 @import '../../theme/variables';
 
+$borderWidth: 3px;
+
 .listItem {
   letter-spacing: 0.02em;
   display: flex;
@@ -140,8 +142,6 @@ a.title {
     }
   }
 
-  $borderWidth: 3px;
-
   [type='checkbox']:checked {
     + label::before {
       top: -4px;
@@ -154,24 +154,36 @@ a.title {
       border-right: $borderWidth solid $ict-grey-text;
       border-bottom: $borderWidth solid $ict-grey-text;
 
-      .purpleItem & {
-        border-right: $borderWidth solid $ict-purple;
-        border-bottom: $borderWidth solid $ict-purple;
-      }
-
-      .yellowItem & {
-        border-right: $borderWidth solid $ict-yellow;
-        border-bottom: $borderWidth solid $ict-yellow;
-      }
-
-      .blueItem & {
-        border-right: $borderWidth solid $ict-blue;
-        border-bottom: $borderWidth solid $ict-blue;
-      }
-
       transform: rotate(40deg);
       backface-visibility: hidden;
       transform-origin: 100% 100%;
+    }
+  }
+}
+
+.listItem.purpleItem {
+  [type='checkbox']:checked {
+    + label::before {
+      border-right: $borderWidth solid $ict-purple;
+      border-bottom: $borderWidth solid $ict-purple;
+    }
+  }
+}
+
+.listItem.yellowItem {
+  [type='checkbox']:checked {
+    + label::before {
+      border-right: $borderWidth solid $ict-yellow;
+      border-bottom: $borderWidth solid $ict-yellow;
+    }
+  }
+}
+
+.listItem.blueItem {
+  [type='checkbox']:checked {
+    + label::before {
+      border-right: $borderWidth solid $ict-blue;
+      border-bottom: $borderWidth solid $ict-blue;
     }
   }
 }

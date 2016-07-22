@@ -22,7 +22,7 @@
     "postsetup": "npm run build:dll",
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "eslint . --ignore-pattern tools/scripts",
-    "lint:scss": "stylelint ./app/**/*.scss --syntax scss",
+    "lint:scss": "stylelint ./app/**/*.scss",
     "lint-staged": "lint-staged",
     "release": "standard-version",
     "serve": "cross-env NODE_ENV=production node tools/scripts/prodServer.js"

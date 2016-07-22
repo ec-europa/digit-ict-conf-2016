@@ -29,7 +29,7 @@ export class App extends React.Component {
     super(props);
     document.body.style.overflow = 'auto';
 
-    // Initiate location state
+    // Init location state
     props.location.state = { // eslint-disable-line
       returnTo: '/',
       modal: false,

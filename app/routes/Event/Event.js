@@ -43,7 +43,10 @@ export class Event extends React.Component {
   }
 
   componentDidMount() {
-    this.props.onUpdateHeaderTitle('Event details');
+    const { location } = this.props;
+    if (!location.state || !location.state.modal) {
+      this.props.onUpdateHeaderTitle('Event details');
+    }
   }
 
   render() {
