@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.11.0"></a>
+# [0.11.0](https://github.com/ec-europa/digit-ict-conf-2016/compare/v0.10.0...v0.11.0) (2016-07-22)
+
+
+### Features
+
+* **animations:** animate deletion of events in my digitec ([#58](https://github.com/ec-europa/digit-ict-conf-2016/issues/58)) ([ff7df03](https://github.com/ec-europa/digit-ict-conf-2016/commit/ff7df03))
+* **animations:** animate navigation links ([#63](https://github.com/ec-europa/digit-ict-conf-2016/issues/63)) ([aa1ed3c](https://github.com/ec-europa/digit-ict-conf-2016/commit/aa1ed3c))
+* **content:** update Vincent Bruneau's bio ([0d93d78](https://github.com/ec-europa/digit-ict-conf-2016/commit/0d93d78))
+* **design:** multiple design improvements ([#64](https://github.com/ec-europa/digit-ict-conf-2016/issues/64)) ([f74514c](https://github.com/ec-europa/digit-ict-conf-2016/commit/f74514c))
+* **subscribe:** add event to My Digitec from event's modal ([#65](https://github.com/ec-europa/digit-ict-conf-2016/issues/65)) ([ba57072](https://github.com/ec-europa/digit-ict-conf-2016/commit/ba57072))
+
+
+
 <a name="0.10.0"></a>
 # [0.10.0](https://github.com/ec-europa/digit-ict-conf-2016/compare/v0.9.0...v0.10.0) (2016-07-20)
 
