@@ -22,7 +22,6 @@ import Modal from './components/Modal/Modal';
 
 // Styles
 import styles from './App.scss';
-import modalStyles from './components/Modal/Modal.scss';
 
 export class App extends React.Component {
   constructor(props) {
@@ -52,11 +51,7 @@ export class App extends React.Component {
   }
 
   componentWillUpdate({ drawerOpen, location }) {
-    const isModal = (
-      location.state &&
-      location.state.modal &&
-      this.previousChildren
-    );
+    const isModal = !!(location.state && location.state.modal && this.previousChildren);
 
     if (drawerOpen || isModal) {
       document.body.style.overflow = 'hidden';
@@ -76,11 +71,7 @@ export class App extends React.Component {
       headerTitle,
     } = this.props;
 
-    const isModal = (
-      location.state &&
-      location.state.modal &&
-      this.previousChildren
-    );
+    const isModal = !!(location.state && location.state.modal && this.previousChildren);
 
     const mainChildren = isModal ?
       this.previousChildren :
@@ -142,22 +133,9 @@ export class App extends React.Component {
           </ReactCSSTransitionGroup>
         </Content>
         <Footer />
-        <ReactCSSTransitionGroup
-          transitionName={{
-            enter: modalStyles.enter,
-            enterActive: modalStyles.enterActive,
-            leave: modalStyles.leave,
-            leaveActive: modalStyles.leaveActive,
-          }}
-          transitionEnterTimeout={300}
-          transitionLeaveTimeout={300}
-        >
-          {isModal ? (
-            <Modal returnTo={location.state.returnTo} key={location.pathname}>
-              {modalChildren}
-            </Modal>
-        ) : null}
-        </ReactCSSTransitionGroup>
+        <Modal isOpen={isModal} returnTo={location.state ? location.state.returnTo : ''} pathname={location.pathname}>
+          {modalChildren}
+        </Modal>
       </div>
     );
   }
