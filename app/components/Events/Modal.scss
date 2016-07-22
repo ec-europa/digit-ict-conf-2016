@@ -15,29 +15,30 @@
   width: 100%;
   padding: 2em;
 
-  &.blue {
+  .blue & {
     background-color: $ict-blue;
     color: #FFF;
   }
 
-  &.yellow {
+  .yellow & {
     background-color: $ict-yellow;
     color: #FFF;
   }
 
-  &.purple {
+  .purple & {
     background-color: $ict-purple;
     color: #FFF;
   }
 
-  &.grey {
+  .grey & {
     background-color: $ict-grey-text;
     color: #FFF;
   }
 }
 
 .modalContent {
-  padding: 1em 2em;
+  padding: 2em;
+  position: relative;
 }
 
 .pageContainer {
@@ -58,4 +59,96 @@
   margin: auto;
   display: block;
   max-width: 100%;
+}
+
+.checkbox {
+  $size: 60px;
+  position: absolute;
+  top: -($size / 2);
+  right: 40px;
+
+  $radio-border: 2px solid $ict-purple;
+
+  /* Remove default checkbox */
+  [type='checkbox']:not(:checked),
+  [type='checkbox']:checked {
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+  }
+
+  // Checkbox Styles
+  [type='checkbox'] {
+    // Text Label Style
+    + label {
+      border-radius: 50%;
+      background: #FFF;
+      box-shadow: 0 5px 8px rgba(0, 0, 0, 0.15);
+      height: $size;
+      width: $size;
+      cursor: pointer;
+      line-height: $size;
+      opacity: 1;
+      position: relative;
+      cursor: pointer;
+      display: inline-block;
+      user-select: none; /* IE10+ */
+    }
+
+    /* checkbox aspect */
+    + label::before,
+    + label::after {
+      content: '';
+      position: absolute;
+      top: 15px;
+      left: 17px;
+      width: 24px;
+      height: 24px;
+      border: 2px solid #5A5A5A;
+      border-radius: 1px;
+      margin-top: 2px;
+      transition: 0.2s;
+    }
+
+    + label::after {
+      border: 0;
+      transform: scale(0);
+    }
+  }
+
+  $borderWidth: 4px;
+
+  [type='checkbox']:checked {
+    + label::before {
+      top: 15px;
+      left: 10px;
+      width: 18px;
+      height: 26px;
+
+      border-top: 0 solid transparent;
+      border-left: 0 solid transparent;
+      border-right: $borderWidth solid $ict-grey-text;
+      border-bottom: $borderWidth solid $ict-grey-text;
+
+      .purple & {
+        border-right: $borderWidth solid $ict-purple;
+        border-bottom: $borderWidth solid $ict-purple;
+      }
+
+      .yellow & {
+        border-right: $borderWidth solid $ict-yellow;
+        border-bottom: $borderWidth solid $ict-yellow;
+      }
+
+      .blue & {
+        border-right: $borderWidth solid $ict-blue;
+        border-bottom: $borderWidth solid $ict-blue;
+      }
+
+      transform: rotate(40deg);
+      backface-visibility: hidden;
+      transform-origin: 100% 100%;
+    }
+  }
+
 }

@@ -1,5 +1,7 @@
 @import '../../theme/variables';
 
+$borderWidth: 3px;
+
 .listItem {
   letter-spacing: 0.02em;
   display: flex;
@@ -89,87 +91,99 @@ a.title {
   padding: 0;
 }
 
-$radio-border: 2px solid $ict-purple;
+.listItem {
+  $radio-border: 2px solid $ict-purple;
 
-/* Remove default checkbox */
-[type='checkbox']:not(:checked),
-[type='checkbox']:checked {
-  position: absolute;
-  left: -9999px;
-  opacity: 0;
-}
-
-// Checkbox Styles
-[type='checkbox'] {
-  // Text Label Style
-  + label {
-    position: relative;
-    padding-left: 35px;
-    cursor: pointer;
-    display: inline-block;
-    height: 25px;
-    line-height: 25px;
-    font-size: 1rem;
-
-    -webkit-user-select: none; /* webkit (safari, chrome) browsers */
-    -moz-user-select: none; /* mozilla browsers */
-    -khtml-user-select: none; /* webkit (konqueror) browsers */
-    -ms-user-select: none; /* IE10+ */
-  }
-
-  /* checkbox aspect */
-  + label::before,
-  + label::after {
-    content: '';
+  /* Remove default checkbox */
+  [type='checkbox']:not(:checked),
+  [type='checkbox']:checked {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 18px;
-    height: 18px;
-    z-index: 0;
-    border: 2px solid #5A5A5A;
-    border-radius: 1px;
-    margin-top: 2px;
-    transition: 0.2s;
+    left: -9999px;
+    opacity: 0;
   }
 
-  + label::after {
-    border: 0;
-    transform: scale(0);
+  // Checkbox Styles
+  [type='checkbox'] {
+    // Text Label Style
+    + label {
+      position: relative;
+      padding-left: 35px;
+      cursor: pointer;
+      display: inline-block;
+      height: 25px;
+      line-height: 25px;
+      font-size: 1rem;
+
+      -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+      -moz-user-select: none; /* mozilla browsers */
+      -khtml-user-select: none; /* webkit (konqueror) browsers */
+      -ms-user-select: none; /* IE10+ */
+    }
+
+    /* checkbox aspect */
+    + label::before,
+    + label::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 18px;
+      height: 18px;
+      z-index: 0;
+      border: 2px solid #5A5A5A;
+      border-radius: 1px;
+      margin-top: 2px;
+      transition: 0.2s;
+    }
+
+    + label::after {
+      border: 0;
+      transform: scale(0);
+    }
+  }
+
+  [type='checkbox']:checked {
+    + label::before {
+      top: -4px;
+      left: -5px;
+      width: 12px;
+      height: 22px;
+
+      border-top: 2px solid transparent;
+      border-left: 2px solid transparent;
+      border-right: $borderWidth solid $ict-grey-text;
+      border-bottom: $borderWidth solid $ict-grey-text;
+
+      transform: rotate(40deg);
+      backface-visibility: hidden;
+      transform-origin: 100% 100%;
+    }
   }
 }
 
-$borderWidth: 3px;
-
-[type='checkbox']:checked {
-  + label::before {
-    top: -4px;
-    left: -5px;
-    width: 12px;
-    height: 22px;
-
-    border-top: 2px solid transparent;
-    border-left: 2px solid transparent;
-    border-right: $borderWidth solid $ict-grey-text;
-    border-bottom: $borderWidth solid $ict-grey-text;
-
-    .purpleItem & {
+.listItem.purpleItem {
+  [type='checkbox']:checked {
+    + label::before {
       border-right: $borderWidth solid $ict-purple;
       border-bottom: $borderWidth solid $ict-purple;
     }
+  }
+}
 
-    .yellowItem & {
+.listItem.yellowItem {
+  [type='checkbox']:checked {
+    + label::before {
       border-right: $borderWidth solid $ict-yellow;
       border-bottom: $borderWidth solid $ict-yellow;
     }
+  }
+}
 
-    .blueItem & {
+.listItem.blueItem {
+  [type='checkbox']:checked {
+    + label::before {
       border-right: $borderWidth solid $ict-blue;
       border-bottom: $borderWidth solid $ict-blue;
     }
-
-    transform: rotate(40deg);
-    backface-visibility: hidden;
-    transform-origin: 100% 100%;
   }
 }

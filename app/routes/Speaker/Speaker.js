@@ -42,7 +42,10 @@ export class Speaker extends React.Component {
   }
 
   componentDidMount() {
-    this.props.onUpdateHeaderTitle('Speaker details');
+    const { location } = this.props;
+    if (!location.state || !location.state.modal) {
+      this.props.onUpdateHeaderTitle('Speaker details');
+    }
   }
 
   render() {
