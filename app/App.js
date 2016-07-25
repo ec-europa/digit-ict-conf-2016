@@ -30,7 +30,7 @@ export class App extends React.Component {
 
     // Init location state
     props.location.state = { // eslint-disable-line
-      returnTo: '/',
+      returnTo: props.location.pathname,
       modal: false,
     };
   }
@@ -55,10 +55,8 @@ export class App extends React.Component {
 
     if (drawerOpen || isModal) {
       document.body.style.overflow = 'hidden';
-      document.body.setAttribute('aria-hidden', 'true');
     } else {
       document.body.style.overflow = 'auto';
-      document.body.setAttribute('aria-hidden', 'false');
     }
   }
 
@@ -85,54 +83,56 @@ export class App extends React.Component {
     );
 
     return (
-      <div className={containerClasses}>
+      <div className={styles.app}>
         <Helmet titleTemplate="DIGITEC 2016 - %s" />
-        <Header>
-          <HeaderToggle onClick={onToggleDrawer} />
-          <HeaderLogos />
-          <HeaderTitle title={headerTitle} />
-          <HeaderNavigation>
-            <HeaderNavigationItem to={'/speakers'}>Speakers</HeaderNavigationItem>
-            <HeaderNavigationItem to={'/programme'}>Programme</HeaderNavigationItem>
-            <HeaderNavigationItem to={'/my-digitec'}>My DIGITEC</HeaderNavigationItem>
-            <HeaderNavigationItem to={'/practical'}>Practical</HeaderNavigationItem>
-            <HeaderNavigationItem to={'https://scic.ec.europa.eu/fmi/ezreg/DIGITEC2016/start'} target="_blank" primary>Register</HeaderNavigationItem>
-          </HeaderNavigation>
-        </Header>
-        <Drawer onToggle={onToggleDrawer} isOpen={drawerOpen}>
-          <DrawerHeader>
-            <DrawerHeaderLogos />
-            <DrawerHeaderTitle>29 November, 2016</DrawerHeaderTitle>
-            <DrawerHeaderTitle>Square Brussels</DrawerHeaderTitle>
-          </DrawerHeader>
-          <DrawerNavigation>
-            <DrawerNavigationItem to={'/'}>Home</DrawerNavigationItem>
-            <DrawerNavigationItem to={'/speakers'}>Speakers</DrawerNavigationItem>
-            <DrawerNavigationItem to={'/programme'}>Programme</DrawerNavigationItem>
-            <DrawerNavigationItem to={'/my-digitec'}>My DIGITEC</DrawerNavigationItem>
-            <DrawerNavigationItem to={'/practical'}>Practical</DrawerNavigationItem>
-            <DrawerNavigationSeparator />
-            <DrawerNavigationItem to={'https://scic.ec.europa.eu/fmi/ezreg/DIGITEC2016/start'} target="_blank">Register</DrawerNavigationItem>
-            <DrawerNavigationItem to={'https://twitter.com/hashtag/digitec16'} target="_blank">#digitec16</DrawerNavigationItem>
-          </DrawerNavigation>
-        </Drawer>
-        <Content>
-          <ReactCSSTransitionGroup
-            transitionName={{
-              enter: styles.enter,
-              enterActive: styles.enterActive,
-              leave: styles.leave,
-              leaveActive: styles.leaveActive,
-            }}
-            transitionEnterTimeout={300}
-            transitionLeaveTimeout={10}
-          >
-            {React.cloneElement(mainChildren, {
-              key: childrenKey,
-            })}
-          </ReactCSSTransitionGroup>
-        </Content>
-        <Footer />
+        <div aria-hidden={drawerOpen || isModal} className={containerClasses}>
+          <Header>
+            <HeaderToggle onClick={onToggleDrawer} />
+            <HeaderLogos />
+            <HeaderTitle title={headerTitle} />
+            <HeaderNavigation>
+              <HeaderNavigationItem to={'/speakers'}>Speakers</HeaderNavigationItem>
+              <HeaderNavigationItem to={'/programme'}>Programme</HeaderNavigationItem>
+              <HeaderNavigationItem to={'/my-digitec'}>My DIGITEC</HeaderNavigationItem>
+              <HeaderNavigationItem to={'/practical'}>Practical</HeaderNavigationItem>
+              <HeaderNavigationItem to={'https://scic.ec.europa.eu/fmi/ezreg/DIGITEC2016/start'} target="_blank" rel="noopener" primary>Register</HeaderNavigationItem>
+            </HeaderNavigation>
+          </Header>
+          <Drawer onToggle={onToggleDrawer} isOpen={drawerOpen}>
+            <DrawerHeader>
+              <DrawerHeaderLogos />
+              <DrawerHeaderTitle>29 November, 2016</DrawerHeaderTitle>
+              <DrawerHeaderTitle>Square Brussels</DrawerHeaderTitle>
+            </DrawerHeader>
+            <DrawerNavigation>
+              <DrawerNavigationItem to={'/'}>Home</DrawerNavigationItem>
+              <DrawerNavigationItem to={'/speakers'}>Speakers</DrawerNavigationItem>
+              <DrawerNavigationItem to={'/programme'}>Programme</DrawerNavigationItem>
+              <DrawerNavigationItem to={'/my-digitec'}>My DIGITEC</DrawerNavigationItem>
+              <DrawerNavigationItem to={'/practical'}>Practical</DrawerNavigationItem>
+              <DrawerNavigationSeparator />
+              <DrawerNavigationItem to={'https://scic.ec.europa.eu/fmi/ezreg/DIGITEC2016/start'} target="_blank" rel="noopener">Register</DrawerNavigationItem>
+              <DrawerNavigationItem to={'https://twitter.com/hashtag/digitec16'} target="_blank" rel="noopener">#digitec16</DrawerNavigationItem>
+            </DrawerNavigation>
+          </Drawer>
+          <Content>
+            <ReactCSSTransitionGroup
+              transitionName={{
+                enter: styles.enter,
+                enterActive: styles.enterActive,
+                leave: styles.leave,
+                leaveActive: styles.leaveActive,
+              }}
+              transitionEnterTimeout={300}
+              transitionLeaveTimeout={10}
+            >
+              {React.cloneElement(mainChildren, {
+                key: childrenKey,
+              })}
+            </ReactCSSTransitionGroup>
+          </Content>
+          <Footer />
+        </div>
         <Modal isOpen={isModal} returnTo={location.state ? location.state.returnTo : ''} pathname={location.pathname}>
           {modalChildren}
         </Modal>

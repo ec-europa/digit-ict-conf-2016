@@ -55,12 +55,13 @@ class Modal extends React.Component {
           leave: styles.leave,
           leaveActive: styles.leaveActive,
         }}
-        transitionEnterTimeout={300}
-        transitionLeaveTimeout={300}
+        transitionEnterTimeout={400}
+        transitionLeaveTimeout={400}
         component="div"
+        aria-hidden={!isOpen}
       >
         {isOpen ?
-          <div aria-hidden="false">
+          <div>
             <div className={styles.obfuscator} />
             <ReactCSSTransitionGroup
               transitionName={{
@@ -71,11 +72,11 @@ class Modal extends React.Component {
                 leave: styles.leave,
                 leaveActive: styles.leaveActive,
               }}
-              transitionEnterTimeout={300}
-              transitionLeaveTimeout={300}
+              transitionEnterTimeout={400}
+              transitionLeaveTimeout={400}
             >
               <div className={styles.modalContainer} key={pathname}>
-                <div className={styles.modalOutter} onClick={this.close} />
+                <div className={styles.modalOuter} onClick={this.close} />
                 <div className={styles.modal} role="dialog">
                   {children}
                 </div>
