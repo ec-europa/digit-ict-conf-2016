@@ -1,26 +1,28 @@
 [
   {
-    "id": "paulmiller",
-    "firstname": "Paul",
-    "lastname": "Miller",
-    "title": "CEO of Digital Workplace Group",
+    "id": "jenniferbaker",
+    "firstname": "Jennifer",
+    "lastname": "Baker",
+    "title": "Tech journalist and moderator",
     "bio": [
-      "Paul Miller is CEO and Founder of the Digital Workplace Group, co-author of 'The Digital Renaissance of Work - Delivering Digital Workplaces Fit for the Future' (Gower 2014) and author of field-defining book 'The Digital Workplace: How Technology is Liberating Work (TECL 2012). He was ranked as one of the world's top 50 Social Employee Advocacy Leaders in 2015 and has given many inspirational keynote talks on the digital future of work to organizations including Microsoft, Google, Adobe, Wells Fargo and Oxford University.  He is a Judge and Mentor for the Duke of York iDEA (Inspiring Digital Enterprise Awards) 2015. For five years Paul hosted pioneering internet radio show Digital Workplace Live and IBF Live and is Executive Producer and host of 24 hour global experience Digital Workplace 24."
+      "Jennifer has been a journalist in print, radio and television for nearly 20 years, the last 7 specialising in EU policy and legislation in the technology sector - from data protection and privacy to trade agreements; antitrust cases to copyright law; national security to public transparency.",
+      "She has worked across a wide range of sectors, from editing a national daily paper in Malta, to reporting on European affairs for Middle Eastern television and has a wealth of experience in navigating the political quagmire of the EU. As well as an address book packed with insider sources and contacts in Brussels, Jennifer is skilled at translating EU policy-speak into understandable English.",
+      "She is passionate about the importance of rigorous journalism to society believes ethical journalism should go hand in hand with conviction on human rights issues.",
+      "She has written for some of the biggest names in the business, ArsTechnica, ComputerWeekly, Macworld, PCworld and CIO (as part of the renowned IDG News Service team), and The Register. She is senior presenter on Vieuws.eu and regularly features as an EU policy and tech expert on BBC radio, FSN, ETV and others."
     ],
-    "twitter": "@paulmillersays",
-    "picture": "Paul-Miller.jpg"
+    "twitter": "@BrusselsGeek",
+    "picture": "Jennyfer-Baker.jpg"
   },
   {
-    "id": "sabinesipunova",
-    "firstname": "Sabine",
-    "lastname": "Sipunova",
-    "title": "Founder of \"Sorry as a Service\"",
+    "id": "paulboag",
+    "firstname": "Paul",
+    "lastname": "Boag",
+    "title": "User experience consultant and expert in digital transformation",
     "bio": [
-      "Sabine Sipunova is a co-founder of Sorry as a Service and her passion is finding out ways how companies can build meaningful and personal relationships with their customers using technology, particularly in moments when something goes wrong. Sorry as a Service has gone through on of the best accelerators in the world Techstars and have won many awards as one of the most innovative companies in Europe. Their customers include brands like BT, Transferwise, Belron, Trouva and more.",
-      "In 2016 Sabine was featured in Forbes' Top 10 Promising Founders to Watch in the Baltics."
+      "Paul Boag is a user experience consultant, author and speaker. He helps organisations such as the European Commission, UCAS and Doctors Without Borders adapt to the digital world. He refocuses them on user experience and engaging with a new digitally savvy audience. "
     ],
-    "twitter": false,
-    "picture": "Sabine-Sipunova.jpg"
+    "twitter": "@boagworld",
+    "picture": "Paul-Boag.jpg"
   },
   {
     "id": "davidborrelli",
@@ -34,6 +36,96 @@
     ],
     "twitter": "@borrellidavid",
     "picture": "David-Borelli.jpg"
+  },
+  {
+    "id": "vincentbruneau",
+    "firstname": "Vincent",
+    "lastname": "Bruneau",
+    "title": "Founder & CEO of Magency",
+    "bio": [
+      "Vincent Bruneau is the founder of Magency and serves as its Chief Executive Officer. In less than four years, he became a leader in the emerging industry of digital collaborative tools by leading one of the top five fast growing companies in Europe. Magency is a unique digital solution that allows people to learn better and work better by increasing participation, collaboration, interaction at all types of meetings, events and trainings. In four years, Magency has won several awards. Its customers include brands like Nissan, Procter & Gamble, Airbus, BNP, and more.",
+      "With over 15 years as a tech illusionist performer for public and corporate events, Vincent’s an expert in building an emotional connection between corporate brands and their customers with magic and technology, enhancing the human experience."
+    ],
+    "twitter": "@vince_bruneau",
+    "picture": "Vincent-Bruneau.jpg"
+  },
+  {
+    "id": "mischadohler",
+    "firstname": "Mischa",
+    "lastname": "Dohler",
+    "title": "Professor of Wireless Communications, King's College London",
+    "bio": [
+      "Mischa Dohler is full Professor in Wireless Communications at King’s College London, driving cross-disciplinary research and innovation in technology, sciences and arts. He is the Director of the Centre for Telecommunications Research, co-founder and member of the Board of Directors of the smart city pioneer Worldsensing, Fellow of the IEEE, Editor-in-Chief of the Transactions on Emerging Telecommunications Technologies and the EAI Transactions on the Internet of Things, and a Distinguished Member of Harvard Square Leaders Excellence.",
+      "He acts as policy, technology and entrepreneurship adviser, examples being Richard Branson’s Carbon War Room, David Willetts’ 8 Great Technology Fund, Regulator Ofcom, UK House of Parliament, UK Ministries, EPSRC ICT Strategy Advisory Team, European Commission, Tech London Advocate, ISO Smart City working group, and various start-ups.",
+      "He is also an entrepreneur, composer & pianist, and fluent in 6 languages. He has talked at TEDx. He had coverage by national and international TV & radio, and his contributions have featured on BBC News and the Wall Street Journal."
+    ],
+    "twitter": "@MischaDohler",
+    "picture": "Mischa-Dohler.jpg"
+  },
+  {
+    "id": "kenducatel",
+    "firstname": "Ken",
+    "lastname": "Ducatel",
+    "title": "Director, IT Security Directorate, DG Informatics",
+    "bio": [
+      "After joining DIGIT as Chief Security Information Officer, Ken Ducatel was appointed Director of the newly formed IT Security Directorate. He has been leading the Commission's policy and research actions on Software and Services and Cloud Computing in DG CNECT since July 2012. Previous to that, his unit was responsible for delivering the European Commission's Cloud Strategy adopted in September 2012.",
+      "Ken's earlier Commission roles include heading up the Digital Agenda for Europe Unit from 2009 to 2012, four years in the cabinet of Commissioner Reding from 2004 to 2008, Head of Sector for eEurope in 2003 and leader of the Joint Research Centre's Futures Project in Seville from 2001 to 2003.",
+      "He was a member of the Faculty of Manchester University for Science Policy for more than 10 years where he taught Information and Science Policy. Ken has a PhD from Bristol University, an MSc from Cranfield University and a BA from Lancaster University.",
+      "Ken is a keen climber, walker and mountain biker, although being Brussels based means that in practice a lot of his exercise takes place in early morning indoor spinning classes. He also enjoys music and film with subscriptions to the Bozar and the UGC."
+    ],
+    "twitter": false,
+    "picture": "Ken-Ducatel.jpg"
+  },
+  {
+    "id": "mercedesfuertes",
+    "firstname": "Mercedes",
+    "lastname": "Fuertes",
+    "title": "Professor of Administrative Law",
+    "bio": [
+      "Mercedes Fuertes is Profession of Administrative Law in the University of León (Spain) and Permanent member of the General Codification Commission in the Ministry of Justice. She has author of several monographs, chapters of collective books and articles in  legal journals.",
+      "Among her books are: Urban design and a publicity or registration system, Madrid 1995 y 2001; The contractor, the sub-contractor and the Public Administrations, Madrid 1997; Municipal wireless networks. A new public service, Madrid, 2005; Net neutrality ¿reality or utopian dream? Madrid 2014;.",
+      "She is also co-author with Prof. Dr. Sosa Wagner of other books: State bankruptcy and Europe like context, Madrid, 2011; Letter for an eurosceptic, Madrid, 2013.",
+      "She has received the first special mention of “IV Fermin Abella y Blave Prize” in 2004 and together with Prof. Sosa Wagner was recognised for the best research work “La Ley Prize” in 2007 with their article: “Can the contracts stay at home? The European controversial about the public contracts in house”."
+    ],
+    "twitter": false,
+    "picture": "Mercedes-Fuertes.jpg"
+  },
+  {
+    "id": "dianauraniagaletta",
+    "firstname": "Diana Urania",
+    "lastname": "Galetta",
+    "title": "Professor of Administrative Law, Milan University",
+    "bio": [
+      "Diana Urania Galetta is Full professor of Administrative Law at the Law Faculty of Milan University (Università degli Studi di Milano).",
+      "She holds an university Degree cum laude both in Law and in Political Science (Università degli Studi di Milano), as well as an LL.M. degree cum laude (Osnabrück University- Germany).",
+      "Professor Galetta is Deputy Director of the Department of Italian and Supranational Public Law and Director of the PhD Program in Public, International and EU Law at the University of Milan. She is member of Societas Juris Publici Europei (SIPE) and the Italian association of Administrative Law professors.",
+      "In 1999 she won an Annual research scholarship granted by the prestigious German Foundation ''Von Humboldt-Stiftung''."
+    ],
+    "twitter": false,
+    "picture": "Diana-Galetta.jpg"
+  },
+  {
+    "id": "katekahle",
+    "firstname": "Kate",
+    "lastname": "Kahle",
+    "title": "Head of Editorial Content Development, CERN",
+    "bio": [
+      "Kate Kahle began as a physicist before receiving a distinction for a masters in science communication. She joined CERN, the European Organization for Nuclear Research, in 2006 to communicate CERN-led European projects after 5 years of editorial experience in the Pearson Publishing group in the UK. In 2012, she became CERN’s social media manager and was promoted to head of editorial content development in 2016. Kate now leads the writing, web and social media teams at CERN and received a Best Practice award for Digital Leadership in June 2016."
+    ],
+    "twitter": "@katekahle",
+    "picture": "Kate-Kahle.jpg"
+  },
+  {
+    "id": "laurentledoux",
+    "firstname": "Laurent",
+    "lastname": "Ledoux",
+    "title": "CEO of EurActiv",
+    "bio": [
+      "In all his professional roles – as a strategy consultant, Head of Cabinet of a Belgian Minister, Manager of a business unit of a large bank or President of the Belgian Ministry of Transports – Laurent's objective has always been to transform and boost organisations by putting in place a culture where employees feel autonomous and responsible, willing and capable of taking initiative. He teaches ethics, corporate social responsibility and leadership at Solvay Brussels School of Economics and Management,  Louvain School of Management, United Business Institute of Brussels and HEC Management School in Liege. He is also Chair of \"Philosophy and Management\" association and Face2faith.eu.",
+      "Laurent is passionate about philosophy and has co-authored the English translation of « Philosophizing ad infinitum » by Marcel Conche, one of France’s preeminent historians of philosophy."
+    ],
+    "twitter": "@LaurentLedoux",
+    "picture": "Laurent-Ledoux.jpg"
   },
   {
     "id": "dominiqueleroy",
@@ -51,117 +143,26 @@
     "picture": "Dominique-Leroy.jpg"
   },
   {
-    "id": "mischadohler",
-    "firstname": "Mischa",
-    "lastname": "Dohler",
-    "title": "Professor of Wireless Communications, King's College London",
+    "id": "keithmartin",
+    "firstname": "Keith",
+    "lastname": "Martin",
+    "title": "Professor of Information Security, University of London",
     "bio": [
-      "Mischa Dohler is full Professor in Wireless Communications at King’s College London, driving cross-disciplinary research and innovation in technology, sciences and arts. He is the Director of the Centre for Telecommunications Research, co-founder and member of the Board of Directors of the smart city pioneer Worldsensing, Fellow of the IEEE, Editor-in-Chief of the Transactions on Emerging Telecommunications Technologies and the EAI Transactions on the Internet of Things, and a Distinguished Member of Harvard Square Leaders Excellence.",
-      "He acts as policy, technology and entrepreneurship adviser, examples being Richard Branson’s Carbon War Room, David Willetts’ 8 Great Technology Fund, Regulator Ofcom, UK House of Parliament, UK Ministries, EPSRC ICT Strategy Advisory Team, European Commission, Tech London Advocate, ISO Smart City working group, and various start-ups.",
-      "He is also an entrepreneur, composer & pianist, and fluent in 6 languages. He has talked at TEDx. He had coverage by national and international TV & radio, and his contributions have featured on BBC News and the Wall Street Journal."
+      "Keith Martin is Professor of Information Security at Royal Holloway, University of London. He previously held research posts at the University of Adelaide and Katholieke Universiteit Leuven, and was Director of the Information Security Group at Royal Holloway between 2010 and 2015. Keith's research interests focus on cryptography and key management, including applications and related political issues. He is the author of “Everyday Cryptography” by Oxford University Press. Keith is a designer and module leader on Royal Holloway’s distance learning MSc Information Security programme, and regularly presents to both industrial and school audiences, as well as to the wider public."
     ],
-    "twitter": "@MischaDohler",
-    "picture": "Mischa-Dohler.jpg"
+    "twitter": false,
+    "picture": "Keith-Martin.jpg"
   },
   {
-    "id": "katekahle",
-    "firstname": "Kate",
-    "lastname": "Kahle",
-    "title": "Head of Editorial Content Development, CERN",
-    "bio": [
-      "Kate Kahle began as a physicist before receiving a distinction for a masters in science communication. She joined CERN, the European Organization for Nuclear Research, in 2006 to communicate CERN-led European projects after 5 years of editorial experience in the Pearson Publishing group in the UK. In 2012, she became CERN’s social media manager and was promoted to head of editorial content development in 2016. Kate now leads the writing, web and social media teams at CERN and received a Best Practice award for Digital Leadership in June 2016."
-    ],
-    "twitter": "@katekahle",
-    "picture": "Kate-Kahle.jpg"
-  },
-  {
-    "id": "paulboag",
+    "id": "paulmiller",
     "firstname": "Paul",
-    "lastname": "Boag",
-    "title": "User experience consultant and expert in digital transformation",
+    "lastname": "Miller",
+    "title": "CEO of Digital Workplace Group",
     "bio": [
-      "Paul Boag is a user experience consultant, author and speaker. He helps organisations such as the European Commission, UCAS and Doctors Without Borders adapt to the digital world. He refocuses them on user experience and engaging with a new digitally savvy audience. "
+      "Paul Miller is CEO and Founder of the Digital Workplace Group, co-author of 'The Digital Renaissance of Work - Delivering Digital Workplaces Fit for the Future' (Gower 2014) and author of field-defining book 'The Digital Workplace: How Technology is Liberating Work (TECL 2012). He was ranked as one of the world's top 50 Social Employee Advocacy Leaders in 2015 and has given many inspirational keynote talks on the digital future of work to organizations including Microsoft, Google, Adobe, Wells Fargo and Oxford University.  He is a Judge and Mentor for the Duke of York iDEA (Inspiring Digital Enterprise Awards) 2015. For five years Paul hosted pioneering internet radio show Digital Workplace Live and IBF Live and is Executive Producer and host of 24 hour global experience Digital Workplace 24."
     ],
-    "twitter": "@boagworld",
-    "picture": "Paul-Boag.jpg"
-  },
-  {
-    "id": "juliareda",
-    "firstname": "Julia",
-    "lastname": "Reda",
-    "title": "Member of the European Parliament",
-    "bio": [
-      "Julia Read was elected to the European Parliament for the Pirate Party in 2014. She is a Vice-Chair of her parliamentary group, the Greens/European Free Alliance. In the European Parliament, she serves as a coordinator for the Greens/EFA in the Committee on Internal Market & Consumer Protection (IMCO), as a member of the Legal Affairs (JURI) and Petition (PETI) Committees and was elected to the Enquiry Committee on the Emissions Scandal (\"Dieselgate\"). She co-founded the Digital Agenda intergroup. Her legislative focus is on copyright and internet policy issues. In 2015, she was responsible for the Parliament's evaluation of the Copyright Directive.",
-      "Born in Bonn in 1986, Julia Reda was a member of the German Social Democrats for six years before joining the Piratenpartei in 2009 amidst a debate on internet blocking. She served as chairwoman of the party's youth wing from 2010 to 2012 and is a founder of the Young Pirates of Europe. She holds an M.A. in political science and communications science from Johannes-Gutenberg-University Mainz, Germany.",
-      "The global Pirate Party movement was born in 2006. Pirates, who believe in using technology for the empowerment of all, have so far enjoyed significant electoral success in Sweden, Germany, Iceland and the Czech Republic and have raised the visibility of their techno-progressive agenda across Europe."
-    ],
-    "twitter": "@Senficon",
-    "picture": "Julia-Reda.jpg"
-  },
-  {
-    "id": "maxpeterson",
-    "firstname": "Max",
-    "lastname": "Peterson",
-    "title": "Director and General Manager for Amazon Web Services Worldwide Public Sector",
-    "bio": [
-      "Max serves as director and general manager for Amazon Web Services’ worldwide public sector, with responsibility in forming partnerships with system integrators, service providers, independent software vendors and value added resellers. At AWS, Peterson leads a team that works to identify and capture public sector contracts and perform program management before and after the award.",
-      "The 25-year public sector industry veteran joined AWS in February 2012 after he served as a vice president and general manager at Dell. He was also a VP of federal sales at CDWG and a VP of public sector sales at Commerce One.",
-      "He holds a bachelor’s degree in finance and master’s of business administration in management information systems from the University of Maryland."
-    ],
-    "twitter": "@maxrpetersonii",
-    "picture": "Max-Peterson.jpg"
-  },
-  {
-    "id": "vincentbruneau",
-    "firstname": "Vincent",
-    "lastname": "Bruneau",
-    "title": "Founder & CEO of Magency",
-    "bio": [
-      "Vincent Bruneau is the founder of Magency and serves as its Chief Executive Officer. In less than four years, he became a leader in the emerging industry of digital collaborative tools by leading one of the top five fast growing companies in Europe. Magency is a unique digital solution that allows people to learn better and work better by increasing participation, collaboration, interaction at all types of meetings, events and trainings. In four years, Magency has won several awards. Its customers include brands like Nissan, Procter & Gamble, Airbus, BNP, and more.",
-      "With over 15 years as a tech illusionist performer for public and corporate events, Vincent’s an expert in building an emotional connection between corporate brands and their customers with magic and technology, enhancing the human experience."
-    ],
-    "twitter": "@vince_bruneau",
-    "picture": "Vincent-Bruneau.jpg"
-  },
-  {
-    "id": "laurentledoux",
-    "firstname": "Laurent",
-    "lastname": "Ledoux",
-    "title": "CEO of EurActiv",
-    "bio": [
-      "In all his professional roles – as a strategy consultant, Head of Cabinet of a Belgian Minister, Manager of a business unit of a large bank or President of the Belgian Ministry of Transports – Laurent's objective has always been to transform and boost organisations by putting in place a culture where employees feel autonomous and responsible, willing and capable of taking initiative. He teaches ethics, corporate social responsibility and leadership at Solvay Brussels School of Economics and Management,  Louvain School of Management, United Business Institute of Brussels and HEC Management School in Liege. He is also Chair of \"Philosophy and Management\" association and Face2faith.eu.",
-      "Laurent is passionate about philosophy and has co-authored the English translation of « Philosophizing ad infinitum » by Marcel Conche, one of France’s preeminent historians of philosophy."
-    ],
-    "twitter": "@LaurentLedoux",
-    "picture": "Laurent-Ledoux.jpg"
-  },
-  {
-    "id": "mercedesfuertes",
-    "firstname": "Mercedes",
-    "lastname": "Fuertes",
-    "title": "Professor of Administrative Law",
-    "bio": [
-      "Mercedes Fuertes is Profession of Administrative Law in the University of León (Spain) and Permanent member of the General Codification Commission in the Ministry of Justice. She has author of several monographs, chapters of collective books and articles in  legal journals.",
-      "Among her books are: Urban design and a publicity or registration system, Madrid 1995 y 2001; The contractor, the sub-contractor and the Public Administrations, Madrid 1997; Municipal wireless networks. A new public service, Madrid, 2005; Net neutrality ¿reality or utopian dream? Madrid 2014;.",
-      "She is also co-author with Prof. Dr. Sosa Wagner of other books: State bankruptcy and Europe like context, Madrid, 2011; Letter for an eurosceptic, Madrid, 2013.",
-      "She has received the first special mention of “IV Fermin Abella y Blave Prize” in 2004 and together with Prof. Sosa Wagner was recognised for the best research work “La Ley Prize” in 2007 with their article: “Can the contracts stay at home? The European controversial about the public contracts in house”."
-    ],
-    "twitter": false,
-    "picture": "Mercedes-Fuertes.jpg"
-  },
-  {
-    "id": "kenducatel",
-    "firstname": "Ken",
-    "lastname": "Ducatel",
-    "title": "Director, IT Security Directorate, DG Informatics",
-    "bio": [
-      "After joining DIGIT as Chief Security Information Officer, Ken Ducatel was appointed Director of the newly formed IT Security Directorate. He has been leading the Commission's policy and research actions on Software and Services and Cloud Computing in DG CNECT since July 2012. Previous to that, his unit was responsible for delivering the European Commission's Cloud Strategy adopted in September 2012.",
-      "Ken's earlier Commission roles include heading up the Digital Agenda for Europe Unit from 2009 to 2012, four years in the cabinet of Commissioner Reding from 2004 to 2008, Head of Sector for eEurope in 2003 and leader of the Joint Research Centre's Futures Project in Seville from 2001 to 2003.",
-      "He was a member of the Faculty of Manchester University for Science Policy for more than 10 years where he taught Information and Science Policy. Ken has a PhD from Bristol University, an MSc from Cranfield University and a BA from Lancaster University.",
-      "Ken is a keen climber, walker and mountain biker, although being Brussels based means that in practice a lot of his exercise takes place in early morning indoor spinning classes. He also enjoys music and film with subscriptions to the Bozar and the UGC."
-    ],
-    "twitter": false,
-    "picture": "Ken-Ducatel.jpg"
+    "twitter": "@paulmillersays",
+    "picture": "Paul-Miller.jpg"
   },
   {
     "id": "guntheroettinger",
@@ -175,83 +176,17 @@
     "picture": "Oettinger.jpg"
   },
   {
-    "id": "adinaioanavalean",
-    "firstname": "Adina-Ioana",
-    "lastname": "Vălean",
-    "title": "Vice-President of European Parliament",
+    "id": "maxpeterson",
+    "firstname": "Max",
+    "lastname": "Peterson",
+    "title": "Director and General Manager for Amazon Web Services Worldwide Public Sector",
     "bio": [
-      "Adina Valean became a Member of the European Parliament on 1 January 2007, with the accession of Romania to the European Union.",
-      "As an MEP, she was Rapporteur on the Connecting Europe Facility, a financing instrument which will fund €33.2 billion worth of investment to improve Europe's transport, energy and digital networks. Furthermore, as Rapporteur on the 2009 Roaming Regulation and Shadow on the subsequent dossiers, she kick-started the gradual plunge in roaming charges inside the EU, charges that will finally be eliminated in 2015.",
-      "She is a member of the Romanian National Liberal Party and was a Member of the Romanian Parliament from 2004 to 2006. Her activities focused on market and labour issues. She was also Secretary-General of the National Liberal Party's youth wing and Secretary of the National Liberal Party Committee on business, privatisation and competition policy.",
-      "Adina Valean has a Master's Degree in European Integration and Security Studies, postgraduate studies in National Security and Defence Management and a degree in mathematics. She started her professional career as a maths teacher in Bucharest. Before becoming a politician, she was a social activist, member of several foundations and associations promoting tolerance, dialogue and a liberal economic market."
+      "Max serves as director and general manager for Amazon Web Services’ worldwide public sector, with responsibility in forming partnerships with system integrators, service providers, independent software vendors and value added resellers. At AWS, Peterson leads a team that works to identify and capture public sector contracts and perform program management before and after the award.",
+      "The 25-year public sector industry veteran joined AWS in February 2012 after he served as a vice president and general manager at Dell. He was also a VP of federal sales at CDWG and a VP of public sector sales at Commerce One.",
+      "He holds a bachelor’s degree in finance and master’s of business administration in management information systems from the University of Maryland."
     ],
-    "twitter": "@AdinaValean",
-    "picture": "Adina-Ioana-Valean.jpg"
-  },
-  {
-    "id": "jenniferbaker",
-    "firstname": "Jennifer",
-    "lastname": "Baker",
-    "title": "Tech journalist and moderator",
-    "bio": [
-      "Jennifer has been a journalist in print, radio and television for nearly 20 years, the last 7 specialising in EU policy and legislation in the technology sector - from data protection and privacy to trade agreements; antitrust cases to copyright law; national security to public transparency.",
-      "She has worked across a wide range of sectors, from editing a national daily paper in Malta, to reporting on European affairs for Middle Eastern television and has a wealth of experience in navigating the political quagmire of the EU. As well as an address book packed with insider sources and contacts in Brussels, Jennifer is skilled at translating EU policy-speak into understandable English.",
-      "She is passionate about the importance of rigorous journalism to society believes ethical journalism should go hand in hand with conviction on human rights issues.",
-      "She has written for some of the biggest names in the business, ArsTechnica, ComputerWeekly, Macworld, PCworld and CIO (as part of the renowned IDG News Service team), and The Register. She is senior presenter on Vieuws.eu and regularly features as an EU policy and tech expert on BBC radio, FSN, ETV and others."
-    ],
-    "twitter": "@BrusselsGeek",
-    "picture": "Jennyfer-Baker.jpg"
-  },
-  {
-    "id": "keithmartin",
-    "firstname": "Keith",
-    "lastname": "Martin",
-    "title": "Professor of Information Security, University of London",
-    "bio": [
-      "Keith Martin is Professor of Information Security at Royal Holloway, University of London. He previously held research posts at the University of Adelaide and Katholieke Universiteit Leuven, and was Director of the Information Security Group at Royal Holloway between 2010 and 2015. Keith's research interests focus on cryptography and key management, including applications and related political issues. He is the author of “Everyday Cryptography” by Oxford University Press. Keith is a designer and module leader on Royal Holloway’s distance learning MSc Information Security programme, and regularly presents to both industrial and school audiences, as well as to the wider public."
-    ],
-    "twitter": false,
-    "picture": "Keith-Martin.jpg"
-  },
-  {
-    "id": "alexandresteiner",
-    "firstname": "Alexandre",
-    "lastname": "Steiner",
-    "title": "President CetSI",
-    "bio": [
-      "Alexandre Steiner is currently president of CetSI, a hosting and outsourcing company specialised in digital transformation. He is also founder, president and managing partner at OiO Ventures, key player of innovation and other transaction investment support for major accounts, funds and entrepreneurs. Over time, he acquired an extensive experience in cloud computing, including as the development director at Numergy between 2012 and 2016, where he was responsible for Public Cloud Services IAAS focus, as the VP Global Portfolio and Marketing at Getronics between 2005 and 2008 and as the VP marketing Alliances Portfolio and Marketing at KPN Group between 2008 and 2012. Before that, he has held several positions in Cap Gemini such as VP Technology Services and VP Portfolio strategy. Alexandre is also very invested as a coach and mentor for start-ups."
-    ],
-    "twitter": false,
-    "picture": "Alex-Steiner.jpg"
-  },
-  {
-    "id": "dianauraniagaletta",
-    "firstname": "Diana Urania",
-    "lastname": "Galetta",
-    "title": "Professor of Administrative Law, Milan University",
-    "bio": [
-      "Diana Urania Galetta is Full professor of Administrative Law at the Law Faculty of Milan University (Università degli Studi di Milano).",
-      "She holds an university Degree cum laude both in Law and in Political Science (Università degli Studi di Milano), as well as an LL.M. degree cum laude (Osnabrück University- Germany).",
-      "Professor Galetta is Deputy Director of the Department of Italian and Supranational Public Law and Director of the PhD Program in Public, International and EU Law at the University of Milan. She is member of Societas Juris Publici Europei (SIPE) and the Italian association of Administrative Law professors.",
-      "In 1999 she won an Annual research scholarship granted by the prestigious German Foundation ''Von Humboldt-Stiftung''."
-    ],
-    "twitter": false,
-    "picture": "Diana-Galetta.jpg"
-  },
-  {
-    "id": "nathalyrey",
-    "firstname": "Nathaly",
-    "lastname": "Rey",
-    "title": "EMEA Trust Manager, Google for Work",
-    "bio": [
-      "Nathaly is a privacy and security lawyer with extensive experience in designing innovative strategies for regulatory compliance, awareness-raising, best practices; and advising on regulatory approaches for ICT.",
-      "She holds an LL.M. on IT & Telecom Law, and a Ph.D. in Law.",
-      "Before joining Google, Nathaly led the Spanish Association of Information Security (ISMS Forum) and worked as a Senior Associate at Ecija, advising multinational corporations on a wide range of privacy and security matters, from global compliance programs to audits, IT outsourcing, and cross-border data flows.",
-      "Certified Data Privacy Professional (CDPP) and Certified Cloud Security Knowledge (CCSK).",
-      "Co- Founder and member of the Board of the Cloud Security Alliance-Spanish Chapter; she is a regular lecturer at IE Law School - Compliance program, and ICT arbiter at the European Association of Arbitration."
-    ],
-    "twitter": false,
-    "picture": "Nathaly-Rey.jpg"
+    "twitter": "@maxrpetersonii",
+    "picture": "Max-Peterson.jpg"
   },
   {
     "id": "bartpreneel",
@@ -269,6 +204,34 @@
     "picture": "Bart-Preneel.jpg"
   },
   {
+    "id": "juliareda",
+    "firstname": "Julia",
+    "lastname": "Reda",
+    "title": "Member of the European Parliament",
+    "bio": [
+      "Julia Read was elected to the European Parliament for the Pirate Party in 2014. She is a Vice-Chair of her parliamentary group, the Greens/European Free Alliance. In the European Parliament, she serves as a coordinator for the Greens/EFA in the Committee on Internal Market & Consumer Protection (IMCO), as a member of the Legal Affairs (JURI) and Petition (PETI) Committees and was elected to the Enquiry Committee on the Emissions Scandal (\"Dieselgate\"). She co-founded the Digital Agenda intergroup. Her legislative focus is on copyright and internet policy issues. In 2015, she was responsible for the Parliament's evaluation of the Copyright Directive.",
+      "Born in Bonn in 1986, Julia Reda was a member of the German Social Democrats for six years before joining the Piratenpartei in 2009 amidst a debate on internet blocking. She served as chairwoman of the party's youth wing from 2010 to 2012 and is a founder of the Young Pirates of Europe. She holds an M.A. in political science and communications science from Johannes-Gutenberg-University Mainz, Germany.",
+      "The global Pirate Party movement was born in 2006. Pirates, who believe in using technology for the empowerment of all, have so far enjoyed significant electoral success in Sweden, Germany, Iceland and the Czech Republic and have raised the visibility of their techno-progressive agenda across Europe."
+    ],
+    "twitter": "@Senficon",
+    "picture": "Julia-Reda.jpg"
+  },
+  {
+    "id": "nathalyrey",
+    "firstname": "Nathaly",
+    "lastname": "Rey",
+    "title": "EMEA Trust Manager, Google for Work",
+    "bio": [
+      "Nathaly is a privacy and security lawyer with extensive experience in designing innovative strategies for regulatory compliance, awareness-raising, best practices; and advising on regulatory approaches for ICT.",
+      "She holds an LL.M. on IT & Telecom Law, and a Ph.D. in Law.",
+      "Before joining Google, Nathaly led the Spanish Association of Information Security (ISMS Forum) and worked as a Senior Associate at Ecija, advising multinational corporations on a wide range of privacy and security matters, from global compliance programs to audits, IT outsourcing, and cross-border data flows.",
+      "Certified Data Privacy Professional (CDPP) and Certified Cloud Security Knowledge (CCSK).",
+      "Co- Founder and member of the Board of the Cloud Security Alliance-Spanish Chapter; she is a regular lecturer at IE Law School - Compliance program, and ICT arbiter at the European Association of Arbitration."
+    ],
+    "twitter": false,
+    "picture": "Nathaly-Rey.jpg"
+  },
+  {
     "id": "andreasschwab",
     "firstname": "Andreas",
     "lastname": "Schwab",
@@ -281,5 +244,42 @@
     ],
     "twitter": false,
     "picture": "Andreas-Schwab.jpg"
+  },
+  {
+    "id": "sabinesipunova",
+    "firstname": "Sabine",
+    "lastname": "Sipunova",
+    "title": "Founder of \"Sorry as a Service\"",
+    "bio": [
+      "Sabine Sipunova is a co-founder of Sorry as a Service and her passion is finding out ways how companies can build meaningful and personal relationships with their customers using technology, particularly in moments when something goes wrong. Sorry as a Service has gone through on of the best accelerators in the world Techstars and have won many awards as one of the most innovative companies in Europe. Their customers include brands like BT, Transferwise, Belron, Trouva and more.",
+      "In 2016 Sabine was featured in Forbes' Top 10 Promising Founders to Watch in the Baltics."
+    ],
+    "twitter": false,
+    "picture": "Sabine-Sipunova.jpg"
+  },
+  {
+    "id": "alexandresteiner",
+    "firstname": "Alexandre",
+    "lastname": "Steiner",
+    "title": "President CetSI",
+    "bio": [
+      "Alexandre Steiner is currently president of CetSI, a hosting and outsourcing company specialised in digital transformation. He is also founder, president and managing partner at OiO Ventures, key player of innovation and other transaction investment support for major accounts, funds and entrepreneurs. Over time, he acquired an extensive experience in cloud computing, including as the development director at Numergy between 2012 and 2016, where he was responsible for Public Cloud Services IAAS focus, as the VP Global Portfolio and Marketing at Getronics between 2005 and 2008 and as the VP marketing Alliances Portfolio and Marketing at KPN Group between 2008 and 2012. Before that, he has held several positions in Cap Gemini such as VP Technology Services and VP Portfolio strategy. Alexandre is also very invested as a coach and mentor for start-ups."
+    ],
+    "twitter": false,
+    "picture": "Alex-Steiner.jpg"
+  },
+  {
+    "id": "adinaioanavalean",
+    "firstname": "Adina-Ioana",
+    "lastname": "Vălean",
+    "title": "Vice-President of European Parliament",
+    "bio": [
+      "Adina Valean became a Member of the European Parliament on 1 January 2007, with the accession of Romania to the European Union.",
+      "As an MEP, she was Rapporteur on the Connecting Europe Facility, a financing instrument which will fund €33.2 billion worth of investment to improve Europe's transport, energy and digital networks. Furthermore, as Rapporteur on the 2009 Roaming Regulation and Shadow on the subsequent dossiers, she kick-started the gradual plunge in roaming charges inside the EU, charges that will finally be eliminated in 2015.",
+      "She is a member of the Romanian National Liberal Party and was a Member of the Romanian Parliament from 2004 to 2006. Her activities focused on market and labour issues. She was also Secretary-General of the National Liberal Party's youth wing and Secretary of the National Liberal Party Committee on business, privatisation and competition policy.",
+      "Adina Valean has a Master's Degree in European Integration and Security Studies, postgraduate studies in National Security and Defence Management and a degree in mathematics. She started her professional career as a maths teacher in Bucharest. Before becoming a politician, she was a social activist, member of several foundations and associations promoting tolerance, dialogue and a liberal economic market."
+    ],
+    "twitter": "@AdinaValean",
+    "picture": "Adina-Ioana-Valean.jpg"
   }
 ]
