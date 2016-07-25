@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.12.0"></a>
+# [0.12.0](https://github.com/ec-europa/digit-ict-conf-2016/compare/v0.11.0...v0.12.0) (2016-07-25)
+
+
+### Features
+
+* **modals:** slightly better modals ([87927fc](https://github.com/ec-europa/digit-ict-conf-2016/commit/87927fc))
+* **noopener:** add rel="noopener" on external links ([493a990](https://github.com/ec-europa/digit-ict-conf-2016/commit/493a990))
+
+
+
 <a name="0.11.0"></a>
 # [0.11.0](https://github.com/ec-europa/digit-ict-conf-2016/compare/v0.10.0...v0.11.0) (2016-07-22)
 
