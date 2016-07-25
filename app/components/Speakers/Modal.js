@@ -47,7 +47,7 @@ const Modal = ({ speaker, schedule, onToggleEvent, location }) => {
           {speaker.bio.map((line, index) => (<p key={index}>{line}</p>))}
         </div>
         {speaker.twitter
-         ? <Link className={styles.twitter} to={`https://twitter.com/${speaker.twitter.substr(1)}`} target="_blank"><img src={twitterLogo} alt="Twitter Feed" /> {speaker.twitter}</Link>
+         ? <Link className={styles.twitter} to={`https://twitter.com/${speaker.twitter.substr(1)}`} target="_blank" rel="noopener"><img src={twitterLogo} alt="Twitter Feed" /> {speaker.twitter}</Link>
          : null
         }
         {sessions}

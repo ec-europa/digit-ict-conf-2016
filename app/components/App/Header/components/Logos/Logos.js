@@ -13,7 +13,7 @@ import styles from './Logos.scss';
 function HeaderLogos() {
   return (
     <div className={styles.container}>
-      <Link to={'http://europa.eu/index_en.htm'} target="_blank" className={styles.link}>
+      <Link to={'http://europa.eu/index_en.htm'} target="_blank" rel="noopener" className={styles.link}>
         <img src={europaLogo} className={styles.europaLogo} alt="DIGITEC 2016" />
       </Link>
       <Link to={'/'} className={styles.link}>
