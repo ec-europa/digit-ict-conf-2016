@@ -9,6 +9,8 @@ import FlipMove from 'react-flip-move';
 import Row from './Row';
 import styles from './List.scss';
 
+
+
 const List = ({ events, schedule, onToggle, location }) => {
   const eventsDisplay = [];
 
