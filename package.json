@@ -20,11 +20,12 @@
     "build:dll": "node ./tools/scripts/dependencies.js",
     "start": "cross-env NODE_ENV=development node tools/scripts/server.js",
     "postsetup": "npm run build:dll",
-    "lint": "npm run lint:js && npm run lint:scss",
+    "lint": "npm run lint:js ; npm run lint:json ; npm run lint:md ; npm run lint:scss ; npm run lint:text",
     "lint:js": "eslint . --ignore-pattern tools/scripts",
     "lint:json": "eslint . --ext .json",
     "lint:md": "remark **/*.md -u remark-lint",
     "lint:scss": "stylelint ./app/**/*.scss",
+    "lint:text": "textlint content/",
     "lint-staged": "lint-staged",
     "release": "standard-version",
     "serve": "cross-env NODE_ENV=production node tools/scripts/prodServer.js"
@@ -32,6 +33,12 @@
   "lint-staged": {
     "*.js": [
       "lint:js"
+    ],
+    "*.json": [
+      "lint:json"
+    ],
+    ".md": [
+      "lint:md", "lint:text"
     ],
     "*.scss": [
       "lint:scss"
@@ -153,6 +160,9 @@
     "style-loader": "^0.13.1",
     "stylelint": "^7.0.3",
     "stylelint-config-standard": "^11.0.0",
+    "textlint": "^7.1.0",
+    "textlint-rule-alex": "^1.1.0",
+    "textlint-rule-rousseau": "^1.4.5",
     "url-loader": "^0.5.7",
     "validate-commit-msg": "^2.6.1",
     "webpack": "2.1.0-beta.14",
