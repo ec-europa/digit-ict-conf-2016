@@ -1,7 +1,0 @@
-#! /bin/sh
-
-nvm use v5.4.1
-npm config set registry http://registry.npmjs.org/
-npm i core-js
-npm install
-npm run lint
