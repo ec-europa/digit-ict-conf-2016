@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.13.0"></a>
+# [0.13.0](https://github.com/ec-europa/digit-ict-conf-2016/compare/v0.12.0...v0.13.0) (2016-07-27)
+
+
+### Features
+
+* **ci:** setup continuous integration pipeline ([#66](https://github.com/ec-europa/digit-ict-conf-2016/issues/66)) ([5d9e49e](https://github.com/ec-europa/digit-ict-conf-2016/commit/5d9e49e))
+* **content:** sort speakers by their last name ([5a0c63a](https://github.com/ec-europa/digit-ict-conf-2016/commit/5a0c63a))
+* **design:** slightly better-looking speakers cards ([32bfcaf](https://github.com/ec-europa/digit-ict-conf-2016/commit/32bfcaf))
+
+
+
 <a name="0.12.0"></a>
 # [0.12.0](https://github.com/ec-europa/digit-ict-conf-2016/compare/v0.11.0...v0.12.0) (2016-07-25)
 
