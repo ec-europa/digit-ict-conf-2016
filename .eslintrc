@@ -1,6 +1,9 @@
 {
   "parser": "babel-eslint",
   "extends": "airbnb",
+  "plugins": [
+    "json"
+  ],
   "env": {
     "browser": true,
     "node": true,

@@ -7,9 +7,11 @@ const uniq = require('lodash/uniq');
 let defaultConfig = {};
 
 try {
-  defaultConfig = require('./config.local.json'); // eslint-disable-line global-require
+  // eslint-disable-next-line global-require, import/no-unresolved
+  defaultConfig = require('./config.local.json');
 } catch (e) {
-  defaultConfig = require('./config.dist.json'); // eslint-disable-line global-require
+  // eslint-disable-next-line global-require
+  defaultConfig = require('./config.dist.json');
 }
 
 const Config = {

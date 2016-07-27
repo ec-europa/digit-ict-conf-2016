@@ -1,0 +1,12 @@
+{
+  "rules": {
+    "rousseau": {
+      "severity" : "warning",
+      "showLevels": ["suggestion", "warning", "error"],
+      "ignoreTypes": ["readibility"]
+    },
+    "alex": {
+      "severity" : "warning"
+    }
+  }
+}
