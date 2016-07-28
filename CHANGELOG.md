@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.14.0"></a>
+# [0.14.0](https://github.com/ec-europa/digit-ict-conf-2016/compare/v0.13.0...v0.14.0) (2016-07-28)
+
+
+### Features
+
+* **ci:** add changelog to GitHub releases ([578d5a5](https://github.com/ec-europa/digit-ict-conf-2016/commit/578d5a5))
+* **gitmagic:** add contributing.json (GitMagic) ([#67](https://github.com/ec-europa/digit-ict-conf-2016/issues/67)) ([8bfe03d](https://github.com/ec-europa/digit-ict-conf-2016/commit/8bfe03d))
+
+
+
 <a name="0.13.0"></a>
 # [0.13.0](https://github.com/ec-europa/digit-ict-conf-2016/compare/v0.12.0...v0.13.0) (2016-07-27)
 
