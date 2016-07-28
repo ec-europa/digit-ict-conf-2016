@@ -36,4 +36,4 @@ npm run lint
 
 ## Contributing
 
-See [CONTRIBUTING](contributing.md).
+See [CONTRIBUTING](CONTRIBUTING.md).

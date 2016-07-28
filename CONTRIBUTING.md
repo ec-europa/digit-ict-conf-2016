@@ -1,8 +1,12 @@
 # Contributing
 
+## Merge
+
 When you land commits on the master branch, select the Squash and Merge option.
 Add a title and body that follow the [conventional-changelog-standard
 conventions](https://github.com/conventional-changelog/conventional-changelog-angular/blob/master/convention.md).
+
+## Release
 
 When you're ready to release, just type:
 
