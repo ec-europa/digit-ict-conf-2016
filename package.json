@@ -27,7 +27,7 @@
     "lint:scss": "stylelint ./app/**/*.scss",
     "lint:text": "textlint content/",
     "lint-staged": "lint-staged",
-    "release": "standard-version",
+    "release": "git checkout master && git pull origin master && standard-version && git push --follow-tags origin master && conventional-github-releaser -p angular",
     "serve": "cross-env NODE_ENV=production node tools/scripts/prodServer.js"
   },
   "lint-staged": {
@@ -47,22 +47,7 @@
   },
   "config": {
     "ghooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "validate-commit-msg"
-    },
-    "validate-commit-msg": {
-      "types": [
-        "feat",
-        "fix",
-        "docs",
-        "style",
-        "refactor",
-        "perf",
-        "test",
-        "chore",
-        "revert"
-      ],
-      "maxSubjectLength": 100
+      "pre-commit": "lint-staged"
     }
   },
   "dllPlugin": {
@@ -119,6 +104,7 @@
     "chalk": "^1.1.3",
     "cheerio": "^0.20.0",
     "connect-history-api-fallback": "^1.2.0",
+    "conventional-github-releaser": "^1.1.3",
     "copy-webpack-plugin": "^3.0.1",
     "cross-env": "^2.0.0",
     "css-loader": "^0.23.1",
@@ -165,7 +151,6 @@
     "textlint-rule-alex": "^1.1.0",
     "textlint-rule-rousseau": "^1.4.5",
     "url-loader": "^0.5.7",
-    "validate-commit-msg": "^2.6.1",
     "webpack": "2.1.0-beta.14",
     "webpack-dev-middleware": "^1.6.1",
     "webpack-hot-middleware": "^2.12.1"
