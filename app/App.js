@@ -19,6 +19,7 @@ import { Drawer, DrawerHeader, DrawerHeaderLogos, DrawerHeaderTitle, DrawerNavig
 import Footer from './components/App/Footer/Footer';
 import Content from './components/App/Content/Content';
 import Modal from './components/Modal/Modal';
+import NotificationCenter from './containers/NotificationCenter';
 
 // Styles
 import styles from './App.scss';
@@ -136,6 +137,7 @@ export class App extends React.Component {
         <Modal isOpen={isModal} returnTo={location.state ? location.state.returnTo : ''} pathname={location.pathname}>
           {modalChildren}
         </Modal>
+        <NotificationCenter />
       </div>
     );
   }

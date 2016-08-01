@@ -1,0 +1,36 @@
+/**
+ * Container
+ */
+
+.notification {
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 50em;
+  z-index: 1000;
+  margin: 0 auto;
+}
+
+/**
+ * Animations
+ */
+
+.enter {
+  transform: translateY(100%);
+}
+
+.enter.enterActive {
+  transform: translateY(0);
+  transition: transform 300ms ease-in-out 0ms;
+}
+
+.leave {
+  transform: translateY(0);
+}
+
+.leave.leaveActive {
+  transform: translateY(100%);
+  transition: transform 300ms ease-in-out 0ms;
+}

@@ -2,19 +2,23 @@
  * Create the store
  */
 
-import { createStore, compose, combineReducers } from 'redux';
+import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
+import thunk from 'redux-thunk';
 import { persistStore, autoRehydrate } from 'redux-persist';
 
 import schedule from './modules/schedule';
 import layout from './modules/layout';
+import notification from './modules/notification';
 
 export default function configureStore() {
   const reducer = combineReducers({
     schedule,
     layout,
+    notification,
   });
 
   const enhancers = [
+    applyMiddleware(thunk),
     autoRehydrate(),
   ];
 

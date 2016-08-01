@@ -5,13 +5,16 @@
  */
 import data from '../../../content/events.json';
 
+/**
+ * Other actions
+ */
+import { openNotification } from './notification';
+
 /*
  * Constants
  */
 export const ADD_TO_MY_SCHEDULE = 'ADD_TO_MY_SCHEDULE';
 export const REMOVE_FROM_MY_SCHEDULE = 'REMOVE_FROM_MY_SCHEDULE';
-export const TOGGLE_EVENT = 'TOGGLE_EVENT';
-
 
 /*
  * Initial state
@@ -26,12 +29,6 @@ data.filter(event => event.register).forEach(event => {
  */
 export default function reducer(state = initialState, action) {
   switch (action.type) {
-    case TOGGLE_EVENT: {
-      if (state[action.event.id]) {
-        return reducer(state, Object.assign({}, action, { type: REMOVE_FROM_MY_SCHEDULE }));
-      }
-      return reducer(state, Object.assign({}, action, { type: ADD_TO_MY_SCHEDULE }));
-    }
     case ADD_TO_MY_SCHEDULE: {
       return Object.assign({}, state, {
         [action.event.id]: true,
@@ -51,23 +48,40 @@ export default function reducer(state = initialState, action) {
 /*
  * Actions
  */
-export function addEvent(event) {
-  return {
-    type: ADD_TO_MY_SCHEDULE,
-    event,
-  };
-}
-
-export function removeEvent(event) {
-  return {
-    type: REMOVE_FROM_MY_SCHEDULE,
-    event,
-  };
-}
-
 export function toggleEvent(event) {
-  return {
-    type: TOGGLE_EVENT,
-    event,
+  return (dispatch, getState) => {
+    const { schedule } = getState();
+
+    if (schedule[event.id]) {
+      dispatch(openNotification({
+        id: `${event.id}-remove`,
+        title: 'Event removed',
+        body: `You just removed ${event.title} from your schedule.`,
+        action: {
+          label: 'Undo',
+          callback: () => dispatch(toggleEvent(event)),
+        },
+      }));
+
+      return dispatch({
+        type: REMOVE_FROM_MY_SCHEDULE,
+        event,
+      });
+    }
+
+    dispatch(openNotification({
+      id: `${event.id}-add`,
+      title: 'Event added',
+      body: `You just added ${event.title} to your schedule.`,
+      action: {
+        label: 'Undo',
+        callback: () => dispatch(toggleEvent(event)),
+      },
+    }));
+
+    return dispatch({
+      type: ADD_TO_MY_SCHEDULE,
+      event,
+    });
   };
 }
