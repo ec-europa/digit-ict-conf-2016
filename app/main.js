@@ -59,4 +59,5 @@ ReactDOM.render(
 
 // Install ServiceWorker and AppCache
 import { install } from 'offline-plugin/runtime';
+
 install();

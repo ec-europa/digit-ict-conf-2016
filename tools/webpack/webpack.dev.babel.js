@@ -6,11 +6,12 @@ const path = require('path');
 const fs = require('fs');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const logger = require('../logger');
 const cheerio = require('cheerio');
+const logger = require('../logger');
+const config = require('../config');
+
 const pkg = require(path.resolve(process.cwd(), 'package.json'));
 const dllPlugin = pkg.dllPlugin;
-const config = require('../config');
 
 // PostCSS plugins
 const cssnext = require('postcss-cssnext');

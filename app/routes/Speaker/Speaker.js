@@ -19,7 +19,7 @@ import speakers from '../../../content/speakers.json';
 import SpeakerModal from '../../components/Speakers/Modal';
 import SpeakerPage from '../../components/Speakers/Page';
 
-export class Speaker extends React.Component {
+class Speaker extends React.Component {
   constructor(props) {
     super(props);
 
