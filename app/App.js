@@ -24,7 +24,7 @@ import NotificationCenter from './containers/NotificationCenter';
 // Styles
 import styles from './App.scss';
 
-export class App extends React.Component {
+class App extends React.Component {
   constructor(props) {
     super(props);
     document.body.style.overflow = 'auto';
@@ -96,7 +96,7 @@ export class App extends React.Component {
               <HeaderNavigationItem to={'/programme'}>Programme</HeaderNavigationItem>
               <HeaderNavigationItem to={'/my-digitec'}>My DIGITEC</HeaderNavigationItem>
               <HeaderNavigationItem to={'/practical'}>Practical</HeaderNavigationItem>
-              <HeaderNavigationItem to={'https://scic.ec.europa.eu/fmi/ezreg/DIGITEC2016/start'} target="_blank" rel="noopener" primary>Register</HeaderNavigationItem>
+              <HeaderNavigationItem to={'https://scic.ec.europa.eu/fmi/ezreg/DIGITEC2016/start'} target="_blank" rel="noopener noreferrer" primary>Register</HeaderNavigationItem>
             </HeaderNavigation>
           </Header>
           <Drawer onToggle={onToggleDrawer} isOpen={drawerOpen}>
@@ -112,8 +112,8 @@ export class App extends React.Component {
               <DrawerNavigationItem to={'/my-digitec'}>My DIGITEC</DrawerNavigationItem>
               <DrawerNavigationItem to={'/practical'}>Practical</DrawerNavigationItem>
               <DrawerNavigationSeparator />
-              <DrawerNavigationItem to={'https://scic.ec.europa.eu/fmi/ezreg/DIGITEC2016/start'} target="_blank" rel="noopener">Register</DrawerNavigationItem>
-              <DrawerNavigationItem to={'https://twitter.com/hashtag/digitec16'} target="_blank" rel="noopener">#digitec16</DrawerNavigationItem>
+              <DrawerNavigationItem to={'https://scic.ec.europa.eu/fmi/ezreg/DIGITEC2016/start'} target="_blank" rel="noopener noreferrer">Register</DrawerNavigationItem>
+              <DrawerNavigationItem to={'https://twitter.com/hashtag/digitec16'} target="_blank" rel="noopener noreferrer">#digitec16</DrawerNavigationItem>
             </DrawerNavigation>
           </Drawer>
           <Content>

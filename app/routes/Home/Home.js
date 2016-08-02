@@ -18,7 +18,7 @@ import styles from './Home.scss';
 // Load content
 import mainContent from '../../../content/homepage/main.md';
 
-export class Home extends React.Component {
+class Home extends React.Component {
   componentDidMount() {
     this.props.onUpdateHeaderTitle('DIGITEC 2016');
   }
