@@ -72,7 +72,7 @@ export class Practical extends React.Component {
         <p>The event is open to EU institutions' staff only. The registration is available <a href="https://scic.ec.europa.eu/fmi/ezreg/DIGITEC2016/start" target="_blank" rel="noopener">here</a>.</p>
         <h2>How to get to SQUARE Brussels?</h2>
         <div>
-          SQUARE- Brussels Meeting Centre<br />
+          SQUARE - Brussels Meeting Centre<br />
           Rue Mont des Arts<br />
           B-1000 Brussels, Belgium
         </div>

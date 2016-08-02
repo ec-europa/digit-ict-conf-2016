@@ -1,1 +1,14 @@
-{"type":"FeatureCollection","features":[{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[4.357591867446899,50.84392160693993]}}]}
+{
+  "type": "FeatureCollection",
+  "features": [{
+    "type": "Feature",
+    "properties": {
+      "name": "SQUARE - Brussels Meeting Centre",
+      "description": "<p>SQUARE - Brussels Meeting Centre<br\/>Rue Mont des Arts<br\/>B-1000 Brussels, Belgium<\/p>"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.357591867446899, 50.84392160693993]
+    }
+  }]
+}
