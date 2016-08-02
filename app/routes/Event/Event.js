@@ -20,7 +20,7 @@ import EventPage from '../../components/Events/Page';
 import { toggleEvent } from '../../store/modules/schedule';
 import { updateHeaderTitle } from '../../store/modules/layout';
 
-export class Event extends React.Component {
+class Event extends React.Component {
   constructor(props) {
     super(props);
 

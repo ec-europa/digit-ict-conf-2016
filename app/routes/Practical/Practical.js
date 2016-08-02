@@ -22,7 +22,7 @@ import iosBrowserImg from './images/ios-browser.jpg';
 import iosAddtohomescreenImg from './images/ios-addtohomescreen.jpg';
 import iosHomescreenImg from './images/ios-homescreen.jpg';
 
-export class Practical extends React.Component {
+class Practical extends React.Component {
   componentDidMount() {
     this.props.onUpdateHeaderTitle('Practical');
 
@@ -47,7 +47,7 @@ export class Practical extends React.Component {
         ]
       }
     `;
-    this.refs.map.appendChild(webtoolsMapData);
+    this.map.appendChild(webtoolsMapData);
 
     $script('//europa.eu/webtools/load.js', () => {
       // Refresh the map if needed
@@ -69,7 +69,7 @@ export class Practical extends React.Component {
           <h1>Practical</h1>
         </div>
         <h2>Registration</h2>
-        <p>The event is open to EU institutions' staff only. The registration is available <a href="https://scic.ec.europa.eu/fmi/ezreg/DIGITEC2016/start" target="_blank" rel="noopener">here</a>.</p>
+        <p>The event is open to EU institutions' staff only. The registration is available <a href="https://scic.ec.europa.eu/fmi/ezreg/DIGITEC2016/start" target="_blank" rel="noopener noreferrer">here</a>.</p>
         <h2>How to get to SQUARE Brussels?</h2>
         <div>
           SQUARE- Brussels Meeting Centre<br />
@@ -81,9 +81,9 @@ export class Practical extends React.Component {
             Directions (PDF)
           </a>
         </div>
-        <div id="map" ref="map" />
+        <div id="map" ref={c => { this.map = c; }} />
         <h2>DIGITEC live</h2>
-        <p>Follow DIGITEC on Twitter (<a href="https://twitter.com/hashtag/digitec16" target="_blank" rel="noopener">#digitec16</a>) or via the webstream on 29<sup>th</sup> of November.</p>
+        <p>Follow DIGITEC on Twitter (<a href="https://twitter.com/hashtag/digitec16" target="_blank" rel="noopener noreferrer">#digitec16</a>) or via the webstream on 29<sup>th</sup> of November.</p>
         <h2>DIGITEC on your mobile</h2>
         <p>On iOS or with Chrome for Android, you can add DIGITEC to your home screen.</p>
         <h3>Android</h3>
