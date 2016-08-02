@@ -55,8 +55,8 @@ export function toggleEvent(event) {
     if (schedule[event.id]) {
       dispatch(openNotification({
         id: `${event.id}-remove`,
-        title: 'Event removed',
-        body: `You just removed ${event.title} from your schedule.`,
+        title: 'Event removed...',
+        body: `<strong>${event.title}</strong> has been removed from your DIGITEC.`,
         action: {
           label: 'Undo',
           callback: () => dispatch(toggleEvent(event)),
@@ -71,8 +71,8 @@ export function toggleEvent(event) {
 
     dispatch(openNotification({
       id: `${event.id}-add`,
-      title: 'Event added',
-      body: `You just added ${event.title} to your schedule.`,
+      title: 'Event added!',
+      body: `<strong>${event.title}</strong> has been added to your DIGITEC.`,
       action: {
         label: 'Undo',
         callback: () => dispatch(toggleEvent(event)),

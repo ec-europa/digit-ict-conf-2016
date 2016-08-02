@@ -14,7 +14,7 @@ class Notification extends React.Component {
   constructor(props) {
     super(props);
     this.handleActionClick = this.handleActionClick.bind(this);
-    this.dismissTimeout = setTimeout(props.onRequestClose, 45000);
+    this.dismissTimeout = setTimeout(props.onRequestClose, 4000);
   }
 
   componentWillUnmount() {
@@ -37,7 +37,7 @@ class Notification extends React.Component {
       >
         <div className={styles.label}>
           <span className={styles.title}>{title}</span>
-          <span className={styles.body}>{body}</span>
+          <span className={styles.body} dangerouslySetInnerHTML={{ __html: body }} />
         </div>
         {action && action.label && action.callback ?
           <button
