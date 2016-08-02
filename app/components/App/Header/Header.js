@@ -9,9 +9,9 @@ import Headroom from 'headroom.js';
 import classnames from 'classnames';
 import styles from './Header.scss';
 
-export class Header extends React.Component {
+class Header extends React.Component {
   componentDidMount() {
-    this.headroom = new Headroom(this.refs.header, {
+    this.headroom = new Headroom(this.header, {
       offset: 80,
       tolerance: 6,
       classes: {
@@ -39,7 +39,7 @@ export class Header extends React.Component {
     );
 
     return (
-      <header className={headerClasses} ref="header">
+      <header className={headerClasses} ref={c => { this.header = c; }}>
         <div className={styles.innerContainer}>
           {children}
         </div>
