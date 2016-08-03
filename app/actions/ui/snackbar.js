@@ -15,8 +15,8 @@ const initialState = {};
 export default function reducer(state = initialState, action) {
   switch (action.type) {
     case OPEN_SNACKBAR: {
-      const snackbar = {
-        id: JSON.stringify(action.snackbar),
+      return {
+        open: true,
         message: '',
         action: {
           label: '',
@@ -24,11 +24,11 @@ export default function reducer(state = initialState, action) {
         },
         ...action.snackbar,
       };
-
-      return snackbar;
     }
     case CLOSE_SNACKBAR: {
-      return {};
+      return {
+        open: false,
+      };
     }
     default: {
       return state;

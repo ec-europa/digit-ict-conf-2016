@@ -54,7 +54,6 @@ export function toggleEvent(event) {
 
     if (schedule[event.id]) {
       dispatch(openSnackbar({
-        id: `${event.id}-remove`,
         message: `<strong>${event.title}</strong> has been removed from your DIGITEC.`,
         action: {
           label: 'Undo',
@@ -69,7 +68,6 @@ export function toggleEvent(event) {
     }
 
     dispatch(openSnackbar({
-      id: `${event.id}-add`,
       message: `<strong>${event.title}</strong> has been added to your DIGITEC.`,
       action: {
         label: 'Undo',
