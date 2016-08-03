@@ -40,9 +40,20 @@ class Practical extends React.Component {
         },
         "layers": [
           {
-            "markers": [
-              "${window.location.origin}${__BASENAME__}/assets/map.geojson"
-            ]
+            "markers": {
+              "type": "FeatureCollection",
+              "features": [{
+                "type": "Feature",
+                "properties": {
+                  "name": "SQUARE",
+                  "description": "<p>SQUARE - Brussels Meeting Centre<br\/>Rue Mont des Arts<br\/>B-1000 Brussels, Belgium<\/p>"
+                },
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [4.357591867446899, 50.84392160693993]
+                }
+              }]
+            }
           }
         ]
       }
@@ -76,7 +87,7 @@ class Practical extends React.Component {
           Rue Mont des Arts<br />
           B-1000 Brussels, Belgium
         </div>
-        <div>
+        <div className={styles.spaced}>
           <a href="http://www.squarebrussels.com/sfSympalBossSiteModel1Plugin/pdf/SQUARE_how_to_get_there.pdf">
             Directions (PDF)
           </a>
