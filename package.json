@@ -67,6 +67,7 @@
     ]
   },
   "dependencies": {
+    "add-to-homescreen": "^3.2.6",
     "babel-polyfill": "^6.9.1",
     "classnames": "^2.2.5",
     "headroom.js": "^0.9.3",

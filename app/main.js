@@ -57,6 +57,12 @@ ReactDOM.render(
   document.getElementById('app')
 );
 
+// Prompt for adding the app to the home screen
+import 'add-to-homescreen';
+import 'add-to-homescreen/dist/style/addtohomescreen.css';
+
+window.addToHomescreen();
+
 // Install ServiceWorker and AppCache
 import { install } from 'offline-plugin/runtime';
 
