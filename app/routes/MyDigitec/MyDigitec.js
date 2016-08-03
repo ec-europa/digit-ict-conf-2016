@@ -9,8 +9,8 @@ import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
 
 // Load Redux actions
-import { toggleEvent } from '../../actions/schedule';
-import { updateHeaderTitle } from '../../actions/ui/header';
+import { toggleEvent } from '../../store/modules/schedule';
+import { updateHeaderTitle } from '../../store/modules/ui/header';
 
 // Load components
 import EventsList from '../../components/Events/List';

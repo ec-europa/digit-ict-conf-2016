@@ -8,7 +8,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 // Redux actions
-import { toggleEvent } from '../../actions/schedule';
+import { toggleEvent } from '../../store/modules/schedule';
 
 // Styles
 import styles from './Modal.scss';

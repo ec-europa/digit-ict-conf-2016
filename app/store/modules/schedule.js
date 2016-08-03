@@ -3,7 +3,7 @@
  * Events
  *
  */
-import data from '../../content/events.json';
+import data from '../../../content/events.json';
 
 /**
  * Other actions

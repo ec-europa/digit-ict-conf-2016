@@ -6,8 +6,8 @@ import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import thunk from 'redux-thunk';
 import { persistStore, autoRehydrate } from 'redux-persist';
 
-import ui from './actions/ui';
-import schedule from './actions/schedule';
+import ui from './modules/ui';
+import schedule from './modules/schedule';
 
 export default function configureStore() {
   const reducer = combineReducers({

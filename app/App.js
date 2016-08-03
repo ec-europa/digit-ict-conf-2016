@@ -11,15 +11,15 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import classnames from 'classnames';
 
 // Redux actions
-import { toggleDrawer } from './actions/ui/drawer';
+import { toggleDrawer } from './store/modules/ui/drawer';
 
 // Components
 import { Header, HeaderToggle, HeaderTitle, HeaderLogos, HeaderNavigation, HeaderNavigationItem } from './components/App/Header';
 import { Drawer, DrawerHeader, DrawerHeaderLogos, DrawerHeaderTitle, DrawerNavigation, DrawerNavigationItem, DrawerNavigationSeparator } from './components/App/Drawer';
 import Footer from './components/App/Footer/Footer';
 import Content from './components/App/Content/Content';
-import Modal from './components/Modal/Modal';
-import SnackbarContainer from './components/Snackbar/SnackbarContainer';
+import ModalContainer from './containers/Modal';
+import SnackbarContainer from './containers/Snackbar';
 
 // Styles
 import styles from './App.scss';
@@ -134,9 +134,9 @@ class App extends React.Component {
           </Content>
           <Footer />
         </div>
-        <Modal isOpen={isModal} returnTo={location.state ? location.state.returnTo : ''} pathname={location.pathname}>
+        <ModalContainer isOpen={isModal} returnTo={location.state ? location.state.returnTo : ''} pathname={location.pathname}>
           {modalChildren}
-        </Modal>
+        </ModalContainer>
         <SnackbarContainer />
       </div>
     );

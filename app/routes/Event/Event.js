@@ -17,8 +17,8 @@ import EventModal from '../../components/Events/Modal';
 import EventPage from '../../components/Events/Page';
 
 // Redux actions
-import { toggleEvent } from '../../actions/schedule';
-import { updateHeaderTitle } from '../../actions/ui/header';
+import { toggleEvent } from '../../store/modules/schedule';
+import { updateHeaderTitle } from '../../store/modules/ui/header';
 
 class Event extends React.Component {
   constructor(props) {

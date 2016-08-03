@@ -6,10 +6,10 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 // Redux actions
-import { closeSnackbar } from '../../actions/ui/snackbar';
+import { closeSnackbar } from '../store/modules/ui/snackbar';
 
 // Component
-import Snackbar from './Snackbar';
+import Snackbar from '../components/Snackbar/Snackbar';
 
 class SnackbarContainer extends React.Component {
   constructor(props) {

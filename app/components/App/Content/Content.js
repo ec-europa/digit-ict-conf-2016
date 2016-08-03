@@ -1,7 +1,5 @@
 /**
-*
-* Content container
-*
+* Content
 */
 
 import React from 'react';

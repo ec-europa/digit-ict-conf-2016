@@ -18,7 +18,7 @@ import SpeakersList from './components/List';
 import styles from './Speakers.scss';
 
 // Redux actions
-import { updateHeaderTitle } from '../../actions/ui/header';
+import { updateHeaderTitle } from '../../store/modules/ui/header';
 
 class Speakers extends React.Component {
   componentDidMount() {

@@ -37,7 +37,7 @@ const rootRoute = {
   childRoutes,
 };
 
-import { closeDrawer } from './actions/ui/drawer';
+import { closeDrawer } from './store/modules/ui/drawer';
 
 ReactDOM.render(
   <Provider store={store}>
