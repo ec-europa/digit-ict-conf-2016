@@ -7,7 +7,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
-import { updateHeaderTitle } from '../../store/modules/layout';
+import { updateHeaderTitle } from '../../actions/ui/header';
 
 // Load components
 import Cover from './components/Cover';

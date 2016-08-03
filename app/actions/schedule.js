@@ -3,12 +3,12 @@
  * Events
  *
  */
-import data from '../../../content/events.json';
+import data from '../../content/events.json';
 
 /**
  * Other actions
  */
-import { openNotification } from './notification';
+import { openSnackbar } from './ui/snackbar';
 
 /*
  * Constants
@@ -53,13 +53,12 @@ export function toggleEvent(event) {
     const { schedule } = getState();
 
     if (schedule[event.id]) {
-      dispatch(openNotification({
+      dispatch(openSnackbar({
         id: `${event.id}-remove`,
-        title: 'Event removed...',
-        body: `<strong>${event.title}</strong> has been removed from your DIGITEC.`,
+        message: `<strong>${event.title}</strong> has been removed from your DIGITEC.`,
         action: {
           label: 'Undo',
-          callback: () => dispatch(toggleEvent(event)),
+          onClick: () => dispatch(toggleEvent(event)),
         },
       }));
 
@@ -69,13 +68,12 @@ export function toggleEvent(event) {
       });
     }
 
-    dispatch(openNotification({
+    dispatch(openSnackbar({
       id: `${event.id}-add`,
-      title: 'Event added!',
-      body: `<strong>${event.title}</strong> has been added to your DIGITEC.`,
+      message: `<strong>${event.title}</strong> has been added to your DIGITEC.`,
       action: {
         label: 'Undo',
-        callback: () => dispatch(toggleEvent(event)),
+        onClick: () => dispatch(toggleEvent(event)),
       },
     }));
 

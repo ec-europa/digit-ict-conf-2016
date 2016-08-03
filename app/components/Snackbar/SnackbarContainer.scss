@@ -1,10 +1,10 @@
-@import '../theme/breakpoints';
+@import '../../theme/breakpoints';
 
 /**
  * Container
  */
 
-.notification {
+.snackbar {
   position: fixed;
   right: 0;
   left: 0;
@@ -14,7 +14,10 @@
   max-width: 100%;
 
   @include mappy-bp(medium) {
-    max-width: 60em;
+    left: 1em;
+    bottom: 1em;
+    right: inherit;
+    max-width: 30em;
   }
 }
 
@@ -23,19 +26,23 @@
  */
 
 .enter {
+  opacity: 0;
   transform: translateY(100%);
 }
 
 .enter.enterActive {
+  opacity: 1;
   transform: translateY(0);
-  transition: transform 300ms ease-in-out 0ms;
+  transition: all 300ms ease-in-out 0ms;
 }
 
 .leave {
+  opacity: 1;
   transform: translateY(0);
 }
 
 .leave.leaveActive {
+  opacity: 0;
   transform: translateY(100%);
-  transition: transform 300ms ease-in-out 0ms;
+  transition: all 300ms ease-in-out 0ms;
 }

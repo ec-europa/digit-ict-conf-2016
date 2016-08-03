@@ -18,7 +18,7 @@ import SpeakersList from './components/List';
 import styles from './Speakers.scss';
 
 // Redux actions
-import { openModal, updateHeaderTitle } from '../../store/modules/layout';
+import { updateHeaderTitle } from '../../actions/ui/header';
 
 class Speakers extends React.Component {
   componentDidMount() {
@@ -26,30 +26,26 @@ class Speakers extends React.Component {
   }
 
   render() {
-    const { onOpenModal, location } = this.props;
+    const { location } = this.props;
     return (
       <div className={styles.container}>
         <Helmet title="Speakers" />
         <div className={styles.header}>
           <h1>Speakers</h1>
         </div>
-        <SpeakersList speakers={speakers} onOpenModal={onOpenModal} location={location} />
+        <SpeakersList speakers={speakers} location={location} />
       </div>
     );
   }
 }
 
 Speakers.propTypes = {
-  onOpenModal: React.PropTypes.func,
   onUpdateHeaderTitle: React.PropTypes.func,
   location: React.PropTypes.object,
 };
 
 function mapDispatchToProps(dispatch) {
   return {
-    onOpenModal: () => {
-      dispatch(openModal());
-    },
     onUpdateHeaderTitle: (title) => {
       dispatch(updateHeaderTitle(title));
     },

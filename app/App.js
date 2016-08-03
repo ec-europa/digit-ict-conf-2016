@@ -11,7 +11,7 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import classnames from 'classnames';
 
 // Redux actions
-import { toggleDrawer } from './store/modules/layout';
+import { toggleDrawer } from './actions/ui/drawer';
 
 // Components
 import { Header, HeaderToggle, HeaderTitle, HeaderLogos, HeaderNavigation, HeaderNavigationItem } from './components/App/Header';
@@ -19,7 +19,7 @@ import { Drawer, DrawerHeader, DrawerHeaderLogos, DrawerHeaderTitle, DrawerNavig
 import Footer from './components/App/Footer/Footer';
 import Content from './components/App/Content/Content';
 import Modal from './components/Modal/Modal';
-import NotificationCenter from './containers/NotificationCenter';
+import SnackbarContainer from './components/Snackbar/SnackbarContainer';
 
 // Styles
 import styles from './App.scss';
@@ -137,7 +137,7 @@ class App extends React.Component {
         <Modal isOpen={isModal} returnTo={location.state ? location.state.returnTo : ''} pathname={location.pathname}>
           {modalChildren}
         </Modal>
-        <NotificationCenter />
+        <SnackbarContainer />
       </div>
     );
   }
@@ -153,8 +153,8 @@ App.propTypes = {
 
 function mapStateToProps(state) {
   return {
-    drawerOpen: state.layout.drawerIsOpen,
-    headerTitle: state.layout.headerTitle,
+    drawerOpen: state.ui.drawer.isOpen,
+    headerTitle: state.ui.header.title,
   };
 }
 

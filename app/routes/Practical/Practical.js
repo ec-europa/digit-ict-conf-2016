@@ -10,7 +10,7 @@ import Helmet from 'react-helmet';
 import $script from 'scriptjs';
 
 // Load Redux actions
-import { updateHeaderTitle } from '../../store/modules/layout';
+import { updateHeaderTitle } from '../../actions/ui/header';
 
 // Load styles
 import styles from './Practical.scss';

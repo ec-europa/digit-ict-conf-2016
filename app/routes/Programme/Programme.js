@@ -9,8 +9,8 @@ import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
 
 // Redux actions
-import { toggleEvent } from '../../store/modules/schedule';
-import { updateHeaderTitle, openModal } from '../../store/modules/layout';
+import { toggleEvent } from '../../actions/schedule';
+import { updateHeaderTitle } from '../../actions/ui/header';
 
 // Components
 import EventsList from '../../components/Events/List';
@@ -51,7 +51,6 @@ class Programme extends React.Component {
 Programme.propTypes = {
   schedule: React.PropTypes.object,
   onToggleEvent: React.PropTypes.func,
-  onOpenModal: React.PropTypes.func,
   onUpdateHeaderTitle: React.PropTypes.func,
   location: React.PropTypes.object,
 };
@@ -70,9 +69,6 @@ function mapDispatchToProps(dispatch) {
   return {
     onToggleEvent: (event) => {
       dispatch(toggleEvent(event));
-    },
-    onOpenModal: () => {
-      dispatch(openModal());
     },
     onUpdateHeaderTitle: (title) => {
       dispatch(updateHeaderTitle(title));

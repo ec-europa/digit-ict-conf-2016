@@ -9,7 +9,7 @@ import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
 
 // Load Redux actions
-import { updateHeaderTitle } from '../../store/modules/layout';
+import { updateHeaderTitle } from '../../actions/ui/header';
 
 // Load styles
 import styles from './NotFound.scss';

@@ -1,20 +1,20 @@
 /**
 *
-* Notification
+* Snackbar
 *
 */
 
 import React from 'react';
-
-// Styles
-import styles from './Notification.scss';
 import classNames from 'classnames';
 
-class Notification extends React.Component {
+// Styles
+import styles from './Snackbar.scss';
+
+class Snackbar extends React.Component {
   constructor(props) {
     super(props);
     this.handleActionClick = this.handleActionClick.bind(this);
-    this.dismissTimeout = setTimeout(props.onRequestClose, 4000);
+    this.dismissTimeout = setTimeout(props.onRequestClose, 5000);
   }
 
   componentWillUnmount() {
@@ -24,22 +24,19 @@ class Notification extends React.Component {
   handleActionClick(event) {
     const { action } = this.props;
     event.stopPropagation();
-    action.callback();
+    action.onClick();
   }
 
   render() {
-    const { onRequestClose, title, body, action, className } = this.props;
+    const { onRequestClose, message, action, className } = this.props;
     return (
       <div
-        className={classNames(styles.notification, className)}
+        className={classNames(styles.snackbar, className)}
         onClick={onRequestClose}
         role="alertdialog"
       >
-        <div className={styles.label}>
-          <span className={styles.title}>{title}</span>
-          <span className={styles.body} dangerouslySetInnerHTML={{ __html: body }} />
-        </div>
-        {action && action.label && action.callback ?
+        <div className={styles.message} dangerouslySetInnerHTML={{ __html: message }} />
+        {action && action.label && action.onClick ?
           <button
             className={styles.action}
             onClick={this.handleActionClick}
@@ -53,12 +50,11 @@ class Notification extends React.Component {
   }
 }
 
-Notification.propTypes = {
+Snackbar.propTypes = {
   className: React.PropTypes.string,
   onRequestClose: React.PropTypes.func,
-  title: React.PropTypes.string,
-  body: React.PropTypes.string,
+  message: React.PropTypes.string,
   action: React.PropTypes.object,
 };
 
-export default Notification;
+export default Snackbar;
