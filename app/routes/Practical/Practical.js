@@ -75,7 +75,7 @@ class Practical extends React.Component {
                 "type": "Feature",
                 "properties": {
                   "name": "Parking",
-                  "description": "<p>Parking Albertine-Square<br\/>Rue des Sols - Stuiversstraat Bruxelles<br\/>B-1000 Brussels, Belgium<\/p>"
+                  "description": "<p>Parking Albertine-Square<br\/>Rue des Sols - Stuiversstraat<br\/>B-1000 Brussels, Belgium<\/p>"
                 },
                 "geometry": {
                   "type": "Point",
