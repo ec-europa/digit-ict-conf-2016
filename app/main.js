@@ -18,7 +18,7 @@ import useRouterHistory from 'react-router/es6/useRouterHistory';
 
 import createBrowserHistory from 'history/lib/createBrowserHistory';
 import useScroll from 'react-router-scroll';
-import configureStore from './store/configure';
+import configureStore from './store';
 
 // Create custom history
 const browserHistory = useRouterHistory(createBrowserHistory)({
@@ -37,7 +37,7 @@ const rootRoute = {
   childRoutes,
 };
 
-import { closeDrawer } from './store/modules/layout';
+import { closeDrawer } from './store/modules/ui/drawer';
 
 ReactDOM.render(
   <Provider store={store}>
