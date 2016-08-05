@@ -16,7 +16,8 @@
   font-size: 1.1em;
   text-decoration: none;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: darken($ict-grey-text, 15%);
     font-weight: 500;
   }
@@ -39,11 +40,14 @@
     transform 0.2s ease-in-out;
 }
 
-.picture:hover {
-  opacity: 0.8;
-  transform:
-    scale(1.15)
-    translateY(0.5em);
+.picture {
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+    transform:
+      scale(1.15)
+      translateY(0.5em);
+  }
 }
 
 .pictureFrame {

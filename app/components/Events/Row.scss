@@ -19,7 +19,9 @@ $borderWidth: 3px;
   color: rgba(0, 0, 0, 0.87);
   border-left: 1em solid #CCC;
   background-color: lighten(#CCC, 16%);
-  &:hover {
+
+  &:hover,
+  &:focus {
     background-color: lighten(#CCC, 11%);
   }
 }
@@ -28,7 +30,9 @@ $borderWidth: 3px;
   color: rgba(0, 0, 0, 0.87);
   border-left: 1em solid $ict-blue;
   background-color: lighten($ict-blue, 58%);
-  &:hover {
+
+  &:hover,
+  &:focus {
     background-color: lighten($ict-blue, 50%);
   }
 }
@@ -37,7 +41,9 @@ $borderWidth: 3px;
   color: rgba(0, 0, 0, 0.87);
   border-left: 1em solid $ict-yellow;
   background-color: lighten($ict-yellow, 40%);
-  &:hover {
+
+  &:hover,
+  &:focus {
     background-color: lighten($ict-yellow, 31%);
   }
 }
@@ -46,7 +52,9 @@ $borderWidth: 3px;
   color: rgba(0, 0, 0, 0.87);
   border-left: 1em solid $ict-purple;
   background-color: lighten($ict-purple, 53%);
-  &:hover {
+
+  &:hover,
+  &:focus {
     background-color: lighten($ict-purple, 45%);
   }
 }
@@ -113,11 +121,7 @@ a.title {
       height: 25px;
       line-height: 25px;
       font-size: 1rem;
-
-      -webkit-user-select: none; /* webkit (safari, chrome) browsers */
-      -moz-user-select: none; /* mozilla browsers */
-      -khtml-user-select: none; /* webkit (konqueror) browsers */
-      -ms-user-select: none; /* IE10+ */
+      user-select: none;
     }
 
     /* checkbox aspect */
@@ -148,12 +152,10 @@ a.title {
       left: -5px;
       width: 12px;
       height: 22px;
-
       border-top: 2px solid transparent;
       border-left: 2px solid transparent;
       border-right: $borderWidth solid $ict-grey-text;
       border-bottom: $borderWidth solid $ict-grey-text;
-
       transform: rotate(40deg);
       backface-visibility: hidden;
       transform-origin: 100% 100%;

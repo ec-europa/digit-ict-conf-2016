@@ -15,7 +15,6 @@ const dllPlugin = pkg.dllPlugin;
 
 // PostCSS plugins
 const cssnext = require('postcss-cssnext');
-const postcssFocus = require('postcss-focus');
 const postcssReporter = require('postcss-reporter');
 
 const plugins = [
@@ -52,7 +51,6 @@ module.exports = require('./webpack.base.babel')({
 
   // Process the CSS with PostCSS
   postcssPlugins: [
-    postcssFocus(), // Add a :focus to every :hover
     cssnext(),
     postcssReporter({ // Posts messages from plugins to the terminal
       clearMessages: true,

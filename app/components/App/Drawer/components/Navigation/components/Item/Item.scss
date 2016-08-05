@@ -9,7 +9,8 @@
   padding-left: 2em;
   text-decoration: none;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: #EEE;
   }
 }

@@ -10,7 +10,6 @@ const config = require('../config');
 
 // PostCSS plugins
 const cssnext = require('postcss-cssnext');
-const postcssFocus = require('postcss-focus');
 const postcssReporter = require('postcss-reporter');
 
 module.exports = require('./webpack.base.babel')({
@@ -41,7 +40,6 @@ module.exports = require('./webpack.base.babel')({
 
   // In production, we minify our CSS with cssnano
   postcssPlugins: [
-    postcssFocus(),
     cssnext(),
     postcssReporter({
       clearMessages: true,
