@@ -14,7 +14,7 @@ class Header extends React.Component {
     super(props);
 
     // Bindings
-    this.handleKeyDown = this.handleKeyDown.bind(this);
+    this.handleFocusChange = this.handleFocusChange.bind(this);
 
     // Init
     this.header = null;
@@ -32,7 +32,7 @@ class Header extends React.Component {
       },
     });
     this.headroom.init();
-    document.addEventListener('keydown', this.handleKeyDown);
+    this.header.addEventListener('focus', this.handleFocusChange, true);
   }
 
   shouldComponentUpdate(nextProps) {
@@ -40,15 +40,13 @@ class Header extends React.Component {
   }
 
   componentWillUnmount() {
-    document.removeEventListener('keydown', this.handleKeyDown);
+    this.header.removeEventListener('focus', this.handleFocusChange);
     this.headroom.destroy();
   }
 
-  handleKeyDown(event) {
-    // Press on TAB
-    if (event.keyCode === 9 && this.header.contains(event.target)) {
-      this.headroom.pin();
-    }
+  handleFocusChange() {
+    // Make sure to pin the header when a child is focused
+    this.headroom.pin();
   }
 
   render() {

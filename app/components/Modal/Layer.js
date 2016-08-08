@@ -51,8 +51,8 @@ class Layer extends React.Component {
   handleKeyDown(event) {
     const { onRequestClose } = this.props;
 
+    // Press on ESC
     if (event.keyCode === 27) {
-      // Press on ESC
       event.preventDefault();
       onRequestClose();
     }
