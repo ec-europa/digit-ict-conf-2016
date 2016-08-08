@@ -27,10 +27,8 @@ class Dialog extends React.Component {
     document.addEventListener('keydown', this.handleKeyDown);
     this.findFocusableElements();
 
-    // Set focus on first item
-    if (this.firstFocusableEl) {
-      this.firstFocusableEl.focus();
-    }
+    // Remove focus from previous item
+    document.activeElement.blur();
 
     // Scroll top
     this.modal.scrollTop = 0;
@@ -69,10 +67,20 @@ class Dialog extends React.Component {
       event.preventDefault();
       this.lastFocusableEl.focus();
     }
+
+    if (this.focusableEls && this.focusableEls.indexOf(event.target) < 0) {
+      event.preventDefault();
+      this.lastFocusableEl.focus();
+    }
   }
 
   handleForwardTab(event) {
     if (document.activeElement === this.lastFocusableEl) {
+      event.preventDefault();
+      this.firstFocusableEl.focus();
+    }
+
+    if (this.focusableEls && this.focusableEls.indexOf(event.target) < 0) {
       event.preventDefault();
       this.firstFocusableEl.focus();
     }
