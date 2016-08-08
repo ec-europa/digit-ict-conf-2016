@@ -63,11 +63,10 @@
 
 .checkbox {
   $size: 60px;
+
   position: absolute;
   top: -($size / 2);
   right: 40px;
-
-  $radio-border: 2px solid $ict-purple;
 
   /* Remove default checkbox */
   [type='checkbox']:not(:checked),
@@ -79,7 +78,13 @@
 
   // Checkbox Styles
   [type='checkbox'] {
-    // Text Label Style
+    &:focus {
+      + label {
+        color: darken($ict-grey-text, 8%);
+        box-shadow: 0 0 1px 6px;
+      }
+    }
+
     + label {
       border-radius: 50%;
       background: #FFF;
@@ -92,10 +97,9 @@
       position: relative;
       cursor: pointer;
       display: inline-block;
-      user-select: none; /* IE10+ */
+      user-select: none;
     }
 
-    /* checkbox aspect */
     + label::before,
     + label::after {
       content: '';
@@ -124,31 +128,57 @@
       left: 10px;
       width: 18px;
       height: 26px;
-
-      border-top: 0 solid transparent;
-      border-left: 0 solid transparent;
-      border-right: $borderWidth solid $ict-grey-text;
-      border-bottom: $borderWidth solid $ict-grey-text;
-
-      .purple & {
-        border-right: $borderWidth solid $ict-purple;
-        border-bottom: $borderWidth solid $ict-purple;
-      }
-
-      .yellow & {
-        border-right: $borderWidth solid $ict-yellow;
-        border-bottom: $borderWidth solid $ict-yellow;
-      }
-
-      .blue & {
-        border-right: $borderWidth solid $ict-blue;
-        border-bottom: $borderWidth solid $ict-blue;
-      }
-
+      border-top: none;
+      border-left: none;
+      border-right-width: $borderWidth;
+      border-bottom-width: $borderWidth;
       transform: rotate(40deg);
       backface-visibility: hidden;
       transform-origin: 100% 100%;
     }
   }
+}
 
+.checkbox {
+  .purple & {
+    [type='checkbox'] {
+      &:focus {
+        + label {
+          color: darken($ict-purple, 8%);
+        }
+      }
+
+      + label::before {
+        border-color: $ict-purple;
+      }
+    }
+  }
+
+  .yellow & {
+    [type='checkbox'] {
+      &:focus {
+        + label {
+          color: darken($ict-yellow, 8%);
+        }
+      }
+
+      + label::before {
+        border-color: $ict-yellow;
+      }
+    }
+  }
+
+  .blue & {
+    [type='checkbox'] {
+      &:focus {
+        + label {
+          color: darken($ict-blue, 8%);
+        }
+      }
+
+      + label::before {
+        border-color: $ict-blue;
+      }
+    }
+  }
 }

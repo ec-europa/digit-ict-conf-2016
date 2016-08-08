@@ -100,8 +100,6 @@ a.title {
 }
 
 .listItem {
-  $radio-border: 2px solid $ict-purple;
-
   /* Remove default checkbox */
   [type='checkbox'] {
     position: absolute;
