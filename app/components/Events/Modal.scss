@@ -69,8 +69,7 @@
   right: 40px;
 
   /* Remove default checkbox */
-  [type='checkbox']:not(:checked),
-  [type='checkbox']:checked {
+  [type='checkbox'] {
     position: absolute;
     left: -9999px;
     opacity: 0;
@@ -78,13 +77,6 @@
 
   // Checkbox Styles
   [type='checkbox'] {
-    &:focus {
-      + label {
-        color: darken($ict-grey-text, 8%);
-        box-shadow: 0 0 1px 6px;
-      }
-    }
-
     + label {
       border-radius: 50%;
       background: #FFF;
@@ -117,6 +109,13 @@
     + label::after {
       border: 0;
       transform: scale(0);
+    }
+
+    &:focus {
+      + label {
+        color: darken($ict-grey-text, 8%);
+        box-shadow: 0 0 1px 6px;
+      }
     }
   }
 

@@ -9,7 +9,7 @@ import { connect } from 'react-redux';
 import { closeSnackbar } from '../store/modules/ui/snackbar';
 
 // Component
-import Snackbar from '../components/Snackbar/Snackbar';
+import SnackbarLayer from '../components/Snackbar/Layer';
 
 class SnackbarContainer extends React.Component {
   constructor(props) {
@@ -18,33 +18,6 @@ class SnackbarContainer extends React.Component {
     // Bindings
     this.triggerAction = this.triggerAction.bind(this);
     this.requestClose = this.requestClose.bind(this);
-    this.handleKeyDown = this.handleKeyDown.bind(this);
-
-    // Init timeout
-    this.dismissTimeout = null;
-  }
-
-  componentDidUpdate() {
-    clearTimeout(this.dismissTimeout);
-    document.removeEventListener('keydown', this.handleKeyDown, true);
-
-    if (this.props.snackbar.open) {
-      this.dismissTimeout = setTimeout(this.requestClose, 5000);
-      document.addEventListener('keydown', this.handleKeyDown, true);
-    }
-  }
-
-  componentWillUnmount() {
-    clearTimeout(this.dismissTimeout);
-    document.removeEventListener('keydown', this.handleKeyDown, true);
-  }
-
-  handleKeyDown(event) {
-    // ESC
-    if (event.keyCode === 27) {
-      event.stopImmediatePropagation();
-      this.requestClose();
-    }
   }
 
   requestClose() {
@@ -62,7 +35,7 @@ class SnackbarContainer extends React.Component {
     const { snackbar } = this.props;
 
     return (
-      <Snackbar
+      <SnackbarLayer
         onRequestClose={this.requestClose}
         onTriggerAction={this.triggerAction}
         {...snackbar}
