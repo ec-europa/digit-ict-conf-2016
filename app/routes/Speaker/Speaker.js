@@ -25,8 +25,15 @@ class Speaker extends React.Component {
 
     const { speakerId } = props.params;
 
+    const speaker = speakers.filter(s => s.id === speakerId)[0];
+
+    // 404 if no speaker were found
+    if (!speaker) {
+      return props.router.replace('/404');
+    }
+
     this.state = {
-      speaker: speakers.filter(speaker => speaker.id === speakerId)[0],
+      speaker,
     };
 
     // Force "returnTo" when accessing the page direclty
@@ -39,6 +46,8 @@ class Speaker extends React.Component {
         };
       }
     }
+
+    return true;
   }
 
   componentDidMount() {
@@ -68,6 +77,7 @@ Speaker.propTypes = {
   params: React.PropTypes.object,
   location: React.PropTypes.object,
   onUpdateHeaderTitle: React.PropTypes.func,
+  router: React.PropTypes.object,
 };
 
 function mapDispatchToProps(dispatch) {
