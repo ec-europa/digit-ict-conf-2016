@@ -19,30 +19,19 @@ class Layer extends React.Component {
 
     // Bindings
     this.handleKeyDown = this.handleKeyDown.bind(this);
-    this.latestFocusedElement = null;
   }
 
   componentDidMount() {
     if (this.props.open) {
       document.addEventListener('keydown', this.handleKeyDown, true);
-      this.latestFocusedElement = document.activeElement;
     }
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (!this.props.open && nextProps.open) {
-      this.latestFocusedElement = document.activeElement;
-    }
-  }
-
-  componentDidUpdate(prevProps) {
+  componentDidUpdate() {
     document.removeEventListener('keydown', this.handleKeyDown, true);
 
     if (this.props.open) {
       document.addEventListener('keydown', this.handleKeyDown, true);
-    } else if (prevProps.open && this.latestFocusedElement) {
-      // Give focus back to the previously focused element
-      this.latestFocusedElement.focus();
     }
   }
 

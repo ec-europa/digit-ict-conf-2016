@@ -80,7 +80,6 @@
     + label {
       border-radius: 50%;
       background: #FFF;
-      box-shadow: 0 5px 8px rgba(0, 0, 0, 0.15);
       height: $size;
       width: $size;
       cursor: pointer;
@@ -90,6 +89,27 @@
       cursor: pointer;
       display: inline-block;
       user-select: none;
+      transition: box-shadow 0.2s linear;
+
+      .blue & {
+        color: darken($ict-blue, 8%);
+        border-color: $ict-blue;
+      }
+
+      .grey & {
+        color: darken($ict-grey-text, 8%);
+        border-color: $ict-grey-text;
+      }
+
+      .purple & {
+        color: darken($ict-purple, 8%);
+        border-color: $ict-purple;
+      }
+
+      .yellow & {
+        color: darken($ict-yellow, 8%);
+        border-color: $ict-yellow;
+      }
     }
 
     + label::before,
@@ -100,7 +120,7 @@
       left: 17px;
       width: 24px;
       height: 24px;
-      border: 2px solid #5A5A5A;
+      border: 2px solid;
       border-radius: 1px;
       margin-top: 2px;
       transition: 0.2s;
@@ -111,9 +131,14 @@
       transform: scale(0);
     }
 
+    &:not(:focus) {
+      + label {
+        box-shadow: 0 5px 8px rgba(0, 0, 0, 0.15);
+      }
+    }
+
     &:focus {
       + label {
-        color: darken($ict-grey-text, 8%);
         box-shadow: 0 0 1px 6px;
       }
     }
@@ -134,50 +159,6 @@
       transform: rotate(40deg);
       backface-visibility: hidden;
       transform-origin: 100% 100%;
-    }
-  }
-}
-
-.checkbox {
-  .purple & {
-    [type='checkbox'] {
-      &:focus {
-        + label {
-          color: darken($ict-purple, 8%);
-        }
-      }
-
-      + label::before {
-        border-color: $ict-purple;
-      }
-    }
-  }
-
-  .yellow & {
-    [type='checkbox'] {
-      &:focus {
-        + label {
-          color: darken($ict-yellow, 8%);
-        }
-      }
-
-      + label::before {
-        border-color: $ict-yellow;
-      }
-    }
-  }
-
-  .blue & {
-    [type='checkbox'] {
-      &:focus {
-        + label {
-          color: darken($ict-blue, 8%);
-        }
-      }
-
-      + label::before {
-        border-color: $ict-blue;
-      }
     }
   }
 }
