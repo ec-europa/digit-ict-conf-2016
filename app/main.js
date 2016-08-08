@@ -17,7 +17,7 @@ import Router from 'react-router/es6/Router';
 import useRouterHistory from 'react-router/es6/useRouterHistory';
 
 import createBrowserHistory from 'history/lib/createBrowserHistory';
-import useScroll from 'react-router-scroll';
+import useScroll from 'react-router-scroll/lib/useScroll';
 import configureStore from './store';
 
 // Create custom history
