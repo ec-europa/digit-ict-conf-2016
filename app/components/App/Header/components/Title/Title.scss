@@ -5,6 +5,7 @@
   align-items: stretch;
   display: flex;
   justify-content: flex-start;
+  padding: 0 0.5em;
 
   @include mappy-bp(medium) {
     display: none;

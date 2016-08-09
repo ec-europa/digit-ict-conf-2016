@@ -10,6 +10,17 @@ import classnames from 'classnames';
 import styles from './Header.scss';
 
 class Header extends React.Component {
+  constructor(props) {
+    super(props);
+
+    // Bindings
+    this.handleFocusChange = this.handleFocusChange.bind(this);
+
+    // Init
+    this.header = null;
+    this.headroom = null;
+  }
+
   componentDidMount() {
     this.headroom = new Headroom(this.header, {
       offset: 80,
@@ -21,6 +32,7 @@ class Header extends React.Component {
       },
     });
     this.headroom.init();
+    this.header.addEventListener('focus', this.handleFocusChange, true);
   }
 
   shouldComponentUpdate(nextProps) {
@@ -28,7 +40,13 @@ class Header extends React.Component {
   }
 
   componentWillUnmount() {
+    this.header.removeEventListener('focus', this.handleFocusChange);
     this.headroom.destroy();
+  }
+
+  handleFocusChange() {
+    // Make sure to pin the header when a child is focused
+    this.headroom.pin();
   }
 
   render() {

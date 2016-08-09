@@ -82,8 +82,8 @@ class Modal extends React.Component {
         <div className={styles.modalContent}>
           {event.register && (
             <div className={styles.checkbox}>
-              <input id={event.id} type="checkbox" checked={checked} onChange={this.toggle} aria-hidden="true" />
-              <label htmlFor={event.id} />
+              <input id={`ev-${event.id}`} type="checkbox" checked={checked} onChange={this.toggle} aria-hidden="true" />
+              <label htmlFor={`ev-${event.id}`} />
             </div>
           )}
           <div className={styles.name}>

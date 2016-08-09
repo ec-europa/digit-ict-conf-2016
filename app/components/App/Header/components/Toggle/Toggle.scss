@@ -38,6 +38,9 @@
   margin-top: 4px;
 }
 
-.navToggle:hover {
-  background: #F5F7FA;
+.navToggle {
+  &:hover,
+  &:focus {
+    background: #F5F7FA;
+  }
 }

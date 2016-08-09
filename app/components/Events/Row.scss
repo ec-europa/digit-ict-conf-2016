@@ -19,7 +19,9 @@ $borderWidth: 3px;
   color: rgba(0, 0, 0, 0.87);
   border-left: 1em solid #CCC;
   background-color: lighten(#CCC, 16%);
-  &:hover {
+
+  &:hover,
+  &:focus {
     background-color: lighten(#CCC, 11%);
   }
 }
@@ -28,7 +30,9 @@ $borderWidth: 3px;
   color: rgba(0, 0, 0, 0.87);
   border-left: 1em solid $ict-blue;
   background-color: lighten($ict-blue, 58%);
-  &:hover {
+
+  &:hover,
+  &:focus {
     background-color: lighten($ict-blue, 50%);
   }
 }
@@ -37,7 +41,9 @@ $borderWidth: 3px;
   color: rgba(0, 0, 0, 0.87);
   border-left: 1em solid $ict-yellow;
   background-color: lighten($ict-yellow, 40%);
-  &:hover {
+
+  &:hover,
+  &:focus {
     background-color: lighten($ict-yellow, 31%);
   }
 }
@@ -46,7 +52,9 @@ $borderWidth: 3px;
   color: rgba(0, 0, 0, 0.87);
   border-left: 1em solid $ict-purple;
   background-color: lighten($ict-purple, 53%);
-  &:hover {
+
+  &:hover,
+  &:focus {
     background-color: lighten($ict-purple, 45%);
   }
 }
@@ -92,11 +100,8 @@ a.title {
 }
 
 .listItem {
-  $radio-border: 2px solid $ict-purple;
-
   /* Remove default checkbox */
-  [type='checkbox']:not(:checked),
-  [type='checkbox']:checked {
+  [type='checkbox'] {
     position: absolute;
     left: -9999px;
     opacity: 0;
@@ -104,35 +109,35 @@ a.title {
 
   // Checkbox Styles
   [type='checkbox'] {
-    // Text Label Style
-    + label {
-      position: relative;
-      padding-left: 35px;
-      cursor: pointer;
-      display: inline-block;
-      height: 25px;
-      line-height: 25px;
-      font-size: 1rem;
-
-      -webkit-user-select: none; /* webkit (safari, chrome) browsers */
-      -moz-user-select: none; /* mozilla browsers */
-      -khtml-user-select: none; /* webkit (konqueror) browsers */
-      -ms-user-select: none; /* IE10+ */
+    &:focus {
+      + label {
+        outline-width: medium;
+        outline-color: $ict-grey-text;
+        outline-style: solid;
+      }
     }
 
-    /* checkbox aspect */
+    + label {
+      position: relative;
+      padding-left: 22px;
+      cursor: pointer;
+      display: inline-block;
+      height: 22px;
+      line-height: 22px;
+      font-size: 1rem;
+      user-select: none;
+    }
+
     + label::before,
     + label::after {
       content: '';
       position: absolute;
       top: 0;
       left: 0;
-      width: 18px;
-      height: 18px;
+      width: 22px;
+      height: 22px;
       z-index: 0;
       border: 2px solid #5A5A5A;
-      border-radius: 1px;
-      margin-top: 2px;
       transition: 0.2s;
     }
 
@@ -144,16 +149,14 @@ a.title {
 
   [type='checkbox']:checked {
     + label::before {
-      top: -4px;
-      left: -5px;
+      top: -2px;
+      left: -3px;
       width: 12px;
       height: 22px;
-
-      border-top: 2px solid transparent;
-      border-left: 2px solid transparent;
-      border-right: $borderWidth solid $ict-grey-text;
-      border-bottom: $borderWidth solid $ict-grey-text;
-
+      border-top: none;
+      border-left: none;
+      border-right-width: $borderWidth;
+      border-bottom-width: $borderWidth;
       transform: rotate(40deg);
       backface-visibility: hidden;
       transform-origin: 100% 100%;
@@ -161,29 +164,46 @@ a.title {
   }
 }
 
-.listItem.purpleItem {
-  [type='checkbox']:checked {
-    + label::before {
-      border-right: $borderWidth solid $ict-purple;
-      border-bottom: $borderWidth solid $ict-purple;
+.listItem {
+  &.purpleItem {
+    [type='checkbox'] {
+      &:focus {
+        + label {
+          outline-color: $ict-purple;
+        }
+      }
+
+      + label::before {
+        border-color: $ict-purple;
+      }
     }
   }
-}
 
-.listItem.yellowItem {
-  [type='checkbox']:checked {
-    + label::before {
-      border-right: $borderWidth solid $ict-yellow;
-      border-bottom: $borderWidth solid $ict-yellow;
+  &.yellowItem {
+    [type='checkbox'] {
+      &:focus {
+        + label {
+          outline-color: $ict-yellow;
+        }
+      }
+
+      + label::before {
+        border-color: $ict-yellow;
+      }
     }
   }
-}
 
-.listItem.blueItem {
-  [type='checkbox']:checked {
-    + label::before {
-      border-right: $borderWidth solid $ict-blue;
-      border-bottom: $borderWidth solid $ict-blue;
+  &.blueItem {
+    [type='checkbox'] {
+      &:focus {
+        + label {
+          outline-color: $ict-blue;
+        }
+      }
+
+      + label::before {
+        border-color: $ict-blue;
+      }
     }
   }
 }

@@ -8,11 +8,11 @@ import React from 'react';
 import styles from './Toggle.scss';
 
 const Toggle = ({ onClick }) => (
-  <span className={styles.navToggle} onClick={onClick}>
+  <button className={styles.navToggle} onClick={onClick}>
     <span />
     <span />
     <span />
-  </span>
+  </button>
 );
 
 Toggle.propTypes = {

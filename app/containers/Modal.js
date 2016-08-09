@@ -6,33 +6,14 @@ import React from 'react';
 import { withRouter } from 'react-router';
 
 // Component
-import Modal from '../components/Modal/Modal';
+import Layer from '../components/Modal/Layer';
 
 class ModalContainer extends React.Component {
   constructor(props) {
     super(props);
+
+    // Bindings
     this.close = this.close.bind(this);
-    this.handleKeyDown = this.handleKeyDown.bind(this);
-  }
-
-  componentDidUpdate() {
-    if (this.props.isOpen) {
-      document.addEventListener('keydown', this.handleKeyDown);
-    } else {
-      document.removeEventListener('keydown', this.handleKeyDown);
-    }
-  }
-
-  componentWillUnmount() {
-    document.removeEventListener('keydown', this.handleKeyDown);
-  }
-
-  handleKeyDown(event) {
-    // ESC
-    if (event.keyCode === 27) {
-      event.preventDefault();
-      this.close();
-    }
   }
 
   close() {
@@ -45,9 +26,7 @@ class ModalContainer extends React.Component {
   render() {
     const { children, pathname, isOpen } = this.props;
     return (
-      <Modal pathname={pathname} isOpen={isOpen} close={this.close}>
-        {children}
-      </Modal>
+      <Layer pathname={pathname} isOpen={isOpen} onRequestClose={this.close}>{children}</Layer>
     );
   }
 }
