@@ -8,15 +8,14 @@ import React from 'react';
 import Speaker from '../../../components/Speakers/Speaker';
 import styles from './List.scss';
 
-const List = ({ speakers, onOpenModal, location }) => (
+const List = ({ speakers, location }) => (
   <div className={styles.container}>
-    {speakers.map(speaker => <Speaker key={speaker.id} speaker={speaker} openModal={onOpenModal} location={location} />)}
+    {speakers.map(speaker => <Speaker key={speaker.id} speaker={speaker} location={location} />)}
   </div>
 );
 
 List.propTypes = {
   speakers: React.PropTypes.array,
-  onOpenModal: React.PropTypes.func,
   location: React.PropTypes.object,
 };
 

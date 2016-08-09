@@ -18,7 +18,7 @@ import EventPage from '../../components/Events/Page';
 
 // Redux actions
 import { toggleEvent } from '../../store/modules/schedule';
-import { updateHeaderTitle } from '../../store/modules/layout';
+import { updateHeaderTitle } from '../../store/modules/ui/header';
 
 class Event extends React.Component {
   constructor(props) {
