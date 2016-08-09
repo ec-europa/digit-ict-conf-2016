@@ -18,6 +18,7 @@ import speakers from '../../../content/speakers.json';
 // Components
 import SpeakerModal from '../../components/Speakers/Modal';
 import SpeakerPage from '../../components/Speakers/Page';
+import SpeakerNotFound from '../../components/Speakers/NotFound';
 
 class Speaker extends React.Component {
   constructor(props) {
@@ -25,15 +26,8 @@ class Speaker extends React.Component {
 
     const { speakerId } = props.params;
 
-    const speaker = speakers.filter(s => s.id === speakerId)[0];
-
-    // 404 if no speaker were found
-    if (!speaker) {
-      return props.router.replace('/404');
-    }
-
     this.state = {
-      speaker,
+      speaker: speakers.filter(s => s.id === speakerId)[0],
     };
 
     // Force "returnTo" when accessing the page direclty
@@ -53,12 +47,27 @@ class Speaker extends React.Component {
   componentDidMount() {
     const { location } = this.props;
     if (!location.state || !location.state.modal) {
-      this.props.onUpdateHeaderTitle('Speaker details');
+      if (this.state.speaker) {
+        this.props.onUpdateHeaderTitle('Speaker details');
+      } else {
+        this.props.onUpdateHeaderTitle('Speaker not found');
+      }
     }
   }
 
   render() {
     const { speaker } = this.state;
+
+    // 404 Speaker Not Found
+    if (!speaker) {
+      return (
+        <div>
+          <Helmet title="Speaker not found" />
+          <SpeakerNotFound />
+        </div>
+      );
+    }
+
     const { location } = this.props;
 
     return (
