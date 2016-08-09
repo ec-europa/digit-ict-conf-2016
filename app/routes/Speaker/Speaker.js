@@ -11,6 +11,7 @@ import { connect } from 'react-redux';
 
 // Redux actions
 import { updateHeaderTitle } from '../../store/modules/ui/header';
+import { defineModal } from '../../store/modules/ui/modal';
 
 // Content
 import speakers from '../../../content/speakers.json';
@@ -44,13 +45,29 @@ class Speaker extends React.Component {
     return true;
   }
 
+  componentWillMount() {
+    const { location, dispatch } = this.props;
+    const { speaker } = this.state;
+
+    if (location.state && location.state.modal) {
+      const name = `${speaker.firstname} ${speaker.lastname}`;
+
+      // Send modal's meta information
+      dispatch(defineModal({
+        id: speaker.id,
+        title: name,
+        description: `This modal introduces ${name}.`,
+      }));
+    }
+  }
+
   componentDidMount() {
-    const { location } = this.props;
+    const { location, dispatch } = this.props;
     if (!location.state || !location.state.modal) {
       if (this.state.speaker) {
-        this.props.onUpdateHeaderTitle('Speaker details');
+        dispatch(updateHeaderTitle('Speaker details'));
       } else {
-        this.props.onUpdateHeaderTitle('Speaker not found');
+        dispatch(updateHeaderTitle('Speaker not found'));
       }
     }
   }
@@ -85,16 +102,8 @@ class Speaker extends React.Component {
 Speaker.propTypes = {
   params: React.PropTypes.object,
   location: React.PropTypes.object,
-  onUpdateHeaderTitle: React.PropTypes.func,
+  dispatch: React.PropTypes.func,
   router: React.PropTypes.object,
 };
 
-function mapDispatchToProps(dispatch) {
-  return {
-    onUpdateHeaderTitle: (title) => {
-      dispatch(updateHeaderTitle(title));
-    },
-  };
-}
-
-export default connect(null, mapDispatchToProps)(withRouter(Speaker));
+export default connect()(withRouter(Speaker));

@@ -49,7 +49,12 @@ ReactDOM.render(
           || (prevRouterProps && prevRouterProps.routes.some(route => route.ignoreScrollBehavior))) {
           return false;
         }
-        store.dispatch(closeDrawer());
+
+        const state = store.getState();
+        if (state.ui.drawer.isOpen) {
+          store.dispatch(closeDrawer());
+        }
+
         return true;
       }))}
     />

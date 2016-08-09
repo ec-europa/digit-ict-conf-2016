@@ -12,6 +12,7 @@ import classnames from 'classnames';
 
 // Redux actions
 import { toggleDrawer } from './store/modules/ui/drawer';
+import { openModal } from './store/modules/ui/modal';
 
 // Components
 import { Header, HeaderToggle, HeaderTitle, HeaderLogos, HeaderNavigation, HeaderNavigationItem } from './components/App/Header';
@@ -51,8 +52,12 @@ class App extends React.Component {
     }
   }
 
-  componentWillUpdate({ drawerOpen, location }) {
+  componentWillUpdate({ drawerOpen, location, modalOpen, dispatch }) {
     const isModal = !!(location.state && location.state.modal && this.previousChildren);
+
+    if (isModal && !modalOpen) {
+      dispatch(openModal());
+    }
 
     if (drawerOpen || isModal) {
       document.body.style.overflow = 'hidden';
@@ -148,6 +153,7 @@ App.propTypes = {
   location: React.PropTypes.object,
   drawerOpen: React.PropTypes.bool,
   onToggleDrawer: React.PropTypes.func,
+  dispatch: React.PropTypes.func,
   headerTitle: React.PropTypes.string,
 };
 
@@ -155,6 +161,7 @@ function mapStateToProps(state) {
   return {
     drawerOpen: state.ui.drawer.isOpen,
     headerTitle: state.ui.header.title,
+    modalOpen: state.ui.modal.open,
   };
 }
 
@@ -163,6 +170,7 @@ function mapDispatchToProps(dispatch) {
     onToggleDrawer: () => {
       dispatch(toggleDrawer());
     },
+    dispatch,
   };
 }
 

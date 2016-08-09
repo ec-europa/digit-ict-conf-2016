@@ -87,13 +87,15 @@ class Dialog extends React.Component {
   }
 
   render() {
-    const { children, onRequestClose } = this.props;
+    const { children, onRequestClose, id, title, description } = this.props;
     return (
       <div className={styles.modalContainer}>
         <div className={styles.modalOuter} onClick={onRequestClose} />
-        <div className={styles.modal} role="dialog" ref={c => { this.modal = c; }}>
-          <button className={styles.closeButton} aria-label="Close the dialog" onClick={onRequestClose} />
+        <div className={styles.modal} id={id} role="dialog" aria-labelledby="dialog-title" aria-describedby="dialog-description" ref={c => { this.modal = c; }}>
+          <h1 id="dialog-title" className="sr-only">{title}</h1>
+          <p id="dialog-description" className="sr-only">{description}</p>
           {children}
+          <button type="button" className={styles.closeButton} aria-label="Close dialog" onClick={onRequestClose} />
         </div>
       </div>
     );
@@ -103,6 +105,9 @@ class Dialog extends React.Component {
 Dialog.propTypes = {
   children: React.PropTypes.node,
   onRequestClose: React.PropTypes.func,
+  id: React.PropTypes.string,
+  title: React.PropTypes.string,
+  description: React.PropTypes.string,
 };
 
 export default Dialog;

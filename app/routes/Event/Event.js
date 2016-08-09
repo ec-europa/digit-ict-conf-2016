@@ -20,6 +20,7 @@ import EventNotFound from '../../components/Events/NotFound';
 // Redux actions
 import { toggleEvent } from '../../store/modules/schedule';
 import { updateHeaderTitle } from '../../store/modules/ui/header';
+import { defineModal } from '../../store/modules/ui/modal';
 
 class Event extends React.Component {
   constructor(props) {
@@ -40,6 +41,20 @@ class Event extends React.Component {
           returnTo: props.location.pathname,
         };
       }
+    }
+  }
+
+  componentWillMount() {
+    const { location, dispatch } = this.props;
+    const { event } = this.state;
+
+    if (location.state && location.state.modal) {
+      // Send modal's meta information
+      dispatch(defineModal({
+        id: event.id,
+        title: event.title,
+        description: `This modal describes the event: ${event.title}.`,
+      }));
     }
   }
 
@@ -86,14 +101,9 @@ Event.propTypes = {
   location: React.PropTypes.object,
   onUpdateHeaderTitle: React.PropTypes.func,
   onToggleEvent: React.PropTypes.func,
+  dispatch: React.PropTypes.func,
   schedule: React.PropTypes.object,
 };
-
-function mapStateToProps(state) {
-  return {
-    schedule: state.schedule,
-  };
-}
 
 function mapDispatchToProps(dispatch) {
   return {
@@ -103,7 +113,10 @@ function mapDispatchToProps(dispatch) {
     onUpdateHeaderTitle: (title) => {
       dispatch(updateHeaderTitle(title));
     },
+    dispatch,
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Event));
+export default connect(state => ({
+  schedule: state.schedule,
+}), mapDispatchToProps)(withRouter(Event));

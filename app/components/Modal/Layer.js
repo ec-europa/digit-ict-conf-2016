@@ -5,9 +5,6 @@
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
-// Component
-import Dialog from './Dialog';
-
 // Styles
 import styles from './Modal.scss';
 
@@ -59,7 +56,7 @@ class Layer extends React.Component {
   }
 
   render() {
-    const { children, pathname, isOpen, onRequestClose } = this.props;
+    const { children, pathname, isOpen } = this.props;
 
     return (
       <ReactCSSTransitionGroup
@@ -88,7 +85,9 @@ class Layer extends React.Component {
               transitionLeaveTimeout={400}
               component="div"
             >
-              <Dialog onRequestClose={onRequestClose} key={pathname}>{children}</Dialog>
+              {React.cloneElement(children, {
+                key: pathname,
+              })}
             </ReactCSSTransitionGroup>
           </div>
           : null
