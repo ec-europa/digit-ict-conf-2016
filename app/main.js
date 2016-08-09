@@ -57,6 +57,19 @@ ReactDOM.render(
   document.getElementById('app')
 );
 
+// Prompt for adding the app to the home screen
+import 'add-to-homescreen/dist/addtohomescreen.min';
+import 'add-to-homescreen/dist/style/addtohomescreen.css';
+
+window.addToHomescreen({
+  message: {
+    en_us: {
+      ios: 'To add this web app to the home screen: tap on <strong>share button</strong> and then <strong>Add to Home Screen</strong>',
+      android: 'To add this web app to the home screen: open the browser <strong>option menu</strong> and tap on <strong>Add to Home screen</strong>',
+    },
+  },
+});
+
 // Install ServiceWorker and AppCache
 import { install } from 'offline-plugin/runtime';
 

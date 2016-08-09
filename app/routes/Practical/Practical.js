@@ -53,6 +53,38 @@ class Practical extends React.Component {
                   "coordinates": [4.357591867446899, 50.84392160693993]
                 }
               }]
+            },
+            "options": {
+              "color": "turquoise"
+            }
+          },
+          {
+            "markers": {
+              "type": "FeatureCollection",
+              "features": [{
+                "type": "Feature",
+                "properties": {
+                  "name": "Parking",
+                  "description": "<p>Parking Albertine-Square<br\/>Place de la Justice 16<br\/>B-1000 Brussels, Belgium<\/p>"
+                },
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [4.354912, 50.843541]
+                }
+              }, {
+                "type": "Feature",
+                "properties": {
+                  "name": "Parking",
+                  "description": "<p>Parking Albertine-Square<br\/>Rue des Sols - Stuiversstraat<br\/>B-1000 Brussels, Belgium<\/p>"
+                },
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [4.357360, 50.844744]
+                }
+              }]
+            },
+            "options": {
+              "color": "yellow"
             }
           }
         ]
