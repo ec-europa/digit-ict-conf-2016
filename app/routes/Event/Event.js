@@ -15,6 +15,7 @@ import events from '../../../content/events.json';
 // Components
 import EventModal from '../../components/Events/Modal';
 import EventPage from '../../components/Events/Page';
+import EventNotFound from '../../components/Events/NotFound';
 
 // Redux actions
 import { toggleEvent } from '../../store/modules/schedule';
@@ -45,14 +46,27 @@ class Event extends React.Component {
   componentDidMount() {
     const { location } = this.props;
     if (!location.state || !location.state.modal) {
-      this.props.onUpdateHeaderTitle('Event details');
+      if (this.state.event) {
+        this.props.onUpdateHeaderTitle('Event details');
+      } else {
+        this.props.onUpdateHeaderTitle('Event not found');
+      }
     }
   }
 
   render() {
     const { event } = this.state;
-    const { location, onToggleEvent, schedule } = this.props;
 
+    if (!event) {
+      return (
+        <div>
+          <Helmet title="Event not found" />
+          <EventNotFound />
+        </div>
+      );
+    }
+
+    const { location, onToggleEvent, schedule } = this.props;
     const isChecked = schedule[event.id];
 
     return (
