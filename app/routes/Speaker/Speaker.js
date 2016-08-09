@@ -10,7 +10,7 @@ import Helmet from 'react-helmet';
 import { connect } from 'react-redux';
 
 // Redux actions
-import { updateHeaderTitle } from '../../store/modules/layout';
+import { updateHeaderTitle } from '../../store/modules/ui/header';
 
 // Content
 import speakers from '../../../content/speakers.json';
