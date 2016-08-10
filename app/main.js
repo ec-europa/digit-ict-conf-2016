@@ -19,37 +19,45 @@ import useRouterHistory from 'react-router/es6/useRouterHistory';
 import createBrowserHistory from 'history/lib/createBrowserHistory';
 import useScroll from 'react-router-scroll/lib/useScroll';
 import configureStore from './store';
-
-// Create custom history
-const browserHistory = useRouterHistory(createBrowserHistory)({
-  basename: __BASENAME__,
-});
+import { syncHistoryWithStore } from 'react-router-redux';
 
 // Create redux store
 const store = configureStore();
 
+// Create custom history
+const history = syncHistoryWithStore(useRouterHistory(createBrowserHistory)({
+  basename: __BASENAME__,
+}), store, {
+  selectLocationState: state => state.route,
+});
+
+history.listen(location => console.log(location.state));
+
+
 // Set up the router, wrapping all Routes in the App component
 import childRoutes from './routes';
-import App from './App';
-
-const rootRoute = {
-  component: App,
-  childRoutes,
-};
-
+import Root from './Root';
 import { closeDrawer } from './store/modules/ui/drawer';
 
 ReactDOM.render(
   <Provider store={store}>
     <Router
-      history={browserHistory}
-      routes={rootRoute}
+      history={history}
+      routes={{
+        component: Root,
+        childRoutes,
+      }}
       render={applyRouterMiddleware(useScroll((prevRouterProps, { routes }) => {
         if (routes.some(route => route.ignoreScrollBehavior)
           || (prevRouterProps && prevRouterProps.routes.some(route => route.ignoreScrollBehavior))) {
           return false;
         }
-        store.dispatch(closeDrawer());
+
+        const state = store.getState();
+        if (state.ui.drawer.isOpen) {
+          store.dispatch(closeDrawer());
+        }
+
         return true;
       }))}
     />

@@ -11,6 +11,7 @@ import { connect } from 'react-redux';
 
 // Redux actions
 import { updateHeaderTitle } from '../../store/modules/ui/header';
+import { defineModal } from '../../store/modules/ui/modal';
 
 // Content
 import speakers from '../../../content/speakers.json';
@@ -28,35 +29,54 @@ class Speaker extends React.Component {
 
     this.state = {
       speaker: speakers.filter(s => s.id === speakerId)[0],
+      isModal: props.location.state && props.location.state.modal,
     };
 
-    // Force "returnTo" when accessing the page direclty
-    if (!props.location.state || !props.location.state.modal) {
-      if (props.location.state) {
-        props.location.state.returnTo = props.location.pathname; // eslint-disable-line
-      } else {
-        props.location.state = { // eslint-disable-line
-          returnTo: props.location.pathname,
-        };
-      }
-    }
+    console.log('Mounted');
 
     return true;
   }
 
+  componentWillMount() {
+    const { speaker, isModal } = this.state;
+
+    // 404 Speaker Not Found
+    if (!speaker) {
+      return;
+    }
+
+    const { location, dispatch } = this.props;
+    const name = `${speaker.firstname} ${speaker.lastname}`;
+
+    if (isModal) {
+      // Send modal's meta information
+      dispatch(defineModal({
+        id: speaker.id,
+        title: name,
+        description: `This modal introduces ${name}.`,
+        content: (
+          <div>
+            <Helmet title={name} />
+            <SpeakerModal speaker={speaker} location={location} />
+          </div>
+        ),
+      }));
+    }
+  }
+
   componentDidMount() {
-    const { location } = this.props;
+    const { location, dispatch } = this.props;
     if (!location.state || !location.state.modal) {
       if (this.state.speaker) {
-        this.props.onUpdateHeaderTitle('Speaker details');
+        dispatch(updateHeaderTitle('Speaker details'));
       } else {
-        this.props.onUpdateHeaderTitle('Speaker not found');
+        dispatch(updateHeaderTitle('Speaker not found'));
       }
     }
   }
 
   render() {
-    const { speaker } = this.state;
+    const { speaker, isModal } = this.state;
 
     // 404 Speaker Not Found
     if (!speaker) {
@@ -68,15 +88,17 @@ class Speaker extends React.Component {
       );
     }
 
+    if (isModal) {
+      return null;
+    }
+
     const { location } = this.props;
+    const name = `${speaker.firstname} ${speaker.lastname}`;
 
     return (
       <div>
-        <Helmet title={`${speaker.firstname} ${speaker.lastname}`} />
-        {location.state && location.state.modal
-          ? <SpeakerModal speaker={speaker} location={location} />
-          : <SpeakerPage speaker={speaker} location={location} />
-        }
+        <Helmet title={name} />
+        <SpeakerPage speaker={speaker} location={location} />
       </div>
     );
   }
@@ -85,16 +107,8 @@ class Speaker extends React.Component {
 Speaker.propTypes = {
   params: React.PropTypes.object,
   location: React.PropTypes.object,
-  onUpdateHeaderTitle: React.PropTypes.func,
+  dispatch: React.PropTypes.func,
   router: React.PropTypes.object,
 };
 
-function mapDispatchToProps(dispatch) {
-  return {
-    onUpdateHeaderTitle: (title) => {
-      dispatch(updateHeaderTitle(title));
-    },
-  };
-}
-
-export default connect(null, mapDispatchToProps)(withRouter(Speaker));
+export default connect()(withRouter(Speaker));

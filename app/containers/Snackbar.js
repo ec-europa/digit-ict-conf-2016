@@ -20,6 +20,10 @@ class SnackbarContainer extends React.Component {
     this.requestClose = this.requestClose.bind(this);
   }
 
+  shouldComponentUpdate(nextProps) {
+    return this.props.snackbar !== nextProps.snackbar;
+  }
+
   requestClose() {
     const { dispatch } = this.props;
     return dispatch(closeSnackbar());

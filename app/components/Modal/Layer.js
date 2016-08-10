@@ -5,9 +5,6 @@
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
-// Component
-import Dialog from './Dialog';
-
 // Styles
 import styles from './Modal.scss';
 
@@ -59,7 +56,7 @@ class Layer extends React.Component {
   }
 
   render() {
-    const { children, pathname, isOpen, onRequestClose } = this.props;
+    const { children, isOpen } = this.props;
 
     return (
       <ReactCSSTransitionGroup
@@ -74,22 +71,10 @@ class Layer extends React.Component {
         component="div"
         aria-hidden={!isOpen}
       >
-        {isOpen ?
+        {children ?
           <div>
             <div className={styles.obfuscator} />
-            <ReactCSSTransitionGroup
-              transitionName={{
-                enter: styles.enter,
-                enterActive: styles.enterActive,
-                leave: styles.leave,
-                leaveActive: styles.leaveActive,
-              }}
-              transitionEnterTimeout={400}
-              transitionLeaveTimeout={400}
-              component="div"
-            >
-              <Dialog onRequestClose={onRequestClose} key={pathname}>{children}</Dialog>
-            </ReactCSSTransitionGroup>
+            {children}
           </div>
           : null
         }
@@ -100,7 +85,6 @@ class Layer extends React.Component {
 
 Layer.propTypes = {
   children: React.PropTypes.node,
-  pathname: React.PropTypes.string,
   isOpen: React.PropTypes.bool,
   onRequestClose: React.PropTypes.func,
 };

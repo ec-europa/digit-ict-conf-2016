@@ -20,6 +20,8 @@ import EventNotFound from '../../components/Events/NotFound';
 // Redux actions
 import { toggleEvent } from '../../store/modules/schedule';
 import { updateHeaderTitle } from '../../store/modules/ui/header';
+import { defineModal } from '../../store/modules/ui/modal';
+import { setContent } from '../../store/modules/ui/content';
 
 class Event extends React.Component {
   constructor(props) {
@@ -29,24 +31,56 @@ class Event extends React.Component {
 
     this.state = {
       event: events.filter(event => event.id === eventId)[0],
+      isModal: props.location.state && props.location.state.modal,
     };
+  }
 
-    // Force "returnTo" when accessing the page direclty
-    if (!props.location.state || !props.location.state.modal) {
-      if (props.location.state) {
-        props.location.state.returnTo = props.location.pathname; // eslint-disable-line
-      } else {
-        props.location.state = { // eslint-disable-line
-          returnTo: props.location.pathname,
-        };
-      }
+  componentWillMount() {
+    const { event, isModal } = this.state;
+
+    if (!event) {
+      return null;
     }
+
+    const { onToggleEvent, schedule, dispatch } = this.props;
+    const isChecked = schedule[event.id];
+
+    // Send modal's meta information
+    if (isModal) {
+      return dispatch(defineModal({
+        id: event.id,
+        title: event.title,
+        description: `This modal describes the event: ${event.title}.`,
+        content: (
+          <div>
+            <Helmet title={event.title} />
+            <EventModal event={event} location={location} checked={isChecked} onToggle={onToggleEvent} />
+          </div>
+        ),
+      }));
+    }
+
+    if (!event) {
+      return dispatch(setContent(
+        <div>
+          <Helmet title="Event not found" />
+          <EventNotFound />
+        </div>
+      ));
+    }
+
+    return dispatch(setContent(
+      <div>
+        <Helmet title={event.title} />
+        <EventPage event={event} location={location} />
+      </div>
+    ));
   }
 
   componentDidMount() {
-    const { location } = this.props;
-    if (!location.state || !location.state.modal) {
-      if (this.state.event) {
+    const { isModal, event } = this.state;
+    if (!isModal) {
+      if (event) {
         this.props.onUpdateHeaderTitle('Event details');
       } else {
         this.props.onUpdateHeaderTitle('Event not found');
@@ -55,29 +89,7 @@ class Event extends React.Component {
   }
 
   render() {
-    const { event } = this.state;
-
-    if (!event) {
-      return (
-        <div>
-          <Helmet title="Event not found" />
-          <EventNotFound />
-        </div>
-      );
-    }
-
-    const { location, onToggleEvent, schedule } = this.props;
-    const isChecked = schedule[event.id];
-
-    return (
-      <div>
-        <Helmet title={event.title} />
-        {location.state && location.state.modal
-          ? <EventModal event={event} location={location} checked={isChecked} onToggle={onToggleEvent} />
-          : <EventPage event={event} location={location} />
-        }
-      </div>
-    );
+    return null;
   }
 }
 
@@ -86,14 +98,9 @@ Event.propTypes = {
   location: React.PropTypes.object,
   onUpdateHeaderTitle: React.PropTypes.func,
   onToggleEvent: React.PropTypes.func,
+  dispatch: React.PropTypes.func,
   schedule: React.PropTypes.object,
 };
-
-function mapStateToProps(state) {
-  return {
-    schedule: state.schedule,
-  };
-}
 
 function mapDispatchToProps(dispatch) {
   return {
@@ -103,7 +110,10 @@ function mapDispatchToProps(dispatch) {
     onUpdateHeaderTitle: (title) => {
       dispatch(updateHeaderTitle(title));
     },
+    dispatch,
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Event));
+export default connect(state => ({
+  schedule: state.schedule,
+}), mapDispatchToProps)(withRouter(Event));

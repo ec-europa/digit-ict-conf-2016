@@ -11,6 +11,7 @@ import Helmet from 'react-helmet';
 // Redux actions
 import { toggleEvent } from '../../store/modules/schedule';
 import { updateHeaderTitle } from '../../store/modules/ui/header';
+import { setContent } from '../../store/modules/ui/content';
 
 // Components
 import EventsList from '../../components/Events/List';
@@ -25,13 +26,10 @@ import styles from './Programme.scss';
 
 class Programme extends React.Component {
   componentDidMount() {
-    this.props.onUpdateHeaderTitle('Programme');
-  }
+    const { schedule, onToggleEvent, location, dispatch } = this.props;
 
-  render() {
-    const { schedule, onToggleEvent, location } = this.props;
-
-    return (
+    dispatch(updateHeaderTitle('Programme'));
+    dispatch(setContent(
       <div className={styles.container}>
         <Helmet title="Programme" />
         <div className={styles.header}>
@@ -44,7 +42,11 @@ class Programme extends React.Component {
         </div>
         <EventsList events={events} schedule={schedule} onToggle={onToggleEvent} location={location} />
       </div>
-    );
+    ));
+  }
+
+  render() {
+    return null;
   }
 }
 
@@ -53,6 +55,7 @@ Programme.propTypes = {
   onToggleEvent: React.PropTypes.func,
   onUpdateHeaderTitle: React.PropTypes.func,
   location: React.PropTypes.object,
+  dispatch: React.PropTypes.func,
 };
 
 Programme.defaultProps = {
@@ -70,9 +73,7 @@ function mapDispatchToProps(dispatch) {
     onToggleEvent: (event) => {
       dispatch(toggleEvent(event));
     },
-    onUpdateHeaderTitle: (title) => {
-      dispatch(updateHeaderTitle(title));
-    },
+    dispatch,
   };
 }
 
