@@ -3,6 +3,7 @@
 */
 
 import React from 'react';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 // Styles
 import styles from './Modal.scss';
@@ -89,15 +90,27 @@ class Dialog extends React.Component {
   render() {
     const { children, onRequestClose, id, title, description } = this.props;
     return (
-      <div className={styles.modalContainer}>
-        <div className={styles.modalOuter} onClick={onRequestClose} />
-        <div className={styles.modal} id={id} role="dialog" aria-labelledby="dialog-title" aria-describedby="dialog-description" ref={c => { this.modal = c; }}>
-          <h1 id="dialog-title" className="sr-only">{title}</h1>
-          <p id="dialog-description" className="sr-only">{description}</p>
-          {children}
-          <button type="button" className={styles.closeButton} aria-label="Close dialog" onClick={onRequestClose} />
+      <ReactCSSTransitionGroup
+        transitionName={{
+          enter: styles.enter,
+          enterActive: styles.enterActive,
+          leave: styles.leave,
+          leaveActive: styles.leaveActive,
+        }}
+        transitionEnterTimeout={400}
+        transitionLeaveTimeout={400}
+        component="div"
+      >
+        <div className={styles.modalContainer} key={id}>
+          <div className={styles.modalOuter} onClick={onRequestClose} />
+          <div className={styles.modal} id={id} role="dialog" aria-labelledby="dialog-title" aria-describedby="dialog-description" ref={c => { this.modal = c; }}>
+            <h1 id="dialog-title" className="sr-only">{title}</h1>
+            <p id="dialog-description" className="sr-only">{description}</p>
+            {children}
+            <button type="button" className={styles.closeButton} aria-label="Close dialog" onClick={onRequestClose} />
+          </div>
         </div>
-      </div>
+      </ReactCSSTransitionGroup>
     );
   }
 }

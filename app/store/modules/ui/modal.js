@@ -12,7 +12,9 @@ const initialState = {
   id: '',
   title: '',
   description: '',
+  content: '',
   open: false,
+  returnTo: '',
 };
 
 /**
@@ -22,13 +24,12 @@ export default function reducer(state = initialState, action) {
   switch (action.type) {
     case OPEN_MODAL:
       return Object.assign({}, initialState, {
+        ...action.payload,
         open: true,
       });
     case DEFINE_MODAL:
       return Object.assign({}, state, {
-        id: action.id,
-        title: action.title,
-        description: action.description,
+        ...action.payload,
       });
     case CLOSE_MODAL:
       return Object.assign({}, initialState);
@@ -40,18 +41,24 @@ export default function reducer(state = initialState, action) {
 /**
  * Actions
  */
-export function openModal() {
+export function openModal({ returnTo }) {
   return {
     type: OPEN_MODAL,
+    payload: {
+      returnTo,
+    },
   };
 }
 
-export function defineModal({ id, title, description }) {
+export function defineModal({ id, title, description, content }) {
   return {
     type: DEFINE_MODAL,
-    id,
-    title,
-    description,
+    payload: {
+      id,
+      title,
+      description,
+      content,
+    },
   };
 }
 

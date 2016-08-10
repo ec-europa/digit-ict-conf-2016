@@ -8,11 +8,13 @@ import { persistStore, autoRehydrate } from 'redux-persist';
 
 import ui from './modules/ui';
 import schedule from './modules/schedule';
+import route from './modules/route';
 
 export default function configureStore() {
   const reducer = combineReducers({
     ui,
     schedule,
+    route,
   });
 
   const enhancers = [

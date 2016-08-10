@@ -29,34 +29,37 @@ class Speaker extends React.Component {
 
     this.state = {
       speaker: speakers.filter(s => s.id === speakerId)[0],
+      isModal: props.location.state && props.location.state.modal,
     };
 
-    // Force "returnTo" when accessing the page direclty
-    if (!props.location.state || !props.location.state.modal) {
-      if (props.location.state) {
-        props.location.state.returnTo = props.location.pathname; // eslint-disable-line
-      } else {
-        props.location.state = { // eslint-disable-line
-          returnTo: props.location.pathname,
-        };
-      }
-    }
+    console.log('Mounted');
 
     return true;
   }
 
   componentWillMount() {
+    const { speaker, isModal } = this.state;
+
+    // 404 Speaker Not Found
+    if (!speaker) {
+      return;
+    }
+
     const { location, dispatch } = this.props;
-    const { speaker } = this.state;
+    const name = `${speaker.firstname} ${speaker.lastname}`;
 
-    if (location.state && location.state.modal) {
-      const name = `${speaker.firstname} ${speaker.lastname}`;
-
+    if (isModal) {
       // Send modal's meta information
       dispatch(defineModal({
         id: speaker.id,
         title: name,
         description: `This modal introduces ${name}.`,
+        content: (
+          <div>
+            <Helmet title={name} />
+            <SpeakerModal speaker={speaker} location={location} />
+          </div>
+        ),
       }));
     }
   }
@@ -73,7 +76,7 @@ class Speaker extends React.Component {
   }
 
   render() {
-    const { speaker } = this.state;
+    const { speaker, isModal } = this.state;
 
     // 404 Speaker Not Found
     if (!speaker) {
@@ -85,15 +88,17 @@ class Speaker extends React.Component {
       );
     }
 
+    if (isModal) {
+      return null;
+    }
+
     const { location } = this.props;
+    const name = `${speaker.firstname} ${speaker.lastname}`;
 
     return (
       <div>
-        <Helmet title={`${speaker.firstname} ${speaker.lastname}`} />
-        {location.state && location.state.modal
-          ? <SpeakerModal speaker={speaker} location={location} />
-          : <SpeakerPage speaker={speaker} location={location} />
-        }
+        <Helmet title={name} />
+        <SpeakerPage speaker={speaker} location={location} />
       </div>
     );
   }

@@ -22,11 +22,11 @@ class ModalContainer extends React.Component {
   }
 
   close() {
-    const { router, returnTo, dispatch, modal } = this.props;
+    const { router, dispatch, modal } = this.props;
 
     // Return to the previous address
     if (modal.open) {
-      router.push(returnTo);
+      router.push(modal.returnTo);
     }
 
     // Tell Redux that we close the modal
@@ -34,21 +34,21 @@ class ModalContainer extends React.Component {
   }
 
   render() {
-    const { children, pathname, modal } = this.props;
+    const { modal } = this.props;
     return (
-      <Layer pathname={pathname} isOpen={modal.open} onRequestClose={this.close}>
-        <Dialog onRequestClose={this.close} {...modal}>{children}</Dialog>
+      <Layer isOpen={modal.open} onRequestClose={this.close}>
+        {modal.open ?
+          <Dialog onRequestClose={this.close} {...modal}>{modal.content}</Dialog>
+          : null
+        }
       </Layer>
     );
   }
 }
 
 ModalContainer.propTypes = {
-  children: React.PropTypes.node,
-  pathname: React.PropTypes.string,
   router: React.PropTypes.object,
   dispatch: React.PropTypes.func,
-  returnTo: React.PropTypes.string,
   modal: React.PropTypes.object,
 };
 

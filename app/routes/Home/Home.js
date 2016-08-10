@@ -18,24 +18,28 @@ import styles from './Home.scss';
 // Load content
 import mainContent from '../../../content/homepage/main.md';
 
+import { setContent } from '../../store/modules/ui/content';
+
 class Home extends React.Component {
   componentDidMount() {
     this.props.onUpdateHeaderTitle('DIGITEC 2016');
-  }
-
-  render() {
-    return (
+    this.props.dispatch(setContent(
       <div>
         <Helmet title="Home" />
         <Cover />
         <div className={styles.about} id="about" dangerouslySetInnerHTML={{ __html: mainContent.body }} />
       </div>
-    );
+    ));
+  }
+
+  render() {
+    return null;
   }
 }
 
 Home.propTypes = {
   onUpdateHeaderTitle: React.PropTypes.func,
+  dispatch: React.PropTypes.func,
 };
 
 function mapDispatchToProps(dispatch) {
@@ -43,6 +47,7 @@ function mapDispatchToProps(dispatch) {
     onUpdateHeaderTitle: (title) => {
       dispatch(updateHeaderTitle(title));
     },
+    dispatch,
   };
 }
 

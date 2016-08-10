@@ -1,16 +1,5 @@
-.app {
-  display: flex;
-}
-
 .container {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.containerNoOverflow {
-  overflow: hidden;
+  flex-grow: 1;
 }
 
 .enter {
