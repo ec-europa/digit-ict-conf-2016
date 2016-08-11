@@ -22,6 +22,7 @@ import useScroll from 'react-router-scroll/lib/useScroll';
 import configureStore from './store';
 import appRoutes from './routes';
 import { closeDrawer } from './store/modules/ui/drawer';
+import smoothScroll from 'smooth-scroll';
 
 // Create custom history
 const browserHistory = useRouterHistory(createBrowserHistory)({
@@ -37,11 +38,29 @@ ReactDOM.render(
     <Router
       history={browserHistory}
       routes={appRoutes}
-      render={applyRouterMiddleware(useScroll((prevRouterProps, { routes }) => {
-        if (routes.some(route => route.ignoreScrollBehavior)
-          || (prevRouterProps && prevRouterProps.routes.some(route => route.ignoreScrollBehavior))) {
+      render={applyRouterMiddleware(useScroll((prevRouterProps, nextRouterProps) => {
+        // At initialization
+        if (!prevRouterProps || !nextRouterProps) {
+          return true;
+        }
+
+        const previousLocation = prevRouterProps.location;
+        const nextLocation = nextRouterProps.location;
+
+        // Only scroll to top if the location hasn't changed
+        if (previousLocation.pathname === nextLocation.pathname) {
+          smoothScroll.animateScroll(0);
           return false;
         }
+
+        // Don't scroll when we open or leave a modal
+        if (
+          (nextLocation.state && nextLocation.state.modal)
+          || (previousLocation.state && previousLocation.state.modal)
+        ) {
+          return false;
+        }
+
         store.dispatch(closeDrawer());
         return true;
       }))}
