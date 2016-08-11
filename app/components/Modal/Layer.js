@@ -5,9 +5,6 @@
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
-// Component
-import Dialog from './Dialog';
-
 // Styles
 import styles from './Modal.scss';
 
@@ -59,7 +56,7 @@ class Layer extends React.Component {
   }
 
   render() {
-    const { children, pathname, isOpen, onRequestClose } = this.props;
+    const { children, isOpen, onRequestClose, pathname } = this.props;
 
     return (
       <ReactCSSTransitionGroup
@@ -76,7 +73,7 @@ class Layer extends React.Component {
       >
         {isOpen ?
           <div>
-            <div className={styles.obfuscator} />
+            <div className={styles.obfuscator} key="overlay" />
             <ReactCSSTransitionGroup
               transitionName={{
                 enter: styles.enter,
@@ -88,10 +85,14 @@ class Layer extends React.Component {
               transitionLeaveTimeout={400}
               component="div"
             >
-              <Dialog onRequestClose={onRequestClose} key={pathname}>{children}</Dialog>
+              {React.cloneElement(children, {
+                isModal: true,
+                onRequestClose,
+                key: pathname,
+              })}
             </ReactCSSTransitionGroup>
           </div>
-          : null
+        : null
         }
       </ReactCSSTransitionGroup>
     );
@@ -100,9 +101,9 @@ class Layer extends React.Component {
 
 Layer.propTypes = {
   children: React.PropTypes.node,
-  pathname: React.PropTypes.string,
   isOpen: React.PropTypes.bool,
   onRequestClose: React.PropTypes.func,
+  pathname: React.PropTypes.string,
 };
 
 export default Layer;

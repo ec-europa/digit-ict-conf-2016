@@ -1,6 +1,6 @@
 /**
 *
-* Speakers/Modal
+* Events/Modal
 *
 */
 
@@ -9,6 +9,7 @@ import classnames from 'classnames';
 
 // Components
 import SpeakerRow from '../Speakers/Row';
+import Dialog from '../Modal/Dialog';
 
 // Styles
 import styles from './Modal.scss';
@@ -29,7 +30,7 @@ class Modal extends React.Component {
   }
 
   render() {
-    const { event, location, checked } = this.props;
+    const { event, location, checked, onRequestClose } = this.props;
     const startsAt = (
       <time>{event.starts}</time>
     );
@@ -74,28 +75,35 @@ class Modal extends React.Component {
     );
 
     return (
-      <div className={containerClass}>
-        <div className={styles.modalHeader}>
-          <h1>{event.title}</h1>
-          <h2>{startsAt}{event.ends ? ' - ' : ''}{endsAt}{venue}</h2>
-        </div>
-        <div className={styles.modalContent}>
-          {event.register && (
-            <div className={styles.checkbox}>
-              <input id={`ev-${event.id}`} type="checkbox" checked={checked} onChange={this.toggle} aria-hidden="true" />
-              <label htmlFor={`ev-${event.id}`} />
-            </div>
-          )}
-          <div className={styles.name}>
-            {event.visual && (
-              <img className={styles.visual} src={`${__BASENAME__}/assets/images/events/${event.visual}`} alt={event.title} />
-            )}
-            {event.description.map((line, index) => (<p key={index}>{line}</p>))}
+      <Dialog
+        id={event.id}
+        title={event.title}
+        description={`This modal describes the event: ${event.title}.`}
+        onRequestClose={onRequestClose}
+      >
+        <div className={containerClass}>
+          <div className={styles.modalHeader}>
+            <h1>{event.title}</h1>
+            <h2>{startsAt}{event.ends ? ' - ' : ''}{endsAt}{venue}</h2>
           </div>
-          {moderatorBlock}
-          {speakersBlock}
+          <div className={styles.modalContent}>
+            {event.register && (
+              <div className={styles.checkbox}>
+                <input id={`ev-${event.id}`} type="checkbox" checked={checked} onChange={this.toggle} aria-hidden="true" />
+                <label htmlFor={`ev-${event.id}`} />
+              </div>
+            )}
+            <div className={styles.name}>
+              {event.visual && (
+                <img className={styles.visual} src={`${__BASENAME__}/assets/images/events/${event.visual}`} alt={event.title} />
+              )}
+              {event.description.map((line, index) => (<p key={index}>{line}</p>))}
+            </div>
+            {moderatorBlock}
+            {speakersBlock}
+          </div>
         </div>
-      </div>
+      </Dialog>
     );
   }
 }
@@ -106,6 +114,7 @@ Modal.propTypes = {
   location: React.PropTypes.object,
   onToggle: React.PropTypes.func,
   checked: React.PropTypes.bool,
+  onRequestClose: React.PropTypes.func,
 };
 
 Modal.defaultProps = {

@@ -21,7 +21,7 @@ class Row extends React.Component {
   }
 
   render() {
-    const { event, checked, displayTime, location } = this.props;
+    const { event, checked, displayTime } = this.props;
 
     let startsAt = null;
     let endsAt = null;
@@ -64,10 +64,7 @@ class Row extends React.Component {
                 className={styles.title}
                 to={{
                   pathname: `/event/${event.id}`,
-                  state: {
-                    modal: true,
-                    returnTo: location.state && location.state.returnTo ? location.state.returnTo : location.pathname,
-                  },
+                  state: { modal: true },
                 }}
               >
                 {event.title}
@@ -103,7 +100,6 @@ Row.propTypes = {
   checked: React.PropTypes.bool,
   onToggle: React.PropTypes.func,
   displayTime: React.PropTypes.bool,
-  location: React.PropTypes.object,
 };
 
 Row.defaultProps = {

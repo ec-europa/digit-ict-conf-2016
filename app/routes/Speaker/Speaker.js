@@ -29,24 +29,11 @@ class Speaker extends React.Component {
     this.state = {
       speaker: speakers.filter(s => s.id === speakerId)[0],
     };
-
-    // Force "returnTo" when accessing the page direclty
-    if (!props.location.state || !props.location.state.modal) {
-      if (props.location.state) {
-        props.location.state.returnTo = props.location.pathname; // eslint-disable-line
-      } else {
-        props.location.state = { // eslint-disable-line
-          returnTo: props.location.pathname,
-        };
-      }
-    }
-
-    return true;
   }
 
   componentDidMount() {
-    const { location } = this.props;
-    if (!location.state || !location.state.modal) {
+    const { isModal } = this.props;
+    if (!isModal) {
       if (this.state.speaker) {
         this.props.onUpdateHeaderTitle('Speaker details');
       } else {
@@ -68,13 +55,13 @@ class Speaker extends React.Component {
       );
     }
 
-    const { location } = this.props;
+    const { isModal, onRequestClose } = this.props;
 
     return (
       <div>
         <Helmet title={`${speaker.firstname} ${speaker.lastname}`} />
-        {location.state && location.state.modal
-          ? <SpeakerModal speaker={speaker} location={location} />
+        {isModal
+          ? <SpeakerModal speaker={speaker} location={location} onRequestClose={onRequestClose} />
           : <SpeakerPage speaker={speaker} location={location} />
         }
       </div>
@@ -87,6 +74,12 @@ Speaker.propTypes = {
   location: React.PropTypes.object,
   onUpdateHeaderTitle: React.PropTypes.func,
   router: React.PropTypes.object,
+  isModal: React.PropTypes.bool,
+  onRequestClose: React.PropTypes.func,
+};
+
+Speaker.defaultProps = {
+  isModal: false,
 };
 
 function mapDispatchToProps(dispatch) {

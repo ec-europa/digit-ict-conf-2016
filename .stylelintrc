@@ -4,6 +4,10 @@
     "color-hex-case": "upper",
     "string-quotes": "single",
     "font-family-name-quotes": "always-where-recommended",
-    "indentation": 2
+    "indentation": 2,
+    "selector-pseudo-class-no-unknown": [true, {
+      "ignorePseudoClasses": ["global"]
+      }
+    ]
   }
 }
