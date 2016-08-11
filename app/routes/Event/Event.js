@@ -30,22 +30,11 @@ class Event extends React.Component {
     this.state = {
       event: events.filter(event => event.id === eventId)[0],
     };
-
-    // Force "returnTo" when accessing the page direclty
-    if (!props.location.state || !props.location.state.modal) {
-      if (props.location.state) {
-        props.location.state.returnTo = props.location.pathname; // eslint-disable-line
-      } else {
-        props.location.state = { // eslint-disable-line
-          returnTo: props.location.pathname,
-        };
-      }
-    }
   }
 
   componentDidMount() {
-    const { location } = this.props;
-    if (!location.state || !location.state.modal) {
+    const { isModal } = this.props;
+    if (!isModal) {
       if (this.state.event) {
         this.props.onUpdateHeaderTitle('Event details');
       } else {
@@ -66,14 +55,14 @@ class Event extends React.Component {
       );
     }
 
-    const { location, onToggleEvent, schedule } = this.props;
+    const { isModal, onToggleEvent, schedule, onRequestClose } = this.props;
     const isChecked = schedule[event.id];
 
     return (
       <div>
         <Helmet title={event.title} />
-        {location.state && location.state.modal
-          ? <EventModal event={event} location={location} checked={isChecked} onToggle={onToggleEvent} />
+        {isModal
+          ? <EventModal event={event} location={location} checked={isChecked} onToggle={onToggleEvent} onRequestClose={onRequestClose} />
           : <EventPage event={event} location={location} />
         }
       </div>
@@ -87,6 +76,12 @@ Event.propTypes = {
   onUpdateHeaderTitle: React.PropTypes.func,
   onToggleEvent: React.PropTypes.func,
   schedule: React.PropTypes.object,
+  isModal: React.PropTypes.bool,
+  onRequestClose: React.PropTypes.func,
+};
+
+Event.defaultProps = {
+  isModal: false,
 };
 
 function mapStateToProps(state) {

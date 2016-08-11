@@ -16,9 +16,12 @@ import applyRouterMiddleware from 'react-router/es6/applyRouterMiddleware';
 import Router from 'react-router/es6/Router';
 import useRouterHistory from 'react-router/es6/useRouterHistory';
 
+// Prepare app
 import createBrowserHistory from 'history/lib/createBrowserHistory';
 import useScroll from 'react-router-scroll/lib/useScroll';
 import configureStore from './store';
+import appRoutes from './routes';
+import { closeDrawer } from './store/modules/ui/drawer';
 import smoothScroll from 'smooth-scroll';
 
 // Create custom history
@@ -29,22 +32,12 @@ const browserHistory = useRouterHistory(createBrowserHistory)({
 // Create redux store
 const store = configureStore();
 
-// Set up the router, wrapping all Routes in the App component
-import childRoutes from './routes';
-import App from './App';
-
-const rootRoute = {
-  component: App,
-  childRoutes,
-};
-
-import { closeDrawer } from './store/modules/ui/drawer';
-
+// Define app's entry point
 ReactDOM.render(
   <Provider store={store}>
     <Router
       history={browserHistory}
-      routes={rootRoute}
+      routes={appRoutes}
       render={applyRouterMiddleware(useScroll((prevRouterProps, nextRouterProps) => {
         // At initialization
         if (!prevRouterProps || !nextRouterProps) {
