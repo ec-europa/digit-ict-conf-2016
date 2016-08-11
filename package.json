@@ -85,6 +85,7 @@
     "redux-thunk": "^2.1.0",
     "sanitize.css": "^4.1.0",
     "scriptjs": "^2.5.8",
+    "smooth-scroll": "github:cferdinandi/smooth-scroll",
     "typi": "^2.3.0"
   },
   "devDependencies": {
