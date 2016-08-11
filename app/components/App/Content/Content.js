@@ -17,6 +17,7 @@ const Content = ({ children, contentKey }) => (
     }}
     transitionEnterTimeout={300}
     transitionLeaveTimeout={10}
+    component="main"
   >
     <div className={styles.container} key={contentKey}>
       {children}
