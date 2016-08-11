@@ -8,15 +8,12 @@ import React from 'react';
 import Link from '../Link/Link';
 import styles from './Row.scss';
 
-const Row = ({ speaker, location }) => (
+const Row = ({ speaker }) => (
   <Link
     className={styles.speakerContainer}
     to={{
       pathname: `/speaker/${speaker.id}`,
-      state: {
-        modal: true,
-        returnTo: location.state && location.state.returnTo ? location.state.returnTo : location.pathname,
-      },
+      state: { modal: true },
     }}
   >
     <div className={styles.speakerPicture}>
@@ -31,7 +28,6 @@ const Row = ({ speaker, location }) => (
 
 Row.propTypes = {
   speaker: React.PropTypes.object,
-  location: React.PropTypes.object,
 };
 
 Row.defaultProps = {

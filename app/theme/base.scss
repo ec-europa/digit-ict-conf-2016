@@ -3,36 +3,49 @@
 @import './variables';
 @import './typography';
 
-html {
-  font-family: Roboto, Helvetica, Arial, sans-serif;
+:global {
+  html {
+    font-family: Roboto, Helvetica, Arial, sans-serif;
 
-  @include typi-base();
+    @include typi-base();
 
-  letter-spacing: -0.02em;
-  background-color: #FDFDFD;
-  color: $ict-grey-text;
-}
+    letter-spacing: -0.02em;
+    background-color: #FDFDFD;
+    color: $ict-grey-text;
+  }
 
-h1 {
-  @include typi($h1-map);
-}
+  h1 {
+    @include typi($h1-map);
+  }
 
-h2 {
-  @include typi($h2-map);
-}
+  h2 {
+    @include typi($h2-map);
+  }
 
-h3 {
-  @include typi($h3-map);
-}
+  h3 {
+    @include typi($h3-map);
+  }
 
-h4 {
-  @include typi($h4-map);
-}
+  h4 {
+    @include typi($h4-map);
+  }
 
-h5 {
-  @include typi($h5-map);
-}
+  h5 {
+    @include typi($h5-map);
+  }
 
-h6 {
-  @include typi($h6-map);
+  h6 {
+    @include typi($h6-map);
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
 }

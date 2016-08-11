@@ -19,11 +19,12 @@ import events from '../../../content/events.json';
 // Components
 import EventRow from '../Events/Row';
 import Link from '../Link/Link';
+import Dialog from '../Modal/Dialog';
 
 // Images
 import twitterLogo from './images/twitter.png';
 
-const Modal = ({ speaker, schedule, onToggleEvent, location }) => {
+const Modal = ({ speaker, schedule, onToggleEvent, location, onRequestClose }) => {
   const speakerEvents = events.filter(event => event.speakers.indexOf(speaker.id) > -1 || event.moderator === speaker.id);
   const sessions = speakerEvents.length ? (
     <div>
@@ -37,22 +38,31 @@ const Modal = ({ speaker, schedule, onToggleEvent, location }) => {
     backgroundSize: 'cover',
   };
 
+  const name = `${speaker.firstname} ${speaker.lastname}`;
+
   return (
-    <div className={styles.modalContainer}>
-      <div className={styles.modalHeader} style={headerStyle} role="img" aria-label={`${speaker.firstname} ${speaker.lastname}`} />
-      <div className={styles.modalContent}>
-        <h3>{speaker.firstname} <span className={styles.lastname}>{speaker.lastname}</span></h3>
-        <h4 className={styles.title}>{speaker.title}</h4>
-        <div className={styles.bio}>
-          {speaker.bio.map((line, index) => (<p key={index}>{line}</p>))}
+    <Dialog
+      id={speaker.id}
+      title={name}
+      description={`This modal introduces ${name}.`}
+      onRequestClose={onRequestClose}
+    >
+      <div className={styles.modalContainer}>
+        <div className={styles.modalHeader} style={headerStyle} role="img" aria-label={`${speaker.firstname} ${speaker.lastname}`} />
+        <div className={styles.modalContent}>
+          <h3>{speaker.firstname} <span className={styles.lastname}>{speaker.lastname}</span></h3>
+          <h4 className={styles.title}>{speaker.title}</h4>
+          <div className={styles.bio}>
+            {speaker.bio.map((line, index) => (<p key={index}>{line}</p>))}
+          </div>
+          {speaker.twitter
+           ? <Link className={styles.twitter} to={`https://twitter.com/${speaker.twitter.substr(1)}`} target="_blank" rel="noopener noreferrer"><img src={twitterLogo} alt="Twitter Feed" /> {speaker.twitter}</Link>
+           : null
+          }
+          {sessions}
         </div>
-        {speaker.twitter
-         ? <Link className={styles.twitter} to={`https://twitter.com/${speaker.twitter.substr(1)}`} target="_blank" rel="noopener noreferrer"><img src={twitterLogo} alt="Twitter Feed" /> {speaker.twitter}</Link>
-         : null
-        }
-        {sessions}
       </div>
-    </div>
+    </Dialog>
   );
 };
 
@@ -61,6 +71,7 @@ Modal.propTypes = {
   schedule: React.PropTypes.object,
   onToggleEvent: React.PropTypes.func,
   location: React.PropTypes.object,
+  onRequestClose: React.PropTypes.func,
 };
 
 Modal.defaultProps = {
