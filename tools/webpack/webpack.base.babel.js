@@ -35,15 +35,18 @@ module.exports = (options) => ({
       include: /node_modules/,
       loaders: ['style-loader', 'css-loader'],
     }, {
-      test: /\.md/,
+      test: /\.md$/,
       loader: 'markdown',
     }, {
-      test: /\.(eot|svg|ttf|woff|woff2)$/,
-      loader: 'file-loader',
+      test: /\.ico$/,
+      loader: 'file-loader?name=images/[hash].[ext]',
     }, {
-      test: /\.(jpg|png|gif)$/,
+      test: /\.(eot|ttf|woff|woff2)$/,
+      loader: 'file-loader?name=fonts/[hash].[ext]',
+    }, {
+      test: /\.(jpe?g|png|gif|svg)$/,
       loaders: [
-        'file-loader',
+        'file-loader?name=images/[hash].[ext]',
         'image-webpack?{progressive:true, optimizationLevel: 7, interlaced: false, pngquant:{quality: "65-90", speed: 4}}',
       ],
     }, {
@@ -53,11 +56,8 @@ module.exports = (options) => ({
       test: /\.json$/,
       loader: 'json-loader',
     }, {
-      test: /\.mp4$/,
-      loader: 'url?limit=10000&mimetype=video/mp4',
-    }, {
-      test: /\.webm$/,
-      loader: 'url?limit=10000&mimetype=video/webm',
+      test: /\.xml/,
+      loader: 'file-loader',
     }],
   },
   plugins: options.plugins.concat([
