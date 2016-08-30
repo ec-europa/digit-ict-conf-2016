@@ -53,11 +53,15 @@ module.exports = (options) => ({
       test: /\.html$/,
       loader: 'html-loader',
     }, {
+      test: /manifest.json$/,
+      loader: 'file-loader?name=manifest.json!web-app-manifest-loader',
+    }, {
       test: /\.json$/,
+      exclude: /manifest.json$/,
       loader: 'json-loader',
     }, {
-      test: /\.xml/,
-      loader: 'file-loader',
+      test: /browserconfig.xml/,
+      loader: 'file-loader?name=browserconfig.xml!browserconfig',
     }],
   },
   plugins: options.plugins.concat([
@@ -83,6 +87,7 @@ module.exports = (options) => ({
   resolveLoader: {
     alias: {
       markdown: path.resolve(__dirname, './loaders/markdown-loader/index.js'),
+      browserconfig: path.resolve(__dirname, './loaders/browserconfig-loader/index.js'),
     },
   },
   resolve: {

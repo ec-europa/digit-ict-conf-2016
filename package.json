@@ -16,7 +16,7 @@
     "prebuild": "npm run build:clean",
     "build": "cross-env NODE_ENV=production webpack --config tools/webpack/webpack.prod.babel.js --color -p",
     "build:clean": "rimraf ./build/*",
-    "start": "cross-env NODE_ENV=development node tools/scripts/server.js",
+    "start": "webpack-dashboard -- cross-env NODE_ENV=development node tools/scripts/server.js",
     "lint": "npm run lint:js ; npm run lint:json ; npm run lint:md ; npm run lint:scss ; npm run lint:text",
     "lint:js": "eslint . --ignore-pattern tools/scripts",
     "lint:json": "eslint . --ext .json",
@@ -119,6 +119,7 @@
     "rimraf": "^2.5.4",
     "sass-loader": "^4.0.0",
     "standard-version": "^2.4.0",
+    "steed": "^1.1.3",
     "style-loader": "^0.13.1",
     "stylelint": "^7.2.0",
     "stylelint-config-standard": "^13.0.0",
@@ -126,8 +127,11 @@
     "textlint-rule-alex": "^1.1.0",
     "textlint-rule-rousseau": "^1.4.5",
     "url-loader": "^0.5.7",
+    "web-app-manifest-loader": "^0.1.1",
     "webpack": "2.1.0-beta.14",
+    "webpack-dashboard": "^0.1.8",
     "webpack-dev-middleware": "^1.6.1",
-    "webpack-hot-middleware": "^2.12.2"
+    "webpack-hot-middleware": "^2.12.2",
+    "xml2js": "^0.4.17"
   }
 }
