@@ -13,13 +13,10 @@
   },
   "homepage": "https://github.com/ec-europa/digit-ict-conf-2016#readme",
   "scripts": {
-    "postinstall": "npm run build:dll",
     "prebuild": "npm run build:clean",
     "build": "cross-env NODE_ENV=production webpack --config tools/webpack/webpack.prod.babel.js --color -p",
     "build:clean": "rimraf ./build/*",
-    "build:dll": "node ./tools/scripts/dependencies.js",
-    "start": "cross-env NODE_ENV=development node tools/scripts/server.js",
-    "postsetup": "npm run build:dll",
+    "start": "webpack-dashboard -- cross-env NODE_ENV=development node tools/scripts/server.js",
     "lint": "npm run lint:js ; npm run lint:json ; npm run lint:md ; npm run lint:scss ; npm run lint:text",
     "lint:js": "eslint . --ignore-pattern tools/scripts",
     "lint:json": "eslint . --ext .json",
@@ -49,21 +46,6 @@
     "ghooks": {
       "pre-commit": "lint-staged"
     }
-  },
-  "dllPlugin": {
-    "path": "build",
-    "exclude": [
-      "chalk",
-      "compression",
-      "cross-env",
-      "typi",
-      "mappy-breakpoints",
-      "sanitize.css"
-    ],
-    "include": [
-      "core-js",
-      "eventsource-polyfill"
-    ]
   },
   "dependencies": {
     "add-to-homescreen": "^3.2.6",
@@ -101,8 +83,6 @@
     "babel-preset-react-hmre": "^1.1.1",
     "babel-preset-stage-0": "^6.5.0",
     "browser-sync": "^2.14.0",
-    "chalk": "^1.1.3",
-    "cheerio": "^0.22.0",
     "connect-history-api-fallback": "^1.3.0",
     "conventional-github-releaser": "^1.1.3",
     "copy-webpack-plugin": "^3.0.1",
@@ -126,12 +106,10 @@
     "json-loader": "^0.5.4",
     "lint-staged": "^2.0.3",
     "loader-utils": "^0.2.15",
-    "lodash": "^4.15.0",
     "markdown-it": "^7.0.1",
     "node-sass": "^3.8.0",
     "null-loader": "^0.1.1",
     "offline-plugin": "^3.4.2",
-    "plop": "^1.5.0",
     "postcss-cssnext": "^2.7.0",
     "postcss-loader": "^0.11.0",
     "postcss-reporter": "^1.4.1",
@@ -140,8 +118,8 @@
     "remark-lint": "^5.0.1",
     "rimraf": "^2.5.4",
     "sass-loader": "^4.0.0",
-    "shelljs": "^0.7.4",
     "standard-version": "^2.4.0",
+    "steed": "^1.1.3",
     "style-loader": "^0.13.1",
     "stylelint": "^7.2.0",
     "stylelint-config-standard": "^13.0.0",
@@ -149,8 +127,11 @@
     "textlint-rule-alex": "^1.1.0",
     "textlint-rule-rousseau": "^1.4.5",
     "url-loader": "^0.5.7",
+    "web-app-manifest-loader": "^0.1.1",
     "webpack": "2.1.0-beta.14",
+    "webpack-dashboard": "^0.1.8",
     "webpack-dev-middleware": "^1.6.1",
-    "webpack-hot-middleware": "^2.12.2"
+    "webpack-hot-middleware": "^2.12.2",
+    "xml2js": "^0.4.17"
   }
 }

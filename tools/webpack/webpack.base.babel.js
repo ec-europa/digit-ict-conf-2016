@@ -35,29 +35,33 @@ module.exports = (options) => ({
       include: /node_modules/,
       loaders: ['style-loader', 'css-loader'],
     }, {
-      test: /\.md/,
+      test: /\.md$/,
       loader: 'markdown',
     }, {
-      test: /\.(eot|svg|ttf|woff|woff2)$/,
-      loader: 'file-loader',
+      test: /\.ico$/,
+      loader: 'file-loader?name=images/[hash].[ext]',
     }, {
-      test: /\.(jpg|png|gif)$/,
+      test: /\.(eot|ttf|woff|woff2)$/,
+      loader: 'file-loader?name=fonts/[hash].[ext]',
+    }, {
+      test: /\.(jpe?g|png|gif|svg)$/,
       loaders: [
-        'file-loader',
+        'file-loader?name=images/[hash].[ext]',
         'image-webpack?{progressive:true, optimizationLevel: 7, interlaced: false, pngquant:{quality: "65-90", speed: 4}}',
       ],
     }, {
       test: /\.html$/,
       loader: 'html-loader',
     }, {
+      test: /manifest.json$/,
+      loader: 'file-loader?name=manifest.json!web-app-manifest-loader',
+    }, {
       test: /\.json$/,
+      exclude: /manifest.json$/,
       loader: 'json-loader',
     }, {
-      test: /\.mp4$/,
-      loader: 'url?limit=10000&mimetype=video/mp4',
-    }, {
-      test: /\.webm$/,
-      loader: 'url?limit=10000&mimetype=video/webm',
+      test: /browserconfig.xml/,
+      loader: 'file-loader?name=browserconfig.xml!browserconfig',
     }],
   },
   plugins: options.plugins.concat([
@@ -83,6 +87,7 @@ module.exports = (options) => ({
   resolveLoader: {
     alias: {
       markdown: path.resolve(__dirname, './loaders/markdown-loader/index.js'),
+      browserconfig: path.resolve(__dirname, './loaders/browserconfig-loader/index.js'),
     },
   },
   resolve: {
