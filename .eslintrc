@@ -24,12 +24,5 @@
   },
   "globals": {
     "__BASENAME__": true
-  },
-  "settings": {
-    "import/resolver": {
-      "webpack": {
-        "config": "./tools/webpack/webpack.test.babel.js"
-      }
-    }
   }
 }

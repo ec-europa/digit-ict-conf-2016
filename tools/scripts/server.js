@@ -11,6 +11,7 @@ const history = require('connect-history-api-fallback');
  * Require ./webpack.config.js and make a bundler from it
  */
 const webpackConfig = require('../webpack/webpack.dev.babel');
+
 const bundler = webpack(webpackConfig);
 
 /**
