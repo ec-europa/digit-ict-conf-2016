@@ -1,7 +1,10 @@
+@import '../../theme/breakpoints';
 @import '../../theme/variables';
 
 .speakerContainer {
   display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   border: 1px solid #DDD;
@@ -18,31 +21,50 @@
 }
 
 .speakerPicture {
-  width: 150px;
-  margin-right: 1em;
   text-align: center;
   flex-grow: 0;
   flex-shrink: 0;
+  flex-basis: 120px;
+  width: 120px;
   background-color: #000;
 
   img {
     width: 100%;
   }
+
+  @include mappy-bp(medium) {
+    flex-basis: 150px;
+    width: 150px;
+  }
 }
 
 .speakerInfo {
   flex-grow: 1;
+  flex-shrink: 1;
+  padding: 0 0.5em;
 
   h3 {
-    font-size: 1.3em;
+    font-size: 1.2em;
     margin: 0;
     color: $ict-grey-text;
+  }
+
+  @include mappy-bp(medium) {
+    padding: 0 1em;
+
+    h3 {
+      font-size: 1.3em;
+    }
   }
 }
 
 .title {
-  font-size: 1em;
+  font-size: 0.90em;
   font-weight: 400;
   margin: 0;
   color: $ict-blue;
+
+  @include mappy-bp(medium) {
+    font-size: 1em;
+  }
 }
