@@ -8,6 +8,7 @@ import React from 'react';
 
 // Components
 import Dialog from '../Modal/Dialog';
+import styles from './Modal.scss';
 
 const Modal = ({ onRequestClose, url }) => (
   <Dialog
@@ -16,9 +17,20 @@ const Modal = ({ onRequestClose, url }) => (
     description="This modal lets you export your data."
     onRequestClose={onRequestClose}
   >
-    EXPORT:
-    <img src={`https://chart.googleapis.com/chart?cht=qr&chs=200x200&chld=L|0&chl=${url}`} alt="QR Code" />
-    <a href={decodeURI(url)}>open</a>
+    <div className={styles.container}>
+      <div className={styles.header}>
+        <h1>Export your schedule</h1>
+      </div>
+      <div className={styles.content}>
+        <p className={styles.code}>
+          <img src={`https://chart.googleapis.com/chart?cht=qr&chs=200x200&chld=L|0&chl=${url}`} alt="QR Code" />
+        </p>
+        <p>Instructions...</p>
+        <p>
+          For testing purpose only: <a href={decodeURI(url)}>open</a> the link
+        </p>
+      </div>
+    </div>
   </Dialog>
 );
 
