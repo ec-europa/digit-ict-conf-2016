@@ -12,6 +12,9 @@ import { connect } from 'react-redux';
 // Redux actions
 import { updateHeaderTitle } from '../../store/modules/ui/header';
 
+// Schedule helper
+import { encodeSchedule } from '../../store/modules/schedule';
+
 // Components
 import ExportModal from '../../components/Export/Modal';
 import ExportPage from '../../components/Export/Page';
@@ -26,15 +29,15 @@ class Export extends React.Component {
 
   render() {
     const { schedule, isModal, onRequestClose } = this.props;
-    const data = Object.keys(schedule).filter(i => schedule[i]);
-    const url = window.location.href.replace('export', 'import/') + encodeURIComponent(JSON.stringify(data));
+    const code = encodeSchedule(schedule);
+    const url = window.location.href.replace('export', 'import/') + encodeURIComponent(code);
 
     return (
       <div>
         <Helmet title="Export" />
         {isModal
-          ? <ExportModal url={url} onRequestClose={onRequestClose} />
-          : <ExportPage url={url} />
+          ? <ExportModal code={code} url={url} onRequestClose={onRequestClose} />
+          : <ExportPage code={code} url={url} />
         }
       </div>
     );

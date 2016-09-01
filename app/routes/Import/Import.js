@@ -9,34 +9,74 @@ import { withRouter } from 'react-router';
 import Helmet from 'react-helmet';
 import { connect } from 'react-redux';
 
-// Redux actions
-import { importSchedule } from '../../store/modules/schedule';
+// Redux actions & helpers
+import { importSchedule, decodeSchedule } from '../../store/modules/schedule';
 import { updateHeaderTitle } from '../../store/modules/ui/header';
 
 // Components
 import ImportPage from '../../components/Import/Page';
 
 class Import extends React.Component {
+  constructor(props) {
+    super(props);
+
+    // Bindings
+    this.decode = this.decode.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+
+    // State initialization
+    this.state = {
+      imported: false,
+      input: '',
+    };
+  }
+
+  componentWillMount() {
+    const { params } = this.props;
+    const { code } = params;
+
+    if (code) {
+      this.decode(code);
+    }
+  }
+
   componentDidMount() {
     this.props.dispatch(updateHeaderTitle('Import'));
   }
 
-  render() {
-    const { params, dispatch } = this.props;
-    const { data } = params;
-    let success = true;
+  decode(code) {
+    const { dispatch } = this.props;
+    const importedSchedule = decodeSchedule(code);
+    dispatch(importSchedule(importedSchedule));
+    this.setState({
+      imported: true,
+    });
+  }
 
-    try {
-      const decodedData = JSON.parse(data);
-      dispatch(importSchedule(decodedData));
-    } catch (err) {
-      success = false;
-    }
+  handleChange(event) {
+    this.setState({
+      input: event.target.value,
+    });
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
+    return this.decode(this.state.input);
+  }
+
+  render() {
+    const { imported, input } = this.state;
 
     return (
       <div>
         <Helmet title="Import" />
-        <ImportPage success={success} />
+        <ImportPage
+          success={imported}
+          inputValue={input}
+          onInputChange={this.handleChange}
+          onSubmit={this.handleSubmit}
+        />
       </div>
     );
   }

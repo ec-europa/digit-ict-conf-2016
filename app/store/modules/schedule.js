@@ -10,7 +10,7 @@ import data from '../../../content/events.json';
  */
 import { openSnackbar } from './ui/snackbar';
 
-/*
+/**
  * Constants
  */
 import { REHYDRATE } from 'redux-persist/constants';
@@ -19,7 +19,7 @@ export const ADD_TO_MY_SCHEDULE = 'ADD_TO_MY_SCHEDULE';
 export const BULK_ADD_TO_MY_SCHEDULE = 'BULK_ADD_TO_MY_SCHEDULE';
 export const REMOVE_FROM_MY_SCHEDULE = 'REMOVE_FROM_MY_SCHEDULE';
 
-/*
+/**
  * Initial state
  */
 const initialState = {};
@@ -32,7 +32,7 @@ data.filter(event => event.register).forEach(event => {
  */
 let canRehydrate = true;
 
-/*
+/**
  * Reducer
  */
 export default function reducer(state = initialState, action) {
@@ -44,11 +44,7 @@ export default function reducer(state = initialState, action) {
     }
     case BULK_ADD_TO_MY_SCHEDULE: {
       canRehydrate = false;
-      const newState = {};
-      data.filter(event => event.register).forEach(event => {
-        newState[event.id] = action.payload.indexOf(event.id) >= 0;
-      });
-      return newState;
+      return { ...state, ...action.payload.schedule };
     }
     case REMOVE_FROM_MY_SCHEDULE: {
       return Object.assign({}, state, {
@@ -71,7 +67,7 @@ export default function reducer(state = initialState, action) {
   }
 }
 
-/*
+/**
  * Actions
  */
 export function toggleEvent(event) {
@@ -108,7 +104,7 @@ export function toggleEvent(event) {
   };
 }
 
-export function importSchedule(events) {
+export function importSchedule(schedule) {
   return (dispatch) => {
     dispatch(openSnackbar({
       message: 'Your schedule has been imported!',
@@ -116,7 +112,26 @@ export function importSchedule(events) {
 
     return dispatch({
       type: BULK_ADD_TO_MY_SCHEDULE,
-      payload: events,
+      payload: {
+        schedule,
+      },
     });
   };
+}
+
+/**
+ * Helpers
+ */
+export function encodeSchedule(schedule) {
+  return Number.parseInt(data.filter(ev => ev.register).map(ev => (schedule[ev.id] ? '1' : '0')).reverse().join(''), 2).toString(36);
+}
+
+export function decodeSchedule(code) {
+  const schedule = {};
+  const decodedArray = Number.parseInt(code, 36).toString(2).split('').reverse();
+  data.filter(ev => ev.register).map(ev => ev.id).forEach((key, index) => {
+    schedule[key] = decodedArray[index] === '1';
+  });
+
+  return schedule;
 }
