@@ -17,9 +17,6 @@ const Page = ({ code, url }) => (
       Or type the code: <strong>{code.toUpperCase()}</strong>
     </p>
     <p>Instructions...</p>
-    <p>
-      For testing purpose only: <a href={decodeURI(url)}>open</a> the link
-    </p>
   </div>
 );
 

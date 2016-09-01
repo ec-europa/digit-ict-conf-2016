@@ -15,6 +15,7 @@ import { updateHeaderTitle } from '../../store/modules/ui/header';
 
 // Components
 import ImportPage from '../../components/Import/Page';
+import ImportModal from '../../components/Import/Modal';
 
 class Import extends React.Component {
   constructor(props) {
@@ -42,7 +43,10 @@ class Import extends React.Component {
   }
 
   componentDidMount() {
-    this.props.dispatch(updateHeaderTitle('Import'));
+    const { isModal } = this.props;
+    if (!isModal) {
+      this.props.dispatch(updateHeaderTitle('Import'));
+    }
   }
 
   decode(code) {
@@ -66,17 +70,27 @@ class Import extends React.Component {
   }
 
   render() {
+    const { isModal, onRequestClose } = this.props;
     const { imported, input } = this.state;
 
     return (
       <div>
         <Helmet title="Import" />
-        <ImportPage
-          success={imported}
-          inputValue={input}
-          onInputChange={this.handleChange}
-          onSubmit={this.handleSubmit}
-        />
+        {isModal ?
+          <ImportModal
+            success={imported}
+            inputValue={input}
+            onInputChange={this.handleChange}
+            onSubmit={this.handleSubmit}
+            onRequestClose={onRequestClose}
+          /> :
+          <ImportPage
+            success={imported}
+            inputValue={input}
+            onInputChange={this.handleChange}
+            onSubmit={this.handleSubmit}
+          />
+        }
       </div>
     );
   }
@@ -85,6 +99,12 @@ class Import extends React.Component {
 Import.propTypes = {
   params: React.PropTypes.object,
   dispatch: React.PropTypes.func,
+  isModal: React.PropTypes.bool,
+  onRequestClose: React.PropTypes.func,
+};
+
+Import.defaultProps = {
+  isModal: false,
 };
 
 function mapDispatchToProps(dispatch) {

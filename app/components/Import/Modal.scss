@@ -1,0 +1,20 @@
+@import '../../theme/variables';
+
+.container {
+  h1 {
+    font-size: 2em;
+  }
+}
+
+.header {
+  display: inline-block;
+  width: 100%;
+  padding: 2em 2em 0.5em;
+  background-color: $ict-blue;
+  color: #FFF;
+}
+
+.content {
+  padding: 2em;
+  position: relative;
+}

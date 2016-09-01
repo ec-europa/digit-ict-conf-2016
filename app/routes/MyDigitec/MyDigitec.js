@@ -42,7 +42,7 @@ class MyDigitec extends React.Component {
             "My DIGITEC" helps you personalise your experience. Select your favourite sessions from <Link to={'/programme'}>DIGITEC programme</Link>.
           </p>
           <p>
-            You can <Link to={{ pathname: 'export', state: { modal: true } }}>export your schedule</Link> or <Link to={{ pathname: 'import' }}>import an existing one</Link>.
+            You can <Link to={{ pathname: 'export', state: { modal: true } }}>export your schedule</Link> or <Link to={{ pathname: 'import', state: { modal: true } }}>import an existing one</Link>.
           </p>
         </div>
         {myEvents.length > 0 && (

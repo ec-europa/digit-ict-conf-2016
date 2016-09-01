@@ -6,6 +6,7 @@
 
 import React from 'react';
 import styles from './Page.scss';
+import formStyles from './Form.scss';
 
 const Page = ({ success, inputValue, onInputChange, onSubmit }) => (
   <div className={styles.container}>
@@ -15,14 +16,23 @@ const Page = ({ success, inputValue, onInputChange, onSubmit }) => (
         Congratulations! You have successfully imported your schedule.
       </p>
       :
-      <form onSubmit={onSubmit}>
-        <input
-          type="text"
-          value={inputValue}
-          onChange={onInputChange}
-        />
-        <input type="submit" value="Import" />
-      </form>
+      <div>
+        <p>
+          Type your code in the box below to import your schedule.
+        </p>
+        <form onSubmit={onSubmit} className={formStyles.form}>
+          <input
+            type="text"
+            value={inputValue}
+            onChange={onInputChange}
+            className={formStyles.formInput}
+            maxLength="5"
+            placeholder="code"
+          />
+          <input type="submit" value="Import" className={formStyles.submit} />
+        </form>
+      </div>
+
     }
   </div>
 );
