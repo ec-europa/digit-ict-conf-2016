@@ -50,6 +50,22 @@
     "picture": "Vincent-Bruneau.jpg"
   },
   {
+    "id": "luisdeeusebioramos",
+    "firstname": "Luis",
+    "lastname": "de Eusebio Ramos",
+    "title": "Deputy Director of Europol, Capabilities Department",
+    "bio": [
+      "Mr de Eusebio has worked in the ICT industry since 1987. His first jobs were in the private sector as an electronic warfare engineer and afterwards as a radio communications systems engineer.",
+      "In 1992 he became a Member of the Senior Body of State Civil Administrators and began working for the Spanish Government in the Ministry of Industry.",
+      "From 1994 he began what would become a constant theme in his career: the modernisation of administrative processes by means of large ICT projects involving human resources (HR) and financial management. He was appointed to positions in the Ministry of Foreign Affairs (1994), Ministry of Health (1995) and the Telecommunications Market Agency (1999). Between 2002 and 2006 he was Deputy Director of the Ministry of Public Administration where he was responsible for the overall e-Government strategy of the Spanish Administration and the coordination of all Spanish Ministries.",
+      "In 2006, Mr de Eusebio was promoted to the position of Chief Information Officer of the Road Traffic National Agency in the Ministry of Interior, working in close cooperation with both the PolicÌa Nacional and the Guardia Civil. He was appointed Executive Advisor to the General Director of the Spanish National Police in 2012.",
+      "Mr de Eusebio took up the position of Deputy Director of Europol as Head of the Capabilities Department in August 2015, where he directly manages staff from ICT, HR and finance.",
+      "Mr de Eusebio graduated with Honours from the Polytechnic University of Madrid as a Telecommunications Engineer in 1988. He also holds several masters and certifications in ICT and Public Management. He speaks Spanish and English; his interests include classical music and photography."
+    ],
+    "twitter": false,
+    "picture": "Eusebio-Ramos.jpg"
+  },
+  {
     "id": "mischadohler",
     "firstname": "Mischa",
     "lastname": "Dohler",
@@ -256,6 +272,20 @@
     ],
     "twitter": false,
     "picture": "Sabine-Sipunova.jpg"
+  },
+  {
+    "id": "vincentsteckler",
+    "firstname": "Vincent",
+    "lastname": "Steckler",
+    "title": "Chief Executive Officer, Avast Software",
+    "bio": [
+      "Vince Steckler is Avast's Chief Executive Officer and one of its Directors.",
+      "Prior to joining Avast in 2009, Vince was the Senior Vice President of Worldwide Consumer Sales at Symantec Corporation. Vince joined Symantec in 2000 as Vice President of Public Sector Business and started Symantec's business of serving U.S. local, state, and federal governments. He also held the position of Symantec's Vice President for Asia/Pacific and Japan and was responsible for all enterprise and consumer business in that region.",
+      "Prior to joining Symantec, Vince had 20 years experience in software development, systems analysis and engineering, project management, and business development.",
+      "Vince holds two B.S.'s from the University of California, Irvine, one in Mathematics and the other in Information and Computer Science."
+    ],
+    "twitter": false,
+    "picture": "Vince-Steckler.jpg"
   },
   {
     "id": "alexandresteiner",
