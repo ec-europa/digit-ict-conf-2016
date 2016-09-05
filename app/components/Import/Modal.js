@@ -18,7 +18,7 @@ const Modal = ({ success, inputValue, onInputChange, onSubmit, onRequestClose })
   >
     <div className={styles.container}>
       <div className={styles.header}>
-        <h1>Import{success && ' successful!'}</h1>
+        <h1>Import{success ? ' successful!' : ' my schedule'}</h1>
       </div>
       <div className={styles.content}>
       {success ?

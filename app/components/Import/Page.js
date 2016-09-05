@@ -10,7 +10,7 @@ import formStyles from './Form.scss';
 
 const Page = ({ success, inputValue, onInputChange, onSubmit }) => (
   <div className={styles.container}>
-    <h1>Import{success && ' successful!'}</h1>
+    <h1>Import{success ? ' successful!' : ' my schedule'}</h1>
     {success ?
       <p>
         Congratulations! You have successfully imported your schedule.

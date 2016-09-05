@@ -22,13 +22,20 @@ const Modal = ({ onRequestClose, code, url }) => (
         <h1>Export your schedule</h1>
       </div>
       <div className={styles.content}>
+        <p>
+          Scan the QR code to have your "My DIGITEC" schedule directly on your mobile.
+          For a better experience, don't forget to add the app to your home screen.
+        </p>
         <p className={styles.code}>
           <img src={`https://chart.googleapis.com/chart?cht=qr&chs=200x200&chld=L|0&chl=${url}`} alt="QR Code" />
         </p>
+        <p>Or</p>
         <p>
-          Or type the code: <strong>{code.toUpperCase()}</strong>
+          If you have already added DIGITEC to your home screen, you can simply import your "My DIGITEC" schedule using the following export code:
         </p>
-        <p>Instructions...</p>
+        <div className={styles.hash}>
+          {code.toUpperCase()}
+        </div>
       </div>
     </div>
   </Dialog>
