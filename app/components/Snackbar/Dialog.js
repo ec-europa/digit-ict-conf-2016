@@ -22,7 +22,11 @@ class Dialog extends React.Component {
   }
 
   componentDidMount() {
-    this.dismissTimeout = setTimeout(this.props.onRequestClose, 5000);
+    const { timeout } = this.props;
+
+    if (timeout) {
+      this.dismissTimeout = setTimeout(this.props.onRequestClose, timeout);
+    }
     document.addEventListener('keydown', this.handleKeyDown, true);
   }
 
@@ -70,6 +74,7 @@ Dialog.propTypes = {
   onRequestClose: React.PropTypes.func,
   onTriggerAction: React.PropTypes.func,
   message: React.PropTypes.string,
+  timeout: React.PropTypes.number,
   action: React.PropTypes.object,
 };
 

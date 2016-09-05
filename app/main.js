@@ -22,7 +22,7 @@ import useScroll from 'react-router-scroll/lib/useScroll';
 import configureStore from './store';
 import appRoutes from './routes';
 import { closeDrawer } from './store/modules/ui/drawer';
-import { openSnackbar } from './store/modules/ui/snackbar';
+import { openSnackbar, closeSnackbar } from './store/modules/ui/snackbar';
 import smoothScroll from 'smooth-scroll';
 
 // Create custom history
@@ -84,13 +84,34 @@ window.addToHomescreen({
 });
 
 // Install ServiceWorker and AppCache
-import { install } from 'offline-plugin/runtime';
+import offlineRuntime from 'offline-plugin/runtime';
 
-install({
+offlineRuntime.install({
   onInstalled: () => store.dispatch(openSnackbar({
-    message: 'DIGITEC is ready for offline usage!',
+    message: 'DIGITEC is ready to work offline',
+    timeout: 0,
+    action: {
+      label: 'Dismiss',
+      onClick: () => store.dispatch(closeSnackbar()),
+    },
+  })),
+  onUpdateReady: () => store.dispatch(openSnackbar({
+    message: 'An update is available',
+    timeout: 0,
+    action: {
+      label: 'Update',
+      onClick: () => {
+        offlineRuntime.applyUpdate();
+        return store.dispatch(closeSnackbar());
+      },
+    },
   })),
   onUpdated: () => store.dispatch(openSnackbar({
-    message: 'DIGITEC has been updated!',
+    message: 'DIGITEC has been updated',
+    timeout: 0,
+    action: {
+      label: 'Reload',
+      onClick: () => window.location.reload(),
+    },
   })),
 });

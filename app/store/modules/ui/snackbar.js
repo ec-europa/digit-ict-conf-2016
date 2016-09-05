@@ -17,12 +17,13 @@ export default function reducer(state = initialState, action) {
     case OPEN_SNACKBAR: {
       return {
         open: true,
+        timeout: 5000,
         message: '',
         action: {
           label: '',
           onClick: () => {},
         },
-        ...action.snackbar,
+        ...action.payload,
       };
     }
     case CLOSE_SNACKBAR: {
@@ -42,7 +43,7 @@ export default function reducer(state = initialState, action) {
 export function openSnackbar(snackbar) {
   return {
     type: OPEN_SNACKBAR,
-    snackbar,
+    payload: snackbar,
   };
 }
 
