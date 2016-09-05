@@ -155,7 +155,7 @@
   "starts": "16:00",
   "ends": "17:15",
   "title": "InterHack experience",
-  "visual": "int_hack.png",
+  "visual": "./events/int_hack.png",
   "description": [
     "The first inter-institutional hackathon will bring together IT professionals from the European Parliament, the European Commission and the Council of the EU in October. The results and lessons learned from the collaboration will be presented in this session."
   ],

@@ -34,7 +34,7 @@ const Modal = ({ speaker, schedule, onToggleEvent, location, onRequestClose }) =
   ) : '';
 
   const headerStyle = {
-    background: `url(${__BASENAME__}/assets/images/speakers/${speaker.picture}) center 40% no-repeat`,
+    background: `url(${speaker.picture}) center 40% no-repeat`,
     backgroundSize: 'cover',
   };
 

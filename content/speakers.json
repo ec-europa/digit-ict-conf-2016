@@ -11,7 +11,7 @@
       "She has written for some of the biggest names in the business, ArsTechnica, ComputerWeekly, Macworld, PCworld and CIO (as part of the renowned IDG News Service team), and The Register. She is senior presenter on Vieuws.eu and regularly features as an EU policy and tech expert on BBC radio, FSN, ETV and others."
     ],
     "twitter": "@BrusselsGeek",
-    "picture": "Jennyfer-Baker.jpg"
+    "picture": "./speakers/Jennyfer-Baker.jpg"
   },
   {
     "id": "paulboag",
@@ -22,7 +22,7 @@
       "Paul Boag is a user experience consultant, author and speaker. He helps organisations such as the European Commission, UCAS and Doctors Without Borders adapt to the digital world. He refocuses them on user experience and engaging with a new digitally savvy audience. "
     ],
     "twitter": "@boagworld",
-    "picture": "Paul-Boag.jpg"
+    "picture": "./speakers/Paul-Boag.jpg"
   },
   {
     "id": "davidborrelli",
@@ -35,7 +35,7 @@
       "Previously he was entrepreneur in the catering sector, Piola Restaurant Miami Beach and Piola Restaurant Buenos Aires (1989-2003). He was Computer Technician at Punto Informatico Srl (Buffetti Group) (2003-2008), Computer Technician at Omega Srl (2008-2009) and Entrepreneur in the IT sector Trevigroup Srl (2009-2014)."
     ],
     "twitter": "@borrellidavid",
-    "picture": "David-Borelli.jpg"
+    "picture": "./speakers/David-Borelli.jpg"
   },
   {
     "id": "vincentbruneau",
@@ -47,7 +47,7 @@
       "With over 15 years as a tech illusionist performer for public and corporate events, Vincent’s an expert in building an emotional connection between corporate brands and their customers with magic and technology, enhancing the human experience."
     ],
     "twitter": "@vince_bruneau",
-    "picture": "Vincent-Bruneau.jpg"
+    "picture": "./speakers/Vincent-Bruneau.jpg"
   },
   {
     "id": "luisdeeusebioramos",
@@ -76,7 +76,7 @@
       "He is also an entrepreneur, composer & pianist, and fluent in 6 languages. He has talked at TEDx. He had coverage by national and international TV & radio, and his contributions have featured on BBC News and the Wall Street Journal."
     ],
     "twitter": "@MischaDohler",
-    "picture": "Mischa-Dohler.jpg"
+    "picture": "./speakers/Mischa-Dohler.jpg"
   },
   {
     "id": "kenducatel",
@@ -90,7 +90,7 @@
       "Ken is a keen climber, walker and mountain biker, although being Brussels based means that in practice a lot of his exercise takes place in early morning indoor spinning classes. He also enjoys music and film with subscriptions to the Bozar and the UGC."
     ],
     "twitter": false,
-    "picture": "Ken-Ducatel.jpg"
+    "picture": "./speakers/Ken-Ducatel.jpg"
   },
   {
     "id": "mercedesfuertes",
@@ -104,7 +104,7 @@
       "She has received the first special mention of “IV Fermin Abella y Blave Prize” in 2004 and together with Prof. Sosa Wagner was recognised for the best research work “La Ley Prize” in 2007 with their article: “Can the contracts stay at home? The European controversial about the public contracts in house”."
     ],
     "twitter": false,
-    "picture": "Mercedes-Fuertes.jpg"
+    "picture": "./speakers/Mercedes-Fuertes.jpg"
   },
   {
     "id": "dianauraniagaletta",
@@ -118,7 +118,7 @@
       "In 1999 she won an Annual research scholarship granted by the prestigious German Foundation ''Von Humboldt-Stiftung''."
     ],
     "twitter": false,
-    "picture": "Diana-Galetta.jpg"
+    "picture": "./speakers/Diana-Galetta.jpg"
   },
   {
     "id": "katekahle",
@@ -129,7 +129,7 @@
       "Kate Kahle began as a physicist before receiving a distinction for a masters in science communication. She joined CERN, the European Organization for Nuclear Research, in 2006 to communicate CERN-led European projects after 5 years of editorial experience in the Pearson Publishing group in the UK. In 2012, she became CERN’s social media manager and was promoted to head of editorial content development in 2016. Kate now leads the writing, web and social media teams at CERN and received a Best Practice award for Digital Leadership in June 2016."
     ],
     "twitter": "@katekahle",
-    "picture": "Kate-Kahle.jpg"
+    "picture": "./speakers/Kate-Kahle.jpg"
   },
   {
     "id": "laurentledoux",
@@ -141,7 +141,7 @@
       "Laurent is passionate about philosophy and has co-authored the English translation of « Philosophizing ad infinitum » by Marcel Conche, one of France’s preeminent historians of philosophy."
     ],
     "twitter": "@LaurentLedoux",
-    "picture": "Laurent-Ledoux.jpg"
+    "picture": "./speakers/Laurent-Ledoux.jpg"
   },
   {
     "id": "dominiqueleroy",
@@ -156,7 +156,7 @@
       "Born in Brussels in 1964, she is married and mother of two sons (19 and 17 years old). Besides her family and job, she has a passion for music, travelling, modern art and sports (running, cycling, skiing, and mountaineering)."
     ],
     "twitter": false,
-    "picture": "Dominique-Leroy.jpg"
+    "picture": "./speakers/Dominique-Leroy.jpg"
   },
   {
     "id": "keithmartin",
@@ -167,7 +167,7 @@
       "Keith Martin is Professor of Information Security at Royal Holloway, University of London. He previously held research posts at the University of Adelaide and Katholieke Universiteit Leuven, and was Director of the Information Security Group at Royal Holloway between 2010 and 2015. Keith's research interests focus on cryptography and key management, including applications and related political issues. He is the author of “Everyday Cryptography” by Oxford University Press. Keith is a designer and module leader on Royal Holloway’s distance learning MSc Information Security programme, and regularly presents to both industrial and school audiences, as well as to the wider public."
     ],
     "twitter": false,
-    "picture": "Keith-Martin.jpg"
+    "picture": "./speakers/Keith-Martin.jpg"
   },
   {
     "id": "paulmiller",
@@ -178,7 +178,7 @@
       "Paul Miller is CEO and Founder of the Digital Workplace Group, co-author of 'The Digital Renaissance of Work - Delivering Digital Workplaces Fit for the Future' (Gower 2014) and author of field-defining book 'The Digital Workplace: How Technology is Liberating Work (TECL 2012). He was ranked as one of the world's top 50 Social Employee Advocacy Leaders in 2015 and has given many inspirational keynote talks on the digital future of work to organizations including Microsoft, Google, Adobe, Wells Fargo and Oxford University.  He is a Judge and Mentor for the Duke of York iDEA (Inspiring Digital Enterprise Awards) 2015. For five years Paul hosted pioneering internet radio show Digital Workplace Live and IBF Live and is Executive Producer and host of 24 hour global experience Digital Workplace 24."
     ],
     "twitter": "@paulmillersays",
-    "picture": "Paul-Miller.jpg"
+    "picture": "./speakers/Paul-Miller.jpg"
   },
   {
     "id": "guntheroettinger",
@@ -189,7 +189,7 @@
       "Günther Oettinger studied law and economics in Tübingen where he also worked as scientific assistant. Prior to his election as President-Minister of Baden-Wüttemberg (2005-2010), he worked as a lawyer in the private sector. In 2010-2014 he was European Commissioner for Energy."
     ],
     "twitter": "@GOettingerEU",
-    "picture": "Oettinger.jpg"
+    "picture": "./speakers/Oettinger.jpg"
   },
   {
     "id": "maxpeterson",
@@ -202,7 +202,7 @@
       "He holds a bachelor’s degree in finance and master’s of business administration in management information systems from the University of Maryland."
     ],
     "twitter": "@maxrpetersonii",
-    "picture": "Max-Peterson.jpg"
+    "picture": "./speakers/Max-Peterson.jpg"
   },
   {
     "id": "bartpreneel",
@@ -217,7 +217,7 @@
       "In 1993 and 1994 he was a research fellow at the University of California at Berkeley."
     ],
     "twitter": false,
-    "picture": "Bart-Preneel.jpg"
+    "picture": "./speakers/Bart-Preneel.jpg"
   },
   {
     "id": "juliareda",
@@ -230,7 +230,7 @@
       "The global Pirate Party movement was born in 2006. Pirates, who believe in using technology for the empowerment of all, have so far enjoyed significant electoral success in Sweden, Germany, Iceland and the Czech Republic and have raised the visibility of their techno-progressive agenda across Europe."
     ],
     "twitter": "@Senficon",
-    "picture": "Julia-Reda.jpg"
+    "picture": "./speakers/Julia-Reda.jpg"
   },
   {
     "id": "nathalyrey",
@@ -245,7 +245,7 @@
       "Co- Founder and member of the Board of the Cloud Security Alliance-Spanish Chapter; she is a regular lecturer at IE Law School - Compliance program, and ICT arbiter at the European Association of Arbitration."
     ],
     "twitter": false,
-    "picture": "Nathaly-Rey.jpg"
+    "picture": "./speakers/Nathaly-Rey.jpg"
   },
   {
     "id": "andreasschwab",
@@ -259,7 +259,7 @@
       "He is the EPP Group Coordinator in the Committee on the Internal Market and Consumer Protection, a substitute Member of the Committee on Economic and Monetary Affairs, a member of the Bureau of the EPP Group, and a substitute Bureau Member of the CDU/CSU Group in the European Parliament."
     ],
     "twitter": false,
-    "picture": "Andreas-Schwab.jpg"
+    "picture": "./speakers/Andreas-Schwab.jpg"
   },
   {
     "id": "sabinesipunova",
@@ -271,7 +271,7 @@
       "In 2016 Sabine was featured in Forbes' Top 10 Promising Founders to Watch in the Baltics."
     ],
     "twitter": false,
-    "picture": "Sabine-Sipunova.jpg"
+    "picture": "./speakers/Sabine-Sipunova.jpg"
   },
   {
     "id": "vincentsteckler",
@@ -296,7 +296,7 @@
       "Alexandre Steiner is currently president of CetSI, a hosting and outsourcing company specialised in digital transformation. He is also founder, president and managing partner at OiO Ventures, key player of innovation and other transaction investment support for major accounts, funds and entrepreneurs. Over time, he acquired an extensive experience in cloud computing, including as the development director at Numergy between 2012 and 2016, where he was responsible for Public Cloud Services IAAS focus, as the VP Global Portfolio and Marketing at Getronics between 2005 and 2008 and as the VP marketing Alliances Portfolio and Marketing at KPN Group between 2008 and 2012. Before that, he has held several positions in Cap Gemini such as VP Technology Services and VP Portfolio strategy. Alexandre is also very invested as a coach and mentor for start-ups."
     ],
     "twitter": false,
-    "picture": "Alex-Steiner.jpg"
+    "picture": "./speakers/Alex-Steiner.jpg"
   },
   {
     "id": "adinaioanavalean",
@@ -310,6 +310,6 @@
       "Adina Valean has a Master's Degree in European Integration and Security Studies, postgraduate studies in National Security and Defence Management and a degree in mathematics. She started her professional career as a maths teacher in Bucharest. Before becoming a politician, she was a social activist, member of several foundations and associations promoting tolerance, dialogue and a liberal economic market."
     ],
     "twitter": "@AdinaValean",
-    "picture": "Adina-Ioana-Valean.jpg"
+    "picture": "./speakers/Adina-Ioana-Valean.jpg"
   }
 ]

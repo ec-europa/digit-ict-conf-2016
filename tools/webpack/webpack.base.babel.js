@@ -56,9 +56,11 @@ module.exports = (options) => ({
       test: /manifest.json$/,
       loader: 'file-loader?name=manifest.json!web-app-manifest-loader',
     }, {
-      test: /\.json$/,
-      exclude: /manifest.json$/,
-      loader: 'json-loader',
+      test: /speakers\.json$/,
+      loader: 'speakers',
+    }, {
+      test: /events\.json$/,
+      loader: 'events',
     }, {
       test: /browserconfig.xml/,
       loader: 'file-loader?name=browserconfig.xml!browserconfig',
@@ -88,6 +90,8 @@ module.exports = (options) => ({
     alias: {
       markdown: path.resolve(__dirname, './loaders/markdown-loader/index.js'),
       browserconfig: path.resolve(__dirname, './loaders/browserconfig-loader/index.js'),
+      speakers: path.resolve(__dirname, './loaders/speakers-loader/index.js'),
+      events: path.resolve(__dirname, './loaders/events-loader/index.js'),
     },
   },
   resolve: {
