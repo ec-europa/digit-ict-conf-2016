@@ -17,7 +17,7 @@ const Row = ({ speaker }) => (
     }}
   >
     <div className={styles.speakerPicture}>
-      <img src={`${__BASENAME__}/assets/images/speakers/${speaker.picture}`} alt={`${speaker.firstname} ${speaker.lastname}`} />
+      <img src={speaker.picture} alt={`${speaker.firstname} ${speaker.lastname}`} />
     </div>
     <div className={styles.speakerInfo}>
       <h3>{speaker.firstname} <span className={styles.lastname}>{speaker.lastname}</span></h3>
