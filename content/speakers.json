@@ -63,7 +63,7 @@
       "Mr de Eusebio graduated with Honours from the Polytechnic University of Madrid as a Telecommunications Engineer in 1988. He also holds several masters and certifications in ICT and Public Management. He speaks Spanish and English; his interests include classical music and photography."
     ],
     "twitter": false,
-    "picture": "Eusebio-Ramos.jpg"
+    "picture": "./speakers/Eusebio-Ramos.jpg"
   },
   {
     "id": "mischadohler",
@@ -119,6 +119,19 @@
     ],
     "twitter": false,
     "picture": "./speakers/Diana-Galetta.jpg"
+  },
+  {
+    "id": "gertrudingestad",
+    "firstname": "Gertrud",
+    "lastname": "Ingestad",
+    "title": "Director-General of the Directorate General for Informatics",
+    "bio": [
+      "Gertrud Ingestad was born in Sweden in 1958. She did her studies in languages and history and worked as a language teacher in Stockholm before joining the European Commission in 1995.",
+      "Her main domain in the Commission has been resources, with a specialisation on people-and organisation-related issues, in DGT and DG CONNECT, where she also started working with IT from a digitalisation perspective. In January 2014 she joined DG DIGIT as Director for Information Systems and Interoperability Solutions, now Digital Business Solutions. Since 16 April 2016 she is Director-General of the Directorate-General for Informatics.",
+      "Her main driving force is constant improvement in collaboration."
+    ],
+    "twitter": false,
+    "picture": "./speakers/Gertrud-Ingestad.jpg"
   },
   {
     "id": "katekahle",
@@ -285,7 +298,7 @@
       "Vincent holds two B.S.'s from the University of California, Irvine, one in Mathematics and the other in Information and Computer Science."
     ],
     "twitter": false,
-    "picture": "Vincent-Steckler.jpg"
+    "picture": "./speakers/Vincent-Steckler.jpg"
   },
   {
     "id": "alexandresteiner",
@@ -311,5 +324,16 @@
     ],
     "twitter": "@AdinaValean",
     "picture": "./speakers/Adina-Ioana-Valean.jpg"
+  },
+  {
+    "id": "giancarlovilella",
+    "firstname": "Giancarlo",
+    "lastname": "Vilella",
+    "title": "Director-General for Innovation and Technological Support at the European Parliament",
+    "bio": [
+      "Giancarlo Vilella has been Director-General of DG ITEC since April 2011. He was born in Italy where he studied Political Sciences and Law, and joined the European Parliament in 1990. Vilella is Professor of European Law at Marche Polytechnic University, and is the author of several books and essays on Public administration and on the European Union."
+    ],
+    "twitter": false,
+    "picture": "./speakers/Giancarlo-Vilella.jpg"
   }
 ]
