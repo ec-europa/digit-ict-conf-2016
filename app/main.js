@@ -22,6 +22,7 @@ import useScroll from 'react-router-scroll/lib/useScroll';
 import configureStore from './store';
 import appRoutes from './routes';
 import { closeDrawer } from './store/modules/ui/drawer';
+import { openSnackbar } from './store/modules/ui/snackbar';
 import smoothScroll from 'smooth-scroll';
 
 // Create custom history
@@ -85,4 +86,11 @@ window.addToHomescreen({
 // Install ServiceWorker and AppCache
 import { install } from 'offline-plugin/runtime';
 
-install();
+install({
+  onInstalled: () => store.dispatch(openSnackbar({
+    message: 'DIGITEC is ready for offline usage!',
+  })),
+  onUpdated: () => store.dispatch(openSnackbar({
+    message: 'DIGITEC has been updated!',
+  })),
+});
