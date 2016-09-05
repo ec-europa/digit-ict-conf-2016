@@ -95,27 +95,21 @@ module.exports = require('./webpack.base.babel')({
     new OfflinePlugin({
       publicPath: config.prod.publicPath,
       relativePaths: false,
-
-      // No need to cache .htaccess. See http://mxs.is/googmp,
-      // this is applied before any match in `caches` section
-      excludes: ['.htaccess'],
-
       caches: {
-        main: [':rest:'],
-
-        // All chunks marked as `additional`, loaded after main section
-        // and do not prevent SW to install. Change to `optional` if
-        // do not want them to be preloaded at all (cached only when first loaded)
-        additional: ['*.chunk.js'],
+        main: ['index.html', 'main.*'],
+        additional: [':rest:'],
       },
-
       // Removes warning for about `additional` section usage
       safeToUseOptionalCaches: true,
-
+      // AppCache specific
       AppCache: {
         // Starting from offline-plugin:v3, AppCache by default caches only
         // `main` section. This lets it use `additional` section too
         caches: ['main', 'additional'],
+      },
+      // ServiceWorker
+      ServiceWorker: {
+        events: true,
       },
     }),
   ],

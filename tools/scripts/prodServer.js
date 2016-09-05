@@ -18,4 +18,5 @@ browserSync({
     ],
   },
   open: 'external',
+  https: true,
 });
