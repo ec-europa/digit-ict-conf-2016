@@ -36,7 +36,7 @@ const Page = ({ speaker, schedule, onToggleEvent, location }) => {
     <div className={styles.container}>
       <div className={styles.header}>
         <img
-          src={`${__BASENAME__}/assets/images/speakers/${speaker.picture}`}
+          src={speaker.picture}
           alt={`${speaker.firstname} ${speaker.lastname}`}
           className={styles.headerPicture}
         />
