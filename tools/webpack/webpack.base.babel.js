@@ -4,7 +4,6 @@
 
 const path = require('path');
 const webpack = require('webpack');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = (options) => ({
   entry: options.entry,
@@ -67,14 +66,6 @@ module.exports = (options) => ({
     }],
   },
   plugins: options.plugins.concat([
-    // Copy static files
-    new CopyWebpackPlugin([
-      {
-        from: path.resolve(process.cwd(), 'public'),
-        to: path.resolve(process.cwd(), 'build'),
-      },
-    ]),
-
     // Always expose NODE_ENV to webpack, in order to use `process.env.NODE_ENV`
     // inside your code for any environment checks; UglifyJS will automatically
     // drop any unreachable code.
