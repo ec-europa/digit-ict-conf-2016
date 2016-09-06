@@ -28,15 +28,15 @@ module.exports = require('./webpack.base.babel')({
 
   // We use ExtractTextPlugin so we get a seperate CSS file instead
   // of the CSS being in the JS and injected as a style tag
-  cssLoaders: ExtractTextPlugin.extract(
-    'style-loader',
-    'css-loader?-autoprefixer&modules&importLoaders=1!postcss-loader'
-  ),
+  cssLoaders: ExtractTextPlugin.extract({
+    fallbackLoader: 'style-loader',
+    loader: 'css-loader?-autoprefixer&modules&importLoaders=1!postcss-loader',
+  }),
   // "-autoprefixer": we don't want to remove the prefixes added by Autoprefixer when minifying
-  sassLoaders: ExtractTextPlugin.extract(
-    'style-loader',
-    'css-loader?-autoprefixer&modules&importLoaders=1!postcss-loader!sass'
-  ),
+  sassLoaders: ExtractTextPlugin.extract({
+    fallbackLoader: 'style-loader',
+    loader: 'css-loader?-autoprefixer&modules&importLoaders=1!postcss-loader!sass',
+  }),
 
   // In production, we minify our CSS with cssnano
   postcssPlugins: [
@@ -46,7 +46,6 @@ module.exports = require('./webpack.base.babel')({
     }),
   ],
   plugins: [
-
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
       children: true,
@@ -60,12 +59,16 @@ module.exports = require('./webpack.base.babel')({
     new webpack.optimize.OccurrenceOrderPlugin(true),
 
     // Merge all duplicate modules
-    // new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.DedupePlugin(),
 
     // Minify and optimize the JavaScript
     new webpack.optimize.UglifyJsPlugin({
+      output: {
+        comments: false,
+      },
       compress: {
         warnings: false, // ...but do not show warnings in the console (there is a lot of them)
+        screw_ie8: true,
       },
     }),
 
