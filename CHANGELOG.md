@@ -2,6 +2,36 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.16.0"></a>
+# [0.16.0](https://github.com/ec-europa/digit-ict-conf-2016/compare/v0.14.0...v0.16.0) (2016-09-06)
+
+
+### Bug Fixes
+
+* **eslint:** disable react/require-extension ([9e726be](https://github.com/ec-europa/digit-ict-conf-2016/commit/9e726be))
+* **layout:** ensure the page is at least 100vh high ([481d3ce](https://github.com/ec-europa/digit-ict-conf-2016/commit/481d3ce))
+* **responsiveness:** fix responsive issues on small screens ([#81](https://github.com/ec-europa/digit-ict-conf-2016/issues/81)) ([6041a09](https://github.com/ec-europa/digit-ict-conf-2016/commit/6041a09))
+* **syntax:** add main element ([85ebfc9](https://github.com/ec-europa/digit-ict-conf-2016/commit/85ebfc9))
+
+
+### Features
+
+* **404:** handle event/speaker not found ([#75](https://github.com/ec-europa/digit-ict-conf-2016/issues/75)) ([90bf094](https://github.com/ec-europa/digit-ict-conf-2016/commit/90bf094))
+* **a11y-modals:** provide title and description to modals for screen readers ([#77](https://github.com/ec-europa/digit-ict-conf-2016/issues/77)) ([0543e34](https://github.com/ec-europa/digit-ict-conf-2016/commit/0543e34))
+* **accessibility:** improve overall accessibility ([#74](https://github.com/ec-europa/digit-ict-conf-2016/issues/74)) ([c94aec0](https://github.com/ec-europa/digit-ict-conf-2016/commit/c94aec0))
+* **add-to-homescreen:** add to home screen call-out for mobile devices ([#72](https://github.com/ec-europa/digit-ict-conf-2016/issues/72)) ([6fefed6](https://github.com/ec-europa/digit-ict-conf-2016/commit/6fefed6))
+* **content:** add 4 new speakers ([#82](https://github.com/ec-europa/digit-ict-conf-2016/issues/82)) ([3cc6282](https://github.com/ec-europa/digit-ict-conf-2016/commit/3cc6282))
+* **export:** add POC of import/export functionality ([c2538a8](https://github.com/ec-europa/digit-ict-conf-2016/commit/c2538a8))
+* **map:** add description on map ([#71](https://github.com/ec-europa/digit-ict-conf-2016/issues/71)) ([7fa246c](https://github.com/ec-europa/digit-ict-conf-2016/commit/7fa246c))
+* **map:** add parking areas ([#73](https://github.com/ec-europa/digit-ict-conf-2016/issues/73)) ([50e4ab0](https://github.com/ec-europa/digit-ict-conf-2016/commit/50e4ab0))
+* **modals:** slightly better-looking modals ([#70](https://github.com/ec-europa/digit-ict-conf-2016/issues/70)) ([b3874ae](https://github.com/ec-europa/digit-ict-conf-2016/commit/b3874ae))
+* **offline:** notify user when the app is available offline ([#84](https://github.com/ec-europa/digit-ict-conf-2016/issues/84)) ([82b6d3c](https://github.com/ec-europa/digit-ict-conf-2016/commit/82b6d3c))
+* **scroll:** add scroll to top when staying on the same page [#78](https://github.com/ec-europa/digit-ict-conf-2016/issues/78) ([4d4228a](https://github.com/ec-europa/digit-ict-conf-2016/commit/4d4228a))
+* **snackbar:** introduce snackbar (notification) ([#69](https://github.com/ec-europa/digit-ict-conf-2016/issues/69)) ([e99557f](https://github.com/ec-europa/digit-ict-conf-2016/commit/e99557f))
+* **static-resources:** use absolute paths in static files ([#79](https://github.com/ec-europa/digit-ict-conf-2016/issues/79)) ([ad69a9a](https://github.com/ec-europa/digit-ict-conf-2016/commit/ad69a9a))
+
+
+
 <a name="0.15.0"></a>
 # [0.15.0](https://github.com/ec-europa/digit-ict-conf-2016/compare/v0.14.0...v0.15.0) (2016-09-06)
 
