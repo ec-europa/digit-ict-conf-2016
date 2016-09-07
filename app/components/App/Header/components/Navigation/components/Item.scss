@@ -5,7 +5,7 @@
   align-items: center;
   display: flex;
   justify-content: center;
-  padding: 10px;
+  padding: 0.8em 0.5em 0.6em;
 
   @include mappy-bp(max medium) {
     display: none !important;
@@ -14,9 +14,8 @@
 
 .link {
   flex-grow: 1;
-  color: $ict-grey-text;
+  color: lighten($ict-grey-text, 10%);
   text-decoration: none;
-  padding: 2px 0;
   display: inline-block;
   position: relative;
 
@@ -33,18 +32,21 @@
   &:hover,
   &:focus,
   &:active {
+    color: $ict-grey-text;
+
     &::after {
       width: 100%;
-      background: $ict-grey-text;
+      background-color: lighten($ict-grey-text, 30%);
     }
   }
 }
 
 .active {
-  font-weight: 400;
+  color: darken($ict-grey-text, 5%);
+
   &::after {
     width: 100%;
-    background: $ict-grey-text;
+    background-color: lighten($ict-grey-text, 10%);
   }
 }
 
@@ -55,6 +57,8 @@
   &:hover,
   &:focus,
   &:active {
+    color: darken($ict-blue, 5%);
+
     &::after {
       background: $ict-blue;
     }
