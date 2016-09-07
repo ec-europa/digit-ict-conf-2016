@@ -44,6 +44,7 @@
 
 .active {
   color: lighten($ict-grey-text, 5%);
+
   &::after {
     width: 100%;
     background-color: lighten($ict-grey-text, 30%);
