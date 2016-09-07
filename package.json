@@ -111,7 +111,7 @@
     "markdown-it": "^7.0.1",
     "ncp": "^2.0.0",
     "nightmare": "^2.7.0",
-    "node-sass": "^3.9.0",
+    "node-sass": "^3.9.3",
     "null-loader": "^0.1.1",
     "offline-plugin": "^3.4.2",
     "postcss-cssnext": "^2.8.0",
