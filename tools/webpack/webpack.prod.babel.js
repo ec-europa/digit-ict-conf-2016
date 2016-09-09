@@ -63,9 +63,6 @@ module.exports = require('./webpack.base.babel')({
 
     // Minify and optimize the JavaScript
     new webpack.optimize.UglifyJsPlugin({
-      output: {
-        comments: false,
-      },
       compress: {
         warnings: false, // ...but do not show warnings in the console (there is a lot of them)
         screw_ie8: true,
