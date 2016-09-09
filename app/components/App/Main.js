@@ -3,22 +3,14 @@
  */
 
 import React from 'react';
-import classnames from 'classnames';
 
 import styles from './App.scss';
 
-const Main = ({ children, drawerOpen, modalOpen }) => {
-  const containerClasses = classnames(
-    styles.container,
-    { [`${styles.containerNoOverflow}`]: modalOpen }
-  );
-
-  return (
-    <div aria-hidden={drawerOpen || modalOpen} className={containerClasses}>
-      {children}
-    </div>
-  );
-};
+const Main = ({ children, drawerOpen, modalOpen }) => (
+  <div aria-hidden={drawerOpen || modalOpen} className={styles.container}>
+    {children}
+  </div>
+);
 
 Main.propTypes = {
   children: React.PropTypes.node,

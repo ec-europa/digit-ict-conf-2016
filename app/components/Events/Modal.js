@@ -10,6 +10,7 @@ import classnames from 'classnames';
 // Components
 import SpeakerRow from '../Speakers/Row';
 import Dialog from '../Modal/Dialog';
+import Checkbox from './Checkbox';
 
 // Styles
 import styles from './Modal.scss';
@@ -17,96 +18,81 @@ import styles from './Modal.scss';
 // Content
 import speakers from '../../../content/speakers.json';
 
-class Modal extends React.Component {
+const Modal = ({ event, location, checked, onRequestClose, onToggle }) => {
+  const startsAt = (
+    <time>{event.starts}</time>
+  );
+  const endsAt = event.ends ? (
+    <time>{event.ends}</time>
+  ) : null;
 
-  constructor() {
-    super();
-    this.toggle = this.toggle.bind(this);
+  let venue = null;
+  if (event.venue && event.venue.length > 0) {
+    venue = `, ${event.venue}`;
   }
 
-  toggle() {
-    const { event, onToggle } = this.props;
-    return onToggle(event);
-  }
+  const eventModerator = speakers.filter(speaker => event.moderator === speaker.id);
+  const eventSpeakers = speakers
+    .filter(speaker => event.speakers.indexOf(speaker.id) > -1)
+    .sort((a, b) => event.speakers.indexOf(a.id) - event.speakers.indexOf(b.id));
 
-  render() {
-    const { event, location, checked, onRequestClose } = this.props;
-    const startsAt = (
-      <time>{event.starts}</time>
-    );
-    const endsAt = event.ends ? (
-      <time>{event.ends}</time>
-    ) : null;
+  const moderatorBlock = eventModerator.length ? (
+    <div>
+      <h2>Moderator</h2>
+      {eventModerator.map(speaker => (
+        <SpeakerRow key={speaker.id} speaker={speaker} location={location} />
+      ))}
+    </div>
+  ) : null;
 
-    let venue = null;
-    if (event.venue && event.venue.length > 0) {
-      venue = `, ${event.venue}`;
-    }
+  const speakersBlock = eventSpeakers.length ? (
+    <div>
+      <h2>Speaker{eventSpeakers.length > 1 ? 's' : ''}</h2>
+      {eventSpeakers.map(speaker => (
+        <SpeakerRow key={speaker.id} speaker={speaker} location={location} />
+      ))}
+    </div>
+  ) : null;
 
-    const eventModerator = speakers.filter(speaker => event.moderator === speaker.id);
-    const eventSpeakers = speakers
-      .filter(speaker => event.speakers.indexOf(speaker.id) > -1)
-      .sort((a, b) => event.speakers.indexOf(a.id) - event.speakers.indexOf(b.id));
+  const containerClass = classnames(
+    styles.modalContainer,
+    { [styles.blue]: event.color === 'blue' },
+    { [styles.yellow]: event.color === 'yellow' },
+    { [styles.purple]: event.color === 'purple' },
+    { [styles.grey]: event.color === 'grey' }
+  );
 
-    const moderatorBlock = eventModerator.length ? (
-      <div>
-        <h2>Moderator</h2>
-        {eventModerator.map(speaker => (
-          <SpeakerRow key={speaker.id} speaker={speaker} location={location} />
-        ))}
-      </div>
-    ) : null;
-
-    const speakersBlock = eventSpeakers.length ? (
-      <div>
-        <h2>Speaker{eventSpeakers.length > 1 ? 's' : ''}</h2>
-        {eventSpeakers.map(speaker => (
-          <SpeakerRow key={speaker.id} speaker={speaker} location={location} />
-        ))}
-      </div>
-    ) : null;
-
-    const containerClass = classnames(
-      styles.modalContainer,
-      { [styles.blue]: event.color === 'blue' },
-      { [styles.yellow]: event.color === 'yellow' },
-      { [styles.purple]: event.color === 'purple' },
-      { [styles.grey]: event.color === 'grey' }
-    );
-
-    return (
-      <Dialog
-        id={event.id}
-        title={event.title}
-        description={`This modal describes the event: ${event.title}.`}
-        onRequestClose={onRequestClose}
-      >
-        <div className={containerClass}>
-          <div className={styles.modalHeader}>
-            <h1>{event.title}</h1>
-            <h2>{startsAt}{event.ends ? ' - ' : ''}{endsAt}{venue}</h2>
-          </div>
-          <div className={styles.modalContent}>
-            {event.register && (
-              <div className={styles.checkbox}>
-                <input id={`ev-${event.id}`} type="checkbox" checked={checked} onChange={this.toggle} aria-hidden="true" />
-                <label htmlFor={`ev-${event.id}`} />
-              </div>
-            )}
-            <div className={styles.name}>
-              {event.visual && (
-                <img className={styles.visual} src={event.visual} alt={event.title} />
-              )}
-              {event.description.map((line, index) => (<p key={index}>{line}</p>))}
-            </div>
-            {moderatorBlock}
-            {speakersBlock}
-          </div>
+  return (
+    <Dialog
+      id={event.id}
+      title={event.title}
+      description={`This modal describes the event: ${event.title}.`}
+      onRequestClose={onRequestClose}
+    >
+      <div className={containerClass}>
+        <div className={styles.modalHeader}>
+          <h1>{event.title}</h1>
+          <h2>{startsAt}{event.ends ? ' - ' : ''}{endsAt}{venue}</h2>
         </div>
-      </Dialog>
-    );
-  }
-}
+        <div className={styles.modalContent}>
+          {event.register && (
+            <div className={styles.checkbox}>
+              <Checkbox event={event} checked={checked} onToggle={onToggle} idPrefix="ev-" />
+            </div>
+          )}
+          <div className={styles.name}>
+            {event.visual && (
+              <img className={styles.visual} src={event.visual} alt={event.title} />
+            )}
+            {event.description.map((line, index) => (<p key={index}>{line}</p>))}
+          </div>
+          {moderatorBlock}
+          {speakersBlock}
+        </div>
+      </div>
+    </Dialog>
+  );
+};
 
 
 Modal.propTypes = {

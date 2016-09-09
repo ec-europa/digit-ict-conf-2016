@@ -16,30 +16,43 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+    font-weight: 400;
   }
 
   h1 {
     @include typi($h1-map);
+
+    font-weight: 300;
   }
 
   h2 {
     @include typi($h2-map);
+
+    font-weight: 300;
   }
 
   h3 {
     @include typi($h3-map);
+
+    font-weight: 300;
   }
 
   h4 {
     @include typi($h4-map);
+
+    font-weight: 300;
   }
 
   h5 {
     @include typi($h5-map);
+
+    font-weight: 300;
   }
 
   h6 {
     @include typi($h6-map);
+
+    font-weight: 300;
   }
 
   .sr-only {

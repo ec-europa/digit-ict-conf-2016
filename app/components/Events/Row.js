@@ -9,19 +9,13 @@ import { Link } from 'react-router';
 import classnames from 'classnames';
 import styles from './Row.scss';
 
+import Checkbox from './Checkbox';
+
+// FlipMove needs Row to be a class (not a stateless function)
+// eslint-disable-next-line react/prefer-stateless-function
 class Row extends React.Component {
-  constructor() {
-    super();
-    this.toggle = this.toggle.bind(this);
-  }
-
-  toggle() {
-    const { event, onToggle } = this.props;
-    return onToggle(event);
-  }
-
   render() {
-    const { event, checked, displayTime } = this.props;
+    const { event, checked, displayTime, onToggle } = this.props;
 
     let startsAt = null;
     let endsAt = null;
@@ -83,13 +77,11 @@ class Row extends React.Component {
             }
           </span>
         </div>
-        {event.register
-          ? <span className={styles.secondary}>
-            <input id={event.id} type="checkbox" checked={checked} onChange={this.toggle} aria-hidden="true" />
-            <label htmlFor={event.id} />
+        {event.register && (
+          <span className={styles.secondary}>
+            <Checkbox event={event} checked={checked} onToggle={onToggle} />
           </span>
-          : null
-        }
+        )}
       </li>
     );
   }

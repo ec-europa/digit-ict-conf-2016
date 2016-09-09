@@ -1,8 +1,6 @@
 @import '../../theme/variables';
 @import '../../theme/breakpoints';
 
-$borderWidth: 3px;
-
 .listItem {
   letter-spacing: 0.02em;
   display: flex;
@@ -13,7 +11,7 @@ $borderWidth: 3px;
   align-items: center;
   padding: 1.2em 0.8em;
   overflow: hidden;
-  transition: background-color 200ms ease-in-out;
+  transition: background-color 300ms ease-in-out;
 
   @include mappy-bp(medium) {
     padding: 2em;
@@ -23,7 +21,7 @@ $borderWidth: 3px;
 .greyItem {
   color: rgba(0, 0, 0, 0.87);
   border-left: 1em solid #CCC;
-  background-color: lighten(#CCC, 16%);
+  background-color: lighten(#CCC, 15%);
 
   &:hover,
   &:focus {
@@ -34,11 +32,11 @@ $borderWidth: 3px;
 .blueItem {
   color: rgba(0, 0, 0, 0.87);
   border-left: 1em solid $ict-blue;
-  background-color: lighten($ict-blue, 58%);
+  background-color: lighten($ict-blue, 55%);
 
   &:hover,
   &:focus {
-    background-color: lighten($ict-blue, 50%);
+    background-color: lighten($ict-blue, 48%);
   }
 }
 
@@ -49,14 +47,14 @@ $borderWidth: 3px;
 
   &:hover,
   &:focus {
-    background-color: lighten($ict-yellow, 31%);
+    background-color: lighten($ict-yellow, 33%);
   }
 }
 
 .purpleItem {
   color: rgba(0, 0, 0, 0.87);
   border-left: 1em solid $ict-purple;
-  background-color: lighten($ict-purple, 53%);
+  background-color: lighten($ict-purple, 52%);
 
   &:hover,
   &:focus {
@@ -102,113 +100,4 @@ a.title {
   color: lighten($ict-grey-text, 5%);
   display: block;
   padding: 0;
-}
-
-.listItem {
-  /* Remove default checkbox */
-  [type='checkbox'] {
-    position: absolute;
-    left: -9999px;
-    opacity: 0;
-  }
-
-  // Checkbox Styles
-  [type='checkbox'] {
-    &:focus {
-      + label {
-        outline-width: medium;
-        outline-color: $ict-grey-text;
-        outline-style: solid;
-      }
-    }
-
-    + label {
-      position: relative;
-      padding-left: 22px;
-      cursor: pointer;
-      display: inline-block;
-      height: 22px;
-      line-height: 22px;
-      font-size: 1rem;
-      user-select: none;
-    }
-
-    + label::before,
-    + label::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 22px;
-      height: 22px;
-      z-index: 0;
-      border: 2px solid #5A5A5A;
-      transition: 0.2s;
-    }
-
-    + label::after {
-      border: 0;
-      transform: scale(0);
-    }
-  }
-
-  [type='checkbox']:checked {
-    + label::before {
-      top: -2px;
-      left: -3px;
-      width: 12px;
-      height: 22px;
-      border-top: none;
-      border-left: none;
-      border-right-width: $borderWidth;
-      border-bottom-width: $borderWidth;
-      transform: rotate(40deg);
-      backface-visibility: hidden;
-      transform-origin: 100% 100%;
-    }
-  }
-}
-
-.listItem {
-  &.purpleItem {
-    [type='checkbox'] {
-      &:focus {
-        + label {
-          outline-color: $ict-purple;
-        }
-      }
-
-      + label::before {
-        border-color: $ict-purple;
-      }
-    }
-  }
-
-  &.yellowItem {
-    [type='checkbox'] {
-      &:focus {
-        + label {
-          outline-color: $ict-yellow;
-        }
-      }
-
-      + label::before {
-        border-color: $ict-yellow;
-      }
-    }
-  }
-
-  &.blueItem {
-    [type='checkbox'] {
-      &:focus {
-        + label {
-          outline-color: $ict-blue;
-        }
-      }
-
-      + label::before {
-        border-color: $ict-blue;
-      }
-    }
-  }
 }

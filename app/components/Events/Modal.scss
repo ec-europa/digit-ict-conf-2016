@@ -16,6 +16,14 @@
   width: 100%;
   padding: 2em;
 
+  h1 {
+    font-weight: 500;
+  }
+
+  h2 {
+    font-weight: 500;
+  }
+
   .blue & {
     background-color: $ict-blue;
     color: #FFF;
@@ -32,7 +40,7 @@
   }
 
   .grey & {
-    background-color: $ict-grey-text;
+    background-color: #666;
     color: #FFF;
   }
 }
@@ -67,102 +75,14 @@
 }
 
 .checkbox {
-  $size: 60px;
+  $size: 3em;
 
   position: absolute;
   top: -($size / 2);
-  right: 40px;
-
-  /* Remove default checkbox */
-  [type='checkbox'] {
-    position: absolute;
-    left: -9999px;
-    opacity: 0;
-  }
-
-  // Checkbox Styles
-  [type='checkbox'] {
-    + label {
-      border-radius: 50%;
-      background: #FFF;
-      height: $size;
-      width: $size;
-      cursor: pointer;
-      line-height: $size;
-      opacity: 1;
-      position: relative;
-      display: inline-block;
-      user-select: none;
-      transition: box-shadow 0.2s linear;
-
-      .blue & {
-        color: darken($ict-blue, 8%);
-        border-color: $ict-blue;
-      }
-
-      .grey & {
-        color: darken($ict-grey-text, 8%);
-        border-color: $ict-grey-text;
-      }
-
-      .purple & {
-        color: darken($ict-purple, 8%);
-        border-color: $ict-purple;
-      }
-
-      .yellow & {
-        color: darken($ict-yellow, 8%);
-        border-color: $ict-yellow;
-      }
-    }
-
-    + label::before,
-    + label::after {
-      content: '';
-      position: absolute;
-      top: 15px;
-      left: 17px;
-      width: 24px;
-      height: 24px;
-      border: 2px solid;
-      border-radius: 1px;
-      margin-top: 2px;
-      transition: 0.2s;
-    }
-
-    + label::after {
-      border: 0;
-      transform: scale(0);
-    }
-
-    &:not(:focus) {
-      + label {
-        box-shadow: 0 5px 8px rgba(0, 0, 0, 0.15);
-      }
-    }
-
-    &:focus {
-      + label {
-        box-shadow: 0 0 1px 6px;
-      }
-    }
-  }
-
-  $borderWidth: 4px;
-
-  [type='checkbox']:checked {
-    + label::before {
-      top: 15px;
-      left: 10px;
-      width: 18px;
-      height: 26px;
-      border-top: none;
-      border-left: none;
-      border-right-width: $borderWidth;
-      border-bottom-width: $borderWidth;
-      transform: rotate(40deg);
-      backface-visibility: hidden;
-      transform-origin: 100% 100%;
-    }
-  }
+  right: 2.5em;
+  width: $size;
+  height: $size;
+  background-color: #FFF;
+  border-radius: 50%;
+  font-size: 1.3em;
 }

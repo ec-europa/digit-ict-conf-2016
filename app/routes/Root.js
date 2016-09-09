@@ -9,11 +9,12 @@ import Helmet from 'react-helmet';
 // Redux actions
 import { toggleDrawer } from '../store/modules/ui/drawer';
 
+import styles from '../components/App/App.scss';
+
 // Components
 import App from '../components/App/App';
 import Main from '../components/App/Main';
-import { Header, HeaderToggle, HeaderTitle, HeaderLogos, HeaderNavigation, HeaderNavigationItem } from '../components/App/Header';
-import { Drawer, DrawerHeader, DrawerHeaderLogos, DrawerHeaderTitle, DrawerNavigation, DrawerNavigationItem, DrawerNavigationSeparator } from '../components/App/Drawer';
+import Navigation from '../components/App/Navigation';
 import Footer from '../components/App/Footer/Footer';
 import Content from '../components/App/Content/Content';
 import ModalContainer from '../containers/Modal';
@@ -22,7 +23,6 @@ import SnackbarContainer from '../containers/Snackbar';
 class Root extends React.Component {
   constructor(props) {
     super(props);
-    document.body.style.overflow = 'auto';
 
     // Init location state
     props.location.state = { // eslint-disable-line
@@ -59,10 +59,16 @@ class Root extends React.Component {
   }
 
   componentWillUpdate({ drawerOpen }, { isModal }) {
-    if (drawerOpen || isModal) {
-      document.body.style.overflow = 'hidden';
+    if (drawerOpen) {
+      document.body.classList.add(styles.drawerOpen);
     } else {
-      document.body.style.overflow = 'auto';
+      document.body.classList.remove(styles.drawerOpen);
+    }
+
+    if (isModal) {
+      document.body.classList.add(styles.modalOpen);
+    } else {
+      document.body.classList.remove(styles.modalOpen);
     }
   }
 
@@ -78,40 +84,12 @@ class Root extends React.Component {
       <App>
         <Helmet titleTemplate="DIGITEC 2016 - %s" />
         <Main drawerOpen={drawerOpen} modalOpen={isModal}>
-          <Header>
-            <HeaderToggle onClick={onToggleDrawer} />
-            <HeaderLogos />
-            <HeaderTitle title={headerTitle} />
-            <HeaderNavigation>
-              <HeaderNavigationItem to={'/speakers'}>Speakers</HeaderNavigationItem>
-              <HeaderNavigationItem to={'/programme'}>Programme</HeaderNavigationItem>
-              <HeaderNavigationItem to={'/my-digitec'}>My DIGITEC</HeaderNavigationItem>
-              <HeaderNavigationItem to={'/practical'}>Practical</HeaderNavigationItem>
-              <HeaderNavigationItem to={'https://scic.ec.europa.eu/fmi/ezreg/DIGITEC2016/start'} target="_blank" rel="noopener noreferrer" primary>Register</HeaderNavigationItem>
-            </HeaderNavigation>
-          </Header>
+          <Navigation drawerOpen={drawerOpen} onToggleDrawer={onToggleDrawer} title={headerTitle} />
           <Content contentKey={childrenKey}>
             {mainChildren}
           </Content>
           <Footer />
         </Main>
-        <Drawer onToggle={onToggleDrawer} isOpen={drawerOpen}>
-          <DrawerHeader>
-            <DrawerHeaderLogos />
-            <DrawerHeaderTitle>29 November, 2016</DrawerHeaderTitle>
-            <DrawerHeaderTitle>Square Brussels</DrawerHeaderTitle>
-          </DrawerHeader>
-          <DrawerNavigation>
-            <DrawerNavigationItem to={'/'}>Home</DrawerNavigationItem>
-            <DrawerNavigationItem to={'/speakers'}>Speakers</DrawerNavigationItem>
-            <DrawerNavigationItem to={'/programme'}>Programme</DrawerNavigationItem>
-            <DrawerNavigationItem to={'/my-digitec'}>My DIGITEC</DrawerNavigationItem>
-            <DrawerNavigationItem to={'/practical'}>Practical</DrawerNavigationItem>
-            <DrawerNavigationSeparator />
-            <DrawerNavigationItem to={'https://scic.ec.europa.eu/fmi/ezreg/DIGITEC2016/start'} target="_blank" rel="noopener noreferrer">Register</DrawerNavigationItem>
-            <DrawerNavigationItem to={'https://twitter.com/hashtag/digitec16'} target="_blank" rel="noopener noreferrer">#digitec16</DrawerNavigationItem>
-          </DrawerNavigation>
-        </Drawer>
         <ModalContainer isOpen={isModal} returnTo={previousLocation} pathname={location.pathname}>
           {modalChildren}
         </ModalContainer>

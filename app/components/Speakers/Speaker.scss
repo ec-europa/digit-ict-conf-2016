@@ -1,13 +1,32 @@
+@import '../../theme/breakpoints';
 @import '../../theme/variables';
 
 .item {
   width: 200px;
-  padding: 10px;
+  max-width: 260px;
   text-align: center;
-  flex-grow: 0;
+  margin: 0.5em;
+  flex-grow: 1;
   flex-shrink: 0;
   flex-basis: 200px;
   text-decoration: none;
+  border-radius: 2px;
+  padding: 1em;
+  background-color: lighten($background-grey, 1%);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+  transition:
+    background-color 300ms ease-in-out,
+    box-shadow 300ms ease-in-out;
+
+  &:hover,
+  &:focus {
+    background-color: #FFF;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14);
+  }
+
+  @include mappy-bp(medium) {
+    flex-grow: 0;
+  }
 }
 
 .name {
@@ -21,7 +40,6 @@
   .item:focus &,
   .item:active & {
     color: darken($ict-grey-text, 15%);
-    font-weight: 500;
   }
 }
 
@@ -32,27 +50,31 @@
   line-height: 1.4;
 }
 
+.pictureFrame {
+  position: relative;
+  line-height: 0;
+  width: 100%;
+  background-color: black;
+  display: block;
+  overflow: hidden;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 1px;
+}
+
 .picture {
   width: 100%;
-  border: 1px solid #DDD;
   opacity: 1;
-  border-radius: 1px;
-  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+  // Little hack (fix bug related to height rounding)
+  margin: -1px;
 
   .item:hover &,
   .item:focus &,
   .item:active & {
     opacity: 0.8;
     transform:
-      scale(1.15)
+      scale(1.1)
       translateY(0.5em);
   }
-}
-
-.pictureFrame {
-  position: relative;
-  line-height: 0;
-  background-color: black;
-  display: block;
-  overflow: hidden;
 }
