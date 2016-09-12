@@ -85,4 +85,8 @@
   background-color: #FFF;
   border-radius: 50%;
   font-size: 1.3em;
+
+  @include mappy-bp(medium) {
+    display: none;
+  }
 }

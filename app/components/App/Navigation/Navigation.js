@@ -118,7 +118,7 @@ class Navigation extends React.Component {
               <NavigationItem to={'/'} mobileOnly>Home</NavigationItem>
               <NavigationItem to={'/speakers'}>Speakers</NavigationItem>
               <NavigationItem to={'/programme'}>Programme</NavigationItem>
-              <NavigationItem to={'/my-digitec'}>My DIGITEC</NavigationItem>
+              <NavigationItem to={'/my-digitec'} mobileOnly>My DIGITEC</NavigationItem>
               <NavigationItem to={'/practical'}>Practical</NavigationItem>
               <NavigationSeparator />
               <NavigationItem to={'https://scic.ec.europa.eu/fmi/ezreg/DIGITEC2016/start'} target="_blank" rel="noopener noreferrer" primary>Register</NavigationItem>

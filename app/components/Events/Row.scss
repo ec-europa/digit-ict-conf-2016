@@ -79,6 +79,10 @@
   align-items: center;
   padding: 0 0.5em 0 1em;
   line-height: 1;
+
+  @include mappy-bp(medium) {
+    display: none;
+  }
 }
 
 .title {

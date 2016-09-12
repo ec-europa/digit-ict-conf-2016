@@ -79,7 +79,7 @@ class Row extends React.Component {
         </div>
         {event.register && (
           <span className={styles.secondary}>
-            <Checkbox event={event} checked={checked} onToggle={onToggle} />
+            <Checkbox event={event} checked={checked} onToggle={onToggle} transparent />
           </span>
         )}
       </li>

@@ -20,9 +20,10 @@ class Checkbox extends React.Component {
   }
 
   render() {
-    const { event, checked, idPrefix } = this.props;
+    const { event, checked, idPrefix, transparent } = this.props;
 
     const checkboxClasses = classnames(
+      { [styles.withBackground]: !transparent },
       { [styles.blueItem]: event.color === 'blue' },
       { [styles.yellowItem]: event.color === 'yellow' },
       { [styles.purpleItem]: event.color === 'purple' },
@@ -44,6 +45,7 @@ class Checkbox extends React.Component {
 Checkbox.propTypes = {
   event: React.PropTypes.object,
   checked: React.PropTypes.bool,
+  transparent: React.PropTypes.bool,
   onToggle: React.PropTypes.func,
   idPrefix: React.PropTypes.string,
 };
@@ -51,6 +53,7 @@ Checkbox.propTypes = {
 Checkbox.defaultProps = {
   event: {},
   checked: false,
+  transparent: false,
   idPrefix: '',
 };
 
