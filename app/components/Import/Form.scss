@@ -1,0 +1,64 @@
+@import '../../theme/variables';
+
+.form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.05em;
+  line-height: 1.3;
+}
+
+.formInput {
+  appearance: none;
+  background: #FFF;
+  background-image: none;
+  border: 0.1em solid lighten($ict-grey-text, 5%);
+  border-radius: 0.2em;
+  color: $ict-grey-text;
+  height: 2.5em;
+  outline: 0;
+  padding: 0.7em 0.8em;
+  width: 5em;
+  max-width: 100%;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: none;
+
+  &:focus {
+    border-color: $ict-blue;
+  }
+}
+
+// Buttons
+.submit {
+  appearance: none;
+  background-color: lighten($ict-blue, 63%);
+  border: 0.1em solid $ict-blue;
+  border-radius: 0.2em;
+  color: darken($ict-blue, 5%);
+  cursor: pointer;
+  height: 2.5em;
+  padding: 0 1.5em;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  outline: 0;
+
+  &:active,
+  &:focus,
+  &:hover,
+  &.active {
+    background: lighten($ict-blue, 5%);
+    border-color: darken($ict-blue, 2%);
+    color: #FFF;
+  }
+
+  transition-property: background-color, color;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+}

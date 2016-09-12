@@ -4,6 +4,8 @@ import speaker from './Speaker';
 import programme from './Programme';
 import event from './Event';
 import myDigitec from './MyDigitec';
+import exportSchedule from './Export';
+import importSchedule from './Import';
 import practical from './Practical';
 import notFound from './NotFound';
 import Root from './Root';
@@ -16,6 +18,8 @@ export const routes = {
     speaker(),
     programme(),
     myDigitec(),
+    exportSchedule(),
+    importSchedule(),
     event(),
     practical(),
     notFound(),

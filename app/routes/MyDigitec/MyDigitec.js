@@ -41,6 +41,9 @@ class MyDigitec extends React.Component {
           <p>
             "My DIGITEC" helps you personalise your experience. Select your favourite sessions from <Link to={'/programme'}>DIGITEC programme</Link>.
           </p>
+          <p>
+            You can <Link to={{ pathname: 'import', state: { modal: true } }}>import</Link> or <Link to={{ pathname: 'export', state: { modal: true } }}>export</Link> your DIGITEC and share your schedule between different devices: desktop, mobile, etc.
+          </p>
         </div>
         {myEvents.length > 0 && (
           <EventsList events={myEvents} schedule={schedule} onToggle={onToggleEvent} location={location} />

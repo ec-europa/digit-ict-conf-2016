@@ -1,0 +1,15 @@
+@import '../../theme/variables';
+
+.container {
+  max-width: $max-width;
+  margin: auto;
+  padding: ($header-height+1em) 1em $header-height;
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+}
