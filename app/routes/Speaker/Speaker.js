@@ -71,9 +71,7 @@ class Speaker extends React.Component {
 
 Speaker.propTypes = {
   params: React.PropTypes.object,
-  location: React.PropTypes.object,
   onUpdateHeaderTitle: React.PropTypes.func,
-  router: React.PropTypes.object,
   isModal: React.PropTypes.bool,
   onRequestClose: React.PropTypes.func,
 };

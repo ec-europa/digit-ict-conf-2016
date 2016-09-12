@@ -5,13 +5,14 @@
 
 .enter {
   visibility: hidden;
-  opacity: 0;
+  opacity: 0.2;
+  will-change: opacity;
 }
 
 .enter.enterActive {
   visibility: visible;
   opacity: 1;
-  transition: opacity 300ms ease-in 0ms;
+  transition: opacity 300ms linear;
 }
 
 .leave {

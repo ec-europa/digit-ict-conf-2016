@@ -13,14 +13,14 @@ const List = ({ events, schedule, onToggle, location }) => {
   const eventsDisplay = [];
 
   const eventsByTimeslot = [];
-  events.forEach(event => {
+  events.forEach((event) => {
     if (!eventsByTimeslot[event.starts]) {
       eventsByTimeslot[event.starts] = [];
     }
     eventsByTimeslot[event.starts].push(event);
   });
 
-  Object.keys(eventsByTimeslot).forEach(start => {
+  Object.keys(eventsByTimeslot).forEach((start) => {
     const eventsList = eventsByTimeslot[start];
 
     const eventsRows = eventsList.map(event => (

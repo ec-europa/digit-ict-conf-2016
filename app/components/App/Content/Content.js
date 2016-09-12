@@ -18,8 +18,9 @@ const Content = ({ children, contentKey }) => (
     transitionEnterTimeout={300}
     transitionLeaveTimeout={10}
     component="main"
+    className={styles.container}
   >
-    <div className={styles.container} key={contentKey}>
+    <div key={contentKey}>
       {children}
     </div>
   </ReactCSSTransitionGroup>

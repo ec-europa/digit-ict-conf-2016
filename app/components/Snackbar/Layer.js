@@ -73,10 +73,8 @@ class Layer extends React.Component {
 
 Layer.propTypes = {
   onRequestClose: React.PropTypes.func,
-  onTriggerAction: React.PropTypes.func,
   open: React.PropTypes.bool,
   message: React.PropTypes.string,
-  action: React.PropTypes.object,
 };
 
 export default Layer;

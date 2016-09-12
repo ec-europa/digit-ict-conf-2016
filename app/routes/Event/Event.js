@@ -72,7 +72,6 @@ class Event extends React.Component {
 
 Event.propTypes = {
   params: React.PropTypes.object,
-  location: React.PropTypes.object,
   onUpdateHeaderTitle: React.PropTypes.func,
   onToggleEvent: React.PropTypes.func,
   schedule: React.PropTypes.object,

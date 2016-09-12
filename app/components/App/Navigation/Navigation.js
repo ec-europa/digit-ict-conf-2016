@@ -83,7 +83,7 @@ class Navigation extends React.Component {
     const { title, drawerOpen, onToggleDrawer } = this.props;
 
     return (
-      <nav className={styles.container} ref={c => { this.header = c; }}>
+      <nav className={styles.container} ref={(c) => { this.header = c; }}>
         <input type="checkbox" id="toggleDrawer" className={styles.toggleDrawer} checked={drawerOpen} onChange={onToggleDrawer} />
         <div className={styles.mobileBar}>
           <label htmlFor="toggleDrawer" className={styles.navToggle}>
@@ -96,7 +96,7 @@ class Navigation extends React.Component {
           </div>
         </div>
         <label htmlFor="toggleDrawer" className={styles.overlay} />
-        <div className={styles.navigation} ref={c => { this.navigation = c; }}>
+        <div className={styles.navigation} ref={(c) => { this.navigation = c; }}>
           <div className={styles.innerNavigation}>
             <div className={styles.navigationHeader}>
               <div className={styles.logos}>
@@ -132,7 +132,6 @@ class Navigation extends React.Component {
 }
 
 Navigation.propTypes = {
-  children: React.PropTypes.node,
   onToggleDrawer: React.PropTypes.func,
   title: React.PropTypes.string,
   drawerOpen: React.PropTypes.bool,

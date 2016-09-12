@@ -124,7 +124,7 @@ class Practical extends React.Component {
             Directions (PDF)
           </a>
         </div>
-        <div id="map" ref={c => { this.map = c; }} />
+        <div id="map" ref={(c) => { this.map = c; }} />
         <h2>DIGITEC live</h2>
         <p>Follow DIGITEC on Twitter (<a href="https://twitter.com/hashtag/digitec16" target="_blank" rel="noopener noreferrer">#digitec16</a>) or via the webstream on 29<sup>th</sup> of November.</p>
         <h2>DIGITEC on your mobile</h2>

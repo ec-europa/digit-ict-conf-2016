@@ -90,8 +90,8 @@ class Dialog extends React.Component {
     const { children, onRequestClose, id, title, description } = this.props;
     return (
       <div className={styles.modalContainer}>
-        <div className={styles.modalOuter} onClick={onRequestClose} />
-        <div className={styles.modal} id={id} role="dialog" aria-labelledby="dialog-title" aria-describedby="dialog-description" ref={c => { this.modal = c; }}>
+        <button className={styles.modalOuter} onClick={onRequestClose} />
+        <div className={styles.modal} id={id} role="dialog" aria-labelledby="dialog-title" aria-describedby="dialog-description" ref={(c) => { this.modal = c; }}>
           <h1 id="dialog-title" className="sr-only">{title}</h1>
           <p id="dialog-description" className="sr-only">{description}</p>
           <button type="button" className={styles.closeButton} aria-label="Close dialog" onClick={onRequestClose} />

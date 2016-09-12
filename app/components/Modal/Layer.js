@@ -66,8 +66,8 @@ class Layer extends React.Component {
           leave: styles.leave,
           leaveActive: styles.leaveActive,
         }}
-        transitionEnterTimeout={400}
-        transitionLeaveTimeout={400}
+        transitionEnterTimeout={300}
+        transitionLeaveTimeout={300}
         component="div"
         aria-hidden={!isOpen}
       >
@@ -81,8 +81,8 @@ class Layer extends React.Component {
                 leave: styles.leave,
                 leaveActive: styles.leaveActive,
               }}
-              transitionEnterTimeout={400}
-              transitionLeaveTimeout={400}
+              transitionEnterTimeout={300}
+              transitionLeaveTimeout={300}
               component="div"
             >
               {React.cloneElement(children, {

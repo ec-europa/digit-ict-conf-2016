@@ -18,7 +18,7 @@ const checkDomain = (url) => {
   return urlToCheck.toLowerCase().replace(/([a-z])?:\/\//, '$1').split('/')[0];
 };
 
-const isExternal = (url) => (
+const isExternal = url => (
     (url.indexOf(':') > -1 || url.indexOf('//') > -1) && checkDomain(location.href) !== checkDomain(url)
 );
 

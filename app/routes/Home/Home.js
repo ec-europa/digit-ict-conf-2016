@@ -3,6 +3,7 @@
  *
  * This is the first thing users see of our App, at the '/' route
  */
+ /* eslint-disable react/no-danger */
 
 import React from 'react';
 import { connect } from 'react-redux';
@@ -18,7 +19,7 @@ import styles from './Home.scss';
 // Load content
 import mainContent from '../../../content/homepage/main.md';
 
-class Home extends React.Component {
+class Home extends React.PureComponent {
   componentDidMount() {
     this.props.onUpdateHeaderTitle('DIGITEC 2016');
   }

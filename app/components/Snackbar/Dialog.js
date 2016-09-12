@@ -3,6 +3,7 @@
 * Snackbar/Dialog
 *
 */
+/* eslint-disable react/no-danger */
 
 import React from 'react';
 
@@ -48,24 +49,24 @@ class Dialog extends React.Component {
     const { onRequestClose, onTriggerAction, message, action } = this.props;
 
     return (
-      <div
+      <button
         className={styles.snackbar}
         onClick={onRequestClose}
         role="alertdialog"
-        ref={c => { this.dialog = c; }}
+        ref={(c) => { this.dialog = c; }}
       >
         <div className={styles.message} dangerouslySetInnerHTML={{ __html: message }} />
         {action && action.label && action.onClick ?
           <button
             className={styles.action}
             onClick={onTriggerAction}
-            ref={c => { this.actionButton = c; }}
+            ref={(c) => { this.actionButton = c; }}
           >
             {action.label}
           </button>
           : null
         }
-      </div>
+      </button>
     );
   }
 }
