@@ -95,17 +95,7 @@ offlineRuntime.install({
       onClick: () => store.dispatch(closeSnackbar()),
     },
   })),
-  onUpdateReady: () => store.dispatch(openSnackbar({
-    message: 'An update is available',
-    timeout: 0,
-    action: {
-      label: 'Update',
-      onClick: () => {
-        offlineRuntime.applyUpdate();
-        return store.dispatch(closeSnackbar());
-      },
-    },
-  })),
+  onUpdateReady: () => offlineRuntime.applyUpdate(),
   onUpdated: () => store.dispatch(openSnackbar({
     message: 'DIGITEC has been updated',
     timeout: 0,
