@@ -145,8 +145,14 @@
   "id": "e-democracy",
   "starts": "16:00",
   "ends": "17:15",
-  "title": "eDemocracy",
-  "description": [],
+  "title": "Open data and digitalisation for public administrations",
+  "description": [
+    "In this session, the debate will look deeper into the notions of open data, net neutrality and digitalisation to examine how these actually impact our democracies and what effects they are having and may have in public administrations. We will focus on issues, such as:",
+    "- What digital and open data approaches are there for public administration processes?",
+    "- How important is net neutrality in this context?",
+    "- What should be the role of ICT in the workings of the public sector?",
+    "- How can new technology make a positive difference in public administrations and service delivery?"
+  ],
   "speakers": ["mercedesfuertes", "dianauraniagaletta"],
   "color": "purple",
   "register": true
