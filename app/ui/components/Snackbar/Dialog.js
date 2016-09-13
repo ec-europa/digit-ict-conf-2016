@@ -10,7 +10,7 @@ import React from 'react';
 // Styles
 import styles from './Snackbar.scss';
 
-class Dialog extends React.Component {
+class Dialog extends React.PureComponent {
   constructor(props) {
     super(props);
 

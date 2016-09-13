@@ -13,7 +13,7 @@ import Dialog from './Dialog';
 // Styles
 import styles from './Snackbar.scss';
 
-class Layer extends React.Component {
+class Layer extends React.PureComponent {
   constructor(props) {
     super(props);
 

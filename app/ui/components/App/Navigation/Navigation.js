@@ -15,7 +15,7 @@ import NavigationSeparator from './components/Separator/Separator';
 import europaLogo from './images/europa.png';
 import ictLogo from './images/digitec.png';
 
-class Navigation extends React.Component {
+class Navigation extends React.PureComponent {
   constructor(props) {
     super(props);
 

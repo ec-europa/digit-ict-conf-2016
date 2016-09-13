@@ -7,7 +7,7 @@ import React from 'react';
 // Styles
 import styles from './Modal.scss';
 
-class Dialog extends React.Component {
+class Dialog extends React.PureComponent {
   constructor(props) {
     super(props);
 

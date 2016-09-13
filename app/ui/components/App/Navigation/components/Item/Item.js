@@ -2,6 +2,8 @@
 *
 * Item
 *
+* Not a PureComponent (same as Link)
+*
 */
 
 import React from 'react';

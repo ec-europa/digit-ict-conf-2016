@@ -8,7 +8,7 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 // Styles
 import styles from './Modal.scss';
 
-class Layer extends React.Component {
+class Layer extends React.PureComponent {
   constructor(props) {
     super(props);
 

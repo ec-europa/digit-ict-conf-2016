@@ -8,7 +8,7 @@ import React from 'react';
 import classnames from 'classnames';
 import styles from './Checkbox.scss';
 
-class Checkbox extends React.Component {
+class Checkbox extends React.PureComponent {
   constructor() {
     super();
     this.toggle = this.toggle.bind(this);
