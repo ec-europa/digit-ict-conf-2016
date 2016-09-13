@@ -198,6 +198,7 @@ vo(run)((err) => {
       }
 
       console.log('done!');
+      process.exit(0);
     });
   });
 });
