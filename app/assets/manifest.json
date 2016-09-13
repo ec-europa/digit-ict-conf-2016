@@ -1,8 +1,8 @@
 {
   "name": "DIGITEC 2016",
   "short_name": "DIGITEC",
-  "start_url": "/digitec/my-digitec",
-  "scope": "/digitec/",
+  "start_url": "/multisite/pubfpfistest/sites/pubfpfistest/files/digitec/my-digitec",
+  "scope": "/multisite/pubfpfistest/sites/pubfpfistest/files/digitec/",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#FDFDFD",

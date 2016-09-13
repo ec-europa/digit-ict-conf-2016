@@ -1,0 +1,18 @@
+@import '../../theme/breakpoints';
+
+.app {
+  display: flex;
+}
+
+// Classes applied on body
+.drawerOpen {
+  overflow: hidden;
+
+  @include mappy-bp(medium) {
+    overflow: auto;
+  }
+}
+
+.modalOpen {
+  overflow: hidden;
+}

@@ -18,7 +18,7 @@ const domain = 'http://localhost:3000';
 const urlsBucket = new Set();
 const parsedUrls = new Set();
 
-const dist = 'output'; // Output directory
+const dist = '.tmp'; // Output directory
 
 const whitelist = {
   protocol: [

@@ -5,9 +5,6 @@
  */
 import 'babel-polyfill';
 
-// Import the CSS resets and base theme
-import './theme/base.scss';
-
 // Import all the third party stuff
 import React from 'react';
 import ReactDOM from 'react-dom';
