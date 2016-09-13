@@ -9,7 +9,7 @@ import Link from '../../../../Link/Link';
 import styles from './Item.scss';
 import classnames from 'classnames';
 
-class Item extends React.PureComponent {
+class Item extends React.Component {
   render() {
     const { to, children, mobileOnly, primary, ...rest } = this.props;
     return (

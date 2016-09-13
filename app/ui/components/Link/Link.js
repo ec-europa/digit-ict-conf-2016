@@ -2,10 +2,13 @@
 *
 * Link
 *
+* This component can't be pure as it depends on external parameters
+* to determine if the link is active or not
+*
 */
 
 import React from 'react';
-import { Link as ReactLink } from 'react-router';
+import { Link as NormalLink, IndexLink } from 'react-router';
 import classnames from 'classnames';
 import styles from './Link.scss';
 
@@ -23,9 +26,9 @@ const isExternal = url => (
 );
 
 
-class Link extends React.PureComponent {
+class Link extends React.Component {
   render() {
-    const { to, children, className, activeClassName, ...rest } = this.props;
+    const { to, index, children, className, activeClassName, ...rest } = this.props;
     const linkClasses = classnames(styles.link, className);
 
     if (typeof to === 'string' && isExternal(to)) {
@@ -34,8 +37,14 @@ class Link extends React.PureComponent {
       );
     }
 
+    if (index) {
+      return (
+        <IndexLink to={to} className={linkClasses} activeClassName={activeClassName} {...rest} >{children}</IndexLink>
+      );
+    }
+
     return (
-      <ReactLink to={to} className={linkClasses} activeClassName={activeClassName} {...rest} >{children}</ReactLink>
+      <NormalLink to={to} className={linkClasses} activeClassName={activeClassName} {...rest} >{children}</NormalLink>
     );
   }
 }
@@ -45,6 +54,7 @@ Link.propTypes = {
   to: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.object]).isRequired,
   className: React.PropTypes.string,
   activeClassName: React.PropTypes.string,
+  index: React.PropTypes.bool,
 };
 
 export default Link;

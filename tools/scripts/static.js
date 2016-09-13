@@ -85,6 +85,7 @@ function* run() {
       images: false,
       webgl: false,
       webaudio: false,
+      partition: 'nopersist',
     },
   });
 

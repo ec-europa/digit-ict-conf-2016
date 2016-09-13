@@ -115,7 +115,7 @@ class Navigation extends React.Component {
               </div>
             </div>
             <ul className={styles.navLinks}>
-              <NavigationItem to={'/'} mobileOnly>Home</NavigationItem>
+              <NavigationItem to={'/'} index mobileOnly>Home</NavigationItem>
               <NavigationItem to={'/speakers'}>Speakers</NavigationItem>
               <NavigationItem to={'/programme'}>Programme</NavigationItem>
               <NavigationItem to={'/my-digitec'} mobileOnly>My DIGITEC</NavigationItem>
