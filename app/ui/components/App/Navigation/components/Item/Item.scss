@@ -1,0 +1,95 @@
+@import '../../../../../theme/variables';
+@import '../../../../../theme/breakpoints';
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include mappy-bp(medium) {
+    padding: 0.8em 0.5em 0.6em;
+  }
+}
+
+.link {
+  @include mappy-bp(max medium) {
+    display: block;
+    color: $ict-grey-text;
+    width: 100%;
+    line-height: 3em;
+    font-weight: 300;
+    padding-left: 2em;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      background-color: #EEE;
+    }
+  }
+
+  @include mappy-bp(medium) {
+    flex-grow: 1;
+    color: lighten($ict-grey-text, 10%);
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      margin: auto;
+      height: 1px;
+      width: 0;
+      background: transparent;
+      transition: width 0.3s ease, background-color 0.3s ease;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $ict-grey-text;
+
+      &::after {
+        width: 100%;
+        background-color: lighten($ict-grey-text, 30%);
+      }
+    }
+  }
+}
+
+.mobileOnly {
+  @include mappy-bp(medium) {
+    display: none;
+  }
+}
+
+.active {
+  @include mappy-bp(max medium) {
+    font-weight: 500;
+    color: darken($ict-grey-text, 10%);
+  }
+
+  @include mappy-bp(medium) {
+    color: darken($ict-grey-text, 5%);
+
+    &::after {
+      width: 100%;
+      background-color: lighten($ict-grey-text, 10%);
+    }
+  }
+}
+
+.primary {
+  font-weight: 400;
+  color: $ict-blue;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: darken($ict-blue, 5%);
+
+    &::after {
+      background: $ict-blue;
+    }
+  }
+}

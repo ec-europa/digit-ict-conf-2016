@@ -1,0 +1,24 @@
+// Colors
+$ict-blue: #109FA7;
+$ict-purple: #7E4098;
+$ict-yellow: #D6DF32;
+$ict-grey-text: #555;
+$background-grey: #F8FAFA;
+// Header
+$header-height: 5em;
+
+// layout
+$max-width: 960px;
+
+/*
+ * Breakpoints
+ */
+$breakpoints: (
+  xxsmall: 0,      // 0px
+  xsmall: 320px,   // 20em
+  small: 560px,    // 35em
+  medium: 800px,   // 50em
+  large: 1024px,   // 64em
+  xlarge: 1200px,  // 75em
+  xxlarge: 1440px, // 90em
+);

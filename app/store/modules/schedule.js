@@ -20,7 +20,7 @@ export const REMOVE_FROM_MY_SCHEDULE = 'REMOVE_FROM_MY_SCHEDULE';
  * Initial state
  */
 const initialState = {};
-data.filter(event => event.register).forEach(event => {
+data.filter(event => event.register).forEach((event) => {
   initialState[event.id] = false;
 });
 

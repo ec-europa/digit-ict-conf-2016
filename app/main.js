@@ -5,9 +5,6 @@
  */
 import 'babel-polyfill';
 
-// Import the CSS resets and base theme
-import './theme/base.scss';
-
 // Import all the third party stuff
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -95,17 +92,7 @@ offlineRuntime.install({
       onClick: () => store.dispatch(closeSnackbar()),
     },
   })),
-  onUpdateReady: () => store.dispatch(openSnackbar({
-    message: 'An update is available',
-    timeout: 0,
-    action: {
-      label: 'Update',
-      onClick: () => {
-        offlineRuntime.applyUpdate();
-        return store.dispatch(closeSnackbar());
-      },
-    },
-  })),
+  onUpdateReady: () => offlineRuntime.applyUpdate(),
   onUpdated: () => store.dispatch(openSnackbar({
     message: 'DIGITEC has been updated',
     timeout: 0,

@@ -5,8 +5,8 @@
   "scope": "/digitec/",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#FDFDFD",
-  "theme_color": "#FFFFFF",
+  "background_color": "#F8FAFA",
+  "theme_color": "#F8FAFA",
   "icons": [
     {
       "src": "./android-chrome-192x192.png",

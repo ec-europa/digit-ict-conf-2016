@@ -1,0 +1,12 @@
+@import '../../../../../theme/breakpoints';
+
+.drawerSeparator {
+  height: 1px;
+  background-color: #DCDCDC;
+  margin: 1.5em 0;
+  padding: 0;
+
+  @include mappy-bp(medium) {
+    display: none;
+  }
+}
