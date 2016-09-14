@@ -3,6 +3,7 @@
 * Navigation
 *
 */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 
 import React from 'react';
 import Headroom from 'headroom.js';
@@ -22,6 +23,7 @@ class Navigation extends React.PureComponent {
     // Bindings
     this.handleFocusChange = this.handleFocusChange.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
+    this.handleRequestToggleDrawer = this.handleRequestToggleDrawer.bind(this);
 
     // Init
     this.header = null;
@@ -79,14 +81,19 @@ class Navigation extends React.PureComponent {
     }
   }
 
+  handleRequestToggleDrawer(event) {
+    event.preventDefault();
+    this.props.onToggleDrawer();
+  }
+
   render() {
-    const { title, drawerOpen, onToggleDrawer } = this.props;
+    const { title, drawerOpen } = this.props;
 
     return (
       <nav className={styles.container} ref={(c) => { this.header = c; }}>
-        <input type="checkbox" id="toggleDrawer" className={styles.toggleDrawer} checked={drawerOpen} onChange={onToggleDrawer} />
+        <input type="checkbox" id="toggleDrawer" className={styles.toggleDrawer} checked={drawerOpen} />
         <div className={styles.mobileBar}>
-          <label htmlFor="toggleDrawer" className={styles.navToggle}>
+          <label htmlFor="toggleDrawer" className={styles.navToggle} onClick={this.handleRequestToggleDrawer}>
             <span />
             <span />
             <span />
@@ -95,7 +102,7 @@ class Navigation extends React.PureComponent {
             <h1 className={styles.title}>{title}</h1>
           </div>
         </div>
-        <label htmlFor="toggleDrawer" className={styles.overlay} />
+        <label htmlFor="toggleDrawer" className={styles.overlay} onClick={this.handleRequestToggleDrawer} />
         <div className={styles.navigation} ref={(c) => { this.navigation = c; }}>
           <div className={styles.innerNavigation}>
             <div className={styles.navigationHeader}>

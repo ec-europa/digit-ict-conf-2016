@@ -1,12 +1,12 @@
 {
   "name": "DIGITEC 2016",
   "short_name": "DIGITEC",
-  "start_url": "/multisite/pubfpfistest/sites/pubfpfistest/files/digitec/my-digitec",
-  "scope": "/multisite/pubfpfistest/sites/pubfpfistest/files/digitec/",
+  "start_url": "/digitec/my-digitec",
+  "scope": "/digitec/",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#FDFDFD",
-  "theme_color": "#FFFFFF",
+  "background_color": "#F8FAFA",
+  "theme_color": "#F8FAFA",
   "icons": [
     {
       "src": "./android-chrome-192x192.png",
