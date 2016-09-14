@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.0.0"></a>
+# [1.0.0](https://github.com/ec-europa/digit-ict-conf-2016/compare/v0.16.0...v1.0.0) (2016-09-14)
+
+
+### Features
+
+* **content:** update eDemocracy's title and description ([#87](https://github.com/ec-europa/digit-ict-conf-2016/issues/87)) ([4a85139](https://github.com/ec-europa/digit-ict-conf-2016/commit/4a85139))
+* **design:** improve overall lisibility ([#86](https://github.com/ec-europa/digit-ict-conf-2016/issues/86)) ([d920d75](https://github.com/ec-europa/digit-ict-conf-2016/commit/d920d75))
+* **design:** invert shadows on speakers' rows ([4111dca](https://github.com/ec-europa/digit-ict-conf-2016/commit/4111dca))
+* **static:** extract HTML in order to make the site static ([#85](https://github.com/ec-europa/digit-ict-conf-2016/issues/85)) ([ab88e5b](https://github.com/ec-europa/digit-ict-conf-2016/commit/ab88e5b))
+
+
+
 <a name="0.16.0"></a>
 # [0.16.0](https://github.com/ec-europa/digit-ict-conf-2016/compare/v0.14.0...v0.16.0) (2016-09-06)
 
