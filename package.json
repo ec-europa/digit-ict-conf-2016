@@ -30,9 +30,6 @@
     "*.js": [
       "lint:js"
     ],
-    "*.json": [
-      "lint:json"
-    ],
     "*.scss": [
       "lint:scss"
     ]
