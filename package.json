@@ -20,7 +20,7 @@
     "lint": "npm run lint:js && npm run lint:json && npm run lint:md && npm run lint:scss",
     "lint:js": "eslint . --ignore-pattern tools/scripts",
     "lint:json": "eslint . --ext .json",
-    "lint:md": "remark **/*.md -u remark-lint",
+    "lint:md": "remark .",
     "lint:scss": "stylelint ./app/**/*.scss",
     "lint-staged": "lint-staged",
     "release": "git checkout master && git pull origin master && standard-version && git push --follow-tags origin master && conventional-github-releaser -p angular",
@@ -32,9 +32,6 @@
     ],
     "*.json": [
       "lint:json"
-    ],
-    "*.md": [
-      "lint:md"
     ],
     "*.scss": [
       "lint:scss"
