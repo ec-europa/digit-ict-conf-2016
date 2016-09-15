@@ -11,28 +11,27 @@
     left: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden;
     background-color: #000;
     transform: translateZ(0);
     will-change: opacity;
     opacity: 0.6;
 
-    .enter & {
+    &.enter {
       opacity: 0;
     }
 
-    .enterActive & {
+    &.enterActive {
       opacity: 0.6;
-      transition: opacity 300ms linear;
+      transition: opacity 400ms ease;
     }
 
-    .leave & {
+    &.leave {
       opacity: 0.6;
     }
 
-    .leaveActive & {
+    &.leaveActive {
       opacity: 0;
-      transition: opacity 300ms linear;
+      transition: opacity 400ms ease;
     }
   }
 }
@@ -85,16 +84,14 @@
 
   .enter & {
     opacity: 0;
-    transform: scale(0.2) translateZ(0);
+    transform: scale(0.6);
     overflow: hidden;
   }
 
   .enterActive & {
     opacity: 1;
-    transform: scale(1) translateZ(0);
-    transition:
-      transform 300ms ease-out,
-      opacity 300ms ease-in-out;
+    transform: scale(1);
+    transition: all 400ms ease;
   }
 
   .leave & {
@@ -105,10 +102,8 @@
 
   .leaveActive & {
     opacity: 0;
-    transform: scale(0.4) translateZ(0);
-    transition:
-      transform 300ms ease-in,
-      opacity 300ms ease-in-out;
+    transform: scale(0.85);
+    transition: all 300ms ease;
   }
 }
 

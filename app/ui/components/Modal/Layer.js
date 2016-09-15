@@ -66,34 +66,32 @@ class Layer extends React.PureComponent {
           leave: styles.leave,
           leaveActive: styles.leaveActive,
         }}
-        transitionEnterTimeout={300}
-        transitionLeaveTimeout={300}
+        transitionEnterTimeout={500}
+        transitionLeaveTimeout={500}
         component="div"
         aria-hidden={!isOpen}
       >
-        {isOpen ?
-          <div>
-            <div className={styles.obfuscator} key="overlay" />
-            <ReactCSSTransitionGroup
-              transitionName={{
-                enter: styles.enter,
-                enterActive: styles.enterActive,
-                leave: styles.leave,
-                leaveActive: styles.leaveActive,
-              }}
-              transitionEnterTimeout={300}
-              transitionLeaveTimeout={300}
-              component="div"
-            >
-              {React.cloneElement(children, {
-                isModal: true,
-                onRequestClose,
-                key: pathname,
-              })}
-            </ReactCSSTransitionGroup>
-          </div>
-        : null
-        }
+        {isOpen && [
+          <div className={styles.obfuscator} key="overlay" />,
+          <ReactCSSTransitionGroup
+            transitionName={{
+              enter: styles.enter,
+              enterActive: styles.enterActive,
+              leave: styles.leave,
+              leaveActive: styles.leaveActive,
+            }}
+            transitionEnterTimeout={500}
+            transitionLeaveTimeout={500}
+            component="div"
+            key={pathname}
+          >
+            {React.cloneElement(children, {
+              isModal: true,
+              onRequestClose,
+              key: pathname,
+            })}
+          </ReactCSSTransitionGroup>,
+        ]}
       </ReactCSSTransitionGroup>
     );
   }
