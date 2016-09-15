@@ -1,5 +1,16 @@
 [
   {
+    "id": "prabhatagarwal",
+    "firstname": "Prabhat",
+    "lastname": "Agarwal",
+    "title": "Missing title",
+    "bio": [
+      "Prabhat Agarwal is currently working on the European Commission's policies in the field of online platforms and electronic Commerce. He comes from a background of academic and industrial research, covering a broad range of fundamental science and commercial high-tech projects from a physicist's perspective. He joined the European Commission in 2007, and has since then covered a variety of digital innovation and regulatory areas, as well as foresight. His particular interest lie at the intersection of science, technology, society, and the law."
+    ],
+    "twitter": "@prabprab",
+    "picture": "./speakers/Prabhat-Agarwal.jpg"
+  },
+  {
     "id": "jenniferbaker",
     "firstname": "Jennifer",
     "lastname": "Baker",
