@@ -17,30 +17,20 @@
     "build": "cross-env NODE_ENV=production webpack --config tools/webpack/webpack.prod.babel.js --color -p && node ./tools/scripts/static.js",
     "build:clean": "rimraf ./build/*",
     "start": "webpack-dashboard -- cross-env NODE_ENV=development node tools/scripts/server.js",
-    "lint": "npm run lint:js ; npm run lint:json ; npm run lint:md ; npm run lint:scss ; npm run lint:text",
+    "lint": "npm run lint:js && npm run lint:json && npm run lint:md && npm run lint:scss",
     "lint:js": "eslint . --ignore-pattern tools/scripts",
     "lint:json": "eslint . --ext .json",
     "lint:md": "remark **/*.md -u remark-lint",
     "lint:scss": "stylelint ./app/**/*.scss",
-    "lint:text": "textlint content/",
     "lint-staged": "lint-staged",
     "release": "git checkout master && git pull origin master && standard-version && git push --follow-tags origin master && conventional-github-releaser -p angular",
     "serve": "cross-env NODE_ENV=production node tools/scripts/prodServer.js"
   },
   "lint-staged": {
-    "*.js": [
-      "lint:js"
-    ],
-    "*.json": [
-      "lint:json"
-    ],
-    ".md": [
-      "lint:md",
-      "lint:text"
-    ],
-    "*.scss": [
-      "lint:scss"
-    ]
+    "*.js": ["lint:js"],
+    "*.json": ["lint:json"],
+    "*.md": ["lint:md"],
+    "*.scss": ["lint:scss"]
   },
   "config": {
     "ghooks": {
@@ -127,9 +117,6 @@
     "style-loader": "^0.13.1",
     "stylelint": "^7.2.0",
     "stylelint-config-standard": "^13.0.0",
-    "textlint": "^7.1.1",
-    "textlint-rule-alex": "^1.1.0",
-    "textlint-rule-rousseau": "^1.4.5",
     "urijs": "^1.18.1",
     "url-loader": "^0.5.7",
     "vo": "^4.0.2",
