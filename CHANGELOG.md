@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/ec-europa/digit-ict-conf-2016/compare/v1.0.0...v1.1.0) (2016-09-15)
+
+
+### Bug Fixes
+
+* **build:** remove json check ([65d47aa](https://github.com/ec-europa/digit-ict-conf-2016/commit/65d47aa))
+* **build:** remove Markdown linting on lint-staged ([a8dc3d4](https://github.com/ec-europa/digit-ict-conf-2016/commit/a8dc3d4))
+* **lint:** fix remark issues ([71670b4](https://github.com/ec-europa/digit-ict-conf-2016/commit/71670b4))
+
+
+### Features
+
+* **design:** better speakers cards ([449fab1](https://github.com/ec-europa/digit-ict-conf-2016/commit/449fab1))
+* **design:** small design enhancements ([18ce44f](https://github.com/ec-europa/digit-ict-conf-2016/commit/18ce44f))
+
+
+
 <a name="1.0.0"></a>
 # [1.0.0](https://github.com/ec-europa/digit-ict-conf-2016/compare/v0.16.0...v1.0.0) (2016-09-14)
 
