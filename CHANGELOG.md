@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.3.0"></a>
+# [1.3.0](https://github.com/ec-europa/digit-ict-conf-2016/compare/v1.2.0...v1.3.0) (2016-09-16)
+
+
+### Features
+
+* **speakers:** remove Max Peterson ([#90](https://github.com/ec-europa/digit-ict-conf-2016/issues/90)) ([f8150a6](https://github.com/ec-europa/digit-ict-conf-2016/commit/f8150a6))
+
+
+
 <a name="1.2.0"></a>
 # [1.2.0](https://github.com/ec-europa/digit-ict-conf-2016/compare/v1.1.0...v1.2.0) (2016-09-15)
 
