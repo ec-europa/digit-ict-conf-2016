@@ -216,19 +216,6 @@
     "picture": "./speakers/Oettinger.jpg"
   },
   {
-    "id": "maxpeterson",
-    "firstname": "Max",
-    "lastname": "Peterson",
-    "title": "Director and General Manager for Amazon Web Services Worldwide Public Sector",
-    "bio": [
-      "Max serves as director and general manager for Amazon Web Services’ worldwide public sector, with responsibility in forming partnerships with system integrators, service providers, independent software vendors and value added resellers. At AWS, Peterson leads a team that works to identify and capture public sector contracts and perform program management before and after the award.",
-      "The 25-year public sector industry veteran joined AWS in February 2012 after he served as a vice president and general manager at Dell. He was also a VP of federal sales at CDWG and a VP of public sector sales at Commerce One.",
-      "He holds a bachelor’s degree in finance and master’s of business administration in management information systems from the University of Maryland."
-    ],
-    "twitter": "@maxrpetersonii",
-    "picture": "./speakers/Max-Peterson.jpg"
-  },
-  {
     "id": "bartpreneel",
     "firstname": "Bart",
     "lastname": "Preneel",
