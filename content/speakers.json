@@ -132,6 +132,17 @@
     "picture": "./speakers/Diana-Galetta.jpg"
   },
   {
+    "id": "georggreve",
+    "firstname": "Georg",
+    "lastname": "Greve",
+    "title": "Founding President, Free Software Foundation Europe",
+    "bio": [
+      "Georg Greve is an entrepreneur and strategist. Currently CEO and president of the board at Kolab Systems AG. Previously he was founding president of the Free Software Foundation Europe (FSFE), initiated the battle against OOXML, consulted Google and various governments and has been writing for a long time, and in 2009 received the Federal Cross of Merit on Ribbon for his work for Open Standards and Free Software."
+    ],
+    "twitter": "@ggreve",
+    "picture": "./speakers/Georg-Greve.jpg"
+  },
+  {
     "id": "gertrudingestad",
     "firstname": "Gertrud",
     "lastname": "Ingestad",
