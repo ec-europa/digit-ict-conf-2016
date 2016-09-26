@@ -101,7 +101,7 @@ class Practical extends React.PureComponent {
           <h1>Practical</h1>
         </div>
         <h2>Registration</h2>
-        <p>The event is open to EU institutions' staff only. The registration is available <a href="https://scic.ec.europa.eu/fmi/ezreg/DIGITEC2016/start" target="_blank" rel="noopener noreferrer">here</a>.</p>
+        <p>The event is open to EU institutions&apos; staff only. The registration is available <a href="https://scic.ec.europa.eu/fmi/ezreg/DIGITEC2016/start" target="_blank" rel="noopener noreferrer">here</a>.</p>
         <h2>How to get to SQUARE Brussels?</h2>
         <div>
           SQUARE - Brussels Meeting Centre<br />
@@ -120,7 +120,7 @@ class Practical extends React.PureComponent {
         <p>On iOS or with Chrome for Android, you can add DIGITEC to your home screen.</p>
         <h3>Android</h3>
         <p>
-          With Chrome for Android, go to the website, open Chrome's menu and click on the "Add to home screen" link.
+          With Chrome for Android, go to the website, open Chrome&apos;s menu and click on the &quot;Add to home screen&quot; link.
           You will be asked to give a name to the app and then, a new icon will be created on your home screen.
         </p>
         <div className={styles.illustrations}>
@@ -129,8 +129,8 @@ class Practical extends React.PureComponent {
         </div>
         <h3>iOS</h3>
         <p>
-          With Safari for iOS, go to the website and tap on the "Share" icon at the bottom (the square with an arrow pointing upwards).
-          Select the "Add to Home Screen" icon. Give your link button a name and click "Add" - your new icon will appear on your home screen.
+          With Safari for iOS, go to the website and tap on the &quot;Share&quot; icon at the bottom (the square with an arrow pointing upwards).
+          Select the &quot;Add to Home Screen&quot; icon. Give your link button a name and click &quot;Add&quot; - your new icon will appear on your home screen.
         </p>
         <div className={styles.illustrations}>
           <img src={iosBrowserImg} alt="iOS Browser" />

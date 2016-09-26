@@ -12,7 +12,7 @@ class NotFound extends React.PureComponent {
     return (
       <div className={styles.pageContainer}>
         <h1>Event not found</h1>
-        <p>We couldn't find the requested event...</p>
+        <p>We couldn&apos;t find the requested event...</p>
       </div>
     );
   }

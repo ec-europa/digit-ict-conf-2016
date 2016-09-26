@@ -1,4 +1,6 @@
-'use strict'; // eslint-disable-line strict
+/* eslint-disable strict */
+
+'use strict';
 
 let defaultConfig = {};
 
