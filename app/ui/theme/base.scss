@@ -5,18 +5,27 @@
 
 :global {
   html {
-    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-family:
+      -apple-system,
+      BlinkMacSystemFont,
+      'Segoe UI',
+      Roboto,
+      Oxygen-Sans,
+      Ubuntu,
+      Cantarell,
+      'Helvetica Neue',
+      sans-serif;
 
     @include typi-base();
 
-    letter-spacing: -0.01em;
+    letter-spacing: -0.015em;
     background-color: #FFF;
     color: $ict-grey-text;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
     font-weight: 400;
+    font-style: normal;
   }
 
   h1 {
