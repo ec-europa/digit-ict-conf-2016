@@ -216,6 +216,17 @@
     "picture": "./speakers/Paul-Miller.jpg"
   },
   {
+    "id": "victornegrescu",
+    "firstname": "Victor",
+    "lastname": "Negrescu",
+    "title": "Member of the European Parliament",
+    "bio": [
+      "Winner of the MEP Award 2015 for Digital Agenda, Victor Negrescu is the youngest Romanian MEP to get elected in the European Parliament. Former digital entrepreneur, he is actively promoting legislation designed to stimulate the online and digital sector and has organized several events in the European Parliament gathering researchers, creators and entrepreneurs in the field. Victor Negrescu is also leading the network of under 40 MEPs in the S&D Group and is part of the board of EU40 managing to promote debates on key IT issues like the questions related to IT education, digital and mHealth or innovation."
+    ],
+    "twitter": "@negrescuvictor",
+    "picture": "./speakers/Victor-Negrescu.jpg"
+  },
+  {
     "id": "guntheroettinger",
     "firstname": "Günther",
     "lastname": "Oettinger",
