@@ -61,6 +61,9 @@ module.exports = options => ({
       test: /events\.json$/,
       loader: 'events',
     }, {
+      test: /stands\.json$/,
+      loader: 'stands',
+    }, {
       test: /browserconfig.xml/,
       loader: 'file-loader?name=browserconfig.xml!browserconfig',
     }],
@@ -83,6 +86,7 @@ module.exports = options => ({
       browserconfig: path.resolve(__dirname, './loaders/browserconfig-loader/index.js'),
       speakers: path.resolve(__dirname, './loaders/speakers-loader/index.js'),
       events: path.resolve(__dirname, './loaders/events-loader/index.js'),
+      stands: path.resolve(__dirname, './loaders/stands-loader/index.js'),
     },
   },
   resolve: {
