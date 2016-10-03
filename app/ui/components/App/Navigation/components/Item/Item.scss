@@ -17,14 +17,8 @@
     color: $ict-grey-text;
     width: 100%;
     line-height: 3em;
-    font-weight: 300;
     padding-left: 2em;
     text-decoration: none;
-
-    &:hover,
-    &:focus {
-      background-color: #EEE;
-    }
   }
 
   @include mappy-bp(medium) {
@@ -38,7 +32,7 @@
       content: '';
       display: block;
       margin: auto;
-      height: 1px;
+      height: 2px;
       width: 0;
       background: transparent;
       transition: width 0.3s ease, background-color 0.3s ease;
@@ -51,7 +45,7 @@
 
       &::after {
         width: 100%;
-        background-color: lighten($ict-grey-text, 30%);
+        background-color: $ict-blue;
       }
     }
   }
@@ -74,22 +68,28 @@
 
     &::after {
       width: 100%;
-      background-color: lighten($ict-grey-text, 10%);
+      background-color: $ict-blue;
     }
   }
 }
 
 .primary {
-  font-weight: 400;
-  color: $ict-blue;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: 500;
+  border-radius: 1.5em;
+  padding: 0.4em 1.4em;
+  background-color: $ict-blue;
+  color: #FFF;
+
+  &::after {
+    height: 0;
+  }
 
   &:hover,
   &:focus,
   &:active {
-    color: darken($ict-blue, 5%);
-
-    &::after {
-      background: $ict-blue;
-    }
+    color: #FFF;
+    background-color: lighten($ict-blue, 5%);
   }
 }

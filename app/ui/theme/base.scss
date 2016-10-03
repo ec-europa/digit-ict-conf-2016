@@ -18,7 +18,7 @@
 
     @include typi-base();
 
-    letter-spacing: -0.015em;
+    letter-spacing: -0.02em;
     background-color: #FFF;
     color: $ict-grey-text;
     text-rendering: optimizeLegibility;
@@ -31,37 +31,37 @@
   h1 {
     @include typi($h1-map);
 
-    font-weight: 300;
+    font-weight: 400;
   }
 
   h2 {
     @include typi($h2-map);
 
-    font-weight: 300;
+    font-weight: 400;
   }
 
   h3 {
     @include typi($h3-map);
 
-    font-weight: 300;
+    font-weight: 400;
   }
 
   h4 {
     @include typi($h4-map);
 
-    font-weight: 300;
+    font-weight: 400;
   }
 
   h5 {
     @include typi($h5-map);
 
-    font-weight: 300;
+    font-weight: 400;
   }
 
   h6 {
     @include typi($h6-map);
 
-    font-weight: 300;
+    font-weight: 400;
   }
 
   .sr-only {

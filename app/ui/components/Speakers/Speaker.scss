@@ -2,13 +2,13 @@
 @import '../../theme/variables';
 
 .item {
-  width: 200px;
-  max-width: 260px;
+  width: 12em;
+  max-width: 14em;
   text-align: center;
-  margin: 0.5em;
+  margin: 0.7em;
   flex-grow: 1;
   flex-shrink: 0;
-  flex-basis: 200px;
+  flex-basis: 12em;
   text-decoration: none;
   border-radius: 2px;
   background-color: lighten($background-grey, 2%);
@@ -43,16 +43,16 @@
 }
 
 .info {
-  padding: 0 1em 1em;
+  padding: 1em;
 }
 
 .name {
   position: relative;
   display: block;
-  margin-top: 15px;
   color: $ict-grey-text;
-  font-size: 1.1em;
+  font-weight: 500;
   text-decoration: none;
+  font-size: 1.05em;
 
   .item:hover &,
   .item:focus &,
@@ -63,9 +63,9 @@
 
 .title {
   position: relative;
-  margin-top: 4px;
+  margin-top: 0.4em;
   color: $ict-blue;
-  font-size: 0.9em;
+  font-size: 0.85em;
   line-height: 1.4;
 }
 
