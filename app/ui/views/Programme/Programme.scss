@@ -31,4 +31,8 @@
       text-decoration: underline;
     }
   }
+
+  @include mappy-bp(medium) {
+    display: none;
+  }
 }
