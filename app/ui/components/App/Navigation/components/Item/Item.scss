@@ -74,22 +74,24 @@
 }
 
 .primary {
-  text-transform: uppercase;
-  font-size: 0.9em;
-  font-weight: 500;
-  border-radius: 1.5em;
-  padding: 0.4em 1.4em;
-  background-color: $ict-blue;
-  color: #FFF;
-
-  &::after {
-    height: 0;
-  }
-
-  &:hover,
-  &:focus,
-  &:active {
+  @include mappy-bp(medium) {
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: 500;
+    border-radius: 1.5em;
+    padding: 0.4em 1.4em;
+    background-color: $ict-blue;
     color: #FFF;
-    background-color: lighten($ict-blue, 5%);
+
+    &::after {
+      height: 0;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: #FFF;
+      background-color: lighten($ict-blue, 5%);
+    }
   }
 }

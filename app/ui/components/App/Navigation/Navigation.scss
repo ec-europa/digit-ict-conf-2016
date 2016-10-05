@@ -109,7 +109,11 @@
 .navigation {
   position: fixed;
   top: 0;
-  background-color: rgba(255, 255, 255, 0.96);
+  background-color: #FFF;
+
+  @include mappy-bp(medium) {
+    background-color: rgba(255, 255, 255, 0.96);
+  }
 
   // As a drawer (small screens)
   @include mappy-bp(max medium) {
