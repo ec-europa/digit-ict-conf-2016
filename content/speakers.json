@@ -370,7 +370,18 @@
 
     ],
        "twitter": false,
-       "picture": "./speakers/Pierfrancesco-Sabbatucci copy.jpg"
+       "picture": "./speakers/Pierfrancesco-Sabbatucci.jpg"
+  },
+  {
+    "id": "christianzahorskiphilippe:",
+    "firstname": "Christian",
+    "lastname": "Zahorski-Philippe",
+    "title": "Head of Pan-EU Sales for Amazon Web Service",
+    "bio": [
+      "Christian Zahorski-Philippe is the Head of Pan-EU Sales for Amazon Web Service (AWS) Public Sector European business unit. He manages a team of Sales Executives responsible for Amazon's cloud computing business for governments, educational institutions and nonprofits across Europe, the Middle East and Africa.",
+      "Christian has more than 10 years’ leadership experience in the IT industry across a variety of commercial IT disciplines to include Security and Compliance, Product Development Software, Business Intelligence/Analytics Software, Operations / Support, and Cloud Computing. Prior to joining Amazon Web Services 4 years ago, Christian worked for Microsoft and previously for Dell. Born in Montreal, Canada, he has lived in Europe and Africa for over 15 years, and is currently based in Dublin, Ireland."
+    ],
+    "twitter": "@czahorski",
+    "picture": "./speakers/Christian-Philippe-Zahorski.jpg"
   }
-
 ]
