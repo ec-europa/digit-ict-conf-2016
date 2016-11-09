@@ -49,6 +49,7 @@ class Row extends React.PureComponent {
       || (event.speakers && event.speakers.length > 0)
       || (event.moderator && event.moderator.length > 0);
 
+    /*eslint-disable */
     return (
       <li className={rowClasses}>
         <div className={styles.primary}>
@@ -69,10 +70,10 @@ class Row extends React.PureComponent {
           <span className={styles.subtitle}>
             {displayTime || (event.venue && event.venue.length > 0)
               ?
-                <span className={styles.timeAndVenue}>
-                  {startsAt}{displayTime && event.ends ? ' - ' : ''}{endsAt}
-                  {venue}
-                </span>
+              <span className={styles.timeAndVenue}>
+                {startsAt}{displayTime && event.ends ? ' - ' : ''}{endsAt}
+                {venue}
+              </span>
               : null
             }
           </span>
@@ -84,6 +85,7 @@ class Row extends React.PureComponent {
         )}
       </li>
     );
+    /*eslint-enable */
   }
 }
 
