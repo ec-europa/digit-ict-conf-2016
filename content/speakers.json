@@ -356,4 +356,20 @@
     "twitter": false,
     "picture": "./speakers/Giancarlo-Vilella.jpg"
   }
+   "id": "pierfrancescosabbatucci",
+    "firstname": "Pierfranceso",
+    "lastname": "Sabbatucci",
+    "title": "Advisor to the Director-General for Innovation and Technological Support (DGITEC)",
+    "bio": [
+"Pierfrancesco Sabbatucci is the Advisor to the Director-General for Innovation and Technological Support (DGITEC) since October 2012.",
+"Amongst the different responsibilities he is also in charge of leasing on ICT matters with the Cabinets of the President, the Vice-President and the Secretary General of the European Parliament.", 
+"Pierfrancesco Sabbatucci joined the European Parliament in January 2004. Since then he has held a number of positions, including Administrator in DG Communication (2004-2011) and deputy to the Head of the Protocol (2011-2012).", 
+"Prior to joining Parliament administration, Pierfrancesco Sabbatucci worked as Parliamentary assistant for a Member of the European Parliament.",  
+"He graduated in 2002 from the University of Kent, obtaining a Bachelor degree in Politics and International Relations and a Master of Arts in European Studies."
+
+    ],
+       "twitter": false,
+       "picture": "./speakers/Pierfrancesco-Sabbatucci copy.jpg"
+  },
+  {
 ]
