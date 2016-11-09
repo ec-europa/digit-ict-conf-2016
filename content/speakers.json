@@ -25,6 +25,19 @@
     "picture": "./speakers/Jennyfer-Baker.jpg"
   },
   {
+    "id": "catherinebearder",
+    "firstname": "Catherine",
+    "lastname": "Bearder",
+    "title": "Member of the European Parliament",
+    "bio": [
+      "Catherine Bearder was first elected to the European Parliament in 2009. A former local government councillor and development officer in major national charities, she has a long record of fighting for local people and the issues that concern them.",
+      "As Quaestor of the European Parliament, she is a member of the Bureau of the EP and is heavily involved in its ICT Working Group.",
+      "She is a member of the Parliament's Committee on the Environment, Public Health and Food Safety (ENVI) and the Committee on Internal Market and Consumer Protection (IMCO). She is also a member of the Parliament's delegation to the Joint Parliamentary Assembly between the EU and the ACP (Africa, Caribbean and Pacific Regions) which requires working with representatives from some of the poorest countries on the planet."
+    ],
+    "twitter": "@catherinemep",
+    "picture": "./speakers/Catherine-Bearder.jpg"
+  },
+  {
     "id": "paulboag",
     "firstname": "Paul",
     "lastname": "Boag",
@@ -61,6 +74,28 @@
     "picture": "./speakers/Vincent-Bruneau.jpg"
   },
   {
+    "id": "pierredamas",
+    "firstname": "Pierre",
+    "lastname": "Damas",
+    "title": "Head of Sector ''Digital Services'', DIGIT, European Commission",
+    "bio": [
+      "Pierre A. Damas is Head of Sector of Digital Services at DIGIT. He is responsible for projects and services touching Identity and Access Management, such as EC’s authentication system ECAS, CEF eID and eSignature. He is also responsible for the Open Source Strategy of the Commission as well as the European Parliament pilot project on auditing of free and Open Source software."
+    ],
+    "twitter": "@damaspi",
+    "picture": "./speakers/Pierre-Damas.jpg"
+  },
+  {
+    "id": "mattdavies",
+    "firstname": "Matt",
+    "lastname": "Davies",
+    "title": "Head of Marketing, EMEA, Splunk",
+    "bio": [
+      "Matt Davies is Splunk's Head of Marketing for EMEA. Matt is responsible for developing and executing marketing strategy for all of Splunk's core platforms in EMEA. He works closely with Splunk customers to help them understand the value that new insights from machine data can deliver to their business. Matt is also one of Splunk's technical evangelists and communicates Splunk's go to market strategy in the region. Previously Matt has worked at Cordys, Oracle/BEA, Elata, Broadquay Consulting, iPlanet/Sun, Netscape and IBM. With nearly 20 years in the software industry, Matt has extensive knowledge of enterprise IT systems."
+    ],
+    "twitter": "@mattdavies_uk",
+    "picture": "./speakers/Matt-Davies.jpg"
+  },
+  {
     "id": "mischadohler",
     "firstname": "Mischa",
     "lastname": "Dohler",
@@ -86,6 +121,19 @@
     ],
     "twitter": false,
     "picture": "./speakers/Ken-Ducatel.jpg"
+  },
+  {
+    "id": "leoexter",
+    "firstname": "Leo",
+    "lastname": "Exter",
+    "title": "Leo Exter, Chief Energizer at Hackathons.be",
+    "bio": [
+      "Leo Exter is founder of http://westartup.eu, network of over 4,800 entrepreneurs worldwide. Westartup’s social networking tools help regional authorities to intensify local entrepreneurial activity, to identify and grow high-potential startups.",
+      "Leo has created a multitude of events for startups (Bizcamp,  Buy From Startups and more).  He’s established Startup Weekend in Belgium and managed the Microsoft Innovation Center’s Boostcamp acceleration program.  Over the last five years he’s directly mentored dozens of startups such as SparkCentral.",
+      "Leo also helps large corporations such as BNP Paribas Fortis and Saint-Gobain accelerate innovation and rejuvenate corporate culture through innovative events – ideation workshops and hackathons. "
+    ],
+    "twitter": "@leoexter",
+    "picture": "./speakers/Leo-Exter.jpg"
   },
   {
     "id": "mercedesfuertes",
@@ -354,53 +402,5 @@
     ],
     "twitter": "@czahorski",
     "picture": "./speakers/Christian-Philippe-Zahorski.jpg"
-  },
-  {
-    "id": "mattdavies",
-    "firstname": "Matt",
-    "lastname": "Davies",
-    "title": "Head of Marketing, EMEA, Splunk",
-    "bio": [
-      "Matt Davies is Splunk's Head of Marketing for EMEA. Matt is responsible for developing and executing marketing strategy for all of Splunk's core platforms in EMEA. He works closely with Splunk customers to help them understand the value that new insights from machine data can deliver to their business. Matt is also one of Splunk's technical evangelists and communicates Splunk's go to market strategy in the region. Previously Matt has worked at Cordys, Oracle/BEA, Elata, Broadquay Consulting, iPlanet/Sun, Netscape and IBM. With nearly 20 years in the software industry, Matt has extensive knowledge of enterprise IT systems."
-    ],
-    "twitter": "@mattdavies_uk",
-    "picture": "./speakers/Matt-Davies.jpg"
-  },
-  {
-    "id": "catherinebearder",
-    "firstname": "Catherine",
-    "lastname": "Bearder",
-    "title": "Member of the European Parliament",
-    "bio": [
-      "Catherine Bearder was first elected to the European Parliament in 2009. A former local government councillor and development officer in major national charities, she has a long record of fighting for local people and the issues that concern them.",
-      "As Quaestor of the European Parliament, she is a member of the Bureau of the EP and is heavily involved in its ICT Working Group.",
-      "She is a member of the Parliament's Committee on the Environment, Public Health and Food Safety (ENVI) and the Committee on Internal Market and Consumer Protection (IMCO). She is also a member of the Parliament's delegation to the Joint Parliamentary Assembly between the EU and the ACP (Africa, Caribbean and Pacific Regions) which requires working with representatives from some of the poorest countries on the planet."
-    ],
-    "twitter": "@catherinemep",
-    "picture": "./speakers/Catherine-Bearder.jpg"
-  },
-  {
-    "id": "pierredamas",
-    "firstname": "Pierre",
-    "lastname": "Damas",
-    "title": "Head of Sector ''Digital Services'', DIGIT, European Commission",
-    "bio": [
-      "Pierre A. Damas is Head of Sector of Digital Services at DIGIT. He is responsible for projects and services touching Identity and Access Management, such as EC’s authentication system ECAS, CEF eID and eSignature. He is also responsible for the Open Source Strategy of the Commission as well as the European Parliament pilot project on auditing of free and Open Source software."
-    ],
-    "twitter": "@damaspi",
-    "picture": "./speakers/Pierre-Damas.jpg"
-  },
-  {
-    "id": "leoexter",
-    "firstname": "Leo",
-    "lastname": "Exter",
-    "title": "Leo Exter, Chief Energizer at Hackathons.be",
-    "bio": [
-      "Leo Exter is founder of http://westartup.eu, network of over 4,800 entrepreneurs worldwide. Westartup’s social networking tools help regional authorities to intensify local entrepreneurial activity, to identify and grow high-potential startups.",
-      "Leo has created a multitude of events for startups (Bizcamp,  Buy From Startups and more).  He’s established Startup Weekend in Belgium and managed the Microsoft Innovation Center’s Boostcamp acceleration program.  Over the last five years he’s directly mentored dozens of startups such as SparkCentral.",
-      "Leo also helps large corporations such as BNP Paribas Fortis and Saint-Gobain accelerate innovation and rejuvenate corporate culture through innovative events – ideation workshops and hackathons. "
-    ],
-    "twitter": "@leoexter",
-    "picture": "./speakers/Leo-Exter.jpg"
   }
 ]
