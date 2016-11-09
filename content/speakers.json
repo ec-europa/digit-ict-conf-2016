@@ -65,22 +65,6 @@
     "picture": "./speakers/Vincent-Bruneau.jpg"
   },
   {
-    "id": "luisdeeusebioramos",
-    "firstname": "Luis",
-    "lastname": "de Eusebio Ramos",
-    "title": "Deputy Director of Europol, Capabilities Department",
-    "bio": [
-      "Mr de Eusebio has worked in the ICT industry since 1987. His first jobs were in the private sector as an electronic warfare engineer and afterwards as a radio communications systems engineer.",
-      "In 1992 he became a Member of the Senior Body of State Civil Administrators and began working for the Spanish Government in the Ministry of Industry.",
-      "From 1994 he began what would become a constant theme in his career: the modernisation of administrative processes by means of large ICT projects involving human resources (HR) and financial management. He was appointed to positions in the Ministry of Foreign Affairs (1994), Ministry of Health (1995) and the Telecommunications Market Agency (1999). Between 2002 and 2006 he was Deputy Director of the Ministry of Public Administration where he was responsible for the overall e-Government strategy of the Spanish Administration and the coordination of all Spanish Ministries.",
-      "In 2006, Mr de Eusebio was promoted to the position of Chief Information Officer of the Road Traffic National Agency in the Ministry of Interior, working in close cooperation with both the PolicÌa Nacional and the Guardia Civil. He was appointed Executive Advisor to the General Director of the Spanish National Police in 2012.",
-      "Mr de Eusebio took up the position of Deputy Director of Europol as Head of the Capabilities Department in August 2015, where he directly manages staff from ICT, HR and finance.",
-      "Mr de Eusebio graduated with Honours from the Polytechnic University of Madrid as a Telecommunications Engineer in 1988. He also holds several masters and certifications in ICT and Public Management. He speaks Spanish and English; his interests include classical music and photography."
-    ],
-    "twitter": false,
-    "picture": "./speakers/Eusebio-Ramos.jpg"
-  },
-  {
     "id": "mischadohler",
     "firstname": "Mischa",
     "lastname": "Dohler",
@@ -283,6 +267,21 @@
     "picture": "./speakers/Nathaly-Rey.jpg"
   },
   {
+    "id": "pierfrancescosabbatucci",
+    "firstname": "Pierfranceso",
+    "lastname": "Sabbatucci",
+    "title": "Advisor to the Director-General for Innovation and Technological Support (DGITEC)",
+    "bio": [
+      "Pierfrancesco Sabbatucci is the Advisor to the Director-General for Innovation and Technological Support (DGITEC) since October 2012.",
+      "Amongst the different responsibilities he is also in charge of leasing on ICT matters with the Cabinets of the President, the Vice-President and the Secretary General of the European Parliament.",
+      "Pierfrancesco Sabbatucci joined the European Parliament in January 2004. Since then he has held a number of positions, including Administrator in DG Communication (2004-2011) and deputy to the Head of the Protocol (2011-2012).",
+      "Prior to joining Parliament administration, Pierfrancesco Sabbatucci worked as Parliamentary assistant for a Member of the European Parliament.",
+      "He graduated in 2002 from the University of Kent, obtaining a Bachelor degree in Politics and International Relations and a Master of Arts in European Studies."
+    ],
+    "twitter": false,
+    "picture": "./speakers/Pierfrancesco-Sabbatucci.jpg"
+  },
+  {
     "id": "andreasschwab",
     "firstname": "Andreas",
     "lastname": "Schwab",
@@ -295,18 +294,6 @@
     ],
     "twitter": false,
     "picture": "./speakers/Andreas-Schwab.jpg"
-  },
-  {
-    "id": "sabinesipunova",
-    "firstname": "Sabine",
-    "lastname": "Sipunova",
-    "title": "Founder of \"Sorry as a Service\"",
-    "bio": [
-      "Sabine Sipunova is a co-founder of Sorry as a Service and her passion is finding out ways how companies can build meaningful and personal relationships with their customers using technology, particularly in moments when something goes wrong. Sorry as a Service has gone through on of the best accelerators in the world Techstars and have won many awards as one of the most innovative companies in Europe. Their customers include brands like BT, Transferwise, Belron, Trouva and more.",
-      "In 2016 Sabine was featured in Forbes' Top 10 Promising Founders to Watch in the Baltics."
-    ],
-    "twitter": false,
-    "picture": "./speakers/Sabine-Sipunova.jpg"
   },
   {
     "id": "vincentsteckler",
@@ -357,22 +344,5 @@
     ],
     "twitter": false,
     "picture": "./speakers/Giancarlo-Vilella.jpg"
-  },
-    {
-   "id": "pierfrancescosabbatucci",
-    "firstname": "Pierfranceso",
-    "lastname": "Sabbatucci",
-    "title": "Advisor to the Director-General for Innovation and Technological Support (DGITEC)",
-    "bio": [
-"Pierfrancesco Sabbatucci is the Advisor to the Director-General for Innovation and Technological Support (DGITEC) since October 2012.",
-"Amongst the different responsibilities he is also in charge of leasing on ICT matters with the Cabinets of the President, the Vice-President and the Secretary General of the European Parliament.",
-"Pierfrancesco Sabbatucci joined the European Parliament in January 2004. Since then he has held a number of positions, including Administrator in DG Communication (2004-2011) and deputy to the Head of the Protocol (2011-2012).",
-"Prior to joining Parliament administration, Pierfrancesco Sabbatucci worked as Parliamentary assistant for a Member of the European Parliament.",
-"He graduated in 2002 from the University of Kent, obtaining a Bachelor degree in Politics and International Relations and a Master of Arts in European Studies."
-
-    ],
-       "twitter": false,
-       "picture": "./speakers/Pierfrancesco-Sabbatucci copy.jpg"
   }
-
 ]
