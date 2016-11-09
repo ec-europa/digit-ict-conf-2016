@@ -69,10 +69,10 @@ class Row extends React.PureComponent {
           <span className={styles.subtitle}>
             {displayTime || (event.venue && event.venue.length > 0)
               ?
-              <span className={styles.timeAndVenue}>
-                {startsAt}{displayTime && event.ends ? ' - ' : ''}{endsAt}
-                {venue}
-              </span>
+                <span className={styles.timeAndVenue}>
+                  {startsAt}{displayTime && event.ends ? ' - ' : ''}{endsAt}
+                  {venue}
+                </span>
               : null
             }
           </span>
