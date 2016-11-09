@@ -356,6 +356,7 @@
     "twitter": false,
     "picture": "./speakers/Giancarlo-Vilella.jpg"
   }
+    {,
    "id": "pierfrancescosabbatucci",
     "firstname": "Pierfranceso",
     "lastname": "Sabbatucci",
@@ -370,6 +371,6 @@
     ],
        "twitter": false,
        "picture": "./speakers/Pierfrancesco-Sabbatucci copy.jpg"
-  },
-  {
+  }
+
 ]
