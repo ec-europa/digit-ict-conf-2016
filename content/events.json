@@ -1,7 +1,7 @@
 [{
   "id": "registration",
-  "starts": "08:30",
-  "ends": "09:30",
+  "starts": "08:15",
+  "ends": "09:15",
   "title": "Registration and coffee",
   "venue": "",
   "description": [],
@@ -10,9 +10,9 @@
   "register": false
 }, {
   "id": "welcome",
-  "starts": "09:30",
+  "starts": "09:15",
   "ends": "09:45",
-  "title": "Welcome by European Commission and European Parliament",
+  "title": "Opening by European Commission and European Parliament",
   "venue": "Gold Hall",
   "description": [],
   "speakers": ["gertrudingestad", "adinaioanavalean", "guntheroettinger"],
@@ -145,7 +145,7 @@
 }, {
   "id": "e-democracy",
   "starts": "16:00",
-  "ends": "17:15",
+  "ends": "17:10",
   "title": "Open data and digitalisation for public administrations",
   "description": [
     "In this session, the debate will look deeper into the notions of open data, net neutrality and digitalisation to examine how these actually impact our democracies and what effects they are having and may have in public administrations. We will focus on issues, such as:",
@@ -161,7 +161,7 @@
 }, {
   "id": "interhack",
   "starts": "16:00",
-  "ends": "17:15",
+  "ends": "17:10",
   "title": "InterHack experience",
   "visual": "./events/int_hack.png",
   "description": [
@@ -173,7 +173,7 @@
 }, {
   "id": "encryption",
   "starts": "16:00",
-  "ends": "17:15",
+  "ends": "17:10",
   "title": "Encryption: blessing or curse for IT security",
   "description": [
     "Encryption plays a crucial role in securing information systems and the business data they contain. External communications are routinely encrypted and network traffic inside an organisation is increasingly encrypted to reduce the risk that attackers that can get access to an organisation's vital information. Increasingly it is standard practice that information is encrypted for storage.",
@@ -187,23 +187,23 @@
   "color": "yellow",
   "register": true
 }, {
+    "id": "closing",
+    "starts": "17:15",
+    "ends": "17:30",
+    "title": "Closing",
+    "venue": "Gold Hall",
+    "description": [],
+    "speakers": ["giancarlovilella"],
+    "color": "grey",
+    "register": true
+  }, {
   "id": "keynote",
-  "starts": "17:15",
-  "ends": "17:30",
-  "title": "Keynote closing speech: Vincent Bruneau, CEO of Magency",
+  "starts": "17:30",
+  "ends": "17:45",
+  "title": "Special guest: Vincent Bruneau, CEO of Magency",
   "venue": "Gold Hall",
   "description": [],
   "speakers": ["vincentbruneau"],
-  "color": "grey",
-  "register": true
-}, {
-  "id": "closing",
-  "starts": "17:30",
-  "ends": "17:45",
-  "title": "Closing by organisers",
-  "venue": "Gold Hall",
-  "description": [],
-  "speakers": ["giancarlovilella"],
   "color": "grey",
   "register": true
 }, {
