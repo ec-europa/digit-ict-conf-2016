@@ -31,7 +31,7 @@
     "What culture for the workplace of the future?"
   ],
   "moderator": "jenniferbaker",
-  "speakers": ["paulmiller", "laurentledoux"],
+  "speakers": ["paulmiller", "catherinebearder", "laurentledoux"],
   "color": "blue",
   "register": true
 }, {
@@ -113,6 +113,7 @@
   "ends": "15:30",
   "title": "Open Source: the future for the European institutions",
   "description": [],
+  "moderator": "pierredamas",
   "speakers": ["juliareda", "georggreve"],
   "color": "yellow",
   "register": true
@@ -138,7 +139,7 @@
     "How are we using these new technological tools, how we will be using them in the future and what impacts will that have?"
   ],
   "moderator": "jenniferbaker",
-  "speakers": ["alexandresteiner"],
+  "speakers": ["alexandresteiner","christianzahorskiphilippe"],
   "color": "yellow",
   "register": true
 }, {
@@ -153,6 +154,7 @@
     "- What should be the role of ICT in the workings of the public sector?",
     "- How can new technology make a positive difference in public administrations and service delivery?"
   ],
+  "moderator": "pierfrancescosabbatucci",
   "speakers": ["mercedesfuertes", "dianauraniagaletta", "prabhatagarwal"],
   "color": "purple",
   "register": true
@@ -165,7 +167,7 @@
   "description": [
     "The first inter-institutional hackathon will bring together IT professionals from the European Parliament, the European Commission and the Council of the EU in October. The results and lessons learned from the collaboration will be presented in this session."
   ],
-  "speakers": [],
+  "speakers": ["leoexter"],
   "color": "blue",
   "register": true
 }, {
