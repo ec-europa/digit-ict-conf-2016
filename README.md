@@ -4,6 +4,15 @@
 
 ## Installation
 
+### OS Requirements
+
+```bash
+yum install libpng-devel
+apt-get install libpng-dev
+```
+
+### Install depedencies
+
 ```bash
 npm install
 ```
