@@ -15,7 +15,7 @@
   "title": "Welcome by European Commission and European Parliament",
   "venue": "Gold Hall",
   "description": [],
-  "speakers": ["adinaioanavalean", "guntheroettinger"],
+  "speakers": ["gertrudingestad", "adinaioanavalean", "guntheroettinger"],
   "color": "grey",
   "register": true
 }, {
@@ -57,7 +57,7 @@
     "How to design a better digital delivery of services?"
   ],
   "moderator": "jenniferbaker",
-  "speakers": ["davidborrelli", "katekahle", "sabinesipunova", "paulboag"],
+  "speakers": ["davidborrelli", "katekahle", "paulboag"],
   "color": "purple",
   "register": true
 }, {
@@ -181,7 +181,7 @@
     "• Technical options for defence against misuse of encryption",
     "• The organisational policy and legal issues associated"
   ],
-  "speakers": ["luisdeeusebioramos", "kenducatel", "keithmartin", "bartpreneel", "andreasschwab", "vincentsteckler"],
+  "speakers": ["kenducatel", "keithmartin", "bartpreneel", "andreasschwab", "vincentsteckler"],
   "color": "yellow",
   "register": true
 }, {
@@ -201,7 +201,7 @@
   "title": "Closing by organisers",
   "venue": "Gold Hall",
   "description": [],
-  "speakers": ["gertrudingestad", "giancarlovilella"],
+  "speakers": ["giancarlovilella"],
   "color": "grey",
   "register": true
 }, {
