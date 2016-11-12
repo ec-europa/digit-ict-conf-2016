@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.6.0"></a>
+# [1.6.0](https://github.com/ec-europa/digit-ict-conf-2016/compare/v1.5.0...v1.6.0) (2016-11-12)
+
+
+### Bug Fixes
+
+* **add-to-homescreen:** remove ATH (too invasive) ([7877098](https://github.com/ec-europa/digit-ict-conf-2016/commit/7877098))
+
+
+### Features
+
+* **font:** use system fonts for better performance ([#94](https://github.com/ec-europa/digit-ict-conf-2016/issues/94)) ([d6d3fd6](https://github.com/ec-europa/digit-ict-conf-2016/commit/d6d3fd6))
+* **speakers:** update speakers ([#97](https://github.com/ec-europa/digit-ict-conf-2016/issues/97)) ([f2a1f62](https://github.com/ec-europa/digit-ict-conf-2016/commit/f2a1f62))
+
+
+
 <a name="1.5.0"></a>
 # [1.5.0](https://github.com/ec-europa/digit-ict-conf-2016/compare/v1.4.1...v1.5.0) (2016-09-26)
 
