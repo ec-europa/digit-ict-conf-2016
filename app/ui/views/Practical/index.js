@@ -22,6 +22,7 @@ class Practical extends React.PureComponent {
   componentDidMount() {
     const webtoolsMapData = document.createElement('script');
     webtoolsMapData.setAttribute('type', 'application/json');
+    /*eslint-disable */
     webtoolsMapData.innerHTML = `
       {
         "service": "map",
@@ -84,6 +85,7 @@ class Practical extends React.PureComponent {
         ]
       }
     `;
+    /*eslint-enable */
     this.map.appendChild(webtoolsMapData);
 
     $script('//europa.eu/webtools/load.js', () => {

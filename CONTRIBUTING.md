@@ -8,6 +8,9 @@ conventions](https://github.com/conventional-changelog/conventional-changelog-an
 
 ## Release
 
+In order to alter GitHub's release and to attach the changelog to it, you need
+to [setup a token first](https://github.com/conventional-changelog/conventional-github-releaser#setup-token-for-cli).
+
 When you're ready to release, just type:
 
 ```bash

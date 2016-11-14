@@ -49,6 +49,7 @@ class Row extends React.PureComponent {
       || (event.speakers && event.speakers.length > 0)
       || (event.moderator && event.moderator.length > 0);
 
+    /*eslint-disable */
     return (
       <li className={rowClasses}>
         <div className={styles.primary}>
@@ -84,6 +85,7 @@ class Row extends React.PureComponent {
         )}
       </li>
     );
+    /*eslint-enable */
   }
 }
 

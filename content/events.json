@@ -1,7 +1,7 @@
 [{
   "id": "registration",
-  "starts": "08:30",
-  "ends": "09:30",
+  "starts": "08:15",
+  "ends": "09:15",
   "title": "Registration and coffee",
   "venue": "",
   "description": [],
@@ -10,12 +10,12 @@
   "register": false
 }, {
   "id": "welcome",
-  "starts": "09:30",
+  "starts": "09:15",
   "ends": "09:45",
-  "title": "Welcome by European Commission and European Parliament",
+  "title": "Opening by European Commission and European Parliament",
   "venue": "Gold Hall",
   "description": [],
-  "speakers": ["adinaioanavalean", "guntheroettinger"],
+  "speakers": ["gertrudingestad", "adinaioanavalean", "guntheroettinger"],
   "color": "grey",
   "register": true
 }, {
@@ -31,7 +31,7 @@
     "What culture for the workplace of the future?"
   ],
   "moderator": "jenniferbaker",
-  "speakers": ["paulmiller", "laurentledoux"],
+  "speakers": ["paulmiller", "catherinebearder", "laurentledoux"],
   "color": "blue",
   "register": true
 }, {
@@ -57,7 +57,7 @@
     "How to design a better digital delivery of services?"
   ],
   "moderator": "jenniferbaker",
-  "speakers": ["davidborrelli", "katekahle", "sabinesipunova", "paulboag"],
+  "speakers": ["davidborrelli", "katekahle", "paulboag"],
   "color": "purple",
   "register": true
 }, {
@@ -113,6 +113,7 @@
   "ends": "15:30",
   "title": "Open Source: the future for the European institutions",
   "description": [],
+  "moderator": "pierredamas",
   "speakers": ["juliareda", "georggreve"],
   "color": "yellow",
   "register": true
@@ -138,13 +139,13 @@
     "How are we using these new technological tools, how we will be using them in the future and what impacts will that have?"
   ],
   "moderator": "jenniferbaker",
-  "speakers": ["alexandresteiner"],
+  "speakers": ["alexandresteiner", "mattdavies", "christianzahorskiphilippe"],
   "color": "yellow",
   "register": true
 }, {
   "id": "e-democracy",
   "starts": "16:00",
-  "ends": "17:15",
+  "ends": "17:10",
   "title": "Open data and digitalisation for public administrations",
   "description": [
     "In this session, the debate will look deeper into the notions of open data, net neutrality and digitalisation to examine how these actually impact our democracies and what effects they are having and may have in public administrations. We will focus on issues, such as:",
@@ -153,25 +154,26 @@
     "- What should be the role of ICT in the workings of the public sector?",
     "- How can new technology make a positive difference in public administrations and service delivery?"
   ],
+  "moderator": "pierfrancescosabbatucci",
   "speakers": ["mercedesfuertes", "dianauraniagaletta", "prabhatagarwal"],
   "color": "purple",
   "register": true
 }, {
   "id": "interhack",
   "starts": "16:00",
-  "ends": "17:15",
+  "ends": "17:10",
   "title": "InterHack experience",
   "visual": "./events/int_hack.png",
   "description": [
     "The first inter-institutional hackathon will bring together IT professionals from the European Parliament, the European Commission and the Council of the EU in October. The results and lessons learned from the collaboration will be presented in this session."
   ],
-  "speakers": [],
+  "speakers": ["leoexter"],
   "color": "blue",
   "register": true
 }, {
   "id": "encryption",
   "starts": "16:00",
-  "ends": "17:15",
+  "ends": "17:10",
   "title": "Encryption: blessing or curse for IT security",
   "description": [
     "Encryption plays a crucial role in securing information systems and the business data they contain. External communications are routinely encrypted and network traffic inside an organisation is increasingly encrypted to reduce the risk that attackers that can get access to an organisation's vital information. Increasingly it is standard practice that information is encrypted for storage.",
@@ -181,27 +183,27 @@
     "• Technical options for defence against misuse of encryption",
     "• The organisational policy and legal issues associated"
   ],
-  "speakers": ["luisdeeusebioramos", "kenducatel", "keithmartin", "bartpreneel", "andreasschwab", "vincentsteckler"],
+  "speakers": ["kenducatel", "keithmartin", "bartpreneel", "andreasschwab", "vincentsteckler"],
   "color": "yellow",
   "register": true
 }, {
+    "id": "closing",
+    "starts": "17:15",
+    "ends": "17:30",
+    "title": "Closing",
+    "venue": "Gold Hall",
+    "description": [],
+    "speakers": ["giancarlovilella"],
+    "color": "grey",
+    "register": true
+  }, {
   "id": "keynote",
-  "starts": "17:15",
-  "ends": "17:30",
-  "title": "Keynote closing speech: Vincent Bruneau, CEO of Magency",
+  "starts": "17:30",
+  "ends": "17:45",
+  "title": "Special guest: Vincent Bruneau, CEO of Magency",
   "venue": "Gold Hall",
   "description": [],
   "speakers": ["vincentbruneau"],
-  "color": "grey",
-  "register": true
-}, {
-  "id": "closing",
-  "starts": "17:30",
-  "ends": "17:45",
-  "title": "Closing by organisers",
-  "venue": "Gold Hall",
-  "description": [],
-  "speakers": ["gertrudingestad", "giancarlovilella"],
   "color": "grey",
   "register": true
 }, {
