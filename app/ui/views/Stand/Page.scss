@@ -35,9 +35,15 @@
   color: $ict-blue;
 }
 
-.twitter {
-  padding: 0 1em;
+.number {
   display: inline-block;
-  color: $ict-blue;
-  text-decoration: none;
+  text-align: center;
+  font-size: 0.7em;
+  height: 3em;
+  width: 3em;
+  background-color: #3A3A3A;
+  border-radius: 50%;
+  line-height: 3em;
+  color: #FFF;
+  margin-right: 1em;
 }

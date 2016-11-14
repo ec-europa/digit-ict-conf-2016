@@ -31,6 +31,7 @@ class Modal extends React.PureComponent {
         <div className={styles.modalContainer}>
           <div className={styles.modalHeader} style={headerStyle} role="img" aria-label={stand.title} />
           <div className={styles.modalContent}>
+            <div className={styles.number}>{stand.number}</div>
             <h3>{stand.title}</h3>
             <h4 className={styles.title}>{stand.subtitle}</h4>
             <div className={styles.description}>
