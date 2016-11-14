@@ -4,8 +4,10 @@
 
 ## Installation
 
+We recommend to use yarn to install the dependencies:
+
 ```bash
-npm install
+yarn install
 ```
 
 ## Configure
