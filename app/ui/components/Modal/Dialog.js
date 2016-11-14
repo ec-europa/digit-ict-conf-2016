@@ -50,6 +50,7 @@ class Dialog extends React.PureComponent {
     if (event.keyCode === 9) {
       if (this.focusableEls.length === 1) {
         event.preventDefault();
+        this.lastFocusableEl.focus();
         return;
       }
 
