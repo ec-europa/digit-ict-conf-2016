@@ -42,7 +42,7 @@ class Row extends React.PureComponent {
       { [styles.blueItem]: event.color === 'blue' },
       { [styles.yellowItem]: event.color === 'yellow' },
       { [styles.purpleItem]: event.color === 'purple' },
-      { [styles.greyItem]: event.color === 'grey' }
+      { [styles.greyItem]: event.color === 'grey' },
     );
 
     const learnMore = (event.description && event.description.length > 0)

@@ -79,7 +79,6 @@ module.exports = options => ({
       __BASENAME__: JSON.stringify(options.basename),
     }),
   ]),
-  postcss: () => options.postcssPlugins,
   resolveLoader: {
     alias: {
       markdown: path.resolve(__dirname, './loaders/markdown-loader/index.js'),
@@ -88,22 +87,20 @@ module.exports = options => ({
       events: path.resolve(__dirname, './loaders/events-loader/index.js'),
       stands: path.resolve(__dirname, './loaders/stands-loader/index.js'),
     },
+    moduleExtensions: ['-loader'],
   },
   resolve: {
     modules: ['app', 'node_modules'],
     extensions: [
-      '',
       '.js',
       '.jsx',
       '.react.js',
     ],
-    packageMains: [
+    mainFields: [
       'jsnext:main',
       'main',
     ],
   },
   devtool: options.devtool,
   target: 'web', // Make web variables accessible to webpack, e.g. window
-  stats: false, // Don't show stats in the console
-  progress: true,
 });

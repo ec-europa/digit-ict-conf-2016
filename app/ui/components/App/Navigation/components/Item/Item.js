@@ -7,9 +7,9 @@
 */
 
 import React from 'react';
+import classnames from 'classnames';
 import Link from '../../../../Link/Link';
 import styles from './Item.scss';
-import classnames from 'classnames';
 
 class Item extends React.Component {
   render() {
@@ -18,7 +18,7 @@ class Item extends React.Component {
       <li
         className={classnames(
           styles.item,
-          { [styles.mobileOnly]: mobileOnly }
+          { [styles.mobileOnly]: mobileOnly },
         )}
       >
         <Link

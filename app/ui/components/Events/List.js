@@ -47,7 +47,7 @@ class List extends React.PureComponent {
           >
             {eventsRows}
           </FlipMove>
-        </div>
+        </div>,
       );
     });
 
