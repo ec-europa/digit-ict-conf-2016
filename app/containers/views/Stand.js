@@ -57,7 +57,7 @@ class Stand extends React.Component {
 
     return (
       <div>
-        <Helmet title={`${stand.firstname} ${stand.lastname}`} />
+        <Helmet title={`${stand.title}`} />
         {
           isModal
             ? <StandModal stand={stand} onRequestClose={onRequestClose} />
