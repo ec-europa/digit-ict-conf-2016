@@ -48,7 +48,7 @@
     "react": "15.3.2",
     "react-addons-css-transition-group": "15.3.2",
     "react-dom": "15.3.2",
-    "react-flip-move": "2.6.9",
+    "react-flip-move": "2.6.10",
     "react-helmet": "3.2.2",
     "react-redux": "4.4.6",
     "react-router": "2.8.1",

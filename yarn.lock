@@ -4255,8 +4255,8 @@ interpret@^1.0.0:
   resolved "https://registry.yarnpkg.com/interpret/-/interpret-1.0.1.tgz#d579fb7f693b858004947af39fa0db49f795602c"
 
 invariant@^2.0.0, invariant@^2.2.0, invariant@^2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.1.tgz#b097010547668c7e337028ebe816ebe36c8a8d54"
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.2.tgz#9e1f56ac0acdb6bf303306f338be3b204ae60360"
   dependencies:
     loose-envify "^1.0.0"
 
@@ -6866,9 +6866,9 @@ react-dom@15.3.2:
   version "15.3.2"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.3.2.tgz#c46b0aa5380d7b838e7a59c4a7beff2ed315531f"
 
-react-flip-move@2.6.9:
-  version "2.6.9"
-  resolved "https://registry.yarnpkg.com/react-flip-move/-/react-flip-move-2.6.9.tgz#36a825694c9878afb527252e2226b520de55c3f7"
+react-flip-move@2.6.10:
+  version "2.6.10"
+  resolved "https://registry.yarnpkg.com/react-flip-move/-/react-flip-move-2.6.10.tgz#98e0d4e097342fb20e7b15d165b9022498d48281"
   dependencies:
     lodash.omit "4.3.0"
 
