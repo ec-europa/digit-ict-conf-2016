@@ -1,6 +1,6 @@
 /**
 *
-* Stands/Stand
+* Expo/Stand
 *
 */
 

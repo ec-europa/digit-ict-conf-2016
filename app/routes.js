@@ -12,7 +12,7 @@ import {
   Speaker,
   Speakers,
   Stand,
-  Stands,
+  Expo,
 } from './containers/views/';
 
 export default (
@@ -23,7 +23,7 @@ export default (
     <Route path="programme" component={Programme} />
     <Route path="my-digitec" component={MyDigitec} />
     <Route path="event/:eventId" component={Event} />
-    <Route path="stands" component={Stands} />
+    <Route path="expo" component={Expo} />
     <Route path="stand/:standId" component={Stand} />
     <Route path="practical" component={Practical} />
     <Route path="*" component={NotFound} />

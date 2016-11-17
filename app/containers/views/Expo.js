@@ -1,6 +1,6 @@
 /*
  *
- * Stands
+ * Expo
  *
  */
 
@@ -14,25 +14,25 @@ import stands from '../../../content/stands.json';
 // Redux actions
 import { updateHeaderTitle } from '../../store/modules/ui/header';
 
-import View from '../../ui/views/Stands';
+import View from '../../ui/views/Expo';
 
-class Stands extends React.Component {
+class Expo extends React.Component {
   componentDidMount() {
-    this.props.onUpdateHeaderTitle('Stands');
+    this.props.onUpdateHeaderTitle('Expo');
   }
 
   render() {
     const { location } = this.props;
     return (
       <div>
-        <Helmet title="Stands" />
+        <Helmet title="Expo" />
         <View location={location} stands={stands} />
       </div>
     );
   }
 }
 
-Stands.propTypes = {
+Expo.propTypes = {
   onUpdateHeaderTitle: React.PropTypes.func,
   location: React.PropTypes.object,
 };
@@ -45,4 +45,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(null, mapDispatchToProps)(Stands);
+export default connect(null, mapDispatchToProps)(Expo);

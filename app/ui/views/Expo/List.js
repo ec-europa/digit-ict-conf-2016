@@ -1,11 +1,11 @@
 /**
 *
-* Stands/List
+* Expo/List
 *
 */
 
 import React from 'react';
-import Stand from '../../components/Stands/Stand';
+import Stand from '../../components/Expo/Stand';
 import styles from './List.scss';
 
 class List extends React.PureComponent {

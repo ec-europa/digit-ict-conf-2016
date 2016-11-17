@@ -1,34 +1,34 @@
 /*
  *
- * Stands
+ * Expo
  *
  */
 
 import React from 'react';
 
 // Components
-import StandsList from './List';
+import ExpoList from './List';
 
 // Styles
-import styles from './Stands.scss';
+import styles from './Expo.scss';
 
-class Stands extends React.PureComponent {
+class Expo extends React.PureComponent {
   render() {
     const { stands, location } = this.props;
     return (
       <div className={styles.container}>
         <div className={styles.header}>
-          <h1>Stands</h1>
+          <h1>Expo</h1>
         </div>
-        <StandsList stands={stands} location={location} />
+        <ExpoList stands={stands} location={location} />
       </div>
     );
   }
 }
 
-Stands.propTypes = {
+Expo.propTypes = {
   location: React.PropTypes.object,
   stands: React.PropTypes.array,
 };
 
-export default Stands;
+export default Expo;

@@ -8,7 +8,7 @@ import Root from './Root';
 import Speaker from './Speaker';
 import Speakers from './Speakers';
 import Stand from './Stand';
-import Stands from './Stands';
+import Expo from './Expo';
 
 export {
   Event,
@@ -21,5 +21,5 @@ export {
   Speaker,
   Speakers,
   Stand,
-  Stands,
+  Expo,
 };
