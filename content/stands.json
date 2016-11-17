@@ -12,7 +12,7 @@
   },
   {
     "id": "ep-programme-map",
-    "title": "EP IT Programme & EP Business Map",
+    "title": "EP IT Programme & EP Business map",
     "subtitle": "Improving IT/Business collaboration",
     "number": 2,
     "description": [
@@ -42,7 +42,7 @@
   },
   {
     "id": "ict-innovation-service",
-    "title": "ICT Innovation service",
+    "title": "ITEC innovation service",
     "subtitle": "Effective technological innovation inside the EP",
     "number": 4,
     "description": [
@@ -108,8 +108,8 @@
   },
   {
     "id": "building-blocks",
-    "title": "Building blocks",
-    "subtitle": "Focus on Reusability",
+    "title": "Reusable components",
+    "subtitle": "Building blocks in EC & EP",
     "number": 10,
     "description": [
       "Reusable components allow solution architects, developers and managers of development teams to avoid starting the construction of their Information Systems from scratch, cutting development costs and improving time to market of their planned solutions. These reusable components are also an integral part of the reference architecture.",
@@ -132,8 +132,8 @@
   },
   {
     "id": "digital-workspace",
-    "title": "Master your Digital workplace",
-    "subtitle": "",
+    "title": "IT training services",
+    "subtitle": "Master your Digital workplace",
     "number": 12,
     "description": [
       "In this stand dedicated to the training services of European Commission and European Parliament you will learn more about how both institutions are preparing its users for a digital workplace.",
@@ -155,7 +155,7 @@
   },
   {
     "id": "smart-gastronomy-lab",
-    "title": "Smart Gastronomy Lab",
+    "title": "Special guest: Smart Gastronomy Lab",
     "subtitle": "3D Chocolate printing",
     "number": 14,
     "description": [
@@ -165,7 +165,7 @@
   },
   {
     "id": "magency",
-    "title": "Magency",
+    "title": "Special guest: Magency",
     "subtitle": "Collaborative and interactive meetings",
     "number": 15,
     "description": [
