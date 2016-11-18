@@ -312,6 +312,20 @@
     "picture": "./speakers/Nathaly-Rey.jpg"
   },
   {
+    "id": "maiverute",
+    "firstname": "Maive",
+    "lastname": "Rute",
+    "title": "Deputy Director-General of JRC (EC)",
+    "bio": [
+      "Maive Rute joined the European Commission in 2005 to become Director for the Promotion of SMEs and Entrepreneurship in DG Enterprise and Industry.",
+      "She brought in her extensive management experience in the Estonian private and semi-public sector, notably five years as CEO of KredEx, the funding body for businesses, housing, innovation and export.",
+      "In the Commission, Ms Rute also worked as Director for Biotechnologies and Agriculture Research and as Resource Director in DG Research and Innovation until April 2016.",
+      "Ms Rute graduated as an agricultural economist from the Estonian University of Life Sciences. She holds an MBA from the Danube University, Austria, and received an MA in international politics from CERIS, Brussels."
+    ],
+    "twitter": false,
+    "picture": "./speakers/Maive-Rute.jpg"
+  },
+  {
     "id": "pierfrancescosabbatucci",
     "firstname": "Pierfrancesco",
     "lastname": "Sabbatucci",
