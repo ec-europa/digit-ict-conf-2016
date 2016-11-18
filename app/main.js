@@ -16,11 +16,13 @@ import useRouterHistory from 'react-router/es6/useRouterHistory';
 // Prepare app
 import createBrowserHistory from 'history/lib/createBrowserHistory';
 import useScroll from 'react-router-scroll/lib/useScroll';
+import smoothScroll from 'smooth-scroll';
+import offlineRuntime from 'offline-plugin/runtime';
+
 import configureStore from './store';
 import appRoutes from './routes';
 import { closeDrawer } from './store/modules/ui/drawer';
 import { openSnackbar, closeSnackbar } from './store/modules/ui/snackbar';
-import smoothScroll from 'smooth-scroll';
 
 // Create custom history
 const browserHistory = useRouterHistory(createBrowserHistory)({
@@ -64,12 +66,10 @@ ReactDOM.render(
       }))}
     />
   </Provider>,
-  document.getElementById('app')
+  document.getElementById('app'),
 );
 
 // Install ServiceWorker and AppCache
-import offlineRuntime from 'offline-plugin/runtime';
-
 offlineRuntime.install({
   onInstalled: () => store.dispatch(openSnackbar({
     message: 'DIGITEC is ready to work offline',

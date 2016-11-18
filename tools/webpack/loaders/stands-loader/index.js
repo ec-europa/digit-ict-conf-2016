@@ -2,15 +2,15 @@ const path = require('path');
 const steed = require('steed');
 
 function resolveResource(loaderContext, resource, callback) {
-  if (typeof resource.picture !== 'string') {
-    return callback(new Error('Missing resource "picture" property'));
+  if (typeof resource.visual !== 'string') {
+    return callback(new Error('Missing resource "visual" property'));
   }
 
   const dirname = path.dirname(loaderContext.resourcePath);
   const publicPath = loaderContext.options.publicPath || '';
 
   // Resolve the resource filename relative to parsed file
-  return loaderContext.resolve(dirname, resource.picture, (err, filename) => {
+  return loaderContext.resolve(dirname, resource.visual, (err, filename) => {
     if (err) {
       return callback(err);
     }
@@ -28,7 +28,7 @@ function resolveResource(loaderContext, resource, callback) {
 
       // Update the resource src property to match the generated filename
       // eslint-disable-next-line no-param-reassign
-      resource.picture = publicPath + Object.keys(module.assets)[0];
+      resource.visual = publicPath + Object.keys(module.assets)[0];
       return callback(null);
     });
   });

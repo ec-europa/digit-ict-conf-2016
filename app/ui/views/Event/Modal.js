@@ -53,7 +53,7 @@ class Modal extends React.PureComponent {
       { [styles.blue]: event.color === 'blue' },
       { [styles.yellow]: event.color === 'yellow' },
       { [styles.purple]: event.color === 'purple' },
-      { [styles.grey]: event.color === 'grey' }
+      { [styles.grey]: event.color === 'grey' },
     );
 
     return (

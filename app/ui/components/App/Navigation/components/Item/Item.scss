@@ -7,7 +7,8 @@
   justify-content: center;
 
   @include mappy-bp(medium) {
-    padding: 0.8em 0.5em 0.6em;
+    padding: 0.8em 0.7em 0.6em;
+    letter-spacing: -0.02em;
   }
 }
 
@@ -29,7 +30,7 @@
 
   @include mappy-bp(medium) {
     flex-grow: 1;
-    color: lighten($ict-grey-text, 10%);
+    color: lighten($ict-grey-text, 5%);
     text-decoration: none;
     display: inline-block;
     position: relative;
@@ -66,7 +67,7 @@
 .active {
   @include mappy-bp(max medium) {
     font-weight: 500;
-    color: darken($ict-grey-text, 10%);
+    color: darken($ict-grey-text, 15%);
   }
 
   @include mappy-bp(medium) {

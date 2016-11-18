@@ -7,7 +7,7 @@ function resolveResource(loaderContext, resource, callback) {
   }
 
   const dirname = path.dirname(loaderContext.resourcePath);
-  const publicPath = loaderContext.options.output.publicPath || '';
+  const publicPath = loaderContext.options.publicPath || '';
 
   // Resolve the resource filename relative to parsed file
   return loaderContext.resolve(dirname, resource.visual, (err, filename) => {
@@ -61,6 +61,7 @@ module.exports = function speakersLoader(source) {
       if (error) {
         return callback(error);
       }
+
       return callback(null, `module.exports = ${JSON.stringify(value, undefined, '\t')};`);
     });
   } catch (err) {
