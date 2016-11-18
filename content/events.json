@@ -165,7 +165,7 @@
   "title": "InterHack experience",
   "visual": "./events/int_hack.png",
   "description": [
-    "The first inter-institutional hackathon will bring together IT professionals from the European Parliament, the European Commission and the Council of the EU in October. The results and lessons learned from the collaboration will be presented in this session."
+    "The first inter-institutional hackathon brought together IT professionals from the European Parliament, the European Commission and the Council of the EU in October. The results and lessons learned from the collaboration will be presented in this session."
   ],
   "speakers": ["leoexter"],
   "color": "blue",
