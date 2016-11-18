@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.7.0"></a>
+# [1.7.0](https://github.com/ec-europa/digit-ict-conf-2016/compare/v1.6.0...v1.7.0) (2016-11-18)
+
+
+### Bug Fixes
+
+* **content:** fix small typos ([#101](https://github.com/ec-europa/digit-ict-conf-2016/issues/101)) ([a33d758](https://github.com/ec-europa/digit-ict-conf-2016/commit/a33d758))
+
+
+### Features
+
+* **content:** add Maive Rute ([#100](https://github.com/ec-europa/digit-ict-conf-2016/issues/100)) ([8c26bb2](https://github.com/ec-europa/digit-ict-conf-2016/commit/8c26bb2))
+* **stands:** implement pages and modals for the stands ([#95](https://github.com/ec-europa/digit-ict-conf-2016/issues/95)) ([30c30bc](https://github.com/ec-europa/digit-ict-conf-2016/commit/30c30bc))
+
+
+
 <a name="1.6.0"></a>
 # [1.6.0](https://github.com/ec-europa/digit-ict-conf-2016/compare/v1.5.0...v1.6.0) (2016-11-12)
 
