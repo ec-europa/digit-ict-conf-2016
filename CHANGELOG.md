@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.8.0"></a>
+# [1.8.0](https://github.com/ec-europa/digit-ict-conf-2016/compare/v1.7.0...v1.8.0) (2016-11-21)
+
+
+### Features
+
+* **speakers:** replace Nathaly Rey by Julien Blanchez ([#102](https://github.com/ec-europa/digit-ict-conf-2016/issues/102)) ([ded2846](https://github.com/ec-europa/digit-ict-conf-2016/commit/ded2846))
+
+
+
 <a name="1.7.0"></a>
 # [1.7.0](https://github.com/ec-europa/digit-ict-conf-2016/compare/v1.6.0...v1.7.0) (2016-11-18)
 
