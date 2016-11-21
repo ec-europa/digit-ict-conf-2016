@@ -38,6 +38,20 @@
     "picture": "./speakers/Catherine-Bearder.jpg"
   },
   {
+    "id": "julienblanchez",
+    "firstname": "Julien",
+    "lastname": "Blanchez",
+    "title": "Global Security & Compliance Strategist at Google",
+    "bio": [
+      "Julien Blanchez is Global Security & Compliance Strategist at Google. He has worked 9 years with the company between Europe and California, where he was based lately, embedded in security engineering teams. He specializes in bridging technology innovation with market expectations, specifically on security and privacy. A European citizen, he is very keen on making technology work for everyone, in greater transparency and full trust.",
+      "He joined Google after past functions with SAP in global corporate strategy in Germany, with Barco in Singapore and The Boston Consulting Group in Brussels.",
+      "A graduate of the Université Catholique de Louvain in Belgium, he has a post-graduate degree in Maritime Sciences from the University of Antwerp and later went through an executive program at Harvard Business School.",
+      "In private he is a husband and father of three, he invests his spare time in wilderness Search & Rescue volunteering and long distance family hikes. Among other trips, he completed on bicycle with his family, a 600km autonomous north-south crossing of Syria at the dawn of the arab spring."
+    ],
+    "twitter": false,
+    "picture": "./speakers/Julien-Blanchez.jpg"
+  },
+  {
     "id": "paulboag",
     "firstname": "Paul",
     "lastname": "Boag",
@@ -295,21 +309,6 @@
     ],
     "twitter": "@Senficon",
     "picture": "./speakers/Julia-Reda.jpg"
-  },
-  {
-    "id": "nathalyrey",
-    "firstname": "Nathaly",
-    "lastname": "Rey",
-    "title": "EMEA Trust Manager, Google for Work",
-    "bio": [
-      "Nathaly is a privacy and security lawyer with extensive experience in designing innovative strategies for regulatory compliance, awareness-raising, best practices; and advising on regulatory approaches for ICT.",
-      "She holds an LL.M. on IT & Telecom Law, and a Ph.D. in Law.",
-      "Before joining Google, Nathaly led the Spanish Association of Information Security (ISMS Forum) and worked as a Senior Associate at Ecija, advising multinational corporations on a wide range of privacy and security matters, from global compliance programs to audits, IT outsourcing, and cross-border data flows.",
-      "Certified Data Privacy Professional (CDPP) and Certified Cloud Security Knowledge (CCSK).",
-      "Co- Founder and member of the Board of the Cloud Security Alliance-Spanish Chapter; she is a regular lecturer at IE Law School - Compliance program, and ICT arbiter at the European Association of Arbitration."
-    ],
-    "twitter": false,
-    "picture": "./speakers/Nathaly-Rey.jpg"
   },
   {
     "id": "maiverute",
