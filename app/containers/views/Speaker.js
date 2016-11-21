@@ -56,7 +56,7 @@ class Speaker extends React.Component {
     }
 
     const { isModal, onRequestClose, schedule, onToggleEvent } = this.props;
-    const speakerEvents = events.filter(event => event.speakers.indexOf(speaker.id) > -1 || event.moderator === speaker.id);
+    const speakerEvents = events.filter(event => event.speakers.indexOf(speaker.id) > -1 || (event.guests && event.guests.indexOf(speaker.id) > -1) || event.moderator === speaker.id);
 
     return (
       <div>
