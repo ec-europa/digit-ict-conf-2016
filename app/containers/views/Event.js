@@ -63,14 +63,16 @@ class Event extends React.Component {
     const eventSpeakers = speakers
       .filter(speaker => event.speakers.indexOf(speaker.id) > -1)
       .sort((a, b) => event.speakers.indexOf(a.id) - event.speakers.indexOf(b.id));
+    const eventGuests = speakers
+      .filter(speaker => event.guests && event.guests.indexOf(speaker.id) > -1);
 
     return (
       <div>
         <Helmet title={event.title} />
         {
           isModal
-            ? <EventModal event={event} eventModerators={eventModerators} eventSpeakers={eventSpeakers} location={location} checked={isChecked} onToggle={onToggleEvent} onRequestClose={onRequestClose} />
-            : <EventPage event={event} eventModerators={eventModerators} eventSpeakers={eventSpeakers} location={location} />
+            ? <EventModal event={event} eventModerators={eventModerators} eventSpeakers={eventSpeakers} eventGuests={eventGuests} location={location} checked={isChecked} onToggle={onToggleEvent} onRequestClose={onRequestClose} />
+            : <EventPage event={event} eventModerators={eventModerators} eventSpeakers={eventSpeakers} eventGuests={eventGuests} location={location} />
         }
       </div>
     );

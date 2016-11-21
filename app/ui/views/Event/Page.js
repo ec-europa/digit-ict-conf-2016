@@ -14,7 +14,7 @@ import styles from './Modal.scss';
 
 class Page extends React.PureComponent {
   render() {
-    const { event, eventModerators, eventSpeakers, location } = this.props;
+    const { event, eventModerators, eventSpeakers, eventGuests, location } = this.props;
     const startsAt = (
       <time>{event.starts}</time>
     );
@@ -45,6 +45,15 @@ class Page extends React.PureComponent {
       </div>
     ) : null;
 
+    const guestsBlock = eventGuests.length ? (
+      <div>
+        <h2>Guest{eventGuests.length > 1 ? 's' : ''}</h2>
+        {eventGuests.map(speaker => (
+          <SpeakerRow key={speaker.id} speaker={speaker} location={location} />
+        ))}
+      </div>
+    ) : null;
+
     return (
       <div className={styles.pageContainer}>
         <h1>{event.title}</h1>
@@ -57,6 +66,7 @@ class Page extends React.PureComponent {
         </div>
         {moderatorBlock}
         {speakersBlock}
+        {guestsBlock}
       </div>
     );
   }
@@ -67,6 +77,7 @@ Page.propTypes = {
   event: React.PropTypes.object,
   eventModerators: React.PropTypes.array,
   eventSpeakers: React.PropTypes.array,
+  eventGuests: React.PropTypes.array,
   location: React.PropTypes.object,
 };
 
