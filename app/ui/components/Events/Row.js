@@ -47,6 +47,7 @@ class Row extends React.PureComponent {
 
     const learnMore = (event.description && event.description.length > 0)
       || (event.speakers && event.speakers.length > 0)
+      || (event.guests && event.guests.length > 0)
       || (event.moderator && event.moderator.length > 0);
 
     /*eslint-disable */

@@ -27,7 +27,7 @@ class Page extends React.PureComponent {
           </div>
         </div>
         <div className={styles.description}>
-          {stand.description.map((line, index) => (<p key={index}>{line}</p>))}
+          {stand.description.map((line, index) => (<p key={index} dangerouslySetInnerHTML={{ __html: line }} />))}
         </div>
       </div>
     );

@@ -17,7 +17,7 @@ import styles from './Modal.scss';
 
 class Modal extends React.PureComponent {
   render() {
-    const { event, eventModerators, eventSpeakers, location, checked, onRequestClose, onToggle } = this.props;
+    const { event, eventModerators, eventSpeakers, eventGuests, location, checked, onRequestClose, onToggle } = this.props;
     const startsAt = (
       <time>{event.starts}</time>
     );
@@ -43,6 +43,15 @@ class Modal extends React.PureComponent {
       <div>
         <h2>Speaker{eventSpeakers.length > 1 ? 's' : ''}</h2>
         {eventSpeakers.map(speaker => (
+          <SpeakerRow key={speaker.id} speaker={speaker} location={location} />
+        ))}
+      </div>
+    ) : null;
+
+    const guestsBlock = eventGuests.length ? (
+      <div>
+        <h2>Guest{eventGuests.length > 1 ? 's' : ''}</h2>
+        {eventGuests.map(speaker => (
           <SpeakerRow key={speaker.id} speaker={speaker} location={location} />
         ))}
       </div>
@@ -82,6 +91,7 @@ class Modal extends React.PureComponent {
             </div>
             {moderatorBlock}
             {speakersBlock}
+            {guestsBlock}
           </div>
         </div>
       </Dialog>
@@ -94,6 +104,7 @@ Modal.propTypes = {
   event: React.PropTypes.object,
   eventModerators: React.PropTypes.array,
   eventSpeakers: React.PropTypes.array,
+  eventGuests: React.PropTypes.array,
   location: React.PropTypes.object,
   onToggle: React.PropTypes.func,
   checked: React.PropTypes.bool,

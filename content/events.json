@@ -104,7 +104,8 @@
   "description": [
     "This session will look into how knowledge workers thrive and bring value, energising and motivating the teams around them. What skills do they have? What else do they need to perform better? How we can change the culture and environment to have even more synergies and collaboration in a knowledge-driven organisation?"
   ],
-  "speakers": ["victornegrescu"],
+  "guests": ["victornegrescu"],
+  "speakers": [],
   "color": "blue",
   "register": true
 }, {
@@ -203,7 +204,8 @@
   "title": "Special guest: Vincent Bruneau, CEO of Magency",
   "venue": "Gold Hall",
   "description": [],
-  "speakers": ["vincentbruneau"],
+  "guests": ["vincentbruneau"],
+  "speakers": [],
   "color": "grey",
   "register": true
 }, {

@@ -35,7 +35,7 @@ class Modal extends React.PureComponent {
             <h3>{stand.title}</h3>
             <h4 className={styles.title}>{stand.subtitle}</h4>
             <div className={styles.description}>
-              {stand.description.map((line, index) => (<p key={index}>{line}</p>))}
+              {stand.description.map((line, index) => (<p key={index} dangerouslySetInnerHTML={{ __html: line }} />))}
             </div>
           </div>
         </div>
