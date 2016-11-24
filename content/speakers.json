@@ -57,10 +57,22 @@
     "lastname": "Boag",
     "title": "User experience consultant and expert in digital transformation",
     "bio": [
-      "Paul Boag is a user experience consultant, author and speaker. He helps organisations such as the European Commission, UCAS and Doctors Without Borders adapt to the digital world. He refocuses them on user experience and engaging with a new digitally savvy audience. "
+      "Paul Boag is a user experience consultant, author and speaker. He helps organisations such as the European Commission, UCAS and Doctors Without Borders adapt to the digital world. He refocuses them on user experience and engaging with a new digitally savvy audience."
     ],
     "twitter": "@boagworld",
     "picture": "./speakers/Paul-Boag.jpg"
+  },
+  {
+    "id": "frankboermeester",
+    "firstname": "Frank",
+    "lastname": "Boermeester",
+    "title": "Chief Tinkerer at Hackathons.be",
+    "bio": [
+      "Frank Boermeester is a researcher, writer and event organiser interested in technology and healthcare. Partner at Advance.Healthcare, a consulting firm specialised in digital health, Incorrigibly curious and a student for life, he spends most of his time doing analytical/research work, strategy/concept development and organising events and hackathons (e.g. Hack for Health, Hack Epilepsy, mHealth Hackathon). He is also involved in Hackathons BE (helping companies organise their own hackathons and hackathon-like events). Also an amateur coder and designer.",
+      "Earlier he co-founded an innovation journal (The Fifth Conference), he was a research analyst at management consultancy the Corporate Executive Board (London/Washington DC) and has worked for several market research firms around the world. Frank is a research psychologist by training and has published several articles in medical psychiatry. He has an MBA from the Vlerick Leuven Ghent Management School."
+    ],
+    "twitter": false,
+    "picture": "./speakers/Frank-Boermeester.jpg"
   },
   {
     "id": "davidborrelli",
@@ -250,6 +262,18 @@
     "picture": "./speakers/Keith-Martin.jpg"
   },
   {
+    "id": "maresameissl",
+    "firstname": "Maresa",
+    "lastname": "Meissl",
+    "title": "Head of Unit of Information Security, Security Directorate (EC)",
+    "bio": [
+      "Maresa Meissl is currently heading the  Information Security Unit in the Commission's Security Directorate, responsible for all information security related activities, including cyber-attack response and staff accreditation. Prior to that she was policy advisor to the Commission's Security Director. She joined the European Commission in 2002 and has previously worked on digital policies in the framework of the Commission's Digital Agenda initiative. Prior to that she worked for a range of international communications providers and IT manufacturers.",
+      "She holds a PhD in communications law and economics from the Vienna University of Economics and Business Administration."
+    ],
+    "twitter": false,
+    "picture": "./speakers/Maresa-Meissl.jpg"
+  },
+  {
     "id": "paulmiller",
     "firstname": "Paul",
     "lastname": "Miller",
@@ -371,7 +395,7 @@
     "id": "alexandresteiner",
     "firstname": "Alexandre",
     "lastname": "Steiner",
-    "title": "President CetSI",
+    "title": "President, Conseils et Systèmes Informatiques",
     "bio": [
       "Alexandre Steiner is currently president of CetSI, a hosting and outsourcing company specialised in digital transformation. He is also founder, president and managing partner at OiO Ventures, key player of innovation and other transaction investment support for major accounts, funds and entrepreneurs. Over time, he acquired an extensive experience in cloud computing, including as the development director at Numergy between 2012 and 2016, where he was responsible for Public Cloud Services IAAS focus, as the VP Global Portfolio and Marketing at Getronics between 2005 and 2008 and as the VP marketing Alliances Portfolio and Marketing at KPN Group between 2008 and 2012. Before that, he has held several positions in Cap Gemini such as VP Technology Services and VP Portfolio strategy. Alexandre is also very invested as a coach and mentor for start-ups."
     ],

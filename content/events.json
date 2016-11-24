@@ -70,6 +70,19 @@
   "color": "none",
   "register": false
 }, {
+  "id": "discussions",
+  "starts": "13:30",
+  "ends": "14:00",
+  "title": "Discussions",
+  "venue": "Lounge",
+  "description": [
+    "Open PM2 initiative",
+    "How to stimulate innovation at the EP"
+  ],
+  "speakers": [],
+  "color": "grey",
+  "register": true
+}, {
   "id": "panel3",
   "starts": "14:15",
   "ends": "15:30",
@@ -90,8 +103,11 @@
   "starts": "14:15",
   "ends": "15:30",
   "title": "Building a user experience design culture",
+  "venue": "Room 214-216",
   "description": [
-    "What are the benefits of becoming user centric and digital first? With this workshop Paul Boag will help participants adopt digital best practice."
+    "There is a lot of confusion about what user experience is and what it encompasses. In this workshop you will discover that user experience is much more than a designers job. That everybody can affect the experience of citizens no matter their role.",
+    "UX consultant Paul Boag will introduce you to ways you can better understand our users. He will also teach you how to identify the problem areas in the users experience.",
+    "By the end of the session you will be ready to start undertaking user research. Ready to start improving the user's experience."
   ],
   "speakers": ["paulboag"],
   "color": "purple",
@@ -101,8 +117,9 @@
   "starts": "14:15",
   "ends": "15:30",
   "title": "Knowledge worker: culture, skills, tools",
+  "venue": "Room 211-212",
   "description": [
-    "This session will look into how knowledge workers thrive and bring value, energising and motivating the teams around them. What skills do they have? What else do they need to perform better? How we can change the culture and environment to have even more synergies and collaboration in a knowledge-driven organisation?"
+    "This participatory session will look into how knowledge workers thrive and bring value, energising and motivating the teams around them. What skills do they have? What else do they need to perform better? How we can change the culture and environment to have even more synergies and collaboration in a knowledge-driven organisation?"
   ],
   "guests": ["victornegrescu"],
   "speakers": [],
@@ -113,6 +130,7 @@
   "starts": "14:15",
   "ends": "15:30",
   "title": "Open Source: the future for the European institutions",
+  "venue": "Room 213-215",
   "description": [],
   "moderator": "pierredamas",
   "speakers": ["juliareda", "georggreve"],
@@ -148,6 +166,7 @@
   "starts": "16:00",
   "ends": "17:10",
   "title": "Open data and digitalisation for public administrations",
+  "venue": "Room 211-212",
   "description": [
     "In this session, the debate will look deeper into the notions of open data, net neutrality and digitalisation to examine how these actually impact our democracies and what effects they are having and may have in public administrations. We will focus on issues, such as:",
     "- What digital and open data approaches are there for public administration processes?",
@@ -164,11 +183,12 @@
   "starts": "16:00",
   "ends": "17:10",
   "title": "InterHack experience",
+  "venue": "Room 214-216",
   "visual": "./events/int_hack.png",
   "description": [
     "The first inter-institutional hackathon brought together IT professionals from the European Parliament, the European Commission and the Council of the EU in October. The results and lessons learned from the collaboration will be presented in this session."
   ],
-  "speakers": ["leoexter"],
+  "speakers": ["frankboermeester", "leoexter"],
   "color": "blue",
   "register": true
 }, {
@@ -176,6 +196,7 @@
   "starts": "16:00",
   "ends": "17:10",
   "title": "Encryption: blessing or curse for IT security",
+  "venue": "Room 213-215",
   "description": [
     "Encryption plays a crucial role in securing information systems and the business data they contain. External communications are routinely encrypted and network traffic inside an organisation is increasingly encrypted to reduce the risk that attackers that can get access to an organisation's vital information. Increasingly it is standard practice that information is encrypted for storage.",
     "But encryption can also be exploited by attackers. Malware can be hidden inside incoming encrypted communications so as to avoid antivirus scanning and to cover the exfiltration of sensitive information from data loss prevention systems. IT security defenders are looking for ways to look inside such traffic to protect the organisation.",
@@ -184,7 +205,7 @@
     "• Technical options for defence against misuse of encryption",
     "• The organisational policy and legal issues associated"
   ],
-  "speakers": ["kenducatel", "keithmartin", "bartpreneel", "andreasschwab", "vincentsteckler"],
+  "speakers": ["kenducatel", "keithmartin", "maresameissl", "bartpreneel", "andreasschwab", "vincentsteckler"],
   "color": "yellow",
   "register": true
 }, {
