@@ -44,7 +44,7 @@
 
 .coverTitleContainerRow {
   flex-grow: 1;
-  padding: 15px;
+  padding: 3em;
 }
 
 .coverRegister {
@@ -54,21 +54,13 @@
   border: none;
   position: relative;
   display: inline-block;
-  transition:
-    transform 0.2s ease-in-out,
-    color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   outline: none;
   text-decoration: none;
   text-align: center;
   vertical-align: middle;
-  font-size: 32px;
-  padding: 40px;
-
-  &:hover,
-  &:focus {
-    transform: rotate(2deg) scale(1.05);
-    color: darken($ict-grey-text, 20%);
-  }
+  font-size: 2em;
+  padding: 2.5em 1em;
+  margin: 0;
 }
 
 .coverTwitter {
@@ -76,6 +68,7 @@
   text-decoration: none;
   border: 1px solid transparent;
   padding: 0.5em;
+  margin: 0;
   transition: border-color 0.2s ease-in-out;
 
   &:hover,
