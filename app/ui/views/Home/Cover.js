@@ -20,7 +20,7 @@ class Cover extends React.PureComponent {
             <h2>Square, Brussels</h2>
           </div>
           <div className={styles.coverTitleContainerRow}>
-            <a className={styles.coverRegister} href={'https://scic.ec.europa.eu/fmi/ezreg/DIGITEC2016/start'} target="_blank" rel="noopener noreferrer">Register</a>
+            <p className={styles.coverRegister}>Registration closed</p>
             <h2><Link to={'https://twitter.com/hashtag/digitec16'} className={styles.coverTwitter} target="_blank" rel="noopener noreferrer">#digitec16</Link></h2>
           </div>
         </div>
