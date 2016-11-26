@@ -251,6 +251,23 @@
     "picture": "./speakers/Dominique-Leroy.jpg"
   },
   {
+    "id": "gianpierolotito",
+    "firstname": "Gianpiero",
+    "lastname": "Lotito",
+    "title": "Founder & CEO, FacilityLive",
+    "bio": [
+      "Gianpiero Lotito is CEO and founder, with Mariuccia Teroni, of FacilityLive, the Italian high tech startup, with global ambitions, developing a next generation technology for the organisation, management and search of information with patents granted in 44 countries worldwide.",
+      "FacilityLive is considered one of the European search platforms of the future. In fact its disruptive technology, that finds exactly what you are asking for, allows people and organisations have a compelling user experience in information search.",
+      "FacilityLive raised almost 30 Million Euro of private capital and its current company valuation is 225 Million Euro. At present it is collaborating with leading Global and Pan-European companies and with world-class system integrators.",
+      "Gianpiero is a technologist, with a musical career behind, who has been working for thirty years on innovative projects in the publishing world and on technologies applied to content with Mariuccia Teroni. He was Adjunct Professor of Multimedia Publishing at the University of Milan and wrote books and articles on technology for major Italian editors like Bruno Mondadori, Sperling and Gruppo Espresso.",
+      "From 2014 Gianpiero has been Ambassador of e-Skills for Jobs: a project under the Grand Coalition for Digital Jobs of the European Commission.",
+      "In 2015 he received the Gold Medal of the city of Pavia for his commitment and contribution to technology innovation.",
+      "In 2016 he was the Innovative Entrepreneur chosen by the Italian Minister of Economic Development to represent Italy at the European Council for Competitiveness organized by the Dutch Presidency of the European Commission in Amsterdam to discuss the main challenges and opportunities arising from digitisation of industry within Europe."
+    ],
+    "twitter": false,
+    "picture": "./speakers/Gianpiero-Lotito.jpg"
+  },
+  {
     "id": "keithmartin",
     "firstname": "Keith",
     "lastname": "Martin",
