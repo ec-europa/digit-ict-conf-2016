@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.11.0"></a>
+# [1.11.0](https://github.com/ec-europa/digit-ict-conf-2016/compare/v1.10.0...v1.11.0) (2016-11-26)
+
+
+### Features
+
+* **content:** add last speaker ([#106](https://github.com/ec-europa/digit-ict-conf-2016/issues/106)) ([1757a61](https://github.com/ec-europa/digit-ict-conf-2016/commit/1757a61))
+
+
+
 <a name="1.10.0"></a>
 # [1.10.0](https://github.com/ec-europa/digit-ict-conf-2016/compare/v1.9.0...v1.10.0) (2016-11-25)
 
