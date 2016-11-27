@@ -7,6 +7,10 @@ import React from 'react';
 import styles from './Main.scss';
 
 class Main extends React.PureComponent {
+  shouldComponentUpdate(nextProps) {
+    return nextProps !== this.props;
+  }
+
   render() {
     const { children, drawerOpen, modalOpen } = this.props;
     return (

@@ -10,6 +10,10 @@ import React from 'react';
 import styles from './Page.scss';
 
 class Page extends React.PureComponent {
+  shouldComponentUpdate() {
+    return false;
+  }
+
   render() {
     const { stand } = this.props;
 

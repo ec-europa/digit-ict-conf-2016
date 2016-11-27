@@ -20,7 +20,7 @@ import StandModal from '../../ui/views/Stand/Modal';
 import StandPage from '../../ui/views/Stand/Page';
 import StandNotFound from '../../ui/views/Stand/NotFound';
 
-class Stand extends React.Component {
+class Stand extends React.PureComponent {
   constructor(props) {
     super(props);
 
@@ -40,6 +40,10 @@ class Stand extends React.Component {
         this.props.onUpdateHeaderTitle('Stand not found');
       }
     }
+  }
+
+  shouldComponentUpdate() {
+    return false;
   }
 
   render() {

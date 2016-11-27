@@ -96,6 +96,10 @@ class Practical extends React.PureComponent {
     });
   }
 
+  shouldComponentUpdate() {
+    return false;
+  }
+
   render() {
     return (
       <div className={styles.container}>

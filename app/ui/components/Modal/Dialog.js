@@ -34,6 +34,10 @@ class Dialog extends React.PureComponent {
     this.modal.scrollTop = 0;
   }
 
+  shouldComponentUpdate(nextProps) {
+    return nextProps.children !== this.props.children;
+  }
+
   componentWillUnmount() {
     document.removeEventListener('keydown', this.handleKeyDown);
   }

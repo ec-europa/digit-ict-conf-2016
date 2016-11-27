@@ -16,9 +16,13 @@ import { updateHeaderTitle } from '../../store/modules/ui/header';
 
 import View from '../../ui/views/Expo';
 
-class Expo extends React.Component {
+class Expo extends React.PureComponent {
   componentDidMount() {
     this.props.onUpdateHeaderTitle('Expo');
+  }
+
+  shouldComponentUpdate() {
+    return false;
   }
 
   render() {

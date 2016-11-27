@@ -13,6 +13,10 @@ import styles from './Modal.scss';
 import Dialog from '../../components/Modal/Dialog';
 
 class Modal extends React.PureComponent {
+  shouldComponentUpdate() {
+    return false;
+  }
+
   render() {
     const { stand, onRequestClose } = this.props;
 

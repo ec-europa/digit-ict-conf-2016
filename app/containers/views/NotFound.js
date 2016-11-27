@@ -14,9 +14,13 @@ import { updateHeaderTitle } from '../../store/modules/ui/header';
 // Import View
 import View from '../../ui/views/NotFound';
 
-class NotFound extends React.Component {
+class NotFound extends React.PureComponent {
   componentDidMount() {
     this.props.onUpdateHeaderTitle('Page Not Found');
+  }
+
+  shouldComponentUpdate() {
+    return false;
   }
 
   render() {

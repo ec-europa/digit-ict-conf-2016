@@ -11,9 +11,13 @@ import { updateHeaderTitle } from '../../store/modules/ui/header';
 
 import View from '../../ui/views/Practical';
 
-class Practical extends React.Component {
+class Practical extends React.PureComponent {
   componentDidMount() {
     this.props.onUpdateHeaderTitle('Practical');
+  }
+
+  shouldComponentUpdate() {
+    return false;
   }
 
   render() {

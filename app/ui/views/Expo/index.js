@@ -13,21 +13,24 @@ import ExpoList from './List';
 import styles from './Expo.scss';
 
 class Expo extends React.PureComponent {
+  shouldComponentUpdate() {
+    return false;
+  }
+
   render() {
-    const { stands, location } = this.props;
+    const { stands } = this.props;
     return (
       <div className={styles.container}>
         <div className={styles.header}>
           <h1>Expo</h1>
         </div>
-        <ExpoList stands={stands} location={location} />
+        <ExpoList stands={stands} />
       </div>
     );
   }
 }
 
 Expo.propTypes = {
-  location: React.PropTypes.object,
   stands: React.PropTypes.array,
 };
 

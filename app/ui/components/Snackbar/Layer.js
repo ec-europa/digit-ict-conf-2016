@@ -27,6 +27,10 @@ class Layer extends React.PureComponent {
     }
   }
 
+  shouldComponentUpdate(nextProps) {
+    return nextProps !== this.props;
+  }
+
   componentDidUpdate() {
     document.removeEventListener('keydown', this.handleKeyDown, true);
 

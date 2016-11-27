@@ -18,6 +18,10 @@ import Dialog from '../../components/Modal/Dialog';
 import twitterLogo from './images/twitter.png';
 
 class Modal extends React.PureComponent {
+  shouldComponentUpdate(nextProps) {
+    return nextProps.schedule !== this.props.schedule;
+  }
+
   render() {
     const { speaker, speakerEvents, schedule, onToggleEvent, location, onRequestClose } = this.props;
     const sessions = speakerEvents.length ? (

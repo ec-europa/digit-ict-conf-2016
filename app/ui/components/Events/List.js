@@ -10,6 +10,10 @@ import Row from './Row';
 import styles from './List.scss';
 
 class List extends React.PureComponent {
+  shouldComponentUpdate(nextProps) {
+    return nextProps.schedule !== this.props.schedule;
+  }
+
   render() {
     const { events, schedule, onToggle, location } = this.props;
     const eventsDisplay = [];

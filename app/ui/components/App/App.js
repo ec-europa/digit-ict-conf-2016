@@ -6,6 +6,10 @@ import React from 'react';
 import styles from './App.scss';
 
 class App extends React.PureComponent {
+  shouldComponentUpdate(nextProps) {
+    return nextProps.children !== this.props.children;
+  }
+
   render() {
     const { children } = this.props;
     return (

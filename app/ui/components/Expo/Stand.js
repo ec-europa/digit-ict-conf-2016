@@ -9,6 +9,10 @@ import { Link } from 'react-router';
 import styles from './Stand.scss';
 
 class Stand extends React.PureComponent {
+  shouldComponentUpdate() {
+    return false;
+  }
+
   render() {
     const { stand } = this.props;
     return (

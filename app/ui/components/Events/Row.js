@@ -14,6 +14,10 @@ import Checkbox from './Checkbox';
 // FlipMove needs Row to be a class (not a stateless function)
 // eslint-disable-next-line react/prefer-stateless-function
 class Row extends React.PureComponent {
+  shouldComponentUpdate(nextProps) {
+    return nextProps.checked !== this.props.checked;
+  }
+
   render() {
     const { event, checked, displayTime, onToggle } = this.props;
 

@@ -22,7 +22,7 @@ import EventNotFound from '../../ui/views/Event/NotFound';
 import { toggleEvent } from '../../store/modules/schedule';
 import { updateHeaderTitle } from '../../store/modules/ui/header';
 
-class Event extends React.Component {
+class Event extends React.PureComponent {
   constructor(props) {
     super(props);
 
@@ -42,6 +42,10 @@ class Event extends React.Component {
         this.props.onUpdateHeaderTitle('Event not found');
       }
     }
+  }
+
+  shouldComponentUpdate(nextProps) {
+    return nextProps.schedule !== this.props.schedule;
   }
 
   render() {

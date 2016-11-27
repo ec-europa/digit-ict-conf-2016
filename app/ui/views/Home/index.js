@@ -13,6 +13,10 @@ import Cover from './Cover';
 import styles from './Home.scss';
 
 class Home extends React.PureComponent {
+  shouldComponentUpdate() {
+    return false;
+  }
+
   render() {
     const { content } = this.props;
     return (
