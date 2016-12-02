@@ -4,6 +4,7 @@
 
 const path = require('path');
 const webpack = require('webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = options => ({
   entry: options.entry,
@@ -78,6 +79,9 @@ module.exports = options => ({
       },
       __BASENAME__: JSON.stringify(options.basename),
     }),
+    new CopyWebpackPlugin([
+      { from: 'app/static', to: 'static' },
+    ]),
   ]),
   resolveLoader: {
     alias: {
