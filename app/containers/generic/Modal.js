@@ -16,6 +16,10 @@ class ModalContainer extends React.Component {
     this.close = this.close.bind(this);
   }
 
+  shouldComponentUpdate(nextProps) {
+    return nextProps.children !== this.props.children;
+  }
+
   close() {
     const { router, returnTo, isOpen } = this.props;
     if (isOpen) {

@@ -9,6 +9,10 @@ import Link from '../../components/Link/Link';
 import styles from './Cover.scss';
 
 class Cover extends React.PureComponent {
+  shouldComponentUpdate() {
+    return false;
+  }
+
   render() {
     return (
       <div className={styles.coverContainer}>

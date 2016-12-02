@@ -22,7 +22,7 @@ import SpeakerModal from '../../ui/views/Speaker/Modal';
 import SpeakerPage from '../../ui/views/Speaker/Page';
 import SpeakerNotFound from '../../ui/views/Speaker/NotFound';
 
-class Speaker extends React.Component {
+class Speaker extends React.PureComponent {
   constructor(props) {
     super(props);
 
@@ -42,6 +42,10 @@ class Speaker extends React.Component {
         this.props.onUpdateHeaderTitle('Speaker not found');
       }
     }
+  }
+
+  shouldComponentUpdate(nextProps) {
+    return nextProps.schedule !== this.props.schedule;
   }
 
   render() {

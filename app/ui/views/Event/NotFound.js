@@ -8,6 +8,10 @@ import React from 'react';
 import styles from './Modal.scss';
 
 class NotFound extends React.PureComponent {
+  shouldComponentUpdate() {
+    return false;
+  }
+
   render() {
     return (
       <div className={styles.pageContainer}>

@@ -8,6 +8,10 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import styles from './Content.scss';
 
 class Content extends React.PureComponent {
+  shouldComponentUpdate(nextProps) {
+    return nextProps.children !== this.props.children;
+  }
+
   render() {
     const { children, contentKey } = this.props;
     return (

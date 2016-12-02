@@ -14,6 +14,10 @@ import Link from '../../components/Link/Link';
 import styles from './MyDigitec.scss';
 
 class MyDigitec extends React.PureComponent {
+  shouldComponentUpdate(nextProps) {
+    return nextProps.schedule !== this.props.schedule || nextProps.myEvents !== this.props.myEvents;
+  }
+
   render() {
     const { schedule, myEvents, onToggleEvent, location } = this.props;
 

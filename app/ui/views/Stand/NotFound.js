@@ -8,6 +8,10 @@ import React from 'react';
 import styles from './Page.scss';
 
 class NotFound extends React.PureComponent {
+  shouldComponentUpdate() {
+    return false;
+  }
+
   render() {
     return (
       <div className={styles.container}>

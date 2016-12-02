@@ -9,11 +9,15 @@ import Stand from '../../components/Expo/Stand';
 import styles from './List.scss';
 
 class List extends React.PureComponent {
+  shouldComponentUpdate() {
+    return false;
+  }
+
   render() {
-    const { stands, location } = this.props;
+    const { stands } = this.props;
     return (
       <div className={styles.container}>
-        {stands.map(stand => <Stand key={stand.id} stand={stand} location={location} />)}
+        {stands.map(stand => <Stand key={stand.id} stand={stand} />)}
       </div>
     );
   }
@@ -21,7 +25,6 @@ class List extends React.PureComponent {
 
 List.propTypes = {
   stands: React.PropTypes.array,
-  location: React.PropTypes.object,
 };
 
 List.defaultProps = {

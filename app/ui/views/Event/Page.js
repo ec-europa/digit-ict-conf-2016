@@ -13,6 +13,10 @@ import SpeakerRow from '../../components/Speakers/Row';
 import styles from './Modal.scss';
 
 class Page extends React.PureComponent {
+  shouldComponentUpdate() {
+    return false;
+  }
+
   render() {
     const { event, eventModerators, eventSpeakers, eventGuests, location } = this.props;
     const startsAt = (

@@ -11,7 +11,7 @@ import { closeSnackbar } from '../../store/modules/ui/snackbar';
 // Component
 import SnackbarLayer from '../../ui/components/Snackbar/Layer';
 
-class SnackbarContainer extends React.Component {
+class SnackbarContainer extends React.PureComponent {
   constructor(props) {
     super(props);
 

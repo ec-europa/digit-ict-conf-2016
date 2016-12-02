@@ -14,6 +14,10 @@ class Checkbox extends React.PureComponent {
     this.toggle = this.toggle.bind(this);
   }
 
+  shouldComponentUpdate(nextProps) {
+    return nextProps.checked !== this.props.checked;
+  }
+
   toggle() {
     const { event, onToggle } = this.props;
     return onToggle(event);

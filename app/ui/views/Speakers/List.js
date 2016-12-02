@@ -9,11 +9,15 @@ import Speaker from '../../../ui/components/Speakers/Speaker';
 import styles from './List.scss';
 
 class List extends React.PureComponent {
+  shouldComponentUpdate() {
+    return false;
+  }
+
   render() {
-    const { speakers, location } = this.props;
+    const { speakers } = this.props;
     return (
       <div className={styles.container}>
-        {speakers.map(speaker => <Speaker key={speaker.id} speaker={speaker} location={location} />)}
+        {speakers.map(speaker => <Speaker key={speaker.id} speaker={speaker} />)}
       </div>
     );
   }
@@ -21,7 +25,6 @@ class List extends React.PureComponent {
 
 List.propTypes = {
   speakers: React.PropTypes.array,
-  location: React.PropTypes.object,
 };
 
 List.defaultProps = {

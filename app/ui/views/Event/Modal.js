@@ -16,6 +16,10 @@ import Checkbox from '../../components/Events/Checkbox';
 import styles from './Modal.scss';
 
 class Modal extends React.PureComponent {
+  shouldComponentUpdate(nextProps) {
+    return nextProps.checked !== this.props.checked;
+  }
+
   render() {
     const { event, eventModerators, eventSpeakers, eventGuests, location, checked, onRequestClose, onToggle } = this.props;
     const startsAt = (

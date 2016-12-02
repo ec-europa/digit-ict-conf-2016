@@ -9,6 +9,10 @@ import { Link } from 'react-router';
 import styles from './Speaker.scss';
 
 class Speaker extends React.PureComponent {
+  shouldComponentUpdate() {
+    return false;
+  }
+
   render() {
     const { speaker } = this.props;
     return (

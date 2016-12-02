@@ -18,9 +18,13 @@ import events from '../../../content/events.json';
 // Styles
 import View from '../../ui/views/Programme';
 
-class Programme extends React.Component {
+class Programme extends React.PureComponent {
   componentDidMount() {
     this.props.onUpdateHeaderTitle('Programme');
+  }
+
+  shouldComponentUpdate(nextProps) {
+    return nextProps.schedule !== this.props.schedule;
   }
 
   render() {
