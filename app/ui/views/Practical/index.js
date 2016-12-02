@@ -106,8 +106,6 @@ class Practical extends React.PureComponent {
         <div className={styles.header}>
           <h1>Practical</h1>
         </div>
-        <h2>Registration</h2>
-        <p>The event is open to EU institutions&apos; staff only. The registration is available <a href="https://scic.ec.europa.eu/fmi/ezreg/DIGITEC2016/start" target="_blank" rel="noopener noreferrer">here</a>.</p>
         <h2>How to get to SQUARE Brussels?</h2>
         <div>
           SQUARE - Brussels Meeting Centre<br />
