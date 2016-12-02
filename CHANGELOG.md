@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.12.0"></a>
+# [1.12.0](https://github.com/ec-europa/digit-ict-conf-2016/compare/v1.11.0...v1.12.0) (2016-12-02)
+
+
+### Bug Fixes
+
+* **url:** add /digitec prefix to static content ([222b224](https://github.com/ec-europa/digit-ict-conf-2016/commit/222b224))
+
+
+### Features
+
+* **content:** add static content (slides) ([#108](https://github.com/ec-europa/digit-ict-conf-2016/issues/108)) ([a6b41d5](https://github.com/ec-europa/digit-ict-conf-2016/commit/a6b41d5))
+
+
+
 <a name="1.11.0"></a>
 # [1.11.0](https://github.com/ec-europa/digit-ict-conf-2016/compare/v1.10.0...v1.11.0) (2016-11-26)
 
