@@ -66,7 +66,7 @@ class Page extends React.PureComponent {
           {event.visual && (
             <img className={styles.visual} src={event.visual} alt={event.title} />
           )}
-          {event.description.map((line, index) => (<p key={index}>{line}</p>))}
+          {event.description.map((line, index) => (<p key={index} dangerouslySetInnerHTML={{ __html: line }} />))}
         </div>
         {moderatorBlock}
         {speakersBlock}
