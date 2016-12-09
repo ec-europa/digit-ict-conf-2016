@@ -50,6 +50,7 @@
     "react-dom": "15.4.1",
     "react-flip-move": "2.7.1",
     "react-helmet": "3.2.2",
+    "react-photo-gallery": "^4.2.15",
     "react-redux": "4.4.6",
     "react-router": "2.8.1",
     "react-router-scroll": "0.4.1",

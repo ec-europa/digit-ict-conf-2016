@@ -1,0 +1,47 @@
+[
+  {
+    "src": "./gallery/0_small.jpg",
+    "width": 600,
+    "height": 400,
+    "aspectRatio": 1.5,
+    "lightboxImage": {
+      "src": "./gallery/0_large.jpg"
+    }
+  },
+  {
+    "src": "./gallery/1_small.jpg",
+    "width": 600,
+    "height": 400,
+    "aspectRatio": 1.5,
+    "lightboxImage": {
+      "src": "./gallery/1_large.jpg"
+    }
+  },
+  {
+    "src": "./gallery/1.a_small.jpg",
+    "width": 600,
+    "height": 400,
+    "aspectRatio": 1.5,
+    "lightboxImage": {
+      "src": "./gallery/1.a_large.jpg"
+    }
+  },
+  {
+    "src": "./gallery/2_small.jpg",
+    "width": 600,
+    "height": 400,
+    "aspectRatio": 1.5,
+    "lightboxImage": {
+      "src": "./gallery/2_large.jpg"
+    }
+  },
+  {
+    "src": "./gallery/2.a_small.jpg",
+    "width": 600,
+    "height": 400,
+    "aspectRatio": 1.5,
+    "lightboxImage": {
+      "src": "./gallery/2.a_large.jpg"
+    }
+  }
+]
