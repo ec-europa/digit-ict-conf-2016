@@ -108,6 +108,8 @@
     "There is a lot of confusion about what user experience is and what it encompasses. In this workshop you will discover that user experience is much more than a designers job. That everybody can affect the experience of citizens no matter their role.",
     "UX consultant Paul Boag will introduce you to ways you can better understand our users. He will also teach you how to identify the problem areas in the users experience.",
     "By the end of the session you will be ready to start undertaking user research. Ready to start improving the user's experience.",
+    "<span style=\"font-size:1.5em;font-weight:300;\">Slides</span>",
+    "<a href=\"http://www.slideshare.net/boagworld/building-a-user-experience-culture\" target=\"_blank\">Open Paul Boag's slides on SlideShare</a>",
     "<iframe src=\"//www.slideshare.net/slideshow/embed_code/key/pu32iHu3fbpacd\" width=\"595\" height=\"485\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\" style=\"border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;\" allowfullscreen> </iframe>"
   ],
   "speakers": ["paulboag"],
@@ -132,7 +134,11 @@
   "ends": "15:30",
   "title": "Open Source: the future for the European institutions",
   "venue": "Room 213-215",
-  "description": [],
+  "description": [
+    "<span style=\"font-size:1.5em;font-weight:300;\">Slides</span>",
+    "<a href=\"http://www.slideshare.net/ggreve/digitecpanel-69684563\" target=\"_blank\">Open Georg Greve's slides on SlideShare</a>",
+    "<iframe src=\"//www.slideshare.net/slideshow/embed_code/key/Mha6wSNwmMcNgU\" width=\"595\" height=\"485\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\" style=\"border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;\" allowfullscreen></iframe>"
+  ],
   "moderator": "pierredamas",
   "speakers": ["juliareda", "georggreve"],
   "color": "yellow",
@@ -173,7 +179,11 @@
     "- What digital and open data approaches are there for public administration processes?",
     "- How important is net neutrality in this context?",
     "- What should be the role of ICT in the workings of the public sector?",
-    "- How can new technology make a positive difference in public administrations and service delivery?"
+    "- How can new technology make a positive difference in public administrations and service delivery?",
+    "<span style=\"font-size:1.5em;font-weight:300;\">Slides</span>",
+    "<a href=\"/digitec/static/Mercedes-Fuertes-Net-neutrality-2-Bruselas.pptx\">Download Mercedes Fuertes' slides</a>",
+    "<a href=\"/digitec/static/GalettaPE-28-11-2016Presentation.pptx\">Download Diana Urania Galetta's slides</a>",
+    "<a href=\"/digitec/static/DIGITEC_2016_M.RUTE.pptx\">Download Maive Rute's slides</a>"
   ],
   "moderator": "pierfrancescosabbatucci",
   "speakers": ["mercedesfuertes", "dianauraniagaletta", "prabhatagarwal", "maiverute"],
