@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.14.0"></a>
+# [1.14.0](https://github.com/ec-europa/digit-ict-conf-2016/compare/v1.13.0...v1.14.0) (2016-12-26)
+
+
+### Features
+
+* **content:** upload new slides ([58e23ed](https://github.com/ec-europa/digit-ict-conf-2016/commit/58e23ed))
+* **design:** add multiple small design enhancements ([#96](https://github.com/ec-europa/digit-ict-conf-2016/issues/96)) ([ad6ffe8](https://github.com/ec-europa/digit-ict-conf-2016/commit/ad6ffe8))
+
+
+
 <a name="1.13.0"></a>
 # [1.13.0](https://github.com/ec-europa/digit-ict-conf-2016/compare/v1.12.0...v1.13.0) (2016-12-07)
 
