@@ -2,12 +2,13 @@
 @import '../../theme/breakpoints';
 
 .container {
-  max-width: $max-width;
-  margin: auto;
   padding: $header-height 1em 2em;
 }
 
 .header {
+  max-width: $max-width;
+  margin: auto;
+
   @include mappy-bp(max medium) {
     display: none;
   }

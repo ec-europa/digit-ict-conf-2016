@@ -28,7 +28,7 @@ class View extends React.Component {
   }
 
   componentDidMount() {
-    setTimeout(() => this.loadMorePhotos(), 300);
+    setTimeout(() => this.loadMorePhotos(), 500);
     window.addEventListener('scroll', this.handleScroll);
   }
 
@@ -69,7 +69,9 @@ class View extends React.Component {
           <div>
             <Gallery photos={photos} />
             {!loadedAll && (
-              <p>Load more...</p>
+              <div className={styles.clearfix}>
+                <p className="u-pt-1rem">Keep scrolling down to load more pictures!</p>
+              </div>
             )}
           </div>
         ) : (

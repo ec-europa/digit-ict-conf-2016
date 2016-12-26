@@ -9,6 +9,15 @@
     }
   },
   {
+    "src": "./gallery/1.a_small.jpg",
+    "width": 600,
+    "height": 400,
+    "aspectRatio": 1.5,
+    "lightboxImage": {
+      "src": "./gallery/1.a_large.jpg"
+    }
+  },
+  {
     "src": "./gallery/1_small.jpg",
     "width": 600,
     "height": 400,
@@ -18,12 +27,12 @@
     }
   },
   {
-    "src": "./gallery/1.a_small.jpg",
+    "src": "./gallery/2.a_small.jpg",
     "width": 600,
     "height": 400,
     "aspectRatio": 1.5,
     "lightboxImage": {
-      "src": "./gallery/1.a_large.jpg"
+      "src": "./gallery/2.a_large.jpg"
     }
   },
   {
@@ -36,12 +45,300 @@
     }
   },
   {
-    "src": "./gallery/2.a_small.jpg",
+    "src": "./gallery/3_small.jpg",
     "width": 600,
     "height": 400,
     "aspectRatio": 1.5,
     "lightboxImage": {
-      "src": "./gallery/2.a_large.jpg"
+      "src": "./gallery/3_large.jpg"
+    }
+  },
+  {
+    "src": "./gallery/6.a_small.jpg",
+    "width": 575,
+    "height": 400,
+    "aspectRatio": 1.4375,
+    "lightboxImage": {
+      "src": "./gallery/6.a_large.jpg"
+    }
+  },
+  {
+    "src": "./gallery/7_small.jpg",
+    "width": 600,
+    "height": 400,
+    "aspectRatio": 1.5,
+    "lightboxImage": {
+      "src": "./gallery/7_large.jpg"
+    }
+  },
+  {
+    "src": "./gallery/8_small.jpg",
+    "width": 600,
+    "height": 400,
+    "aspectRatio": 1.5,
+    "lightboxImage": {
+      "src": "./gallery/8_large.jpg"
+    }
+  },
+  {
+    "src": "./gallery/9_small.jpg",
+    "width": 600,
+    "height": 400,
+    "aspectRatio": 1.5,
+    "lightboxImage": {
+      "src": "./gallery/9_large.jpg"
+    }
+  },
+  {
+    "src": "./gallery/10_small.jpg",
+    "width": 600,
+    "height": 400,
+    "aspectRatio": 1.5,
+    "lightboxImage": {
+      "src": "./gallery/10_large.jpg"
+    }
+  },
+  {
+    "src": "./gallery/10.a_small.jpg",
+    "width": 600,
+    "height": 400,
+    "aspectRatio": 1.5,
+    "lightboxImage": {
+      "src": "./gallery/10.a_large.jpg"
+    }
+  },
+  {
+    "src": "./gallery/11 (2)_small.jpg",
+    "width": 534,
+    "height": 400,
+    "aspectRatio": 1.335,
+    "lightboxImage": {
+      "src": "./gallery/11 (2)_large.jpg"
+    }
+  },
+  {
+    "src": "./gallery/11_small.jpg",
+    "width": 600,
+    "height": 400,
+    "aspectRatio": 1.5,
+    "lightboxImage": {
+      "src": "./gallery/11_large.jpg"
+    }
+  },
+  {
+    "src": "./gallery/12_small.jpg",
+    "width": 600,
+    "height": 400,
+    "aspectRatio": 1.5,
+    "lightboxImage": {
+      "src": "./gallery/12_large.jpg"
+    }
+  },
+  {
+    "src": "./gallery/12.a_small.jpg",
+    "width": 600,
+    "height": 400,
+    "aspectRatio": 1.5,
+    "lightboxImage": {
+      "src": "./gallery/12.a_small.jpg"
+    }
+  },
+  {
+    "src": "./gallery/13_small.jpg",
+    "width": 600,
+    "height": 400,
+    "aspectRatio": 1.5,
+    "lightboxImage": {
+      "src": "./gallery/13_large.jpg"
+    }
+  },
+  {
+    "src": "./gallery/14_small.jpg",
+    "width": 600,
+    "height": 400,
+    "aspectRatio": 1.5,
+    "lightboxImage": {
+      "src": "./gallery/14_large.jpg"
+    }
+  },
+  {
+    "src": "./gallery/14.a_small.jpg",
+    "width": 600,
+    "height": 400,
+    "aspectRatio": 1.5,
+    "lightboxImage": {
+      "src": "./gallery/14.a_large.jpg"
+    }
+  },
+  {
+    "src": "./gallery/15.a_small.jpg",
+    "width": 534,
+    "height": 400,
+    "aspectRatio": 1.335,
+    "lightboxImage": {
+      "src": "./gallery/15.a_large.jpg"
+    }
+  },
+  {
+    "src": "./gallery/15_small.jpg",
+    "width": 600,
+    "height": 400,
+    "aspectRatio": 1.5,
+    "lightboxImage": {
+      "src": "./gallery/15_large.jpg"
+    }
+  },
+  {
+    "src": "./gallery/16_small.jpg",
+    "width": 534,
+    "height": 400,
+    "aspectRatio": 1.335,
+    "lightboxImage": {
+      "src": "./gallery/16_large.jpg"
+    }
+  },
+  {
+    "src": "./gallery/18_small.jpg",
+    "width": 600,
+    "height": 400,
+    "aspectRatio": 1.5,
+    "lightboxImage": {
+      "src": "./gallery/18_large.jpg"
+    }
+  },
+  {
+    "src": "./gallery/19_small.jpg",
+    "width": 600,
+    "height": 400,
+    "aspectRatio": 1.5,
+    "lightboxImage": {
+      "src": "./gallery/19_large.jpg"
+    }
+  },
+  {
+    "src": "./gallery/20_small.jpg",
+    "width": 600,
+    "height": 400,
+    "aspectRatio": 1.5,
+    "lightboxImage": {
+      "src": "./gallery/20_large.jpg"
+    }
+  },
+  {
+    "src": "./gallery/21_small.jpg",
+    "width": 600,
+    "height": 400,
+    "aspectRatio": 1.5,
+    "lightboxImage": {
+      "src": "./gallery/21_large.jpg"
+    }
+  },
+  {
+    "src": "./gallery/22_small.jpg",
+    "width": 600,
+    "height": 400,
+    "aspectRatio": 1.5,
+    "lightboxImage": {
+      "src": "./gallery/22_large.jpg"
+    }
+  },
+  {
+    "src": "./gallery/23_small.jpg",
+    "width": 600,
+    "height": 400,
+    "aspectRatio": 1.5,
+    "lightboxImage": {
+      "src": "./gallery/23_large.jpg"
+    }
+  },
+  {
+    "src": "./gallery/24_small.jpg",
+    "width": 600,
+    "height": 400,
+    "aspectRatio": 1.5,
+    "lightboxImage": {
+      "src": "./gallery/24_large.jpg"
+    }
+  },
+  {
+    "src": "./gallery/25_small.jpg",
+    "width": 600,
+    "height": 400,
+    "aspectRatio": 1.5,
+    "lightboxImage": {
+      "src": "./gallery/25_large.jpg"
+    }
+  },
+  {
+    "src": "./gallery/26_small.jpg",
+    "width": 600,
+    "height": 400,
+    "aspectRatio": 1.5,
+    "lightboxImage": {
+      "src": "./gallery/26_large.jpg"
+    }
+  },
+  {
+    "src": "./gallery/27_small.jpg",
+    "width": 600,
+    "height": 400,
+    "aspectRatio": 1.5,
+    "lightboxImage": {
+      "src": "./gallery/27_large.jpg"
+    }
+  },
+  {
+    "src": "./gallery/28_small.jpg",
+    "width": 600,
+    "height": 400,
+    "aspectRatio": 1.5,
+    "lightboxImage": {
+      "src": "./gallery/28_large.jpg"
+    }
+  },
+  {
+    "src": "./gallery/29_small.jpg",
+    "width": 600,
+    "height": 400,
+    "aspectRatio": 1.5,
+    "lightboxImage": {
+      "src": "./gallery/29_large.jpg"
+    }
+  },
+  {
+    "src": "./gallery/30_small.jpg",
+    "width": 600,
+    "height": 400,
+    "aspectRatio": 1.5,
+    "lightboxImage": {
+      "src": "./gallery/30_large.jpg"
+    }
+  },
+  {
+    "src": "./gallery/31_small.jpg",
+    "width": 400,
+    "height": 600,
+    "aspectRatio": 0.6667,
+    "lightboxImage": {
+      "src": "./gallery/31_large.jpg"
+    }
+  },
+  {
+    "src": "./gallery/32_small.jpg",
+    "width": 600,
+    "height": 400,
+    "aspectRatio": 1.5,
+    "lightboxImage": {
+      "src": "./gallery/32_large.jpg"
+    }
+  },
+  {
+    "src": "./gallery/33 (1)_small.jpg",
+    "width": 600,
+    "height": 400,
+    "aspectRatio": 1.5,
+    "lightboxImage": {
+      "src": "./gallery/33 (1)_large.jpg"
     }
   }
 ]
