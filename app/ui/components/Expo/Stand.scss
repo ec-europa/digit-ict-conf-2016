@@ -50,7 +50,7 @@
 .number {
   position: absolute;
   left: 1em;
-  top: -2em;
+  top: -2.5em;
   height: 2em;
   width: 2em;
   background-color: #3A3A3A;
@@ -62,10 +62,11 @@
 .name {
   position: relative;
   display: block;
-  margin-top: 15px;
   color: $ict-grey-text;
-  font-size: 1.1em;
   text-decoration: none;
+  font-size: 1.1em;
+  line-height: 1.4;
+  margin-top: 1em;
 
   .item:hover &,
   .item:focus &,
@@ -76,9 +77,9 @@
 
 .title {
   position: relative;
-  margin-top: 4px;
+  margin-top: 0.8em;
   color: $ict-blue;
-  font-size: 0.9em;
+  font-size: 0.85em;
   line-height: 1.4;
 }
 

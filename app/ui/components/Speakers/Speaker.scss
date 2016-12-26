@@ -50,9 +50,9 @@
   position: relative;
   display: block;
   color: $ict-grey-text;
-  font-weight: 500;
   text-decoration: none;
-  font-size: 1.05em;
+  font-size: 1.1em;
+  line-height: 1.4;
 
   .item:hover &,
   .item:focus &,
@@ -63,7 +63,7 @@
 
 .title {
   position: relative;
-  margin-top: 0.4em;
+  margin-top: 0.8em;
   color: $ict-blue;
   font-size: 0.85em;
   line-height: 1.4;
