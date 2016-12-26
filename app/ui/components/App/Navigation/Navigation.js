@@ -33,12 +33,13 @@ class Navigation extends React.PureComponent {
 
   componentDidMount() {
     this.headroom = new Headroom(this.header, {
-      offset: 80,
-      tolerance: 6,
+      offset: 0,
+      tolerance: 5,
       classes: {
         initial: styles.headroom,
         pinned: styles.headroomPinned,
         unpinned: styles.headroomUnpinned,
+        top: styles.headroomTop,
       },
     });
 
