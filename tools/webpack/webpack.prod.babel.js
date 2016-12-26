@@ -37,29 +37,26 @@ module.exports = require('./webpack.base.babel')({
     fallbackLoader: 'style-loader',
     loader: 'css-loader?-autoprefixer&modules&importLoaders=1!postcss-loader!sass',
   }),
-
-  // In production, we minify our CSS with cssnano
-  postcssPlugins: [
-    cssnext(),
-    postcssReporter({
-      clearMessages: true,
-    }),
-  ],
   plugins: [
+    new webpack.LoaderOptionsPlugin({
+      options: {
+        context: __dirname,
+        publicPath: config.prod.publicPath,
+        postcss: [
+          cssnext(),
+          postcssReporter({
+            clearMessages: true,
+          }),
+        ],
+      },
+    }),
+
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
       children: true,
       minChunks: 2,
       async: true,
     }),
-
-
-    // OccurrenceOrderPlugin is needed for long-term caching to work properly.
-    // See http://mxs.is/googmv
-    new webpack.optimize.OccurrenceOrderPlugin(true),
-
-    // Merge all duplicate modules
-    new webpack.optimize.DedupePlugin(),
 
     // Minify and optimize the JavaScript
     new webpack.optimize.UglifyJsPlugin({
@@ -88,7 +85,9 @@ module.exports = require('./webpack.base.babel')({
     }),
 
     // Extract the CSS into a seperate file
-    new ExtractTextPlugin('[name].[contenthash].css'),
+    new ExtractTextPlugin({
+      filename: '[name].[contenthash].css',
+    }),
 
     // Put it in the end to capture all the HtmlWebpackPlugin's
     // assets manipulations and do leak its manipulations to HtmlWebpackPlugin
@@ -97,7 +96,7 @@ module.exports = require('./webpack.base.babel')({
       relativePaths: false,
       caches: {
         main: ['index.html', 'main.*'],
-        additional: [':rest:'],
+        additional: ['*.chunk.js', ':rest:'],
       },
       // Removes warning for about `additional` section usage
       safeToUseOptionalCaches: true,

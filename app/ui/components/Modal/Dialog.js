@@ -34,6 +34,10 @@ class Dialog extends React.PureComponent {
     this.modal.scrollTop = 0;
   }
 
+  shouldComponentUpdate(nextProps) {
+    return nextProps.children !== this.props.children;
+  }
+
   componentWillUnmount() {
     document.removeEventListener('keydown', this.handleKeyDown);
   }
@@ -50,6 +54,7 @@ class Dialog extends React.PureComponent {
     if (event.keyCode === 9) {
       if (this.focusableEls.length === 1) {
         event.preventDefault();
+        this.lastFocusableEl.focus();
         return;
       }
 

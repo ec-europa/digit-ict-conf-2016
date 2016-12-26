@@ -13,21 +13,24 @@ import SpeakersList from './List';
 import styles from './Speakers.scss';
 
 class Speakers extends React.PureComponent {
+  shouldComponentUpdate() {
+    return false;
+  }
+
   render() {
-    const { speakers, location } = this.props;
+    const { speakers } = this.props;
     return (
       <div className={styles.container}>
         <div className={styles.header}>
           <h1>Speakers</h1>
         </div>
-        <SpeakersList speakers={speakers} location={location} />
+        <SpeakersList speakers={speakers} />
       </div>
     );
   }
 }
 
 Speakers.propTypes = {
-  location: React.PropTypes.object,
   speakers: React.PropTypes.array,
 };
 

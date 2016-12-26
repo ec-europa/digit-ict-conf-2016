@@ -16,9 +16,13 @@ import { updateHeaderTitle } from '../../store/modules/ui/header';
 
 import View from '../../ui/views/Speakers';
 
-class Speakers extends React.Component {
+class Speakers extends React.PureComponent {
   componentDidMount() {
     this.props.onUpdateHeaderTitle('Speakers');
+  }
+
+  shouldComponentUpdate() {
+    return false;
   }
 
   render() {

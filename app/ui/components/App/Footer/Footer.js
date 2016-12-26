@@ -11,6 +11,10 @@ import commissionLogo from './images/commission.png';
 import parliamentLogo from './images/parliament.png';
 
 class Footer extends React.PureComponent {
+  shouldComponentUpdate() {
+    return false;
+  }
+
   render() {
     return (
       <footer className={styles.container}>

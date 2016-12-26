@@ -31,6 +31,10 @@ class Dialog extends React.PureComponent {
     document.addEventListener('keydown', this.handleKeyDown, true);
   }
 
+  shouldComponentUpdate(nextProps) {
+    return nextProps !== this.props;
+  }
+
   componentWillUnmount() {
     clearTimeout(this.dismissTimeout);
     document.removeEventListener('keydown', this.handleKeyDown, true);

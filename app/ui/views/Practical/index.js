@@ -22,6 +22,7 @@ class Practical extends React.PureComponent {
   componentDidMount() {
     const webtoolsMapData = document.createElement('script');
     webtoolsMapData.setAttribute('type', 'application/json');
+    /*eslint-disable */
     webtoolsMapData.innerHTML = `
       {
         "service": "map",
@@ -84,6 +85,7 @@ class Practical extends React.PureComponent {
         ]
       }
     `;
+    /*eslint-enable */
     this.map.appendChild(webtoolsMapData);
 
     $script('//europa.eu/webtools/load.js', () => {
@@ -94,14 +96,16 @@ class Practical extends React.PureComponent {
     });
   }
 
+  shouldComponentUpdate() {
+    return false;
+  }
+
   render() {
     return (
       <div className={styles.container}>
         <div className={styles.header}>
           <h1>Practical</h1>
         </div>
-        <h2>Registration</h2>
-        <p>The event is open to EU institutions&apos; staff only. The registration is available <a href="https://scic.ec.europa.eu/fmi/ezreg/DIGITEC2016/start" target="_blank" rel="noopener noreferrer">here</a>.</p>
         <h2>How to get to SQUARE Brussels?</h2>
         <div>
           SQUARE - Brussels Meeting Centre<br />

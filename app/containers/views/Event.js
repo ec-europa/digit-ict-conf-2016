@@ -22,7 +22,7 @@ import EventNotFound from '../../ui/views/Event/NotFound';
 import { toggleEvent } from '../../store/modules/schedule';
 import { updateHeaderTitle } from '../../store/modules/ui/header';
 
-class Event extends React.Component {
+class Event extends React.PureComponent {
   constructor(props) {
     super(props);
 
@@ -44,6 +44,10 @@ class Event extends React.Component {
     }
   }
 
+  shouldComponentUpdate(nextProps) {
+    return nextProps.schedule !== this.props.schedule;
+  }
+
   render() {
     const { event } = this.state;
 
@@ -63,14 +67,16 @@ class Event extends React.Component {
     const eventSpeakers = speakers
       .filter(speaker => event.speakers.indexOf(speaker.id) > -1)
       .sort((a, b) => event.speakers.indexOf(a.id) - event.speakers.indexOf(b.id));
+    const eventGuests = speakers
+      .filter(speaker => event.guests && event.guests.indexOf(speaker.id) > -1);
 
     return (
       <div>
         <Helmet title={event.title} />
         {
           isModal
-            ? <EventModal event={event} eventModerators={eventModerators} eventSpeakers={eventSpeakers} location={location} checked={isChecked} onToggle={onToggleEvent} onRequestClose={onRequestClose} />
-            : <EventPage event={event} eventModerators={eventModerators} eventSpeakers={eventSpeakers} location={location} />
+            ? <EventModal event={event} eventModerators={eventModerators} eventSpeakers={eventSpeakers} eventGuests={eventGuests} location={location} checked={isChecked} onToggle={onToggleEvent} onRequestClose={onRequestClose} />
+            : <EventPage event={event} eventModerators={eventModerators} eventSpeakers={eventSpeakers} eventGuests={eventGuests} location={location} />
         }
       </div>
     );

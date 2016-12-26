@@ -1,0 +1,204 @@
+[
+  {
+    "id": "digit-strategic-priorities",
+    "title": "DIGIT Strategic priorities 2016-2020",
+    "subtitle": "How will IT in the Commission look like in 2020?",
+    "number": 1,
+    "description": [
+      "The vision of the Directorate-General for Informatics (DIGIT) is to lead the digital transformation within the Commission so that it can deliver EU policy better, more efficiently and more productively and fully seize the opportunities offered by new technologies. In order to reach its vision while also contributing to the Commission's high-level political priorities, DIGIT has set itself a challenging Strategic Plan for the period 2016-2020.",
+      "We invite you to visit the dedicated stand at DIGITEC to get a glimpse of our strategic priorities and the ambitious objectives DIGIT aims to deliver over the next few years."
+    ],
+    "visual": "./stands/digit-strategic-priorities.jpg"
+  },
+  {
+    "id": "ep-programme-map",
+    "title": "EP IT Programme & EP Business map",
+    "subtitle": "Improving IT/Business collaboration",
+    "number": 2,
+    "description": [
+      "Come by the stand dedicated to the EP IT Programme and the EP Business map to understand why these two tools can help shape the collaboration between IT and Business inside the EP in the future.",
+      "The EP Business map is a formal business framework describing what the European Parliament does and how it works. You can discover main usages of the map by navigating it, going from business areas to activities and exploring projects, processes and supporting applications.",
+      "Among other things, the EP Business map is used to support the creation of the annual EP IT Programme. The IT Programme is a portfolio of all IT initiatives of the EP: everything that happens in IT, from day-to-day maintenance of the infrastructure, evolutions on existing applications, ongoing and future projects, and much more.",
+      "The EP Business map will help identify and visualise to which business activities the initiatives in the IT Programme are related. In this way both the EP Business map and the IT Programme foster a better and deeper collaboration between business and IT, help avoid the multiplication of efforts, and provide visibility and transparency to what is going on in the EP's secretariat. "
+    ],
+    "visual": "./stands/ep-programme-map.jpg"
+  },
+  {
+    "id": "isa-2",
+    "title": "ISA²",
+    "subtitle": "IT solutions for less bureaucracy",
+    "number": 3,
+    "description": [
+      "The ISA² programme of the European Commission helps public administrations, businesses and citizens by cutting down red tape in cross border transactions. ISA² supports more than 20 IT-solutions and services, in areas such as:",
+      "• Semantic interoperability",
+      "• Access to data / data sharing / open data",
+      "• Geospatial solutions",
+      "• e-Procurement / e-Invoicing",
+      "• Decision making and legislation",
+      "• Key and generic interoperability enablers.",
+      "Most of the solutions and services are available free of cost."
+    ],
+    "visual": "./stands/isa-2.jpg"
+  },
+  {
+    "id": "ict-innovation-service",
+    "title": "ITEC innovation service",
+    "subtitle": "Effective technological innovation inside the EP",
+    "number": 4,
+    "description": [
+      "How to stimulate ICT innovation inside the European Parliament? The ICT Innovation Service is the answer.",
+      "Performing permanent technology scouting, the service aims at fostering, engaging and introducing effective technological innovation with potential relevance to EP activities.",
+      "We believe in open innovation and any small or big idea will be put under our radar and may be translated into a project that will create a change. A change that will make the life of our end-users much better."
+    ],
+    "visual": "./stands/ict-innovation-service.jpg"
+  },
+  {
+    "id": "publications-office",
+    "title": "Publications Office",
+    "subtitle": "Facilitating discovery, exchange and reuse of EU information",
+    "number": 5,
+    "description": [
+      "The Publications Office provides a common access and reuse point for EU law and other public information from EU institutions, such as official texts, publications and open data. Apart from delivering state-of-the-art services in the three key areas of information management (access and reuse, production, long-term preservation), the Publications Office has also established itself as a recognised standardisation forum. It has taken a leading role in standardising metadata and formats for the exchange of information, in particular in the legal domain, and it manages a number of information management tools that are used to this end by the EU institutions, agencies and bodies, national and regional administrations in Europe, as well as national governments and private users around the world.",
+      "<a href=\"/digitec/static/PublicationsOffice_minipresentations_DIGITEC2016.ppt\">Download our slides</a>"
+    ],
+    "visual": "./stands/publications-office.jpg"
+  },
+  {
+    "id": "big-data-analytics",
+    "title": "Big data & analytics",
+    "subtitle": "How to make the right decision, at the right time",
+    "number": 6,
+    "description": [
+      "How can we make informed decisions without data? Big data and data analytics are about finding effective ways to combine different sources of data to generate actionable insights, to make predictions about the future and to support decision-making with factual and up-to-date evidence. It's about telling new stories starting from data.",
+      "See what we already did at the EC and what we can do for you.",
+      "Pass by our stand and learn: Why are big data and data analytics more and more important and what should I know about it, Why \"the question is the answer\", Who is DORIS and what is VICTORY, What should I do if I want to benefit from it… and more.",
+      "&nbsp;",
+      "<span style=\"font-size:2em\">Mini presentations and demos</span>",
+      "&nbsp;",
+      "<span style=\"font-size:1.5em\">Morning coffee break</span>",
+      "&nbsp;",
+      "<strong>11:05 - 11:15</strong>&emsp;“Now-casting”: How JRC and EUROSTAT are using online data sources  to \"now-cast\" key indicators for policy-making (JRC)",
+      "<strong>11:20 - 11:30</strong>&emsp;EUROSTAT experiences in using Wikipedia as a data source (EUROSTAT)",
+      "&nbsp;",
+      "<span style=\"font-size:1.5em\">Lunch</span>",
+      "&nbsp;",
+      "<strong>12:50 - 13:00</strong>&emsp;DORIS: How DG CONNECT is using big data to analyse and follow up on results from public consultations (DG CNECT)",
+      "<strong>13:00 - 13:10</strong>&emsp;VICTORY: How DG CONNECT is using data analytics to collect detailed and real-time data on ICT vacancies in Europe (DG CNECT)",
+      "<strong>13:15 - 13:25</strong>&emsp;EU legislation: OP",
+      "<span style=\"margin-left:2em;display:inline-block\">A: The EU legislative database is fully online, available to mash up with any other tool</span>",
+      "<span style=\"margin-left:2em;display:inline-block\">B: Public participation in the legislative process</span>",
+      "<span style=\"margin-left:2em;display:inline-block\">C: What EU laws are in force about climate change?</span>",
+      "<span style=\"margin-left:2em;display:inline-block\">Data visualisation: A catalogue of inter-institutionally reusable visualisation tools + examples</span>",
+      "<strong>13:40 - 13:50</strong>&emsp;RIO Analytics and Country Reports: How the JRC Research and Innovation Observatory produces yearly Country Reports using modern IT tools and collaborative effort (JRC)",
+      "<strong>13:50 - 14:00</strong>&emsp;Road congestion analysis using TomTom + JRC Urban issues (JRC)",
+      "<strong>14:00 - 14:10</strong>&emsp;European Media Monitor and <a href=\"http://emm.newsbrief.eu/BigScreenMap/\" target=\"_blank\" rel=\"noopener noreferrer\">BigScreen</a> application (JRC)",
+      "&nbsp;",
+      "<span style=\"font-size:1.5em\">Afternoon coffee break</span>",
+      "&nbsp;",
+      "<strong>15:35 - 15:45</strong>&emsp;Why in data analytics \"The question is the answer\"? What business questions can data analytics answer? (DIGIT)",
+      "<strong>15:50 - 16:00</strong>&emsp;Data sources - What can be a data source? Examples. (EUROSTAT)"
+    ],
+    "visual": "./stands/big-data-analytics.jpg"
+  },
+  {
+    "id": "cert-eu",
+    "title": "CERT-EU",
+    "subtitle": "Cybersecurity portal and monitoring service",
+    "number": 7,
+    "description": [
+      "CERT-EU is the cybersecurity information exchange and incident response coordination hub of all EU institutions, bodies and agencies. It provides operational support for incident prevention, detection, mitigation and response. At the stand, CERT-EU will demonstrate a new customer portal that will be available to the EU institutions, bodies and agencies. It will also present its cybersecurity media monitoring service."
+    ],
+    "visual": "./stands/cert-eu.jpg"
+  },
+  {
+    "id": "cyber-attack",
+    "title": "Get to know how a cyber attack can affect your device",
+    "subtitle": "Demo by  EC & EP ICT experts",
+    "number": 8,
+    "description": [
+      "By visiting this stand you will understand better what a cyber attack works through several demos prepared for this occasion. The presentations will include the vectors that are most commonly used by cyber criminals and tips on how users can protect their data. Plus, you cannot miss the chance to ask your questions to skilled ICT experts!",
+      "Looking forward to welcome you at the stand."
+    ],
+    "visual": "./stands/cyber-attack.jpg"
+  },
+  {
+    "id": "mobility",
+    "title": "Mobility",
+    "subtitle": "The working environment that follows you",
+    "number": 9,
+    "description": [
+      "Find out how the European Commission and the European Parliament address today’s challenge of a mobile working environment.",
+      "How do the institutions manage to provide access securely to the professional environment, both from inside and outside the institutions? What infrastructure and equipment has each put in place and which are the applications and services available? And what about the users – are they familiar with this way of working?"
+    ],
+    "visual": "./stands/mobility.jpg"
+  },
+  {
+    "id": "building-blocks",
+    "title": "Reusable components",
+    "subtitle": "Building blocks in EC & EP",
+    "number": 10,
+    "description": [
+      "Reusable components allow solution architects, developers and managers of development teams to avoid starting the construction of their Information Systems from scratch, cutting development costs and improving time to market of their planned solutions. These reusable components are also an integral part of the reference architecture.",
+      "The European Commission presents in this stand its set of Reusable Components, focusing in particular on Electronic Signature, Electronic Workflow and Enterprise Search.",
+      "The European Parliament presents KM Redmap, the reusable component supporting the KM Portal, and the PRINTSHOP server component, which offers services ranging from the creation of documents of different formats starting from XML sources to sending generated files to individual email addresses and/or printers."
+    ],
+    "visual": "./stands/building-blocks.jpg"
+  },
+  {
+    "id": "project-management-methodologies",
+    "title": "Project Management methodologies",
+    "subtitle": "Enhanced project effectiveness",
+    "number": 11,
+    "description": [
+      "In the stand dedicated to Project Management, the European Commission and the European Parliament join forces to tell you more about how Project Management methodologies help Project Managers deliver solutions and benefits to their organisations through the effective management of project work, ensuring enhanced project effectiveness, improved stakeholders communication and collaboration, better monitoring and control of projects’ quality, risks, time, and resources.",
+      "ENGAGE is a Project Management method used at the European Parliament. It is inspired by well-established methodologies such as PM², PMM4EP, PMI, PRINCE2, but it is also tailored to meet the EP’s organisational singularities, following the EP’s methodological framework that covers different project areas, from Business Process Analysis, to Software development and IT Infrastructure.",
+      "PM² is a Project Management Methodology developed and sponsored by the European Commission. It is a light and easy to implement methodology suitable for any type of project. It incorporates elements from a wide range of globally accepted best practices as well as operational experience from various EU Institutions.",
+      "<strong>Join the discussion in the lounge 13.30 – 14.00</strong>",
+      "<strong>Open PM² Initiative: One common PM Methodology open to all EU Institutions, Member States, Contractors, and EU Citizens</strong>"
+    ],
+    "visual": "./stands/project-management-methodologies.jpg"
+  },
+  {
+    "id": "digital-workspace",
+    "title": "IT training services",
+    "subtitle": "Master your Digital workplace",
+    "number": 12,
+    "description": [
+      "In this stand dedicated to the training services of European Commission and European Parliament you will learn more about how both institutions are preparing its users for a digital workplace.",
+      "The Digital Training Services (DTS) and the Technology team work together in DG HR.B3 to empower staff of the European Commission to achieve a digital transformation. DTS offers and organises end-user and IT specialist training for all staff members of the European Commission, Agencies and Other Institutions, offering different learning formats to suit different learning styles.",
+      "The learn.IT team within the Professional Training Unit of DG PERS is responsible for organising IT courses for end users and IT specialists, as well as Project Management and Business Analysis courses for the staff of the European Parliament. The mode of delivery varies from classroom sessions, tailor-made and off-the-shelf eLearning on our new platform learn.ONLINE to attendance at conferences and public sessions of courses organised by external providers."
+    ],
+    "visual": "./stands/digital-workspace.jpg"
+  },
+  {
+    "id": "interhack",
+    "title": "InterHack",
+    "subtitle": "From ideas to solutions",
+    "number": 13,
+    "description": [
+      "The first inter-institutional hackathon brought together IT professionals from the European Parliament, the European Commission and the Council of the EU in October.",
+      "Come by the InterHack stand and check the projects developed at InterHack, but also the lessons learned from this interinstitutional collaboration experience. You will be able to see how the whole innovation process worked, from ideation and team formation to the actual development of a final IT product, involving different stakeholders, and how the cloud was used as a driving technology for the projects developed."
+    ],
+    "visual": "./stands/interhack.jpg"
+  },
+  {
+    "id": "smart-gastronomy-lab",
+    "title": "Special guest: Smart Gastronomy Lab",
+    "subtitle": "Innovation, gastronomy, science and technology",
+    "number": 14,
+    "description": [
+      "The Smart Gastronomy Lab is a living lab on food and culinary practices. It’s uniqueness lies on its 360°C vision of food innovation with a multidisciplinary approach mixing gastronomy, science, technology and art. As a living lab it allows co-creation, prototyping and testing in real-life conditions putting the end-user at the center of the approach. Current R&D topics of the SGL are emerging technologies such as 3D food printing, lacto-fermentation, the introduction of new ingredients in food such as insects and micro algae and the impact of different cooking process on the taste."
+    ],
+    "visual": "./stands/smart-gastronomy-lab.jpg"
+  },
+  {
+    "id": "magency",
+    "title": "Special guest: Magency",
+    "subtitle": "Collaborative and interactive meetings",
+    "number": 15,
+    "description": [
+      "Magency creates mobile apps, interactive installations, and digital shows that inspire people to share, create, and collaborate like never before. Magic inspires Magency to perceive events and trainings differently: it’s not about the technology, but using technology to transform participants from spectators into actors. With Magency’s digital solutions, from the first moment to the last, the room comes alive, as participants network, collaborate, brainstorm, and interact through numerous engaging activities. Come by the stand to be inspired and learn more about a solution that helps teams work better together, facilitates interactivity and gives everyone in a meeting a voice, regardless of the size of the group."
+    ],
+    "visual": "./stands/magency.jpg"
+  }
+]

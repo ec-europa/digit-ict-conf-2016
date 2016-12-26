@@ -14,7 +14,7 @@
     "id": "jenniferbaker",
     "firstname": "Jennifer",
     "lastname": "Baker",
-    "title": "Tech journalist and moderator",
+    "title": "Technology policy journalist and moderator",
     "bio": [
       "Jennifer has been a journalist in print, radio and television for nearly 20 years, the last 7 specialising in EU policy and legislation in the technology sector - from data protection and privacy to trade agreements; antitrust cases to copyright law; national security to public transparency.",
       "She has worked across a wide range of sectors, from editing a national daily paper in Malta, to reporting on European affairs for Middle Eastern television and has a wealth of experience in navigating the political quagmire of the EU. As well as an address book packed with insider sources and contacts in Brussels, Jennifer is skilled at translating EU policy-speak into understandable English.",
@@ -25,21 +25,60 @@
     "picture": "./speakers/Jennyfer-Baker.jpg"
   },
   {
+    "id": "catherinebearder",
+    "firstname": "Catherine",
+    "lastname": "Bearder",
+    "title": "Member of the European Parliament",
+    "bio": [
+      "Catherine Bearder was first elected to the European Parliament in 2009. A former local government councillor and development officer in major national charities, she has a long record of fighting for local people and the issues that concern them.",
+      "As Quaestor of the European Parliament, she is a member of the Bureau of the EP and is heavily involved in its ICT Working Group.",
+      "She is a member of the Parliament's Committee on the Environment, Public Health and Food Safety (ENVI) and the Committee on Internal Market and Consumer Protection (IMCO). She is also a member of the Parliament's delegation to the Joint Parliamentary Assembly between the EU and the ACP (Africa, Caribbean and Pacific Regions) which requires working with representatives from some of the poorest countries on the planet."
+    ],
+    "twitter": "@catherinemep",
+    "picture": "./speakers/Catherine-Bearder.jpg"
+  },
+  {
+    "id": "julienblanchez",
+    "firstname": "Julien",
+    "lastname": "Blanchez",
+    "title": "Global Security & Compliance Strategist at Google",
+    "bio": [
+      "Julien Blanchez is Global Security & Compliance Strategist at Google. He has worked 9 years with the company between Europe and California, where he was based lately, embedded in security engineering teams. He specializes in bridging technology innovation with market expectations, specifically on security and privacy. A European citizen, he is very keen on making technology work for everyone, in greater transparency and full trust.",
+      "He joined Google after past functions with SAP in global corporate strategy in Germany, with Barco in Singapore and The Boston Consulting Group in Brussels.",
+      "A graduate of the Université Catholique de Louvain in Belgium, he has a post-graduate degree in Maritime Sciences from the University of Antwerp and later went through an executive program at Harvard Business School.",
+      "In private he is a husband and father of three, he invests his spare time in wilderness Search & Rescue volunteering and long distance family hikes. Among other trips, he completed on bicycle with his family, a 600km autonomous north-south crossing of Syria at the dawn of the arab spring."
+    ],
+    "twitter": false,
+    "picture": "./speakers/Julien-Blanchez.jpg"
+  },
+  {
     "id": "paulboag",
     "firstname": "Paul",
     "lastname": "Boag",
     "title": "User experience consultant and expert in digital transformation",
     "bio": [
-      "Paul Boag is a user experience consultant, author and speaker. He helps organisations such as the European Commission, UCAS and Doctors Without Borders adapt to the digital world. He refocuses them on user experience and engaging with a new digitally savvy audience. "
+      "Paul Boag is a user experience consultant, author and speaker. He helps organisations such as the European Commission, UCAS and Doctors Without Borders adapt to the digital world. He refocuses them on user experience and engaging with a new digitally savvy audience."
     ],
     "twitter": "@boagworld",
     "picture": "./speakers/Paul-Boag.jpg"
   },
   {
+    "id": "frankboermeester",
+    "firstname": "Frank",
+    "lastname": "Boermeester",
+    "title": "Chief Tinkerer at Hackathons.be",
+    "bio": [
+      "Frank Boermeester is a researcher, writer and event organiser interested in technology and healthcare. Partner at Advance.Healthcare, a consulting firm specialised in digital health, Incorrigibly curious and a student for life, he spends most of his time doing analytical/research work, strategy/concept development and organising events and hackathons (e.g. Hack for Health, Hack Epilepsy, mHealth Hackathon). He is also involved in Hackathons BE (helping companies organise their own hackathons and hackathon-like events). Also an amateur coder and designer.",
+      "Earlier he co-founded an innovation journal (The Fifth Conference), he was a research analyst at management consultancy the Corporate Executive Board (London/Washington DC) and has worked for several market research firms around the world. Frank is a research psychologist by training and has published several articles in medical psychiatry. He has an MBA from the Vlerick Leuven Ghent Management School."
+    ],
+    "twitter": false,
+    "picture": "./speakers/Frank-Boermeester.jpg"
+  },
+  {
     "id": "davidborrelli",
     "firstname": "David",
     "lastname": "Borrelli",
-    "title": "Member of the European Parliament",
+    "title": "Member of the European Parliament, Europe of Freedom and Direct Democracy Group (EFDD)",
     "bio": [
       "David Borrelli has been Member of the European Parliament since 2014. He is Co-chair of Europe of Freedom and Direct Democracy Group (EFDD). He is also member of the Conference of Presidents, Committee on Industry, Research and Energy (ITRE), Committee on International Trade (INTA), Delegation for relations with Mercosur, Delegation for relations with South Africa and Delegation of the Parliamentary Assembly of the Union for the Mediterranean.",
       "He was Councillor in Treviso (2008-2013) and candidate for President of the Veneto region (2010).",
@@ -61,20 +100,26 @@
     "picture": "./speakers/Vincent-Bruneau.jpg"
   },
   {
-    "id": "luisdeeusebioramos",
-    "firstname": "Luis",
-    "lastname": "de Eusebio Ramos",
-    "title": "Deputy Director of Europol, Capabilities Department",
+    "id": "pierredamas",
+    "firstname": "Pierre",
+    "lastname": "Damas",
+    "title": "Head of Sector ''Digital Services'', DG for Informatics",
     "bio": [
-      "Mr de Eusebio has worked in the ICT industry since 1987. His first jobs were in the private sector as an electronic warfare engineer and afterwards as a radio communications systems engineer.",
-      "In 1992 he became a Member of the Senior Body of State Civil Administrators and began working for the Spanish Government in the Ministry of Industry.",
-      "From 1994 he began what would become a constant theme in his career: the modernisation of administrative processes by means of large ICT projects involving human resources (HR) and financial management. He was appointed to positions in the Ministry of Foreign Affairs (1994), Ministry of Health (1995) and the Telecommunications Market Agency (1999). Between 2002 and 2006 he was Deputy Director of the Ministry of Public Administration where he was responsible for the overall e-Government strategy of the Spanish Administration and the coordination of all Spanish Ministries.",
-      "In 2006, Mr de Eusebio was promoted to the position of Chief Information Officer of the Road Traffic National Agency in the Ministry of Interior, working in close cooperation with both the PolicÌa Nacional and the Guardia Civil. He was appointed Executive Advisor to the General Director of the Spanish National Police in 2012.",
-      "Mr de Eusebio took up the position of Deputy Director of Europol as Head of the Capabilities Department in August 2015, where he directly manages staff from ICT, HR and finance.",
-      "Mr de Eusebio graduated with Honours from the Polytechnic University of Madrid as a Telecommunications Engineer in 1988. He also holds several masters and certifications in ICT and Public Management. He speaks Spanish and English; his interests include classical music and photography."
+      "Pierre A. Damas is Head of Sector of Digital Services at DIGIT. He is responsible for projects and services touching Identity and Access Management, such as EC’s authentication system ECAS, CEF eID and eSignature. He is also responsible for the Open Source Strategy of the Commission as well as the European Parliament pilot project on auditing of free and Open Source software."
     ],
-    "twitter": false,
-    "picture": "./speakers/Eusebio-Ramos.jpg"
+    "twitter": "@damaspi",
+    "picture": "./speakers/Pierre-Damas.jpg"
+  },
+  {
+    "id": "mattdavies",
+    "firstname": "Matt",
+    "lastname": "Davies",
+    "title": "Head of Marketing, EMEA, Splunk",
+    "bio": [
+      "Matt Davies is Splunk's Head of Marketing for EMEA. Matt is responsible for developing and executing marketing strategy for all of Splunk's core platforms in EMEA. He works closely with Splunk customers to help them understand the value that new insights from machine data can deliver to their business. Matt is also one of Splunk's technical evangelists and communicates Splunk's go to market strategy in the region. Previously Matt has worked at Cordys, Oracle/BEA, Elata, Broadquay Consulting, iPlanet/Sun, Netscape and IBM. With nearly 20 years in the software industry, Matt has extensive knowledge of enterprise IT systems."
+    ],
+    "twitter": "@mattdavies_uk",
+    "picture": "./speakers/Matt-Davies.jpg"
   },
   {
     "id": "mischadohler",
@@ -93,7 +138,7 @@
     "id": "kenducatel",
     "firstname": "Ken",
     "lastname": "Ducatel",
-    "title": "Director, IT Security Directorate, DG Informatics",
+    "title": "Director, IT Security Directorate, DG for Informatics",
     "bio": [
       "After joining DIGIT as Chief Security Information Officer, Ken Ducatel was appointed Director of the newly formed IT Security Directorate. He has been leading the Commission's policy and research actions on Software and Services and Cloud Computing in DG CNECT since July 2012. Previous to that, his unit was responsible for delivering the European Commission's Cloud Strategy adopted in September 2012.",
       "Ken's earlier Commission roles include heading up the Digital Agenda for Europe Unit from 2009 to 2012, four years in the cabinet of Commissioner Reding from 2004 to 2008, Head of Sector for eEurope in 2003 and leader of the Joint Research Centre's Futures Project in Seville from 2001 to 2003.",
@@ -104,10 +149,22 @@
     "picture": "./speakers/Ken-Ducatel.jpg"
   },
   {
+    "id": "leoexter",
+    "firstname": "Leo",
+    "lastname": "Exter",
+    "title": "Leo Exter, Chief Energizer at Hackathons.be",
+    "bio": [
+      "Leo Exter is Partner at Hackathons.be – a specialist consultancy firm that helps large corporations such as BNP Paribas Fortis and Saint-Gobain accelerate innovation and rejuvenate corporate culture through innovative events such as ideation workshops, startup acceleration programs, design sprints, and hackathons.",
+      "Leo has created a multitude of events for startups (Bizcamp, Buy From Startups and established Startup Weekend in Belgium), and is currently working on the biggest startup event yet: Hack Belgium.  Over the last five years he’s directly mentored dozens of startups and managed the Microsoft Innovation Center’s Boostcamp acceleration program."
+    ],
+    "twitter": "@leoexter",
+    "picture": "./speakers/Leo-Exter.jpg"
+  },
+  {
     "id": "mercedesfuertes",
     "firstname": "Mercedes",
     "lastname": "Fuertes",
-    "title": "Professor of Administrative Law",
+    "title": "Professor of Administrative Law, University of León",
     "bio": [
       "Mercedes Fuertes is Profession of Administrative Law in the University of León (Spain) and Permanent member of the General Codification Commission in the Ministry of Justice. She has author of several monographs, chapters of collective books and articles in  legal journals.",
       "Among her books are: Urban design and a publicity or registration system, Madrid 1995 y 2001; The contractor, the sub-contractor and the Public Administrations, Madrid 1997; Municipal wireless networks. A new public service, Madrid, 2005; Net neutrality ¿reality or utopian dream? Madrid 2014;.",
@@ -146,7 +203,7 @@
     "id": "gertrudingestad",
     "firstname": "Gertrud",
     "lastname": "Ingestad",
-    "title": "Director-General of the Directorate General for Informatics",
+    "title": "Director-General of the DG for Informatics",
     "bio": [
       "Gertrud Ingestad was born in Sweden in 1958. She did her studies in languages and history and worked as a language teacher in Stockholm before joining the European Commission in 1995.",
       "Her main domain in the Commission has been resources, with a specialisation on people-and organisation-related issues, in DGT and DG CONNECT, where she also started working with IT from a digitalisation perspective. In January 2014 she joined DG DIGIT as Director for Information Systems and Interoperability Solutions, now Digital Business Solutions. Since 16 April 2016 she is Director-General of the Directorate-General for Informatics.",
@@ -194,6 +251,23 @@
     "picture": "./speakers/Dominique-Leroy.jpg"
   },
   {
+    "id": "gianpierolotito",
+    "firstname": "Gianpiero",
+    "lastname": "Lotito",
+    "title": "Founder & CEO, FacilityLive",
+    "bio": [
+      "Gianpiero Lotito is CEO and founder, with Mariuccia Teroni, of FacilityLive, the Italian high tech startup, with global ambitions, developing a next generation technology for the organisation, management and search of information with patents granted in 44 countries worldwide.",
+      "FacilityLive is considered one of the European search platforms of the future. In fact its disruptive technology, that finds exactly what you are asking for, allows people and organisations have a compelling user experience in information search.",
+      "FacilityLive raised almost 30 Million Euro of private capital and its current company valuation is 225 Million Euro. At present it is collaborating with leading Global and Pan-European companies and with world-class system integrators.",
+      "Gianpiero is a technologist, with a musical career behind, who has been working for thirty years on innovative projects in the publishing world and on technologies applied to content with Mariuccia Teroni. He was Adjunct Professor of Multimedia Publishing at the University of Milan and wrote books and articles on technology for major Italian editors like Bruno Mondadori, Sperling and Gruppo Espresso.",
+      "From 2014 Gianpiero has been Ambassador of e-Skills for Jobs: a project under the Grand Coalition for Digital Jobs of the European Commission.",
+      "In 2015 he received the Gold Medal of the city of Pavia for his commitment and contribution to technology innovation.",
+      "In 2016 he was the Innovative Entrepreneur chosen by the Italian Minister of Economic Development to represent Italy at the European Council for Competitiveness organized by the Dutch Presidency of the European Commission in Amsterdam to discuss the main challenges and opportunities arising from digitisation of industry within Europe."
+    ],
+    "twitter": false,
+    "picture": "./speakers/Gianpiero-Lotito.jpg"
+  },
+  {
     "id": "keithmartin",
     "firstname": "Keith",
     "lastname": "Martin",
@@ -203,6 +277,18 @@
     ],
     "twitter": false,
     "picture": "./speakers/Keith-Martin.jpg"
+  },
+  {
+    "id": "maresameissl",
+    "firstname": "Maresa",
+    "lastname": "Meissl",
+    "title": "Head of Unit of Information Security, Security Directorate (EC)",
+    "bio": [
+      "Maresa Meissl is currently heading the  Information Security Unit in the Commission's Security Directorate, responsible for all information security related activities, including cyber-attack response and staff accreditation. Prior to that she was policy advisor to the Commission's Security Director. She joined the European Commission in 2002 and has previously worked on digital policies in the framework of the Commission's Digital Agenda initiative. Prior to that she worked for a range of international communications providers and IT manufacturers.",
+      "She holds a PhD in communications law and economics from the Vienna University of Economics and Business Administration."
+    ],
+    "twitter": false,
+    "picture": "./speakers/Maresa-Meissl.jpg"
   },
   {
     "id": "paulmiller",
@@ -258,7 +344,7 @@
     "lastname": "Reda",
     "title": "Member of the European Parliament",
     "bio": [
-      "Julia Read was elected to the European Parliament for the Pirate Party in 2014. She is a Vice-Chair of her parliamentary group, the Greens/European Free Alliance. In the European Parliament, she serves as a coordinator for the Greens/EFA in the Committee on Internal Market & Consumer Protection (IMCO), as a member of the Legal Affairs (JURI) and Petition (PETI) Committees and was elected to the Enquiry Committee on the Emissions Scandal (\"Dieselgate\"). She co-founded the Digital Agenda intergroup. Her legislative focus is on copyright and internet policy issues. In 2015, she was responsible for the Parliament's evaluation of the Copyright Directive.",
+      "Julia Reda was elected to the European Parliament for the Pirate Party in 2014. She is a Vice-Chair of her parliamentary group, the Greens/European Free Alliance. In the European Parliament, she serves as a coordinator for the Greens/EFA in the Committee on Internal Market & Consumer Protection (IMCO), as a member of the Legal Affairs (JURI) and Petition (PETI) Committees and was elected to the Enquiry Committee on the Emissions Scandal (\"Dieselgate\"). She co-founded the Digital Agenda intergroup. Her legislative focus is on copyright and internet policy issues. In 2015, she was responsible for the Parliament's evaluation of the Copyright Directive.",
       "Born in Bonn in 1986, Julia Reda was a member of the German Social Democrats for six years before joining the Piratenpartei in 2009 amidst a debate on internet blocking. She served as chairwoman of the party's youth wing from 2010 to 2012 and is a founder of the Young Pirates of Europe. She holds an M.A. in political science and communications science from Johannes-Gutenberg-University Mainz, Germany.",
       "The global Pirate Party movement was born in 2006. Pirates, who believe in using technology for the empowerment of all, have so far enjoyed significant electoral success in Sweden, Germany, Iceland and the Czech Republic and have raised the visibility of their techno-progressive agenda across Europe."
     ],
@@ -266,19 +352,33 @@
     "picture": "./speakers/Julia-Reda.jpg"
   },
   {
-    "id": "nathalyrey",
-    "firstname": "Nathaly",
-    "lastname": "Rey",
-    "title": "EMEA Trust Manager, Google for Work",
+    "id": "maiverute",
+    "firstname": "Maive",
+    "lastname": "Rute",
+    "title": "Deputy Director-General of JRC (EC)",
     "bio": [
-      "Nathaly is a privacy and security lawyer with extensive experience in designing innovative strategies for regulatory compliance, awareness-raising, best practices; and advising on regulatory approaches for ICT.",
-      "She holds an LL.M. on IT & Telecom Law, and a Ph.D. in Law.",
-      "Before joining Google, Nathaly led the Spanish Association of Information Security (ISMS Forum) and worked as a Senior Associate at Ecija, advising multinational corporations on a wide range of privacy and security matters, from global compliance programs to audits, IT outsourcing, and cross-border data flows.",
-      "Certified Data Privacy Professional (CDPP) and Certified Cloud Security Knowledge (CCSK).",
-      "Co- Founder and member of the Board of the Cloud Security Alliance-Spanish Chapter; she is a regular lecturer at IE Law School - Compliance program, and ICT arbiter at the European Association of Arbitration."
+      "Maive Rute joined the European Commission in 2005 to become Director for the Promotion of SMEs and Entrepreneurship in DG Enterprise and Industry.",
+      "She brought in her extensive management experience in the Estonian private and semi-public sector, notably five years as CEO of KredEx, the funding body for businesses, housing, innovation and export.",
+      "In the Commission, Ms Rute also worked as Director for Biotechnologies and Agriculture Research and as Resource Director in DG Research and Innovation until April 2016.",
+      "Ms Rute graduated as an agricultural economist from the Estonian University of Life Sciences. She holds an MBA from the Danube University, Austria, and received an MA in international politics from CERIS, Brussels."
     ],
     "twitter": false,
-    "picture": "./speakers/Nathaly-Rey.jpg"
+    "picture": "./speakers/Maive-Rute.jpg"
+  },
+  {
+    "id": "pierfrancescosabbatucci",
+    "firstname": "Pierfrancesco",
+    "lastname": "Sabbatucci",
+    "title": "Advisor to the Director-General for Innovation and Technological Support (DG ITEC)",
+    "bio": [
+      "Pierfrancesco Sabbatucci is the Advisor to the Director-General for Innovation and Technological Support (DGITEC) since October 2012.",
+      "Amongst the different responsibilities he is also in charge of leasing on ICT matters with the Cabinets of the President, the Vice-President and the Secretary General of the European Parliament.",
+      "Pierfrancesco Sabbatucci joined the European Parliament in January 2004. Since then he has held a number of positions, including Administrator in DG Communication (2004-2011) and deputy to the Head of the Protocol (2011-2012).",
+      "Prior to joining Parliament administration, Pierfrancesco Sabbatucci worked as Parliamentary assistant for a Member of the European Parliament.",
+      "He graduated in 2002 from the University of Kent, obtaining a Bachelor degree in Politics and International Relations and a Master of Arts in European Studies."
+    ],
+    "twitter": false,
+    "picture": "./speakers/Pierfrancesco-Sabbatucci.jpg"
   },
   {
     "id": "andreasschwab",
@@ -293,18 +393,6 @@
     ],
     "twitter": false,
     "picture": "./speakers/Andreas-Schwab.jpg"
-  },
-  {
-    "id": "sabinesipunova",
-    "firstname": "Sabine",
-    "lastname": "Sipunova",
-    "title": "Founder of \"Sorry as a Service\"",
-    "bio": [
-      "Sabine Sipunova is a co-founder of Sorry as a Service and her passion is finding out ways how companies can build meaningful and personal relationships with their customers using technology, particularly in moments when something goes wrong. Sorry as a Service has gone through on of the best accelerators in the world Techstars and have won many awards as one of the most innovative companies in Europe. Their customers include brands like BT, Transferwise, Belron, Trouva and more.",
-      "In 2016 Sabine was featured in Forbes' Top 10 Promising Founders to Watch in the Baltics."
-    ],
-    "twitter": false,
-    "picture": "./speakers/Sabine-Sipunova.jpg"
   },
   {
     "id": "vincentsteckler",
@@ -324,7 +412,7 @@
     "id": "alexandresteiner",
     "firstname": "Alexandre",
     "lastname": "Steiner",
-    "title": "President CetSI",
+    "title": "President, Conseils et Systèmes Informatiques",
     "bio": [
       "Alexandre Steiner is currently president of CetSI, a hosting and outsourcing company specialised in digital transformation. He is also founder, president and managing partner at OiO Ventures, key player of innovation and other transaction investment support for major accounts, funds and entrepreneurs. Over time, he acquired an extensive experience in cloud computing, including as the development director at Numergy between 2012 and 2016, where he was responsible for Public Cloud Services IAAS focus, as the VP Global Portfolio and Marketing at Getronics between 2005 and 2008 and as the VP marketing Alliances Portfolio and Marketing at KPN Group between 2008 and 2012. Before that, he has held several positions in Cap Gemini such as VP Technology Services and VP Portfolio strategy. Alexandre is also very invested as a coach and mentor for start-ups."
     ],
@@ -335,7 +423,7 @@
     "id": "adinaioanavalean",
     "firstname": "Adina-Ioana",
     "lastname": "Vălean",
-    "title": "Vice-President of European Parliament",
+    "title": "Vice-President of the European Parliament",
     "bio": [
       "Adina Valean became a Member of the European Parliament on 1 January 2007, with the accession of Romania to the European Union.",
       "As an MEP, she was Rapporteur on the Connecting Europe Facility, a financing instrument which will fund €33.2 billion worth of investment to improve Europe's transport, energy and digital networks. Furthermore, as Rapporteur on the 2009 Roaming Regulation and Shadow on the subsequent dossiers, she kick-started the gradual plunge in roaming charges inside the EU, charges that will finally be eliminated in 2015.",
@@ -355,5 +443,17 @@
     ],
     "twitter": false,
     "picture": "./speakers/Giancarlo-Vilella.jpg"
+  },
+  {
+    "id": "christianzahorskiphilippe",
+    "firstname": "Christian",
+    "lastname": "Zahorski-Philippe",
+    "title": "Head of Pan-EU Sales for Amazon Web Service",
+    "bio": [
+      "Christian Zahorski-Philippe is the Head of Pan-EU Sales for Amazon Web Service (AWS) Public Sector European business unit. He manages a team of Sales Executives responsible for Amazon's cloud computing business for governments, educational institutions and nonprofits across Europe, the Middle East and Africa.",
+      "Christian has more than 10 years’ leadership experience in the IT industry across a variety of commercial IT disciplines to include Security and Compliance, Product Development Software, Business Intelligence/Analytics Software, Operations / Support, and Cloud Computing. Prior to joining Amazon Web Services 4 years ago, Christian worked for Microsoft and previously for Dell. Born in Montreal, Canada, he has lived in Europe and Africa for over 15 years, and is currently based in Dublin, Ireland."
+    ],
+    "twitter": "@czahorski",
+    "picture": "./speakers/Christian-Philippe-Zahorski.jpg"
   }
 ]
