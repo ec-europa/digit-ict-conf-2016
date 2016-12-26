@@ -14,7 +14,6 @@
 
   h1 {
     color: $ict-grey-text;
-    font-weight: 300;
   }
 }
 
@@ -31,5 +30,9 @@
       color: $ict-blue;
       text-decoration: underline;
     }
+  }
+
+  @include mappy-bp(medium) {
+    display: none;
   }
 }

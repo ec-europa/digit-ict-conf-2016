@@ -14,19 +14,19 @@
     background-color: #000;
     transform: translateZ(0);
     will-change: opacity;
-    opacity: 0.6;
+    opacity: 0.8;
 
     &.enter {
       opacity: 0;
     }
 
     &.enterActive {
-      opacity: 0.6;
+      opacity: 0.8;
       transition: opacity 400ms ease;
     }
 
     &.leave {
-      opacity: 0.6;
+      opacity: 0.8;
     }
 
     &.leaveActive {
@@ -77,9 +77,6 @@
     max-width: 40em;
     height: auto;
     max-height: 100%;
-    box-shadow:
-      rgba(0, 0, 0, 0.188235) 0 10px 30px,
-      rgba(0, 0, 0, 0.227451) 0 6px 10px;
   }
 
   .enter & {

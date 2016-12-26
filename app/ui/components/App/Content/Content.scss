@@ -1,20 +1,4 @@
 .container {
   flex-grow: 1;
-  background-color: #F8FAFA;
-}
-
-.enter {
-  visibility: hidden;
-  opacity: 0.2;
-  will-change: opacity;
-}
-
-.enter.enterActive {
-  visibility: visible;
-  opacity: 1;
-  transition: opacity 300ms linear;
-}
-
-.leave {
-  display: none;
+  background-color: #FCFDFD;
 }

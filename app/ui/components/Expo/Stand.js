@@ -6,6 +6,7 @@
 
 import React from 'react';
 import { Link } from 'react-router';
+
 import styles from './Stand.scss';
 
 class Stand extends React.PureComponent {
