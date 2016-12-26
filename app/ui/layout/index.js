@@ -52,7 +52,7 @@ class Layout extends React.PureComponent {
     return (
       <App>
         <Main drawerOpen={drawerOpen} modalOpen={isModal}>
-          <Navigation drawerOpen={drawerOpen} onToggleDrawer={onToggleDrawer} title={headerTitle} />
+          <Navigation isModal={isModal} drawerOpen={drawerOpen} onToggleDrawer={onToggleDrawer} title={headerTitle} />
           <Content contentKey={childrenKey}>
             {mainChildren}
           </Content>
