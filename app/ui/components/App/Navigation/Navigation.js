@@ -49,7 +49,7 @@ class Navigation extends React.PureComponent {
   }
 
   shouldComponentUpdate(nextProps) {
-    return nextProps !== this.props;
+    return !nextProps.isModal && nextProps !== this.props;
   }
 
   componentWillUnmount() {
@@ -143,6 +143,8 @@ Navigation.propTypes = {
   onToggleDrawer: React.PropTypes.func,
   title: React.PropTypes.string,
   drawerOpen: React.PropTypes.bool,
+  // eslint-disable-next-line react/no-unused-prop-types
+  isModal: React.PropTypes.bool,
 };
 
 export default Navigation;
