@@ -4,6 +4,15 @@
 
 ## Installation
 
+### OS Requirements
+
+```bash
+yum install libpng-devel
+apt-get install libpng-dev
+```
+
+### Install depedencies
+
 We recommend to use [Yarn](https://yarnpkg.com/) in order to install the
 dependencies:
 
