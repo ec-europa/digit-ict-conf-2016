@@ -16,8 +16,12 @@ import Checkbox from '../../components/Events/Checkbox';
 import styles from './Modal.scss';
 
 class Modal extends React.PureComponent {
+  shouldComponentUpdate(nextProps) {
+    return nextProps.checked !== this.props.checked;
+  }
+
   render() {
-    const { event, eventModerators, eventSpeakers, location, checked, onRequestClose, onToggle } = this.props;
+    const { event, eventModerators, eventSpeakers, eventGuests, location, checked, onRequestClose, onToggle } = this.props;
     const startsAt = (
       <time>{event.starts}</time>
     );
@@ -48,12 +52,21 @@ class Modal extends React.PureComponent {
       </div>
     ) : null;
 
+    const guestsBlock = eventGuests.length ? (
+      <div>
+        <h2>Guest{eventGuests.length > 1 ? 's' : ''}</h2>
+        {eventGuests.map(speaker => (
+          <SpeakerRow key={speaker.id} speaker={speaker} location={location} />
+        ))}
+      </div>
+    ) : null;
+
     const containerClass = classnames(
       styles.modalContainer,
       { [styles.blue]: event.color === 'blue' },
       { [styles.yellow]: event.color === 'yellow' },
       { [styles.purple]: event.color === 'purple' },
-      { [styles.grey]: event.color === 'grey' }
+      { [styles.grey]: event.color === 'grey' },
     );
 
     return (
@@ -78,10 +91,11 @@ class Modal extends React.PureComponent {
               {event.visual && (
                 <img className={styles.visual} src={event.visual} alt={event.title} />
               )}
-              {event.description.map((line, index) => (<p key={index}>{line}</p>))}
+              {event.description.map((line, index) => (<p key={index} dangerouslySetInnerHTML={{ __html: line }} />))}
             </div>
             {moderatorBlock}
             {speakersBlock}
+            {guestsBlock}
           </div>
         </div>
       </Dialog>
@@ -94,6 +108,7 @@ Modal.propTypes = {
   event: React.PropTypes.object,
   eventModerators: React.PropTypes.array,
   eventSpeakers: React.PropTypes.array,
+  eventGuests: React.PropTypes.array,
   location: React.PropTypes.object,
   onToggle: React.PropTypes.func,
   checked: React.PropTypes.bool,

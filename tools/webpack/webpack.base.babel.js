@@ -4,6 +4,7 @@
 
 const path = require('path');
 const webpack = require('webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = options => ({
   entry: options.entry,
@@ -61,6 +62,9 @@ module.exports = options => ({
       test: /events\.json$/,
       loader: 'events',
     }, {
+      test: /stands\.json$/,
+      loader: 'stands',
+    }, {
       test: /browserconfig.xml/,
       loader: 'file-loader?name=browserconfig.xml!browserconfig',
     }],
@@ -75,31 +79,32 @@ module.exports = options => ({
       },
       __BASENAME__: JSON.stringify(options.basename),
     }),
+    new CopyWebpackPlugin([
+      { from: 'app/static', to: 'static' },
+    ]),
   ]),
-  postcss: () => options.postcssPlugins,
   resolveLoader: {
     alias: {
       markdown: path.resolve(__dirname, './loaders/markdown-loader/index.js'),
       browserconfig: path.resolve(__dirname, './loaders/browserconfig-loader/index.js'),
       speakers: path.resolve(__dirname, './loaders/speakers-loader/index.js'),
       events: path.resolve(__dirname, './loaders/events-loader/index.js'),
+      stands: path.resolve(__dirname, './loaders/stands-loader/index.js'),
     },
+    moduleExtensions: ['-loader'],
   },
   resolve: {
     modules: ['app', 'node_modules'],
     extensions: [
-      '',
       '.js',
       '.jsx',
       '.react.js',
     ],
-    packageMains: [
+    mainFields: [
       'jsnext:main',
       'main',
     ],
   },
   devtool: options.devtool,
   target: 'web', // Make web variables accessible to webpack, e.g. window
-  stats: false, // Don't show stats in the console
-  progress: true,
 });

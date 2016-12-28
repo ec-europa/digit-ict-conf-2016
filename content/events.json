@@ -1,7 +1,7 @@
 [{
   "id": "registration",
-  "starts": "08:30",
-  "ends": "09:30",
+  "starts": "08:15",
+  "ends": "09:15",
   "title": "Registration and coffee",
   "venue": "",
   "description": [],
@@ -10,12 +10,15 @@
   "register": false
 }, {
   "id": "welcome",
-  "starts": "09:30",
+  "starts": "09:15",
   "ends": "09:45",
-  "title": "Welcome by European Commission and European Parliament",
+  "title": "Opening by European Commission and European Parliament",
   "venue": "Gold Hall",
-  "description": [],
-  "speakers": ["adinaioanavalean", "guntheroettinger"],
+  "description": [
+    "<span style=\"font-size:1.5em\">Video</span>",
+    "<div style=\"text-align:center;padding-bottom:56.25%;position:relative;width:100%\"><iframe src=\"https://www.youtube.com/embed/M_BapteaKhE\" frameborder=\"0\" style=\"position:absolute;top:0;left:0;bottom:0;right:0;width:100%;height:100%\" allowfullscreen></iframe></div>"
+  ],
+  "speakers": ["gertrudingestad", "adinaioanavalean", "guntheroettinger"],
   "color": "grey",
   "register": true
 }, {
@@ -31,7 +34,7 @@
     "What culture for the workplace of the future?"
   ],
   "moderator": "jenniferbaker",
-  "speakers": ["paulmiller", "laurentledoux"],
+  "speakers": ["paulmiller", "laurentledoux", "catherinebearder"],
   "color": "blue",
   "register": true
 }, {
@@ -57,7 +60,7 @@
     "How to design a better digital delivery of services?"
   ],
   "moderator": "jenniferbaker",
-  "speakers": ["davidborrelli", "katekahle", "sabinesipunova", "paulboag"],
+  "speakers": ["davidborrelli", "katekahle", "paulboag"],
   "color": "purple",
   "register": true
 }, {
@@ -69,6 +72,19 @@
   "speakers": [],
   "color": "none",
   "register": false
+}, {
+  "id": "discussions",
+  "starts": "13:30",
+  "ends": "14:00",
+  "title": "Discussions",
+  "venue": "Lounge",
+  "description": [
+    "Open PM2 initiative",
+    "How to stimulate innovation at the EP"
+  ],
+  "speakers": [],
+  "color": "grey",
+  "register": true
 }, {
   "id": "panel3",
   "starts": "14:15",
@@ -82,7 +98,7 @@
     "How can they respond to these changes and stay relevant?"
   ],
   "moderator": "jenniferbaker",
-  "speakers": ["dominiqueleroy", "mischadohler", "nathalyrey"],
+  "speakers": ["dominiqueleroy", "mischadohler", "julienblanchez"],
   "color": "yellow",
   "register": true
 }, {
@@ -90,8 +106,14 @@
   "starts": "14:15",
   "ends": "15:30",
   "title": "Building a user experience design culture",
+  "venue": "Room 214-216",
   "description": [
-    "What are the benefits of becoming user centric and digital first? With this workshop Paul Boag will help participants adopt digital best practice."
+    "There is a lot of confusion about what user experience is and what it encompasses. In this workshop you will discover that user experience is much more than a designers job. That everybody can affect the experience of citizens no matter their role.",
+    "UX consultant Paul Boag will introduce you to ways you can better understand our users. He will also teach you how to identify the problem areas in the users experience.",
+    "By the end of the session you will be ready to start undertaking user research. Ready to start improving the user's experience.",
+    "<span style=\"font-size:1.5em\">Slides</span>",
+    "<a href=\"http://www.slideshare.net/boagworld/building-a-user-experience-culture\" target=\"_blank\">Open Paul Boag's slides on SlideShare</a>",
+    "<div style=\"text-align:center;padding-bottom:80%;position:relative;width:100%\"><iframe src=\"//www.slideshare.net/slideshow/embed_code/key/pu32iHu3fbpacd\" frameborder=\"0\" scrolling=\"no\" style=\"position:absolute;top:0;left:0;bottom:0;right:0;width:100%;height:100%\" allowfullscreen> </iframe>"
   ],
   "speakers": ["paulboag"],
   "color": "purple",
@@ -101,10 +123,14 @@
   "starts": "14:15",
   "ends": "15:30",
   "title": "Knowledge worker: culture, skills, tools",
+  "venue": "Room 211-212",
   "description": [
-    "This session will look into how knowledge workers thrive and bring value, energising and motivating the teams around them. What skills do they have? What else do they need to perform better? How we can change the culture and environment to have even more synergies and collaboration in a knowledge-driven organisation?"
+    "This participatory session will look into how knowledge workers thrive and bring value, energising and motivating the teams around them. What skills do they have? What else do they need to perform better? How we can change the culture and environment to have even more synergies and collaboration in a knowledge-driven organisation?",
+    "<span style=\"font-size:1.5em\">Video</span>",
+    "<div style=\"text-align:center;padding-bottom:56.25%;position:relative;width:100%\"><iframe src=\"https://www.youtube.com/embed/HkIna7qY0iQ\" frameborder=\"0\" style=\"position:absolute;top:0;left:0;bottom:0;right:0;width:100%;height:100%\" allowfullscreen></iframe></div>"
   ],
-  "speakers": ["victornegrescu"],
+  "guests": ["victornegrescu", "gianpierolotito"],
+  "speakers": [],
   "color": "blue",
   "register": true
 }, {
@@ -112,7 +138,13 @@
   "starts": "14:15",
   "ends": "15:30",
   "title": "Open Source: the future for the European institutions",
-  "description": [],
+  "venue": "Room 213-215",
+  "description": [
+    "<span style=\"font-size:1.5em\">Slides</span>",
+    "<a href=\"http://www.slideshare.net/ggreve/digitecpanel-69684563\" target=\"_blank\">Open Georg Greve's slides on SlideShare</a>",
+    "<div style=\"text-align:center;padding-bottom:80%;position:relative;width:100%\"><iframe src=\"//www.slideshare.net/slideshow/embed_code/key/Mha6wSNwmMcNgU\" frameborder=\"0\" scrolling=\"no\" style=\"position:absolute;top:0;left:0;bottom:0;right:0;width:100%;height:100%\" allowfullscreen> </iframe>"
+  ],
+  "moderator": "pierredamas",
   "speakers": ["juliareda", "georggreve"],
   "color": "yellow",
   "register": true
@@ -138,70 +170,85 @@
     "How are we using these new technological tools, how we will be using them in the future and what impacts will that have?"
   ],
   "moderator": "jenniferbaker",
-  "speakers": ["alexandresteiner"],
+  "speakers": ["alexandresteiner", "mattdavies", "christianzahorskiphilippe"],
   "color": "yellow",
   "register": true
 }, {
   "id": "e-democracy",
   "starts": "16:00",
-  "ends": "17:15",
+  "ends": "17:10",
   "title": "Open data and digitalisation for public administrations",
+  "venue": "Room 211-212",
   "description": [
     "In this session, the debate will look deeper into the notions of open data, net neutrality and digitalisation to examine how these actually impact our democracies and what effects they are having and may have in public administrations. We will focus on issues, such as:",
     "- What digital and open data approaches are there for public administration processes?",
     "- How important is net neutrality in this context?",
     "- What should be the role of ICT in the workings of the public sector?",
-    "- How can new technology make a positive difference in public administrations and service delivery?"
+    "- How can new technology make a positive difference in public administrations and service delivery?",
+    "<span style=\"font-size:1.5em\">Slides</span>",
+    "<a href=\"/digitec/static/Mercedes-Fuertes-Net-neutrality-2-Bruselas.pptx\">Download Mercedes Fuertes' slides</a>",
+    "<a href=\"/digitec/static/GalettaPE-28-11-2016Presentation.pptx\">Download Diana Urania Galetta's slides</a>",
+    "<a href=\"/digitec/static/DIGITEC_2016_M.RUTE.pptx\">Download Maive Rute's slides</a>",
+    "<span style=\"font-size:1.5em\">Video</span>",
+    "<div style=\"text-align:center;padding-bottom:56.25%;position:relative;width:100%\"><iframe src=\"https://www.youtube.com/embed/Szld-wbRoBo\" frameborder=\"0\" style=\"position:absolute;top:0;left:0;bottom:0;right:0;width:100%;height:100%\" allowfullscreen></iframe></div>"
   ],
-  "speakers": ["mercedesfuertes", "dianauraniagaletta", "prabhatagarwal"],
+  "moderator": "pierfrancescosabbatucci",
+  "speakers": ["mercedesfuertes", "dianauraniagaletta", "prabhatagarwal", "maiverute"],
   "color": "purple",
   "register": true
 }, {
   "id": "interhack",
   "starts": "16:00",
-  "ends": "17:15",
+  "ends": "17:10",
   "title": "InterHack experience",
+  "venue": "Room 214-216",
   "visual": "./events/int_hack.png",
   "description": [
-    "The first inter-institutional hackathon will bring together IT professionals from the European Parliament, the European Commission and the Council of the EU in October. The results and lessons learned from the collaboration will be presented in this session."
+    "The first inter-institutional hackathon brought together IT professionals from the European Parliament, the European Commission and the Council of the EU in October. The results and lessons learned from the collaboration will be presented in this session.",
+    "<span style=\"font-size:1.5em\">Video</span>",
+    "<div style=\"text-align:center;padding-bottom:56.25%;position:relative;width:100%\"><iframe src=\"https://www.youtube.com/embed/kt9zQj2HEPc\" frameborder=\"0\" style=\"position:absolute;top:0;left:0;bottom:0;right:0;width:100%;height:100%\" allowfullscreen></iframe></div>"
   ],
-  "speakers": [],
+  "speakers": ["frankboermeester", "leoexter"],
   "color": "blue",
   "register": true
 }, {
   "id": "encryption",
   "starts": "16:00",
-  "ends": "17:15",
+  "ends": "17:10",
   "title": "Encryption: blessing or curse for IT security",
+  "venue": "Room 213-215",
   "description": [
     "Encryption plays a crucial role in securing information systems and the business data they contain. External communications are routinely encrypted and network traffic inside an organisation is increasingly encrypted to reduce the risk that attackers that can get access to an organisation's vital information. Increasingly it is standard practice that information is encrypted for storage.",
     "But encryption can also be exploited by attackers. Malware can be hidden inside incoming encrypted communications so as to avoid antivirus scanning and to cover the exfiltration of sensitive information from data loss prevention systems. IT security defenders are looking for ways to look inside such traffic to protect the organisation.",
     "What are the legally sound, organisationally proportionate and technically effective measures that can be used to protect business systems against the misuse of encryption? This session will examine:",
     "• The risks associated with the use of encryption in an organisation",
     "• Technical options for defence against misuse of encryption",
-    "• The organisational policy and legal issues associated"
+    "• The organisational policy and legal issues associated",
+    "<span style=\"font-size:1.5em\">Video</span>",
+    "<div style=\"text-align:center;padding-bottom:56.25%;position:relative;width:100%\"><iframe src=\"https://www.youtube.com/embed/AQyXEOml3BA\" frameborder=\"0\" style=\"position:absolute;top:0;left:0;bottom:0;right:0;width:100%;height:100%\" allowfullscreen></iframe></div>"
   ],
-  "speakers": ["luisdeeusebioramos", "kenducatel", "keithmartin", "bartpreneel", "andreasschwab", "vincentsteckler"],
+  "speakers": ["kenducatel", "keithmartin", "maresameissl", "bartpreneel", "andreasschwab", "vincentsteckler"],
   "color": "yellow",
   "register": true
 }, {
+    "id": "closing",
+    "starts": "17:15",
+    "ends": "17:30",
+    "title": "Closing",
+    "venue": "Gold Hall",
+    "description": [],
+    "speakers": ["giancarlovilella"],
+    "color": "grey",
+    "register": true
+  }, {
   "id": "keynote",
-  "starts": "17:15",
-  "ends": "17:30",
-  "title": "Keynote closing speech: Vincent Bruneau, CEO of Magency",
-  "venue": "Gold Hall",
-  "description": [],
-  "speakers": ["vincentbruneau"],
-  "color": "grey",
-  "register": true
-}, {
-  "id": "closing",
   "starts": "17:30",
   "ends": "17:45",
-  "title": "Closing by organisers",
+  "title": "Special guest: Vincent Bruneau, CEO of Magency",
   "venue": "Gold Hall",
   "description": [],
-  "speakers": ["gertrudingestad", "giancarlovilella"],
+  "guests": ["vincentbruneau"],
+  "speakers": [],
   "color": "grey",
   "register": true
 }, {

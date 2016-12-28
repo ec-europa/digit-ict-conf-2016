@@ -2,6 +2,114 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.14.0"></a>
+# [1.14.0](https://github.com/ec-europa/digit-ict-conf-2016/compare/v1.13.0...v1.14.0) (2016-12-26)
+
+
+### Features
+
+* **content:** upload new slides ([58e23ed](https://github.com/ec-europa/digit-ict-conf-2016/commit/58e23ed))
+* **design:** add multiple small design enhancements ([#96](https://github.com/ec-europa/digit-ict-conf-2016/issues/96)) ([ad6ffe8](https://github.com/ec-europa/digit-ict-conf-2016/commit/ad6ffe8))
+
+
+
+<a name="1.13.0"></a>
+# [1.13.0](https://github.com/ec-europa/digit-ict-conf-2016/compare/v1.12.0...v1.13.0) (2016-12-07)
+
+
+### Features
+
+* **content:** add Paul Boag’s slides ([#109](https://github.com/ec-europa/digit-ict-conf-2016/issues/109)) ([d0d153d](https://github.com/ec-europa/digit-ict-conf-2016/commit/d0d153d))
+
+
+
+<a name="1.12.0"></a>
+# [1.12.0](https://github.com/ec-europa/digit-ict-conf-2016/compare/v1.11.0...v1.12.0) (2016-12-02)
+
+
+### Bug Fixes
+
+* **url:** add /digitec prefix to static content ([222b224](https://github.com/ec-europa/digit-ict-conf-2016/commit/222b224))
+
+
+### Features
+
+* **content:** add static content (slides) ([#108](https://github.com/ec-europa/digit-ict-conf-2016/issues/108)) ([a6b41d5](https://github.com/ec-europa/digit-ict-conf-2016/commit/a6b41d5))
+
+
+
+<a name="1.11.0"></a>
+# [1.11.0](https://github.com/ec-europa/digit-ict-conf-2016/compare/v1.10.0...v1.11.0) (2016-11-26)
+
+
+### Features
+
+* **content:** add last speaker ([#106](https://github.com/ec-europa/digit-ict-conf-2016/issues/106)) ([1757a61](https://github.com/ec-europa/digit-ict-conf-2016/commit/1757a61))
+
+
+
+<a name="1.10.0"></a>
+# [1.10.0](https://github.com/ec-europa/digit-ict-conf-2016/compare/v1.9.0...v1.10.0) (2016-11-25)
+
+
+### Features
+
+* **content:** add 2 new speakers and update events’ desc ([#104](https://github.com/ec-europa/digit-ict-conf-2016/issues/104)) ([7f6f27a](https://github.com/ec-europa/digit-ict-conf-2016/commit/7f6f27a))
+
+
+
+<a name="1.9.0"></a>
+# [1.9.0](https://github.com/ec-europa/digit-ict-conf-2016/compare/v1.8.0...v1.9.0) (2016-11-22)
+
+
+### Features
+
+* **content:** provide small content changes ([#103](https://github.com/ec-europa/digit-ict-conf-2016/issues/103)) ([d8a7642](https://github.com/ec-europa/digit-ict-conf-2016/commit/d8a7642))
+
+
+
+<a name="1.8.0"></a>
+# [1.8.0](https://github.com/ec-europa/digit-ict-conf-2016/compare/v1.7.0...v1.8.0) (2016-11-21)
+
+
+### Features
+
+* **speakers:** replace Nathaly Rey by Julien Blanchez ([#102](https://github.com/ec-europa/digit-ict-conf-2016/issues/102)) ([ded2846](https://github.com/ec-europa/digit-ict-conf-2016/commit/ded2846))
+
+
+
+<a name="1.7.0"></a>
+# [1.7.0](https://github.com/ec-europa/digit-ict-conf-2016/compare/v1.6.0...v1.7.0) (2016-11-18)
+
+
+### Bug Fixes
+
+* **content:** fix small typos ([#101](https://github.com/ec-europa/digit-ict-conf-2016/issues/101)) ([a33d758](https://github.com/ec-europa/digit-ict-conf-2016/commit/a33d758))
+
+
+### Features
+
+* **content:** add Maive Rute ([#100](https://github.com/ec-europa/digit-ict-conf-2016/issues/100)) ([8c26bb2](https://github.com/ec-europa/digit-ict-conf-2016/commit/8c26bb2))
+* **stands:** implement pages and modals for the stands ([#95](https://github.com/ec-europa/digit-ict-conf-2016/issues/95)) ([30c30bc](https://github.com/ec-europa/digit-ict-conf-2016/commit/30c30bc))
+
+
+
+<a name="1.6.0"></a>
+# [1.6.0](https://github.com/ec-europa/digit-ict-conf-2016/compare/v1.5.0...v1.6.0) (2016-11-12)
+
+
+### Bug Fixes
+
+* **add-to-homescreen:** remove ATH (too invasive) ([7877098](https://github.com/ec-europa/digit-ict-conf-2016/commit/7877098))
+
+
+### Features
+
+* **font:** use system fonts for better performance ([#94](https://github.com/ec-europa/digit-ict-conf-2016/issues/94)) ([d6d3fd6](https://github.com/ec-europa/digit-ict-conf-2016/commit/d6d3fd6))
+* **speakers:** update speakers ([#97](https://github.com/ec-europa/digit-ict-conf-2016/issues/97)) ([f2a1f62](https://github.com/ec-europa/digit-ict-conf-2016/commit/f2a1f62))
+
+
+
 <a name="1.5.0"></a>
 # [1.5.0](https://github.com/ec-europa/digit-ict-conf-2016/compare/v1.4.1...v1.5.0) (2016-09-26)
 

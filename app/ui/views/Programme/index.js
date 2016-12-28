@@ -15,6 +15,10 @@ import styles from './Programme.scss';
 
 
 class Programme extends React.PureComponent {
+  shouldComponentUpdate(nextProps) {
+    return nextProps.schedule !== this.props.schedule;
+  }
+
   render() {
     const { schedule, events, onToggleEvent, location } = this.props;
 

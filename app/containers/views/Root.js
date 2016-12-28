@@ -11,7 +11,7 @@ import { toggleDrawer } from '../../store/modules/ui/drawer';
 
 import Layout from '../../ui/layout';
 
-class Root extends React.Component {
+class Root extends React.PureComponent {
   constructor(props) {
     super(props);
 

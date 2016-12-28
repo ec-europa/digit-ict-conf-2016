@@ -28,7 +28,7 @@ export default function configureStore() {
   const store = createStore(
     reducer,
     {},
-    compose(...enhancers)
+    compose(...enhancers),
   );
 
   persistStore(store, {

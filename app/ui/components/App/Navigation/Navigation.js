@@ -33,12 +33,13 @@ class Navigation extends React.PureComponent {
 
   componentDidMount() {
     this.headroom = new Headroom(this.header, {
-      offset: 80,
-      tolerance: 6,
+      offset: 0,
+      tolerance: 5,
       classes: {
         initial: styles.headroom,
         pinned: styles.headroomPinned,
         unpinned: styles.headroomUnpinned,
+        top: styles.headroomTop,
       },
     });
 
@@ -48,7 +49,7 @@ class Navigation extends React.PureComponent {
   }
 
   shouldComponentUpdate(nextProps) {
-    return nextProps !== this.props;
+    return !nextProps.isModal && nextProps !== this.props;
   }
 
   componentWillUnmount() {
@@ -126,9 +127,9 @@ class Navigation extends React.PureComponent {
               <NavigationItem to={'/speakers'}>Speakers</NavigationItem>
               <NavigationItem to={'/programme'}>Programme</NavigationItem>
               <NavigationItem to={'/my-digitec'} mobileOnly>My DIGITEC</NavigationItem>
+              <NavigationItem to={'/expo'}>Expo</NavigationItem>
               <NavigationItem to={'/practical'}>Practical</NavigationItem>
               <NavigationSeparator />
-              <NavigationItem to={'https://scic.ec.europa.eu/fmi/ezreg/DIGITEC2016/start'} target="_blank" rel="noopener noreferrer" primary>Register</NavigationItem>
               <NavigationItem to={'https://twitter.com/hashtag/digitec16'} target="_blank" rel="noopener noreferrer" mobileOnly>#digitec16</NavigationItem>
             </ul>
           </div>
@@ -142,6 +143,8 @@ Navigation.propTypes = {
   onToggleDrawer: React.PropTypes.func,
   title: React.PropTypes.string,
   drawerOpen: React.PropTypes.bool,
+  // eslint-disable-next-line react/no-unused-prop-types
+  isModal: React.PropTypes.bool,
 };
 
 export default Navigation;

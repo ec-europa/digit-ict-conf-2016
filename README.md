@@ -13,8 +13,11 @@ apt-get install libpng-dev
 
 ### Install depedencies
 
+We recommend to use [Yarn](https://yarnpkg.com/) in order to install the
+dependencies:
+
 ```bash
-npm install
+yarn install
 ```
 
 ## Configure
@@ -25,17 +28,23 @@ You can override the default config (`tools/config.dist.json`) by creating your
 
 ## Start
 
+During development, use the following command to build the website and start
+the development server:
+
 ```bash
 npm start
 ```
 
-This will run both `npm run build` and `npm serve:build`.
-
 ## Build
+
+Generate the static website with:
 
 ```bash
 npm run build
 ```
+
+Note that it will read the configuration from ./tools/config.local.json and if
+this file doesn't exist, it will fall back to ./tools/config.dist.json.
 
 ## Lint
 

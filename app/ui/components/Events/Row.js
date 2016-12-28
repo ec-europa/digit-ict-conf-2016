@@ -14,6 +14,10 @@ import Checkbox from './Checkbox';
 // FlipMove needs Row to be a class (not a stateless function)
 // eslint-disable-next-line react/prefer-stateless-function
 class Row extends React.PureComponent {
+  shouldComponentUpdate(nextProps) {
+    return nextProps.checked !== this.props.checked;
+  }
+
   render() {
     const { event, checked, displayTime, onToggle } = this.props;
 
@@ -42,13 +46,15 @@ class Row extends React.PureComponent {
       { [styles.blueItem]: event.color === 'blue' },
       { [styles.yellowItem]: event.color === 'yellow' },
       { [styles.purpleItem]: event.color === 'purple' },
-      { [styles.greyItem]: event.color === 'grey' }
+      { [styles.greyItem]: event.color === 'grey' },
     );
 
     const learnMore = (event.description && event.description.length > 0)
       || (event.speakers && event.speakers.length > 0)
+      || (event.guests && event.guests.length > 0)
       || (event.moderator && event.moderator.length > 0);
 
+    /*eslint-disable */
     return (
       <li className={rowClasses}>
         <div className={styles.primary}>
@@ -84,6 +90,7 @@ class Row extends React.PureComponent {
         )}
       </li>
     );
+    /*eslint-enable */
   }
 }
 

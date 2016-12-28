@@ -22,7 +22,7 @@ import SpeakerModal from '../../ui/views/Speaker/Modal';
 import SpeakerPage from '../../ui/views/Speaker/Page';
 import SpeakerNotFound from '../../ui/views/Speaker/NotFound';
 
-class Speaker extends React.Component {
+class Speaker extends React.PureComponent {
   constructor(props) {
     super(props);
 
@@ -44,6 +44,10 @@ class Speaker extends React.Component {
     }
   }
 
+  shouldComponentUpdate(nextProps) {
+    return nextProps.schedule !== this.props.schedule;
+  }
+
   render() {
     const { speaker } = this.state;
 
@@ -56,7 +60,7 @@ class Speaker extends React.Component {
     }
 
     const { isModal, onRequestClose, schedule, onToggleEvent } = this.props;
-    const speakerEvents = events.filter(event => event.speakers.indexOf(speaker.id) > -1 || event.moderator === speaker.id);
+    const speakerEvents = events.filter(event => event.speakers.indexOf(speaker.id) > -1 || (event.guests && event.guests.indexOf(speaker.id) > -1) || event.moderator === speaker.id);
 
     return (
       <div>

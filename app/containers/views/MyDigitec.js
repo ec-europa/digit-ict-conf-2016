@@ -17,9 +17,13 @@ import events from '../../../content/events.json';
 
 import View from '../../ui/views/MyDigitec';
 
-class MyDigitec extends React.Component {
+class MyDigitec extends React.PureComponent {
   componentDidMount() {
     this.props.onUpdateHeaderTitle('My DIGITEC');
+  }
+
+  shouldComponentUpdate(nextProps) {
+    return nextProps.schedule !== this.props.schedule;
   }
 
   render() {

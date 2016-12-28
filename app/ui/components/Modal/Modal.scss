@@ -14,19 +14,19 @@
     background-color: #000;
     transform: translateZ(0);
     will-change: opacity;
-    opacity: 0.6;
+    opacity: 0.8;
 
     &.enter {
       opacity: 0;
     }
 
     &.enterActive {
-      opacity: 0.6;
+      opacity: 0.8;
       transition: opacity 400ms ease;
     }
 
     &.leave {
-      opacity: 0.6;
+      opacity: 0.8;
     }
 
     &.leaveActive {
@@ -73,19 +73,15 @@
 
   @include mappy-bp(medium) {
     border-radius: 2px;
-    width: 75%;
-    max-width: 40em;
+    width: 80%;
+    max-width: 50em;
     height: auto;
     max-height: 100%;
-    box-shadow:
-      rgba(0, 0, 0, 0.188235) 0 10px 30px,
-      rgba(0, 0, 0, 0.227451) 0 6px 10px;
   }
 
   .enter & {
     opacity: 0;
     transform: scale(0.6);
-    overflow: hidden;
   }
 
   .enterActive & {
@@ -96,7 +92,6 @@
 
   .leave & {
     opacity: 1;
-    overflow: hidden;
     transform: scale(1) translateZ(0);
   }
 

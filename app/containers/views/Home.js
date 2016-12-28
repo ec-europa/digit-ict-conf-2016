@@ -20,6 +20,10 @@ class Home extends React.PureComponent {
     this.props.onUpdateHeaderTitle('DIGITEC 2016');
   }
 
+  shouldComponentUpdate() {
+    return false;
+  }
+
   render() {
     return (
       <div>

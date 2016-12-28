@@ -9,6 +9,10 @@ import Link from '../Link/Link';
 import styles from './Row.scss';
 
 class Row extends React.PureComponent {
+  shouldComponentUpdate() {
+    return false;
+  }
+
   render() {
     const { speaker } = this.props;
     return (

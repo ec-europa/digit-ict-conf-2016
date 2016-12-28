@@ -14,6 +14,10 @@ class Checkbox extends React.PureComponent {
     this.toggle = this.toggle.bind(this);
   }
 
+  shouldComponentUpdate(nextProps) {
+    return nextProps.checked !== this.props.checked;
+  }
+
   toggle() {
     const { event, onToggle } = this.props;
     return onToggle(event);
@@ -27,7 +31,7 @@ class Checkbox extends React.PureComponent {
       { [styles.blueItem]: event.color === 'blue' },
       { [styles.yellowItem]: event.color === 'yellow' },
       { [styles.purpleItem]: event.color === 'purple' },
-      { [styles.greyItem]: event.color === 'grey' }
+      { [styles.greyItem]: event.color === 'grey' },
     );
 
     return (

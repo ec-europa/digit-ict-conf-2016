@@ -17,6 +17,10 @@ import Link from '../../components/Link/Link';
 import twitterLogo from './images/twitter.png';
 
 class Page extends React.PureComponent {
+  shouldComponentUpdate(nextProps) {
+    return nextProps.schedule !== this.props.schedule;
+  }
+
   render() {
     const { speaker, speakerEvents, schedule, onToggleEvent, location } = this.props;
     const sessions = speakerEvents.length ? (
