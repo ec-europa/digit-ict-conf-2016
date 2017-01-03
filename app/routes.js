@@ -3,6 +3,7 @@ import { Route, IndexRoute } from 'react-router';
 
 import {
   Event,
+  Gallery,
   Home,
   MyDigitec,
   NotFound,
@@ -26,6 +27,7 @@ export default (
     <Route path="expo" component={Expo} />
     <Route path="stand/:standId" component={Stand} />
     <Route path="practical" component={Practical} />
+    <Route path="gallery" component={Gallery} />
     <Route path="*" component={NotFound} />
   </Route>
 );

@@ -59,6 +59,9 @@ module.exports = options => ({
       test: /speakers\.json$/,
       loader: 'speakers',
     }, {
+      test: /gallery\.json$/,
+      loader: 'gallery',
+    }, {
       test: /events\.json$/,
       loader: 'events',
     }, {
@@ -88,6 +91,7 @@ module.exports = options => ({
       markdown: path.resolve(__dirname, './loaders/markdown-loader/index.js'),
       browserconfig: path.resolve(__dirname, './loaders/browserconfig-loader/index.js'),
       speakers: path.resolve(__dirname, './loaders/speakers-loader/index.js'),
+      gallery: path.resolve(__dirname, './loaders/gallery-loader/index.js'),
       events: path.resolve(__dirname, './loaders/events-loader/index.js'),
       stands: path.resolve(__dirname, './loaders/stands-loader/index.js'),
     },

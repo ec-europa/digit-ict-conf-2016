@@ -1,4 +1,5 @@
 import Event from './Event';
+import Gallery from './Gallery';
 import Home from './Home';
 import MyDigitec from './MyDigitec';
 import NotFound from './NotFound';
@@ -12,6 +13,7 @@ import Expo from './Expo';
 
 export {
   Event,
+  Gallery,
   Home,
   MyDigitec,
   NotFound,
