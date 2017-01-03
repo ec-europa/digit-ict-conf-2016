@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.15.0"></a>
+# [1.15.0](https://github.com/ec-europa/digit-ict-conf-2016/compare/v1.14.0...v1.15.0) (2017-01-03)
+
+
+### Bug Fixes
+
+* **content:** remove InterHack logo ([e165e60](https://github.com/ec-europa/digit-ict-conf-2016/commit/e165e60))
+
+
+### Features
+
+* **content:** add videos of the conference ([#111](https://github.com/ec-europa/digit-ict-conf-2016/issues/111)) ([e7d18e6](https://github.com/ec-europa/digit-ict-conf-2016/commit/e7d18e6))
+* **gallery:** implement gallery feature ([#110](https://github.com/ec-europa/digit-ict-conf-2016/issues/110)) ([f134629](https://github.com/ec-europa/digit-ict-conf-2016/commit/f134629))
+* **jenkins:** enable Jenkins integration ([#112](https://github.com/ec-europa/digit-ict-conf-2016/issues/112)) ([e136ead](https://github.com/ec-europa/digit-ict-conf-2016/commit/e136ead))
+
+
+
 <a name="1.14.0"></a>
 # [1.14.0](https://github.com/ec-europa/digit-ict-conf-2016/compare/v1.13.0...v1.14.0) (2016-12-26)
 
