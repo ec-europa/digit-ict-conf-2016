@@ -166,7 +166,6 @@ function* run() {
   }
 
   yield nightmare.end();
-  return;
 }
 
 
