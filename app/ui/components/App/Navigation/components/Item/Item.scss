@@ -43,6 +43,7 @@
     &:focus,
     &:active {
       color: $ict-grey-text;
+      text-decoration: none;
 
       &::after {
         width: 100%;

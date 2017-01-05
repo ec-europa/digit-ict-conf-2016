@@ -10,7 +10,6 @@
 import React from 'react';
 import { Link as NormalLink, IndexLink } from 'react-router';
 import classnames from 'classnames';
-import styles from './Link.scss';
 
 const checkDomain = (url) => {
   let urlToCheck = url;
@@ -29,7 +28,7 @@ const isExternal = url => (
 class Link extends React.Component {
   render() {
     const { to, index, children, className, activeClassName, ...rest } = this.props;
-    const linkClasses = classnames(styles.link, className);
+    const linkClasses = classnames(className);
 
     if (typeof to === 'string' && isExternal(to)) {
       return (
