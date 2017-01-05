@@ -61,6 +61,17 @@
     font-weight: 400;
   }
 
+  a {
+    color: $ict-blue;
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: underline;
+    }
+  }
+
   .sr-only {
     position: absolute;
     width: 1px;
@@ -74,5 +85,9 @@
 
   .u-pt-1rem {
     padding-top: 1rem;
+  }
+
+  .u-ta-center {
+    text-align: center;
   }
 }

@@ -12,9 +12,6 @@ import { updateHeaderTitle } from '../../store/modules/ui/header';
 // Load components
 import View from '../../ui/views/Home';
 
-// Load content
-import mainContent from '../../../content/homepage/main.md';
-
 class Home extends React.PureComponent {
   componentDidMount() {
     this.props.onUpdateHeaderTitle('DIGITEC 2016');
@@ -28,7 +25,7 @@ class Home extends React.PureComponent {
     return (
       <div>
         <Helmet title="Home" />
-        <View content={mainContent.body} />
+        <View />
       </div>
     );
   }

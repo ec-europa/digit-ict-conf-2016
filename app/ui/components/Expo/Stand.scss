@@ -32,6 +32,8 @@
   &:hover,
   &:focus,
   &:active {
+    text-decoration: none;
+
     &::before {
       opacity: 1;
     }
