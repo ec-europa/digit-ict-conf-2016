@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.16.0"></a>
+# [1.16.0](https://github.com/ec-europa/digit-ict-conf-2016/compare/v1.15.0...v1.16.0) (2017-01-05)
+
+
+### Features
+
+* **content:** add videos to the opening session ([#113](https://github.com/ec-europa/digit-ict-conf-2016/issues/113)) ([3835360](https://github.com/ec-europa/digit-ict-conf-2016/commit/3835360))
+
+
+
 <a name="1.15.0"></a>
 # [1.15.0](https://github.com/ec-europa/digit-ict-conf-2016/compare/v1.14.0...v1.15.0) (2017-01-03)
 
