@@ -33,7 +33,10 @@
     "Conceiving the workplace of the future is instrumental to the way of working in the European institutions and their future development. Join the debate on:",
     "What does a human-centred digital workplace look like?",
     "What type of organisation knowledge workers want and how can IT solutions enable it?",
-    "What culture for the workplace of the future?"
+    "What culture for the workplace of the future?",
+    "<span style=\"font-size:1.5em\">Videos</span>",
+    "<div style=\"text-align:center;padding-bottom:56.25%;position:relative;width:100%\"><iframe src=\"https://www.youtube.com/embed/QBYm4lVjtZU\" frameborder=\"0\" style=\"position:absolute;top:0;left:0;bottom:0;right:0;width:100%;height:100%\" allowfullscreen></iframe></div>",
+    "<div style=\"text-align:center;padding-bottom:56.25%;position:relative;width:100%\"><iframe src=\"https://www.youtube.com/embed/b7swubOEV8s\" frameborder=\"0\" style=\"position:absolute;top:0;left:0;bottom:0;right:0;width:100%;height:100%\" allowfullscreen></iframe></div>"
   ],
   "moderator": "jenniferbaker",
   "speakers": ["paulmiller", "laurentledoux", "catherinebearder"],
@@ -59,7 +62,10 @@
     "Digital platforms are bringing about a new level of interaction between government and citizens and between IT services and customers. Take part in the debate on:",
     "How to reach a new generation of connected audiences?",
     "How to know your audience and respond better to its needs?",
-    "How to design a better digital delivery of services?"
+    "How to design a better digital delivery of services?",
+    "<span style=\"font-size:1.5em\">Videos</span>",
+    "<div style=\"text-align:center;padding-bottom:56.25%;position:relative;width:100%\"><iframe src=\"https://www.youtube.com/embed/X1LXZBNMNko\" frameborder=\"0\" style=\"position:absolute;top:0;left:0;bottom:0;right:0;width:100%;height:100%\" allowfullscreen></iframe></div>",
+    "<div style=\"text-align:center;padding-bottom:56.25%;position:relative;width:100%\"><iframe src=\"https://www.youtube.com/embed/OqAUevANcZY\" frameborder=\"0\" style=\"position:absolute;top:0;left:0;bottom:0;right:0;width:100%;height:100%\" allowfullscreen></iframe></div>"
   ],
   "moderator": "jenniferbaker",
   "speakers": ["davidborrelli", "katekahle", "paulboag"],
@@ -97,7 +103,10 @@
     "Today's world is marked by increasingly sophisticated technologies and fast-evolving trends, such as the rise of big data, the cloud, mobile devices and collaborative working. The right balance between consumers' expectations and the impact of change management combined with security and corporate constraints will have to be defined. Join the debate on:",
     "How the Internet is evolving and what does it mean for our identity, privacy and jobs skills?",
     "What are the challenges for large organisations?",
-    "How can they respond to these changes and stay relevant?"
+    "How can they respond to these changes and stay relevant?",
+    "<span style=\"font-size:1.5em\">Videos</span>",
+    "<div style=\"text-align:center;padding-bottom:56.25%;position:relative;width:100%\"><iframe src=\"https://www.youtube.com/embed/YU2YKiJTXRY\" frameborder=\"0\" style=\"position:absolute;top:0;left:0;bottom:0;right:0;width:100%;height:100%\" allowfullscreen></iframe></div>",
+    "<div style=\"text-align:center;padding-bottom:56.25%;position:relative;width:100%\"><iframe src=\"https://www.youtube.com/embed/anjFk1v2ZAE\" frameborder=\"0\" style=\"position:absolute;top:0;left:0;bottom:0;right:0;width:100%;height:100%\" allowfullscreen></iframe></div>"
   ],
   "moderator": "jenniferbaker",
   "speakers": ["dominiqueleroy", "mischadohler", "julienblanchez"],
@@ -169,7 +178,10 @@
     "Today's world is marked by increasingly sophisticated technologies and fast-evolving trends, such as the rise of big data, the cloud, mobile devices and collaborative working. The right balance between consumers' expectations and the impact of change management combined with security and corporate constraints will have to be defined. Take part in the debate on:",
     "What are the lessons learned from private and public cloud adoption?",
     "What exactly is big data and how big is it?",
-    "How are we using these new technological tools, how we will be using them in the future and what impacts will that have?"
+    "How are we using these new technological tools, how we will be using them in the future and what impacts will that have?",
+    "<span style=\"font-size:1.5em\">Videos</span>",
+    "<div style=\"text-align:center;padding-bottom:56.25%;position:relative;width:100%\"><iframe src=\"https://www.youtube.com/embed/jBPhQMt2VnA\" frameborder=\"0\" style=\"position:absolute;top:0;left:0;bottom:0;right:0;width:100%;height:100%\" allowfullscreen></iframe></div>",
+    "<div style=\"text-align:center;padding-bottom:56.25%;position:relative;width:100%\"><iframe src=\"https://www.youtube.com/embed/xKEb99k9f50\" frameborder=\"0\" style=\"position:absolute;top:0;left:0;bottom:0;right:0;width:100%;height:100%\" allowfullscreen></iframe></div>"
   ],
   "moderator": "jenniferbaker",
   "speakers": ["alexandresteiner", "mattdavies", "christianzahorskiphilippe"],
@@ -237,7 +249,10 @@
     "ends": "17:30",
     "title": "Closing",
     "venue": "Gold Hall",
-    "description": [],
+    "description": [
+      "<span style=\"font-size:1.5em\">Video</span>",
+      "<div style=\"text-align:center;padding-bottom:56.25%;position:relative;width:100%\"><iframe src=\"https://www.youtube.com/embed/nzqOlPJY7ac\" frameborder=\"0\" style=\"position:absolute;top:0;left:0;bottom:0;right:0;width:100%;height:100%\" allowfullscreen></iframe></div>"
+    ],
     "speakers": ["giancarlovilella"],
     "color": "grey",
     "register": true
@@ -247,7 +262,10 @@
   "ends": "17:45",
   "title": "Special guest: Vincent Bruneau, CEO of Magency",
   "venue": "Gold Hall",
-  "description": [],
+  "description": [
+    "<span style=\"font-size:1.5em\">Video</span>",
+    "<div style=\"text-align:center;padding-bottom:56.25%;position:relative;width:100%\"><iframe src=\"https://www.youtube.com/embed/8zZORxRXySM\" frameborder=\"0\" style=\"position:absolute;top:0;left:0;bottom:0;right:0;width:100%;height:100%\" allowfullscreen></iframe></div>"
+  ],
   "guests": ["vincentbruneau"],
   "speakers": [],
   "color": "grey",
