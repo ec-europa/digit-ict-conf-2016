@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.17.0"></a>
+# [1.17.0](https://github.com/ec-europa/digit-ict-conf-2016/compare/v1.16.0...v1.17.0) (2017-03-09)
+
+
+### Features
+
+* **content:** add “big data” slides ([#116](https://github.com/ec-europa/digit-ict-conf-2016/issues/116)) ([32a2d4b](https://github.com/ec-europa/digit-ict-conf-2016/commit/32a2d4b))
+* **content:** add videos ([#115](https://github.com/ec-europa/digit-ict-conf-2016/issues/115)) ([653c1b3](https://github.com/ec-europa/digit-ict-conf-2016/commit/653c1b3))
+* **content:** upload more videos ([#114](https://github.com/ec-europa/digit-ict-conf-2016/issues/114)) ([86be0d8](https://github.com/ec-europa/digit-ict-conf-2016/commit/86be0d8))
+
+
+
 <a name="1.16.0"></a>
 # [1.16.0](https://github.com/ec-europa/digit-ict-conf-2016/compare/v1.15.0...v1.16.0) (2017-01-05)
 
