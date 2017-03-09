@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.17.1"></a>
+## [1.17.1](https://github.com/ec-europa/digit-ict-conf-2016/compare/v1.17.0...v1.17.1) (2017-03-09)
+
+
+### Bug Fixes
+
+* **content:** change small text ([9d9ca1e](https://github.com/ec-europa/digit-ict-conf-2016/commit/9d9ca1e))
+
+
+
 <a name="1.17.0"></a>
 # [1.17.0](https://github.com/ec-europa/digit-ict-conf-2016/compare/v1.16.0...v1.17.0) (2017-03-09)
 
