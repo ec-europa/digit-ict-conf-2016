@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.18.0"></a>
+# [1.18.0](https://github.com/ec-europa/digit-ict-conf-2016/compare/v1.17.3...v1.18.0) (2017-04-18)
+
+
+### Features
+
+* **piwik:** add piwik track ([fde45f5](https://github.com/ec-europa/digit-ict-conf-2016/commit/fde45f5))
+
+
+
 <a name="1.17.3"></a>
 ## [1.17.3](https://github.com/ec-europa/digit-ict-conf-2016/compare/v1.17.2...v1.17.3) (2017-04-18)
 
