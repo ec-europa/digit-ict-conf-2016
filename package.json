@@ -1,7 +1,7 @@
 {
   "name": "digit-ict-conf-2016",
   "description": "DIGIT-ICT Conference 2016 website",
-  "version": "1.17.2",
+  "version": "1.17.3",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ec-europa/digit-ict-conf-2016.git"
@@ -103,6 +103,7 @@
     "markdown-it": "8.2.2",
     "ncp": "2.0.0",
     "nightmare": "2.9.0",
+    "nightmare-load-filter": "0.2.0",
     "node-sass": "4.1.1",
     "offline-plugin": "3.4.2",
     "postcss-cssnext": "2.9.0",
