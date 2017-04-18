@@ -5451,6 +5451,12 @@ negotiator@0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
 
+nightmare-load-filter@0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/nightmare-load-filter/-/nightmare-load-filter-0.2.0.tgz#962841b1b8590dab711365a08e5283cf0fc38009"
+  dependencies:
+    debug "^2.2.0"
+
 nightmare@2.9.0:
   version "2.9.0"
   resolved "https://registry.yarnpkg.com/nightmare/-/nightmare-2.9.0.tgz#1aed57dba60412eb3d3eb83202522c3461993df9"

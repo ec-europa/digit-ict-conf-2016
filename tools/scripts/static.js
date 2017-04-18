@@ -1,5 +1,6 @@
 /* eslint no-console: off */
 const Nightmare = require('nightmare');
+require('nightmare-load-filter')(Nightmare);
 const vo = require('vo');
 const fs = require('fs');
 const ncp = require('ncp').ncp;
@@ -104,6 +105,9 @@ function* run() {
     console.log(`Opening ${url}`);
 
     yield nightmare
+      .filter({
+        urls: ['*://europa.eu/webtools/*'],
+      }, (details, cb) => cb({ cancel: true }))
       .goto(url)
       .wait(100);
 
@@ -180,6 +184,7 @@ const server = app.listen(3000);
 
 vo(run)((err) => {
   if (err) {
+    console.log(err);
     throw err;
   }
 

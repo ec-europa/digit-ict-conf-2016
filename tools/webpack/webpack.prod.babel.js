@@ -82,6 +82,7 @@ module.exports = require('./webpack.base.babel')({
         minifyURLs: true,
       },
       inject: true,
+      production: true,
     }),
 
     // Extract the CSS into a seperate file
