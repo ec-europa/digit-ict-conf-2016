@@ -57,7 +57,7 @@
     "sanitize.css": "5.0.0",
     "scriptjs": "2.5.8",
     "smooth-scroll": "github:cferdinandi/smooth-scroll",
-    "typi": "2.3.0"
+    "typi": "3.1.0"
   },
   "devDependencies": {
     "babel-core": "6.24.1",

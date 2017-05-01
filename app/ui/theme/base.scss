@@ -15,9 +15,6 @@
       Cantarell,
       'Helvetica Neue',
       sans-serif;
-
-    @include typi-base();
-
     letter-spacing: -0.02em;
     background-color: #FFF;
     color: $ict-grey-text;
@@ -25,38 +22,41 @@
     font-style: normal;
   }
 
+  @include typi-init;
+
+
   h1 {
-    @include typi($h1-map);
+    @include typi('h1');
 
     font-weight: 400;
   }
 
   h2 {
-    @include typi($h2-map);
+    @include typi('h2');
 
     font-weight: 400;
   }
 
   h3 {
-    @include typi($h3-map);
+    @include typi('h3');
 
     font-weight: 400;
   }
 
   h4 {
-    @include typi($h4-map);
+    @include typi('h4');
 
     font-weight: 400;
   }
 
   h5 {
-    @include typi($h5-map);
+    @include typi('h5');
 
     font-weight: 400;
   }
 
   h6 {
-    @include typi($h6-map);
+    @include typi('h6');
 
     font-weight: 400;
   }
