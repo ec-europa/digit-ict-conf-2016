@@ -7,16 +7,51 @@ const webpack = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = options => ({
+  devtool: options.devtool,
+  context: path.resolve(__dirname, '../..'),
+  target: 'web', // Make web variables accessible to webpack, e.g. window
+
   entry: options.entry,
+
   output: Object.assign({
     path: path.resolve(process.cwd(), 'build'),
   }, options.output), // Merge with env dependent settings
+
+  resolve: {
+    modules: ['app', 'node_modules'],
+    extensions: [
+      '.js',
+      '.jsx',
+      '.json',
+    ],
+    mainFields: [
+      'jsnext:main',
+      'main',
+    ],
+    unsafeCache: true,
+  },
+
+  resolveLoader: {
+    alias: {
+      markdown: path.resolve(__dirname, './loaders/markdown-loader/index.js'),
+      browserconfig: path.resolve(__dirname, './loaders/browserconfig-loader/index.js'),
+      speakers: path.resolve(__dirname, './loaders/speakers-loader/index.js'),
+      gallery: path.resolve(__dirname, './loaders/gallery-loader/index.js'),
+      events: path.resolve(__dirname, './loaders/events-loader/index.js'),
+      stands: path.resolve(__dirname, './loaders/stands-loader/index.js'),
+    },
+    moduleExtensions: ['-loader'],
+  },
+
   module: {
-    loaders: [{
-      test: /\.js$/, // Transform all .js files required somewhere with Babel
-      loader: 'babel',
+    rules: [{
+      test: /\.(js|jsx)$/,
       exclude: /node_modules/,
-      query: options.babelQuery,
+      include: path.join(__dirname, '../../app'),
+      use: [{
+        loader: 'babel-loader',
+        options: options.babelQuery,
+      }],
     }, {
       test: /\.scss$/,
       loader: options.sassLoaders,
@@ -47,7 +82,24 @@ module.exports = options => ({
       test: /\.(jpe?g|png|gif|svg)$/,
       loaders: [
         'file-loader?name=images/[hash].[ext]',
-        'image-webpack?{progressive:true, optimizationLevel: 7, interlaced: false, pngquant:{quality: "65-90", speed: 4}}',
+        {
+          loader: 'image-webpack-loader',
+          query: {
+            mozjpeg: {
+              progressive: true,
+            },
+            optipng: {
+              optimizationLevel: 7,
+            },
+            gifsicle: {
+              interlaced: false,
+            },
+            pngquant: {
+              quality: '65-90',
+              speed: 4,
+            },
+          },
+        },
       ],
     }, {
       test: /\.html$/,
@@ -72,6 +124,7 @@ module.exports = options => ({
       loader: 'file-loader?name=browserconfig.xml!browserconfig',
     }],
   },
+
   plugins: options.plugins.concat([
     // Always expose NODE_ENV to webpack, in order to use `process.env.NODE_ENV`
     // inside your code for any environment checks; UglifyJS will automatically
@@ -82,33 +135,9 @@ module.exports = options => ({
       },
       __BASENAME__: JSON.stringify(options.basename),
     }),
+
     new CopyWebpackPlugin([
       { from: 'app/static', to: 'static' },
     ]),
   ]),
-  resolveLoader: {
-    alias: {
-      markdown: path.resolve(__dirname, './loaders/markdown-loader/index.js'),
-      browserconfig: path.resolve(__dirname, './loaders/browserconfig-loader/index.js'),
-      speakers: path.resolve(__dirname, './loaders/speakers-loader/index.js'),
-      gallery: path.resolve(__dirname, './loaders/gallery-loader/index.js'),
-      events: path.resolve(__dirname, './loaders/events-loader/index.js'),
-      stands: path.resolve(__dirname, './loaders/stands-loader/index.js'),
-    },
-    moduleExtensions: ['-loader'],
-  },
-  resolve: {
-    modules: ['app', 'node_modules'],
-    extensions: [
-      '.js',
-      '.jsx',
-      '.react.js',
-    ],
-    mainFields: [
-      'jsnext:main',
-      'main',
-    ],
-  },
-  devtool: options.devtool,
-  target: 'web', // Make web variables accessible to webpack, e.g. window
 });

@@ -1,5 +1,5 @@
 /**
- * main.js
+ * main.jsx
  *
  * This is the entry file for the application
  */
