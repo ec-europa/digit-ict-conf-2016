@@ -3,7 +3,7 @@
 */
 
 import React from 'react';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import ReactCSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 
 // Styles
 import styles from './Modal.scss';

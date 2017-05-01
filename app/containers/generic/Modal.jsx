@@ -4,6 +4,7 @@
 
 import React from 'react';
 import { withRouter } from 'react-router';
+import PropTypes from 'prop-types';
 
 // Component
 import Layer from '../../ui/components/Modal/Layer';
@@ -36,11 +37,18 @@ class ModalContainer extends React.Component {
 }
 
 ModalContainer.propTypes = {
-  children: React.PropTypes.node,
-  pathname: React.PropTypes.string,
-  isOpen: React.PropTypes.bool,
-  router: React.PropTypes.object,
-  returnTo: React.PropTypes.string,
+  children: PropTypes.node,
+  pathname: PropTypes.string,
+  isOpen: PropTypes.bool,
+  router: PropTypes.object.isRequired,
+  returnTo: PropTypes.string,
+};
+
+ModalContainer.defaultProps = {
+  children: null,
+  pathname: '',
+  isOpen: false,
+  returnTo: '',
 };
 
 export default withRouter(ModalContainer);
