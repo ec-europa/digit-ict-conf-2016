@@ -9,23 +9,36 @@ import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import applyRouterMiddleware from 'react-router/es6/applyRouterMiddleware';
-import Router from 'react-router/es6/Router';
-import useRouterHistory from 'react-router/es6/useRouterHistory';
 
 // Prepare app
-import createBrowserHistory from 'history/lib/createBrowserHistory';
-import useScroll from 'react-router-scroll/lib/useScroll';
-import smoothScroll from 'smooth-scroll';
+import { Router } from 'react-router-dom';
+import createBrowserHistory from 'history/createBrowserHistory';
 import offlineRuntime from 'offline-plugin/runtime';
 
 import configureStore from './store';
-import appRoutes from './routes';
-import { closeDrawer } from './store/modules/ui/drawer';
+import Routes from './routes';
 import { openSnackbar, closeSnackbar } from './store/modules/ui/snackbar';
 
+import { Route, Switch } from 'react-router-dom';
+
+import {
+  Event,
+  Gallery,
+  Home,
+  MyDigitec,
+  NotFound,
+  Practical,
+  Programme,
+  Root,
+  Speaker,
+  Speakers,
+  Stand,
+  Expo,
+} from './containers/views/';
+
+
 // Create custom history
-const browserHistory = useRouterHistory(createBrowserHistory)({
+const browserHistory = createBrowserHistory({
   basename: __BASENAME__,
 });
 
@@ -35,36 +48,9 @@ const store = configureStore();
 // Define app's entry point
 ReactDOM.render(
   <Provider store={store}>
-    <Router
-      history={browserHistory}
-      routes={appRoutes}
-      render={applyRouterMiddleware(useScroll((prevRouterProps, nextRouterProps) => {
-        // At initialization
-        if (!prevRouterProps || !nextRouterProps) {
-          return true;
-        }
-
-        const previousLocation = prevRouterProps.location;
-        const nextLocation = nextRouterProps.location;
-
-        // Only scroll to top if the location hasn't changed
-        if (previousLocation.pathname === nextLocation.pathname) {
-          smoothScroll.animateScroll(0);
-          return false;
-        }
-
-        // Don't scroll when we open or leave a modal
-        if (
-          (nextLocation.state && nextLocation.state.modal)
-          || (previousLocation.state && previousLocation.state.modal)
-        ) {
-          return false;
-        }
-
-        store.dispatch(closeDrawer());
-        return true;
-      }))}
-    />
+    <Router history={browserHistory}>
+      <Routes />
+    </Router>
   </Provider>,
   document.getElementById('app'),
 );

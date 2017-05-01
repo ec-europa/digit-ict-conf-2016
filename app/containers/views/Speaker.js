@@ -5,7 +5,7 @@
  */
 
 import React from 'react';
-import { withRouter } from 'react-router';
+import { withRouter } from 'react-router-dom';
 import Helmet from 'react-helmet';
 import { connect } from 'react-redux';
 
@@ -26,7 +26,7 @@ class Speaker extends React.PureComponent {
   constructor(props) {
     super(props);
 
-    const { speakerId } = props.params;
+    const { speakerId } = props.match.params;
 
     this.state = {
       speaker: speakers.filter(s => s.id === speakerId)[0],
@@ -76,7 +76,7 @@ class Speaker extends React.PureComponent {
 }
 
 Speaker.propTypes = {
-  params: React.PropTypes.object,
+  match: React.PropTypes.object,
   onUpdateHeaderTitle: React.PropTypes.func,
   schedule: React.PropTypes.object,
   isModal: React.PropTypes.bool,

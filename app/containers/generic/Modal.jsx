@@ -3,7 +3,7 @@
 */
 
 import React from 'react';
-import { withRouter } from 'react-router';
+import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 // Component
@@ -22,9 +22,9 @@ class ModalContainer extends React.Component {
   }
 
   close() {
-    const { router, returnTo, isOpen } = this.props;
+    const { history, returnTo, isOpen } = this.props;
     if (isOpen) {
-      router.push(returnTo);
+      history.push(returnTo);
     }
   }
 
@@ -40,7 +40,7 @@ ModalContainer.propTypes = {
   children: PropTypes.node,
   pathname: PropTypes.string,
   isOpen: PropTypes.bool,
-  router: PropTypes.object.isRequired,
+  history: PropTypes.object.isRequired,
   returnTo: PropTypes.string,
 };
 

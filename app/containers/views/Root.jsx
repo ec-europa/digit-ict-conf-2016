@@ -4,7 +4,9 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import Helmet from 'react-helmet';
+import PropTypes from 'prop-types';
 
 // Redux actions
 import { toggleDrawer } from '../../store/modules/ui/drawer';
@@ -73,11 +75,11 @@ class Root extends React.PureComponent {
 }
 
 Root.propTypes = {
-  children: React.PropTypes.node,
-  location: React.PropTypes.object,
-  drawerOpen: React.PropTypes.bool,
-  onToggleDrawer: React.PropTypes.func,
-  headerTitle: React.PropTypes.string,
+  children: PropTypes.node,
+  location: PropTypes.object,
+  drawerOpen: PropTypes.bool,
+  onToggleDrawer: PropTypes.func,
+  headerTitle: PropTypes.string,
 };
 
 function mapStateToProps(state) {
@@ -95,4 +97,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Root);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Root));

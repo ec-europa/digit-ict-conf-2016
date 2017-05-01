@@ -5,7 +5,7 @@
  */
 
 import React from 'react';
-import { withRouter } from 'react-router';
+import { withRouter } from 'react-router-dom';
 import Helmet from 'react-helmet';
 import { connect } from 'react-redux';
 
@@ -24,7 +24,7 @@ class Stand extends React.PureComponent {
   constructor(props) {
     super(props);
 
-    const { standId } = props.params;
+    const { standId } = props.match.params;
 
     this.state = {
       stand: stands.filter(s => s.id === standId)[0],
@@ -73,7 +73,7 @@ class Stand extends React.PureComponent {
 }
 
 Stand.propTypes = {
-  params: React.PropTypes.object,
+  match: React.PropTypes.object,
   onUpdateHeaderTitle: React.PropTypes.func,
   isModal: React.PropTypes.bool,
   onRequestClose: React.PropTypes.func,

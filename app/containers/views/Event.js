@@ -5,7 +5,7 @@
  */
 
 import React from 'react';
-import { withRouter } from 'react-router';
+import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
 
@@ -26,7 +26,7 @@ class Event extends React.PureComponent {
   constructor(props) {
     super(props);
 
-    const { eventId } = props.params;
+    const { eventId } = props.match.params;
 
     this.state = {
       event: events.filter(event => event.id === eventId)[0],
@@ -84,7 +84,7 @@ class Event extends React.PureComponent {
 }
 
 Event.propTypes = {
-  params: React.PropTypes.object,
+  match: React.PropTypes.object,
   onUpdateHeaderTitle: React.PropTypes.func,
   onToggleEvent: React.PropTypes.func,
   schedule: React.PropTypes.object,
