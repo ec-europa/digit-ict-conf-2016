@@ -11,31 +11,16 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 
 // Prepare app
-import { Router } from 'react-router-dom';
+import { Route, Router } from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory';
 import offlineRuntime from 'offline-plugin/runtime';
 
 import configureStore from './store';
-import Routes from './routes';
+import Root from './containers/Root';
 import { openSnackbar, closeSnackbar } from './store/modules/ui/snackbar';
 
-import { Route, Switch } from 'react-router-dom';
-
-import {
-  Event,
-  Gallery,
-  Home,
-  MyDigitec,
-  NotFound,
-  Practical,
-  Programme,
-  Root,
-  Speaker,
-  Speakers,
-  Stand,
-  Expo,
-} from './containers/views/';
-
+// Base styles
+import './ui/theme/base.scss';
 
 // Create custom history
 const browserHistory = createBrowserHistory({
@@ -49,7 +34,7 @@ const store = configureStore();
 ReactDOM.render(
   <Provider store={store}>
     <Router history={browserHistory}>
-      <Routes />
+      <Route component={Root} />
     </Router>
   </Provider>,
   document.getElementById('app'),

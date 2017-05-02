@@ -35,6 +35,7 @@ class Speaker extends React.PureComponent {
 
   componentDidMount() {
     const { isModal } = this.props;
+
     if (!isModal) {
       if (this.state.speaker) {
         this.props.onUpdateHeaderTitle('Speaker details');
@@ -50,6 +51,7 @@ class Speaker extends React.PureComponent {
 
   render() {
     const { speaker } = this.state;
+    const { isModal } = this.props;
 
     // 404 Speaker Not Found
     if (!speaker) {
@@ -59,7 +61,7 @@ class Speaker extends React.PureComponent {
       ]);
     }
 
-    const { isModal, onRequestClose, schedule, onToggleEvent } = this.props;
+    const { onRequestClose, schedule, onToggleEvent } = this.props;
     const speakerEvents = events.filter(event => event.speakers.indexOf(speaker.id) > -1 || (event.guests && event.guests.indexOf(speaker.id) > -1) || event.moderator === speaker.id);
 
     return (
@@ -67,8 +69,8 @@ class Speaker extends React.PureComponent {
         <Helmet title={`${speaker.firstname} ${speaker.lastname}`} />
         {
           isModal
-            ? <SpeakerModal speaker={speaker} speakerEvents={speakerEvents} schedule={schedule} location={location} onRequestClose={onRequestClose} onToggleEvent={onToggleEvent} />
-            : <SpeakerPage speaker={speaker} speakerEvents={speakerEvents} schedule={schedule} location={location} onToggleEvent={onToggleEvent} />
+            ? <SpeakerModal speaker={speaker} speakerEvents={speakerEvents} schedule={schedule} onRequestClose={onRequestClose} onToggleEvent={onToggleEvent} />
+            : <SpeakerPage speaker={speaker} speakerEvents={speakerEvents} schedule={schedule} onToggleEvent={onToggleEvent} />
         }
       </div>
     );

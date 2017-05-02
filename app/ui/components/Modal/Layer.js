@@ -60,7 +60,7 @@ class Layer extends React.PureComponent {
   }
 
   render() {
-    const { children, isOpen, onRequestClose, pathname } = this.props;
+    const { children, isOpen, pathname } = this.props;
 
     return (
       <ReactCSSTransitionGroup
@@ -89,11 +89,7 @@ class Layer extends React.PureComponent {
             component="div"
             key={pathname}
           >
-            {React.cloneElement(children, {
-              isModal: true,
-              onRequestClose,
-              key: pathname,
-            })}
+            {React.cloneElement(children, { key: pathname })}
           </ReactCSSTransitionGroup>,
         ]}
       </ReactCSSTransitionGroup>

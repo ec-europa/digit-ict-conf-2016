@@ -35,6 +35,7 @@ class Event extends React.PureComponent {
 
   componentDidMount() {
     const { isModal } = this.props;
+
     if (!isModal) {
       if (this.state.event) {
         this.props.onUpdateHeaderTitle('Event details');
@@ -50,6 +51,7 @@ class Event extends React.PureComponent {
 
   render() {
     const { event } = this.state;
+    const { isModal } = this.props;
 
     if (!event) {
       return (
@@ -60,7 +62,7 @@ class Event extends React.PureComponent {
       );
     }
 
-    const { isModal, onToggleEvent, schedule, onRequestClose } = this.props;
+    const { onToggleEvent, schedule, onRequestClose } = this.props;
     const isChecked = schedule[event.id];
 
     const eventModerators = speakers.filter(speaker => event.moderator === speaker.id);

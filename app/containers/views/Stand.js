@@ -33,6 +33,7 @@ class Stand extends React.PureComponent {
 
   componentDidMount() {
     const { isModal } = this.props;
+
     if (!isModal) {
       if (this.state.stand) {
         this.props.onUpdateHeaderTitle('Stand details');
@@ -48,6 +49,7 @@ class Stand extends React.PureComponent {
 
   render() {
     const { stand } = this.state;
+    const { isModal } = this.props;
 
     // 404 Stand Not Found
     if (!stand) {
@@ -57,7 +59,7 @@ class Stand extends React.PureComponent {
       ]);
     }
 
-    const { isModal, onRequestClose } = this.props;
+    const { onRequestClose } = this.props;
 
     return (
       <div>
