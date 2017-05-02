@@ -33,7 +33,7 @@ import ModalContainer from './generic/Modal';
 import SnackbarContainer from './generic/Snackbar';
 
 // Redux actions
-import { toggleDrawer } from '../store/modules/ui/drawer';
+import { closeDrawer, toggleDrawer } from '../store/modules/ui/drawer';
 
 class Root extends React.PureComponent {
   constructor(props) {
@@ -62,11 +62,9 @@ class Root extends React.PureComponent {
   componentWillUpdate(nextProps) {
     const { drawerOpen, location } = nextProps;
 
-    const isModal = !!(
-      location.state &&
+    const isModal = !!(location.state &&
       location.state.modal &&
-      this.previousLocation !== location // not initial render
-    );
+      this.previousLocation !== location); // not initial render
 
     if (drawerOpen) {
       document.body.classList.add(styles.drawerOpen);
@@ -81,14 +79,34 @@ class Root extends React.PureComponent {
     }
   }
 
+  componentDidUpdate(prevProps) {
+    const previousLocation = prevProps.location;
+
+    // Smooth scroll to top if the location hasn't changed
+    if (previousLocation.pathname === this.props.location.pathname) {
+      window.scrollTo(0, 0);
+      // smoothScroll.animateScroll(0);
+      return;
+    }
+
+    // Don't scroll when we open or leave a modal
+    if (
+      (this.props.location.state && this.props.location.state.modal) ||
+      (previousLocation.state && previousLocation.state.modal)
+    ) {
+      return;
+    }
+
+    this.props.onCloseDrawer();
+    window.scrollTo(0, 0);
+  }
+
   closeModal() {
     const { history, location } = this.props;
 
-    const isModal = !!(
-      location.state &&
+    const isModal = !!(location.state &&
       location.state.modal &&
-      this.previousLocation !== location // not initial render
-    );
+      this.previousLocation !== location); // not initial render
 
     const returnTo = this.previousLocation.pathname;
 
@@ -100,11 +118,9 @@ class Root extends React.PureComponent {
   render() {
     const { location, drawerOpen, onToggleDrawer, headerTitle } = this.props;
 
-    const isModal = !!(
-      location.state &&
+    const isModal = !!(location.state &&
       location.state.modal &&
-      this.previousLocation !== location // not initial render
-    );
+      this.previousLocation !== location); // not initial render
 
     const childrenKey = isModal ? this.previousLocation.pathname : location.pathname;
 
@@ -137,32 +153,31 @@ class Root extends React.PureComponent {
         </Main>
         <ModalContainer
           isOpen={isModal}
-          returnTo={this.previousLocation.pathname}
           pathname={location.pathname}
           onRequestClose={this.closeModal}
         >
-          {isModal ?
-            <Switch>
+          {isModal
+            ? [
               <Route
+                location={location}
                 path="/speaker/:speakerId"
-                render={props => (
-                  <Speaker onRequestClose={this.closeModal} isModal {...props} />
-                )}
-              />
+                render={props => <Speaker onRequestClose={this.closeModal} isModal {...props} />}
+                key={`speaker-${location.pathname}`}
+              />,
               <Route
+                location={location}
                 path="/event/:eventId"
-                render={props => (
-                  <Event onRequestClose={this.closeModal} isModal {...props} />
-                )}
-              />
+                render={props => <Event onRequestClose={this.closeModal} isModal {...props} />}
+                key={`event-${location.pathname}`}
+              />,
               <Route
+                location={location}
                 path="/stand/:standId"
-                render={props => (
-                  <Stand onRequestClose={this.closeModal} isModal {...props} />
-                )}
-              />
-            </Switch>
-          : null}
+                render={props => <Stand onRequestClose={this.closeModal} isModal {...props} />}
+                key={`stand-${location.pathname}`}
+              />,
+            ]
+            : null}
         </ModalContainer>
         <SnackbarContainer />
       </div>
@@ -173,7 +188,8 @@ class Root extends React.PureComponent {
 Root.propTypes = {
   location: PropTypes.object,
   drawerOpen: PropTypes.bool,
-  onToggleDrawer: PropTypes.func,
+  onCloseDrawer: PropTypes.func.isRequired,
+  onToggleDrawer: PropTypes.func.isRequired,
   headerTitle: PropTypes.string,
 };
 
@@ -188,6 +204,9 @@ function mapDispatchToProps(dispatch) {
   return {
     onToggleDrawer: () => {
       dispatch(toggleDrawer());
+    },
+    onCloseDrawer: () => {
+      dispatch(closeDrawer());
     },
   };
 }

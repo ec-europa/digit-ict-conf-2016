@@ -89,7 +89,7 @@ class Layer extends React.PureComponent {
             component="div"
             key={pathname}
           >
-            {React.cloneElement(children, { key: pathname })}
+            {children}
           </ReactCSSTransitionGroup>,
         ]}
       </ReactCSSTransitionGroup>
