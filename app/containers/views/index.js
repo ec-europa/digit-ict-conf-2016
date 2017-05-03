@@ -2,6 +2,7 @@ import Event from './Event';
 import Gallery from './Gallery';
 import Home from './Home';
 import MyDigitec from './MyDigitec';
+import Newsletters from './Newsletters';
 import NotFound from './NotFound';
 import Practical from './Practical';
 import Programme from './Programme';
@@ -15,6 +16,7 @@ export {
   Gallery,
   Home,
   MyDigitec,
+  Newsletters,
   NotFound,
   Practical,
   Programme,

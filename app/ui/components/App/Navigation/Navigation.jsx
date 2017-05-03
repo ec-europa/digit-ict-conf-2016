@@ -130,6 +130,7 @@ class Navigation extends React.PureComponent {
               <NavigationItem to={'/expo'}>Expo</NavigationItem>
               <NavigationItem to={'/gallery'}>Gallery</NavigationItem>
               <NavigationItem to={'/practical'}>Practical</NavigationItem>
+              <NavigationItem to={'/newsletters'}>Newsletter</NavigationItem>
               <NavigationSeparator />
               <NavigationItem to={'https://twitter.com/hashtag/digitec16'} target="_blank" rel="noopener noreferrer" mobileOnly>#digitec16</NavigationItem>
             </ul>

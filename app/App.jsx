@@ -17,6 +17,7 @@ import {
   Gallery,
   Home,
   MyDigitec,
+  Newsletters,
   NotFound,
   Practical,
   Programme,
@@ -139,6 +140,7 @@ class App extends React.PureComponent {
               <Route path="/stand/:standId" component={Stand} />
               <Route path="/practical" component={Practical} />
               <Route path="/gallery" component={Gallery} />
+              <Route path="/newsletters" component={Newsletters} />
               <Route component={NotFound} />
             </Switch>
           </Content>
