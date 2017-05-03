@@ -5,7 +5,6 @@
  */
 
 import React from 'react';
-import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
 
@@ -69,33 +68,53 @@ class Event extends React.PureComponent {
     const eventSpeakers = speakers
       .filter(speaker => event.speakers.indexOf(speaker.id) > -1)
       .sort((a, b) => event.speakers.indexOf(a.id) - event.speakers.indexOf(b.id));
-    const eventGuests = speakers
-      .filter(speaker => event.guests && event.guests.indexOf(speaker.id) > -1);
+    const eventGuests = speakers.filter(
+      speaker => event.guests && event.guests.indexOf(speaker.id) > -1,
+    );
 
     return (
       <div>
         <Helmet title={event.title} />
-        {
-          isModal
-            ? <EventModal event={event} eventModerators={eventModerators} eventSpeakers={eventSpeakers} eventGuests={eventGuests} location={location} checked={isChecked} onToggle={onToggleEvent} onRequestClose={onRequestClose} />
-            : <EventPage event={event} eventModerators={eventModerators} eventSpeakers={eventSpeakers} eventGuests={eventGuests} location={location} />
-        }
+        {isModal
+          ? <EventModal
+            event={event}
+            eventModerators={eventModerators}
+            eventSpeakers={eventSpeakers}
+            eventGuests={eventGuests}
+            checked={isChecked}
+            onToggle={onToggleEvent}
+            onRequestClose={onRequestClose}
+          />
+          : <EventPage
+            event={event}
+            eventModerators={eventModerators}
+            eventSpeakers={eventSpeakers}
+            eventGuests={eventGuests}
+          />}
       </div>
     );
   }
 }
 
 Event.propTypes = {
-  match: React.PropTypes.object,
+  isModal: React.PropTypes.bool,
+  match: React.PropTypes.shape({
+    params: React.PropTypes.shape({
+      eventId: React.PropTypes.string,
+    }),
+  }).isRequired,
   onUpdateHeaderTitle: React.PropTypes.func,
+  onRequestClose: React.PropTypes.func,
   onToggleEvent: React.PropTypes.func,
   schedule: React.PropTypes.object,
-  isModal: React.PropTypes.bool,
-  onRequestClose: React.PropTypes.func,
 };
 
 Event.defaultProps = {
   isModal: false,
+  onUpdateHeaderTitle: () => {},
+  onRequestClose: () => {},
+  onToggleEvent: () => {},
+  schedule: {},
 };
 
 function mapStateToProps(state) {
@@ -115,4 +134,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Event));
+export default connect(mapStateToProps, mapDispatchToProps)(Event);

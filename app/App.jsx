@@ -17,6 +17,7 @@ import {
   Gallery,
   Home,
   MyDigitec,
+  News,
   Newsletters,
   NotFound,
   Practical,
@@ -77,17 +78,17 @@ class App extends React.PureComponent {
   componentDidUpdate(prevProps) {
     const previousLocation = prevProps.location;
 
-    // Smooth scroll to top if the location hasn't changed
-    if (previousLocation.pathname === this.props.location.pathname) {
-      smoothScroll.animateScroll(0);
-      return;
-    }
-
     // Don't scroll when we open or leave a modal
     if (
       (this.props.location.state && this.props.location.state.modal) ||
       (previousLocation.state && previousLocation.state.modal)
     ) {
+      return;
+    }
+
+    // Smooth scroll to top if the location hasn't changed
+    if (previousLocation.pathname === this.props.location.pathname) {
+      smoothScroll.animateScroll(0);
       return;
     }
 
@@ -140,6 +141,7 @@ class App extends React.PureComponent {
               <Route path="/stand/:standId" component={Stand} />
               <Route path="/practical" component={Practical} />
               <Route path="/gallery" component={Gallery} />
+              <Route path="/news/:newsId" component={News} />
               <Route path="/newsletters" component={Newsletters} />
               <Route component={NotFound} />
             </Switch>
@@ -155,15 +157,21 @@ class App extends React.PureComponent {
             ? [
               <Route
                 location={location}
-                path="/speaker/:speakerId"
-                render={props => <Speaker onRequestClose={this.closeModal} isModal {...props} />}
-                key={`speaker-${location.pathname}`}
-              />,
-              <Route
-                location={location}
                 path="/event/:eventId"
                 render={props => <Event onRequestClose={this.closeModal} isModal {...props} />}
                 key={`event-${location.pathname}`}
+              />,
+              <Route
+                location={location}
+                path="/news/:newsId"
+                render={props => <News onRequestClose={this.closeModal} isModal {...props} />}
+                key={`news-${location.pathname}`}
+              />,
+              <Route
+                location={location}
+                path="/speaker/:speakerId"
+                render={props => <Speaker onRequestClose={this.closeModal} isModal {...props} />}
+                key={`speaker-${location.pathname}`}
               />,
               <Route
                 location={location}

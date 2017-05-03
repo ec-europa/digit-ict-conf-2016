@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from '../Link/Link';
 
 const NewsIntro = ({ news }) => (
   (typeof news === 'string' || news instanceof String) ? (
@@ -7,6 +8,14 @@ const NewsIntro = ({ news }) => (
     <article key={news.title}>
       <h3>{news.title}</h3>
       <p>{news.introduction}</p>
+      <Link
+        to={{
+          pathname: `/news/${news.id}`,
+          state: { modal: true },
+        }}
+      >
+        Read more
+      </Link>
     </article>
   )
 );
