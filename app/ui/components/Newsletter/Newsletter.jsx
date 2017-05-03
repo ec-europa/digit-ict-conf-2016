@@ -10,7 +10,7 @@ const Newsletter = ({ newsletter }) => (
       <div>
         {Array.isArray(newsletter.news) ? (
           newsletter.news.map(news => (
-            <article>
+            <article key={news.title}>
               <h3>{news.title}</h3>
               <p>{news.introduction}</p>
             </article>

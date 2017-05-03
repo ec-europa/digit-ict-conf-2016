@@ -39,17 +39,11 @@ class Newsletters extends React.PureComponent {
 }
 
 Newsletters.propTypes = {
-  newsletters: React.PropTypes.shape({
-    current: React.PropTypes.string,
-    archive: React.PropTypes.array,
-  }),
+  newsletters: React.PropTypes.array,
 };
 
 Newsletters.defaultProps = {
-  newsletters: {
-    current: '',
-    archive: [],
-  },
+  newsletters: [],
 };
 
 export default Newsletters;
