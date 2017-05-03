@@ -13,8 +13,8 @@ import Link from '../../Link/Link';
 import NavigationItem from './components/Item/Item';
 import NavigationSeparator from './components/Separator/Separator';
 
-import europaLogo from './images/europa.png';
-import ictLogo from './images/digitec.png';
+import europaLogo from './images/europa.svg';
+import ictLogo from './images/digitec.svg';
 
 class Navigation extends React.PureComponent {
   constructor(props) {
@@ -94,7 +94,7 @@ class Navigation extends React.PureComponent {
       <nav className={styles.container} ref={(c) => { this.header = c; }}>
         <input type="checkbox" id="toggleDrawer" className={styles.toggleDrawer} checked={drawerOpen} />
         <div className={styles.mobileBar}>
-          <label htmlFor="toggleDrawer" className={styles.navToggle} onClick={this.handleRequestToggleDrawer}>
+          <label htmlFor="toggleDrawer" className={styles.navToggle} onClick={this.handleRequestToggleDrawer} role="button">
             <span />
             <span />
             <span />
@@ -103,7 +103,7 @@ class Navigation extends React.PureComponent {
             <h1 className={styles.title}>{title}</h1>
           </div>
         </div>
-        <label htmlFor="toggleDrawer" className={styles.overlay} onClick={this.handleRequestToggleDrawer} />
+        <label htmlFor="toggleDrawer" className={styles.overlay} onClick={this.handleRequestToggleDrawer} role="button" />
         <div className={styles.navigation} ref={(c) => { this.navigation = c; }}>
           <div className={styles.innerNavigation}>
             <div className={styles.navigationHeader}>
@@ -141,11 +141,18 @@ class Navigation extends React.PureComponent {
 }
 
 Navigation.propTypes = {
-  onToggleDrawer: React.PropTypes.func,
-  title: React.PropTypes.string,
   drawerOpen: React.PropTypes.bool,
   // eslint-disable-next-line react/no-unused-prop-types
   isModal: React.PropTypes.bool,
+  onToggleDrawer: React.PropTypes.func,
+  title: React.PropTypes.string,
+};
+
+Navigation.defaultProps = {
+  drawerOpen: false,
+  isModal: false,
+  onToggleDrawer: () => {},
+  title: '',
 };
 
 export default Navigation;
