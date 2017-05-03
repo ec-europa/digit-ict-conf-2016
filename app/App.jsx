@@ -1,5 +1,5 @@
 /**
- * Root
+ * App
  */
 
 import React from 'react';
@@ -8,8 +8,9 @@ import Helmet from 'react-helmet';
 import { connect } from 'react-redux';
 import { Route, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import smoothScroll from 'smooth-scroll';
 
-import styles from '../ui/components/App/App.scss';
+import styles from './ui/components/App/App.scss';
 
 import {
   Event,
@@ -23,30 +24,23 @@ import {
   Speakers,
   Stand,
   Expo,
-} from './views';
+} from './containers/views';
 
-import Main from '../ui/components/App/Main';
-import Navigation from '../ui/components/App/Navigation';
-import Footer from '../ui/components/App/Footer/Footer';
-import Content from '../ui/components/App/Content/Content';
-import ModalContainer from './generic/Modal';
-import SnackbarContainer from './generic/Snackbar';
+import Main from './ui/components/App/Main';
+import Navigation from './ui/components/App/Navigation';
+import Footer from './ui/components/App/Footer/Footer';
+import Content from './ui/components/App/Content/Content';
+import ModalContainer from './containers/generic/Modal';
+import SnackbarContainer from './containers/generic/Snackbar';
 
 // Redux actions
-import { closeDrawer, toggleDrawer } from '../store/modules/ui/drawer';
+import { closeDrawer, toggleDrawer } from './store/modules/ui/drawer';
 
-class Root extends React.PureComponent {
+class App extends React.PureComponent {
   constructor(props) {
     super(props);
 
-    // Init location state
-    // eslint-disable-next-line
-    props.location.state = {
-      modal: false,
-    };
-
     this.previousLocation = props.location;
-
     this.closeModal = this.closeModal.bind(this);
   }
 
@@ -84,8 +78,7 @@ class Root extends React.PureComponent {
 
     // Smooth scroll to top if the location hasn't changed
     if (previousLocation.pathname === this.props.location.pathname) {
-      window.scrollTo(0, 0);
-      // smoothScroll.animateScroll(0);
+      smoothScroll.animateScroll(0);
       return;
     }
 
@@ -120,7 +113,7 @@ class Root extends React.PureComponent {
 
     const isModal = !!(location.state &&
       location.state.modal &&
-      this.previousLocation !== location); // not initial render
+      this.previousLocation !== location);
 
     const childrenKey = isModal ? this.previousLocation.pathname : location.pathname;
 
@@ -185,8 +178,9 @@ class Root extends React.PureComponent {
   }
 }
 
-Root.propTypes = {
+App.propTypes = {
   location: PropTypes.object,
+  history: PropTypes.object,
   drawerOpen: PropTypes.bool,
   onCloseDrawer: PropTypes.func.isRequired,
   onToggleDrawer: PropTypes.func.isRequired,
@@ -211,4 +205,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Root);
+export default connect(mapStateToProps, mapDispatchToProps)(App);

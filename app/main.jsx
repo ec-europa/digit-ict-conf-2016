@@ -3,6 +3,8 @@
  *
  * This is the entry file for the application
  */
+
+// Polyfills
 import 'babel-polyfill';
 
 // Import all the third party stuff
@@ -16,7 +18,7 @@ import createBrowserHistory from 'history/createBrowserHistory';
 import offlineRuntime from 'offline-plugin/runtime';
 
 import configureStore from './store';
-import Root from './containers/Root';
+import App from './App';
 import { openSnackbar, closeSnackbar } from './store/modules/ui/snackbar';
 
 // Base styles
@@ -34,7 +36,7 @@ const store = configureStore();
 ReactDOM.render(
   <Provider store={store}>
     <Router history={browserHistory}>
-      <Route component={Root} />
+      <Route component={App} />
     </Router>
   </Provider>,
   document.getElementById('app'),
