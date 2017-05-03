@@ -28,7 +28,7 @@
     "serve": "cross-env NODE_ENV=production node tools/scripts/prodServer.js"
   },
   "lint-staged": {
-    "*.js": [
+    "*.{js,jsx}": [
       "eslint"
     ],
     "*.scss": [
