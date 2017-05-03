@@ -1,4 +1,5 @@
 import React from 'react';
+import NewsIntro from '../News/NewsIntro';
 
 const Newsletter = ({ newsletter }) => (
   Object.keys(newsletter).length === 0 && newsletter.constructor === Object ? (
@@ -9,12 +10,7 @@ const Newsletter = ({ newsletter }) => (
       <p>{newsletter.introduction}</p>
       <div>
         {Array.isArray(newsletter.news) ? (
-          newsletter.news.map(news => (
-            <article key={news.title}>
-              <h3>{news.title}</h3>
-              <p>{news.introduction}</p>
-            </article>
-          ))
+          newsletter.news.map((news, index) => <NewsIntro news={news} key={index} />)
         ) : (
           <p>Loading news...</p>
         )}
@@ -22,5 +18,9 @@ const Newsletter = ({ newsletter }) => (
     </section>
   )
 );
+
+Newsletter.propTypes = {
+  newsletter: React.PropTypes.object.isRequired,
+};
 
 export default Newsletter;

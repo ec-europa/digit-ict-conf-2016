@@ -27,23 +27,23 @@ class Newsletters extends React.PureComponent {
   componentDidMount() {
     this.props.onUpdateHeaderTitle('Newsletters');
 
-    import('../../../content/newsletters.json').then((newsletters) => {
-      // Load current newsletter dynamically
-      import(`../../../content/newsletters/${newsletters.current}.json`).then((newsletter) => {
+    import('../../../content/newsletters.json')
+      .then(newsletters => import(`../../../content/newsletters/${newsletters.current}.json`))
+      .then((newsletter) => {
         this.setState({
           currentNewsletter: newsletter,
         });
 
         // Load news related to the newsletter
-        Promise.all(newsletter.news.map((news => import(`../../../content/news/${news}.json`)))).then((news) => {
-          this.setState({
-            currentNewsletter: Object.assign({}, newsletter, {
-              news,
-            }),
-          });
-        });
+        return Promise.all(newsletter.news.map((news => import(`../../../content/news/${news}.json`))));
+      })
+      .then((news) => {
+        this.setState(prevState => ({
+          currentNewsletter: Object.assign({}, prevState.currentNewsletter, {
+            news,
+          }),
+        }));
       });
-    });
   }
 
   render() {
