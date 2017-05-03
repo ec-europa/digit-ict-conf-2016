@@ -4,6 +4,7 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 // Redux actions
 import { closeSnackbar } from '../../store/modules/ui/snackbar';
@@ -45,8 +46,8 @@ class SnackbarContainer extends React.PureComponent {
 }
 
 SnackbarContainer.propTypes = {
-  snackbar: React.PropTypes.object,
-  dispatch: React.PropTypes.func,
+  snackbar: PropTypes.object,
+  dispatch: PropTypes.func,
 };
 
 export default connect(state => ({

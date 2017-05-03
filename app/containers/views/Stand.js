@@ -5,7 +5,7 @@
  */
 
 import React from 'react';
-import { withRouter } from 'react-router';
+import { withRouter } from 'react-router-dom';
 import Helmet from 'react-helmet';
 import { connect } from 'react-redux';
 
@@ -24,7 +24,7 @@ class Stand extends React.PureComponent {
   constructor(props) {
     super(props);
 
-    const { standId } = props.params;
+    const { standId } = props.match.params;
 
     this.state = {
       stand: stands.filter(s => s.id === standId)[0],
@@ -33,6 +33,7 @@ class Stand extends React.PureComponent {
 
   componentDidMount() {
     const { isModal } = this.props;
+
     if (!isModal) {
       if (this.state.stand) {
         this.props.onUpdateHeaderTitle('Stand details');
@@ -48,6 +49,7 @@ class Stand extends React.PureComponent {
 
   render() {
     const { stand } = this.state;
+    const { isModal } = this.props;
 
     // 404 Stand Not Found
     if (!stand) {
@@ -57,7 +59,7 @@ class Stand extends React.PureComponent {
       ]);
     }
 
-    const { isModal, onRequestClose } = this.props;
+    const { onRequestClose } = this.props;
 
     return (
       <div>
@@ -73,7 +75,7 @@ class Stand extends React.PureComponent {
 }
 
 Stand.propTypes = {
-  params: React.PropTypes.object,
+  match: React.PropTypes.object,
   onUpdateHeaderTitle: React.PropTypes.func,
   isModal: React.PropTypes.bool,
   onRequestClose: React.PropTypes.func,

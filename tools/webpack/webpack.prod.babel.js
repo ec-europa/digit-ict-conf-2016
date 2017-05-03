@@ -16,7 +16,7 @@ module.exports = require('./webpack.base.babel')({
   basename: config.prod.basename,
   // In production, we skip all hot-reloading stuff
   entry: [
-    path.join(process.cwd(), 'app/main.js'),
+    path.join(process.cwd(), 'app/main.jsx'),
   ],
 
   // Utilize long-term caching by adding content hashes (not compilation hashes) to compiled assets
@@ -29,15 +29,22 @@ module.exports = require('./webpack.base.babel')({
   // We use ExtractTextPlugin so we get a seperate CSS file instead
   // of the CSS being in the JS and injected as a style tag
   cssLoaders: ExtractTextPlugin.extract({
-    fallbackLoader: 'style-loader',
-    loader: 'css-loader?-autoprefixer&modules&importLoaders=1!postcss-loader',
+    fallback: 'style-loader',
+    use: 'css-loader?-autoprefixer&modules&importLoaders=1!postcss-loader',
   }),
   // "-autoprefixer": we don't want to remove the prefixes added by Autoprefixer when minifying
   sassLoaders: ExtractTextPlugin.extract({
-    fallbackLoader: 'style-loader',
-    loader: 'css-loader?-autoprefixer&modules&importLoaders=1!postcss-loader!sass',
+    fallback: 'style-loader',
+    use: 'css-loader?-autoprefixer&modules&importLoaders=1!postcss-loader!sass',
   }),
+
   plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify('production'),
+      },
+    }),
+
     new webpack.LoaderOptionsPlugin({
       options: {
         context: __dirname,

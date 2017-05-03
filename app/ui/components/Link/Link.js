@@ -8,7 +8,7 @@
 */
 
 import React from 'react';
-import { Link as NormalLink, IndexLink } from 'react-router';
+import { NavLink } from 'react-router-dom';
 import classnames from 'classnames';
 
 const checkDomain = (url) => {
@@ -38,12 +38,12 @@ class Link extends React.Component {
 
     if (index) {
       return (
-        <IndexLink to={to} className={linkClasses} activeClassName={activeClassName} {...rest} >{children}</IndexLink>
+        <NavLink exact to={to} className={linkClasses} activeClassName={activeClassName} {...rest} >{children}</NavLink>
       );
     }
 
     return (
-      <NormalLink to={to} className={linkClasses} activeClassName={activeClassName} {...rest} >{children}</NormalLink>
+      <NavLink to={to} className={linkClasses} activeClassName={activeClassName} {...rest} >{children}</NavLink>
     );
   }
 }

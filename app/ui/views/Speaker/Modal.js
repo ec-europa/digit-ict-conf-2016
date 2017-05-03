@@ -23,11 +23,11 @@ class Modal extends React.PureComponent {
   }
 
   render() {
-    const { speaker, speakerEvents, schedule, onToggleEvent, location, onRequestClose } = this.props;
+    const { speaker, speakerEvents, schedule, onToggleEvent, onRequestClose } = this.props;
     const sessions = speakerEvents.length ? (
       <div>
         <h3>Session{speakerEvents.length > 1 ? 's' : ''}</h3>
-        {speakerEvents.map(event => <EventRow key={event.id} event={event} checked={schedule[event.id]} onToggle={onToggleEvent} location={location} />)}
+        {speakerEvents.map(event => <EventRow key={event.id} event={event} checked={schedule[event.id]} onToggle={onToggleEvent} />)}
       </div>
     ) : '';
 
@@ -70,7 +70,6 @@ Modal.propTypes = {
   speakerEvents: React.PropTypes.array,
   schedule: React.PropTypes.object,
   onToggleEvent: React.PropTypes.func,
-  location: React.PropTypes.object,
   onRequestClose: React.PropTypes.func,
 };
 
