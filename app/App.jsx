@@ -6,7 +6,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 
 import { connect } from 'react-redux';
-import { Route, Switch } from 'react-router-dom';
+import { withRouter, Route, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import smoothScroll from 'smooth-scroll';
 
@@ -179,12 +179,31 @@ class App extends React.PureComponent {
 }
 
 App.propTypes = {
-  location: PropTypes.object,
-  history: PropTypes.object,
+  location: PropTypes.shape({
+    pathname: PropTypes.string,
+    state: PropTypes.shape({
+      modal: PropTypes.bool,
+    }),
+  }).isRequired,
+  history: PropTypes.shape({
+    action: PropTypes.string.isRequired,
+    push: PropTypes.func.isRequired,
+  }).isRequired,
   drawerOpen: PropTypes.bool,
   onCloseDrawer: PropTypes.func.isRequired,
   onToggleDrawer: PropTypes.func.isRequired,
   headerTitle: PropTypes.string,
+};
+
+App.defaultProps = {
+  drawerOpen: false,
+  headerTitle: '',
+  location: {
+    pathname: '',
+    state: {
+      modal: false,
+    },
+  },
 };
 
 function mapStateToProps(state) {
@@ -205,4 +224,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));

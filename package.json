@@ -29,10 +29,10 @@
   },
   "lint-staged": {
     "*.js": [
-      "lint:js"
+      "eslint"
     ],
     "*.scss": [
-      "lint:scss"
+      "stylelint"
     ]
   },
   "dependencies": {

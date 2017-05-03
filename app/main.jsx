@@ -13,13 +13,11 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 
 // Prepare app
-import { Route, Router } from 'react-router-dom';
+import { Router } from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory';
-import offlineRuntime from 'offline-plugin/runtime';
 
 import configureStore from './store';
 import App from './App';
-import { openSnackbar, closeSnackbar } from './store/modules/ui/snackbar';
 
 // Base styles
 import './ui/theme/base.scss';
@@ -36,29 +34,36 @@ const store = configureStore();
 ReactDOM.render(
   <Provider store={store}>
     <Router history={browserHistory}>
-      <Route component={App} />
+      <App />
     </Router>
   </Provider>,
   document.getElementById('app'),
 );
 
-// Install ServiceWorker and AppCache
-offlineRuntime.install({
-  onInstalled: () => store.dispatch(openSnackbar({
-    message: 'DIGITEC is ready to work offline',
-    timeout: 0,
-    action: {
-      label: 'Dismiss',
-      onClick: () => store.dispatch(closeSnackbar()),
-    },
-  })),
-  onUpdateReady: () => offlineRuntime.applyUpdate(),
-  onUpdated: () => store.dispatch(openSnackbar({
-    message: 'DIGITEC has been updated',
-    timeout: 0,
-    action: {
-      label: 'Reload',
-      onClick: () => window.location.reload(),
-    },
-  })),
-});
+if (process.env.NODE_ENV === 'production') {
+  /* eslint-disable global-require */
+  const offlineRuntime = require('offline-plugin/runtime');
+  const { openSnackbar, closeSnackbar } = require('./store/modules/ui/snackbar');
+  /* eslint-enable global-require */
+
+  // Install ServiceWorker and AppCache
+  offlineRuntime.install({
+    onInstalled: () => store.dispatch(openSnackbar({
+      message: 'DIGITEC is ready to work offline',
+      timeout: 0,
+      action: {
+        label: 'Dismiss',
+        onClick: () => store.dispatch(closeSnackbar()),
+      },
+    })),
+    onUpdateReady: () => offlineRuntime.applyUpdate(),
+    onUpdated: () => store.dispatch(openSnackbar({
+      message: 'DIGITEC has been updated',
+      timeout: 0,
+      action: {
+        label: 'Reload',
+        onClick: () => window.location.reload(),
+      },
+    })),
+  });
+}
