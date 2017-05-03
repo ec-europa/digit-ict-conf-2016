@@ -14,7 +14,7 @@ import NavigationItem from './components/Item/Item';
 import NavigationSeparator from './components/Separator/Separator';
 
 import europaLogo from './images/europa.png';
-import ictLogo from './images/digitec.png';
+import ictLogo from './images/digitec.jpg';
 
 class Navigation extends React.PureComponent {
   constructor(props) {
