@@ -1,7 +1,7 @@
 {
   "id": "eu-fossa-project",
   "title": "EU-FOSSA continued: MEPs want bug bounties",
-  "image": "path/to/img",
+  "image": "media/fossa.jpg",
   "introduction": "The European Parliament approved the follow-up to the European Commission’s ‘EU Free and Open Source Software Auditing’ project (EU-FOSSA). The next version of the code audit project is to add bug bounties.",
   "body": "Body text"
 }

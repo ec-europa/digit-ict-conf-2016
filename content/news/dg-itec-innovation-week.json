@@ -1,7 +1,7 @@
 {
   "id": "dg-itec-innovation-week",
   "title": "DG ITEC's Innovation Week at the EP",
-  "image": "path/to/img",
+  "image": false,
   "introduction": "Innovation is a cornerstone of DG ITEC's mission - after all, we are the Directorate-General for Innovation and Technological Support. The ITEC Innovation department was set up in February 2016 to stimulate technological innovation inside the EP. The first anniversary of the department was celebrated with an interactive stand where colleagues could try different new technologies and see their possible applications for our daily business.",
   "body": "Body text"
 }

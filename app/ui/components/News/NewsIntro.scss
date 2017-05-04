@@ -1,0 +1,43 @@
+.link {
+  &:active,
+  &:focus,
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.article {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2rem;
+  padding: 1rem 3rem 2rem;
+  color: rgba(0, 0, 0, .87);
+  border-left: 1em solid #CCC;
+  background-color: #f2f2f2;
+  transition: background-color 300ms ease-in-out;
+  flex-wrap: wrap;
+
+  &:active,
+  &:focus,
+  &:hover {
+    text-decoration: none;
+    background-color: #e8e8e8;
+  }
+}
+
+.articleImage {
+  flex-shrink: 0;
+  width: 10rem;
+  padding-top: 3rem;
+  margin-right: 2em;
+
+  > img {
+    width: 100%;
+  }
+}
+
+.articleContent {
+  flex-basis: 20em;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
