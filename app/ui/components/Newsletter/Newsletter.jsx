@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import NewsIntro from '../News/NewsIntro';
 
+import styles from './Newsletter.scss';
+
 const Newsletter = ({ newsletter, status }) => {
   if (newsletter.constructor !== Object) {
     return null;
@@ -23,16 +25,38 @@ const Newsletter = ({ newsletter, status }) => {
     );
   }
 
+  let media = null;
+  if (newsletter.media && newsletter.media.type === 'video') {
+    media = (
+      <div className={styles.media}>
+        <div className={styles.ratio}>
+          <iframe src={newsletter.media.url} frameBorder="0" className={styles.full} allowFullScreen />
+        </div>
+      </div>
+    );
+  }
+
+  let newsList = null;
+
+  if (status === 'done') {
+    newsList = Array.isArray(newsletter.news) ? (
+      newsletter.news.map(news => <NewsIntro news={news} key={news.id} />)
+    ) : (
+      <p>No news found</p>
+    );
+  } else if (status === 'loading') {
+    newsList = <p>Loading...</p>;
+  } else {
+    newsList = <p>Error while fetching news</p>;
+  }
+
   return (
     <section>
       <h2>{newsletter.title}</h2>
+      {media}
       <p>{newsletter.introduction}</p>
       <div>
-        {Array.isArray(newsletter.news) ? (
-          newsletter.news.map(news => <NewsIntro news={news} key={news.id} />)
-        ) : (
-          <p>Loading news...</p>
-        )}
+        {newsList}
       </div>
     </section>
   );
