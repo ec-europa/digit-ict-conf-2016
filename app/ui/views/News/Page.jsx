@@ -28,7 +28,10 @@ class Page extends React.PureComponent {
 }
 
 Page.propTypes = {
-  news: PropTypes.object,
+  news: PropTypes.shape({
+    title: PropTypes.string,
+    body: PropTypes.string,
+  }),
 };
 
 Page.defaultProps = {

@@ -42,7 +42,11 @@ class Modal extends React.PureComponent {
 }
 
 Modal.propTypes = {
-  news: PropTypes.object,
+  news: PropTypes.shape({
+    id: PropTypes.string,
+    title: PropTypes.string,
+    body: PropTypes.string,
+  }),
   onRequestClose: PropTypes.func,
 };
 

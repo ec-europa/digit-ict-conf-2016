@@ -22,6 +22,7 @@ class Newsletters extends React.PureComponent {
     this.state = {
       currentNewsletter: {},
       newsletters: [],
+      status: 'loading',
     };
   }
 
@@ -43,17 +44,23 @@ class Newsletters extends React.PureComponent {
           currentNewsletter: Object.assign({}, prevState.currentNewsletter, {
             news,
           }),
+          status: 'done',
         }));
+      })
+      .catch(() => {
+        this.setState({
+          status: 'error',
+        });
       });
   }
 
   render() {
-    const { currentNewsletter, newsletters } = this.state;
+    const { currentNewsletter, newsletters, status } = this.state;
 
     return (
       <div>
         <Helmet title="Newsletters" />
-        <View newsletters={newsletters} currentNewsletter={currentNewsletter} />
+        <View newsletters={newsletters} currentNewsletter={currentNewsletter} status={status} />
       </div>
     );
   }
