@@ -5,6 +5,7 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // Components
 import Newsletter from '../../components/Newsletter/Newsletter';
@@ -39,7 +40,7 @@ class Newsletters extends React.PureComponent {
 }
 
 Newsletters.propTypes = {
-  newsletters: React.PropTypes.array,
+  newsletters: PropTypes.array,
 };
 
 Newsletters.defaultProps = {

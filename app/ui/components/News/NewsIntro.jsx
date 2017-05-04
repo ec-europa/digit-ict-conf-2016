@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Link from '../Link/Link';
 
 const NewsIntro = ({ news }) => (
@@ -21,9 +22,9 @@ const NewsIntro = ({ news }) => (
 );
 
 NewsIntro.propTypes = {
-  news: React.PropTypes.oneOfType([
-    React.PropTypes.string,
-    React.PropTypes.object,
+  news: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
   ]).isRequired,
 };
 

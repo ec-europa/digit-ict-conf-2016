@@ -5,6 +5,7 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // Components
 import SpeakersList from './List';
@@ -31,7 +32,7 @@ class Speakers extends React.PureComponent {
 }
 
 Speakers.propTypes = {
-  speakers: React.PropTypes.array,
+  speakers: PropTypes.array,
 };
 
 export default Speakers;

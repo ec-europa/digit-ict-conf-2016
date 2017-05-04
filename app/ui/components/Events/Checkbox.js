@@ -5,6 +5,7 @@
 */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import styles from './Checkbox.scss';
 
@@ -47,11 +48,11 @@ class Checkbox extends React.PureComponent {
 }
 
 Checkbox.propTypes = {
-  event: React.PropTypes.object,
-  checked: React.PropTypes.bool,
-  transparent: React.PropTypes.bool,
-  onToggle: React.PropTypes.func,
-  idPrefix: React.PropTypes.string,
+  event: PropTypes.object,
+  checked: PropTypes.bool,
+  transparent: PropTypes.bool,
+  onToggle: PropTypes.func,
+  idPrefix: PropTypes.string,
 };
 
 Checkbox.defaultProps = {

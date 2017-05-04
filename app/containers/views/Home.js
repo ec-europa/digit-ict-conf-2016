@@ -7,6 +7,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
+import PropTypes from 'prop-types';
 import { updateHeaderTitle } from '../../store/modules/ui/header';
 
 // Load components
@@ -32,7 +33,7 @@ class Home extends React.PureComponent {
 }
 
 Home.propTypes = {
-  onUpdateHeaderTitle: React.PropTypes.func,
+  onUpdateHeaderTitle: PropTypes.func,
 };
 
 function mapDispatchToProps(dispatch) {

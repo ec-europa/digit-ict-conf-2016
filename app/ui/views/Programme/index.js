@@ -5,6 +5,7 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // Components
 import EventsList from '../../components/Events/List';
@@ -39,10 +40,10 @@ class Programme extends React.PureComponent {
 }
 
 Programme.propTypes = {
-  schedule: React.PropTypes.object,
-  events: React.PropTypes.array,
-  onToggleEvent: React.PropTypes.func,
-  location: React.PropTypes.object,
+  schedule: PropTypes.object,
+  events: PropTypes.array,
+  onToggleEvent: PropTypes.func,
+  location: PropTypes.object,
 };
 
 Programme.defaultProps = {

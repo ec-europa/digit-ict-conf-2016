@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import NewsIntro from '../News/NewsIntro';
 
 const Newsletter = ({ newsletter }) => (
@@ -20,7 +21,7 @@ const Newsletter = ({ newsletter }) => (
 );
 
 Newsletter.propTypes = {
-  newsletter: React.PropTypes.object.isRequired,
+  newsletter: PropTypes.object.isRequired,
 };
 
 export default Newsletter;

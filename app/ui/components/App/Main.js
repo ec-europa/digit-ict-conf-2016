@@ -3,6 +3,7 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import styles from './Main.scss';
 
@@ -22,9 +23,14 @@ class Main extends React.PureComponent {
 }
 
 Main.propTypes = {
-  children: React.PropTypes.node,
-  drawerOpen: React.PropTypes.bool,
-  modalOpen: React.PropTypes.bool,
+  children: PropTypes.node,
+  drawerOpen: PropTypes.bool,
+  modalOpen: PropTypes.bool,
+};
+
+Main.defaultProps = {
+  drawerOpen: false,
+  modalOpen: false,
 };
 
 export default Main;

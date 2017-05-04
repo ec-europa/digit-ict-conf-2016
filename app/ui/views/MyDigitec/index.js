@@ -5,6 +5,7 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // Load components
 import EventsList from '../../components/Events/List';
@@ -40,10 +41,10 @@ class MyDigitec extends React.PureComponent {
 }
 
 MyDigitec.propTypes = {
-  schedule: React.PropTypes.object,
-  myEvents: React.PropTypes.array,
-  onToggleEvent: React.PropTypes.func,
-  location: React.PropTypes.object,
+  schedule: PropTypes.object,
+  myEvents: PropTypes.array,
+  onToggleEvent: PropTypes.func,
+  location: PropTypes.object,
 };
 
 MyDigitec.defaultProps = {

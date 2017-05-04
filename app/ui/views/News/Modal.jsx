@@ -5,6 +5,7 @@
 */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // Components
 import Dialog from '../../components/Modal/Dialog';
@@ -41,8 +42,8 @@ class Modal extends React.PureComponent {
 }
 
 Modal.propTypes = {
-  news: React.PropTypes.object,
-  onRequestClose: React.PropTypes.func,
+  news: PropTypes.object,
+  onRequestClose: PropTypes.func,
 };
 
 Modal.defaultProps = {

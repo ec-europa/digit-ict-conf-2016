@@ -47,7 +47,11 @@ class SnackbarContainer extends React.PureComponent {
 
 SnackbarContainer.propTypes = {
   snackbar: PropTypes.object,
-  dispatch: PropTypes.func,
+  dispatch: PropTypes.func.isRequired,
+};
+
+SnackbarContainer.defaultProps = {
+  snackbar: {},
 };
 
 export default connect(state => ({

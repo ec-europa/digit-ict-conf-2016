@@ -6,6 +6,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import styles from './Stand.scss';
 
@@ -40,7 +41,7 @@ class Stand extends React.PureComponent {
 }
 
 Stand.propTypes = {
-  stand: React.PropTypes.object,
+  stand: PropTypes.object,
 };
 
 Stand.defaultProps = {

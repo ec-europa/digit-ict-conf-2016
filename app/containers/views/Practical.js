@@ -5,6 +5,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
+import PropTypes from 'prop-types';
 
 // Load Redux actions
 import { updateHeaderTitle } from '../../store/modules/ui/header';
@@ -31,7 +32,7 @@ class Practical extends React.PureComponent {
 }
 
 Practical.propTypes = {
-  onUpdateHeaderTitle: React.PropTypes.func,
+  onUpdateHeaderTitle: PropTypes.func,
 };
 
 function mapDispatchToProps(dispatch) {

@@ -5,6 +5,7 @@
 */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // Components
 import SpeakerRow from '../../components/Speakers/Row';
@@ -78,11 +79,11 @@ class Page extends React.PureComponent {
 
 
 Page.propTypes = {
-  event: React.PropTypes.object,
-  eventModerators: React.PropTypes.array,
-  eventSpeakers: React.PropTypes.array,
-  eventGuests: React.PropTypes.array,
-  location: React.PropTypes.object,
+  event: PropTypes.object,
+  eventModerators: PropTypes.array,
+  eventSpeakers: PropTypes.array,
+  eventGuests: PropTypes.array,
+  location: PropTypes.object,
 };
 
 Page.defaultProps = {

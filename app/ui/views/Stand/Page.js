@@ -5,6 +5,7 @@
 */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // Styles
 import styles from './Page.scss';
@@ -39,7 +40,7 @@ class Page extends React.PureComponent {
 }
 
 Page.propTypes = {
-  stand: React.PropTypes.object,
+  stand: PropTypes.object,
 };
 
 Page.defaultProps = {

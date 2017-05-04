@@ -4,7 +4,6 @@
 
 import React from 'react';
 import Helmet from 'react-helmet';
-
 import { connect } from 'react-redux';
 import { withRouter, Route, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';

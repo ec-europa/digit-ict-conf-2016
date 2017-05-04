@@ -5,6 +5,7 @@
 */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 // Components
@@ -103,13 +104,13 @@ class Modal extends React.PureComponent {
 }
 
 Modal.propTypes = {
-  checked: React.PropTypes.bool,
-  event: React.PropTypes.object,
-  eventGuests: React.PropTypes.array,
-  eventModerators: React.PropTypes.array,
-  eventSpeakers: React.PropTypes.array,
-  onRequestClose: React.PropTypes.func,
-  onToggle: React.PropTypes.func,
+  checked: PropTypes.bool,
+  event: PropTypes.object,
+  eventGuests: PropTypes.array,
+  eventModerators: PropTypes.array,
+  eventSpeakers: PropTypes.array,
+  onRequestClose: PropTypes.func,
+  onToggle: PropTypes.func,
 };
 
 Modal.defaultProps = {

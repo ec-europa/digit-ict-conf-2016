@@ -10,6 +10,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import classnames from 'classnames';
+import PropTypes from 'prop-types';
 
 const checkDomain = (url) => {
   let urlToCheck = url;
@@ -49,11 +50,11 @@ class Link extends React.Component {
 }
 
 Link.propTypes = {
-  children: React.PropTypes.node,
-  to: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.object]).isRequired,
-  className: React.PropTypes.string,
-  activeClassName: React.PropTypes.string,
-  index: React.PropTypes.bool,
+  children: PropTypes.node,
+  to: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
+  className: PropTypes.string,
+  activeClassName: PropTypes.string,
+  index: PropTypes.bool,
 };
 
 export default Link;

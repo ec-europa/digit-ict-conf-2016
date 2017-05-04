@@ -8,6 +8,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import Helmet from 'react-helmet';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 // Redux actions
 import { updateHeaderTitle } from '../../store/modules/ui/header';
@@ -75,10 +76,10 @@ class Stand extends React.PureComponent {
 }
 
 Stand.propTypes = {
-  match: React.PropTypes.object,
-  onUpdateHeaderTitle: React.PropTypes.func,
-  isModal: React.PropTypes.bool,
-  onRequestClose: React.PropTypes.func,
+  match: PropTypes.object,
+  onUpdateHeaderTitle: PropTypes.func,
+  isModal: PropTypes.bool,
+  onRequestClose: PropTypes.func,
 };
 
 Stand.defaultProps = {

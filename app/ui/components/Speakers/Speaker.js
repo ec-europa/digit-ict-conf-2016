@@ -5,6 +5,7 @@
 */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 import styles from './Speaker.scss';
@@ -39,7 +40,7 @@ class Speaker extends React.PureComponent {
 }
 
 Speaker.propTypes = {
-  speaker: React.PropTypes.object,
+  speaker: PropTypes.object,
 };
 
 Speaker.defaultProps = {

@@ -6,6 +6,7 @@
 
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
+import PropTypes from 'prop-types';
 
 // Component
 import Dialog from './Dialog';
@@ -76,9 +77,9 @@ class Layer extends React.PureComponent {
 }
 
 Layer.propTypes = {
-  onRequestClose: React.PropTypes.func,
-  open: React.PropTypes.bool,
-  message: React.PropTypes.string,
+  onRequestClose: PropTypes.func,
+  open: PropTypes.bool,
+  message: PropTypes.string,
 };
 
 export default Layer;

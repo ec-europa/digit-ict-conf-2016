@@ -7,6 +7,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
+import PropTypes from 'prop-types';
 
 // Components
 import NewsModal from '../../ui/views/News/Modal';
@@ -80,14 +81,14 @@ class News extends React.PureComponent {
 }
 
 News.propTypes = {
-  match: React.PropTypes.shape({
-    params: React.PropTypes.shape({
-      newsId: React.PropTypes.string,
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      newsId: PropTypes.string,
     }).isRequired,
   }).isRequired,
-  onUpdateHeaderTitle: React.PropTypes.func.isRequired,
-  isModal: React.PropTypes.bool,
-  onRequestClose: React.PropTypes.func,
+  onUpdateHeaderTitle: PropTypes.func.isRequired,
+  isModal: PropTypes.bool,
+  onRequestClose: PropTypes.func,
 };
 
 News.defaultProps = {

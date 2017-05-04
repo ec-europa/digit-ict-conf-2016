@@ -7,6 +7,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
+import PropTypes from 'prop-types';
 
 // Content
 import events from '../../../content/events.json';
@@ -97,16 +98,16 @@ class Event extends React.PureComponent {
 }
 
 Event.propTypes = {
-  isModal: React.PropTypes.bool,
-  match: React.PropTypes.shape({
-    params: React.PropTypes.shape({
-      eventId: React.PropTypes.string,
+  isModal: PropTypes.bool,
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      eventId: PropTypes.string,
     }),
   }).isRequired,
-  onUpdateHeaderTitle: React.PropTypes.func,
-  onRequestClose: React.PropTypes.func,
-  onToggleEvent: React.PropTypes.func,
-  schedule: React.PropTypes.object,
+  onUpdateHeaderTitle: PropTypes.func,
+  onRequestClose: PropTypes.func,
+  onToggleEvent: PropTypes.func,
+  schedule: PropTypes.object,
 };
 
 Event.defaultProps = {

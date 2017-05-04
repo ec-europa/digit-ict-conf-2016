@@ -5,6 +5,7 @@
 */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import Stand from '../../components/Expo/Stand';
 import styles from './List.scss';
 
@@ -24,7 +25,7 @@ class List extends React.PureComponent {
 }
 
 List.propTypes = {
-  stands: React.PropTypes.array,
+  stands: PropTypes.array,
 };
 
 List.defaultProps = {

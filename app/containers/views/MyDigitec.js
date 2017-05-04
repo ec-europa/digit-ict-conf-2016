@@ -7,6 +7,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
+import PropTypes from 'prop-types';
 
 // Load Redux actions
 import { toggleEvent } from '../../store/modules/schedule';
@@ -40,10 +41,10 @@ class MyDigitec extends React.PureComponent {
 }
 
 MyDigitec.propTypes = {
-  schedule: React.PropTypes.object,
-  onToggleEvent: React.PropTypes.func,
-  onUpdateHeaderTitle: React.PropTypes.func,
-  location: React.PropTypes.object,
+  schedule: PropTypes.object,
+  onToggleEvent: PropTypes.func,
+  onUpdateHeaderTitle: PropTypes.func,
+  location: PropTypes.object,
 };
 
 MyDigitec.defaultProps = {

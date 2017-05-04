@@ -5,6 +5,7 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // Components
 import ExpoList from './List';
@@ -31,7 +32,7 @@ class Expo extends React.PureComponent {
 }
 
 Expo.propTypes = {
-  stands: React.PropTypes.array,
+  stands: PropTypes.array,
 };
 
 export default Expo;

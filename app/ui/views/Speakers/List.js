@@ -5,6 +5,7 @@
 */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import Speaker from '../../../ui/components/Speakers/Speaker';
 import styles from './List.scss';
 
@@ -24,7 +25,7 @@ class List extends React.PureComponent {
 }
 
 List.propTypes = {
-  speakers: React.PropTypes.array,
+  speakers: PropTypes.array,
 };
 
 List.defaultProps = {

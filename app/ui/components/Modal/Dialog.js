@@ -3,6 +3,7 @@
 */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // Styles
 import styles from './Modal.scss';
@@ -108,11 +109,11 @@ class Dialog extends React.PureComponent {
 }
 
 Dialog.propTypes = {
-  children: React.PropTypes.node,
-  onRequestClose: React.PropTypes.func,
-  id: React.PropTypes.string,
-  title: React.PropTypes.string,
-  description: React.PropTypes.string,
+  children: PropTypes.node,
+  onRequestClose: PropTypes.func,
+  id: PropTypes.string,
+  title: PropTypes.string,
+  description: PropTypes.string,
 };
 
 export default Dialog;

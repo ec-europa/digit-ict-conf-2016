@@ -6,6 +6,7 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import Headroom from 'headroom.js';
 import styles from './Navigation.scss';
 
@@ -142,11 +143,11 @@ class Navigation extends React.PureComponent {
 }
 
 Navigation.propTypes = {
-  drawerOpen: React.PropTypes.bool,
+  drawerOpen: PropTypes.bool,
   // eslint-disable-next-line react/no-unused-prop-types
-  isModal: React.PropTypes.bool,
-  onToggleDrawer: React.PropTypes.func,
-  title: React.PropTypes.string,
+  isModal: PropTypes.bool,
+  onToggleDrawer: PropTypes.func,
+  title: PropTypes.string,
 };
 
 Navigation.defaultProps = {

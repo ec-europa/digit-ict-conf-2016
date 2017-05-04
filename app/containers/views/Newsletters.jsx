@@ -7,6 +7,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
+import PropTypes from 'prop-types';
 
 // Redux actions
 import { updateHeaderTitle } from '../../store/modules/ui/header';
@@ -59,7 +60,7 @@ class Newsletters extends React.PureComponent {
 }
 
 Newsletters.propTypes = {
-  onUpdateHeaderTitle: React.PropTypes.func.isRequired,
+  onUpdateHeaderTitle: PropTypes.func.isRequired,
 };
 
 function mapStateToProps(state) {
