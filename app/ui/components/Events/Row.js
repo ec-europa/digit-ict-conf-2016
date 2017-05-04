@@ -6,6 +6,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import styles from './Row.scss';
 
@@ -95,10 +96,10 @@ class Row extends React.PureComponent {
 }
 
 Row.propTypes = {
-  event: React.PropTypes.object,
-  checked: React.PropTypes.bool,
-  onToggle: React.PropTypes.func,
-  displayTime: React.PropTypes.bool,
+  event: PropTypes.object,
+  checked: PropTypes.bool,
+  onToggle: PropTypes.func,
+  displayTime: PropTypes.bool,
 };
 
 Row.defaultProps = {

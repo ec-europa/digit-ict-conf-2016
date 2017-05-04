@@ -530,7 +530,7 @@ babel-plugin-syntax-do-expressions@^6.8.0:
   version "6.13.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-syntax-do-expressions/-/babel-plugin-syntax-do-expressions-6.13.0.tgz#5747756139aa26d390d09410b03744ba07e4796d"
 
-babel-plugin-syntax-dynamic-import@^6.18.0:
+babel-plugin-syntax-dynamic-import@6.18.0, babel-plugin-syntax-dynamic-import@^6.18.0:
   version "6.18.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-syntax-dynamic-import/-/babel-plugin-syntax-dynamic-import-6.18.0.tgz#8d6a26229c83745a9982a441051572caa179b1da"
 
@@ -7922,9 +7922,9 @@ sliced@1.0.1, sliced@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/sliced/-/sliced-1.0.1.tgz#0b3a662b5d04c3177b1926bea82b03f837a2ef41"
 
-"smooth-scroll@github:cferdinandi/smooth-scroll#v10.3.1":
-  version "10.3.1"
-  resolved "https://codeload.github.com/cferdinandi/smooth-scroll/tar.gz/a541227605cc46f05c87748cda68397aa961a8eb"
+"smooth-scroll@github:cferdinandi/smooth-scroll#v11.0.2":
+  version "11.0.2"
+  resolved "https://codeload.github.com/cferdinandi/smooth-scroll/tar.gz/531941ced042b058d57702067071e95e2b4947f6"
 
 sntp@1.x.x:
   version "1.0.9"

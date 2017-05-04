@@ -8,6 +8,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import Helmet from 'react-helmet';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 // Redux actions
 import { updateHeaderTitle } from '../../store/modules/ui/header';
@@ -78,12 +79,12 @@ class Speaker extends React.PureComponent {
 }
 
 Speaker.propTypes = {
-  match: React.PropTypes.object,
-  onUpdateHeaderTitle: React.PropTypes.func,
-  schedule: React.PropTypes.object,
-  isModal: React.PropTypes.bool,
-  onRequestClose: React.PropTypes.func,
-  onToggleEvent: React.PropTypes.func,
+  match: PropTypes.object,
+  onUpdateHeaderTitle: PropTypes.func,
+  schedule: PropTypes.object,
+  isModal: PropTypes.bool,
+  onRequestClose: PropTypes.func,
+  onToggleEvent: PropTypes.func,
 };
 
 Speaker.defaultProps = {

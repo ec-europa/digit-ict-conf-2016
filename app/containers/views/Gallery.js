@@ -7,6 +7,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
+import PropTypes from 'prop-types';
 import { updateHeaderTitle } from '../../store/modules/ui/header';
 
 // Load components
@@ -35,7 +36,7 @@ class Gallery extends React.PureComponent {
 }
 
 Gallery.propTypes = {
-  onUpdateHeaderTitle: React.PropTypes.func,
+  onUpdateHeaderTitle: PropTypes.func,
 };
 
 function mapDispatchToProps(dispatch) {

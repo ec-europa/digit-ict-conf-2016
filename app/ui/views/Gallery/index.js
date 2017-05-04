@@ -6,6 +6,7 @@
  /* eslint-disable react/no-danger */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import Gallery from 'react-photo-gallery';
 
 import Link from '../../components/Link/Link';
@@ -87,7 +88,7 @@ class View extends React.Component {
 }
 
 View.propTypes = {
-  photos: React.PropTypes.array,
+  photos: PropTypes.array,
 };
 
 export default View;

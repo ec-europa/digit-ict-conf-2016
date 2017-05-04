@@ -5,6 +5,7 @@
 */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import Link from '../Link/Link';
 import styles from './Row.scss';
 
@@ -36,7 +37,7 @@ class Row extends React.PureComponent {
 }
 
 Row.propTypes = {
-  speaker: React.PropTypes.object,
+  speaker: PropTypes.object,
 };
 
 Row.defaultProps = {

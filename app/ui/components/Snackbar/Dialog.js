@@ -6,6 +6,7 @@
 /* eslint-disable react/no-danger, jsx-a11y/no-static-element-interactions */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // Styles
 import styles from './Snackbar.scss';
@@ -76,11 +77,11 @@ class Dialog extends React.PureComponent {
 }
 
 Dialog.propTypes = {
-  onRequestClose: React.PropTypes.func,
-  onTriggerAction: React.PropTypes.func,
-  message: React.PropTypes.string,
-  timeout: React.PropTypes.number,
-  action: React.PropTypes.object,
+  onRequestClose: PropTypes.func,
+  onTriggerAction: PropTypes.func,
+  message: PropTypes.string,
+  timeout: PropTypes.number,
+  action: PropTypes.object,
 };
 
 export default Dialog;

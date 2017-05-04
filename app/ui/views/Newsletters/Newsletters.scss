@@ -1,0 +1,38 @@
+@import '../../theme/variables';
+@import '../../theme/breakpoints';
+
+.container {
+  max-width: $max-width;
+  margin: auto;
+  padding: $header-height 1em;
+}
+
+.header {
+  @include mappy-bp(max medium) {
+    display: none;
+  }
+
+  h1 {
+    color: $ict-grey-text;
+  }
+}
+
+.intro {
+  color: $ict-grey-text;
+
+  a {
+    color: $ict-blue;
+    text-decoration: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $ict-blue;
+      text-decoration: underline;
+    }
+  }
+
+  @include mappy-bp(medium) {
+    display: none;
+  }
+}

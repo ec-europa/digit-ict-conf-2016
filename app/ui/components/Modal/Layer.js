@@ -4,6 +4,7 @@
 
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
+import PropTypes from 'prop-types';
 
 // Styles
 import styles from './Modal.scss';
@@ -98,10 +99,10 @@ class Layer extends React.PureComponent {
 }
 
 Layer.propTypes = {
-  children: React.PropTypes.node,
-  isOpen: React.PropTypes.bool,
-  onRequestClose: React.PropTypes.func,
-  pathname: React.PropTypes.string,
+  children: PropTypes.node,
+  isOpen: PropTypes.bool,
+  onRequestClose: PropTypes.func,
+  pathname: PropTypes.string,
 };
 
 export default Layer;

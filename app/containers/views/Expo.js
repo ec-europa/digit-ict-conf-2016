@@ -7,6 +7,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
+import PropTypes from 'prop-types';
 
 // Content
 import stands from '../../../content/stands.json';
@@ -37,8 +38,8 @@ class Expo extends React.PureComponent {
 }
 
 Expo.propTypes = {
-  onUpdateHeaderTitle: React.PropTypes.func,
-  location: React.PropTypes.object,
+  onUpdateHeaderTitle: PropTypes.func,
+  location: PropTypes.object,
 };
 
 function mapDispatchToProps(dispatch) {

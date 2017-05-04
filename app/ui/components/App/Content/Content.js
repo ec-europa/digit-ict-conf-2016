@@ -3,6 +3,7 @@
 */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import styles from './Content.scss';
 
@@ -22,7 +23,7 @@ class Content extends React.PureComponent {
 }
 
 Content.propTypes = {
-  children: React.PropTypes.node,
+  children: PropTypes.node,
 };
 
 export default Content;

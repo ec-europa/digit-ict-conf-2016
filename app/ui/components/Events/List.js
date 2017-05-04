@@ -6,6 +6,7 @@
 
 import React from 'react';
 import FlipMove from 'react-flip-move';
+import PropTypes from 'prop-types';
 import Row from './Row';
 import styles from './List.scss';
 
@@ -69,10 +70,10 @@ class List extends React.PureComponent {
 }
 
 List.propTypes = {
-  events: React.PropTypes.array,
-  schedule: React.PropTypes.object,
-  onToggle: React.PropTypes.func,
-  location: React.PropTypes.object,
+  events: PropTypes.array,
+  schedule: PropTypes.object,
+  onToggle: PropTypes.func,
+  location: PropTypes.object,
 };
 
 List.defaultProps = {

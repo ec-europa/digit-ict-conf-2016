@@ -5,6 +5,7 @@
 */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // Styles
 import styles from './Modal.scss';
@@ -49,8 +50,8 @@ class Modal extends React.PureComponent {
 }
 
 Modal.propTypes = {
-  stand: React.PropTypes.object,
-  onRequestClose: React.PropTypes.func,
+  stand: PropTypes.object,
+  onRequestClose: PropTypes.func,
 };
 
 Modal.defaultProps = {

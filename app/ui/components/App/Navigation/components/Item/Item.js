@@ -7,6 +7,7 @@
 */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Link from '../../../../Link/Link';
 import styles from './Item.scss';
@@ -38,10 +39,10 @@ class Item extends React.Component {
 }
 
 Item.propTypes = {
-  children: React.PropTypes.node,
-  to: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.object]).isRequired,
-  mobileOnly: React.PropTypes.bool,
-  primary: React.PropTypes.bool,
+  children: PropTypes.node,
+  to: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
+  mobileOnly: PropTypes.bool,
+  primary: PropTypes.bool,
 };
 
 Item.defaultProps = {
