@@ -54,8 +54,8 @@ const Newsletter = ({ newsletter, status }) => {
     <section>
       <h2>{newsletter.title}</h2>
       {media}
-      <p>{newsletter.introduction}</p>
-      <div>
+      <p className={styles.newsIntro}>{newsletter.introduction}</p>
+      <div className={styles.newsList}>
         {newsList}
       </div>
     </section>

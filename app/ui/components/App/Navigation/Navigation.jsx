@@ -16,6 +16,7 @@ import NavigationSeparator from './components/Separator/Separator';
 
 import europaLogo from './images/europa.svg';
 import ictLogo from './images/digitec.svg';
+import newsletterLogo from './images/digitec-newsletter.jpeg';
 
 class Navigation extends React.PureComponent {
   constructor(props) {
@@ -138,7 +139,9 @@ class Navigation extends React.PureComponent {
               <NavigationItem to={'/expo'} onClick={this.closeDrawer}>Expo</NavigationItem>
               <NavigationItem to={'/gallery'} onClick={this.closeDrawer}>Gallery</NavigationItem>
               <NavigationItem to={'/practical'} onClick={this.closeDrawer}>Practical</NavigationItem>
-              <NavigationItem to={'/newsletters'} onClick={this.closeDrawer}>Newsletter</NavigationItem>
+              <Link to={'/newsletters'} className={styles.newsletter} onClick={this.closeDrawer}>
+                <img src={newsletterLogo} className={styles.newsletterLogo} alt="DIGITEC Newsletter" />
+              </Link>
               <NavigationSeparator />
               <NavigationItem to={'https://twitter.com/hashtag/digitec16'} target="_blank" rel="noopener noreferrer" mobileOnly>#digitec16</NavigationItem>
             </ul>

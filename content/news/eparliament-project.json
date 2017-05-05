@@ -3,5 +3,7 @@
   "title": "eParliament project",
   "image": false,
   "introduction": "DG ITEC manages over 400 IT applications, most of them linked to the main core business of the European Parliament: drafting legislation. For the first issue of this Newsletter, we want to give you a better insight into how IT supports parliamentary work through the e-Parliament Programme, in full collaboration with its partner DGs. Learn more about this set of applications and see how they allow the EP to deal with more than 5000 reports and opinions, producing over 200 legislative acts per year.",
-  "body": "Body text"
+  "body": [
+    "Body text"
+  ]
 }

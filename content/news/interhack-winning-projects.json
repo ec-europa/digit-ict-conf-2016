@@ -3,5 +3,7 @@
   "title": "InterHack: Where are the winning projects now? ",
   "image": false,
   "introduction": "In October 2016, the IT departments of the European Commission and the European Parliament organised their first common event, together with the Council of the EU. InterHack, the first interinstitutional Hackathon, gathered more than 30 developers for a day of IT development and lots of fun. In the end, 5 projects were presented, out of which the jury selected two winners. We bring you the latest news on the winning projects.",
-  "body": "Body text"
+  "body": [
+    "Body text"
+  ]
 }

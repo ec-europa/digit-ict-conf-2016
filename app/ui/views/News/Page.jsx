@@ -21,7 +21,7 @@ class Page extends React.PureComponent {
     return (
       <div className={styles.pageContainer}>
         <h1>{news.title}</h1>
-        <p>{news.body}</p>
+        <div className={styles.description} dangerouslySetInnerHTML={{ __html: (news.body || []).join('') }} />
       </div>
     );
   }
@@ -30,7 +30,7 @@ class Page extends React.PureComponent {
 Page.propTypes = {
   news: PropTypes.shape({
     title: PropTypes.string,
-    body: PropTypes.string,
+    body: PropTypes.array,
   }),
 };
 
