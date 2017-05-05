@@ -7,9 +7,9 @@ import PropTypes from 'prop-types';
 
 import styles from './Content.scss';
 
-class Content extends React.PureComponent {
+class Content extends React.Component {
   shouldComponentUpdate(nextProps) {
-    return nextProps.children !== this.props.children;
+    return nextProps.contentKey !== this.props.contentKey;
   }
 
   render() {
@@ -24,6 +24,11 @@ class Content extends React.PureComponent {
 
 Content.propTypes = {
   children: PropTypes.node,
+  contentKey: PropTypes.string.isRequired,
+};
+
+Content.defaultProps = {
+  children: null,
 };
 
 export default Content;

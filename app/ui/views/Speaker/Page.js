@@ -12,7 +12,6 @@ import styles from './Page.scss';
 
 // Components
 import EventRow from '../../components/Events/Row';
-import Link from '../../components/Link/Link';
 
 // Images
 import twitterLogo from './images/twitter.png';
@@ -48,7 +47,7 @@ class Page extends React.PureComponent {
           {speaker.bio.map((line, index) => (<p key={index}>{line}</p>))}
         </div>
         {speaker.twitter
-         ? <Link className={styles.twitter} to={`https://twitter.com/${speaker.twitter.substr(1)}`} target="_blank" rel="noopener noreferrer"><img src={twitterLogo} alt="Twitter Feed" /> {speaker.twitter}</Link>
+         ? <a className={styles.twitter} href={`https://twitter.com/${speaker.twitter.substr(1)}`} target="_blank" rel="noopener noreferrer"><img src={twitterLogo} alt="Twitter Feed" /> {speaker.twitter}</a>
          : null
         }
         {sessions}

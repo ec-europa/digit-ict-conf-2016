@@ -54,6 +54,10 @@ class News extends React.PureComponent {
       });
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    return nextState !== this.state;
+  }
+
   render() {
     const { news, status } = this.state;
     const { isModal, onRequestClose } = this.props;

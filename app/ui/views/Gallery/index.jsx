@@ -3,13 +3,11 @@
  *
  * This is the first thing users see of our App, at the '/' route
  */
- /* eslint-disable react/no-danger */
+/* eslint-disable react/no-danger */
 
 import React from 'react';
 import PropTypes from 'prop-types';
 import Gallery from 'react-photo-gallery';
-
-import Link from '../../components/Link/Link';
 
 // Load styles
 import styles from './Gallery.scss';
@@ -36,7 +34,7 @@ class View extends React.Component {
   }
 
   handleScroll() {
-    if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 50)) {
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 50) {
       this.loadMorePhotos();
     }
   }
@@ -52,7 +50,10 @@ class View extends React.Component {
     }
 
     const { photos } = this.props;
-    const newPhotos = photos.slice(this.state.pageNum * photosPerPage, (this.state.pageNum + 1) * photosPerPage);
+    const newPhotos = photos.slice(
+      this.state.pageNum * photosPerPage,
+      (this.state.pageNum + 1) * photosPerPage,
+    );
 
     this.setState({
       photos: this.state.photos ? this.state.photos.concat(newPhotos) : newPhotos,
@@ -67,20 +68,30 @@ class View extends React.Component {
       <div className={styles.container}>
         <div className={styles.header}>
           <h1>Gallery</h1>
-          <p>Selected pictures from the sessions and expo area. Find more photos in <Link to={'https://www.flickr.com/photos/ep_technology/albums/72157677157947156'} target="_blank" rel="noopener noreferrer">this album</Link>.</p>
+          <p>
+            Selected pictures from the sessions and expo area. Find more photos in
+            {' '}
+            <a
+              href="https://www.flickr.com/photos/ep_technology/albums/72157677157947156"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              this album
+            </a>
+            .
+          </p>
         </div>
-        {photos ? (
-          <div>
+        {photos
+          ? <div>
             <Gallery photos={photos} />
-            {!loadedAll && (
-              <div className={styles.clearfix}>
-                <p className="u-pt-1rem u-ta-center">Keep scrolling down to load more pictures!</p>
-              </div>
-            )}
+            {!loadedAll &&
+            <div className={styles.clearfix}>
+              <p className="u-pt-1rem u-ta-center">
+                    Keep scrolling down to load more pictures!
+                  </p>
+            </div>}
           </div>
-        ) : (
-          <p className="u-pt-1rem u-ta-center">Loading...</p>
-        )}
+          : <p className="u-pt-1rem u-ta-center">Loading...</p>}
         <div className={styles.clearfix} />
       </div>
     );
@@ -89,6 +100,10 @@ class View extends React.Component {
 
 View.propTypes = {
   photos: PropTypes.array,
+};
+
+View.defaultProps = {
+  photos: [],
 };
 
 export default View;

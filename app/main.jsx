@@ -40,6 +40,13 @@ ReactDOM.render(
   document.getElementById('app'),
 );
 
+if (process.env.NODE_ENV !== 'production') {
+  /* eslint-disable global-require, import/no-extraneous-dependencies */
+  const { whyDidYouUpdate } = require('why-did-you-update');
+  /* eslint-enable global-require */
+  whyDidYouUpdate(React, { exclude: /^(CSSTransitionGroup|Link|Connect|Route|Switch)/ });
+}
+
 if (process.env.NODE_ENV === 'production') {
   /* eslint-disable global-require */
   const offlineRuntime = require('offline-plugin/runtime');

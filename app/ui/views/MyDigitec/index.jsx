@@ -6,10 +6,10 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 // Load components
 import EventsList from '../../components/Events/List';
-import Link from '../../components/Link/Link';
 
 // Load styles
 import styles from './MyDigitec.scss';
@@ -29,7 +29,7 @@ class MyDigitec extends React.PureComponent {
         </div>
         <div className={styles.intro}>
           <p>
-            &quot;My DIGITEC&quot; helps you personalise your experience. Select your favourite sessions from <Link to={'/programme'}>DIGITEC programme</Link>.
+            &quot;My DIGITEC&quot; helps you personalise your experience. Select your favourite sessions from <Link to="/programme">DIGITEC programme</Link>.
           </p>
         </div>
         {myEvents.length > 0 && (

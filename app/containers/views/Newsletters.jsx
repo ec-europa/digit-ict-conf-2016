@@ -54,6 +54,10 @@ class Newsletters extends React.PureComponent {
       });
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    return nextState !== this.state;
+  }
+
   render() {
     const { currentNewsletter, newsletters, status } = this.state;
 
@@ -70,12 +74,6 @@ Newsletters.propTypes = {
   onUpdateHeaderTitle: PropTypes.func.isRequired,
 };
 
-function mapStateToProps(state) {
-  return {
-    schedule: state.schedule,
-  };
-}
-
 function mapDispatchToProps(dispatch) {
   return {
     onUpdateHeaderTitle: (title) => {
@@ -84,4 +82,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Newsletters);
+export default connect(null, mapDispatchToProps)(Newsletters);

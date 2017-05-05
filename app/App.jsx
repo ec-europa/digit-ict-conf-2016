@@ -4,12 +4,9 @@
 
 import React from 'react';
 import Helmet from 'react-helmet';
-import { connect } from 'react-redux';
 import { withRouter, Route, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import smoothScroll from 'smooth-scroll';
-
-import styles from './ui/components/App/App.scss';
 
 import {
   Event,
@@ -27,17 +24,15 @@ import {
   Expo,
 } from './containers/views';
 
-import Main from './ui/components/App/Main';
-import Navigation from './ui/components/App/Navigation';
+import MainContainer from './containers/layout/Main';
+import NavigationContainer from './containers/layout/Navigation';
+
 import Footer from './ui/components/App/Footer/Footer';
 import Content from './ui/components/App/Content/Content';
 import ModalContainer from './containers/generic/Modal';
 import SnackbarContainer from './containers/generic/Snackbar';
 
-// Redux actions
-import { closeDrawer, toggleDrawer } from './store/modules/ui/drawer';
-
-class App extends React.PureComponent {
+class App extends React.Component {
   constructor(props) {
     super(props);
 
@@ -46,52 +41,43 @@ class App extends React.PureComponent {
   }
 
   componentWillReceiveProps(nextProps) {
-    const { location } = this.props;
+    if (
+      nextProps.location.pathname === this.props.location.pathname &&
+      !((this.props.location.state && this.props.location.state.modal) ||
+        (nextProps.location.state && nextProps.location.state.modal))
+    ) {
+      // Smooth scroll to top if the location hasn't changed
+      smoothScroll.animateScroll(0);
+    }
+  }
 
+  shouldComponentUpdate(nextProps) {
+    return (
+      nextProps.location.pathname !== this.props.location.pathname
+    );
+  }
+
+  componentWillUpdate(nextProps) {
     // Set previousLocation if props.location is not modal
-    if (nextProps.history.action !== 'POP' && (!location.state || !location.state.modal)) {
+    if (
+      nextProps.history.action !== 'POP' &&
+      (!this.props.location.state || !this.props.location.state.modal) &&
+      (nextProps.location.state && nextProps.location.state.modal)
+    ) {
       this.previousLocation = this.props.location;
     }
   }
 
-  componentWillUpdate(nextProps) {
-    const { drawerOpen, location } = nextProps;
-
-    const isModal = !!(location.state &&
-      location.state.modal &&
-      this.previousLocation !== location); // not initial render
-
-    if (drawerOpen) {
-      document.body.classList.add(styles.drawerOpen);
-    } else {
-      document.body.classList.remove(styles.drawerOpen);
-    }
-
-    if (isModal) {
-      document.body.classList.add(styles.modalOpen);
-    } else {
-      document.body.classList.remove(styles.modalOpen);
-    }
-  }
-
   componentDidUpdate(prevProps) {
-    const previousLocation = prevProps.location;
-
-    // Don't scroll when we open or leave a modal
+    // Don't scroll when we open or leave a modal, or when the location hasn't changed
     if (
       (this.props.location.state && this.props.location.state.modal) ||
-      (previousLocation.state && previousLocation.state.modal)
+      (prevProps.location.state && prevProps.location.state.modal) ||
+      this.props.location === prevProps.location
     ) {
       return;
     }
 
-    // Smooth scroll to top if the location hasn't changed
-    if (previousLocation.pathname === this.props.location.pathname) {
-      smoothScroll.animateScroll(0);
-      return;
-    }
-
-    this.props.onCloseDrawer();
     window.scrollTo(0, 0);
   }
 
@@ -110,7 +96,7 @@ class App extends React.PureComponent {
   }
 
   render() {
-    const { location, drawerOpen, onToggleDrawer, headerTitle } = this.props;
+    const { location } = this.props;
 
     const isModal = !!(location.state &&
       location.state.modal &&
@@ -121,13 +107,8 @@ class App extends React.PureComponent {
     return (
       <div>
         <Helmet titleTemplate="DIGITEC 2016 - %s" />
-        <Main drawerOpen={drawerOpen} modalOpen={isModal}>
-          <Navigation
-            isModal={isModal}
-            drawerOpen={drawerOpen}
-            onToggleDrawer={onToggleDrawer}
-            title={headerTitle}
-          />
+        <MainContainer contentKey={childrenKey} isModal={isModal}>
+          <NavigationContainer isModal={isModal} />
           <Content contentKey={childrenKey}>
             <Switch location={isModal ? this.previousLocation : location}>
               <Route exact path="/" component={Home} />
@@ -146,7 +127,7 @@ class App extends React.PureComponent {
             </Switch>
           </Content>
           <Footer />
-        </Main>
+        </MainContainer>
         <ModalContainer
           isOpen={isModal}
           pathname={location.pathname}
@@ -198,15 +179,9 @@ App.propTypes = {
     action: PropTypes.string.isRequired,
     push: PropTypes.func.isRequired,
   }).isRequired,
-  drawerOpen: PropTypes.bool,
-  onCloseDrawer: PropTypes.func.isRequired,
-  onToggleDrawer: PropTypes.func.isRequired,
-  headerTitle: PropTypes.string,
 };
 
 App.defaultProps = {
-  drawerOpen: false,
-  headerTitle: '',
   location: {
     pathname: '',
     state: {
@@ -215,22 +190,4 @@ App.defaultProps = {
   },
 };
 
-function mapStateToProps(state) {
-  return {
-    drawerOpen: state.ui.drawer.isOpen,
-    headerTitle: state.ui.header.title,
-  };
-}
-
-function mapDispatchToProps(dispatch) {
-  return {
-    onToggleDrawer: () => {
-      dispatch(toggleDrawer());
-    },
-    onCloseDrawer: () => {
-      dispatch(closeDrawer());
-    },
-  };
-}
-
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
+export default withRouter(App);

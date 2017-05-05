@@ -6,7 +6,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from '../Link/Link';
+import { Link } from 'react-router-dom';
 import styles from './Row.scss';
 
 class Row extends React.PureComponent {
@@ -37,7 +37,13 @@ class Row extends React.PureComponent {
 }
 
 Row.propTypes = {
-  speaker: PropTypes.object,
+  speaker: PropTypes.shape({
+    id: PropTypes.string,
+    firstname: PropTypes.string,
+    lastname: PropTypes.string,
+    title: PropTypes.string,
+    picture: PropTypes.string,
+  }),
 };
 
 Row.defaultProps = {
