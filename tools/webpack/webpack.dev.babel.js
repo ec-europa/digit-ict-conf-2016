@@ -11,6 +11,7 @@ const config = require('../config');
 // PostCSS plugins
 const cssnext = require('postcss-cssnext');
 const postcssReporter = require('postcss-reporter');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = require('./webpack.base.babel')({
   basename: config.dev.basename,
@@ -53,6 +54,8 @@ module.exports = require('./webpack.base.babel')({
         ],
       },
     }),
+
+    new BundleAnalyzerPlugin(),
   ],
 
   // Load the CSS in a style tag in development

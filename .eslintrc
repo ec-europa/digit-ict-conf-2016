@@ -1,16 +1,25 @@
 {
   "root": true,
   "parser": "babel-eslint",
-  "extends": "airbnb",
+  "extends": [
+    "airbnb",
+    "prettier",
+    "prettier/react"
+  ],
   "plugins": [
-    "json"
+    "json",
+    "compat",
+    "prettier"
   ],
   "env": {
     "browser": true,
-    "node": true,
-    "mocha": true
+    "node": true
   },
   "globals": {
     "__BASENAME__": true
+  },
+  "rules": {
+    "compat/compat": 2,
+    "prettier/prettier": ["error", {"trailingComma": "es5", "singleQuote": true}]
   }
 }
