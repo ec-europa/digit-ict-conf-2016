@@ -30,16 +30,22 @@ class Newsletters extends React.PureComponent {
     this.props.onUpdateHeaderTitle('Newsletters');
 
     import('../../../content/newsletters.json')
-      .then(newsletters => import(`../../../content/newsletters/${newsletters.current}.json`))
-      .then((newsletter) => {
+      .then(newsletters =>
+        import(`../../../content/newsletters/${newsletters.current}.json`)
+      )
+      .then(newsletter => {
         this.setState({
           currentNewsletter: newsletter,
         });
 
         // Load news related to the newsletter
-        return Promise.all(newsletter.news.map((news => import(`../../../content/news/${news}.json`))));
+        return Promise.all(
+          newsletter.news.map(news =>
+            import(`../../../content/news/${news}.json`)
+          )
+        );
       })
-      .then((news) => {
+      .then(news => {
         this.setState(prevState => ({
           currentNewsletter: Object.assign({}, prevState.currentNewsletter, {
             news,
@@ -64,7 +70,11 @@ class Newsletters extends React.PureComponent {
     return (
       <div>
         <Helmet title="Newsletters" />
-        <View newsletters={newsletters} currentNewsletter={currentNewsletter} status={status} />
+        <View
+          newsletters={newsletters}
+          currentNewsletter={currentNewsletter}
+          status={status}
+        />
       </div>
     );
   }
@@ -76,7 +86,7 @@ Newsletters.propTypes = {
 
 function mapDispatchToProps(dispatch) {
   return {
-    onUpdateHeaderTitle: (title) => {
+    onUpdateHeaderTitle: title => {
       dispatch(updateHeaderTitle(title));
     },
   };

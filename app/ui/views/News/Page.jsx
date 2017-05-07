@@ -21,7 +21,10 @@ class Page extends React.PureComponent {
     return (
       <div className={styles.pageContainer}>
         <h1>{news.title}</h1>
-        <div className={styles.description} dangerouslySetInnerHTML={{ __html: (news.body || []).join('') }} />
+        <div
+          className={styles.description}
+          dangerouslySetInnerHTML={{ __html: (news.body || []).join('') }}
+        />
       </div>
     );
   }

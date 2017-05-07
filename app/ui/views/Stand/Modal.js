@@ -34,13 +34,20 @@ class Modal extends React.PureComponent {
         onRequestClose={onRequestClose}
       >
         <div className={styles.modalContainer}>
-          <div className={styles.modalHeader} style={headerStyle} role="img" aria-label={stand.title} />
+          <div
+            className={styles.modalHeader}
+            style={headerStyle}
+            role="img"
+            aria-label={stand.title}
+          />
           <div className={styles.modalContent}>
             <div className={styles.number}>{stand.number}</div>
             <h3>{stand.title}</h3>
             <h4 className={styles.title}>{stand.subtitle}</h4>
             <div className={styles.description}>
-              {stand.description.map((line, index) => (<p key={index} dangerouslySetInnerHTML={{ __html: line }} />))}
+              {stand.description.map((line, index) => (
+                <p key={index} dangerouslySetInnerHTML={{ __html: line }} />
+              ))}
             </div>
           </div>
         </div>

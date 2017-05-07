@@ -37,7 +37,7 @@ ReactDOM.render(
       <App />
     </Router>
   </Provider>,
-  document.getElementById('app'),
+  document.getElementById('app')
 );
 
 if (process.env.NODE_ENV !== 'production') {
@@ -50,27 +50,36 @@ if (process.env.NODE_ENV !== 'production') {
 if (process.env.NODE_ENV === 'production') {
   /* eslint-disable global-require */
   const offlineRuntime = require('offline-plugin/runtime');
-  const { openSnackbar, closeSnackbar } = require('./store/modules/ui/snackbar');
+  const {
+    openSnackbar,
+    closeSnackbar,
+  } = require('./store/modules/ui/snackbar');
   /* eslint-enable global-require */
 
   // Install ServiceWorker and AppCache
   offlineRuntime.install({
-    onInstalled: () => store.dispatch(openSnackbar({
-      message: 'DIGITEC is ready to work offline',
-      timeout: 0,
-      action: {
-        label: 'Dismiss',
-        onClick: () => store.dispatch(closeSnackbar()),
-      },
-    })),
+    onInstalled: () =>
+      store.dispatch(
+        openSnackbar({
+          message: 'DIGITEC is ready to work offline',
+          timeout: 0,
+          action: {
+            label: 'Dismiss',
+            onClick: () => store.dispatch(closeSnackbar()),
+          },
+        })
+      ),
     onUpdateReady: () => offlineRuntime.applyUpdate(),
-    onUpdated: () => store.dispatch(openSnackbar({
-      message: 'DIGITEC has been updated',
-      timeout: 0,
-      action: {
-        label: 'Reload',
-        onClick: () => window.location.reload(),
-      },
-    })),
+    onUpdated: () =>
+      store.dispatch(
+        openSnackbar({
+          message: 'DIGITEC has been updated',
+          timeout: 0,
+          action: {
+            label: 'Reload',
+            onClick: () => window.location.reload(),
+          },
+        })
+      ),
   });
 }

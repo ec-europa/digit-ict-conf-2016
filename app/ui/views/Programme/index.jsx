@@ -14,7 +14,6 @@ import EventsList from '../../components/Events/List';
 // Styles
 import styles from './Programme.scss';
 
-
 class Programme extends React.PureComponent {
   shouldComponentUpdate(nextProps) {
     return nextProps.schedule !== this.props.schedule;
@@ -30,10 +29,18 @@ class Programme extends React.PureComponent {
         </div>
         <div className={styles.intro}>
           <p>
-            Choose and save your favourite sessions to <Link to={'/my-digitec'}>My DIGITEC</Link>.
+            Choose and save your favourite sessions to
+            {' '}
+            <Link to={'/my-digitec'}>My DIGITEC</Link>
+            .
           </p>
         </div>
-        <EventsList events={events} schedule={schedule} onToggle={onToggleEvent} location={location} />
+        <EventsList
+          events={events}
+          schedule={schedule}
+          onToggle={onToggleEvent}
+          location={location}
+        />
       </div>
     );
   }

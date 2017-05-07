@@ -20,28 +20,37 @@ class List extends React.PureComponent {
     const eventsDisplay = [];
 
     const eventsByTimeslot = [];
-    events.forEach((event) => {
+    events.forEach(event => {
       if (!eventsByTimeslot[event.starts]) {
         eventsByTimeslot[event.starts] = [];
       }
       eventsByTimeslot[event.starts].push(event);
     });
 
-    Object.keys(eventsByTimeslot).forEach((start) => {
+    Object.keys(eventsByTimeslot).forEach(start => {
       const eventsList = eventsByTimeslot[start];
 
       const eventsRows = eventsList.map(event => (
-        <Row key={event.id} event={event} checked={schedule[event.id]} onToggle={onToggle} displayTime={false} location={location} />
+        <Row
+          key={event.id}
+          event={event}
+          checked={schedule[event.id]}
+          onToggle={onToggle}
+          displayTime={false}
+          location={location}
+        />
       ));
 
-      const eventsEnds = eventsList[0].ends ? (
-        <time>{eventsList[0].ends}</time>
-      ) : null;
+      const eventsEnds = eventsList[0].ends
+        ? <time>{eventsList[0].ends}</time>
+        : null;
 
       eventsDisplay.push(
-        <div className={styles.block} key={eventsList[0].starts} >
+        <div className={styles.block} key={eventsList[0].starts}>
           <div className={styles.timeslot}>
-            <time>{eventsList[0].starts}</time>{eventsEnds ? ' - ' : ''}{eventsEnds}
+            <time>{eventsList[0].starts}</time>
+            {eventsEnds ? ' - ' : ''}
+            {eventsEnds}
           </div>
           <FlipMove
             easing="ease"
@@ -52,7 +61,7 @@ class List extends React.PureComponent {
           >
             {eventsRows}
           </FlipMove>
-        </div>,
+        </div>
       );
     });
 

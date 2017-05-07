@@ -32,12 +32,19 @@ class Checkbox extends React.PureComponent {
       { [styles.blueItem]: event.color === 'blue' },
       { [styles.yellowItem]: event.color === 'yellow' },
       { [styles.purpleItem]: event.color === 'purple' },
-      { [styles.greyItem]: event.color === 'grey' },
+      { [styles.greyItem]: event.color === 'grey' }
     );
 
     return (
       <div className={checkboxClasses}>
-        <input id={idPrefix + event.id} type="checkbox" className={styles.checkbox} checked={checked} onChange={this.toggle} aria-hidden="true" />
+        <input
+          id={idPrefix + event.id}
+          type="checkbox"
+          className={styles.checkbox}
+          checked={checked}
+          onChange={this.toggle}
+          aria-hidden="true"
+        />
         <label htmlFor={idPrefix + event.id} className={styles.label}>
           <span className={styles.unchecked} />
           <span className={styles.checked} />

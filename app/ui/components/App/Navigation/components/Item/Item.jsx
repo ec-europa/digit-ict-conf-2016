@@ -24,16 +24,10 @@ class Item extends React.Component {
 
     return (
       <li
-        className={classnames(
-          styles.item,
-          { [styles.mobileOnly]: mobileOnly },
-        )}
+        className={classnames(styles.item, { [styles.mobileOnly]: mobileOnly })}
       >
         <NavLink
-          className={classnames(
-            styles.link,
-            { [styles.primary]: primary },
-          )}
+          className={classnames(styles.link, { [styles.primary]: primary })}
           exact
           activeClassName={styles.active}
           to={to}

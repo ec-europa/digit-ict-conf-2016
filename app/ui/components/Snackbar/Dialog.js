@@ -58,19 +58,25 @@ class Dialog extends React.PureComponent {
         className={styles.snackbar}
         onClick={onRequestClose}
         role="alertdialog"
-        ref={(c) => { this.dialog = c; }}
+        ref={c => {
+          this.dialog = c;
+        }}
       >
-        <div className={styles.message} dangerouslySetInnerHTML={{ __html: message }} />
-        {action && action.label && action.onClick ?
-          <button
-            className={styles.action}
-            onClick={onTriggerAction}
-            ref={(c) => { this.actionButton = c; }}
-          >
-            {action.label}
-          </button>
-          : null
-        }
+        <div
+          className={styles.message}
+          dangerouslySetInnerHTML={{ __html: message }}
+        />
+        {action && action.label && action.onClick
+          ? <button
+              className={styles.action}
+              onClick={onTriggerAction}
+              ref={c => {
+                this.actionButton = c;
+              }}
+            >
+              {action.label}
+            </button>
+          : null}
       </div>
     );
   }

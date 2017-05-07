@@ -31,17 +31,14 @@ class Newsletters extends React.PureComponent {
           <h1>Newsletter</h1>
         </div>
         <Newsletter newsletter={currentNewsletter} status={status} />
-        {newsletters.length > 0 && (
+        {newsletters.length > 0 &&
           <div>
             <h2>Archives</h2>
             List of previous newsletters...
             <ul>
-              {newsletters.map(() => (
-                <li>Newsletter</li>
-              ))}
+              {newsletters.map(() => <li>Newsletter</li>)}
             </ul>
-          </div>
-        )}
+          </div>}
       </div>
     );
   }

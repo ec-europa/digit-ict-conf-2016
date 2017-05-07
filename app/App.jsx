@@ -52,9 +52,7 @@ class App extends React.Component {
   }
 
   shouldComponentUpdate(nextProps) {
-    return (
-      nextProps.location.pathname !== this.props.location.pathname
-    );
+    return nextProps.location.pathname !== this.props.location.pathname;
   }
 
   componentWillUpdate(nextProps) {
@@ -102,7 +100,9 @@ class App extends React.Component {
       location.state.modal &&
       this.previousLocation !== location);
 
-    const childrenKey = isModal ? this.previousLocation.pathname : location.pathname;
+    const childrenKey = isModal
+      ? this.previousLocation.pathname
+      : location.pathname;
 
     return (
       <div>
@@ -135,31 +135,51 @@ class App extends React.Component {
         >
           {isModal
             ? [
-              <Route
-                location={location}
-                path="/event/:eventId"
-                render={props => <Event onRequestClose={this.closeModal} isModal {...props} />}
-                key={`event-${location.pathname}`}
-              />,
-              <Route
-                location={location}
-                path="/news/:newsId"
-                render={props => <News onRequestClose={this.closeModal} isModal {...props} />}
-                key={`news-${location.pathname}`}
-              />,
-              <Route
-                location={location}
-                path="/speaker/:speakerId"
-                render={props => <Speaker onRequestClose={this.closeModal} isModal {...props} />}
-                key={`speaker-${location.pathname}`}
-              />,
-              <Route
-                location={location}
-                path="/stand/:standId"
-                render={props => <Stand onRequestClose={this.closeModal} isModal {...props} />}
-                key={`stand-${location.pathname}`}
-              />,
-            ]
+                <Route
+                  location={location}
+                  path="/event/:eventId"
+                  render={props => (
+                    <Event
+                      onRequestClose={this.closeModal}
+                      isModal
+                      {...props}
+                    />
+                  )}
+                  key={`event-${location.pathname}`}
+                />,
+                <Route
+                  location={location}
+                  path="/news/:newsId"
+                  render={props => (
+                    <News onRequestClose={this.closeModal} isModal {...props} />
+                  )}
+                  key={`news-${location.pathname}`}
+                />,
+                <Route
+                  location={location}
+                  path="/speaker/:speakerId"
+                  render={props => (
+                    <Speaker
+                      onRequestClose={this.closeModal}
+                      isModal
+                      {...props}
+                    />
+                  )}
+                  key={`speaker-${location.pathname}`}
+                />,
+                <Route
+                  location={location}
+                  path="/stand/:standId"
+                  render={props => (
+                    <Stand
+                      onRequestClose={this.closeModal}
+                      isModal
+                      {...props}
+                    />
+                  )}
+                  key={`stand-${location.pathname}`}
+                />,
+              ]
             : null}
         </ModalContainer>
         <SnackbarContainer />

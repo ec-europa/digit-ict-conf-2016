@@ -11,18 +11,12 @@ const Newsletter = ({ newsletter, status }) => {
 
   if (Object.keys(newsletter).length === 0) {
     if (status === 'error') {
-      return (
-        <p>Error, could not retrieve the newsletter!</p>
-      );
+      return <p>Error, could not retrieve the newsletter!</p>;
     } else if (status === 'loading') {
-      return (
-        <p>Loading...</p>
-      );
+      return <p>Loading...</p>;
     }
 
-    return (
-      <p>Empty newsletter?</p>
-    );
+    return <p>Empty newsletter?</p>;
   }
 
   let media = null;
@@ -30,7 +24,12 @@ const Newsletter = ({ newsletter, status }) => {
     media = (
       <div className={styles.media}>
         <div className={styles.ratio}>
-          <iframe src={newsletter.media.url} frameBorder="0" className={styles.full} allowFullScreen />
+          <iframe
+            src={newsletter.media.url}
+            frameBorder="0"
+            className={styles.full}
+            allowFullScreen
+          />
         </div>
       </div>
     );
@@ -39,11 +38,9 @@ const Newsletter = ({ newsletter, status }) => {
   let newsList = null;
 
   if (status === 'done') {
-    newsList = Array.isArray(newsletter.news) ? (
-      newsletter.news.map(news => <NewsIntro news={news} key={news.id} />)
-    ) : (
-      <p>No news found</p>
-    );
+    newsList = Array.isArray(newsletter.news)
+      ? newsletter.news.map(news => <NewsIntro news={news} key={news.id} />)
+      : <p>No news found</p>;
   } else if (status === 'loading') {
     newsList = <p>Loading...</p>;
   } else {
@@ -61,7 +58,6 @@ const Newsletter = ({ newsletter, status }) => {
     </section>
   );
 };
-
 
 Newsletter.propTypes = {
   newsletter: PropTypes.shape({

@@ -34,7 +34,10 @@ class View extends React.Component {
   }
 
   handleScroll() {
-    if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 50) {
+    if (
+      window.innerHeight + window.scrollY >=
+      document.body.offsetHeight - 50
+    ) {
       this.loadMorePhotos();
     }
   }
@@ -52,11 +55,13 @@ class View extends React.Component {
     const { photos } = this.props;
     const newPhotos = photos.slice(
       this.state.pageNum * photosPerPage,
-      (this.state.pageNum + 1) * photosPerPage,
+      (this.state.pageNum + 1) * photosPerPage
     );
 
     this.setState({
-      photos: this.state.photos ? this.state.photos.concat(newPhotos) : newPhotos,
+      photos: this.state.photos
+        ? this.state.photos.concat(newPhotos)
+        : newPhotos,
       pageNum: this.state.pageNum + 1,
       loadedAll: this.state.pageNum + 1 >= this.state.totalPages,
     });
@@ -83,14 +88,14 @@ class View extends React.Component {
         </div>
         {photos
           ? <div>
-            <Gallery photos={photos} />
-            {!loadedAll &&
-            <div className={styles.clearfix}>
-              <p className="u-pt-1rem u-ta-center">
+              <Gallery photos={photos} />
+              {!loadedAll &&
+                <div className={styles.clearfix}>
+                  <p className="u-pt-1rem u-ta-center">
                     Keep scrolling down to load more pictures!
                   </p>
-            </div>}
-          </div>
+                </div>}
+            </div>
           : <p className="u-pt-1rem u-ta-center">Loading...</p>}
         <div className={styles.clearfix} />
       </div>

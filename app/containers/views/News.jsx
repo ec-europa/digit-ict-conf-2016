@@ -33,7 +33,7 @@ class News extends React.PureComponent {
 
     // Load content
     import(`../../../content/news/${this.props.match.params.newsId}`)
-      .then((news) => {
+      .then(news => {
         this.setState({
           news,
           status: 'loaded',
@@ -74,11 +74,9 @@ class News extends React.PureComponent {
     return (
       <div>
         <Helmet title={news.title} />
-        {
-          isModal
-            ? <NewsModal news={news} onRequestClose={onRequestClose} />
-            : <NewsPage news={news} />
-        }
+        {isModal
+          ? <NewsModal news={news} onRequestClose={onRequestClose} />
+          : <NewsPage news={news} />}
       </div>
     );
   }
@@ -102,7 +100,7 @@ News.defaultProps = {
 
 function mapDispatchToProps(dispatch) {
   return {
-    onUpdateHeaderTitle: (title) => {
+    onUpdateHeaderTitle: title => {
       dispatch(updateHeaderTitle(title));
     },
   };

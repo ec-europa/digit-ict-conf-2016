@@ -67,7 +67,10 @@ class Navigation extends React.PureComponent {
       this.headroom.pin();
 
       // Toggle the drawer if it's closed
-      if (!this.props.drawerOpen && this.navigation.contains(document.activeElement)) {
+      if (
+        !this.props.drawerOpen &&
+        this.navigation.contains(document.activeElement)
+      ) {
         this.props.onToggleDrawer();
         event.preventDefault();
       }
@@ -100,10 +103,25 @@ class Navigation extends React.PureComponent {
     const { title, drawerOpen } = this.props;
 
     return (
-      <nav className={styles.container} ref={(c) => { this.header = c; }}>
-        <input type="checkbox" id="toggleDrawer" className={styles.toggleDrawer} checked={drawerOpen} />
+      <nav
+        className={styles.container}
+        ref={c => {
+          this.header = c;
+        }}
+      >
+        <input
+          type="checkbox"
+          id="toggleDrawer"
+          className={styles.toggleDrawer}
+          checked={drawerOpen}
+        />
         <div className={styles.mobileBar}>
-          <label htmlFor="toggleDrawer" className={styles.navToggle} onClick={this.handleRequestToggleDrawer} role="button">
+          <label
+            htmlFor="toggleDrawer"
+            className={styles.navToggle}
+            onClick={this.handleRequestToggleDrawer}
+            role="button"
+          >
             <span />
             <span />
             <span />
@@ -112,16 +130,39 @@ class Navigation extends React.PureComponent {
             <h1 className={styles.title}>{title}</h1>
           </div>
         </div>
-        <label htmlFor="toggleDrawer" className={styles.overlay} onClick={this.handleRequestToggleDrawer} role="button" />
-        <div className={styles.navigation} ref={(c) => { this.navigation = c; }}>
+        <label
+          htmlFor="toggleDrawer"
+          className={styles.overlay}
+          onClick={this.handleRequestToggleDrawer}
+          role="button"
+        />
+        <div
+          className={styles.navigation}
+          ref={c => {
+            this.navigation = c;
+          }}
+        >
           <div className={styles.innerNavigation}>
             <div className={styles.navigationHeader}>
               <div className={styles.logos}>
-                <a href="http://europa.eu/index_en.htm" target="_blank" rel="noopener noreferrer" className={styles.link}>
-                  <img src={europaLogo} className={styles.europaLogo} alt="DIGITEC 2016" />
+                <a
+                  href="http://europa.eu/index_en.htm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.link}
+                >
+                  <img
+                    src={europaLogo}
+                    className={styles.europaLogo}
+                    alt="DIGITEC 2016"
+                  />
                 </a>
                 <Link to="/" className={styles.link}>
-                  <img src={ictLogo} className={styles.ictLogo} alt="DIGITEC 2016" />
+                  <img
+                    src={ictLogo}
+                    className={styles.ictLogo}
+                    alt="DIGITEC 2016"
+                  />
                 </Link>
               </div>
               <div className={styles.navigationHeaderTitle}>
@@ -132,18 +173,56 @@ class Navigation extends React.PureComponent {
               </div>
             </div>
             <ul className={styles.navLinks}>
-              <NavigationItem to={'/'} strict mobileOnly onClick={this.closeDrawer}>Home</NavigationItem>
-              <NavigationItem to={'/speakers'} onClick={this.closeDrawer}>Speakers</NavigationItem>
-              <NavigationItem to={'/programme'} onClick={this.closeDrawer}>Programme</NavigationItem>
-              <NavigationItem to={'/my-digitec'} mobileOnly onClick={this.closeDrawer}>My DIGITEC</NavigationItem>
-              <NavigationItem to={'/expo'} onClick={this.closeDrawer}>Expo</NavigationItem>
-              <NavigationItem to={'/gallery'} onClick={this.closeDrawer}>Gallery</NavigationItem>
-              <NavigationItem to={'/practical'} onClick={this.closeDrawer}>Practical</NavigationItem>
-              <Link to={'/newsletters'} className={styles.newsletter} onClick={this.closeDrawer}>
-                <img src={newsletterLogo} className={styles.newsletterLogo} alt="DIGITEC Newsletter" />
+              <NavigationItem
+                to={'/'}
+                strict
+                mobileOnly
+                onClick={this.closeDrawer}
+              >
+                Home
+              </NavigationItem>
+              <NavigationItem to={'/speakers'} onClick={this.closeDrawer}>
+                Speakers
+              </NavigationItem>
+              <NavigationItem to={'/programme'} onClick={this.closeDrawer}>
+                Programme
+              </NavigationItem>
+              <NavigationItem
+                to={'/my-digitec'}
+                mobileOnly
+                onClick={this.closeDrawer}
+              >
+                My DIGITEC
+              </NavigationItem>
+              <NavigationItem to={'/expo'} onClick={this.closeDrawer}>
+                Expo
+              </NavigationItem>
+              <NavigationItem to={'/gallery'} onClick={this.closeDrawer}>
+                Gallery
+              </NavigationItem>
+              <NavigationItem to={'/practical'} onClick={this.closeDrawer}>
+                Practical
+              </NavigationItem>
+              <Link
+                to={'/newsletters'}
+                className={styles.newsletter}
+                onClick={this.closeDrawer}
+              >
+                <img
+                  src={newsletterLogo}
+                  className={styles.newsletterLogo}
+                  alt="DIGITEC Newsletter"
+                />
               </Link>
               <NavigationSeparator />
-              <NavigationItem to={'https://twitter.com/hashtag/digitec16'} target="_blank" rel="noopener noreferrer" mobileOnly>#digitec16</NavigationItem>
+              <NavigationItem
+                to={'https://twitter.com/hashtag/digitec16'}
+                target="_blank"
+                rel="noopener noreferrer"
+                mobileOnly
+              >
+                #digitec16
+              </NavigationItem>
             </ul>
           </div>
         </div>

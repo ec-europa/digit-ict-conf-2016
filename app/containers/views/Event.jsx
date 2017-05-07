@@ -65,12 +65,16 @@ class Event extends React.PureComponent {
     const { onToggleEvent, schedule, onRequestClose } = this.props;
     const isChecked = schedule[event.id];
 
-    const eventModerators = speakers.filter(speaker => event.moderator === speaker.id);
+    const eventModerators = speakers.filter(
+      speaker => event.moderator === speaker.id
+    );
     const eventSpeakers = speakers
       .filter(speaker => event.speakers.indexOf(speaker.id) > -1)
-      .sort((a, b) => event.speakers.indexOf(a.id) - event.speakers.indexOf(b.id));
+      .sort(
+        (a, b) => event.speakers.indexOf(a.id) - event.speakers.indexOf(b.id)
+      );
     const eventGuests = speakers.filter(
-      speaker => event.guests && event.guests.indexOf(speaker.id) > -1,
+      speaker => event.guests && event.guests.indexOf(speaker.id) > -1
     );
 
     return (
@@ -78,20 +82,20 @@ class Event extends React.PureComponent {
         <Helmet title={event.title} />
         {isModal
           ? <EventModal
-            event={event}
-            eventModerators={eventModerators}
-            eventSpeakers={eventSpeakers}
-            eventGuests={eventGuests}
-            checked={isChecked}
-            onToggle={onToggleEvent}
-            onRequestClose={onRequestClose}
-          />
+              event={event}
+              eventModerators={eventModerators}
+              eventSpeakers={eventSpeakers}
+              eventGuests={eventGuests}
+              checked={isChecked}
+              onToggle={onToggleEvent}
+              onRequestClose={onRequestClose}
+            />
           : <EventPage
-            event={event}
-            eventModerators={eventModerators}
-            eventSpeakers={eventSpeakers}
-            eventGuests={eventGuests}
-          />}
+              event={event}
+              eventModerators={eventModerators}
+              eventSpeakers={eventSpeakers}
+              eventGuests={eventGuests}
+            />}
       </div>
     );
   }
@@ -126,10 +130,10 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    onToggleEvent: (event) => {
+    onToggleEvent: event => {
       dispatch(toggleEvent(event));
     },
-    onUpdateHeaderTitle: (title) => {
+    onUpdateHeaderTitle: title => {
       dispatch(updateHeaderTitle(title));
     },
   };

@@ -20,7 +20,7 @@ export const REMOVE_FROM_MY_SCHEDULE = 'REMOVE_FROM_MY_SCHEDULE';
  * Initial state
  */
 const initialState = {};
-data.filter(event => event.register).forEach((event) => {
+data.filter(event => event.register).forEach(event => {
   initialState[event.id] = false;
 });
 
@@ -53,13 +53,15 @@ export function toggleEvent(event) {
     const { schedule } = getState();
 
     if (schedule[event.id]) {
-      dispatch(openSnackbar({
-        message: `<strong>${event.title}</strong> has been removed from your DIGITEC.`,
-        action: {
-          label: 'Undo',
-          onClick: () => dispatch(toggleEvent(event)),
-        },
-      }));
+      dispatch(
+        openSnackbar({
+          message: `<strong>${event.title}</strong> has been removed from your DIGITEC.`,
+          action: {
+            label: 'Undo',
+            onClick: () => dispatch(toggleEvent(event)),
+          },
+        })
+      );
 
       return dispatch({
         type: REMOVE_FROM_MY_SCHEDULE,
@@ -67,13 +69,15 @@ export function toggleEvent(event) {
       });
     }
 
-    dispatch(openSnackbar({
-      message: `<strong>${event.title}</strong> has been added to your DIGITEC.`,
-      action: {
-        label: 'Undo',
-        onClick: () => dispatch(toggleEvent(event)),
-      },
-    }));
+    dispatch(
+      openSnackbar({
+        message: `<strong>${event.title}</strong> has been added to your DIGITEC.`,
+        action: {
+          label: 'Undo',
+          onClick: () => dispatch(toggleEvent(event)),
+        },
+      })
+    );
 
     return dispatch({
       type: ADD_TO_MY_SCHEDULE,

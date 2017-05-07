@@ -34,7 +34,12 @@ class Programme extends React.PureComponent {
     return (
       <div>
         <Helmet title="Programme" />
-        <View schedule={schedule} onToggleEvent={onToggleEvent} location={location} events={events} />
+        <View
+          schedule={schedule}
+          onToggleEvent={onToggleEvent}
+          location={location}
+          events={events}
+        />
       </div>
     );
   }
@@ -59,10 +64,10 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    onToggleEvent: (event) => {
+    onToggleEvent: event => {
       dispatch(toggleEvent(event));
     },
-    onUpdateHeaderTitle: (title) => {
+    onUpdateHeaderTitle: title => {
       dispatch(updateHeaderTitle(title));
     },
   };

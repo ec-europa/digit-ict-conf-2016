@@ -54,4 +54,6 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(NavigationContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(
+  NavigationContainer
+);

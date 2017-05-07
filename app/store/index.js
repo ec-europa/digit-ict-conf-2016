@@ -15,21 +15,14 @@ export default function configureStore() {
     schedule,
   });
 
-  const enhancers = [
-    applyMiddleware(thunk),
-    autoRehydrate(),
-  ];
+  const enhancers = [applyMiddleware(thunk), autoRehydrate()];
 
   if (process.env.NODE_ENV !== 'production') {
     const devtools = window.devToolsExtension || (() => noop => noop);
     enhancers.push(devtools());
   }
 
-  const store = createStore(
-    reducer,
-    {},
-    compose(...enhancers),
-  );
+  const store = createStore(reducer, {}, compose(...enhancers));
 
   persistStore(store, {
     whitelist: ['schedule'],

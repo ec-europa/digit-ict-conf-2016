@@ -16,7 +16,7 @@ class NotFound extends React.PureComponent {
     return (
       <div className={styles.container}>
         <h1>Speaker not found</h1>
-        <p>We couldn&apos;t find the requested speaker...</p>
+        <p>We couldn't find the requested speaker...</p>
       </div>
     );
   }

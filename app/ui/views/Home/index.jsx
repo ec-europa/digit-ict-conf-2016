@@ -3,7 +3,7 @@
  *
  * This is the first thing users see of our App, at the '/' route
  */
- /* eslint-disable react/no-danger */
+/* eslint-disable react/no-danger */
 
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -24,21 +24,59 @@ class Home extends React.PureComponent {
         <Cover />
         <div className={styles.about} id="about">
           <p>
-            The IT departments of the European Commission (DIGIT) and the European Parliament (ITEC) have joined forces to organise <strong>DIGITEC 2016: Digital Future</strong>.
+            The IT departments of the European Commission (DIGIT) and the European Parliament (ITEC) have joined forces to organise
+            {' '}
+            <strong>DIGITEC 2016: Digital Future</strong>
+            .
             The forum brought together the IT communities of the European institutions to share best practices to transform public administration through IT and to discuss how the digital future will shape the way of working in large organisations.
-            See the Twitter highlights storified <a href="https://storify.com/digit/digitec-2016-highlights-of-the-day" target="_blank" rel="noopener noreferrer">here</a> and sketchnotes <a href="https://www.flickr.com/photos/cnichele65/albums/72157673302735714" target="_blank" rel="noopener noreferrer">here</a>.
+            See the Twitter highlights storified
+            {' '}
+            <a
+              href="https://storify.com/digit/digitec-2016-highlights-of-the-day"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              here
+            </a>
+            {' '}
+            and sketchnotes
+            {' '}
+            <a
+              href="https://www.flickr.com/photos/cnichele65/albums/72157673302735714"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              here
+            </a>
+            .
           </p>
           <div className={styles.media}>
             <div className={styles.ratio}>
-              <iframe src="https://www.youtube.com/embed/cUUrUkB4x-k" frameBorder="0" className={styles.full} allowFullScreen />
+              <iframe
+                src="https://www.youtube.com/embed/cUUrUkB4x-k"
+                frameBorder="0"
+                className={styles.full}
+                allowFullScreen
+              />
             </div>
           </div>
           <div className={styles.media}>
             <div className={styles.ratio}>
-              <iframe src="https://www.youtube.com/embed/IaT0-J1tL0k" frameBorder="0" className={styles.full} allowFullScreen />
+              <iframe
+                src="https://www.youtube.com/embed/IaT0-J1tL0k"
+                frameBorder="0"
+                className={styles.full}
+                allowFullScreen
+              />
             </div>
           </div>
-          <p>Watch the recorded presentations in the Gold Hall. Open the sessions in the <Link to="/programme">Programme</Link> to find all videos.</p>
+          <p>
+            Watch the recorded presentations in the Gold Hall. Open the sessions in the
+            {' '}
+            <Link to="/programme">Programme</Link>
+            {' '}
+            to find all videos.
+          </p>
           <div className={styles.media}>
             <div className={styles.ratio}>
               <iframe
