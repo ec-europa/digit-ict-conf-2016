@@ -7,27 +7,28 @@ import styles from './NewsIntro.scss';
 const NewsIntro = ({ news }) =>
   typeof news === 'string' || news instanceof String
     ? <p>Loading article...</p>
-    : <Link
-        to={{
-          pathname: `/news/${news.id}`,
-          state: { modal: true },
-        }}
-        className={styles.link}
-      >
-        <article className={styles.article} key={news.title}>
-          {news.image &&
-            <div className={styles.articleImage}>
-              <img
-                src={`${__BASENAME__}/static/${news.image}`}
-                alt={news.title}
-              />
-            </div>}
-          <div className={styles.articleContent}>
-            <h3>{news.title}</h3>
-            <p>{news.introduction}</p>
-          </div>
-        </article>
-      </Link>;
+    :
+      <article className={styles.article} key={news.title}>
+        <Link
+          to={{
+            pathname: `/news/${news.id}`,
+            state: { modal: true },
+          }}
+          className={styles.link}
+        />
+        {news.image &&
+          <div className={styles.articleImage}>
+            <img
+              src={`${__BASENAME__}/static/${news.image}`}
+              alt={news.title}
+            />
+          </div>}
+        <div className={styles.articleContent}>
+          <h3>{news.title}</h3>
+          <p dangerouslySetInnerHTML={{ __html: news.introduction }} />
+        </div>
+      </article>
+  ;
 
 NewsIntro.propTypes = {
   news: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,

@@ -58,7 +58,14 @@ module.exports = require('./webpack.base.babel')({
       },
     }),
 
-    new BundleAnalyzerPlugin(),
+    ...(process.env.ANALYSE
+      ? [
+          new BundleAnalyzerPlugin({
+            // Port that will be used in `server` mode to start HTTP server.
+            analyzerPort: 8000,
+          }),
+        ]
+      : []),
   ],
 
   // Load the CSS in a style tag in development
