@@ -68,9 +68,7 @@ class Layer extends React.PureComponent {
         component="div"
         aria-hidden={open}
       >
-        {open ?
-          <Dialog key={message} {...this.props} />
-          : null}
+        {open ? <Dialog key={message} {...this.props} /> : null}
       </ReactCSSTransitionGroup>
     );
   }

@@ -56,23 +56,34 @@ class Speaker extends React.PureComponent {
 
     // 404 Speaker Not Found
     if (!speaker) {
-      return ([
-        <Helmet title="Speaker not found" />,
-        <SpeakerNotFound />,
-      ]);
+      return [<Helmet title="Speaker not found" />, <SpeakerNotFound />];
     }
 
     const { onRequestClose, schedule, onToggleEvent } = this.props;
-    const speakerEvents = events.filter(event => event.speakers.indexOf(speaker.id) > -1 || (event.guests && event.guests.indexOf(speaker.id) > -1) || event.moderator === speaker.id);
+    const speakerEvents = events.filter(
+      event =>
+        event.speakers.indexOf(speaker.id) > -1 ||
+        (event.guests && event.guests.indexOf(speaker.id) > -1) ||
+        event.moderator === speaker.id
+    );
 
     return (
       <div>
         <Helmet title={`${speaker.firstname} ${speaker.lastname}`} />
-        {
-          isModal
-            ? <SpeakerModal speaker={speaker} speakerEvents={speakerEvents} schedule={schedule} onRequestClose={onRequestClose} onToggleEvent={onToggleEvent} />
-            : <SpeakerPage speaker={speaker} speakerEvents={speakerEvents} schedule={schedule} onToggleEvent={onToggleEvent} />
-        }
+        {isModal
+          ? <SpeakerModal
+              speaker={speaker}
+              speakerEvents={speakerEvents}
+              schedule={schedule}
+              onRequestClose={onRequestClose}
+              onToggleEvent={onToggleEvent}
+            />
+          : <SpeakerPage
+              speaker={speaker}
+              speakerEvents={speakerEvents}
+              schedule={schedule}
+              onToggleEvent={onToggleEvent}
+            />}
       </div>
     );
   }
@@ -99,13 +110,15 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    onUpdateHeaderTitle: (title) => {
+    onUpdateHeaderTitle: title => {
       dispatch(updateHeaderTitle(title));
     },
-    onToggleEvent: (event) => {
+    onToggleEvent: event => {
       dispatch(toggleEvent(event));
     },
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Speaker));
+export default connect(mapStateToProps, mapDispatchToProps)(
+  withRouter(Speaker)
+);

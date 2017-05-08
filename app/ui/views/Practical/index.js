@@ -7,7 +7,6 @@ import React from 'react';
 // 3rd party dependencies
 import $script from 'scriptjs';
 
-
 // Load styles
 import styles from './Practical.scss';
 
@@ -117,14 +116,34 @@ class Practical extends React.PureComponent {
             Directions (PDF)
           </a>
         </div>
-        <div id="map" ref={(c) => { this.map = c; }} />
+        <div
+          id="map"
+          ref={c => {
+            this.map = c;
+          }}
+        />
         <h2>DIGITEC live</h2>
-        <p>Follow DIGITEC on Twitter (<a href="https://twitter.com/hashtag/digitec16" target="_blank" rel="noopener noreferrer">#digitec16</a>) or via the webstream on 29<sup>th</sup> of November.</p>
+        <p>
+          Follow DIGITEC on Twitter (
+          <a
+            href="https://twitter.com/hashtag/digitec16"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            #digitec16
+          </a>
+          ) or via the webstream on 29
+          <sup>th</sup>
+          {' '}
+          of November.
+        </p>
         <h2>DIGITEC on your mobile</h2>
-        <p>On iOS or with Chrome for Android, you can add DIGITEC to your home screen.</p>
+        <p>
+          On iOS or with Chrome for Android, you can add DIGITEC to your home screen.
+        </p>
         <h3>Android</h3>
         <p>
-          With Chrome for Android, go to the website, open Chrome&apos;s menu and click on the &quot;Add to home screen&quot; link.
+          With Chrome for Android, go to the website, open Chrome's menu and click on the "Add to home screen" link.
           You will be asked to give a name to the app and then, a new icon will be created on your home screen.
         </p>
         <div className={styles.illustrations}>
@@ -133,8 +152,8 @@ class Practical extends React.PureComponent {
         </div>
         <h3>iOS</h3>
         <p>
-          With Safari for iOS, go to the website and tap on the &quot;Share&quot; icon at the bottom (the square with an arrow pointing upwards).
-          Select the &quot;Add to Home Screen&quot; icon. Give your link button a name and click &quot;Add&quot; - your new icon will appear on your home screen.
+          With Safari for iOS, go to the website and tap on the "Share" icon at the bottom (the square with an arrow pointing upwards).
+          Select the "Add to Home Screen" icon. Give your link button a name and click "Add" - your new icon will appear on your home screen.
         </p>
         <div className={styles.illustrations}>
           <img src={iosBrowserImg} alt="iOS Browser" />

@@ -54,10 +54,7 @@ class Stand extends React.PureComponent {
 
     // 404 Stand Not Found
     if (!stand) {
-      return ([
-        <Helmet title="Stand not found" />,
-        <StandNotFound />,
-      ]);
+      return [<Helmet title="Stand not found" />, <StandNotFound />];
     }
 
     const { onRequestClose } = this.props;
@@ -65,11 +62,9 @@ class Stand extends React.PureComponent {
     return (
       <div>
         <Helmet title={`${stand.title}`} />
-        {
-          isModal
-            ? <StandModal stand={stand} onRequestClose={onRequestClose} />
-            : <StandPage stand={stand} location={location} />
-        }
+        {isModal
+          ? <StandModal stand={stand} onRequestClose={onRequestClose} />
+          : <StandPage stand={stand} location={location} />}
       </div>
     );
   }
@@ -88,7 +83,7 @@ Stand.defaultProps = {
 
 function mapDispatchToProps(dispatch) {
   return {
-    onUpdateHeaderTitle: (title) => {
+    onUpdateHeaderTitle: title => {
       dispatch(updateHeaderTitle(title));
     },
   };

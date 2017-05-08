@@ -1,0 +1,51 @@
+.article {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2rem;
+  padding: 1rem 3rem 2rem;
+  color: rgba(0, 0, 0, 0.87);
+  border-left: 1em solid #CCC;
+  background-color: #F2F2F2;
+  transition: background-color 300ms ease-in-out;
+  flex-wrap: wrap;
+  position: relative;
+
+  &:active,
+  &:focus,
+  &:hover {
+    text-decoration: none;
+    background-color: #E8E8E8;
+  }
+}
+
+.link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  z-index: 2;
+}
+
+.articleImage {
+  flex-shrink: 0;
+  width: 10rem;
+  padding-top: 3rem;
+  margin-right: 2em;
+
+  > img {
+    width: 100%;
+  }
+}
+
+.articleContent {
+  flex-basis: 20em;
+  flex-grow: 1;
+  flex-shrink: 1;
+
+  a {
+    position: relative;
+    z-index: 3;
+  }
+}

@@ -1,9 +1,16 @@
 {
   "title": "Welcome to the first DIGITEC Newsletter",
   "number": 1,
-  "video": "",
-  "introduction": "Some introduction...",
+  "media": {
+    "type": "video",
+    "url": "https://www.youtube.com/embed/H_qH1XwT_8Q"
+  },
+  "introduction": "Directors General of DG ITEC and DIGIT have a message for you.",
   "news": [
-    "eu-fossa-project"
+    "eu-fossa-project",
+    "interhack-winning-projects",
+    "eparliament-project",
+    "open-pm2",
+    "dg-itec-innovation-week"
   ]
 }

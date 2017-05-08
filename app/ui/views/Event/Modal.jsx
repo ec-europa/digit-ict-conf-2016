@@ -41,24 +41,30 @@ class Modal extends React.PureComponent {
     }
 
     const moderatorBlock = eventModerators.length
-      ? (<div>
-        <h2>Moderator</h2>
-        {eventModerators.map(speaker => <SpeakerRow key={speaker.id} speaker={speaker} />)}
-      </div>)
+      ? <div>
+          <h2>Moderator</h2>
+          {eventModerators.map(speaker => (
+            <SpeakerRow key={speaker.id} speaker={speaker} />
+          ))}
+        </div>
       : null;
 
     const speakersBlock = eventSpeakers.length
-      ? (<div>
-        <h2>Speaker{eventSpeakers.length > 1 ? 's' : ''}</h2>
-        {eventSpeakers.map(speaker => <SpeakerRow key={speaker.id} speaker={speaker} />)}
-      </div>)
+      ? <div>
+          <h2>Speaker{eventSpeakers.length > 1 ? 's' : ''}</h2>
+          {eventSpeakers.map(speaker => (
+            <SpeakerRow key={speaker.id} speaker={speaker} />
+          ))}
+        </div>
       : null;
 
     const guestsBlock = eventGuests.length
-      ? (<div>
-        <h2>Guest{eventGuests.length > 1 ? 's' : ''}</h2>
-        {eventGuests.map(speaker => <SpeakerRow key={speaker.id} speaker={speaker} />)}
-      </div>)
+      ? <div>
+          <h2>Guest{eventGuests.length > 1 ? 's' : ''}</h2>
+          {eventGuests.map(speaker => (
+            <SpeakerRow key={speaker.id} speaker={speaker} />
+          ))}
+        </div>
       : null;
 
     const containerClass = classnames(
@@ -66,7 +72,7 @@ class Modal extends React.PureComponent {
       { [styles.blue]: event.color === 'blue' },
       { [styles.yellow]: event.color === 'yellow' },
       { [styles.purple]: event.color === 'purple' },
-      { [styles.grey]: event.color === 'grey' },
+      { [styles.grey]: event.color === 'grey' }
     );
 
     return (
@@ -84,11 +90,20 @@ class Modal extends React.PureComponent {
           <div className={styles.modalContent}>
             {event.register &&
               <div className={styles.checkbox}>
-                <Checkbox event={event} checked={checked} onToggle={onToggle} idPrefix="ev-" />
+                <Checkbox
+                  event={event}
+                  checked={checked}
+                  onToggle={onToggle}
+                  idPrefix="ev-"
+                />
               </div>}
             <div className={styles.name}>
               {event.visual &&
-                <img className={styles.visual} src={event.visual} alt={event.title} />}
+                <img
+                  className={styles.visual}
+                  src={event.visual}
+                  alt={event.title}
+                />}
               {event.description.map((line, index) => (
                 <p key={index} dangerouslySetInnerHTML={{ __html: line }} />
               ))}

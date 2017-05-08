@@ -14,34 +14,13 @@
 .modalHeader {
   display: inline-block;
   width: 100%;
+  height: 300px;
   padding: 2em;
+  background-color: #666;
+  color: #FFF;
 
   h1 {
     font-weight: 500;
-  }
-
-  h2 {
-    font-weight: 500;
-  }
-
-  .blue & {
-    background-color: $ict-blue;
-    color: #FFF;
-  }
-
-  .yellow & {
-    background-color: $ict-yellow;
-    color: #FFF;
-  }
-
-  .purple & {
-    background-color: $ict-purple;
-    color: #FFF;
-  }
-
-  .grey & {
-    background-color: #666;
-    color: #FFF;
   }
 }
 
@@ -51,6 +30,11 @@
 
   @include mappy-bp(medium) {
     padding: 1em 2em 2em;
+  }
+
+  img {
+    display: block;
+    margin: auto;
   }
 }
 
@@ -65,28 +49,5 @@
 
   h2 {
     font-size: 1.5em;
-  }
-}
-
-.visual {
-  margin: auto;
-  display: block;
-  max-width: 100%;
-}
-
-.checkbox {
-  $size: 3em;
-
-  position: absolute;
-  top: -($size / 2);
-  right: 2.5em;
-  width: $size;
-  height: $size;
-  background-color: #FFF;
-  border-radius: 50%;
-  font-size: 1.3em;
-
-  @include mappy-bp(medium) {
-    display: none;
   }
 }

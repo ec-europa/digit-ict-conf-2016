@@ -27,12 +27,18 @@ class Page extends React.PureComponent {
             className={styles.headerPicture}
           />
           <div className={styles.headerTitles}>
-            <h3><span className={styles.number}>{stand.number}</span> {stand.title}</h3>
+            <h3>
+              <span className={styles.number}>{stand.number}</span>
+              {' '}
+              {stand.title}
+            </h3>
             <h4 className={styles.title}>{stand.subtitle}</h4>
           </div>
         </div>
         <div className={styles.description}>
-          {stand.description.map((line, index) => (<p key={index} dangerouslySetInnerHTML={{ __html: line }} />))}
+          {stand.description.map((line, index) => (
+            <p key={index} dangerouslySetInnerHTML={{ __html: line }} />
+          ))}
         </div>
       </div>
     );

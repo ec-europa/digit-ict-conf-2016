@@ -13,9 +13,7 @@ class Separator extends React.PureComponent {
   }
 
   render() {
-    return (
-      <li className={styles.drawerSeparator} />
-    );
+    return <li className={styles.drawerSeparator} />;
   }
 }
 

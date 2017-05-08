@@ -11,6 +11,8 @@ const config = require('../config');
 // PostCSS plugins
 const cssnext = require('postcss-cssnext');
 const postcssReporter = require('postcss-reporter');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
+  .BundleAnalyzerPlugin;
 
 module.exports = require('./webpack.base.babel')({
   basename: config.dev.basename,
@@ -45,14 +47,25 @@ module.exports = require('./webpack.base.babel')({
       options: {
         context: __dirname,
         publicPath: config.dev.server + config.dev.publicPath,
-        postcss: [ // <---- postcss configs go here under LoadOptionsPlugin({ options: { ??? } })
+        postcss: [
+          // <---- postcss configs go here under LoadOptionsPlugin({ options: { ??? } })
           cssnext(),
-          postcssReporter({ // Posts messages from plugins to the terminal
+          postcssReporter({
+            // Posts messages from plugins to the terminal
             clearMessages: true,
           }),
         ],
       },
     }),
+
+    ...(process.env.ANALYSE
+      ? [
+          new BundleAnalyzerPlugin({
+            // Port that will be used in `server` mode to start HTTP server.
+            analyzerPort: 8000,
+          }),
+        ]
+      : []),
   ],
 
   // Load the CSS in a style tag in development

@@ -29,12 +29,19 @@ class MyDigitec extends React.PureComponent {
 
   render() {
     const { schedule, onToggleEvent, location } = this.props;
-    const myEvents = events.filter(event => schedule[event.id] || event.register === false);
+    const myEvents = events.filter(
+      event => schedule[event.id] || event.register === false
+    );
 
     return (
       <div>
         <Helmet title="Programme" />
-        <View schedule={schedule} onToggleEvent={onToggleEvent} location={location} myEvents={myEvents} />
+        <View
+          schedule={schedule}
+          onToggleEvent={onToggleEvent}
+          location={location}
+          myEvents={myEvents}
+        />
       </div>
     );
   }
@@ -59,10 +66,10 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    onToggleEvent: (event) => {
+    onToggleEvent: event => {
       dispatch(toggleEvent(event));
     },
-    onUpdateHeaderTitle: (title) => {
+    onUpdateHeaderTitle: title => {
       dispatch(updateHeaderTitle(title));
     },
   };

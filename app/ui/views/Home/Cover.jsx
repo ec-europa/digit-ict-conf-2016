@@ -5,7 +5,6 @@
 */
 
 import React from 'react';
-import Link from '../../components/Link/Link';
 import styles from './Cover.scss';
 
 class Cover extends React.PureComponent {
@@ -21,7 +20,16 @@ class Cover extends React.PureComponent {
           <div className={styles.coverTitleContainerRow}>
             <h1>DIGITEC: Digital Future</h1>
             <h2>29 November 2016 - Square, Brussels</h2>
-            <h2><Link to={'https://twitter.com/hashtag/digitec16'} className={styles.coverTwitter} target="_blank" rel="noopener noreferrer">#digitec16</Link></h2>
+            <h2>
+              <a
+                href="https://twitter.com/hashtag/digitec16"
+                className={styles.coverTwitter}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                #digitec16
+              </a>
+            </h2>
           </div>
         </div>
       </div>

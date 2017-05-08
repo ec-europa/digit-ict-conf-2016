@@ -26,7 +26,11 @@ class Stand extends React.PureComponent {
         }}
       >
         <div className={styles.pictureFrame}>
-          <img className={styles.picture} src={stand.visual} alt={stand.title} />
+          <img
+            className={styles.picture}
+            src={stand.visual}
+            alt={stand.title}
+          />
         </div>
         <div className={styles.info}>
           <div className={styles.number}>{stand.number}</div>

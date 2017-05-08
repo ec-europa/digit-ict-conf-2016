@@ -44,7 +44,9 @@ class Dialog extends React.PureComponent {
   }
 
   findFocusableElements() {
-    const focusableEls = this.modal.querySelectorAll('a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex="0"]');
+    const focusableEls = this.modal.querySelectorAll(
+      'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex="0"]'
+    );
     this.focusableEls = Array.prototype.slice.call(focusableEls);
     this.lastFocusableEl = this.focusableEls[this.focusableEls.length - 1];
     this.firstFocusableEl = this.focusableEls[0];
@@ -97,10 +99,24 @@ class Dialog extends React.PureComponent {
     return (
       <div className={styles.modalContainer}>
         <button className={styles.modalOuter} onClick={onRequestClose} />
-        <div className={styles.modal} id={id} role="dialog" aria-labelledby="dialog-title" aria-describedby="dialog-description" ref={(c) => { this.modal = c; }}>
+        <div
+          className={styles.modal}
+          id={id}
+          role="dialog"
+          aria-labelledby="dialog-title"
+          aria-describedby="dialog-description"
+          ref={c => {
+            this.modal = c;
+          }}
+        >
           <h1 id="dialog-title" className="sr-only">{title}</h1>
           <p id="dialog-description" className="sr-only">{description}</p>
-          <button type="button" className={styles.closeButton} aria-label="Close dialog" onClick={onRequestClose} />
+          <button
+            type="button"
+            className={styles.closeButton}
+            aria-label="Close dialog"
+            onClick={onRequestClose}
+          />
           {children}
         </div>
       </div>

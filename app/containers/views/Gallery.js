@@ -41,7 +41,7 @@ Gallery.propTypes = {
 
 function mapDispatchToProps(dispatch) {
   return {
-    onUpdateHeaderTitle: (title) => {
+    onUpdateHeaderTitle: title => {
       dispatch(updateHeaderTitle(title));
     },
   };

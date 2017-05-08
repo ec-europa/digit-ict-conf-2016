@@ -13,7 +13,11 @@ class ModalContainer extends React.PureComponent {
   render() {
     const { children, pathname, isOpen, onRequestClose } = this.props;
     return (
-      <Layer pathname={pathname} isOpen={isOpen} onRequestClose={onRequestClose}>
+      <Layer
+        pathname={pathname}
+        isOpen={isOpen}
+        onRequestClose={onRequestClose}
+      >
         {children}
       </Layer>
     );

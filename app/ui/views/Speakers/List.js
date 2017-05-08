@@ -18,7 +18,9 @@ class List extends React.PureComponent {
     const { speakers } = this.props;
     return (
       <div className={styles.container}>
-        {speakers.map(speaker => <Speaker key={speaker.id} speaker={speaker} />)}
+        {speakers.map(speaker => (
+          <Speaker key={speaker.id} speaker={speaker} />
+        ))}
       </div>
     );
   }

@@ -30,16 +30,22 @@ class Newsletters extends React.PureComponent {
     this.props.onUpdateHeaderTitle('Newsletters');
 
     import('../../../content/newsletters.json')
-      .then(newsletters => import(`../../../content/newsletters/${newsletters.current}.json`))
-      .then((newsletter) => {
+      .then(newsletters =>
+        import(`../../../content/newsletters/${newsletters.current}.json`)
+      )
+      .then(newsletter => {
         this.setState({
           currentNewsletter: newsletter,
         });
 
         // Load news related to the newsletter
-        return Promise.all(newsletter.news.map((news => import(`../../../content/news/${news}.json`))));
+        return Promise.all(
+          newsletter.news.map(news =>
+            import(`../../../content/news/${news}.json`)
+          )
+        );
       })
-      .then((news) => {
+      .then(news => {
         this.setState(prevState => ({
           currentNewsletter: Object.assign({}, prevState.currentNewsletter, {
             news,
@@ -54,13 +60,21 @@ class Newsletters extends React.PureComponent {
       });
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    return nextState !== this.state;
+  }
+
   render() {
     const { currentNewsletter, newsletters, status } = this.state;
 
     return (
       <div>
         <Helmet title="Newsletters" />
-        <View newsletters={newsletters} currentNewsletter={currentNewsletter} status={status} />
+        <View
+          newsletters={newsletters}
+          currentNewsletter={currentNewsletter}
+          status={status}
+        />
       </div>
     );
   }
@@ -70,18 +84,12 @@ Newsletters.propTypes = {
   onUpdateHeaderTitle: PropTypes.func.isRequired,
 };
 
-function mapStateToProps(state) {
-  return {
-    schedule: state.schedule,
-  };
-}
-
 function mapDispatchToProps(dispatch) {
   return {
-    onUpdateHeaderTitle: (title) => {
+    onUpdateHeaderTitle: title => {
       dispatch(updateHeaderTitle(title));
     },
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Newsletters);
+export default connect(null, mapDispatchToProps)(Newsletters);
