@@ -18,6 +18,6 @@
     "<li>have more public visibility.</li>",
     "</ul>",
     "<p>Execution of the core of this project is planned to start around Q2/2018, due to the time necessary for a call for tender preparation, but work will start immediately by conducting proof of concept projects with some existing players in the market in order to better understand the details on how bug bounties should be organised. The team will also perform inventories of open-source software used within the different EU institutions to identify the candidate components requiring security analysis.</p>",
-    "<p>Watch the Joinup space of the original pilot project for updates: <a href=\"https://joinup.ec.europa.eu/community/eu-fossa/\">https://joinup.ec.europa.eu/community/eu-fossa/</a>.</p>"
+    "<p>Watch the Joinup space of the original pilot project for updates: <a href=\"https://joinup.ec.europa.eu/community/eu-fossa/\" target=\"_blank\" rel=\"noopener noreferrer\">https://joinup.ec.europa.eu/community/eu-fossa/</a>.</p>"
   ]
 }
