@@ -120,7 +120,7 @@ class Modal extends React.PureComponent {
                 <h4>Gallery</h4>
                 <Gallery
                   photos={photos}
-                  cols="3"
+                  cols={3}
                   onClickPhoto={this.openLightbox}
                 />
                 <Lightbox
