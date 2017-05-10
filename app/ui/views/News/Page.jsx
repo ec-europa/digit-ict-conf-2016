@@ -21,6 +21,7 @@ class Page extends React.PureComponent {
     return (
       <div className={styles.pageContainer}>
         <h1>{news.title}</h1>
+        <img src={`${__BASENAME__}/static/${news.image}`} alt={news.title} className={styles.pageImage} />
         <div
           className={styles.description}
           dangerouslySetInnerHTML={{ __html: (news.body || []).join('') }}

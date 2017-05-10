@@ -8,11 +8,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Gallery from 'react-photo-gallery';
+import Lightbox from 'react-images';
+import Measure from 'react-measure';
 
 // Load styles
 import styles from './Gallery.scss';
 
 const photosPerPage = 6;
+
+const refactorPhotos = photos =>
+  photos.map(photo => ({
+    src: photo.src,
+    width: photo.width,
+    height: photo.height,
+    srcset: [
+      `${photo.lightboxImage.src} ${photo.width * 2}w`,
+      `${photo.src} ${photo.width}w`,
+    ],
+  }));
 
 class View extends React.Component {
   constructor(props) {
@@ -22,10 +35,16 @@ class View extends React.Component {
       pageNum: 0,
       totalPages: props.photos.length / photosPerPage,
       loadedAll: false,
+      currentImage: 0,
+      lightboxIsOpen: false,
     };
 
     this.handleScroll = this.handleScroll.bind(this);
     this.loadMorePhotos = this.loadMorePhotos.bind(this);
+    this.closeLightbox = this.closeLightbox.bind(this);
+    this.openLightbox = this.openLightbox.bind(this);
+    this.gotoNext = this.gotoNext.bind(this);
+    this.gotoPrevious = this.gotoPrevious.bind(this);
   }
 
   componentDidMount() {
@@ -53,9 +72,11 @@ class View extends React.Component {
     }
 
     const { photos } = this.props;
-    const newPhotos = photos.slice(
-      this.state.pageNum * photosPerPage,
-      (this.state.pageNum + 1) * photosPerPage
+    const newPhotos = refactorPhotos(
+      photos.slice(
+        this.state.pageNum * photosPerPage,
+        (this.state.pageNum + 1) * photosPerPage
+      )
     );
 
     this.setState({
@@ -64,6 +85,33 @@ class View extends React.Component {
         : newPhotos,
       pageNum: this.state.pageNum + 1,
       loadedAll: this.state.pageNum + 1 >= this.state.totalPages,
+    });
+  }
+
+  openLightbox(index, event) {
+    event.preventDefault();
+    this.setState({
+      currentImage: index,
+      lightboxIsOpen: true,
+    });
+  }
+
+  closeLightbox() {
+    this.setState({
+      currentImage: 0,
+      lightboxIsOpen: false,
+    });
+  }
+
+  gotoPrevious() {
+    this.setState({
+      currentImage: this.state.currentImage - 1,
+    });
+  }
+
+  gotoNext() {
+    this.setState({
+      currentImage: this.state.currentImage + 1,
     });
   }
 
@@ -88,13 +136,40 @@ class View extends React.Component {
         </div>
         {photos
           ? <div>
-              <Gallery photos={photos} />
+              <Measure whitelist={['width']}>
+                {({ width }) => {
+                  let cols = 1;
+                  if (width >= 480) {
+                    cols = 2;
+                  }
+                  if (width >= 1024) {
+                    cols = 3;
+                  }
+                  return (
+                    <Gallery
+                      photos={photos}
+                      cols={cols}
+                      onClickPhoto={this.openLightbox}
+                    />
+                  );
+                }}
+              </Measure>
               {!loadedAll &&
                 <div className={styles.clearfix}>
                   <p className="u-pt-1rem u-ta-center">
                     Keep scrolling down to load more pictures!
                   </p>
                 </div>}
+              <Lightbox
+                images={photos}
+                backdropClosesModal
+                onClose={this.closeLightbox}
+                onClickPrev={this.gotoPrevious}
+                onClickNext={this.gotoNext}
+                currentImage={this.state.currentImage}
+                isOpen={this.state.lightboxIsOpen}
+                showImageCount={false}
+              />
             </div>
           : <p className="u-pt-1rem u-ta-center">Loading...</p>}
         <div className={styles.clearfix} />
