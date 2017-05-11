@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.19.0"></a>
+# [1.19.0](https://github.com/ec-europa/digit-ict-conf-2016/compare/v1.18.0...v1.19.0) (2017-05-11)
+
+
+### Features
+
+* **content:** provide basic news content - INNO-451 ([#121](https://github.com/ec-europa/digit-ict-conf-2016/issues/121)) ([448caa4](https://github.com/ec-europa/digit-ict-conf-2016/commit/448caa4))
+* **content:** update content ([#123](https://github.com/ec-europa/digit-ict-conf-2016/issues/123)) ([e74779f](https://github.com/ec-europa/digit-ict-conf-2016/commit/e74779f))
+* **newsletter:** introduce newsletter - INNO-447 ([#120](https://github.com/ec-europa/digit-ict-conf-2016/issues/120)) ([122d78e](https://github.com/ec-europa/digit-ict-conf-2016/commit/122d78e))
+
+
+
 <a name="1.18.0"></a>
 # [1.18.0](https://github.com/ec-europa/digit-ict-conf-2016/compare/v1.17.3...v1.18.0) (2017-04-18)
 
