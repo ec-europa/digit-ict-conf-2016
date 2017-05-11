@@ -2,7 +2,8 @@
   "id": "eu-fossa-project",
   "title": "EU-FOSSA continued: MEPs want bug bounties",
   "image": "media/fossa.jpg",
-  "introduction": "The European Parliament approved the follow-up to the European Commission’s ‘EU Free and Open Source Software Auditing’ project (EU-FOSSA). The next version of the code audit project is to add bug bounties.",
+  "headerPercentage": "55%",
+  "introduction": "The European Parliament approved the follow-up to the European Commission’s ‘EU Free and Open Source Software Auditing’ project (EU-FOSSA). The idea of the project came after the discovery of a vulnerability in the OpenSSL cryptographic library in April 2014. The next version of the code audit project is to add bug bounties.",
   "body": [
     "<p>The idea of the EU-FOSSA project appeared following the discovery of a serious vulnerability in the OpenSSL cryptographic library in April 2014. This open-source software library runs on thousands of servers worldwide. The issue, nicknamed Heartbleed, was very easy to spot and solve yet nobody checked the code. This showed how important were the proper funding and security screening of open-source software projects, some of which do not have a large organisation behind. Meanwhile using open-source software is becoming a norm in major, critical infrastructures and is one of the pillars of modern economy.</p>",
     "<p>MEPs from the Group of the Greens/EFA Julia Reda and Max Andersson proposed to solve this problem by helping the open-source projects in need with European Union funding, all for the shared benefit of the citizens, companies and the European Union institutions themselves. They view it as a candidate for a permanent action of the EU with a permanent financing. This action could make a huge difference in everyone's online security.</p>",

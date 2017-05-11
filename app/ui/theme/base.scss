@@ -87,6 +87,14 @@
     border: 0;
   }
 
+  .clearfix {
+    &::after {
+      clear: both;
+      content: '';
+      display: block;
+    }
+  }
+
   .u-pt-1rem {
     padding-top: 1rem;
   }
