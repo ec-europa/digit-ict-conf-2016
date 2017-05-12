@@ -2,10 +2,12 @@
   "id": "open-pm2",
   "title": "Open PM² Methodology Guide climbing up the charts!",
   "image": "media/OpenPM.jpg",
-  "introduction": "Open PM² is an initiative taken by DIGIT that brings the <a href=\"http://europa.eu/!Gu76mr\" target=\"_blank\" rel=\"noopener noreferrer\">PM² Methodology</a> and its benefits to stakeholders beyond the original target group of European Commission Project Managers - a group which has grown to a community of 653 certified colleagues in the EU agencies, the Council of the EU and the Commission.",
+  "headerBGColor": "#fff",
+  "headerBGSize": "contain",
+  "introduction": "Open PM² is an initiative by DIGIT that brings the <a href=\"http://europa.eu/!Gu76mr\" target=\"_blank\" rel=\"noopener noreferrer\">PM² Methodology</a> and its benefits to stakeholders beyond the original target group of European Commission Project Managers - a group which has grown to a community of 653 certified colleagues in the EU agencies, the Council of the EU and the Commission.",
   "body": [
     "<p>Open PM² is an updated version of the PM² Methodology developed and used by the Commission since 2007. It is based on the experience and lessons learned from EU projects, but also incorporates elements from globally accepted best practices, standards and methodologies.</p>",
-    "<p>Since its publication in November 2016, the <a href=\"https://bookshop.europa.eu/en/pm-project-management-methodology-guide-pbNO0716056/\" target=\"_blank\" rel=\"noopener noreferrer\">PM² Guide – Open Edition</a> has climbed to the <a href=\"https://joinup.ec.europa.eu/community/opm2/news/open-pm%25C2%25B2-methodology-guide-climbing-charts\" target=\"_blank\" rel=\"noopener noreferrer\">2nd position</a> of most downloaded publications of the <a href=\"https://bookshop.europa.eu/en/bundles/top-10-cbU3Cep2OwY8MAAAFK4rFgxy6N/\" target=\"_blank\" rel=\"noopener noreferrer\">EUBookshop</a>.</p>",
+    "<p>Since its publication in November 2016, the <a href=\"https://bookshop.europa.eu/en/pm-project-management-methodology-guide-pbNO0716056/\" target=\"_blank\" rel=\"noopener noreferrer\">PM² Guide – Open Edition</a> has climbed to the <a href=\"https://bookshop.europa.eu/en/bundles/top-10-cbU3Cep2OwY8MAAAFK4rFgxy6N/\" target=\"_blank\" rel=\"noopener noreferrer\">Top-10</a> of most downloaded publications of the <a href=\"https://bookshop.europa.eu/en/pm-project-management-methodology-guide-pbNO0716056/\" target=\"_blank\" rel=\"noopener noreferrer\">EUBookshop</a>.</p>",
     "<img src=\"/digitec/static/media/open-pm2/1.png\" alt=\"Open PM²\" style=\"width:400px\" />",
     "<h4>What Open PM² brings?</h4>",
     "<p>Open PM² provides open and free access of PM² to all European Institutions, Public Administrations of Member States, Contractors and EU Citizens, widening the circle of stakeholder who benefit from PM² and enabling project management maturity within the EU. The initiative is also supported by the European Commission's <a href=\"https://ec.europa.eu/isa2/\" target=\"_blank\" rel=\"noopener noreferrer\">ISA² Programme</a>, for the development of interoperability solutions (cross-border and cross-sector public services) for the benefit of public administrations, businesses and citizens across the EU.</p>",
@@ -17,11 +19,13 @@
     "<li>enables efficiencies in the work done by Project Audit Services</li>",
     "<li>increases control of outsourced and EU funded projects and grants</li>",
     "<li>enables transparency and work visibility for a cross-Institutional project collaborations</li>",
-    "<li>promotes \"One common and open Project Management Methodology for Europe\".</li>",
+    "<li>promotes <strong>\"One common and open Project Management Methodology for Europe\"</strong>.</li>",
     "</ul>",
     "<p>Open PM² aims to significantly contribute towards the increase in project management competency within the European Union and lead to increased project efficiency and success.</p>",
     "<p>Visit the <a href=\"https://webgate.ec.europa.eu/fpfis/wikis/display/openPM2\" target=\"_blank\" rel=\"noopener noreferrer\">Open PM² Methodology wiki</a> (accessible with EU Login).</p>",
     "<p>Join the <a href=\"https://joinup.ec.europa.eu/community/opm2/\" target=\"_blank\" rel=\"noopener noreferrer\">Open PM² Community on Joinup</a>.</p>",
+    "<p>Follow <a href=\"https://twitter.com/OpenPM2/\" target=\"_blank\" rel=\"noopener noreferrer\">Open PM² on Twitter</a></p>",
+    "<p>Download the free <a href=\"https://bookshop.europa.eu/en/pm-project-management-methodology-guide-pbNO0716056/\" target=\"_blank\" rel=\"noopener noreferrer\">Open PM² Guide (PDF) from the EUBookshop</a></p>",
     "<img src=\"/digitec/static/media/open-pm2/2.jpg\" alt=\"Open PM²\" style=\"width:300px\" />"
   ]
 }
