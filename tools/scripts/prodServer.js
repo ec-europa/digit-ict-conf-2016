@@ -13,7 +13,7 @@ browserSync({
     baseDir: path.resolve(process.cwd(), ''),
     middleware: [
       history({
-        index: '/build/index.html',
+        index: '/digitec/index.html',
       }),
     ],
   },

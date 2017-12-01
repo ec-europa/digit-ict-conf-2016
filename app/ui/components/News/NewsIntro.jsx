@@ -24,7 +24,7 @@ const NewsIntro = ({ news }) =>
             />
           </div>}
         <div className={styles.articleContent}>
-          <h3>{news.title}</h3>
+          <h3>{news.shortTitle || news.title}</h3>
           <p dangerouslySetInnerHTML={{ __html: news.introduction }} />
         </div>
       </article>

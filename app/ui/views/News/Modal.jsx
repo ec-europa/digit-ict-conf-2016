@@ -90,7 +90,7 @@ class Modal extends React.PureComponent {
 
     const headerStyle = news.image
       ? {
-          background: `${news.headerBGColor || 'transparent'} url(${__BASENAME__}/static/${news.image}) center ${news.headerPercentage || '40%'} no-repeat`,
+          background: `${news.headerBGColor || 'transparent'} url(${__BASENAME__}/static/${news.image}) ${news.headerHAlign || 'center'} ${news.headerPercentage || '40%'} no-repeat`,
           backgroundSize: news.headerBGSize || 'cover',
         }
       : {};

@@ -44,9 +44,9 @@ class App extends React.Component {
     if (
       nextProps.location.pathname === this.props.location.pathname &&
       !((this.props.location.state && this.props.location.state.modal) ||
-        (nextProps.location.state && nextProps.location.state.modal))
+        (nextProps.location.state && nextProps.location.state.modal)) &&
+      !nextProps.location.hash
     ) {
-      // Smooth scroll to top if the location hasn't changed
       smoothScroll.animateScroll(0);
     }
   }
@@ -191,6 +191,7 @@ class App extends React.Component {
 App.propTypes = {
   location: PropTypes.shape({
     pathname: PropTypes.string,
+    hash: PropTypes.string,
     state: PropTypes.shape({
       modal: PropTypes.bool,
     }),
@@ -204,6 +205,7 @@ App.propTypes = {
 App.defaultProps = {
   location: {
     pathname: '',
+    hash: '',
     state: {
       modal: false,
     },

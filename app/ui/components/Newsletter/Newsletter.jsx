@@ -48,7 +48,7 @@ const Newsletter = ({ newsletter, status }) => {
   }
 
   return (
-    <section>
+    <section id={newsletter.id}>
       <h2>{newsletter.title}</h2>
       {media}
       <p className={styles.newsIntro}>{newsletter.introduction}</p>

@@ -59,7 +59,7 @@ module.exports = require('./webpack.base.babel')({
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
       children: true,
-      minChunks: 2,
+      minChunks: 2, // Infinity
       async: true,
     }),
 

@@ -20,7 +20,6 @@ class Newsletters extends React.PureComponent {
     super();
 
     this.state = {
-      currentNewsletter: {},
       newsletters: [],
       status: 'loading',
     };
@@ -30,34 +29,57 @@ class Newsletters extends React.PureComponent {
     this.props.onUpdateHeaderTitle('Newsletters');
 
     import('../../../content/newsletters.json')
-      .then(newsletters =>
-        import(`../../../content/newsletters/${newsletters.current}.json`)
+      .then(newslettersManifest =>
+        // Load news related to the newsletter
+        Promise.all(
+          newslettersManifest.list.map(newsletter =>
+            import(`../../../content/newsletters/${newsletter}.json`)
+          )
+        )
       )
-      .then(newsletter => {
+      .then(newsletters => {
         this.setState({
-          currentNewsletter: newsletter,
+          newsletters,
         });
 
         // Load news related to the newsletter
         return Promise.all(
-          newsletter.news.map(news =>
-            import(`../../../content/news/${news}.json`)
+          newsletters.map((newsletter, index) =>
+            Promise.all(
+              newsletter.news.map(news =>
+                import(`../../../content/news/${news}.json`)
+              )
+            ).then(news =>
+              this.setState(prevState => {
+                // Make a copy
+                const newNewsletters = prevState.newsletters.slice();
+                // Update
+                newNewsletters[index] = Object.assign(
+                  {},
+                  newNewsletters[index],
+                  {
+                    news,
+                  }
+                );
+
+                return {
+                  newsletters: newNewsletters,
+                };
+              })
+            )
           )
         );
       })
-      .then(news => {
-        this.setState(prevState => ({
-          currentNewsletter: Object.assign({}, prevState.currentNewsletter, {
-            news,
-          }),
+      .then(() =>
+        this.setState({
           status: 'done',
-        }));
-      })
-      .catch(() => {
+        })
+      )
+      .catch(() =>
         this.setState({
           status: 'error',
-        });
-      });
+        })
+      );
   }
 
   shouldComponentUpdate(nextProps, nextState) {
@@ -65,16 +87,12 @@ class Newsletters extends React.PureComponent {
   }
 
   render() {
-    const { currentNewsletter, newsletters, status } = this.state;
+    const { newsletters, status } = this.state;
 
     return (
       <div>
         <Helmet title="Newsletters" />
-        <View
-          newsletters={newsletters}
-          currentNewsletter={currentNewsletter}
-          status={status}
-        />
+        <View newsletters={newsletters} status={status} />
       </div>
     );
   }
