@@ -13,8 +13,6 @@ import {
   Gallery,
   Home,
   MyDigitec,
-  News,
-  Newsletters,
   NotFound,
   Practical,
   Programme,
@@ -121,8 +119,6 @@ class App extends React.Component {
               <Route path="/stand/:standId" component={Stand} />
               <Route path="/practical" component={Practical} />
               <Route path="/gallery" component={Gallery} />
-              <Route path="/news/:newsId" component={News} />
-              <Route path="/newsletters" component={Newsletters} />
               <Route component={NotFound} />
             </Switch>
           </Content>
@@ -146,14 +142,6 @@ class App extends React.Component {
                     />
                   )}
                   key={`event-${location.pathname}`}
-                />,
-                <Route
-                  location={location}
-                  path="/news/:newsId"
-                  render={props => (
-                    <News onRequestClose={this.closeModal} isModal {...props} />
-                  )}
-                  key={`news-${location.pathname}`}
                 />,
                 <Route
                   location={location}
