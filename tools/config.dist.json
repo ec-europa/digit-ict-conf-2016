@@ -5,7 +5,7 @@
     "server": "http://localhost:3000"
   },
   "prod": {
-    "basename": "/digitec",
-    "publicPath": "/digitec/"
+    "basename": "/2016",
+    "publicPath": "/2016/"
   }
 }
