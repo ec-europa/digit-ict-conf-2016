@@ -1,7 +1,7 @@
 {
   "name": "DIGITEC 2016",
   "short_name": "DIGITEC",
-  "start_url": "/2016",
+  "start_url": "/2016/",
   "scope": "/2016/",
   "display": "standalone",
   "orientation": "portrait",
