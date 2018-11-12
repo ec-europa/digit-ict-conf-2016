@@ -1,8 +1,8 @@
 {
   "name": "DIGITEC 2016",
   "short_name": "DIGITEC",
-  "start_url": "/digitec/my-digitec",
-  "scope": "/digitec/",
+  "start_url": "/digitec/2016/",
+  "scope": "/digitec/2016/",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#F8FAFA",
