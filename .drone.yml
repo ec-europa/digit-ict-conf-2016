@@ -13,13 +13,13 @@ pipeline:
 # =======================================
 # Tests =================================
 # =======================================
-  test-lint:
-    image: node:carbon
-    group: test
-    commands:
-      - yarn lint
-    when:
-      event: [ pull_request , tag ]
+  # test-lint:
+  #   image: node:carbon
+  #   group: test
+  #   commands:
+  #     - yarn lint
+  #   when:
+  #     event: [ pull_request , tag ]
 
 # =======================================
 # Tags Creation =========================
