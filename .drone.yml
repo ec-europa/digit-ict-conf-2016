@@ -6,7 +6,7 @@ pipeline:
   install:
     image: node:carbon
     commands:
-      - yarn install --frozen-lockfile
+      - npm install
     when:
       event: [ pull_request , tag ]
 
@@ -28,9 +28,8 @@ pipeline:
   build-release:
     image: node:carbon
     commands:
-      - npm install --global gatsby-cli@1.1.58
       - rm -rf build
-      - yarn build
+      - npm run build
       - echo "${DRONE_COMMIT_SHA}" > build/.commit
     when:
       event: [tag]
