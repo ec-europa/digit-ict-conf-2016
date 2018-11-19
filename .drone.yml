@@ -6,7 +6,6 @@ pipeline:
   install:
     image: node:carbon
     commands:
-      - export NODE_ENV=production
       - npm install
     when:
       event: [ push, pull_request , tag ]
@@ -29,7 +28,6 @@ pipeline:
   build-release:
     image: node:carbon
     commands:
-      - export NODE_ENV=production
       - rm -rf build
       - npm run build
       - echo "${DRONE_COMMIT_SHA}" > build/.commit
