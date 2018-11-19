@@ -39,7 +39,7 @@ pipeline:
     group: packaging
     image: fpfis/php56-dev
     commands:
-      - tar -czC public -f ${DRONE_REPO_NAME}-${DRONE_TAG}.tar.gz .
+      - tar -czC build -f ${DRONE_REPO_NAME}-${DRONE_TAG}.tar.gz .
     when:
       event: [ push, pull_request , tag ]
 
