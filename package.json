@@ -14,7 +14,7 @@
   "homepage": "https://github.com/ec-europa/digit-ict-conf-2016#readme",
   "scripts": {
     "prebuild": "npm run build:clean",
-    "build": "cross-env NODE_ENV=production webpack --config tools/webpack/webpack.prod.babel.js --color -p && node ./tools/scripts/static.js",
+    "build": "cross-env NODE_ENV=production webpack --config tools/webpack/webpack.prod.babel.js --color -p",
     "build:clean": "rimraf ./build/*",
     "format": "prettier-eslint --write \"app/**/*.{js,jsx}\"",
     "start": "webpack-dashboard -- cross-env NODE_ENV=development node tools/scripts/server.js",
